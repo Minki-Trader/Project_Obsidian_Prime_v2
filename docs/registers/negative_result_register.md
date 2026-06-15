@@ -1121,3 +1121,14 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Evidence(근거): candidate/scout/seed/runtime rows(후보/탐색/씨앗/런타임 행) `521` / `181` / `0` / `0`
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f40_proxy_repair`
 - Effect(효과): 같은 raw feature threshold mining(원천 피처 임계값 채굴)을 반복하지 않고, 다음에는 exit shape source(청산 형태 원천)를 새 가설로 다룬다.
+
+<!-- frontier52D_stage_closeout_order_path_cost_recurrence_v1 -->
+
+## frontier52D_stage_closeout_order_path_cost_recurrence_v1
+
+- Stage(단계): `stage_frontier_52__short_pf_edge_order_path_cost_recurrence_after_f51_runtime_memory`
+- Negative memory(부정 기억): `lifecycle_only_runtime_policy_compressed_dd_but_destroyed_pf_economics(생명주기 단독 런타임 정책은 손실폭을 압축했지만 수익 팩터 경제성을 무너뜨림)`
+- Preserved clue(보존 단서): `close_on_flat_transition_cooldown_atr_sltp_can_compress_mt5_dd_under_10_reference_only(무신호 청산/전환/쿨다운/평균진폭 손익절은 MT5 손실폭 10% 미만 압축 단서로만 보존)`
+- Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.41/7.36%/324`; MT5 OOS(MT5 표본외) `0.66/2.50%/193`; feature_ready_diff(피처 준비 차이) `0/0`.
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
+- Effect(효과): 같은 F51 reference signal(F51 참조 신호)에 lifecycle-only tightening(생명주기 단독 조임)만 반복하지 않는다. 다음에는 PF source(수익 팩터 원천)를 새로 만든 뒤 DD compression clue(손실폭 압축 단서)를 결합한다.

@@ -1783,3 +1783,16 @@ Register ideas when they become durable work, not for every passing thought.
 - Negative memory(부정 기억): `f40_raw_feature_state_pockets_did_not_create_seed_or_runtime_candidate`
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f40_proxy_repair`
 - Next condition(다음 조건): exit shape source(청산 형태 원천) or label/runtime representation pivot(라벨/런타임 표현 전환)
+
+<!-- frontier52D_stage_closeout_order_path_cost_recurrence_v1 -->
+
+## frontier52D_stage_closeout_order_path_cost_recurrence_v1
+
+- Stage(단계): `stage_frontier_52__short_pf_edge_order_path_cost_recurrence_after_f51_runtime_memory`
+- Idea(아이디어): MT5 execution lifecycle policy(MT5 실행 생명주기 정책)가 F51 signal handoff(전선51 신호 인계) 실패 없이 order-path DD/trade compression(주문 경로 손실폭/거래 압축)을 수리할 수 있는지 본다.
+- Result(결과): `preserved_clue_negative_memory`
+- Reference candidate(참조 후보): `f51c_0046`, reference-only(참조 전용)
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
+- Preserved clue(보존 단서): close-on-flat/entry-transition/cooldown/ATR SLTP(무신호 청산/전환 진입/쿨다운/평균진폭 손익절)가 MT5 DD(drawdown, 손실폭)를 validation/OOS(검증/표본외) `7.36%/2.50%`로 압축했다.
+- Negative memory(부정 기억): PF(profit factor, 수익 팩터)가 validation/OOS(검증/표본외) `0.41/0.66`으로 실패해 lifecycle-only tightening(생명주기 단독 조임)은 four-axis goal(네 축 목표)을 만들지 못했다.
+- Next condition(다음 조건): new PF source(새 수익 팩터 원천)를 먼저 만들 때만 F52 DD compression clue(F52 손실폭 압축 단서)를 결합한다.

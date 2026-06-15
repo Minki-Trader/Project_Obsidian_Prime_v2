@@ -1,0 +1,22 @@
+{
+  "review_size": "small",
+  "prompt_hash": "deb0dc9741eb009629ce1f424ca801bd2735adffa8d8971e67a2582ba6cde6b6",
+  "command": [
+    "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+    "-p",
+    "Project Obsidian Prime v2 bounded Grok review.\n\nReview type: pre-MT5 small review(사전 MT5 소규모 검토).\n\nCodex local verification(로컬 검증):\n- Python py_compile(파이썬 구문 검사) passed for stage_pipelines/stage_frontier_52/run_frontier52_runtime_probe.py.\n- EA source(전문가 자문 원천)는 unchanged(변경 없음). F52 changes only materialize `.set` parameters(설정 파라미터).\n- Candidate f51c_0046 is reference-only(참조 전용). No winner/baseline/promotion/runtime authority(승자/기준선/승격/런타임 권위) inherited.\n- Runtime policy(런타임 정책): close_on_flat=true, entry_transition_only=true, rearm_delta=0.02, max_hold=6, reentry_cooldown=3, same_direction_cooldown=6, ATR SLTP enabled with period=14, stop multiplier=0.8, take multiplier=1.2, clamps 40-180 stop and 60-260 take.\n- Expected claim(예상 주장): runtime_probe_observation only(런타임 탐침 관찰 전용).\n\nQuestion(질문): Before MT5 Strategy Tester(전략 테스터), identify any must-check local verification(필수 로컬 검증) specific to this set-parameter probe. Keep answer bounded and do not suggest authority/promotion(권위/승격)."
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "success": true,
+  "duration_seconds": 131.619794,
+  "stripped_noise_lines": [],
+  "preflight_warnings": [],
+  "unexpected_top_level_artifacts": [],
+  "packet_paths": {
+    "prompt": "docs/agent_control/grok_reviews/2026-06-16_frontier52_pre_mt5/small_review/prompt.md",
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-16_frontier52_pre_mt5/small_review/clean_output.md",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-16_frontier52_pre_mt5/small_review/raw_diagnostics.json",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-16_frontier52_pre_mt5/small_review/metadata.json"
+  }
+}

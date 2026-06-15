@@ -1,0 +1,12 @@
+﻿# Grok Receipt(그록 영수증): pre_mt5(사전 MT5)
+
+- path(경로): `docs/agent_control/grok_reviews/2026-06-16_frontier52_pre_mt5/small_review`
+- classification(분류): `needs_local_verification(로컬 검증 필요)`
+- local_action(로컬 행동): Codex verified direction with repo files, EA parameters, set overrides, and MT5 outputs(코덱스가 저장소 파일, EA 파라미터, 설정 덮어쓰기, MT5 출력으로 직접 검증).
+- effect(효과): Grok(Grok, 그록) output did not create authority(권위), it only informed review boundary(검토 경계).
+
+## Clean Output(정리 출력)
+Pre-MT5 소규모 Grok 검토를 진행합니다. 협업 스킬과 Frontier 52 관련 산출물을 먼저 확인합니다.
+EA 파라미터 매핑과 Grok 래퍼 사용법을 확인한 뒤, 사전 MT5 검토를 실행합니다.
+Grok 출력이 불완전해 보입니다. 원본 진단을 확인하고 로컬 검증을 병행합니다.
+Grok 출력이 불완전합니다. 재호출하고 materialize-only 산출물을 로컬에서 검증합니다.
