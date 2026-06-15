@@ -63,6 +63,8 @@ def json_ready(value: Any) -> Any:
         return value.as_posix()
     if pd is not None and isinstance(value, pd.Timestamp):
         return value.isoformat()
+    if np is not None and isinstance(value, np.ndarray):
+        return json_ready(value.tolist())
     if isinstance(value, Mapping):
         return {str(key): json_ready(item) for key, item in value.items()}
     if isinstance(value, list):

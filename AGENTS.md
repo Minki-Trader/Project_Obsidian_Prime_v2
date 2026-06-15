@@ -53,6 +53,8 @@ Console/shell encoding guard(콘솔/셸 인코딩 보호)는 agent execution env
 
 Grok timeout(그록 시간초과)이 local file inspection(로컬 파일 확인)이나 tool use(도구 사용)로 반복되면 prompt(프롬프트)에 snapshot-only direct answer(스냅샷 전용 직접 답변)를 명시하고, wrapper(래퍼)는 Grok CLI(그록 CLI)에 `--prompt-file`, `--rules`, `--no-plan`, `--no-subagents`, `--disable-web-search`를 우선 적용한다. 효과(effect, 효과)는 Grok(Grok, 그록)이 Codex(코덱스)의 local verification(로컬 검증)을 대신하려다 멈추지 않고, 받은 bounded evidence(제한 근거)에 대한 critique(비판)만 남기게 하는 것이다.
 
+Wrapper defaults(래퍼 기본값)는 `--rules`, `--no-plan`, `--no-subagents`, `--disable-web-search`를 이미 포함한다. 이 flag(플래그)들은 wrapper output(래퍼 출력)에서 빠진 것이 확인되지 않는 한 `--extra-arg`로 다시 넘기지 않는다. 추가 flag(추가 플래그)가 `--`로 시작하면 `--extra-arg=--flag` 형식을 쓴다. 효과(effect, 효과)는 Grok wrapper(그록 래퍼) 중복 인자 오류를 줄이면서 bounded review(제한 검토) 규칙은 유지하는 것이다.
+
 기본 기록 위치(default record location, 기본 기록 위치)는 `docs/agent_control/grok_reviews/`다. 다만 사용자가 이번 작업처럼 patch work material(패치 작업물)을 프로젝트 폴더에 남기지 말라고 명시하면, 새 Grok 패킷(packet, 묶음)을 만들지 않고 기존 산출물(existing artifacts, 기존 산출물), 대화 기록(conversation record, 대화 기록), 또는 프로젝트 밖 임시 경로(temp path, 임시 경로)만 쓴다. 효과(effect, 효과)는 운영 규칙을 지키면서도 사용자가 금지한 임시 산출물을 남기지 않는 것이다.
 
 ## 가장 중요한 원칙(Non-Negotiable Principle, 양보 불가 원칙)

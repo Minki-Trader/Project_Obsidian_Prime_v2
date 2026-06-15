@@ -1,0 +1,95 @@
+﻿{
+  "audit_basis": "stage_run_ledger_rows_F53_to_F60_and_runtime_reports",
+  "rows": [
+    {
+      "stage": "F53",
+      "axis": "short",
+      "validation_pf": 0.37,
+      "validation_dd": 31.92,
+      "validation_trades": 1325,
+      "oos_pf": 0.56,
+      "oos_dd": 19.18,
+      "oos_trades": 1337,
+      "signal_diff": 0
+    },
+    {
+      "stage": "F54",
+      "axis": "short",
+      "validation_pf": 0.41,
+      "validation_dd": 63.63,
+      "validation_trades": 2781,
+      "oos_pf": 0.61,
+      "oos_dd": 28.22,
+      "oos_trades": 2163,
+      "signal_diff": 0
+    },
+    {
+      "stage": "F55",
+      "axis": "short",
+      "validation_pf": 0.42,
+      "validation_dd": 20.84,
+      "validation_trades": 954,
+      "oos_pf": 0.64,
+      "oos_dd": 8.3,
+      "oos_trades": 711,
+      "signal_diff": 0
+    },
+    {
+      "stage": "F56",
+      "axis": "short",
+      "validation_pf": 0.46,
+      "validation_dd": 29.91,
+      "validation_trades": 1389,
+      "oos_pf": 0.74,
+      "oos_dd": 9.27,
+      "oos_trades": 1018,
+      "signal_diff": 0
+    },
+    {
+      "stage": "F57",
+      "axis": "short",
+      "validation_pf": 0.43,
+      "validation_dd": 32.41,
+      "validation_trades": 1331,
+      "oos_pf": 0.68,
+      "oos_dd": 11.12,
+      "oos_trades": 902,
+      "signal_diff": 0
+    },
+    {
+      "stage": "F58",
+      "axis": "short",
+      "validation_pf": 0.36,
+      "validation_dd": 34.43,
+      "validation_trades": 1405,
+      "oos_pf": 0.68,
+      "oos_dd": 11.38,
+      "oos_trades": 1217,
+      "signal_diff": 0
+    },
+    {
+      "stage": "F59",
+      "axis": "long",
+      "validation_pf": 0.46,
+      "validation_dd": 22.84,
+      "validation_trades": 1002,
+      "oos_pf": 0.58,
+      "oos_dd": 10.27,
+      "oos_trades": 688,
+      "signal_diff": 0
+    },
+    {
+      "stage": "F60",
+      "axis": "long_admission",
+      "validation_pf": 0.41,
+      "validation_dd": 14.89,
+      "validation_trades": 661,
+      "oos_pf": 0.51,
+      "oos_dd": 8.48,
+      "oos_trades": 494,
+      "signal_diff": -1501
+    }
+  ],
+  "dominant_read": "F53-F59 have completed MT5 rows and mostly signal_diff=0, so the repeated failure is treated as alpha/economics failure more than handoff failure; F60 separately records intentional admission suppression.",
+  "f61_implication": "Change target to side allocation while keeping feature contract and runtime probe parity checks explicit."
+}

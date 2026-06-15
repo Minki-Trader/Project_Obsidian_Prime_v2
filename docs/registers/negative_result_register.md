@@ -1212,3 +1212,13 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.41/14.89%/661`; MT5 OOS(MT5 표본외) `0.51/8.48%/494`.
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
 - Effect(효과): fixed F59 long score(고정 F59 롱 점수)에 admission cadence(진입 리듬)를 붙이는 방식이 long-axis friction escape(롱 축 마찰 탈출)를 만들었는지 기억한다.
+
+<!-- frontier61D_stage_closeout_side_allocation_v1 -->
+
+## frontier61D_stage_closeout_side_allocation_v1
+
+- Stage(단계): `stage_frontier_61__non_long_axis_pf_source_after_friction_memory`
+- Negative memory(부정 기억): `negative_memory_side_allocation_failed_runtime_pf(부정 기억, 방향 배분 런타임 PF 실패)`
+- Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.43/53.18%/2253`; MT5 OOS(MT5 표본외) `0.71/15.16%/1499`.
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
+- Effect(효과): side allocation(방향 배분)이 단일 방향 수리 실패를 넘어서는 PF source(수익 팩터 원천)를 만들었는지 기록한다.

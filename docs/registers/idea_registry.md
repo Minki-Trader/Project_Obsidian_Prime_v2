@@ -1876,3 +1876,13 @@ Register ideas when they become durable work, not for every passing thought.
 - Result(결과): `negative_memory_long_axis_friction_escape_failed_pf(부정 기억, 롱 축 마찰 탈출 수익 팩터 실패)`
 - Evidence(근거): `stages/stage_frontier_60__long_axis_friction_escape_or_negative_memory/03_reviews/runtime_probe_report.md`
 - Boundary(경계): reference-only(참조 전용), no authority(권위 없음).
+
+<!-- frontier61D_stage_closeout_side_allocation_v1 -->
+
+## frontier61D_stage_closeout_side_allocation_v1
+
+- Stage(단계): `stage_frontier_61__non_long_axis_pf_source_after_friction_memory`
+- Idea(아이디어): short/flat/long side allocation target(숏/무거래/롱 방향 배분 목표)을 새 ONNX source(온엑스 원천)로 시험했다.
+- Result(결과): `negative_memory_side_allocation_failed_runtime_pf(부정 기억, 방향 배분 런타임 PF 실패)`
+- Evidence(근거): `stages/stage_frontier_61__non_long_axis_pf_source_after_friction_memory/03_reviews/runtime_probe_report.md`
+- Boundary(경계): runtime_probe_observation only(런타임 탐침 관찰 전용), no authority(권위 없음).
