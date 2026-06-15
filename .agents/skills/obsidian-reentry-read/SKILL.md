@@ -18,6 +18,7 @@ Use this skill whenever work starts or resumes inside `Project_Obsidian_Prime_v2
    - `docs/workspace/workspace_state.yaml` names one active stage
    - the active stage `selection_status.md` agrees with that stage
    - the latest durable stage-handoff decision matches the same transition
+   - on Windows deep stage/MT5 paths, do not declare active-stage docs or frontier evidence `missing`, `invalid`, or `blocked` until repo-relative `rg --files`/`rg` has been attempted, and use `foundation.control_plane.ledger.io_path` when file content is needed
    - if any of those disagree, stop and surface state fragmentation before continuing
 7. Restate:
    - active stage
@@ -41,3 +42,4 @@ Use this skill whenever work starts or resumes inside `Project_Obsidian_Prime_v2
 - registered architecture debt is not a normal pattern to copy into later stages
 - promotion-ineligible does not mean idea-dead
 - negative does not mean invalid, and inconclusive does not mean quiet approval
+- Long path retries are evidence discovery guardrails only; they do not relax gates, thresholds, MT5 output requirements, or claim boundaries.

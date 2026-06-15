@@ -30,4 +30,5 @@ Use this skill when a result, run, experiment, model, package, backtest, PR, or 
 - Do not call a result negative when the run is invalid or missing evidence.
 - Do not turn promotion_candidate into operating_promotion.
 - Do not turn runtime_probe into runtime_authority.
+- On Windows deep stage/MT5 artifact paths, do not label evidence `missing`, a setup `invalid`, or a result `blocked` from one native path failure. First try repo-relative `rg --files`/`rg`; when file content is needed, retry with `foundation.control_plane.ledger.io_path`; if retry also fails, record that retry outcome before applying the judgment label.
 - Pair final user-facing judgment with `obsidian-claim-discipline` and `obsidian-answer-clarity`.
