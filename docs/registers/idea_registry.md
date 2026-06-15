@@ -1896,3 +1896,13 @@ Register ideas when they become durable work, not for every passing thought.
 - Result(결과): `negative_memory_event_compression_failed_runtime_pf(부정 기억, 이벤트 압축 런타임 PF 실패)`
 - Evidence(근거): `stages/stage_frontier_62__post_allocation_failure_mode_or_seed_expansion/03_reviews/runtime_probe_report.md`
 - Boundary(경계): runtime_probe_observation only(런타임 탐침 관찰 전용), no authority(권위 없음).
+
+<!-- frontier63D_stage_closeout_inverse_event_compressed_side_allocation_v1 -->
+
+## frontier63D_stage_closeout_inverse_event_compressed_side_allocation_v1
+
+- Stage(단계): `stage_frontier_63__new_pf_source_after_event_compression_memory`
+- Idea(아이디어): inverse event-compressed short/flat/long side allocation target(역전 이벤트 압축 숏/무거래/롱 방향 배분 목표)을 새 ONNX source(온엑스 원천)로 시험했다.
+- Result(결과): `negative_memory_inverse_event_compression_failed_runtime_pf(부정 기억, 역전 이벤트 압축 런타임 PF 실패)`
+- Evidence(근거): `stages/stage_frontier_63__new_pf_source_after_event_compression_memory/03_reviews/runtime_probe_report.md`
+- Boundary(경계): runtime_probe_observation only(런타임 탐침 관찰 전용), no authority(권위 없음).

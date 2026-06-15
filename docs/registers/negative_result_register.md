@@ -1232,3 +1232,13 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.36/22.31%/897`; MT5 OOS(MT5 표본외) `0.61/9.53%/743`.
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
 - Effect(효과): event compression(이벤트 압축)이 F61의 과잉 거래를 줄이면서 PF source(수익 팩터 원천)를 보존했는지 기록한다.
+
+<!-- frontier63D_stage_closeout_inverse_event_compressed_side_allocation_v1 -->
+
+## frontier63D_stage_closeout_inverse_event_compressed_side_allocation_v1
+
+- Stage(단계): `stage_frontier_63__new_pf_source_after_event_compression_memory`
+- Negative memory(부정 기억): `negative_memory_inverse_event_compression_failed_runtime_pf(부정 기억, 역전 이벤트 압축 런타임 PF 실패)`
+- Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.35/22.56%/897`; MT5 OOS(MT5 표본외) `0.44/15.61%/743`.
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
+- Effect(효과): inverse event compression(역전 이벤트 압축)이 F62의 wrong-way signal(반대 방향 신호) 가능성을 PF source(수익 팩터 원천)로 바꾸는지 기록한다.
