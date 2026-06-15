@@ -1132,3 +1132,13 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.41/7.36%/324`; MT5 OOS(MT5 표본외) `0.66/2.50%/193`; feature_ready_diff(피처 준비 차이) `0/0`.
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
 - Effect(효과): 같은 F51 reference signal(F51 참조 신호)에 lifecycle-only tightening(생명주기 단독 조임)만 반복하지 않는다. 다음에는 PF source(수익 팩터 원천)를 새로 만든 뒤 DD compression clue(손실폭 압축 단서)를 결합한다.
+
+<!-- frontier53D_stage_closeout_path_quality_pf_source_v1 -->
+
+## frontier53D_stage_closeout_path_quality_pf_source_v1
+
+- Stage(단계): `stage_frontier_53__short_pf_edge_pf_source_after_runtime_dd_compression_memory`
+- Negative memory(부정 기억): `negative_memory_path_quality_proxy_did_not_transfer_to_runtime(부정 기억, 경로 품질 프록시가 런타임으로 전이되지 않음)`
+- Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.37/31.92%/1325`; MT5 OOS(MT5 표본외) `0.56/19.18%/1337`.
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
+- Effect(효과): raw path-quality score(원천 경로 품질 점수)를 같은 형태로 반복하기 전에 proxy-to-runtime economics(프록시→런타임 경제성) 붕괴 여부를 먼저 기억한다.

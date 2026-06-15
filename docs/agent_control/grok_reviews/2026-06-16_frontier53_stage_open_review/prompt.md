@@ -1,0 +1,34 @@
+﻿You are Grok as external second opinion(외부 2차 의견) for Project Obsidian Prime v2.
+
+Review size(검토 크기): small(소규모).
+Task(작업): Frontier 53 stage-open(전선 53 단계 개방) critique only.
+
+Current truth(현재 진실):
+- F52 closed as preserved clue + negative memory(보존 단서 + 부정 기억).
+- Preserved clue(보존 단서): close-on-flat + entry-transition + cooldown + ATR SL/TP runtime policy(런타임 정책) compressed MT5 DD(손실폭) below 10% on validation_is and OOS.
+- Negative memory(부정 기억): lifecycle-only tightening(생명주기 조임만) destroyed PF/economics(수익 팩터/경제성), so F53 must seek a new PF source(수익 팩터 원천), not repeat tightening.
+- No completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성) is claimed.
+
+Proposed F53 hypothesis(제안 가설):
+- Train a short-only path-quality classifier(숏 전용 경로 품질 분류기) from train-only labels:
+  MFE >= train take quantile, MAE <= train stop quantile, horizon_pnl > 0.
+- Use raw 58 contract features(계약 피처) only; do not import prior winner(승자) or baseline(기준선).
+- Select by train score quantile(학습 점수 분위수), then evaluate validation_is/OOS with path-native first-hit SL/TP proxy(경로 기반 선도달 손절/익절 프록시).
+- If moving to MT5, test one representative narrow candidate only, with mandatory runtime probe(런타임 탐침). Runtime policy(런타임 정책) may keep ATR SL/TP and maxhold DD clue(손실폭 단서) but should remove F52 entry-transition-only suppression(진입 전환 전용 억제) unless locally justified.
+
+Bounded scout evidence(제한 탐색 근거):
+- Best dual-positive proxy(양쪽 전진 구간 PF 양수) was weak:
+  logreg_l2_c05 short, stop_q=0.25, take_q=0.70, score_q=0.90:
+  validation_is PF=1.0019, DD=7.96%, density=7.26/day;
+  OOS PF=1.0962, DD=7.35%, density=10.24/day.
+- More conservative score_q=0.93:
+  validation_is PF=1.0038, DD=5.93%, density=5.09/day;
+  OOS PF=1.0802, DD=7.79%, density=7.84/day.
+- ExtraTrees depth6 score_q=0.85:
+  validation_is PF=1.0226, DD=10.85%, density=6.45/day;
+  OOS PF=1.0239, DD=5.81%, density=7.31/day.
+
+Question(질문):
+1. Is the F53 stage-open direction valid as a new PF source search(수익 팩터 원천 탐색) rather than a repeat of F52 lifecycle-only repair(생명주기 전용 수리 반복)?
+2. Which representative candidate should be sent to MT5 runtime probe(런타임 탐침) first, and what is the main failure mode(주요 실패 양상) to watch?
+3. Keep claims bounded: answer only with accepted/rejected/needs_local_verification(수용/거절/로컬 검증 필요) style guidance. Do not claim completion(완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), or Goal Achieve(목표 달성).
