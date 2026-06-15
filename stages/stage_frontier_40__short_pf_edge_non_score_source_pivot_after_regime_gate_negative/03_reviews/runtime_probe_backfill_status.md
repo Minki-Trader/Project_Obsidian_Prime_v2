@@ -1,6 +1,6 @@
 ﻿# Runtime Probe Backfill Status(런타임 탐침 소급 상태)
 
-Updated(갱신): 2026-06-15T14:06:22Z
+Updated(갱신): 2026-06-15T20:44:30Z
 
 Status(상태): `invalid_setup_no_runtime_material`
 
@@ -10,6 +10,6 @@ Action(행동): omitted MT5 runtime probe(누락된 MT5 런타임 탐침)를 소
 
 Effect(효과): 실행 가능 후보는 실제 tester KPI(테스터 지표)로 보강하고, 불가능한 후보는 blocker(차단 사유)를 남깁니다.
 
-Reason(사유): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f40_proxy_repair", "claim_boundary": {"completion": "not_claimed", "selected_baseline": "not_claimed", "operating_promotion": "not_claimed", "runtime_authority"`
+Reason(사유): `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f40_proxy_repair`  Preserved clue(보존 단서): `f40_raw_feature_pair_pockets_create_density_matched_short_scout_edge_reference_only`  Negative memory(부정 기억): `f40_ra`
 
 Claim boundary(주장 경계): completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 모두 not_claimed(주장 없음)입니다.

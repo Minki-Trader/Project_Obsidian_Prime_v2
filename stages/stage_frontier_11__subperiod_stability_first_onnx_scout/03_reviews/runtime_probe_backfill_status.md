@@ -1,6 +1,6 @@
 ﻿# Runtime Probe Backfill Status(런타임 탐침 소급 상태)
 
-Updated(갱신): 2026-06-15T14:13:08Z
+Updated(갱신): 2026-06-15T20:44:30Z
 
 Status(상태): `invalid_setup_no_runtime_material`
 
