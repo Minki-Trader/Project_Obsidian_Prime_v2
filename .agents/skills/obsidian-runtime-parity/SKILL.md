@@ -24,3 +24,4 @@ Use this skill when work touches MT5, EA modules, runtime packages, model bundle
 - Do not change EA entrypoints for parameter-only experiments.
 - Do not hide runtime differences in file names; record identities and hashes.
 - On Windows deep stage/MT5 artifact paths, do not classify a native PowerShell/Python path failure as parity failure, missing evidence, invalid setup, or blocked until repo-relative `rg --files`/`rg` has been attempted; when content or mechanical CSV/JSON reads are needed, retry through `foundation.control_plane.ledger.io_path` and record the retry outcome before judging.
+- If PowerShell `Import-Csv`, `Measure-Object`, or recursive `Get-ChildItem` reports `Could not find a part of the path` on a known-deep frontier artifact, stop repeating that cmdlet; use `cmd /c dir /x` only to discover a local 8.3 short path, or read through `foundation.control_plane.ledger.io_path` in Python, while preserving repo-relative paths in reports.

@@ -1222,3 +1222,13 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.43/53.18%/2253`; MT5 OOS(MT5 표본외) `0.71/15.16%/1499`.
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
 - Effect(효과): side allocation(방향 배분)이 단일 방향 수리 실패를 넘어서는 PF source(수익 팩터 원천)를 만들었는지 기록한다.
+
+<!-- frontier62D_stage_closeout_event_compressed_side_allocation_v1 -->
+
+## frontier62D_stage_closeout_event_compressed_side_allocation_v1
+
+- Stage(단계): `stage_frontier_62__post_allocation_failure_mode_or_seed_expansion`
+- Negative memory(부정 기억): `negative_memory_event_compression_failed_runtime_pf(부정 기억, 이벤트 압축 런타임 PF 실패)`
+- Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.36/22.31%/897`; MT5 OOS(MT5 표본외) `0.61/9.53%/743`.
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
+- Effect(효과): event compression(이벤트 압축)이 F61의 과잉 거래를 줄이면서 PF source(수익 팩터 원천)를 보존했는지 기록한다.

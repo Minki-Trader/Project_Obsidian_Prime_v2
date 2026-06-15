@@ -155,6 +155,8 @@ Stage 10(10단계)부터 알파 탐색(alpha exploration, 알파 탐색)이 닫�
 
 필수 재시도(required retry, 필수 재시도)는 repo-relative path(저장소 상대 경로) 기준으로 `rg --files` 또는 `rg`를 먼저 쓰고, 파일 내용이나 CSV/JSON(표/제이슨) 기계 수정이 필요하면 `foundation.control_plane.ledger.io_path`를 거쳐 Python(파이썬)에서 연다.
 
+PowerShell(파워셸) `Import-Csv`, `Measure-Object`, 재귀 `Get-ChildItem`이 깊은 frontier stage(전선 단계) 경로에서 `Could not find a part of the path(경로 일부를 찾을 수 없음)`를 내면 같은 cmdlet(명령 도구)을 반복하지 않는다. `cmd /c dir /x`로 확인한 8.3 short path(짧은 경로)나 `io_path` 기반 Python(파이썬) 읽기로 한 번에 전환한다.
+
 효과(effect, 효과)는 Windows MAX_PATH(윈도우 최대 경로 길이) 한계 때문에 존재하는 파일을 없는 파일로 오판하지 않고, durable artifact identity(지속 산출물 정체성)는 계속 repo-relative path(저장소 상대 경로)와 hash(해시)로 남기는 것이다. `\\?\` 같은 extended path prefix(확장 경로 접두사)는 local execution helper(로컬 실행 보조)로만 쓰고 문서 정체성으로 남기지 않는다.
 
 ## 경로/이름 해석 사전확인(Path/Name Resolution Preflight, 경로/이름 해석 사전확인)
