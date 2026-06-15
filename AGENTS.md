@@ -155,6 +155,25 @@ Stage 10(10단계)부터 알파 탐색(alpha exploration, 알파 탐색)이 닫�
 
 효과(effect, 효과)는 Windows MAX_PATH(윈도우 최대 경로 길이) 한계 때문에 존재하는 파일을 없는 파일로 오판하지 않고, durable artifact identity(지속 산출물 정체성)는 계속 repo-relative path(저장소 상대 경로)와 hash(해시)로 남기는 것이다. `\\?\` 같은 extended path prefix(확장 경로 접두사)는 local execution helper(로컬 실행 보조)로만 쓰고 문서 정체성으로 남기지 않는다.
 
+## 경로/이름 해석 사전확인(Path/Name Resolution Preflight, 경로/이름 해석 사전확인)
+
+명확하지 않은 파일(non-obvious file, 명확하지 않은 파일)은 이름을 추정해서 바로 열지 않는다. 다음 중 하나라도 맞으면 preflight(사전확인)를 먼저 한다.
+
+- convention(관례), memory(기억), 다른 repo habit(다른 저장소 습관)에서 추론한 path(경로)다.
+- 사용자 문구(user text, 사용자 문구)에 repo-relative confirmation(저장소 상대 경로 확인)이 없다.
+- 첫 open/read(열기/읽기)가 한 번 실패했다.
+- `docs/contracts/*`, `docs/agent_control/grok_reviews/*/`, stage packet folder(단계 패킷 폴더)처럼 이름 변형(naming variance, 이름 변형)이 있는 산출물군이다.
+
+발견 순서(discovery order, 발견 순서)는 `rg --files` 또는 targeted `rg -g(대상 rg)`를 먼저 쓰고, 그 다음 smallest sufficient directory listing(최소 충분 디렉터리 목록화), 그 다음 필요한 경우 `Get-ChildItem`, 마지막으로 이미 repo-relative identity(저장소 상대 정체성)가 확인된 파일에만 `foundation.control_plane.ledger.io_path` 또는 extended path helper(확장 경로 보조)를 쓴다.
+
+한 번 실패한 뒤에는 adjacent guess(인접 추정)를 반복하지 않는다. 같은 parent directory(상위 폴더)에서 basename(파일명)만 바꾸거나, 같은 artifact role(산출물 역할)의 확장자/접미사만 바꾸는 시도는 adjacent guess(인접 추정)다. 이때는 해당 폴더를 먼저 목록화한다.
+
+discovery(발견)로 바로잡은 경우 wrong assumption(잘못된 가정), repo-relative canonical path(저장소 상대 정식 경로), discovery method(발견 방법)를 작업 기록이나 사용자 업데이트에 짧게 남긴다. 목록화 후에도 없으면 `missing_material(자료 누락)`로 분기하고 가까운 파일을 대체물처럼 쓰지 않는다.
+
+Repo-scoped skill(저장소 전용 스킬)은 기본적으로 `.agents/skills/<skill-name>/SKILL.md`에서 확인한다. 외부 skill path(외부 스킬 경로)는 사용자가 명시했거나 현재 세션의 skill roots(스킬 루트)가 명시할 때만 쓴다.
+
+효과(effect, 효과)는 경로 추정 실수(path assumption mistake, 경로 추정 실수)를 반복하지 않고, Windows long path rule(윈도우 긴 경로 규칙)과 architecture path identity(구조 경로 정체성)를 해치지 않는 것이다. 이 사전확인은 hash(해시), ledger(장부), MT5 evidence identity(MT5 근거 정체성), gate(게이트), threshold(임계값), runtime requirement(런타임 요구)를 대체하지 않는다.
+
 ## 탐색 명령(Exploration Mandate, 탐색 명령)
 
 `docs/policies/exploration_mandate.md`가 탐색 규율(exploration discipline, 탐색 규율)을 담당한다.

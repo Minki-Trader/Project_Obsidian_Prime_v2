@@ -1,0 +1,27 @@
+{
+  "review_size": "medium",
+  "prompt_hash": "14f987e122a43f02416396bae8e0a770c4b603f2f843b0a316a0a4b5aee29a5b",
+  "command": [
+    "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+    "--rules",
+    "You are an external second-opinion reviewer for a bounded evidence snapshot. Answer only from the prompt. Do not inspect files, run tools, browse, spawn subagents, or perform local verification. If evidence is insufficient, say needs_local_verification.",
+    "--no-plan",
+    "--no-subagents",
+    "--disable-web-search",
+    "-p",
+    "# Frontier59 Stage-Open Review Prompt(전선59 단계 개방 검토 프롬프트)\n\nYou are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Answer only from this prompt(프롬프트). Do not inspect files(파일 확인 금지), run tools(도구 실행 금지), browse(브라우징 금지), or claim local verification(로컬 검증 주장 금지).\n\n## Current Truth(현재 진실)\n\n- Current closed stage(현재 닫힌 단계): `stage_frontier_58__short_pf_edge_after_fast_exit_execution_memory`.\n- F58 judgment(전선58 판정): `negative_memory_microstructure_friction_source_did_not_transfer(부정 기억, 미시구조 마찰 원천이 전이되지 않음)`.\n- F58 proxy(프록시): validation/OOS PF(profit factor, 수익 팩터) `1.0716/1.1017`, DD(drawdown, 손실폭) `9.1497/6.6151`, trades/day(거래/일) `7.6831/9.3435`, ONNX parity(온엑스 동등성) passed.\n- F58 MT5 runtime probe(MT5 런타임 탐침): validation/OOS PF `0.36/0.68`, DD `34.43%/11.38%`, trades/day `7.6776/9.2901`, feature_ready_diff(피처 준비 차이) `0/0`, signal_diff(신호 차이) `0/0`.\n- Recent F53~F58 memory(최근 기억): multiple short-side PF-source attempts(여러 매도 측 수익 팩터 원천 시도) aligned signals/features(신호/피처 일치) but collapsed in MT5 economics(MT5 경제성 붕괴).\n- Runtime probe coverage(런타임 탐침 커버리지): all prior frontier omissions were backtested/recorded(이전 전선 누락은 소급 백테스트/기록됨); each new frontier stage(전선 단계)는 MT5 runtime probe(MT5 런타임 탐침)를 실행한다.\n\n## Reference Only(참조 전용)\n\nStage12~364(12~364단계)는 reference only(참조 전용)다. No winner/baseline/promotion/runtime authority/live readiness(승자/기준선/승격/런타임 권위/실거래 준비) is inherited.\n\nPreserved clue(보존 단서) from old long-side references(과거 롱 측 참조): US100 may have long-side drift/quality asymmetry(롱 측 드리프트/품질 비대칭) in some historical reports, but those reports had trade-shape/DD/trade-count issues(거래 형태/손실폭/거래수 문제) and are not authority(권위 아님).\n\n## Proposed F59 Direction(F59 제안 방향)\n\nOpen `stage_frontier_59__long_quality_edge_after_short_economics_memory`.\n\nHypothesis(가설): after repeated short-side runtime economics collapse(반복된 매도 측 런타임 경제성 붕괴), a long-only directional quality score(롱 전용 방향성 품질 점수) trained on ATR-bounded path survival(ATR 기반 경로 생존), favorable movement(유리 이동), and adverse movement control(불리 이동 통제) can produce a more MT5-transferable seed surface(더 MT5 전이 가능한 씨앗 표면) than another short-side relabeling(매도 라벨 변형).\n\nNovelty delta(신규성 차이):\n- Direction axis(방향 축): long-only `p_long` decision surface(롱 전용 p_long 의사결정 표면), not short `p_short`.\n- Claim boundary(주장 경계): scout clue(탐색 단서), seed surface(씨앗 표면), runtime probe observation(런타임 탐침 관찰) only.\n- Runtime policy(런타임 정책): raw direct threshold(원천 직접 임계값), no inherited F52 compression authority(F52 압축 권위 상속 없음).\n- Prior long work(이전 롱 작업): used only as preserved clue(보존 단서), not candidate inheritance(후보 상속 아님).\n\nSuccess criteria(성공 기준):\n- Proxy(프록시): validation/OOS density(검증/표본외 밀도) near 5~10 trades/day(일 5~10회), weak-positive PF(약한 양수 수익 팩터), DD below early scout concern(초기 탐색 우려선 아래), with stress rows(스트레스 행).\n- ONNX(온엑스): 3-output `[p_short,p_flat,p_long]` mapping(3출력 매핑) passes parity(동등성).\n- MT5 runtime probe(MT5 런타임 탐침): validation/OOS Strategy Tester output(전략 테스터 출력), KPI(핵심 성과 지표), signal/feature diff(신호/피처 차이), proxy-runtime gap(프록시-런타임 차이) are recorded before closeout(마감 전 기록).\n- Close honestly(정직한 마감): completion candidate(완성 후보), preserved clue(보존 단서), negative memory(부정 기억), invalid setup(무효 설정), or blocked(차단).\n\nDo-not-repeat(반복 금지): do not run another short-side label micro-variant(매도 라벨 미세 변형), do not import old long winners(과거 롱 승자 상속 금지), do not skip MT5 runtime probe(MT5 런타임 탐침 생략 금지), do not claim baseline/promotion/runtime authority/live readiness/Goal Achieve(기준선/승격/런타임 권위/실거래 준비/목표 달성 주장 금지).\n\n## Question(질문)\n\nIs this F59 direction materially novel enough(실질적으로 충분히 새로운가), and what is the sharpest pre-MT5 failure risk(비싼 MT5 전 실패 위험) Codex(코덱스) should guard?"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "success": true,
+  "duration_seconds": 26.999306,
+  "stripped_noise_lines": [],
+  "preflight_warnings": [],
+  "unexpected_top_level_artifacts": [],
+  "packet_paths": {
+    "prompt": "docs/agent_control/grok_reviews/2026-06-16_frontier59_stage_open_snapshot/prompt.md",
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-16_frontier59_stage_open_snapshot/clean_output.md",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-16_frontier59_stage_open_snapshot/raw_diagnostics.json",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-16_frontier59_stage_open_snapshot/metadata.json"
+  }
+}

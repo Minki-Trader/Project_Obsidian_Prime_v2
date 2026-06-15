@@ -1192,3 +1192,13 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.36/34.43%/1405`; MT5 OOS(MT5 표본외) `0.68/11.38%/1217`.
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
 - Effect(효과): microstructure friction survivability source(미시구조 마찰 생존성 원천)를 같은 형태로 반복하기 전에 proxy-to-runtime economics(프록시-런타임 경제성) 전이 여부를 먼저 기억한다.
+
+<!-- frontier59D_stage_closeout_directional_long_quality_v1 -->
+
+## frontier59D_stage_closeout_directional_long_quality_v1
+
+- Stage(단계): `stage_frontier_59__long_quality_edge_after_short_economics_memory`
+- Negative memory(부정 기억): `negative_memory_long_axis_did_not_escape_friction_class(부정 기억, 롱 축이 마찰/경제성 붕괴 계열을 벗어나지 못함)`
+- Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.46/22.84%/1002`; MT5 OOS(MT5 표본외) `0.58/10.27%/688`.
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
+- Effect(효과): direction flip(방향 전환)이 economics transfer(경제성 전이)를 자동으로 해결하지 못하는지 기억한다.

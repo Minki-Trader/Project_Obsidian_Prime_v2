@@ -1,0 +1,27 @@
+{
+  "review_size": "small",
+  "prompt_hash": "a16c377bbab96705c21cfe9e9f9372775a012de7f65e4c518e2e164b20e02bc6",
+  "command": [
+    "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+    "--rules",
+    "You are an external second-opinion reviewer for a bounded evidence snapshot. Answer only from the prompt. Do not inspect files, run tools, browse, spawn subagents, or perform local verification. If evidence is insufficient, say needs_local_verification.",
+    "--no-plan",
+    "--no-subagents",
+    "--disable-web-search",
+    "-p",
+    "# Path Resolution Self-Correction Review(경로 해석 자가 교정 검토)\n\nYou are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Answer only from this prompt(프롬프트). Do not inspect files(파일 확인 금지), run tools(도구 실행 금지), browse(브라우징 금지), or claim local verification(로컬 검증 주장 금지).\n\n## Current Issue(현재 문제)\n\nDuring one Project Obsidian Prime v2 pass(작업 회차), Codex(코덱스) repeated path/name assumption mistakes(경로/이름 추정 실수):\n- wrong skill path(잘못된 스킬 경로) before correcting to repo-local `.agents/skills/...`.\n- Windows wildcard/glob command mistake(윈도우 와일드카드/글롭 명령 실수) before switching to `rg` search(검색).\n- guessed contract filename(추정 계약 파일명) instead of listing `docs/contracts` first.\n- guessed Grok packet filename `request.md`(추정 그록 패킷 파일명) where actual packet uses `prompt.md`.\n\nUser rule(사용자 규칙): repeated errors/mistakes(반복 오류/실수) should update AGENTS.md(에이전트 지침) and Skills(스킬) with Grok collaboration(그록 협업), for long-term prevention(장기 예방), not short-term hacks(단기 땜질).\n\n## Proposed Codex Correction(Codex 제안 보정)\n\nAdd a narrow path/name resolution preflight(경로/이름 해석 사전확인) to AGENTS.md(에이전트 지침) and `.agents/skills/obsidian-workflow-drift-guard/SKILL.md`:\n- Before opening a non-obvious repo file(명확하지 않은 저장소 파일), enumerate with `rg --files` or `Get-ChildItem` first.\n- For known packet directories(패킷 폴더), list filenames before assuming `request.md`, `prompt.md`, or report names.\n- For Windows glob(윈도우 글롭), prefer `rg pattern root -g *.ext` over shell wildcard directory assumptions(셸 와일드카드 디렉터리 추정).\n- If a guessed path fails once, immediately switch to discovery(발견) and record the corrected source of truth(진실 원천); do not retry adjacent guesses.\n\nBoundary(경계): This does not relax evidence gates(근거 게이트), thresholds(임계값), MT5 runtime requirements(MT5 런타임 요구), or stage claims(단계 주장). It is only an execution hygiene(실행 위생) rule.\n\n## Question(질문)\n\nIs this correction appropriately scoped(범위가 적절한가)? Name any missing guardrail(누락 보호장치) Codex(코덱스) should add before patching."
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "success": true,
+  "duration_seconds": 26.947797,
+  "stripped_noise_lines": [],
+  "preflight_warnings": [],
+  "unexpected_top_level_artifacts": [],
+  "packet_paths": {
+    "prompt": "docs/agent_control/grok_reviews/2026-06-16_path_resolution_self_correction/prompt.md",
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-16_path_resolution_self_correction/clean_output.md",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-16_path_resolution_self_correction/raw_diagnostics.json",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-16_path_resolution_self_correction/metadata.json"
+  }
+}

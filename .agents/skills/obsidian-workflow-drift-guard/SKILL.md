@@ -36,6 +36,23 @@ Before changing direction, identify:
 - `next_action`: continue, fetch material, build tool, fix environment, lower claim, or ask user
 - `drift_risk`: what nearby task could distract from the real blocker?
 
+## Path/Name Resolution Preflight
+
+Use this preflight when a file path(파일 경로) or packet filename(패킷 파일명) is inferred from convention(관례), memory(기억), user text without repo-relative confirmation(저장소 상대 경로 확인 없는 사용자 문구), or an artifact family with naming variance(이름 변형이 있는 산출물군) such as `docs/contracts/*`, `docs/agent_control/grok_reviews/*/`, or stage packet folders(단계 패킷 폴더).
+
+Required behavior:
+
+1. Discover first with repo-relative `rg --files` or targeted `rg -g` search(대상 검색). If the parent folder is known, list the smallest sufficient directory(최소 충분 디렉터리)를 먼저 본다.
+2. For Windows glob(윈도우 글롭), prefer `rg pattern root -g "*.ext"` over wildcard directory assumptions(와일드카드 디렉터리 추정).
+3. If the first open/read(열기/읽기) fails once, stop adjacent guessing(인접 추정 중단) and list the parent directory before trying another filename(파일명).
+4. Adjacent guessing(인접 추정) means same parent directory(같은 상위 폴더) plus a tweaked basename(바꾼 파일명), same artifact role(같은 산출물 역할) plus a different extension(다른 확장자), or same stage/packet id(같은 단계/패킷 ID) plus a different suffix(다른 접미사).
+5. When discovery corrects the path(경로를 바로잡음), record wrong assumption(잘못된 가정), repo-relative canonical path(저장소 상대 정식 경로), and discovery method(발견 방법) briefly.
+6. If enumeration(목록화) still finds no file, classify it as `missing_material(자료 누락)` and do not substitute a nearby file(가까운 파일) as if it were equivalent.
+
+Repo-scoped skills(저장소 전용 스킬) default to `.agents/skills/<skill-name>/SKILL.md`. External skill paths(외부 스킬 경로) are valid only when explicitly provided(명시적으로 제공됨) by the session skill roots(세션 스킬 루트) or the user.
+
+Effect(효과): path hygiene(경로 위생) prevents repeated wrong-path retries(잘못된 경로 재시도) while preserving repo-relative artifact identity(저장소 상대 산출물 정체성). This preflight(사전확인) does not replace hash(해시), ledger(장부), MT5 evidence identity(MT5 근거 정체성), gates(게이트), thresholds(임계값), or runtime requirements(런타임 요구).
+
 ## Material Recovery Order
 
 If required material is missing, do not stop at "design is still possible" when the requested product needs that material.

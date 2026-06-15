@@ -1,0 +1,31 @@
+﻿# Frontier59 Pre-MT5 Review Prompt(전선59 MT5 전 검토 프롬프트)
+
+You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Answer only from this prompt(프롬프트). Do not inspect files(파일 확인 금지), run tools(도구 실행 금지), browse(브라우징 금지), or claim local verification(로컬 검증 주장 금지).
+
+## Current Stage(현재 단계)
+
+- Stage(단계): `stage_frontier_59__long_quality_edge_after_short_economics_memory`.
+- Hypothesis(가설): directional long quality source(방향성 롱 품질 원천)가 F58 short-side economics collapse(F58 매도 측 경제성 붕괴) 뒤 더 MT5-transferable seed surface(MT5 전이 가능한 씨앗 표면)를 만들 수 있는지 본다.
+- Stage-open Grok(단계 개방 그록): accepted with boundary(경계부 수용). Main warning(주요 경고): direction flip(방향 뒤집기)이 economics-transfer failure(경제성 전이 실패)를 해결했다고 착각하지 말 것.
+
+## Proxy/ONNX Evidence(프록시/온엑스 근거)
+
+Selected candidate(선택 후보): `f59b_directional_long_quality_extratrees_d7_l100_long_fav65_adv35_q90`.
+
+- ONNX parity(온엑스 동등성): passed(통과), max_abs_diff `2.1921185999751458e-07`.
+- Probability mapping(확률 매핑): `[p_short=0,p_flat=0,p_long=directional_long_quality_score]`.
+- Runtime policy(런타임 정책): raw direct threshold_margin(원천 직접 임계값/마진), no lifecycle compression(생명주기 압축 없음), max_hold_bars `6`, ATR SL/TP enabled(ATR 손절/익절 사용).
+
+Proxy validation/OOS(프록시 검증/표본외):
+- PF(profit factor, 수익 팩터): `1.0578215704880256 / 1.0157994712511802`.
+- DD(drawdown, 손실폭): `11.437750113936607% / 7.416280476978832%`.
+- trades/day(거래/일): `5.551912568306011 / 5.3816793893129775`.
+- stress PF after extra rough cost(추가 거친 비용 후 압박 수익 팩터): `1.0198833381625407 / 0.9588761570883082`.
+- compressed/sequential PF(압축/순차 수익 팩터): `1.1394273294840083 / 1.0126155377813246`, compressed DD(압축 손실폭): `4.478141274770964% / 4.876701913364001%`.
+- win_rate(승률): `0.44291338582677164 / 0.451063829787234`; payoff_ratio(손익비): `1.3305044642138277 / 1.2362087904849268`.
+
+Local Codex read(로컬 코덱스 판독): proxy is not a completion candidate(완성 후보 아님). It has density target(밀도 목표) and weak positive PF(약한 양수 PF), but validation DD >10%(검증 손실폭 10% 초과) and OOS stress PF <1(표본외 압박 수익 팩터 1 미만). Because user rule(사용자 규칙) requires MT5 runtime probe(MT5 런타임 탐침) for every frontier stage(전선 단계), Codex plans to run MT5 for observation(관찰) and record proxy-runtime gap(프록시-런타임 차이), not promotion(승격).
+
+## Question(질문)
+
+Before expensive MT5 runtime probe(비싼 MT5 런타임 탐침) begins, is this setup valid to probe(탐침 유효) under the stated claim boundary(주장 경계)? What specific failure interpretation should Codex guard if MT5 PF collapses or DD expands?
