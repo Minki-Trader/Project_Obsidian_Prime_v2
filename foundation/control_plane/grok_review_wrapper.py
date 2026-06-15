@@ -28,6 +28,12 @@ KNOWN_NOISE_MARKERS = (
     "global config",
 )
 TOP_LEVEL_ARTIFACT_DENYLIST = frozenset({"mcps"})
+SNAPSHOT_ONLY_RULE = (
+    "You are an external second-opinion reviewer for a bounded evidence snapshot. "
+    "Answer only from the prompt. Do not inspect files, run tools, browse, spawn "
+    "subagents, or perform local verification. If evidence is insufficient, say "
+    "needs_local_verification."
+)
 
 
 @dataclass(frozen=True)
@@ -83,6 +89,7 @@ def run_grok_review(
     extra_args: Sequence[str] = (),
     output_dir: str | Path | None = None,
     repo_root: str | Path | None = None,
+    prompt_file_path: str | Path | None = None,
 ) -> GrokReviewResult:
     normalized_size = _normalize_review_size(review_size)
     warnings = tuple(_preflight_warnings(prompt, normalized_size))
@@ -92,7 +99,11 @@ def run_grok_review(
     cwd_path = Path(cwd) if cwd is not None else None
     repo_root_path = Path(repo_root) if repo_root is not None else None
     before_top_level = _top_level_snapshot(repo_root_path)
-    command = tuple([str(executable), *list(extra_args), "-p", prompt])
+    command_args = [*snapshot_only_args(), *list(extra_args)]
+    if prompt_file_path is not None:
+        command = tuple([str(executable), *command_args, "--prompt-file", str(prompt_file_path)])
+    else:
+        command = tuple([str(executable), *command_args, "-p", prompt])
 
     started = time.monotonic()
     raw_stdout = ""
@@ -155,6 +166,16 @@ def strip_known_noise(text: str) -> tuple[str, list[str]]:
     return "\n".join(clean_lines).strip(), stripped
 
 
+def snapshot_only_args() -> tuple[str, ...]:
+    return (
+        "--rules",
+        SNAPSHOT_ONLY_RULE,
+        "--no-plan",
+        "--no-subagents",
+        "--disable-web-search",
+    )
+
+
 def _normalize_review_size(value: str) -> str:
     normalized = str(value).strip().lower()
     if normalized not in REVIEW_SIZE_LIMITS:
@@ -196,8 +217,8 @@ def _with_packet_record(result: GrokReviewResult, *, prompt: str, output_dir: Pa
     raw_diagnostics_path = output_dir / "raw_diagnostics.json"
     metadata_path = output_dir / "metadata.json"
 
-    io_path(prompt_path).write_text(prompt + "\n", encoding="utf-8")
-    io_path(clean_output_path).write_text(result.clean_stdout + "\n", encoding="utf-8")
+    io_path(prompt_path).write_text(prompt.rstrip("\n") + "\n", encoding="utf-8-sig")
+    io_path(clean_output_path).write_text(result.clean_stdout.rstrip("\n") + "\n", encoding="utf-8-sig")
     raw_diagnostics = {
         "raw_stdout": result.raw_stdout,
         "raw_stderr": result.raw_stderr,
@@ -272,6 +293,7 @@ def main(argv: list[str] | None = None) -> int:
             extra_args=args.extra_arg,
             output_dir=args.output_dir,
             repo_root=args.repo_root,
+            prompt_file_path=args.prompt_file,
         )
     except Exception as exc:
         print(json.dumps({"status": "error", "error": str(exc)}, ensure_ascii=False), file=sys.stderr)

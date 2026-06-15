@@ -63,8 +63,10 @@ Do not use Grok for simple edits, path/hash/register recounts, git status, or di
 5. Call Grok.
    - Preferred executable(실행 파일): `C:\Users\awdse\.grok\bin\grok.exe`
    - Preferred wrapper(선호 래퍼): `python -m foundation.control_plane.grok_review_wrapper`
-   - Preferred CLI pattern(CLI 패턴): `grok.exe -p <prompt>`.
+   - Preferred CLI pattern(CLI 패턴): `grok.exe --prompt-file <prompt.md>`.
    - Use timeout(시간 제한), stdout/stderr capture(표준 출력/오류 캡처), prompt hash(프롬프트 해시), and unexpected artifact detection(예상 밖 산출물 감지).
+   - For bounded review(제한 검토), include snapshot-only direct-answer rules(스냅샷 전용 직접 답변 규칙): Grok(Grok, 그록) must answer only from the prompt(프롬프트), must not inspect files(파일 확인 금지), run tools(도구 실행 금지), browse(브라우징 금지), or perform local verification(로컬 검증 금지).
+   - Prefer wrapper defaults(래퍼 기본값) that pass `--rules`, `--no-plan`, `--no-subagents`, and `--disable-web-search`. Effect(효과): Grok(Grok, 그록)이 Codex(코덱스)의 local verification(로컬 검증)을 대신하려다 timeout(시간초과)되는 일을 줄인다.
    - Do not rely on `--disallowed-tools read_file,write_file,edit_file,bash,grep,glob,ls` as the primary safety control. Local trials showed those names may not match tool entries.
    - Effect(효과): Grok transport(전송) 문제와 Grok content(내용) 판단을 분리한다.
 
