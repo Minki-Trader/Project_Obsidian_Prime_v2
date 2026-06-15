@@ -1,0 +1,148 @@
+{
+  "stage_id": "stage_frontier_50__short_pf_edge_loss_floor_regime_transfer_after_f49_state_machine_memory",
+  "hypothesis": "train_only_loss_floor_regime_transfer_after_f49_state_machine_memory",
+  "idea_id": "IDEA-FR50-SHORT-LOSS-FLOOR-REGIME-TRANSFER",
+  "decision_use": "scout_seed_runtime_candidate_screening_only",
+  "comparison_baseline": "F49 best and closest nonwinner rows are reference-only clues, not inherited baseline",
+  "control_variables": {
+    "symbol": "US100",
+    "timeframe": "M5",
+    "side": "short",
+    "feature_order_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "split": "train_2022-09-01_2024-12-31_validation_2025-01-01_2025-09-30_oos_2025-10-01_2026-02-28",
+    "path_proxy": "executable_first_hit_sl_tp_from_raw_us100_path"
+  },
+  "changed_variables": {
+    "sequence_context": "lagged frozen event score plus causal loss-floor tape and MFE/MAE decay memory",
+    "event_surface": "future path event is segmented by train-only loss containment and causal prior loss-floor transfer families",
+    "risk_sizing": "train-only first-hit SLTP caps with minimal liquidity/volatility hygiene admission",
+    "novelty_line": "loss-floor regime transfer changes the input surface instead of relabeling F49 floor-state admission gates",
+    "model_family": "class_weighted_sequence_context_classifier_with_loss_floor_transfer_and_decay_memory",
+    "threshold_policy": "train_split_event_score_threshold_only; validation_oos_read_only"
+  },
+  "sample_scope": {
+    "rows": 46650,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "raw_rows": 261345,
+    "short_path_valid_rows": 46650
+  },
+  "success_criteria": {
+    "scout_clue": {
+      "forward_min_pf": 1.05,
+      "density": "4_to_12_per_day",
+      "forward_max_dd": 18.0
+    },
+    "seed_surface": {
+      "forward_min_pf": 1.2,
+      "density": "5_to_10_per_day",
+      "forward_max_dd": 12.0
+    },
+    "runtime_probe_candidate": {
+      "forward_min_pf": 1.5,
+      "forward_max_dd": 10.0
+    }
+  },
+  "invalid_conditions": [
+    "validation_oos_used_for_label_threshold_model_sl_tp_or_rank",
+    "past_outcome_tape_uses_labels_newer_than_horizon_plus_one_bars",
+    "f49_floor_state_gate_relabeling_as_primary_lever",
+    "f47_percentile_risk_budget_sweep_repeated_as_primary_lever",
+    "f44_continuous_regression_or_f42_f43_f38_f39_primary_lever_reopened"
+  ],
+  "evidence_plan": [
+    "stage_open_grok_receipt",
+    "gate_provenance_table",
+    "loss_floor_regime_transfer_model_audit",
+    "candidate_ledger",
+    "split_metrics",
+    "candidate_summary",
+    "stage_run_ledger",
+    "project_alpha_ledger_rows",
+    "stage_closeout_grok_receipt"
+  ],
+  "input_artifacts": {
+    "prev_selection": {
+      "path": "stages/stage_frontier_49__short_pf_edge_forward_floor_state_machine_after_f48_event_risk_memory/04_selected/selection_status.json",
+      "sha256": "8595e8026a0a9e3a10af5f676c47866dc70e7abc074913d579fa57ecbcf0d9b6"
+    },
+    "prev_preserved_clue": {
+      "path": "stages/stage_frontier_49__short_pf_edge_forward_floor_state_machine_after_f48_event_risk_memory/04_selected/preserved_clue.md",
+      "sha256": "eb20e188453a2c29a073391165b8c4ffe878b262b8f10e9b5d7922fd46d01c03"
+    },
+    "prev_negative_memory": {
+      "path": "stages/stage_frontier_49__short_pf_edge_forward_floor_state_machine_after_f48_event_risk_memory/04_selected/negative_memory.md",
+      "sha256": "c1c5d2071706fb627dcd3622e83fa9f278ddcc08b0dbbced50742b6d97ca212c"
+    },
+    "grok_open_clean_output": {
+      "path": "docs/agent_control/grok_reviews/2026-06-15_frontier50_stage_open/small_review/clean_output.md",
+      "sha256": "3548d642a766568e55ba58663c0bca3580d5119a9d0524bbdb9494b2b983ae25"
+    },
+    "gate_provenance_table": {
+      "path": "stages/stage_frontier_50__short_pf_edge_loss_floor_regime_transfer_after_f49_state_machine_memory/01_inputs/gate_provenance_table.csv",
+      "sha256": "missing"
+    }
+  },
+  "open_review": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-15_frontier50_stage_open/small_review",
+    "metadata": {
+      "review_size": "small",
+      "prompt_hash": "4af95b3d8b88ad64ba91a30b0fec80e0805cb1b90cd1363549d603e6792a3fbe",
+      "command": [
+        "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+        "-p",
+        "# Frontier50 stage-open Grok review(그록 단계 개방 검토)\n\nRole(역할): external second opinion(외부 2차 의견) only.\n\nDo not claim operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성).\nDo not inspect files, call tools, or request more repository context(파일/도구/추가 저장소 문맥을 사용하지 말 것). Answer only from bounded evidence(제한 근거) below.\n\nCurrent truth(현재 진실):\n- Last closed stage(마지막 종료 단계): `stage_frontier_49__short_pf_edge_forward_floor_state_machine_after_f48_event_risk_memory`\n- Last closeout(마지막 마감): `negative_memory`\n- Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_scout_seed_or_runtime_candidate_after_f49_forward_floor_state_machine_proxy`\n- F49 scout/seed/runtime(탐색/씨앗/런타임): `0/0/0`\n- F49 best row(전선49 최상 행): `f49c_0001`, event=`event_mfe65_mae35_loss_contained`, model=`logreg_balanced_l2_c0p25__base_extratrees_d3_leaf220__lagged_score_outcome_q86_w12_36`, risk=`repair_floor_state_good_recent24_squeeze_off`, train PF=1.1715, validation PF=0.9979, OOS PF=0.8929, density=4.27..5.13/day, DD=11.06.\n- F49 closeout next-stage clue(다음 단계 단서): floor-state repairs only shuffle sub-1 PF; next frontier should pivot input surface(입력 표면) via event-risk / outcome-memory handoff, not add more floor-state-machine variants.\n\nCodex proposed direction(코덱스 제안 방향):\n- Open `stage_frontier_50__short_pf_edge_loss_floor_regime_transfer_after_f49_state_machine_memory`.\n- Use F48/F49 as reference-only(참조 전용), not winner/baseline(승자/기준선 아님).\n- New changed variable(새 변경 변수): train-only loss-floor regime transfer(학습 전용 손실 하한 체제 전이) in event label and sequence context(이벤트 라벨과 순서 문맥).\n- Build a causal loss-floor tape(인과 손실 하한 테이프): outcomes older than horizon+1 embargo(예측수평+1 유예보다 오래된 결과) create loss-floor state, recovery state, and transfer slope features. These features are model inputs, not static admission gates.\n- Keep validation/OOS(검증/표본외) read-only(읽기 전용). Score thresholds, event thresholds, SL/TP(손절/익절), and ranking are train-only(학습 전용).\n- Run capped repair(상한 수리) only by varying loss-floor transfer windows/event definitions; do not repeat F49 floor-state gate variants as the primary lever(주 레버).\n- If any runtime candidate(런타임 후보)가 appears, do pre-expensive Grok review(사전 고비용 그록 검토) and then actively run MT5 runtime probe(MT5 런타임 탐침).\n\nSuccess criteria(성공 기준):\n- Scout clue(탐색 단서): forward_min_pf >= 1.05, forward density 4..12/day, forward max DD <= 18.\n- Seed surface(씨앗 표면): forward_min_pf >= 1.20, forward density 5..10/day, forward max DD <= 12.\n- Runtime candidate(런타임 후보): seed surface plus forward_min_pf >= 1.50 and forward max DD <= 10.\n- Final completion hard gate(최종 완성 강제 게이트)는 not applied at this exploratory stage(이번 탐색 단계에는 적용하지 않음).\n\nClaim boundary(주장 경계):\n- No completion(완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성).\n- Python proxy(파이썬 프록시) success cannot become MT5 runtime authority(MT5 런타임 권위).\n\nQuestion(질문):\nIs the F50 stage-open direction valid under reference-not-inheritance(참조이지 상속 아님), train_split_only_construction_lock(학습 분할 전용 구성 잠금), causal loss-floor tape(인과 손실 하한 테이프), and the runtime probe boundary(런타임 탐침 경계)?\n\nReturn only:\n1. verdict: accepted, rejected, or needs_local_verification(수용/거절/로컬 검증 필요)\n2. train_split_only_construction_lock: yes/no(예/아니오)\n3. claim_boundary_ok: yes/no(예/아니오)\n4. one risk(위험) if any\n5. one repair suggestion(수리 제안) if any"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "success": true,
+      "duration_seconds": 22.824512,
+      "stripped_noise_lines": [],
+      "preflight_warnings": [],
+      "unexpected_top_level_artifacts": [],
+      "packet_paths": {
+        "prompt": "docs/agent_control/grok_reviews/2026-06-15_frontier50_stage_open/small_review/prompt.md",
+        "clean_output": "docs/agent_control/grok_reviews/2026-06-15_frontier50_stage_open/small_review/clean_output.md",
+        "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-15_frontier50_stage_open/small_review/raw_diagnostics.json",
+        "metadata": "docs/agent_control/grok_reviews/2026-06-15_frontier50_stage_open/small_review/metadata.json"
+      }
+    },
+    "clean_output_path": "docs/agent_control/grok_reviews/2026-06-15_frontier50_stage_open/small_review/clean_output.md",
+    "classification": "accepted_stage_open_train_split_only_loss_floor_regime_transfer_lock",
+    "accepted_after_local_verification": true,
+    "guardrail_seen": true,
+    "claim_boundary_ok": true,
+    "forbidden_claim_seen": false,
+    "clean_excerpt": "**1. verdict:** `accepted` (수용)\n\n**2. train_split_only_construction_lock:** `yes` (예)\n\n**3. claim_boundary_ok:** `yes` (예)\n\n**4. one risk (위험):** F50’s loss-floor regime transfer(손실 하한 체제 전이) may still be a renamed floor-state-memory path(바닥 상태 기억 경로의 이름만 바꾼 형태) from F49, so you could get another sub-1 PF shuffle(1 미만 PF 재배열) without a real input-surface pivot(입력 표면 전환).\n\n**5. one repair suggestion (수리 제안):** Pre-register one orthogonal event-risk / outcome-memory family(직교 이벤트-리스크/결과-기억 피처군) beside the transfer tape(전이 테이프) — e.g. post-event loss-containment recurrence(이벤트 후 손실 억제 반복) or MFE/MAE decay memory(최대유리/최대불리 감쇠 기억) — and cap floor-state-adjacent repairs(바닥 상태 인접 수리 상한) so the primary lever(주 레버) is clearly input-surface change(입력 표면 변경), not F49 gate relabeling(F49 게이트 재라벨링)."
+  },
+  "checks": {
+    "checks": {
+      "workspace_points_to_f50": true,
+      "prev_selection_next_matches": true,
+      "prev_selection_json_exists": true,
+      "prev_preserved_clue_exists": true,
+      "prev_negative_memory_exists": true,
+      "open_grok_accepted": true,
+      "feature_hash_matches_contract": true,
+      "required_splits_present": true,
+      "raw_path_alignment_available": true,
+      "short_path_valid_rows_positive": true,
+      "train_split_only_construction_lock": true,
+      "past_outcome_embargo_join_audit": true,
+      "validation_oos_threshold_pick_isolation": true
+    },
+    "feature_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "rows": 46650,
+    "raw_rows": 261345,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "short_valid_rows": 46650
+  }
+}

@@ -54,8 +54,8 @@ Every architecture-sensitive packet or summary must include:
 - Do not leave repo-scoped skills present but unrouted; every skill needs routing policy and agent metadata unless a durable exception explains why.
 - Do not let alpha search become source cleanup only unless a durable decision says so.
 - Do not store absolute terminal install paths as artifact identity; use repo-relative paths plus hash, run id, bundle id, or registry fields.
-- Do not call a file missing when one tool enumerates it but another path API fails; rule out Windows long-path handling first.
-- Prefer ZIP plus manifest for deep archive snapshots, and keep `\\?\` long-path prefixes local to tooling rather than committed docs.
+- Do not call(판정) a file missing(누락) when one tool(도구)이 enumerates it(나열) but another path API(경로 API)가 fails(실패)한다; rule out Windows long-path handling(윈도우 긴 경로 처리)을 먼저 확인한다.
+- Prefer(선호) ZIP plus manifest(ZIP+목록) for deep archive snapshots(깊은 보관 스냅샷), and keep `\\?\` long-path prefixes(긴 경로 접두사)는 local tooling(로컬 도구)에만 두고 committed docs(커밋 문서)에는 남기지 않는다. For stage/MT5 artifact reads(단계/MT5 산출물 읽기), use repo-relative `rg --files`/`rg` and `foundation.control_plane.ledger.io_path` before changing durable path identity(지속 경로 정체성).
 - Do not edit Korean `.md` or `.txt` docs without preserving UTF-8 with BOM.
 
 ## Validator

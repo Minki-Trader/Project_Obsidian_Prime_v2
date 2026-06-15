@@ -141,6 +141,14 @@ Stage 10(10단계)부터 알파 탐색(alpha exploration, 알파 탐색)이 닫�
 
 효과(effect, 효과)는 run별 차이(run-specific difference, 실행별 차이)가 코드 파일 이름만 늘리는 방식으로 숨지 않고, 설정(set, 설정), 모듈 해시(module hash, 모듈 해시), 모델/번들 해시(model/bundle hash, 모델/번들 해시), 테스터 출력(tester output, 테스터 출력)으로 추적되게 하는 것이다.
 
+## 윈도우 긴 경로 규칙(Windows Long Path Rule, 윈도우 긴 경로 규칙)
+
+깊은 stage(단계) 산출물이나 MT5(`MetaTrader 5`, 메타트레이더5) 실행 산출물을 다룰 때 PowerShell(파워셸) `Get-Content`, `Get-ChildItem`, 또는 일반 `Path.exists`가 실패하면 곧바로 missing(누락)이나 blocked(차단)로 판정하지 않는다.
+
+필수 재시도(required retry, 필수 재시도)는 repo-relative path(저장소 상대 경로) 기준으로 `rg --files` 또는 `rg`를 먼저 쓰고, 파일 내용이나 CSV/JSON(표/제이슨) 기계 수정이 필요하면 `foundation.control_plane.ledger.io_path`를 거쳐 Python(파이썬)에서 연다.
+
+효과(effect, 효과)는 Windows MAX_PATH(윈도우 최대 경로 길이) 한계 때문에 존재하는 파일을 없는 파일로 오판하지 않고, durable artifact identity(지속 산출물 정체성)는 계속 repo-relative path(저장소 상대 경로)와 hash(해시)로 남기는 것이다. `\\?\` 같은 extended path prefix(확장 경로 접두사)는 local execution helper(로컬 실행 보조)로만 쓰고 문서 정체성으로 남기지 않는다.
+
 ## 탐색 명령(Exploration Mandate, 탐색 명령)
 
 `docs/policies/exploration_mandate.md`가 탐색 규율(exploration discipline, 탐색 규율)을 담당한다.
