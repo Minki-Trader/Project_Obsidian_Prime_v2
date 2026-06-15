@@ -1,0 +1,148 @@
+{
+  "stage_id": "stage_frontier_51__short_pf_edge_outcome_memory_recurrence_after_f50_loss_floor_transfer_memory",
+  "hypothesis": "train_only_outcome_memory_recurrence_after_f49_state_machine_memory",
+  "idea_id": "IDEA-FR50-SHORT-LOSS-FLOOR-REGIME-TRANSFER",
+  "decision_use": "scout_seed_runtime_candidate_screening_only",
+  "comparison_baseline": "F49 best and closest nonwinner rows are reference-only clues, not inherited baseline",
+  "control_variables": {
+    "symbol": "US100",
+    "timeframe": "M5",
+    "side": "short",
+    "feature_order_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "split": "train_2022-09-01_2024-12-31_validation_2025-01-01_2025-09-30_oos_2025-10-01_2026-02-28",
+    "path_proxy": "executable_first_hit_sl_tp_from_raw_us100_path"
+  },
+  "changed_variables": {
+    "sequence_context": "lagged frozen event score plus causal outcome-memory tape and MFE/MAE decay memory",
+    "event_surface": "future path event is segmented by train-only loss containment and causal prior outcome-memory recurrence families",
+    "risk_sizing": "train-only first-hit SLTP caps with minimal liquidity/volatility hygiene admission",
+    "novelty_line": "outcome-memory recurrence changes the input surface instead of relabeling F49 floor-state admission gates",
+    "model_family": "class_weighted_sequence_context_classifier_with_outcome_memory_recurrence_and_decay_memory",
+    "threshold_policy": "train_split_event_score_threshold_only; validation_oos_read_only"
+  },
+  "sample_scope": {
+    "rows": 46650,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "raw_rows": 261345,
+    "short_path_valid_rows": 46650
+  },
+  "success_criteria": {
+    "scout_clue": {
+      "forward_min_pf": 1.05,
+      "density": "4_to_12_per_day",
+      "forward_max_dd": 18.0
+    },
+    "seed_surface": {
+      "forward_min_pf": 1.2,
+      "density": "5_to_10_per_day",
+      "forward_max_dd": 12.0
+    },
+    "runtime_probe_candidate": {
+      "forward_min_pf": 1.5,
+      "forward_max_dd": 10.0
+    }
+  },
+  "invalid_conditions": [
+    "validation_oos_used_for_label_threshold_model_sl_tp_or_rank",
+    "past_outcome_tape_uses_labels_newer_than_horizon_plus_one_bars",
+    "f49_floor_state_gate_relabeling_as_primary_lever",
+    "f47_percentile_risk_budget_sweep_repeated_as_primary_lever",
+    "f44_continuous_regression_or_f42_f43_f38_f39_primary_lever_reopened"
+  ],
+  "evidence_plan": [
+    "stage_open_grok_receipt",
+    "gate_provenance_table",
+    "outcome_memory_recurrence_model_audit",
+    "candidate_ledger",
+    "split_metrics",
+    "candidate_summary",
+    "stage_run_ledger",
+    "project_alpha_ledger_rows",
+    "stage_closeout_grok_receipt"
+  ],
+  "input_artifacts": {
+    "prev_selection": {
+      "path": "stages/stage_frontier_50__short_pf_edge_loss_floor_regime_transfer_after_f49_state_machine_memory/04_selected/selection_status.json",
+      "sha256": "f2c0bac930e3c60cc10a5e7e73ecf3cd7aca99ae65ec8cee64684b7e0ad7e810"
+    },
+    "prev_preserved_clue": {
+      "path": "stages/stage_frontier_50__short_pf_edge_loss_floor_regime_transfer_after_f49_state_machine_memory/04_selected/preserved_clue.md",
+      "sha256": "c34447b160b5ddeef6c81384fadf50d05a3c79ea2d180387eafe13301a4880b5"
+    },
+    "prev_negative_memory": {
+      "path": "stages/stage_frontier_50__short_pf_edge_loss_floor_regime_transfer_after_f49_state_machine_memory/04_selected/negative_memory.md",
+      "sha256": "8f1f955af6189d1c99866113c0dd531db1981906c1f6ce8857443db899e4f77f"
+    },
+    "grok_open_clean_output": {
+      "path": "docs/agent_control/grok_reviews/2026-06-16_frontier51_stage_open/small_review/clean_output.md",
+      "sha256": "dce04350bcc8b7fb387a404cff854c2c80c8de5433e13c215bf271345a91a2fb"
+    },
+    "gate_provenance_table": {
+      "path": "stages/stage_frontier_51__short_pf_edge_outcome_memory_recurrence_after_f50_loss_floor_transfer_memory/01_inputs/gate_provenance_table.csv",
+      "sha256": "missing"
+    }
+  },
+  "open_review": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-16_frontier51_stage_open/small_review",
+    "metadata": {
+      "review_size": "small",
+      "prompt_hash": "ba1b7ed30f0e16f66074bff003998475161287c750223677d547cfa0d2b3ba1c",
+      "command": [
+        "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+        "-p",
+        "# Frontier51 Stage-Open Review(전선 51단계 개방 검토)\n\nRole(역할): external second opinion(외부 2차 의견) only.\n\nCurrent truth(현재 진실):\n- F50 closed as preserved_clue_negative_memory(보존 단서 + 부정 기억).\n- F50 proxy looked modestly positive, but MT5 runtime probe collapsed: validation_is PF 0.81 / DD 76.21 / trades 99, OOS PF 0.99 / DD 31.52 / trades 71.\n- Signal parity was clean(signal_diff=0, feature_ready_diff=0), so the negative memory is order path / single-position / cost-path compression, not handoff mismatch.\n\nProposed F51 direction(제안 방향):\n- One hypothesis(하나의 가설): train-only outcome-memory recurrence(학습 전용 결과 기억 재발) plus single-position order-path compression proxy(단일 포지션 주문 경로 압축 프록시).\n- Not inherited(상속 아님): no F50 winner/baseline/promotion/runtime authority(승자/기준선/승격/런타임 권위 없음).\n- Repair cap(수리 상한): small repair only inside outcome-memory window/event definition/order-path candidate selection(결과 기억 창/이벤트 정의/주문 경로 후보 선택).\n- Mandatory MT5 runtime probe(필수 MT5 런타임 탐침): run in this stage regardless of scout/seed status and record proxy/runtime gap(프록시/런타임 차이).\n\nSuccess criteria for this review(이번 검토 성공 기준):\n- Confirm whether this is a distinct enough stage hypothesis(충분히 독립된 단계 가설) after F50.\n- Flag leakage/overfit/grid-drift risks(누수/과최적화/격자 쏠림 위험).\n- Confirm claim boundary(주장 경계): only scout clue/seed surface/runtime probe observation(탐색 단서/씨앗 표면/런타임 탐침 관찰), no completion/baseline/promotion/runtime authority/live readiness(완성/기준선/승격/런타임 권위/실거래 준비 없음).\n\nAnswer briefly with accepted/rejected/needs_local_verification(수용/거절/로컬 검증 필요) and reasons."
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "success": true,
+      "duration_seconds": 82.115532,
+      "stripped_noise_lines": [],
+      "preflight_warnings": [],
+      "unexpected_top_level_artifacts": [],
+      "packet_paths": {
+        "prompt": "docs/agent_control/grok_reviews/2026-06-16_frontier51_stage_open/small_review/prompt.md",
+        "clean_output": "docs/agent_control/grok_reviews/2026-06-16_frontier51_stage_open/small_review/clean_output.md",
+        "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-16_frontier51_stage_open/small_review/raw_diagnostics.json",
+        "metadata": "docs/agent_control/grok_reviews/2026-06-16_frontier51_stage_open/small_review/metadata.json"
+      }
+    },
+    "clean_output_path": "docs/agent_control/grok_reviews/2026-06-16_frontier51_stage_open/small_review/clean_output.md",
+    "classification": "accepted_stage_open_train_split_only_outcome_memory_recurrence_lock",
+    "accepted_after_local_verification": true,
+    "guardrail_seen": true,
+    "claim_boundary_ok": true,
+    "forbidden_claim_seen": true,
+    "clean_excerpt": "F51 개방 검토를 외부 2차 의견으로 답하려면, 먼저 관련 스킬과 F50·F51 근거를 확인합니다.\n## Frontier51 Stage-Open Review — External Second Opinion(외부 2차 의견)\n\n**Review size(검토 크기):** small review(소규모 검토)  \n**Verdict(판정):** **`accepted`** — stage open(단계 개방) with execution guardrails(실행 보호선)\n\n---\n\n### 1) Distinct stage hypothesis after F50(충분히 독립된 단계 가설)?\n\n**`accepted`**\n\n- F50 primary lever(주 레버) was **loss-floor regime transfer(손실 하한 체제 전이)**; F51 shifts to **outcome-memory recurrence(결과 기억 재발)** with different event families (`good_recurrence`, `bad_to_good_recovery`, `decay_memory` vs F50’s `loss_floor_transfer`).\n- F51 adds what F50 negative memory(부정 기억) demanded: **single-position order-path compression proxy(단일 포지션 주문 경로 압축 프록시)** before MT5 handoff(인계). That is a real **validation philosophy(검증 철학)** change, not a rerun.\n- Shared MFE/MAE decay scaffolding(공유 감쇠 골격) is reference reuse(참조 재사용), not winner/baseline inheritance(승자/기준선 상속).\n\n**Caveat(주의):** same short-PF campaign lane(숏 PF 캠페인 축) — novelty(신규성) is narrow but sufficient for a new frontier stage(새 전선 단계).\n\n---\n\n### 2) Leakage / overfit / grid-drift risks(누수/과최적화/격자 쏠림)?\n\n**`needs_local_verification`** (guardrails look right; execution must prove "
+  },
+  "checks": {
+    "checks": {
+      "workspace_points_to_f51": true,
+      "prev_selection_next_matches": true,
+      "prev_selection_json_exists": true,
+      "prev_preserved_clue_exists": true,
+      "prev_negative_memory_exists": true,
+      "open_grok_accepted": true,
+      "feature_hash_matches_contract": true,
+      "required_splits_present": true,
+      "raw_path_alignment_available": true,
+      "short_path_valid_rows_positive": true,
+      "train_split_only_construction_lock": true,
+      "past_outcome_embargo_join_audit": true,
+      "validation_oos_threshold_pick_isolation": true
+    },
+    "feature_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "rows": 46650,
+    "raw_rows": 261345,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "short_valid_rows": 46650
+  }
+}

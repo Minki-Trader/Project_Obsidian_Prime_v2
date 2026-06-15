@@ -1,0 +1,22 @@
+{
+  "review_size": "small",
+  "prompt_hash": "dde8eb8dd877cce1f1259defa8c7dbef084596de5d6005f68a85589f2e50c1c7",
+  "command": [
+    "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+    "-p",
+    "# Encoding Guard Update Review(인코딩 방지 규칙 업데이트 검토)\n\nRole(역할): external second opinion(외부 2차 의견) only.\n\nObserved repeated mistakes(관찰된 반복 실수):\n- Grok wrapper(그록 래퍼)는 content files(내용 파일)를 썼지만 Windows console(윈도우 콘솔) stdout print failed with UnicodeEncodeError cp949.\n- Some copied stage scripts generated mojibake(깨진 문자) in Korean report templates after mechanical copy/rewrite.\n- PowerShell path/list operations also hit Windows long-path failures, already covered by long path guard.\n\nProposed durable rule(제안 지속 규칙):\n- Before running Python/Grok commands that may print Korean or Unicode, set PYTHONIOENCODING=utf-8 and PYTHONPATH=.(파이썬 입출력 인코딩/모듈 경로).\n- Prefer prompt-file or UTF-8 file artifacts(프롬프트 파일/UTF-8 산출물) for Grok prompts instead of large inline PowerShell here-strings when Korean fidelity matters.\n- If apply_patch fails because copied text is mojibake, treat it as encoding repair(인코딩 수리), rewrite function-bounded templates mechanically, then py_compile and inspect generated report artifacts.\n- Add this to AGENTS.md and obsidian-environment-reproducibility skill(재현성 스킬), without weakening gates or thresholds.\n\nQuestion(질문): Is this durable rule acceptable? Any concise wording to add?\n\nAnswer briefly with accepted/rejected/needs_local_verification(수용/거절/로컬 검증 필요)."
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "success": true,
+  "duration_seconds": 33.162132,
+  "stripped_noise_lines": [],
+  "preflight_warnings": [],
+  "unexpected_top_level_artifacts": [],
+  "packet_paths": {
+    "prompt": "docs/agent_control/grok_reviews/2026-06-16_encoding_guard_update/small_review/prompt.md",
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-16_encoding_guard_update/small_review/clean_output.md",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-16_encoding_guard_update/small_review/raw_diagnostics.json",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-16_encoding_guard_update/small_review/metadata.json"
+  }
+}

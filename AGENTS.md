@@ -47,6 +47,10 @@ Grok(Grok, 그록)은 external second opinion(외부 2차 의견)일 뿐이다. 
 
 Grok 호출(call, 호출)은 가능하면 `foundation/control_plane/grok_review_wrapper.py` wrapper(래퍼)를 쓴다. 효과(effect, 효과)는 prompt quoting(프롬프트 인용), timeout(시간 제한), stdout/stderr capture(표준 출력/오류 캡처), noise stripping(잡음 제거), top-level scratch artifact detection(최상위 임시 산출물 감지)을 같은 방식으로 처리하는 것이다. wrapper(래퍼)는 Grok 내용(content, 내용)을 판단하지 않는다.
 
+Windows(윈도우)에서 Grok wrapper(그록 래퍼)나 Python command(파이썬 명령)가 Korean/Unicode(한국어/유니코드)를 stdout(표준 출력)으로 낼 수 있으면 `$env:PYTHONIOENCODING='utf-8'; $env:PYTHONPATH='.'`를 먼저 둔다. Korean fidelity(한국어 보존)가 중요한 prompt(프롬프트)는 큰 PowerShell here-string(파워셸 here-string)보다 UTF-8 prompt file(UTF-8 프롬프트 파일)과 `--prompt-file`을 우선한다. 효과(effect, 효과)는 Windows cp949 console(윈도우 cp949 콘솔) 때문에 Grok output(그록 출력)이나 report template(보고서 템플릿)이 깨지는 일을 줄이는 것이다.
+
+Console/shell encoding guard(콘솔/셸 인코딩 보호)는 agent execution environment(에이전트 실행 환경) 규칙일 뿐이며, gate(게이트), threshold(임계값), evidence requirement(근거 요구)를 완화하지 않는다.
+
 기본 기록 위치(default record location, 기본 기록 위치)는 `docs/agent_control/grok_reviews/`다. 다만 사용자가 이번 작업처럼 patch work material(패치 작업물)을 프로젝트 폴더에 남기지 말라고 명시하면, 새 Grok 패킷(packet, 묶음)을 만들지 않고 기존 산출물(existing artifacts, 기존 산출물), 대화 기록(conversation record, 대화 기록), 또는 프로젝트 밖 임시 경로(temp path, 임시 경로)만 쓴다. 효과(effect, 효과)는 운영 규칙을 지키면서도 사용자가 금지한 임시 산출물을 남기지 않는 것이다.
 
 ## 가장 중요한 원칙(Non-Negotiable Principle, 양보 불가 원칙)
