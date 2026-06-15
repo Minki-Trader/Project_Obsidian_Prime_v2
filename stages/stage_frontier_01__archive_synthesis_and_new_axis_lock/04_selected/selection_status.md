@@ -21,3 +21,21 @@ Grok review(그록 검토): `docs/agent_control/grok_reviews/2026-06-13_frontier
 Local gates(로컬 게이트): `frontier01B` gate(게이트)는 archive interface(보관소 접점), external review packet(외부 검토 묶음), state sync(상태 동기), no-authority boundary(권위 없음 경계)를 확인합니다.
 
 Next action(다음 행동): `stage_frontier_02_open_joint_objective_onnx_hypothesis_pending_grok_review`.
+
+<!-- runtime_probe_backfill_status -->
+
+# Runtime Probe Backfill Status(런타임 탐침 소급 상태)
+
+Updated(갱신): 2026-06-15T14:03:59Z
+
+Status(상태): `out_of_scope_by_claim`
+
+Judgment(판정): `out_of_scope_by_claim(주장 범위 밖)`
+
+Action(행동): omitted MT5 runtime probe(누락된 MT5 런타임 탐침)를 소급 점검했습니다.
+
+Effect(효과): 실행 가능 후보는 실제 tester KPI(테스터 지표)로 보강하고, 불가능한 후보는 blocker(차단 사유)를 남깁니다.
+
+Reason(사유): `archive/governance stage without model runtime material`
+
+Claim boundary(주장 경계): completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 모두 not_claimed(주장 없음)입니다.

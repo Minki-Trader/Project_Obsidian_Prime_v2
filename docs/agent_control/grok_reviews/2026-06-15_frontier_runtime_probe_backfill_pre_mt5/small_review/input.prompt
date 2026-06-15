@@ -1,0 +1,31 @@
+Project Obsidian Prime v2 frontier runtime-probe backfill review.
+
+Role: Grok is an external second opinion only. Codex keeps direction, local verification, and final claim boundary.
+
+Current request:
+Retroactively handle frontier stages where MT5 runtime probe was omitted. Run backtests where there is a recoverable runtime handoff candidate, reflect status in each stage, then commit and push main if gates pass.
+
+Claim boundary:
+- Do not create completion, baseline, promotion, runtime authority, live readiness, or Goal Achieve.
+- These are runtime probe observations only.
+- Stage12-364 are reference only, not inheritance.
+
+Local inventory before MT5:
+- F16 and F17 already have MT5 strategy tester reports and runtime probe rows. Treat as already completed evidence to verify, not as omitted rerun targets.
+- F12-F18 have best_candidate_row plus ONNX/joblib-like model material. F18 closeout recorded no runtime handoff candidate, but a concrete best ONNX exists; Codex proposes a forced retro probe only if source identity and feature order verify.
+- F07-F10 and F12-F15 have many ONNX artifacts and best_candidate_row in final decisions; likely materializable with the common feature dataset and argmax/edge-margin decision mode.
+- F02-F06 have ONNX artifacts but mixed older manifest shapes; Codex proposes materialization only if model path, ONNX path, feature order, decision rule, and source split can be recovered without inventing a new signal contract.
+- F20-F49 mostly have no ONNX and no seed/runtime candidate. Codex proposes recording invalid_setup/blocker with exact missing material rather than fabricating a backtest.
+- F25-F29 and F38-F49 already record runtime_probe_ineligible status in stage metadata.
+
+Proposed execution policy:
+1. Build a backfill manifest with per-stage classification:
+   completed_existing, executable_candidate, invalid_setup_no_runtime_material, or blocked_attempt_failed.
+2. For executable candidates, run narrow Tier A validation and OOS MT5 tester probes with the existing RuntimeProbeEA and portable MT5 root that worked for F16/F17.
+3. For no-material stages, write stage-local runtime_probe_backfill_status with exact missing inputs and ledger rows; do not claim a completed backtest.
+4. Append project and stage ledger rows with no authority claims.
+5. Commit and push only if tests/gates and git status are clean for intended files.
+
+Question:
+Is this policy faithful to the project rules, or should Codex narrow/expand the executable target set before MT5 runs?
+

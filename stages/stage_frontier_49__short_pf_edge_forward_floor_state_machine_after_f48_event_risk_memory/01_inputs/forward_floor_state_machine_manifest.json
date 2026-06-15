@@ -1,0 +1,148 @@
+{
+  "stage_id": "stage_frontier_49__short_pf_edge_forward_floor_state_machine_after_f48_event_risk_memory",
+  "hypothesis": "train_only_forward_floor_state_machine_on_f48_event_risk_memory",
+  "idea_id": "IDEA-FR49-SHORT-FORWARD-FLOOR-STATE-MACHINE",
+  "decision_use": "scout_seed_runtime_candidate_screening_only",
+  "comparison_baseline": "F48 best and closest nonwinner rows are reference-only clues, not inherited baseline",
+  "control_variables": {
+    "symbol": "US100",
+    "timeframe": "M5",
+    "side": "short",
+    "feature_order_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "split": "train_2022-09-01_2024-12-31_validation_2025-01-01_2025-09-30_oos_2025-10-01_2026-02-28",
+    "path_proxy": "executable_first_hit_sl_tp_from_raw_us100_path"
+  },
+  "changed_variables": {
+    "sequence_context": "lagged frozen event score plus horizon-embargoed past outcome tape expanded with rolling event-balance floor states",
+    "state_gate": "fixed forward-floor state machine using bars since known bad/good event, event-balance floor, crowding, and volatility caps",
+    "risk_sizing": "train-only first-hit SLTP caps with fixed score/event scaffold and fixed state-machine admission",
+    "novelty_line": "forward-floor state machine uses entry-known causal past outcome states instead of F48 static state gates or F47 percentile risk-budget sweep",
+    "model_family": "class_weighted_sequence_context_classifier_with_forward_floor_state_machine_overlay",
+    "threshold_policy": "train_split_event_score_threshold_only; floor state gates are fixed absolute thresholds; validation_oos_read_only"
+  },
+  "sample_scope": {
+    "rows": 46650,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "raw_rows": 261345,
+    "short_path_valid_rows": 46650
+  },
+  "success_criteria": {
+    "scout_clue": {
+      "forward_min_pf": 1.05,
+      "density": "4_to_12_per_day",
+      "forward_max_dd": 18.0
+    },
+    "seed_surface": {
+      "forward_min_pf": 1.2,
+      "density": "5_to_10_per_day",
+      "forward_max_dd": 12.0
+    },
+    "runtime_probe_candidate": {
+      "forward_min_pf": 1.5,
+      "forward_max_dd": 10.0
+    }
+  },
+  "invalid_conditions": [
+    "validation_oos_used_for_label_threshold_model_sl_tp_or_rank",
+    "past_outcome_tape_uses_labels_newer_than_horizon_plus_one_bars",
+    "f48_static_state_gate_repeated_without_forward_floor_state_machine",
+    "f47_percentile_risk_budget_sweep_repeated_as_primary_lever",
+    "f44_continuous_regression_or_f42_f43_f38_f39_primary_lever_reopened"
+  ],
+  "evidence_plan": [
+    "stage_open_grok_receipt",
+    "gate_provenance_table",
+    "forward_floor_state_machine_model_audit",
+    "candidate_ledger",
+    "split_metrics",
+    "candidate_summary",
+    "stage_run_ledger",
+    "project_alpha_ledger_rows",
+    "stage_closeout_grok_receipt"
+  ],
+  "input_artifacts": {
+    "prev_selection": {
+      "path": "stages/stage_frontier_48__short_pf_edge_event_rarity_risk_sizing_after_f47_state_budget_memory/04_selected/selection_status.json",
+      "sha256": "add1eef88203980e7b517fa07f96fb6ea0cae45f86cb864d166e9cb2dcdeddeb"
+    },
+    "prev_preserved_clue": {
+      "path": "stages/stage_frontier_48__short_pf_edge_event_rarity_risk_sizing_after_f47_state_budget_memory/04_selected/preserved_clue.md",
+      "sha256": "3c9bdd6ddc134f2705e9fbe0c167674e01e5aa3c50ce4c4ae4683fe4ecc11e09"
+    },
+    "prev_negative_memory": {
+      "path": "stages/stage_frontier_48__short_pf_edge_event_rarity_risk_sizing_after_f47_state_budget_memory/04_selected/negative_memory.md",
+      "sha256": "25d7962af924f0f9e2f7c3c593e26e607c875b6726aeddbc43c30cc094e32a3c"
+    },
+    "grok_open_clean_output": {
+      "path": "docs/agent_control/grok_reviews/2026-06-15_frontier49_stage_open/small_review/clean_output.md",
+      "sha256": "d736c134c2d0329df05010994270a5494a21d7c27b68238454df7bcc09403941"
+    },
+    "gate_provenance_table": {
+      "path": "stages/stage_frontier_49__short_pf_edge_forward_floor_state_machine_after_f48_event_risk_memory/01_inputs/gate_provenance_table.csv",
+      "sha256": "missing"
+    }
+  },
+  "open_review": {
+    "packet": "docs/agent_control/grok_reviews/2026-06-15_frontier49_stage_open/small_review",
+    "metadata": {
+      "review_size": "small",
+      "prompt_hash": "183d8964f0365c7d75ea9eaafebe7cf0c1238ee80221a18d27e661ecb196d77d",
+      "command": [
+        "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+        "-p",
+        "# Frontier49 stage-open Grok review(그록 단계 개방 검토)\n\nRole(역할): external second opinion(외부 2차 의견) only.\n\nDo not claim operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성).\nDo not inspect files, call tools, or request more repository context(파일/도구/추가 저장소 문맥을 사용하지 말 것). Answer only from bounded evidence(제한 근거) below.\n\nCurrent truth(현재 진실):\n- Last closed stage(마지막 종료 단계): `stage_frontier_48__short_pf_edge_event_rarity_risk_sizing_after_f47_state_budget_memory`\n- Last closeout(마지막 마감): `negative_memory`\n- Runtime probe status(런타임 탐침 상태): `runtime_probe_ineligible_no_scout_seed_or_runtime_candidate_after_f48_event_risk_sizing_proxy`\n- F48 scout/seed/runtime(탐색/씨앗/런타임): `0/0/0`\n- F48 best row(전선48 최상 행): `f48b_0001`, event=`event_mfe65_mae35_loss_contained`, model=`logreg_balanced_l2_c0p25__base_extratrees_d3_leaf220__lagged_score_outcome_q86_w12_36`, gate=`state_gate_squeeze_off_bad_fast_le1_vol5_le1p5`, train PF=1.1887, validation PF=1.0316, OOS PF=1.1289, density=4.97..5.69/day, DD=9.32.\n- F48 closest nonwinner(전선48 가장 가까운 비승자): `f48c_0002`, gate=`repair_state_gate_squeeze_off_vol_atr_le1p75`, train PF=1.2195, validation PF=1.0426, OOS PF=1.1417, density=5.30..5.97/day, DD=8.40. This is clue only(단서 전용), not near-miss alpha(근접 알파 아님).\n\nCodex proposed direction(코덱스 제안 방향):\n- Open `stage_frontier_49__short_pf_edge_forward_floor_state_machine_after_f48_event_risk_memory`.\n- Use F48 event/model/context/score/SLTP scaffold as reference-only(참조 전용), not winner/baseline(승자/기준선 아님).\n- New changed variable(새 변경 변수): train-only forward floor state machine(학습 전용 전진 하한 상태기계).\n- The state machine(상태기계) uses only entry-known state(진입시점에 아는 상태): bars since known bad/good event(확정 나쁜/좋은 이벤트 이후 봉 수), rolling event-balance floor(굴러가는 이벤트 균형 하한), high-score crowding(고점수 밀집), volatility/ATR caps(변동성/ATR 상한).\n- Past outcome tape(과거 결과 테이프) must use only outcomes older than horizon+1 embargo(예측수평+1 유예보다 오래된 확정 결과).\n- Validation/OOS(검증/표본외)는 read-only evaluation(읽기 전용 평가)이다.\n- If seed/runtime candidate(씨앗/런타임 후보)가 나오면 expensive MT5/WFO(비싼 MT5/WFO) 전에 별도 Grok review(그록 검토)로 멈춘다.\n\nSuccess criteria(성공 기준):\n- Scout clue(탐색 단서): forward_min_pf >= 1.05, forward density 4..12/day, forward max DD <= 18.\n- Seed surface(씨앗 표면): forward_min_pf >= 1.20, forward density 5..10/day, forward max DD <= 12.\n- Runtime candidate(런타임 후보): seed surface plus forward_min_pf >= 1.50 and forward max DD <= 10.\n- Final completion hard gate(최종 완성 강제 게이트)는 not applied at this exploratory stage(이번 탐색 단계에는 적용하지 않음).\n\nClaim boundary(주장 경계):\n- No completion(완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성).\n- Python proxy(파이썬 프록시) success cannot become MT5 runtime authority(MT5 런타임 권위).\n- Actual MT5 Strategy Tester run(실제 MT5 전략 테스터 실행)은 runtime candidate(런타임 후보) or MT5-facing claim(MT5 관련 주장)이 있을 때만 격상한다.\n\nQuestion(질문):\nIs the F49 stage-open direction valid under reference-not-inheritance(참조이지 상속 아님), train_split_only_construction_lock(학습 분할 전용 구성 잠금), causal past-outcome state machine(인과 과거결과 상태기계), and the runtime probe boundary(런타임 탐침 경계)?\n\nReturn only:\n1. verdict: accepted, rejected, or needs_local_verification(수용/거절/로컬 검증 필요)\n2. train_split_only_construction_lock: yes/no(예/아니오)\n3. claim_boundary_ok: yes/no(예/아니오)\n4. one risk(위험) if any\n5. one repair suggestion(수리 제안) if any\n"
+      ],
+      "returncode": 0,
+      "timed_out": false,
+      "success": true,
+      "duration_seconds": 19.869334,
+      "stripped_noise_lines": [],
+      "preflight_warnings": [],
+      "unexpected_top_level_artifacts": [],
+      "packet_paths": {
+        "prompt": "docs/agent_control/grok_reviews/2026-06-15_frontier49_stage_open/small_review/prompt.md",
+        "clean_output": "docs/agent_control/grok_reviews/2026-06-15_frontier49_stage_open/small_review/clean_output.md",
+        "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-15_frontier49_stage_open/small_review/raw_diagnostics.json",
+        "metadata": "docs/agent_control/grok_reviews/2026-06-15_frontier49_stage_open/small_review/metadata.json"
+      }
+    },
+    "clean_output_path": "docs/agent_control/grok_reviews/2026-06-15_frontier49_stage_open/small_review/clean_output.md",
+    "classification": "accepted_stage_open_train_split_only_forward_floor_state_machine_lock",
+    "accepted_after_local_verification": true,
+    "guardrail_seen": true,
+    "claim_boundary_ok": true,
+    "forbidden_claim_seen": false,
+    "clean_excerpt": "1. **verdict:** `accepted`\n\n2. **train_split_only_construction_lock:** `yes`\n\n3. **claim_boundary_ok:** `yes`\n\n4. **one risk:** F48 `negative_memory`와 `0/0/0` scout/seed/runtime(탐색/씨앗/런타임)인데, event/model/gate/scaffold(이벤트/모델/게이트/골격)를 reference-only(참조 전용)로 다시 쓰면 “새 변수는 state machine(상태기계)뿐”이라도 탐색 공간이 F48과 거의 같아져, forward floor(전진 하한)가 train split(학습 분할) 안에서만 미세 조정돼도 같은 실패 형태가 반복될 수 있다.\n\n5. **one repair suggestion:** stage-open(단계 개방) 시 reference bundle(참조 묶음)을 고정 manifest(고정 목록)로 적고, 탐색 자유도(degrees of freedom, 자유도)는 state-machine rule/threshold(상태기계 규칙/임계값)와 train-only floor calibration(학습 전용 하한 보정)만 허용한다. embargo join(유예 조인) 감사와 “validation/OOS(검증/표본외)가 threshold pick(임계값 선택)에 한 번도 안 들어갔다”는 체크를 실험 전에 선등록한다."
+  },
+  "checks": {
+    "checks": {
+      "workspace_points_to_f49": true,
+      "prev_selection_next_matches": true,
+      "prev_selection_json_exists": true,
+      "prev_preserved_clue_exists": true,
+      "prev_negative_memory_exists": true,
+      "open_grok_accepted": true,
+      "feature_hash_matches_contract": true,
+      "required_splits_present": true,
+      "raw_path_alignment_available": true,
+      "short_path_valid_rows_positive": true,
+      "train_split_only_construction_lock": true,
+      "past_outcome_embargo_join_audit": true,
+      "validation_oos_threshold_pick_isolation": true
+    },
+    "feature_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "rows": 46650,
+    "raw_rows": 261345,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "short_valid_rows": 46650
+  }
+}
