@@ -1152,3 +1152,13 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.41/63.63%/2781`; MT5 OOS(MT5 표본외) `0.61/28.22%/2163`.
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
 - Effect(효과): runtime-shaped payoff source(런타임형 손익 원천)를 같은 형태로 반복하기 전에 proxy-to-runtime economics(프록시→런타임 경제성) 전이 여부를 먼저 기억한다.
+
+<!-- frontier55D_stage_closeout_sparse_admission_v1 -->
+
+## frontier55D_stage_closeout_sparse_admission_v1
+
+- Stage(단계): `stage_frontier_55__short_pf_edge_after_runtime_shaped_payoff_memory`
+- Negative memory(부정 기억): `negative_memory_sparse_admission_runtime_veto_did_not_transfer(부정 기억, 희소 진입 허용 런타임 차단이 MT5로 전이되지 않음)`
+- Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.42/20.84%/954`; MT5 OOS(MT5 표본외) `0.64/8.3%/711`.
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
+- Effect(효과): sparse admission runtime veto source(희소 진입 허용 런타임 차단 원천)를 같은 형태로 반복하기 전에 proxy-to-runtime economics(프록시→런타임 경제성) 전이 여부를 먼저 기억한다.
