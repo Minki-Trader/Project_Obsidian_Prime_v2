@@ -1866,3 +1866,13 @@ Register ideas when they become durable work, not for every passing thought.
 - Result(결과): `negative_memory_long_axis_did_not_escape_friction_class(부정 기억, 롱 축이 마찰/경제성 붕괴 계열을 벗어나지 못함)`
 - Evidence(근거): `stages/stage_frontier_59__long_quality_edge_after_short_economics_memory/03_reviews/runtime_probe_report.md`
 - Boundary(경계): reference-only(참조 전용), no authority(권위 없음).
+
+<!-- frontier60D_stage_closeout_long_axis_friction_escape_v1 -->
+
+## frontier60D_stage_closeout_long_axis_friction_escape_v1
+
+- Stage(단계): `stage_frontier_60__long_axis_friction_escape_or_negative_memory`
+- Idea(아이디어): fixed F59 long quality score(고정 F59 롱 품질 점수)에 admission cadence runtime envelope(진입 리듬 런타임 봉투)를 붙여 friction escape(마찰 탈출)를 시험했다.
+- Result(결과): `negative_memory_long_axis_friction_escape_failed_pf(부정 기억, 롱 축 마찰 탈출 수익 팩터 실패)`
+- Evidence(근거): `stages/stage_frontier_60__long_axis_friction_escape_or_negative_memory/03_reviews/runtime_probe_report.md`
+- Boundary(경계): reference-only(참조 전용), no authority(권위 없음).

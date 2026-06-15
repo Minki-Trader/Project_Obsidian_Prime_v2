@@ -1202,3 +1202,13 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.46/22.84%/1002`; MT5 OOS(MT5 표본외) `0.58/10.27%/688`.
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
 - Effect(효과): direction flip(방향 전환)이 economics transfer(경제성 전이)를 자동으로 해결하지 못하는지 기억한다.
+
+<!-- frontier60D_stage_closeout_long_axis_friction_escape_v1 -->
+
+## frontier60D_stage_closeout_long_axis_friction_escape_v1
+
+- Stage(단계): `stage_frontier_60__long_axis_friction_escape_or_negative_memory`
+- Negative memory(부정 기억): `negative_memory_long_axis_friction_escape_failed_pf(부정 기억, 롱 축 마찰 탈출 수익 팩터 실패)`
+- Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.41/14.89%/661`; MT5 OOS(MT5 표본외) `0.51/8.48%/494`.
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
+- Effect(효과): fixed F59 long score(고정 F59 롱 점수)에 admission cadence(진입 리듬)를 붙이는 방식이 long-axis friction escape(롱 축 마찰 탈출)를 만들었는지 기억한다.
