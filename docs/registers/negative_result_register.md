@@ -1142,3 +1142,13 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.37/31.92%/1325`; MT5 OOS(MT5 표본외) `0.56/19.18%/1337`.
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
 - Effect(효과): raw path-quality score(원천 경로 품질 점수)를 같은 형태로 반복하기 전에 proxy-to-runtime economics(프록시→런타임 경제성) 붕괴 여부를 먼저 기억한다.
+
+<!-- frontier54D_stage_closeout_runtime_shaped_payoff_source_v1 -->
+
+## frontier54D_stage_closeout_runtime_shaped_payoff_source_v1
+
+- Stage(단계): `stage_frontier_54__short_pf_edge_new_source_after_path_quality_runtime_memory`
+- Negative memory(부정 기억): `negative_memory_runtime_shaped_payoff_proxy_did_not_transfer(부정 기억, 런타임형 손익 프록시가 MT5로 전이되지 않음)`
+- Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.41/63.63%/2781`; MT5 OOS(MT5 표본외) `0.61/28.22%/2163`.
+- Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
+- Effect(효과): runtime-shaped payoff source(런타임형 손익 원천)를 같은 형태로 반복하기 전에 proxy-to-runtime economics(프록시→런타임 경제성) 전이 여부를 먼저 기억한다.
