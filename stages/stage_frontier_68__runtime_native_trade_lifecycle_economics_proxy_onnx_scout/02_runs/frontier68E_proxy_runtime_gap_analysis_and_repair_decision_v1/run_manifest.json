@@ -1,0 +1,159 @@
+{
+  "run_id": "frontier68E_proxy_runtime_gap_analysis_and_repair_decision_v1",
+  "stage_id": "stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout",
+  "parent_run_id": "frontier68D_mt5_runtime_probe_candidate_axis_materialization_v1",
+  "next_run_id": "frontier68F_near_four_axis_onnx_runtime_repair_probe_v1",
+  "created_at_utc": "2026-06-16T17:55:51Z",
+  "status": "completed_gap_analysis_repair_queue_no_authority(간극 분석 및 수리 대기열 완료, 권위 없음)",
+  "judgment": "runtime_probe_negative_repairable_seed_surface_no_authority(런타임 탐침 부정, 수리 가능한 씨앗 표면, 권위 없음)",
+  "claim_boundary": "gap_analysis_repair_queue_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "observed_change": {
+    "density_axis": {
+      "validation_runtime_pf": "0.91",
+      "validation_runtime_dd_pct": "71.13",
+      "oos_runtime_pf": "1.04",
+      "oos_runtime_dd_pct": "26.84",
+      "oos_runtime_tpd": "8.456410256410257"
+    },
+    "pf_axis": {
+      "validation_runtime_pf": "43.4",
+      "validation_runtime_tpd": "0.007352941176470588",
+      "oos_runtime_pf": "0.0",
+      "oos_runtime_tpd": "0.005128205128205128"
+    }
+  },
+  "comparison_baseline": "F68C proxy KPI and F68D MT5 Strategy Tester runtime receipt",
+  "likely_drivers": [
+    "signal/feature parity is not the failure driver because all four attempts have zero signal and feature diffs",
+    "density_axis failure is runtime economics and account drawdown expansion",
+    "pf_axis failure is signal scarcity and PF saturation in proxy accounting",
+    "repair must alter feature set, trade spacing, or risk/exit shape rather than only relabel parity"
+  ],
+  "segment_checks": {
+    "validation_oos": "checked",
+    "axis_split": "checked_density_axis_and_pf_axis",
+    "signal_count_parity_rows": 4,
+    "feature_readiness_parity_rows": 4,
+    "missing": "time-under-water and equity smoothness need future runtime report parsing"
+  },
+  "trade_shape": {
+    "density_validation_trades": "1860",
+    "density_oos_trades": "1649",
+    "density_oos_long_short": "895/754",
+    "pf_validation_trades": "2",
+    "pf_oos_trades": "1"
+  },
+  "alternative_explanations": [
+    "proxy DD is normalized points and not account DD authority",
+    "tester report includes deal/accounting effects that proxy only approximates",
+    "close_on_flat runtime lifecycle can change realized holding shape versus proxy horizon"
+  ],
+  "attribution_confidence": "medium(중간)",
+  "next_probe": {
+    "run_id": "frontier68F_near_four_axis_onnx_runtime_repair_probe_v1",
+    "primary_repair_candidate": "f68b_0872ddc6192f",
+    "effect": "Export the ONNX-capable near-four-axis repair surface, then run MT5 before any stronger claim."
+  },
+  "repair_queue": [
+    {
+      "repair_id": "repair01_no_mega_cooldown6_near_four_axis",
+      "priority": 1,
+      "repair_family": "feature_set_trade_shape_recombination(피처 묶음/거래 형태 재조합)",
+      "repair_hypothesis": "Removing mega/top3 features and increasing same-axis spacing can compress runtime DD while preserving enough ONNX-exportable ExtraTrees density to test in MT5.",
+      "repair_effect": "F68D density runtime failure is moved from count parity to DD/PF repair; F68D PF sparse failure is moved toward higher density.",
+      "next_probe": "frontier68F_near_four_axis_onnx_runtime_repair_probe_v1",
+      "candidate_id": "f68b_0872ddc6192f",
+      "status": "queued_for_repair_probe(수리 탐침 대기)",
+      "target_id": "h2_ddp03_min1p5(2봉_손실벌점)",
+      "feature_set_id": "no_mega_top3(대형주_상위3제외)",
+      "model_id": "extra_trees_shallow(얕은엑스트라트리스)",
+      "threshold_quantile": "0.3",
+      "cooldown_bars": "6",
+      "side_policy": "both(양방향)",
+      "exit_mode": "close_horizon(만기종가)",
+      "proxy_validation_net": "3574.4199999999873",
+      "proxy_validation_pf": "1.2872492088315126",
+      "proxy_validation_tpd": "3.1845018450184504",
+      "proxy_validation_dd_pct": "6.821299999999944",
+      "proxy_oos_net": "2528.7000000000235",
+      "proxy_oos_pf": "1.234431711461819",
+      "proxy_oos_tpd": "3.9896907216494846",
+      "proxy_oos_dd_pct": "5.061499999999865",
+      "runtime_gap_basis": {
+        "density_validation_pf": "0.91",
+        "density_validation_dd_pct": "71.13",
+        "density_oos_pf": "1.04",
+        "density_oos_dd_pct": "26.84",
+        "pf_oos_trades_per_day": "0.005128205128205128",
+        "gap_classes": [
+          "cost_observed_in_deal_table",
+          "cost_zero_or_unparsed",
+          "deal_order_gap",
+          "deal_order_no_gap",
+          "feature_ready_exact",
+          "proxy_pf_saturation_vs_runtime_pf",
+          "runtime_dd_exceeds_proxy_dd",
+          "runtime_dd_under_10_observation",
+          "runtime_density_in_target_band",
+          "runtime_density_outside_target_band",
+          "runtime_pf_below_proxy",
+          "signal_count_exact"
+        ]
+      },
+      "claim_boundary": "gap_analysis_repair_queue_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    },
+    {
+      "repair_id": "repair02_session_regime_no_mega_duplicate_check",
+      "priority": 2,
+      "repair_family": "feature_set_duplicate_or_regime_check(피처 묶음 중복/장세 확인)",
+      "repair_hypothesis": "The session_regime_no_mega surface duplicates the no_mega KPI read in F68B; keep it as a duplicate-surface check unless feature hash proves it differs.",
+      "repair_effect": "Prevents treating two equivalent proxy rows as independent evidence.",
+      "next_probe": "hold_after_repair01_hash_check(수리01 해시 확인 뒤 보류)",
+      "candidate_id": "f68b_0f012336cfaf",
+      "status": "queued_for_repair_probe(수리 탐침 대기)",
+      "target_id": "h2_ddp03_min1p5(2봉_손실벌점)",
+      "feature_set_id": "session_regime_no_mega(세션국면_대형주제외)",
+      "model_id": "extra_trees_shallow(얕은엑스트라트리스)",
+      "threshold_quantile": "0.3",
+      "cooldown_bars": "6",
+      "side_policy": "both(양방향)",
+      "exit_mode": "close_horizon(만기종가)",
+      "proxy_validation_net": "3574.4199999999873",
+      "proxy_validation_pf": "1.2872492088315126",
+      "proxy_validation_tpd": "3.1845018450184504",
+      "proxy_validation_dd_pct": "6.821299999999944",
+      "proxy_oos_net": "2528.7000000000235",
+      "proxy_oos_pf": "1.234431711461819",
+      "proxy_oos_tpd": "3.9896907216494846",
+      "proxy_oos_dd_pct": "5.061499999999865",
+      "runtime_gap_basis": {
+        "density_validation_pf": "0.91",
+        "density_validation_dd_pct": "71.13",
+        "density_oos_pf": "1.04",
+        "density_oos_dd_pct": "26.84",
+        "pf_oos_trades_per_day": "0.005128205128205128",
+        "gap_classes": [
+          "cost_observed_in_deal_table",
+          "cost_zero_or_unparsed",
+          "deal_order_gap",
+          "deal_order_no_gap",
+          "feature_ready_exact",
+          "proxy_pf_saturation_vs_runtime_pf",
+          "runtime_dd_exceeds_proxy_dd",
+          "runtime_dd_under_10_observation",
+          "runtime_density_in_target_band",
+          "runtime_density_outside_target_band",
+          "runtime_pf_below_proxy",
+          "signal_count_exact"
+        ]
+      },
+      "claim_boundary": "gap_analysis_repair_queue_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    }
+  ],
+  "source_paths": {
+    "f68d_receipt": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/frontier68D_runtime_probe_receipt_review.csv",
+    "f68d_gap": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/frontier68D_gap_classification_review.csv",
+    "f68b_summary": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68b_proxy_candidate_summary_review.csv",
+    "f68d_report": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/frontier68D_mt5_runtime_probe_report.md"
+  }
+}

@@ -1,28 +1,26 @@
 ﻿# Current Working State(현재 작업 상태)
 
-Updated(갱신): 2026-06-16T17:14:42Z
+Updated(갱신): 2026-06-16T18:48:32Z
 
 Active stage(활성 단계): `stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout`
 
-Current run(현재 실행): `frontier68D_mt5_runtime_probe_candidate_axis_materialization_v1`
+Current run(현재 실행): `frontier68J_unit_corrected_atr_runtime_repair_probe_v1`
 
-Latest completed run(최근 완료 실행): `frontier68C_candidate_scoring_or_onnx_scout_export_v1`
+Latest completed run(최근 완료 실행): `frontier68I_risk_envelope_result_review_or_stage_closeout_decision_v1`
 
 ## Current Truth(현재 진실)
 
-Action(행동): F68C ONNX scout export(F68C ONNX 탐색 내보내기)를 실행했다.
+Action(행동): F68I risk envelope result review(F68I 위험 봉투 결과 검토)를 실행했다.
 
-Effect(효과): F68B의 density/PF/low-DD axes(밀도/수익 팩터/저손실폭 축)를 하나의 winner(승자)로 합치지 않고, MT5 Runtime Probe(MT5 런타임 탐침)로 물질화할 인계 산출물(handoff artifacts, 인계 산출물)로 분리했다.
+Effect(효과): F68H의 세 ATR SL/TP 변형이 모두 open_sl=180/open_tp=260(개시 손절/익절 180/260)으로 접혀 variant differentiation(변형 구분)이 무효였음을 기록했다.
 
-- F68C status(F68C 상태): `completed_onnx_scout_export_no_authority(ONNX 탐색 내보내기 완료, 권위 없음)`.
-- exported_count(내보낸 수): `2`.
-- parity_pass_count(동등성 통과 수): `2`.
-- mandatory MT5 Runtime Probe(필수 MT5 런타임 탐침): still pending(아직 대기).
+- F68I status(F68I 상태): `completed_risk_envelope_result_review_no_authority(위험 봉투 결과 검토 완료, 권위 없음)`.
+- next_run(다음 실행): `frontier68J_unit_corrected_atr_runtime_repair_probe_v1`.
 
-## Key Artifacts(핵심 산출물)
+Claim boundary(주장 경계): `risk_envelope_result_review_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`
 
-- F68C report(F68C 보고서): `stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/frontier68C_onnx_scout_export_report.md`
-- F68C handoff intent(F68C 인계 의도): `stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68c_handoff_intent_review.json`
-- F68C summary(F68C 요약): `stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68c_candidate_axis_summary_review.csv`
+## Continuity Anchor(연속성 고정점)
 
-Claim boundary(주장 경계): `onnx_scout_export_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`
+Action(행동): goal resume(목표 재개)나 context compaction(맥락 압축) 뒤에도 F68J를 즉시 repair probe(수리 탐침)로 이어가되, F68 고착으로 해석하지 않는다.
+
+Effect(효과): feature set(피처 묶음), label/target(라벨/목표), model family(모델 계열), trade shape(거래 형태), risk logic(위험 로직), regime/session split(장세/세션 분할)을 계속 바꿔가며 새 가설을 열 수 있게 한다.
