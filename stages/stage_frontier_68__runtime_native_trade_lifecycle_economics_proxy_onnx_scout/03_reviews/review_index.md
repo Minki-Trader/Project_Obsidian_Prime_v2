@@ -37,3 +37,18 @@ Next action(다음 행동): `frontier68I_risk_envelope_result_review_or_stage_cl
 - `frontier68I_signature_collapse_review.csv`: F68H signature collapse review(F68H 서명 붕괴 검토)
 - `frontier68I_next_unit_corrected_atr_variants_review.csv`: F68J unit-corrected ATR variants(F68J 단위 보정 평균진폭 변형)
 Next action(다음 행동): `frontier68J_unit_corrected_atr_runtime_repair_probe_v1`
+
+## F68J Unit-Corrected ATR Runtime Repair Probe(F68J 단위 보정 평균진폭 런타임 수리 탐침)
+
+- `frontier68J_unit_corrected_atr_runtime_repair_probe_report.md`: F68J unit-corrected ATR runtime repair probe(F68J 단위 보정 평균진폭 런타임 수리 탐침)
+- `frontier68J_runtime_probe_receipt_review.csv`: F68J runtime receipt(F68J 런타임 영수증)
+- `frontier68J_effective_atr_sltp_summary_review.csv`: F68J effective ATR SL/TP summary(F68J 실효 평균진폭 손절/익절 요약)
+- `frontier68J_signature_collapse_review.csv`: F68J signature collapse check(F68J 서명 붕괴 점검)
+Next action(다음 행동): `frontier68K_unit_corrected_atr_result_review_or_stage_closeout_decision_v1`
+- `frontier68K_result_review_or_stage_closeout_decision_report.md`: F68K result review and closeout decision(F68K 결과 검토와 마감 결정)
+- `frontier68K_closeout_kpi_table_review.csv`: F68 closeout KPI table(F68 마감 핵심 성과 지표 표)
+- `stage_closeout_report.md`: F68 stage closeout report(F68 단계 마감 보고서)
+- `required_gate_coverage_audit.md`: F68 required gate coverage audit(F68 필수 게이트 커버리지 감사)
+- `grok_stage_closeout_receipt.md`: F68 Grok closeout receipt(F68 그록 마감 영수증)
+- `frontier68K_verification_blocker_test_gate.md`: F68K test gate and push blocker(F68K 테스트 게이트 및 원격 반영 차단)
+Next action(다음 행동): `frontier69A_stage_open_axis_rotation_hypothesis_design_v1` in `stage_frontier_69__axis_rotation_after_lifecycle_risk_only_negative_memory`

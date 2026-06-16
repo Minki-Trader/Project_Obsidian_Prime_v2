@@ -2020,3 +2020,6 @@ Register ideas when they become durable work, not for every passing thought.
 - Evidence(근거): `stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/00_spec/stage_brief.md`
 - Next(다음): `frontier68A_stage_open_lifecycle_economics_proxy_design_v1` bridge feasibility checklist and label design(연결 가능성 체크리스트와 라벨 설계).
 - Boundary(경계): scout/planning only(탐색/계획 전용), no authority(권위 없음).
+
+<!-- frontier68_closeout_preserved_clue_negative_memory_v1 -->
+- `IDEA-FR68-LIFECYCLE-ECONOMICS-PROXY-ONNX-SCOUT`: `frontier68_closeout_preserved_clue_negative_memory_v1` closes Frontier68(전선68) as preserved clue + negative memory(보존 단서 + 부정 기억). Effect(효과): F68F exact signal/feature parity(F68F 정확한 신호/피처 동등성)와 F68J unit-corrected ATR telemetry differentiation(F68J 단위 보정 평균진폭 기록 구분성)은 보존하지만, same F68F ONNX + risk-only repair loop(동일 F68F 온엑스 + 위험 단독 수리 반복)는 다음 전선으로 상속하지 않습니다. Next(다음): `frontier69A_stage_open_axis_rotation_hypothesis_design_v1` major-axis rotation(주요 축 회전).

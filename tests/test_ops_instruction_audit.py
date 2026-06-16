@@ -77,7 +77,7 @@ def _copy_ops_fixture(root: Path) -> Path:
 
 def _ignore_generated_packet_artifacts(directory: str, names: list[str]) -> set[str]:
     if Path(directory).name == "agent_control":
-        return {"packets"} & set(names)
+        return {"grok_reviews", "packets"} & set(names)
     return set()
 
 

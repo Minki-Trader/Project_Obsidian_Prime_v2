@@ -1275,3 +1275,13 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Do-not-repeat(반복 금지): Do not spend another frontier stage(다음 전선 단계)를 parity-only repair(동등성 단독 수리)에 쓰지 않는다.
 - Reopen condition(재개 조건): new lifecycle economics mechanism(새 생명주기 경제성 메커니즘) and mandatory MT5 Runtime Probe(필수 MT5 런타임 탐침)를 함께 제시할 때만 재개한다.
 - Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+
+<!-- frontier68_closeout_preserved_clue_negative_memory_v1 -->
+## frontier68_closeout_preserved_clue_negative_memory_v1 Frontier68 Negative Memory(전선68 부정 기억)
+
+- hypothesis(가설): lifecycle/cost/DD-aware proxy(생명주기/비용/손실폭 인식 프록시)가 MT5 runtime economics gap(MT5 런타임 경제성 간극)을 줄일 수 있는지 시험했다.
+- failed_boundary(실패 경계): F68J best OOS(F68J 최선 표본외)는 net/PF/DD/trades/day(순수익/수익 팩터/손실폭/일 거래 수) `68.24 / 1.04 / 13.76% / 6.6923`였지만 validation(검증)은 `-141.58 / 0.94 / 38.55% / 5.7132`로 실패했다.
+- preserved_clue(보존 단서): F68F exact parity(F68F 정확 동등성), F68J no signature collapse(F68J 서명 붕괴 없음), unit-corrected ATR telemetry(단위 보정 평균진폭 기록).
+- do_not_repeat(반복 금지): same F68F ONNX(동일 F68F 온엑스)에 capped ATR(상한 평균진폭) 또는 SL/TP/ATR width only(손절/익절/평균진폭 폭만) 덧대는 repair loop(수리 반복)를 PF source(수익 팩터 원천)처럼 쓰지 않는다.
+- reopen_condition(재개 조건): feature set(피처 묶음), label/target(라벨/목표), model family(모델 계열), trade shape(거래 형태), or regime/session split(장세/세션 분할) 중 하나 이상이 실제로 바뀌고, 새 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
+- report(보고서): `stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/stage_closeout_report.md`.
