@@ -7200,3 +7200,12 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - effect(효과): full scan(전체 검사) 실패를 숨기지 않으면서, 현재 patch(패치)가 새 BOM/mojibake debt(새 BOM/문자 깨짐 부채)를 만들었는지 변경 파일 범위로 검증할 수 있다.
 - repair(수리): 이번에 touched(수정)한 `docs/workspace/changelog.md` 안의 기존 mojibake(문자 깨짐) 줄을 정상 한국어 병행표기로 수리했다.
 - boundary(경계): 이 검증 도구 변경은 gate(게이트), threshold(임계값), MT5 requirement(MT5 요구), completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)를 완화하지 않는다.
+
+<!-- frontier67A_dd_basis_crosswalk_execution_v1 -->
+
+## 2026-06-16 Frontier67A DD Basis Crosswalk(F67A 손실폭 기준 대조)
+
+- action(행동): F66 split rows(F66 분할 행) `64`개에서 proxy DD(프록시 손실폭)와 runtime DD percent(런타임 손실폭 퍼센트)를 같은 row grain(행 단위)로 대조했다.
+- effect(효과): runtime/proxy DD delta median(런타임-프록시 손실폭 차이 중앙값) `10.4811pp`, runtime DD > 10 rows(런타임 손실폭 10 초과 행) `60/64`, proxy DD > 10 rows(프록시 손실폭 10 초과 행) `31/64`, proxy<10/runtime>10 rows(프록시 10 미만/런타임 10 초과 행) `22/64`를 기록했다.
+- next(다음): F67B config parity depth pilot(설정 동등성 깊이 파일럿)에서 spread/commission/slippage/modeling/deposit/leverage(스프레드/수수료/슬리피지/모델링/예치금/레버리지)를 대조한다.
+- boundary(경계): DD basis observation(손실폭 기준 관찰)이며 F67 closeout(마감) 전 MT5 Runtime Probe(MT5 런타임 탐침)는 still required(여전히 필수)다.
