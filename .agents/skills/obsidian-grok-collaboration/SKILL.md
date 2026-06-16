@@ -83,6 +83,8 @@ Forbidden claims(금지 주장): completion(완성), selected baseline(선택 �
    - `medium review(중간 검토)`: one bounded snapshot(제한 스냅샷) and one focused question(집중 질문).
    - `large review(대규모 검토)`: multiple narrow passes(여러 좁은 회차), such as architecture/evidence/runtime/policy(구조/근거/런타임/정책), then one Codex synthesis(Codex 종합).
    - Effect(효과): large review(대규모 검토)가 monolithic prompt(거대 단일 프롬프트)로 무너지지 않는다.
+   - For `small review(소규모 검토)`, use compact receipt(압축 영수증) and proportional pre-read(비례 사전 읽기): read only the current truth(현재 진실) and directly relevant evidence(직접 관련 근거) needed for the narrow question.
+   - Effect(효과): user-required Grok(사용자 요구 그록)을 유지하면서 small question(작은 질문)이 full forensic packet(전체 포렌식 묶음)으로 커지지 않는다.
 
 4. Build or select the review record.
    - Default location(기본 위치):
@@ -102,6 +104,7 @@ Forbidden claims(금지 주장): completion(완성), selected baseline(선택 �
    - Prefer wrapper defaults(래퍼 기본값) that pass `--rules`, `--no-plan`, `--no-subagents`, and `--disable-web-search`. Effect(효과): Grok(Grok, 그록)이 Codex(코덱스)의 local verification(로컬 검증)을 대신하려다 timeout(시간초과)되는 일을 줄인다.
    - Do not pass those wrapper default flags(래퍼 기본 플래그) again through `--extra-arg` unless the wrapper output(래퍼 출력) proves they are absent. If an extra argument(추가 인자) begins with `--`, use `--extra-arg=--flag` form. Effect(효과): duplicate argument failure(중복 인자 실패) and `--extra-arg` parsing mistakes(`--extra-arg` 파싱 실수)를 줄인다.
    - Do not rely on `--disallowed-tools read_file,write_file,edit_file,bash,grep,glob,ls` as the primary safety control. Local trials showed those names may not match tool entries.
+   - When using `--output-dir`, prefer wrapper summary output(래퍼 요약 출력) and read `clean_output.md(정리 출력)` or `metadata.json(메타데이터)` by path. Open `raw_diagnostics.json(원본 진단)` only for timeout(시간초과), failure(실패), transport issue(전송 문제), or audit need(감사 필요).
    - Effect(효과): Grok transport(전송) 문제와 Grok content(내용) 판단을 분리한다.
 
 6. Codex summarizes and challenges Grok.
@@ -158,7 +161,17 @@ Codex must verify any factual claim against local filesystem(파일시스템), r
 
 ## Required Receipt
 
-Every Grok-required packet must produce a receipt(영수증) with:
+Every Grok-required packet must produce a receipt(영수증).
+
+For `small review(소규모 검토)`, the compact receipt(압축 영수증) minimum is:
+
+- `trigger_reason(트리거 이유)`
+- `bounded_evidence(제한 근거)`
+- `advice_classification(조언 분류)`
+- `claim_boundary(주장 경계)`
+- `final_codex_direction(최종 Codex 방향)`
+
+For `medium review(중간 검토)` and `large review(대규모 검토)`, or when the Grok result changes files, execution, stage closeout(단계 마감), or publish/push(게시/원격 반영), use the full receipt(전체 영수증) with:
 
 - `trigger_reason(트리거 이유)`
 - `review_size(검토 크기)`

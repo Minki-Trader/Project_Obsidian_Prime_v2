@@ -4,10 +4,15 @@ routing_contract:
   rule: "Every non-trivial packet selects exactly one primary_family and one primary_skill before work starts."
   primary_skill_limit: 1
   support_skill_limit_default: 3
+  trivial_packet_default_support_skill_limit: 0
   max_required_skills_per_family: 5
   required_skill_order: "primary_skill first, then support_skills in execution order"
   closeout_rule: "Required skills must produce receipts, and required gates must appear in closeout before completed/reviewed/verified claims."
+  small_work_rule: "Read-only status, path/hash/register recount, and narrow review packets may use delta reentry, primary skill only, compact receipt, and not_applicable_with_reason gate declarations when they do not mutate files, run tools, publish, close a stage, or claim completed/reviewed/verified status."
   stage_agnostic_rule: "Work families are reusable for Stage 5 through future Stage 50+ work; never create a family just for one stage number."
+  skills_to_read_rule: "Read the primary skill first. Add support skill files only when they materially change execution, verification, or closeout evidence; record one-line justification for each support skill."
+  grok_small_review_rule: "Small Grok reviews use compact receipts with trigger_reason, bounded_evidence, advice_classification, claim_boundary, and final_codex_direction. Medium and large reviews keep full prompt/output identity and detailed local verification blocks."
+  five_stage_retrospective_due_rule: "Check five-stage retrospective due status register-first. If not_due, record the gate status and do not load synthesis templates or prior five stage artifacts."
   common_final_filter:
     - obsidian-answer-clarity
     - obsidian-claim-discipline
@@ -36,6 +41,8 @@ families:
     description: "Read/explain only(읽기/설명 전용 작업)"
     mutation_default: false
     execution_default: false
+    support_skill_limit: 1
+    compact_receipt_default: true
     primary_skill: obsidian-answer-clarity
     support_skills:
       - obsidian-claim-discipline

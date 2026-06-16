@@ -1,0 +1,206 @@
+version: work_packet_schema_v2
+packet_id: agent_skill_token_waste_minimal_mode_v1
+created_at_utc: "2026-06-16T15:06:01Z"
+user_request:
+  user_quote: "그럼 반영까지해서 깃메인에 반영푸쉬까지해줘"
+  requested_action: "Apply the accepted Grok-reviewed AGENTS/skill token-waste governance changes, then commit and push to main."
+  requested_count: 1
+  ambiguous_terms: []
+current_truth:
+  active_stage: stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk
+  current_run: frontier67D_narrow_cost_order_intent_runtime_probe_v1
+  current_status: frontier67D_runtime_probe_observation_no_authority
+  runtime_authority: not_claimed
+  operating_promotion: not_claimed
+  live_readiness: not_claimed
+  goal_achieve: not_claimed
+  branch: main
+  prior_grok_review: docs/agent_control/grok_reviews/2026-06-16_agent_skill_token_waste_review/receipt.md
+work_classification:
+  primary_family: policy_skill_governance
+  detected_families:
+    - policy_skill_governance
+    - publish_handoff
+  touched_surfaces:
+    - AGENTS.md
+    - docs/policies/agent_trigger_policy.md
+    - docs/policies/reentry_order.md
+    - docs/agent_control/work_family_registry.yaml
+    - .agents/skills/obsidian-session-intake/SKILL.md
+    - .agents/skills/obsidian-work-packet-router/SKILL.md
+    - .agents/skills/obsidian-grok-collaboration/SKILL.md
+    - docs/agent_control/skill_receipt_schema.yaml
+    - foundation/control_plane/skill_receipt_schema_lint.py
+    - foundation/control_plane/grok_review_wrapper.py
+    - tests/test_grok_review_wrapper.py
+    - tests/test_skill_receipt_schema_lint.py
+  mutation_intent: policy_skill_code_test_edit
+  execution_intent: validation_and_git_publish
+risk_vector_scan:
+  risks:
+    - ops_instruction_risk
+    - skill_abandonment_risk
+    - answer_clarity_risk
+    - claim_boundary_risk
+    - Korean_encoding_risk
+  hard_stop_risks:
+    - weakening_MT5_runtime_probe_requirement
+    - weakening_final_claim_guard
+    - removing_user_required_Grok
+  required_decision_locks:
+    - preserve_all_trading_validation_safeguards
+    - no_completion_or_runtime_authority_claim
+  required_gates:
+    - agent_control_contracts
+    - ops_instruction_audit
+    - work_packet_schema_lint
+    - skill_receipt_schema_lint
+    - pytest_grok_review_wrapper
+    - validate_agent_settings
+  forbidden_claims:
+    - completion
+    - selected_baseline
+    - promotion
+    - runtime_authority
+    - live_readiness
+    - Goal_Achieve
+decision_lock:
+  mode: user_requested_apply_and_push
+  assumptions:
+    - Use the prior Grok review as the external second-opinion evidence.
+    - Do not rerun Grok because accepted advice is already recorded and this packet is implementation of that review.
+    - Keep Korean/English pairing and all trading evidence gates intact.
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+    - policy_skill_governance
+  target_surfaces:
+    - AGENTS.md
+    - repo_scoped_skills
+    - agent_trigger_policy
+    - work_family_registry
+    - grok_review_wrapper
+  scope_units:
+    - policy
+    - skill
+    - code_module
+    - document
+  execution_layers:
+    - document_edit
+    - code_edit
+    - python_execution
+    - publish
+  mutation_policy: apply_accepted_grok_advice_only
+  evidence_layers:
+    - grok_review_receipt
+    - local_policy_files
+    - validator_outputs
+    - pytest_output
+  reduction_policy: "Small-work mode reduces routing overhead only; it does not reduce MT5, evidence, threshold, or claim gates."
+  claim_boundary: "Agent-policy update only; no trading result, no completion candidate, no runtime authority."
+acceptance_criteria:
+  - id: ac01
+    text: "AGENTS/policies/skills define small-work minimal mode, delta reentry, compact Grok receipt, and register-first retrospective checks."
+    expected_artifact: "Updated AGENTS.md, agent_trigger_policy.md, reentry_order.md, work_family_registry.yaml, and SKILL.md files."
+    verification_method: "Local file diff and agent settings validator."
+    required: true
+  - id: ac02
+    text: "Grok wrapper summary JSON avoids dumping raw diagnostics and full prompt when output_dir exists, and small Grok receipts validate with compact fields."
+    expected_artifact: "foundation/control_plane/grok_review_wrapper.py, foundation/control_plane/skill_receipt_schema_lint.py, and tests."
+    verification_method: "pytest tests/test_grok_review_wrapper.py tests/test_skill_receipt_schema_lint.py"
+    required: true
+  - id: ac03
+    text: "Policy/skill governance gates pass without weakening claim or runtime validation safeguards."
+    expected_artifact: "Audit JSON files in this packet directory."
+    verification_method: "agent_control_contracts, ops_instruction_audit, work_packet_schema_lint, skill_receipt_schema_lint"
+    required: true
+work_plan:
+  phases:
+    - reentry_delta
+    - apply_policy_skill_edits
+    - apply_wrapper_output_hygiene
+    - run_governance_and_unit_tests
+    - commit_and_push_main
+  expected_outputs:
+    - updated_governance_docs
+    - updated_repo_skills
+    - wrapper_summary_json_behavior
+    - validation_outputs
+    - pushed_main_commit
+  stop_conditions:
+    - validator_failure
+    - test_failure
+    - remote_push_rejection
+skill_routing:
+  primary_family: policy_skill_governance
+  primary_skill: obsidian-work-packet-router
+  support_skills:
+    - obsidian-architecture-guard
+    - obsidian-grok-collaboration
+    - obsidian-claim-discipline
+  skills_considered:
+    - obsidian-reentry-read
+    - obsidian-session-intake
+    - obsidian-work-packet-router
+    - obsidian-architecture-guard
+    - obsidian-grok-collaboration
+    - obsidian-claim-discipline
+    - obsidian-answer-clarity
+  skills_selected:
+    - obsidian-work-packet-router
+    - obsidian-architecture-guard
+    - obsidian-grok-collaboration
+    - obsidian-claim-discipline
+  skills_not_used:
+    obsidian-runtime-parity: not_required_no_MT5_runtime_or_handoff_change
+    obsidian-run-evidence-system: not_required_no_trading_run_or_KPI_ledger_mutation
+    obsidian-reference-scout: not_required_no_external_version_sensitive_reference
+    obsidian-code-surface-guard: not_required_no_reusable_feature_model_or_MT5_logic_surface
+  required_skill_receipts:
+    - obsidian-work-packet-router
+    - obsidian-architecture-guard
+    - obsidian-grok-collaboration
+    - obsidian-claim-discipline
+  required_gates:
+    - agent_control_contracts
+    - ops_instruction_audit
+    - work_packet_schema_lint
+    - skill_receipt_schema_lint
+evidence_contract:
+  raw_evidence:
+    - docs/agent_control/grok_reviews/2026-06-16_agent_skill_token_waste_review/clean_output.md
+    - docs/agent_control/grok_reviews/2026-06-16_agent_skill_token_waste_review/raw_diagnostics.json
+  machine_readable:
+    - docs/agent_control/packets/agent_skill_token_waste_minimal_mode_v1/work_packet.yaml
+    - docs/agent_control/packets/agent_skill_token_waste_minimal_mode_v1/skill_receipts.json
+    - docs/agent_control/packets/agent_skill_token_waste_minimal_mode_v1/agent_control_contracts.json
+    - docs/agent_control/packets/agent_skill_token_waste_minimal_mode_v1/ops_instruction_audit.json
+    - docs/agent_control/packets/agent_skill_token_waste_minimal_mode_v1/work_packet_schema_lint.json
+    - docs/agent_control/packets/agent_skill_token_waste_minimal_mode_v1/skill_receipt_schema_lint.json
+  human_readable:
+    - docs/agent_control/packets/agent_skill_token_waste_minimal_mode_v1/closeout_report.md
+    - docs/agent_control/grok_reviews/2026-06-16_agent_skill_token_waste_review/receipt.md
+gates:
+  required:
+    - agent_control_contracts
+    - ops_instruction_audit
+    - work_packet_schema_lint
+    - skill_receipt_schema_lint
+  not_applicable_with_reason:
+    runtime_evidence_gate: "Policy/skill governance only; no MT5/runtime claim."
+    kpi_contract_audit: "No trading KPI or ledger mutation."
+    artifact_lineage_audit: "No model/run artifact lineage claim; governance packet records local evidence only."
+final_claim_policy:
+  allowed_claims:
+    - agent_policy_update_applied
+    - governance_validation_passed
+    - pushed_to_main_if_git_push_succeeds
+  forbidden_claims:
+    - completion
+    - selected_baseline
+    - promotion
+    - runtime_authority
+    - live_readiness
+    - Goal_Achieve
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml

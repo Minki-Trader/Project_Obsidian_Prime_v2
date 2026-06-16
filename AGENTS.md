@@ -28,6 +28,16 @@ Obsidian Prime의 개념(concept, 개념)과 브로커 심볼 계약(broker symb
 
 gate(게이트)가 실패하면 `docs/agent_control/self_correction_policy.yaml`의 기본값인 `plan_only` 흐름으로 실패 원인과 repair plan(수정 계획)을 먼저 남긴다. 자동 수정은 allowlist(허용 목록) 안의 packet/closeout 배선 보정으로만 제한하며, gate 완화, threshold 완화, test skip, runtime/model logic 변경은 금지한다.
 
+### 작은 작업 최소 모드(Small-Work Minimal Mode, 작은 작업 최소 모드)
+
+`non-trivial work packet(비사소 작업 묶음)`은 파일 수정(file mutation, 파일 수정), 실행(run, 실행), MT5(`MetaTrader 5`, 메타트레이더5), 모델/model export(모델/모델 내보내기), 정책/스킬 변경(policy/skill change, 정책/스킬 변경), publish/push(게시/원격 반영), 상태 동기화(state sync, 상태 동기화), 또는 `completed/reviewed/verified(완료/검토/검증)` 같은 강한 claim(주장)을 만드는 작업이다.
+
+그 밖의 좁은 status(상태), path/hash/register recount(경로/해시/등록부 재확인), read-only review(읽기 전용 검토), 짧은 질문 답변은 `trivial or information_only packet(사소 또는 정보 전용 작업 묶음)`으로 다룰 수 있다.
+
+작은 작업의 기본값(default, 기본값)은 delta reentry(변화분 재진입), primary skill only(주 스킬만), support skills 0-1개(보조 스킬 0-1개), compact receipt(압축 영수증), gate N/A with reason(사유 있는 해당 없음)이다. 효과(effect, 효과)는 작은 작업이 전체 운영 스택(full operating stack, 전체 운영 스택)으로 커지는 것을 막는 것이다.
+
+이 최소 모드는 gate(게이트), threshold(임계값), evidence requirement(근거 요구), MT5 runtime probe(MT5 런타임 탐침), final claim guard(최종 주장 보호)를 완화하지 않는다. 작업이 파일 수정, 실행, stage closeout(단계 마감), runtime/backtest(런타임/백테스트), model export(모델 내보내기), 또는 publish/push(게시/원격 반영)로 넘어가면 즉시 non-trivial packet(비사소 작업 묶음)으로 승격한다.
+
 ## Grok 협업 규칙(Grok Collaboration Rule, 그록 협업 규칙)
 
 사용자 요청(user request, 사용자 요청)이나 `/goal(목표)`에 Grok 검토(Grok review, 그록 검토), 외부 리뷰(external review, 외부 리뷰), 2차 의견(second opinion, 2차 의견), stage close(단계 마감)마다 비판 검토(adversarial review, 비판 검토), agent/skill consulting(에이전트/스킬 상담), 또는 Codex 혼자 판단 금지(no solo Codex judgment, 코덱스 단독 판단 금지)가 있으면 `obsidian-grok-collaboration(그록 협업)` 스킬을 필수로 쓴다.
@@ -45,6 +55,8 @@ Grok(Grok, 그록)은 external second opinion(외부 2차 의견)일 뿐이다. 
 
 검토 크기(review size, 검토 크기)는 세 단계로 쓴다. small review(소규모 검토)는 좁은 질문 하나, medium review(중간 검토)는 제한 스냅샷(bounded snapshot, 제한 스냅샷) 하나와 집중 질문 하나, large review(대규모 검토)는 architecture/evidence/runtime/policy(구조/근거/런타임/정책)처럼 여러 narrow pass(좁은 회차)로 나눈다.
 
+small review(소규모 검토)의 receipt(영수증)는 compact receipt(압축 영수증)로 충분하다. 필수 minimum fields(최소 필드)는 `trigger_reason(트리거 이유)`, `bounded_evidence(제한 근거)`, `advice_classification(조언 분류)`, `claim_boundary(주장 경계)`, `final_codex_direction(최종 Codex 방향)`이다. prompt/output identity(프롬프트/출력 정체성)는 path/hash(경로/해시) 한 줄이면 충분하고, raw diagnostics(원본 진단)는 실패나 transport issue(전송 문제)가 있을 때만 연다. 효과(effect, 효과)는 Grok(Grok, 그록) 의무를 유지하면서 작은 검토가 forensic packet(포렌식 묶음)으로 과확장되지 않게 하는 것이다.
+
 Grok 호출(call, 호출)은 가능하면 `foundation/control_plane/grok_review_wrapper.py` wrapper(래퍼)를 쓴다. 효과(effect, 효과)는 prompt quoting(프롬프트 인용), timeout(시간 제한), stdout/stderr capture(표준 출력/오류 캡처), noise stripping(잡음 제거), top-level scratch artifact detection(최상위 임시 산출물 감지)을 같은 방식으로 처리하는 것이다. wrapper(래퍼)는 Grok 내용(content, 내용)을 판단하지 않는다.
 
 Windows(윈도우)에서 Grok wrapper(그록 래퍼)나 Python command(파이썬 명령)가 Korean/Unicode(한국어/유니코드)를 stdout(표준 출력)으로 낼 수 있으면 `$env:PYTHONIOENCODING='utf-8'; $env:PYTHONPATH='.'`를 먼저 둔다. Korean fidelity(한국어 보존)가 중요한 prompt(프롬프트)는 큰 PowerShell here-string(파워셸 here-string)보다 UTF-8 prompt file(UTF-8 프롬프트 파일)과 `--prompt-file`을 우선한다. 효과(effect, 효과)는 Windows cp949 console(윈도우 cp949 콘솔) 때문에 Grok output(그록 출력)이나 report template(보고서 템플릿)이 깨지는 일을 줄이는 것이다.
@@ -54,6 +66,8 @@ Console/shell encoding guard(콘솔/셸 인코딩 보호)는 agent execution env
 Grok timeout(그록 시간초과)이 local file inspection(로컬 파일 확인)이나 tool use(도구 사용)로 반복되면 prompt(프롬프트)에 snapshot-only direct answer(스냅샷 전용 직접 답변)를 명시하고, wrapper(래퍼)는 Grok CLI(그록 CLI)에 `--prompt-file`, `--rules`, `--no-plan`, `--no-subagents`, `--disable-web-search`를 우선 적용한다. 효과(effect, 효과)는 Grok(Grok, 그록)이 Codex(코덱스)의 local verification(로컬 검증)을 대신하려다 멈추지 않고, 받은 bounded evidence(제한 근거)에 대한 critique(비판)만 남기게 하는 것이다.
 
 Wrapper defaults(래퍼 기본값)는 `--rules`, `--no-plan`, `--no-subagents`, `--disable-web-search`를 이미 포함한다. 이 flag(플래그)들은 wrapper output(래퍼 출력)에서 빠진 것이 확인되지 않는 한 `--extra-arg`로 다시 넘기지 않는다. 추가 flag(추가 플래그)가 `--`로 시작하면 `--extra-arg=--flag` 형식을 쓴다. 효과(effect, 효과)는 Grok wrapper(그록 래퍼) 중복 인자 오류를 줄이면서 bounded review(제한 검토) 규칙은 유지하는 것이다.
+
+Grok wrapper(그록 래퍼)를 `--output-dir`와 함께 쓸 때는 기본적으로 clean output(정리 출력)과 metadata path(메타데이터 경로)만 읽는다. `--json(JSON 출력)`은 summary JSON(요약 JSON)으로 쓰고, full raw stdout/stderr(전체 표준 출력/오류)는 `--full-json(전체 JSON)`이나 `raw_diagnostics.json(원본 진단 파일)`이 필요할 때만 연다. 효과(effect, 효과)는 Grok 자체보다 Grok wrapper 출력이 token waste(토큰 낭비)를 만드는 일을 줄이는 것이다.
 
 기본 기록 위치(default record location, 기본 기록 위치)는 `docs/agent_control/grok_reviews/`다. 다만 사용자가 이번 작업처럼 patch work material(패치 작업물)을 프로젝트 폴더에 남기지 말라고 명시하면, 새 Grok 패킷(packet, 묶음)을 만들지 않고 기존 산출물(existing artifacts, 기존 산출물), 대화 기록(conversation record, 대화 기록), 또는 프로젝트 밖 임시 경로(temp path, 임시 경로)만 쓴다. 효과(effect, 효과)는 운영 규칙을 지키면서도 사용자가 금지한 임시 산출물을 남기지 않는 것이다.
 
@@ -68,6 +82,8 @@ scope(범위)는 숫자 추정 `NN-4..NN`이 아니라 실제 closeout receipt(�
 이 retrospective(중간 검토)는 per-stage Grok review(단계별 Grok 검토)의 반복이 아니라 cross-stage synthesis(단계 간 종합)다. 필수 row(행)는 `stage_id`, hypothesis(가설), proxy KPI(프록시 핵심 성과 지표), MT5 runtime probe KPI(MT5 런타임 탐침 핵심 성과 지표), gap cause(간극 원인), closeout label(마감 라벨), preserved clue(보존 단서), negative memory(부정 기억), systemic_repeat(시스템성 반복), next action(다음 행동)을 담는다.
 
 다음 frontier stage open(다음 전선 단계 개방)은 five-stage retrospective required gates(5단계 중간 검토 필수 게이트)가 통과하거나 명시적으로 `not_due(아직 아님)`로 판정될 때까지 열지 않는다. 효과(effect, 효과)는 5단계마다 같은 실패 패턴과 수리 반복을 Grok(그록)과 토론하고, 다음 방향을 바꾸되 completion(완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), Goal Achieve(목표 달성)를 만들지 않게 하는 것이다.
+
+Due check(도래 점검)는 register-first(등록부 우선)로 한다. 먼저 `docs/registers/five_stage_retrospective_register.yaml`와 closing frontier number(마감 전선 번호)만 확인하고, `not_due(아직 아님)`이면 synthesis template(종합 템플릿)이나 이전 5개 stage artifacts(단계 산출물)를 열지 않는다. due(도래)일 때만 최근 5개 closeout receipt(마감 영수증)를 읽고 Grok retrospective packet(그록 중간 검토 묶음)을 만든다. 효과(effect, 효과)는 중간 검토 루틴을 유지하면서 선행 준비 낭비를 막는 것이다.
 
 ## 가장 중요한 원칙(Non-Negotiable Principle, 양보 불가 원칙)
 

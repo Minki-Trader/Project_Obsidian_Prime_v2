@@ -69,6 +69,27 @@ class SkillReceiptSchemaLintTests(unittest.TestCase):
         self.assertEqual(result.status, "blocked")
         self.assertIn("skill_receipt_schema::unknown-skill::path_missing", {finding.check_id for finding in result.findings})
 
+    def test_small_grok_review_accepts_compact_receipt_fields(self) -> None:
+        result = audit_skill_receipt_schemas(
+            [
+                {
+                    "packet_id": "unit",
+                    "skill": "obsidian-grok-collaboration",
+                    "status": "executed",
+                    "review_size": "small",
+                    "trigger_reason": "user requested Grok",
+                    "bounded_evidence": ["one narrow snapshot"],
+                    "advice_classification": {"accepted": ["compact"]},
+                    "claim_boundary": "no authority claims",
+                    "final_codex_direction": "continue locally",
+                }
+            ],
+            schema_path=Path("docs/agent_control/skill_receipt_schema.yaml"),
+            root=Path(__file__).resolve().parents[1],
+        )
+
+        self.assertEqual(result.status, "pass", [finding.to_dict() for finding in result.findings])
+
     def test_forbidden_claim_conflict_blocks(self) -> None:
         result = audit_skill_receipt_schemas(
             [

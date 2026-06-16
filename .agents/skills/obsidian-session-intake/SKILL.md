@@ -40,11 +40,26 @@ This is an intake skill, not a single-mode classifier. Most Obsidian work is a m
 - `docs/policies/exploration_mandate.md`, `docs/registers/idea_registry.md`, and `docs/registers/negative_result_register.md` when the requested turn is exploration-sensitive
 - `docs/policies/kpi_measurement_standard.md`, `docs/policies/run_result_management.md`, `docs/policies/result_judgment_policy.md`, and `docs/registers/run_registry.csv` when the requested turn is run-evidence-sensitive
 
+## Delta Reentry Mode
+
+For a warm thread(따뜻한 스레드) with stable active stage(활성 단계), use `reentry_mode: delta(재진입 모드: 변화분)` unless a mismatch appears.
+
+Delta checklist(변화분 점검표):
+
+- active stage/current run(활성 단계/현재 실행)
+- branch/worktree fit(브랜치/작업트리 적합성)
+- user intent change(사용자 의도 변화)
+- blocker or gate status change(차단 또는 게이트 상태 변화)
+- touched surface(수정 표면): policy/skill, code, MT5/runtime, run evidence, publish
+
+Escalate to `reentry_mode: cold(재진입 모드: 냉시작)` when any checklist item conflicts, a durable decision is unclear, or the user asks for broad state reconstruction. Effect(효과): stable follow-up work(안정된 후속 작업)가 22-doc full pass(22문서 전체 통과)로 커지지 않는다.
+
 ## Must Output
 
 For low-risk `information_only` turns(낮은 위험 정보 작업), output(출력)은 compact(압축)할 수 있다. For code/experiment/MT5/policy/publish/ambiguous work(코드/실험/MT5/정책/발행/애매한 작업), expand the fields below.
 
 - `intake_context`
+- `reentry_mode`: `delta` or `cold`
 - `current_truth_reference`
 - `branch_worktree_fit`
 - `branch_action`

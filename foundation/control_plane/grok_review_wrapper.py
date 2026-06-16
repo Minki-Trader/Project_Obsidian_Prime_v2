@@ -74,6 +74,24 @@ class GrokReviewResult:
             "packet_paths": dict(self.packet_paths),
         }
 
+    def to_summary_dict(self) -> dict[str, Any]:
+        payload: dict[str, Any] = {
+            "review_size": self.review_size,
+            "prompt_hash": self.prompt_hash,
+            "command": list(_redact_prompt_payload(self.command)),
+            "returncode": self.returncode,
+            "timed_out": self.timed_out,
+            "success": self.success,
+            "duration_seconds": self.duration_seconds,
+            "stripped_noise_line_count": len(self.stripped_noise_lines),
+            "preflight_warnings": list(self.preflight_warnings),
+            "unexpected_top_level_artifacts": list(self.unexpected_top_level_artifacts),
+            "packet_paths": dict(self.packet_paths),
+        }
+        if not self.packet_paths:
+            payload["clean_stdout"] = self.clean_stdout
+        return payload
+
 
 def prompt_hash(prompt: str) -> str:
     return hashlib.sha256(prompt.encode("utf-8")).hexdigest()
@@ -99,7 +117,7 @@ def run_grok_review(
     cwd_path = Path(cwd) if cwd is not None else None
     repo_root_path = Path(repo_root) if repo_root is not None else None
     before_top_level = _top_level_snapshot(repo_root_path)
-    command_args = [*snapshot_only_args(), *list(extra_args)]
+    command_args = [*list(extra_args), *snapshot_only_args()]
     if prompt_file_path is not None:
         command = tuple([str(executable), *command_args, "--prompt-file", str(prompt_file_path)])
     else:
@@ -164,6 +182,20 @@ def strip_known_noise(text: str) -> tuple[str, list[str]]:
             continue
         clean_lines.append(line)
     return "\n".join(clean_lines).strip(), stripped
+
+
+def _redact_prompt_payload(command: Sequence[str]) -> tuple[str, ...]:
+    redacted: list[str] = []
+    skip_next = False
+    for arg in command:
+        if skip_next:
+            redacted.append("<prompt-redacted>")
+            skip_next = False
+            continue
+        redacted.append(arg)
+        if arg in {"-p", "--prompt"}:
+            skip_next = True
+    return tuple(redacted)
 
 
 def snapshot_only_args() -> tuple[str, ...]:
@@ -277,6 +309,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--repo-root")
     parser.add_argument("--extra-arg", action="append", default=[])
     parser.add_argument("--json", action="store_true")
+    parser.add_argument("--full-json", action="store_true")
     return parser.parse_args(argv)
 
 
@@ -299,8 +332,10 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps({"status": "error", "error": str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 2
 
-    if args.json:
+    if args.full_json:
         print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
+    elif args.json:
+        print(json.dumps(result.to_summary_dict(), ensure_ascii=False, indent=2))
     else:
         print(result.clean_stdout)
         if result.preflight_warnings:

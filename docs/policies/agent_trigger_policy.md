@@ -30,6 +30,20 @@
 
 이 규칙의 효과는 스킬을 줄이는 것이 아니라, 필요한 스킬이 조언 문서로 흐르지 않고 실행 계약으로 작동하게 만드는 것이다.
 
+## 작은 작업 경계(Small-Work Boundary, 작은 작업 경계)
+
+`trivial or information_only packet(사소 또는 정보 전용 작업 묶음)`은 파일 수정(file mutation, 파일 수정), 실행(run, 실행), publish/push(게시/원격 반영), stage closeout(단계 마감), MT5/runtime/model work(MT5/런타임/모델 작업), 상태 동기화(state sync, 상태 동기화), 또는 `completed/reviewed/verified(완료/검토/검증)` claim(주장)을 만들지 않는 좁은 상태 확인, 경로/해시/등록부 재확인, 읽기 전용 검토다.
+
+작은 작업의 기본 라우팅(default routing, 기본 라우팅):
+
+- `reentry_mode(재진입 모드)`: warm thread(따뜻한 스레드)에서는 delta check(변화분 점검)
+- `support_skills(보조 스킬)`: 기본 0개, 사용자 보고나 주장 경계가 필요하면 최대 1개
+- `skills_to_read(읽을 스킬)`: primary skill(주 스킬) 먼저, support skill(보조 스킬)은 한 줄 사유가 있을 때만
+- `receipt(영수증)`: compact receipt(압축 영수증)
+- `required_gates(필수 게이트)`: 실행하지 않는 gate(게이트)는 `not_applicable_with_reason(사유 있는 해당 없음)`로 남긴다.
+
+작은 작업이 파일 수정, 정책/스킬 변경, MT5 실행, 모델 산출물, stage closeout(단계 마감), publish/push(게시/원격 반영), 또는 강한 완료/검증 주장을 만들면 즉시 non-trivial work packet(비사소 작업 묶음)으로 승격한다. 효과(effect, 효과)는 작은 질문에 전체 gate stack(게이트 묶음)이 붙는 것을 막되, 중요한 작업의 증거 요구는 유지하는 것이다.
+
 ## Grok 협업 트리거(Grok Collaboration Trigger, 그록 협업 트리거)
 
 `obsidian-grok-collaboration(그록 협업)`은 새 work family(작업군)가 아니라 trigger overlay(트리거 오버레이, 추가 조건)다. 사용자가 명시했거나 `/goal(목표)`에 들어 있을 때 현재 primary_family(주 작업군)에 Grok receipt(그록 영수증)와 external_review_packet(외부 검토 묶음) gate(게이트)를 덧붙인다.
@@ -57,7 +71,11 @@
 - medium review(중간 검토): bounded snapshot(제한 스냅샷) 하나와 focused question(집중 질문) 하나.
 - large review(대규모 검토): architecture/evidence/runtime/policy(구조/근거/런타임/정책)처럼 여러 narrow pass(좁은 회차)로 나누고, 마지막 판단은 Codex synthesis(Codex 종합)로만 닫는다.
 
+small review(소규모 검토) receipt(영수증)는 compact receipt(압축 영수증)를 쓴다. Minimum fields(최소 필드)는 `trigger_reason(트리거 이유)`, `bounded_evidence(제한 근거)`, `advice_classification(조언 분류)`, `claim_boundary(주장 경계)`, `final_codex_direction(최종 Codex 방향)`이다. Medium/large review(중간/대규모 검토)만 full receipt(전체 영수증), full prompt/output identity(전체 프롬프트/출력 정체성), detailed local verification block(상세 로컬 검증 블록)을 기본값으로 쓴다.
+
 가능하면 `foundation/control_plane/grok_review_wrapper.py` wrapper(래퍼)를 쓴다. wrapper(래퍼)는 prompt quoting(프롬프트 인용), timeout(시간 제한), stdout/stderr capture(표준 출력/오류 캡처), deterministic noise stripping(결정적 잡음 제거), unexpected top-level artifact detection(예상 밖 최상위 산출물 감지)을 담당한다. wrapper(래퍼)는 Grok content(Grok 내용)를 해석하거나 수용/거절하지 않는다.
+
+wrapper(래퍼)를 `--output-dir`와 함께 쓸 때 `--json(JSON 출력)`은 summary JSON(요약 JSON)만 사용자/에이전트 출력으로 읽는다. raw diagnostics(원본 진단)는 `raw_diagnostics.json`에 보존하고, failure(실패), timeout(시간초과), transport issue(전송 문제), 또는 audit(감사) 필요가 있을 때만 연다. 효과(effect, 효과)는 기록 보존과 token discipline(토큰 규율)을 동시에 유지하는 것이다.
 
 효과(effect, 효과)는 외부 2차 의견을 쓰되, 연구 방향이 산으로 가거나 stage drift(단계 드리프트)가 생기지 않게 하고, 대규모 검토에서도 같은 capture/verify/classify(캡처/검증/분류) 흐름을 유지하는 것이다.
 
@@ -73,6 +91,8 @@ Due check(도래 점검)는 stage closeout(단계 마감) 때 실행한다.
 - due(도래)이면 최근 5개 canonical closeout stage ids(정식 마감 단계 ID)를 scope(범위)로 묶고, Grok review(그록 검토), Codex local verification(코덱스 로컬 검증), advice classification(조언 분류), compact retrospective report(압축 중간 검토 보고)를 남기기 전에는 다음 frontier stage(전선 단계)를 열지 않는다.
 
 이 검토는 per-stage Grok receipt(단계별 그록 영수증)를 다시 읽는 repetition(반복)이 아니다. Cross-stage synthesis(단계 간 종합)만 허용하며, allowed claims(허용 주장)는 direction_delta(방향 변화)와 repair_priority_delta(수리 우선순위 변화)뿐이다.
+
+Due check(도래 점검)는 register-first(등록부 우선)다. `not_due(아직 아님)`이면 이전 5개 stage artifacts(단계 산출물), Grok packets(그록 묶음), synthesis template(종합 템플릿)을 열지 않고 gate status(게이트 상태)만 기록한다. 효과(effect, 효과)는 5단계 루틴을 유지하면서 아직 도래하지 않은 회고 준비가 작업을 길게 늘리지 않게 하는 것이다.
 
 ## 라우팅 소스
 
@@ -113,6 +133,7 @@ Due check(도래 점검)는 stage closeout(단계 마감) 때 실행한다.
 Support skill은 작업을 보조한다. 작업을 다시 분류하지 않는다.
 
 - 기본 support 한도는 `work_family_registry.yaml`의 `support_skill_limit_default`를 따른다.
+- `trivial or information_only packet(사소 또는 정보 전용 작업 묶음)`은 support skill(보조 스킬) 기본값이 0개이며, 붙이면 `skills_to_read(읽을 스킬)`와 한 줄 justification(사유)을 남긴다.
 - runtime이나 experiment처럼 진짜 복합 작업일 때만 family별 `support_skill_limit`을 쓴다.
 - support로 선택한 스킬도 `required_skills`에 들어가야 하며, 완료 전에 receipt가 있어야 한다.
 - 순수 내부 리팩터처럼 외부 API나 MT5 동작이 바뀌지 않는 경우 `obsidian-reference-scout`는 `not_required` 사유를 남길 수 있다.

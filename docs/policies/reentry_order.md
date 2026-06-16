@@ -6,6 +6,12 @@
 
 ## 읽는 순서(Read Order, 읽는 순서)
 
+이 목록은 cold re-entry(냉시작 재진입), state mismatch(상태 불일치), stage transition(단계 전환), 또는 high-risk packet(고위험 작업 묶음)의 canonical full pass(정식 전체 통과)다.
+
+Warm thread(따뜻한 스레드)에서 active stage(활성 단계), current run(현재 실행), branch/worktree(브랜치/작업트리), user intent(사용자 의도), blocker(차단 지점)가 바뀌지 않았으면 delta reentry(변화분 재진입)를 우선한다. Delta checklist(변화분 점검표)는 `workspace_state.yaml`, `current_working_state.md`, active selection_status(활성 선택 상태), git status(깃 상태), 그리고 이번 요청의 scope(범위)만 확인한다.
+
+효과(effect, 효과)는 안정된 thread(스레드)에서 22개 문서를 매번 다시 읽지 않고도 current truth(현재 진실)를 지키게 하는 것이다. 불일치가 보이면 즉시 full pass(전체 통과)로 승격한다.
+
 1. `AGENTS.md`
 2. `docs/workspace/workspace_state.yaml`
 3. `docs/context/current_working_state.md`

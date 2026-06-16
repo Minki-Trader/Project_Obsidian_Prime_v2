@@ -1,0 +1,141 @@
+{
+  "receipts": [
+    {
+      "packet_id": "agent_skill_token_waste_minimal_mode_v1",
+      "skill": "obsidian-work-packet-router",
+      "status": "executed",
+      "primary_family": "policy_skill_governance",
+      "primary_skill": "obsidian-work-packet-router",
+      "support_skills": [
+        "obsidian-architecture-guard",
+        "obsidian-grok-collaboration",
+        "obsidian-claim-discipline"
+      ],
+      "required_gates": [
+        "agent_control_contracts",
+        "ops_instruction_audit",
+        "work_packet_schema_lint",
+        "skill_receipt_schema_lint"
+      ],
+      "skills_not_used": {
+        "obsidian-runtime-parity": "not_required_no_MT5_runtime_or_handoff_change",
+        "obsidian-run-evidence-system": "not_required_no_trading_run_or_KPI_ledger_mutation",
+        "obsidian-reference-scout": "not_required_no_external_version_sensitive_reference",
+        "obsidian-code-surface-guard": "not_required_no_reusable_feature_model_or_MT5_logic_surface"
+      },
+      "routing_reason": "The request mutates AGENTS.md, repo-scoped skills, policy routing, and a Grok wrapper helper, so policy_skill_governance is the primary family; publish is a phase, not the primary family."
+    },
+    {
+      "packet_id": "agent_skill_token_waste_minimal_mode_v1",
+      "skill": "obsidian-architecture-guard",
+      "status": "executed",
+      "touched_surfaces": [
+        "AGENTS.md",
+        "docs/policies/agent_trigger_policy.md",
+        "docs/policies/reentry_order.md",
+        "docs/agent_control/work_family_registry.yaml",
+        ".agents/skills/obsidian-session-intake/SKILL.md",
+        ".agents/skills/obsidian-work-packet-router/SKILL.md",
+        ".agents/skills/obsidian-grok-collaboration/SKILL.md",
+        "docs/agent_control/skill_receipt_schema.yaml",
+        "foundation/control_plane/skill_receipt_schema_lint.py",
+        "foundation/control_plane/grok_review_wrapper.py",
+        "tests/test_grok_review_wrapper.py",
+        "tests/test_skill_receipt_schema_lint.py"
+      ],
+      "invariant_checks": [
+        "No feature/model/MT5 owner boundary changed.",
+        "Repo-relative durable paths used in docs and packet records.",
+        "Korean Markdown encoding validation required after edits.",
+        "Small-work mode explicitly does not relax MT5/runtime/evidence/claim gates."
+      ],
+      "placement_boundary": "Policy/skill guidance stayed in docs and .agents/skills; wrapper output hygiene stayed in foundation/control_plane with tests.",
+      "architecture_debt_effect": "Reduces AD-007 skill routing over-application risk and AD-004 Korean encoding risk by adding explicit small-work and validation guidance.",
+      "allowed_claims": [
+        "governance_update_applied_after_validation"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "promotion",
+        "runtime_authority",
+        "live_readiness",
+        "Goal_Achieve"
+      ]
+    },
+    {
+      "packet_id": "agent_skill_token_waste_minimal_mode_v1",
+      "skill": "obsidian-grok-collaboration",
+      "status": "executed",
+      "trigger_reason": "Prior user request explicitly asked for Grok collaboration on AGENTS.md and skills token/work waste; this packet applies the accepted advice.",
+      "review_size": "medium",
+      "direction_before_grok": "Preserve trading safeguards while finding over-application risk in reentry, routing receipts, gates, Grok packets, and five-stage checks.",
+      "bounded_evidence": [
+        "AGENTS.md routing/Grok sections",
+        "repo-scoped skill size and trigger snapshot",
+        "agent_trigger_policy.md",
+        "work_family_registry.yaml",
+        "reentry_order.md"
+      ],
+      "prompt_identity": {
+        "path": "docs/agent_control/grok_reviews/2026-06-16_agent_skill_token_waste_review/prompt.md",
+        "sha256": "A52558431D1F2111433A9BB9FE6FCDE9113D72594A07905E0C8ABC115A508968"
+      },
+      "grok_output_identity": {
+        "path": "docs/agent_control/grok_reviews/2026-06-16_agent_skill_token_waste_review/clean_output.md",
+        "sha256": "2B5F4BF4F64CF200BACC8F960A0A517B5A03D5977E5CE0E3393C903FE94B8D57"
+      },
+      "advice_classification": {
+        "accepted": [
+          "trivial_vs_non_trivial_boundary",
+          "delta_reentry_default",
+          "small_review_compact_grok_receipt",
+          "five_stage_register_first_not_due",
+          "router_lite_skills_to_read_cap"
+        ],
+        "rejected": [
+          "remove_MT5_runtime_probe",
+          "remove_final_claim_guard",
+          "remove_user_required_Grok",
+          "remove_five_stage_retrospective",
+          "remove_Korean_pairing"
+        ],
+        "needs_local_verification": [
+          "policy_gate_NA_behavior",
+          "duplication_amount",
+          "wrapper_output_hygiene"
+        ]
+      },
+      "local_verification": [
+        "required_gate_coverage supports not_applicable_with_reason",
+        "wrapper output hygiene added with unit test",
+        "no trading authority claim added"
+      ],
+      "forbidden_claim_check": "pass_no_completion_baseline_promotion_runtime_authority_live_readiness_or_goal_achieve",
+      "final_codex_direction": "Apply small-work minimal mode and wrapper output hygiene while preserving all trading validation safeguards."
+    },
+    {
+      "packet_id": "agent_skill_token_waste_minimal_mode_v1",
+      "skill": "obsidian-claim-discipline",
+      "status": "executed",
+      "requested_claims": [
+        "agent_policy_update_applied",
+        "governance_validation_passed",
+        "pushed_to_main_if_git_push_succeeds"
+      ],
+      "allowed_claims": [
+        "agent_policy_update_applied",
+        "governance_validation_passed"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "promotion",
+        "runtime_authority",
+        "live_readiness",
+        "Goal_Achieve"
+      ],
+      "final_status": "Policy/skill governance update only; no trading result or runtime authority claim."
+    }
+  ]
+}

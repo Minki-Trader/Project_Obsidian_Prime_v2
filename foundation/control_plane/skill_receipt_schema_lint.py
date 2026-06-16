@@ -37,7 +37,7 @@ def audit_skill_receipt_schemas(
                     details={"receipt_path": receipt_path},
                 )
             )
-        required = _required_fields_for_skill(schemas, skill)
+        required = _required_fields_for_skill(schemas, skill, receipt)
         if receipt_status == "executed":
             missing = [field for field in required if _is_missing(receipt.get(field))]
             if missing:
@@ -86,14 +86,30 @@ def _load_schema(path: Path) -> Mapping[str, Any]:
     return payload if isinstance(payload, Mapping) else {}
 
 
-def _required_fields_for_skill(schemas: Mapping[str, Any], skill: str) -> tuple[str, ...]:
+def _required_fields_for_skill(schemas: Mapping[str, Any], skill: str, receipt: Mapping[str, Any]) -> tuple[str, ...]:
     payload = schemas.get(skill, {})
     if not isinstance(payload, Mapping):
         payload = schemas.get("default", {})
     if not isinstance(payload, Mapping):
         return ("packet_id", "skill", "status")
+    compact_fields = payload.get("compact_required_fields")
+    if _uses_compact_receipt(payload, receipt) and isinstance(compact_fields, Sequence) and not isinstance(compact_fields, (str, bytes)):
+        return tuple(str(field) for field in compact_fields)
     fields = payload.get("required_fields", ("packet_id", "skill", "status"))
     return tuple(str(field) for field in fields)
+
+
+def _uses_compact_receipt(schema_payload: Mapping[str, Any], receipt: Mapping[str, Any]) -> bool:
+    if str(receipt.get("receipt_mode", "")).strip().lower() == "compact":
+        return True
+    compact_when = schema_payload.get("compact_when")
+    if not isinstance(compact_when, Mapping):
+        return False
+    for key, expected in compact_when.items():
+        actual = receipt.get(str(key))
+        if str(actual).strip().lower() != str(expected).strip().lower():
+            return False
+    return bool(compact_when)
 
 
 def _is_missing(value: Any) -> bool:

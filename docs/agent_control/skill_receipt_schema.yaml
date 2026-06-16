@@ -44,6 +44,17 @@ schemas:
       - local_verification
       - forbidden_claim_check
       - final_codex_direction
+    compact_when:
+      review_size: small
+    compact_required_fields:
+      - packet_id
+      - skill
+      - status
+      - trigger_reason
+      - bounded_evidence
+      - advice_classification
+      - claim_boundary
+      - final_codex_direction
   obsidian-workflow-drift-guard:
     required_fields:
       - packet_id

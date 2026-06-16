@@ -79,6 +79,27 @@ class GrokReviewWrapperTests(unittest.TestCase):
             self.assertTrue((output_dir / "metadata.json").exists())
             self.assertIn("clean_output", result.packet_paths)
 
+    def test_summary_dict_omits_raw_channels_and_redacts_prompt_when_packet_paths_exist(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            fake = Path(temp_dir) / "fake_grok.py"
+            output_dir = Path(temp_dir) / "packet"
+            fake.write_text("print('ok')\n", encoding="utf-8")
+
+            result = run_grok_review(
+                "prompt with details",
+                executable=sys.executable,
+                extra_args=(str(fake),),
+                output_dir=output_dir,
+            )
+
+        summary = result.to_summary_dict()
+
+        self.assertNotIn("raw_stdout", summary)
+        self.assertNotIn("raw_stderr", summary)
+        self.assertNotIn("clean_stdout", summary)
+        self.assertIn("<prompt-redacted>", summary["command"])
+        self.assertNotIn("prompt with details", " ".join(summary["command"]))
+
     def test_top_level_artifact_detection_flags_mcps(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
