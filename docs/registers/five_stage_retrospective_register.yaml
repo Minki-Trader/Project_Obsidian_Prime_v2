@@ -1,4 +1,4 @@
-version: five_stage_retrospective_register_v1
+﻿version: five_stage_retrospective_register_v1
 source_of_truth: docs/registers/five_stage_retrospective_register.yaml
 purpose: "Track five-stage Grok retrospective(5단계 Grok 중간 검토) cadence without relying on Codex memory(코덱스 기억)."
 adopted_at_utc: '2026-06-16T12:05:00Z'
@@ -38,6 +38,7 @@ claim_boundary:
     - runtime_authority
     - live_readiness
     - goal_achieve
+
 state:
   last_completed_packet_id: null
   last_completed_at_frontier: null
@@ -45,7 +46,8 @@ state:
   last_completed_at_utc: null
   closed_frontier_ids_since_last_retrospective:
     - stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64
-  closeouts_since_last: 1
+    - stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk
+  closeouts_since_last: 2
   next_numeric_trigger_frontier: 70
   current_due_status: not_due
-  note: "F66 closeout(마감)은 1/5로 계산했다. Next expected numeric trigger(다음 숫자 트리거)는 F70 closeout(마감)이다."
+  note: "F66 and F67 closeouts(마감)은 2/5로 계산했다. Next expected numeric trigger(다음 숫자 트리거)는 F70 closeout(마감)이다."

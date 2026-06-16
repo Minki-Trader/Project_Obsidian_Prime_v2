@@ -145,12 +145,12 @@ Negative results are preserved because they prevent repeated dead ends.
 - do_not_repeat(반복 금지): 같은 Stage304 표면에서 lot(랏), ATR(평균진폭), density(밀도)만 미세 조정하지 않는다.
 - reopen_condition(재개 조건): runtime-realized trade attribution(런타임 실제 거래 기여도)으로 새 수익 원천을 만들 때만 재사용한다.
 
-## run305C_review_runtime_realized_curve_attribution_mt5_probe_v1 Stage306 curve-pocket-aware failure memory(304?④퀎 怨≪꽑 ?ъ폆 ?몄떇 ?ㅽ뙣 湲곗뼲)
+## run305C_review_runtime_realized_curve_attribution_mt5_probe_v1 Stage305 runtime-realized curve-attribution failure memory(305단계 런타임 실제 곡선 기여도 실패 기억)
 
-- failed_profiles(?ㅽ뙣 ?꾨줈??: `6`
-- failure_boundary(?ㅽ뙣 寃쎄퀎): ?ㅼ젣 MT5(硫뷀??몃젅?대뜑5) routed total(?쇱슦???꾩껜)?먯꽌 ?섏씡 洹쒕え, ?⑥쑉, 諛?? 怨≪꽑 ?ъ폆???숈떆??留뚯”?섏? 紐삵븳 遺꾧린.
-- do_not_repeat(諛섎났 湲덉?): 媛숈? Stage306 ?쒕㈃?먯꽌 lot(??, ATR(?됯퇏吏꾪룺), density(諛??留?誘몄꽭 議곗젙?섏? ?딅뒗??
-- reopen_condition(?ш컻 議곌굔): runtime-realized trade attribution(?고????ㅼ젣 嫄곕옒 湲곗뿬???쇰줈 ???섏씡 ?먯쿇??留뚮뱾 ?뚮쭔 ?ъ궗?⑺븳??
+- failed_profiles(실패 프로필): `6`
+- failure_boundary(실패 경계): 실제 MT5(메타트레이더5) routed total(라우팅 전체)에서 수익 규모, 효율, 밀도, 곡선 포켓을 동시에 만족하지 못한 분기다.
+- do_not_repeat(반복 금지): 같은 Stage305 표면에서 lot(랏), ATR(평균진폭), density(밀도)만 미세 조정하지 않는다.
+- reopen_condition(재개 조건): runtime-realized trade attribution(런타임 실제 거래 기여도)이 새 수익 원천을 만들 때만 재사용한다.
 
 ## run306C_review_anti_surface_trade_shape_mt5_probe_v1 Stage306 anti-surface trade-shape failure memory(306단계 반표면 거래 형태 실패 기억)
 
@@ -1264,3 +1264,14 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Do-not-repeat(반복 금지): Do not treat loss-cluster hazard admit/block(손실 군집 위험 허용/차단) plus simple symmetric direction entry(단순 대칭 방향 진입) as an independent PF source(독립 수익 팩터 원천) from proxy metrics(프록시 지표), ONNX parity(온엑스 동등성), or local handoff repair(로컬 인계 수리) alone. Require a narrow MT5 runtime probe(좁은 MT5 런타임 탐침) with explicit PF/DD gates(명시 수익 팩터/손실폭 게이트) before further work on the same surface(같은 표면). Do not stack more handoff/lifecycle adapter mutations(인계/생명주기 어댑터 변형) unless the next stage(다음 단계) introduces a new PF mechanism(새 수익 팩터 메커니즘), not another parity patch(동등성 패치).
 - Evidence(근거): `stages/stage_frontier_64__independent_pf_source_after_inverse_signal_memory/03_reviews/stage_closeout_report.md` and `stages/stage_frontier_64__independent_pf_source_after_inverse_signal_memory/03_reviews/proxy_runtime_gap_report.md`.
 - Boundary(경계): no authority(권위 없음), no completion(완성 없음).
+
+<!-- NR-FR67-COUNT-PARITY-NOT-ECONOMICS -->
+
+## NR-FR67-COUNT-PARITY-NOT-ECONOMICS
+
+- Stage(단계): `stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk`
+- Negative memory(부정 기억): `negative_memory_count_feature_parity_not_runtime_economics_source(개수/피처 동등성은 런타임 경제성 원천이 아님)`
+- Evidence(근거): F67D MT5 Runtime Probe(F67D MT5 런타임 탐침) PF/DD/trades/day(수익 팩터/손실폭/일 거래 수) `1.0/30.58/1.3282`, signal/feature diff(신호/피처 차이) `0/0`.
+- Do-not-repeat(반복 금지): Do not spend another frontier stage(다음 전선 단계)를 parity-only repair(동등성 단독 수리)에 쓰지 않는다.
+- Reopen condition(재개 조건): new lifecycle economics mechanism(새 생명주기 경제성 메커니즘) and mandatory MT5 Runtime Probe(필수 MT5 런타임 탐침)를 함께 제시할 때만 재개한다.
+- Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).

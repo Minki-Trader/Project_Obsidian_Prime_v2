@@ -1998,3 +1998,25 @@ Register ideas when they become durable work, not for every passing thought.
 - Evidence(근거): `stages/stage_frontier_65__runtime_semantics_pf_source_after_hazard_gate_failure/03_reviews/stage_closeout_report.md` and `stages/stage_frontier_65__runtime_semantics_pf_source_after_hazard_gate_failure/03_reviews/runtime_probe_unit_adjusted_report.md`.
 - Next(다음): `stage_frontier_66__runtime_unit_aligned_exit_economics_pf_source_after_semantics_gap` / `frontier66A_stage_open_runtime_unit_aligned_exit_economics_pf_source_v1`
 - Boundary(경계): runtime_probe_observation(런타임 탐침 관찰) and preserved clue(보존 단서) only; no authority(권위 없음).
+
+<!-- IDEA-FR67-COUNT-PARITY-RUNTIME-ECONOMICS-CROSSWALK -->
+
+## IDEA-FR67-COUNT-PARITY-RUNTIME-ECONOMICS-CROSSWALK
+
+- Stage(단계): `stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk`
+- Idea(아이디어): exact count/feature parity(정확한 개수/피처 동등성)가 proxy/runtime economics gap(프록시/런타임 경제성 간극)을 설명하는지 확인한다.
+- Result(결과): `preserved_clue_negative_memory_no_authority(보존 단서 + 부정 기억, 권위 없음)`
+- Evidence(근거): `stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/03_reviews/stage_closeout_report.md`
+- Next(다음): `frontier68A_stage_open_lifecycle_economics_proxy_design_v1`
+- Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+
+<!-- IDEA-FR68-RUNTIME-LIFECYCLE-ECONOMICS-PROXY-ONNX-SCOUT -->
+
+## IDEA-FR68-RUNTIME-LIFECYCLE-ECONOMICS-PROXY-ONNX-SCOUT
+
+- Stage(단계): `stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout`
+- Idea(아이디어): lifecycle/cost/DD-aware proxy(생명주기/비용/손실폭 인식 프록시)를 통해 ONNX scoring vehicle(ONNX 점수화 수단)의 MT5 runtime materialization(런타임 물질화)을 더 가깝게 만든다.
+- Result(결과): `opened_planning_no_authority(계획 개방, 권위 없음)`
+- Evidence(근거): `stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/00_spec/stage_brief.md`
+- Next(다음): `frontier68A_stage_open_lifecycle_economics_proxy_design_v1` bridge feasibility checklist and label design(연결 가능성 체크리스트와 라벨 설계).
+- Boundary(경계): scout/planning only(탐색/계획 전용), no authority(권위 없음).

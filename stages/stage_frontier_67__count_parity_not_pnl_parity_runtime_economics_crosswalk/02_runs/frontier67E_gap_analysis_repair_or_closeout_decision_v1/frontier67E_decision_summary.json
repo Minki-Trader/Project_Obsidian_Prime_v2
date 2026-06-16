@@ -1,0 +1,73 @@
+﻿{
+  "run_id": "frontier67E_gap_analysis_repair_or_closeout_decision_v1",
+  "stage_id": "stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk",
+  "created_at_utc": "2026-06-17T00:00:00Z",
+  "work_family": "kpi_evidence(KPI 근거)",
+  "primary_skill": "obsidian-run-evidence-system(실행 근거 시스템)",
+  "support_skills": [
+    "obsidian-result-judgment(결과 판정)",
+    "obsidian-performance-attribution(성과 귀속)",
+    "obsidian-artifact-lineage(산출물 계보)",
+    "obsidian-claim-discipline(주장 규율)",
+    "obsidian-grok-collaboration(그록 협업)"
+  ],
+  "status": "completed_decision_no_authority",
+  "decision": "close_f67_as_preserved_clue_negative_memory_no_authority",
+  "claim_boundary": "preserved_clue_and_negative_memory_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "hypothesis": "Count parity and feature readiness parity alone may explain proxy/runtime mismatch before economics are modeled.",
+  "decision_reason": "F67D preserved exact signal/feature parity but runtime DD, trade density, PF, and deal accounting stayed far from target; same-stage parity repair would repeat the wrong axis.",
+  "kpi": {
+    "test_period": "2025-10-01..2026-04-14",
+    "split_view": "F31_oos_runtime_probe",
+    "net_profit": 2.31,
+    "gross_profit": 721.66,
+    "gross_loss": -719.35,
+    "profit_factor": 1.0,
+    "max_drawdown_percent": 30.58,
+    "max_drawdown_amount": 212.16,
+    "trade_count": 259,
+    "trades_per_day": 1.3282,
+    "win_rate_percent": 36.29,
+    "average_win": 7.6772,
+    "average_loss": -4.3597,
+    "payoff_ratio": 1.761,
+    "expectancy": 0.01,
+    "recovery_factor": 0.01,
+    "long_trade_count": 259,
+    "short_trade_count": 0,
+    "signal_count_diff": 0,
+    "feature_ready_diff": 0,
+    "order_fill_count": 361,
+    "deal_count": 518,
+    "deal_minus_order_fill": 157,
+    "deal_swap_sum": -14.24,
+    "proxy_dd": 4.811684180485509,
+    "runtime_proxy_dd_delta_pp": 25.76831581951449
+  },
+  "grok_closeout_classification": "accepted_with_local_verification",
+  "grok_accepted": [
+    "closeout_direction",
+    "no_authority_boundary",
+    "next_frontier_runtime_lifecycle_economics_proxy"
+  ],
+  "grok_needs_local_verification": [
+    "artifact_lineage_hashes",
+    "register_state_sync",
+    "forbidden_claim_scrub",
+    "five_stage_retrospective_not_due"
+  ],
+  "local_verification": {
+    "f67c_rows_present": true,
+    "f67d_runtime_probe_present": true,
+    "five_stage_retrospective_due_status_after_f67": "not_due_2_of_5",
+    "forbidden_claims": "not_claimed"
+  },
+  "artifact_hashes_sha256": {
+    "f67d_kpi_record": "73e1db14428c8ea46bad245d0b547b63c0938d6dd1f1446d67fc9dc2b2062b06",
+    "f67c_rows": "03f7327f78f37c7a2379aeccb50ba0ecec4bd7c81a494583401396a73aadf7b3",
+    "grok_closeout_prompt": "c9f0ee3a57b8e29d1a917a85d63a5c1ff32f3c9d9c1cf3c2025b2a7d015fb75c",
+    "grok_closeout_output": "5fda38c3799d6ff3d07e3f0da6af840a50d03a05c979e0fd656b09bd93c2ba51"
+  },
+  "next_stage_id": "stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout",
+  "next_run_id": "frontier68A_stage_open_lifecycle_economics_proxy_design_v1"
+}
