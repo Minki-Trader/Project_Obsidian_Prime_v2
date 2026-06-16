@@ -11,5 +11,8 @@
 - `frontier67B_config_parity_depth_pilot_report.md`: config parity depth pilot report(설정 동등성 깊이 파일럿 보고서)
 - `frontier67B_config_parity_rows_review.csv`: config parity row table(설정 동등성 행 표)
 - `frontier67B_config_parity_summary_review.json`: config parity summary(설정 동등성 요약)
+- `frontier67C_runtime_native_order_intent_economics_report.md`: runtime-native order intent economics report(런타임 기반 주문 의도 경제성 보고서)
+- `frontier67C_runtime_native_order_intent_rows_review.csv`: runtime-native order intent row table(런타임 기반 주문 의도 행 표)
+- `frontier67C_runtime_native_order_intent_summary_review.json`: runtime-native order intent summary(런타임 기반 주문 의도 요약)
 
-Current status(현재 상태): `frontier67B_config_parity_observation_no_authority(F67B 설정 동등성 관찰, 권위 없음)`
+Current status(현재 상태): `frontier67C_runtime_native_order_intent_observation_no_authority(F67C 런타임 기반 주문 의도 경제성 관찰, 권위 없음)`

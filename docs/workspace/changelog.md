@@ -7228,3 +7228,12 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - grok(그록): `docs/agent_control/grok_reviews/2026-06-16_encoding_scope_long_path_validator_fix/receipt.md`에 accepted/rejected/needs_local_verification(수용/거절/로컬 검증 필요) 분류를 기록했다.
 - verification(검증): F67B report scoped encoding validation(F67B 보고서 범위 인코딩 검증)과 `tests/test_validate_agent_settings.py` 통과.
 - boundary(경계): encoding/path validator repair(인코딩/경로 검증기 수리)일 뿐 gate/threshold/MT5 requirement/claim boundary(게이트/임계값/MT5 요구/주장 경계)를 완화하지 않는다.
+
+<!-- frontier67C_runtime_native_order_intent_economics_v1 -->
+
+## 2026-06-16 Frontier67C Runtime Native Order Intent Economics(F67C 런타임 기반 주문 의도 경제성)
+
+- action(행동): F66 MT5 runtime probe(F66 MT5 런타임 탐침) `64`개를 report deal table(보고서 거래 표), runtime summary(런타임 요약), F67B config rows(F67B 설정 행)와 결합했다.
+- effect(효과): total signal/trade(총 신호/거래) `70032/24284`, overall trade/signal ratio(전체 거래/신호 비율) `0.3468`, swap nonzero rows(스왑 0 아님 행) `54/64`, deal minus order fill positive rows(거래 표 딜 수가 런타임 주문 체결 수보다 큰 행) `53/64`를 기록했다.
+- next(다음): F67D narrow MT5 Runtime Probe(F67D 좁은 MT5 런타임 탐침)에서 explicit cost identity(명시 비용 정체성)와 order intent receipt(주문 의도 영수증)를 새 실행으로 확인한다.
+- boundary(경계): runtime-native order intent observation(런타임 기반 주문 의도 관찰)이며 F67 closeout(마감) 전 MT5 Runtime Probe(MT5 런타임 탐침)는 still required(여전히 필수)다.
