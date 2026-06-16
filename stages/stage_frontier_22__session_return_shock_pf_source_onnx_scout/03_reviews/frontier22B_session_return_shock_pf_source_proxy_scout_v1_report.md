@@ -1,6 +1,6 @@
 ﻿# Frontier22B Session Return Shock PF Source Proxy Scout Report(전선22B 세션 수익률 충격 수익 팩터 원천 프록시 탐색 보고서)
 
-Updated(갱신): 2026-06-14T06:46:04Z
+Updated(갱신): 2026-06-16T04:58:22Z
 
 Status(상태): `shock_pf_source_scout_clue_proxy_no_runtime_no_authority`
 

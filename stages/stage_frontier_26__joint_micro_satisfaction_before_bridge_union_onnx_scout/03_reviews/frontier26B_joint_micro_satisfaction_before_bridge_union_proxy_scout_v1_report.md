@@ -1,6 +1,6 @@
 ﻿# Frontier26B Joint Micro Satisfaction Proxy Report(전선26B 미세 구간 합동 충족 프록시 보고서)
 
-Updated(갱신): 2026-06-14T09:48:09Z
+Updated(갱신): 2026-06-16T04:43:27Z
 
 Status(상태): `invalid_setup_joint_union_collapsed_no_authority`
 

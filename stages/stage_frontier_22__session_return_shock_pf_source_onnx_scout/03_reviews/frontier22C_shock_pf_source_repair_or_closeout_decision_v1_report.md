@@ -1,6 +1,6 @@
 ﻿# Frontier22C Shock PF Source Lifecycle Repair Scout Report(전선22C 충격 수익 팩터 원천 생명주기 수리 탐색 보고서)
 
-Updated(갱신): 2026-06-14T06:55:12Z
+Updated(갱신): 2026-06-16T04:58:35Z
 
 Status(상태): `shock_lifecycle_repair_scout_clue_proxy_no_authority`
 

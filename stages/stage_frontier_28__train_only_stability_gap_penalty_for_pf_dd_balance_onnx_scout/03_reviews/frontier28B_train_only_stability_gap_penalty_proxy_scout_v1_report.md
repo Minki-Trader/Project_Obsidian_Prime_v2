@@ -1,6 +1,6 @@
 ﻿# Frontier28B Train-Only Stability Gap Proxy Report(전선28B 학습 전용 안정성 격차 프록시 보고서)
 
-Updated(갱신): 2026-06-14T11:02:05Z
+Updated(갱신): 2026-06-16T04:48:04Z
 
 Status(상태): `stability_gap_scout_clue_proxy_no_authority`
 

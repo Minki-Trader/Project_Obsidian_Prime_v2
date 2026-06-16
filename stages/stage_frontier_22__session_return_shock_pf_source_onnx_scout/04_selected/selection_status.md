@@ -1,6 +1,6 @@
 ﻿# Frontier22 Selection Status(전선22 선택 상태)
 
-Updated(갱신): 2026-06-14T07:05:21Z
+Updated(갱신): 2026-06-16T04:58:35Z
 
 Selection(선택): no selected baseline/completion candidate/promotion/runtime authority(선택 기준선/완성 후보/승격/런타임 권위 없음).
 
@@ -9,6 +9,12 @@ Closeout(마감): `preserved_clue + negative_memory(보존 단서 + 부정 기�
 Preserved clue(보존 단서): `f22_shock_trend_hold2_low_dd_density_reference_only(전선22 충격+추세 hold2 낮은 손실폭/목표 빈도 참고 단서 전용)`
 
 Negative memory(부정 기억): `shock_anchored_cross_family_pf_source_did_not_create_seed_or_handoff(충격 고정 교차군 수익 팩터 원천은 씨앗/인계를 만들지 못함)`
+
+Latest repair refresh(최근 수리 새로고침): `frontier22C_shock_pf_source_repair_or_closeout_decision_v1`
+
+Best repair profile(최상 수리 프로필): `f22b_0263__hold2_atr0p8_tp1p6_cd0`
+
+Scout/seed/handoff rows(탐색/씨앗/인계 행): `1` / `0` / `0`
 
 Runtime probe blocker(런타임 탐침 차단 사유): `runtime_probe_ineligible_no_handoff_candidate_after_f22_capped_repair(전선22 상한 수리 뒤 인계 후보가 없어 런타임 탐침 부적격)`
 

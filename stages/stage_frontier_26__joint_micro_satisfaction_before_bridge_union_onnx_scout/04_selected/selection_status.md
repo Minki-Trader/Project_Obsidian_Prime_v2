@@ -1,6 +1,6 @@
 ﻿# Frontier26 Selection Status(전선26 선택 상태)
 
-Updated(갱신): 2026-06-14T09:58:52Z
+Updated(갱신): 2026-06-16T04:43:27Z
 
 Selection(선택): no selected baseline/completion/promotion/runtime authority(선택 기준선/완성/승격/런타임 권위 없음).
 
@@ -11,6 +11,14 @@ Status(상태): `closed_invalid_setup_joint_micro_gate_union_collapse_no_handoff
 Judgment(판정): `invalid_setup(무효 설정)`
 
 Invalid setup(무효 설정): `invalid_setup_joint_gate_left_three_passers_zero_valid_unions(무효 설정: 합동 게이트 통과 3개, 유효 합집합 0개)`
+
+Pre-closeout proxy receipt(마감 전 프록시 영수증): `frontier26B_joint_micro_satisfaction_before_bridge_union_proxy_scout_v1`
+
+Best joint union(최상 합동 합집합): ``
+
+Micro/pass/union attempt/valid rows(미세/통과/합집합 시도/유효 행): `80` / `3` / `4` / `0`
+
+Density/scout/seed/handoff rows(빈도/탐색/씨앗/인계 행): `0` / `0` / `0` / `0`
 
 Preserved clue(보존 단서): `f26_joint_micro_gate_survivor_triplet_reference_only(F26 합동 미세 게이트 생존 3개 참조 전용)`
 

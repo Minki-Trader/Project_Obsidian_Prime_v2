@@ -1,6 +1,6 @@
 ﻿# Frontier27 Selection Status(전선27 선택 상태)
 
-Updated(갱신): 2026-06-14T10:38:45Z
+Updated(갱신): 2026-06-16T04:45:15Z
 
 Selection(선택): no selected baseline/completion/promotion/runtime authority(선택 기준선/완성/승격/런타임 권위 없음).
 
@@ -9,6 +9,14 @@ Stage closeout(단계 마감): `frontier27D_stage_closeout_soft_joint_satisfacti
 Status(상태): `closed_preserved_clue_negative_memory_soft_penalty_scout_only_no_handoff`
 
 Judgment(판정): `preserved_clue_negative_memory(보존 단서+부정 기억)`
+
+Pre-closeout proxy receipt(마감 전 프록시 영수증): `frontier27B_soft_joint_satisfaction_penalty_bridge_union_proxy_scout_v1`
+
+Best soft union(최상 연성 합집합): `f27b_0181`
+
+Soft micro/construction/union rows(연성 미세/구성/합집합 행): `80` / `60` / `234`
+
+Density/scout/seed/handoff rows(빈도/탐색/씨앗/인계 행): `189` / `19` / `0` / `0`
 
 Preserved clue(보존 단서): `f27_soft_penalty_restored_union_surface_and_19_scout_rows_reference_only(F27 연성 페널티는 합집합 표면과 19개 탐색 행을 복원한 참조 전용 단서)`
 

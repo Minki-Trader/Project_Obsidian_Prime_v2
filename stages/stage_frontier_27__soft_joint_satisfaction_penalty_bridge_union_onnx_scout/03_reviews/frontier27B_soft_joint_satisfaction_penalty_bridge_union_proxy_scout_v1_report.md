@@ -1,6 +1,6 @@
 ﻿# Frontier27B Soft Joint Satisfaction Penalty Proxy Report(전선27B 연성 합동 충족 페널티 프록시 보고서)
 
-Updated(갱신): 2026-06-14T10:18:14Z
+Updated(갱신): 2026-06-16T04:45:15Z
 
 Status(상태): `soft_penalty_scout_clue_proxy_no_authority`
 

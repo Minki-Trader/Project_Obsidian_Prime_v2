@@ -1,6 +1,6 @@
 ﻿# Frontier28 Selection Status(전선28 선택 상태)
 
-Updated(갱신): 2026-06-14T11:18:50Z
+Updated(갱신): 2026-06-16T04:48:04Z
 
 Selection(선택): no selected baseline/completion/promotion/runtime authority(선택 기준선/완성/승격/런타임 권위 없음).
 
@@ -9,6 +9,12 @@ Stage closeout(단계 마감): `frontier28D_stage_closeout_stability_gap_penalty
 Status(상태): `closed_preserved_clue_negative_memory_stability_gap_scout_only_no_handoff`
 
 Judgment(판정): `preserved_clue_negative_memory(보존 단서+부정 기억)`
+
+Pre-closeout proxy receipt(마감 전 프록시 영수증): `frontier28B_train_only_stability_gap_penalty_proxy_scout_v1`
+
+Best stability union(최상 안정성 합집합): `f28b_0001`
+
+Density/scout/seed/handoff rows(빈도/탐색/씨앗/인계 행): `189` / `19` / `0` / `0`
 
 Preserved clue(보존 단서): `f28_train_only_stability_gap_reordered_union_surface_but_preserved_19_scout_rows_reference_only(전선28 학습 전용 안정성 격차는 합집합 표면을 재정렬했지만 19개 탐색 행만 참조 전용 보존)`
 
