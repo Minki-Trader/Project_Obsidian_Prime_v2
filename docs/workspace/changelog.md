@@ -7150,3 +7150,27 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): `frontier64F_stage_closeout_loss_cluster_hazard_v1`로 F64 loss-cluster hazard source(손실 군집 위험 원천)를 negative memory(부정 기억)로 마감했다.
 - effect(효과): MT5 PF/DD(수익 팩터/손실폭) 실패와 proxy-runtime gap(프록시-런타임 차이)을 고정하고 `frontier65A_stage_open_runtime_semantics_pf_source_after_hazard_gate_failure_v1`를 새 PF mechanism(새 수익 팩터 메커니즘) 질문으로 남겼다.
 - boundary(경계): completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.
+
+<!-- frontier65A_stage_open_runtime_semantics_pf_source_after_hazard_gate_failure_v1 -->
+
+## 2026-06-16 Frontier65 Gap Attribution(F65 차이 귀속)
+
+- action(행동): `frontier65A_stage_open_runtime_semantics_pf_source_after_hazard_gate_failure_v1`로 F65를 열고 `frontier65B_proxy_runtime_gap_attribution_scout_v1`로 F64 proxy-runtime gap(프록시-런타임 차이)을 분해했다.
+- effect(효과): SL/TP unit semantics gap(손절/익절 단위 의미 차이)을 preserved clue(보존 단서)로 기록하고 `frontier65C_targeted_sltp_unit_runtime_probe_v1` 표적 MT5 probe(표적 MT5 탐침)를 다음 실행으로 남겼다.
+- boundary(경계): F65는 아직 closeout(마감)이 아니며 completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.
+
+<!-- frontier65C_targeted_sltp_unit_runtime_probe_v1 -->
+
+## 2026-06-16 Frontier65C Targeted MT5 Probe(F65C 표적 MT5 탐침)
+
+- action(행동): `frontier65C_targeted_sltp_unit_runtime_probe_v1`로 SL/TP point unit(손절/익절 포인트 단위)을 proxy price unit(프록시 가격 단위)에 맞춘 MT5 runtime probe(런타임 탐침)를 실행했다.
+- effect(효과): F65B unit-semantics clue(단위 의미 단서)를 실제 Strategy Tester(전략 테스터)에서 관찰하고 `frontier65D_stage_closeout_runtime_semantics_gap_attribution_v1` 마감 검토로 넘겼다.
+- boundary(경계): runtime probe observation(런타임 탐침 관찰)이며 completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.
+
+<!-- frontier65D_stage_closeout_runtime_semantics_gap_attribution_v1 -->
+
+## 2026-06-16 Frontier65 Closeout(F65 마감)
+
+- action(행동): `frontier65D_stage_closeout_runtime_semantics_gap_attribution_v1`로 F65 proxy-runtime gap attribution(프록시-런타임 차이 귀속)을 closeout(마감)했다.
+- effect(효과): SL/TP unit semantics(손절/익절 단위 의미)를 preserved clue(보존 단서)로 남기고 `stage_frontier_66__runtime_unit_aligned_exit_economics_pf_source_after_semantics_gap`를 다음 새 가설 stage(단계)로 열 준비를 했다.
+- boundary(경계): completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.

@@ -1964,3 +1964,37 @@ Register ideas when they become durable work, not for every passing thought.
 - Preserved clue(보존 단서): F64B proxy(프록시)와 F64D handoff repair(인계 수리)는 참조 단서로만 보존한다.
 - Next(다음): `frontier65A_stage_open_runtime_semantics_pf_source_after_hazard_gate_failure_v1` with new PF mechanism(새 수익 팩터 메커니즘).
 - Boundary(경계): no authority(권위 없음), no completion(완성 없음).
+
+<!-- frontier65A_stage_open_runtime_semantics_pf_source_after_hazard_gate_failure_v1 -->
+
+## frontier65A_stage_open_runtime_semantics_pf_source_after_hazard_gate_failure_v1
+
+- Stage(단계): `stage_frontier_65__runtime_semantics_pf_source_after_hazard_gate_failure`
+- Idea(아이디어): F64 proxy-runtime gap(프록시-런타임 차이)을 runtime semantics(런타임 의미)와 SL/TP unit semantics(손절/익절 단위 의미)로 귀속할 수 있는지 분석한다.
+- Result(결과): `preserved_clue_sltp_unit_semantics_gap_no_authority(보존 단서, 손절/익절 단위 의미 차이, 권위 없음)`
+- Evidence(근거): `stages/stage_frontier_65__runtime_semantics_pf_source_after_hazard_gate_failure/03_reviews/proxy_runtime_gap_attribution_report.md`
+- Next(다음): `frontier65C_targeted_sltp_unit_runtime_probe_v1`
+- Boundary(경계): attribution scout(귀속 탐색), no authority(권위 없음), F65 targeted MT5 runtime probe pending(F65 표적 MT5 런타임 탐침 대기).
+
+<!-- frontier65C_targeted_sltp_unit_runtime_probe_v1 -->
+
+## frontier65C_targeted_sltp_unit_runtime_probe_v1
+
+- Stage(단계): `stage_frontier_65__runtime_semantics_pf_source_after_hazard_gate_failure`
+- Idea(아이디어): SL/TP point unit adjustment(손절/익절 포인트 단위 보정)이 F64 proxy-runtime gap(프록시-런타임 차이)을 줄이는지 확인한다.
+- Result(결과): `runtime_probe_observation_sltp_unit_adjustment_inconclusive_no_authority(런타임 탐침 관찰, 손절/익절 단위 보정 불충분, 권위 없음)`
+- Evidence(근거): `stages/stage_frontier_65__runtime_semantics_pf_source_after_hazard_gate_failure/03_reviews/runtime_probe_unit_adjusted_report.md` and `stages/stage_frontier_65__runtime_semantics_pf_source_after_hazard_gate_failure/03_reviews/proxy_runtime_gap_after_unit_adjustment_report.md`.
+- Next(다음): `frontier65D_stage_closeout_runtime_semantics_gap_attribution_v1`
+- Boundary(경계): runtime_probe_observation only(런타임 탐침 관찰 전용), no authority(권위 없음).
+
+<!-- frontier65D_stage_closeout_runtime_semantics_gap_attribution_v1 -->
+
+## frontier65D_stage_closeout_runtime_semantics_gap_attribution_v1
+
+- Stage(단계): `stage_frontier_65__runtime_semantics_pf_source_after_hazard_gate_failure`
+- Idea(아이디어): proxy-runtime gap(프록시-런타임 차이)은 signal path(신호 경로)와 exit unit semantics(청산 단위 의미)를 분리해야 한다.
+- Result(결과): `preserved_clue_sltp_unit_semantics_supported_but_economics_incomplete_no_authority(보존 단서, 손절/익절 단위 의미 지원, 그러나 경제성 불완전, 권위 없음)`
+- Preserved clue(보존 단서): `sltp_unit_semantics_gap_between_proxy_price_units_and_mt5_points(프록시 가격 단위와 MT5 포인트 손절/익절 의미 차이)`
+- Evidence(근거): `stages/stage_frontier_65__runtime_semantics_pf_source_after_hazard_gate_failure/03_reviews/stage_closeout_report.md` and `stages/stage_frontier_65__runtime_semantics_pf_source_after_hazard_gate_failure/03_reviews/runtime_probe_unit_adjusted_report.md`.
+- Next(다음): `stage_frontier_66__runtime_unit_aligned_exit_economics_pf_source_after_semantics_gap` / `frontier66A_stage_open_runtime_unit_aligned_exit_economics_pf_source_v1`
+- Boundary(경계): runtime_probe_observation(런타임 탐침 관찰) and preserved clue(보존 단서) only; no authority(권위 없음).
