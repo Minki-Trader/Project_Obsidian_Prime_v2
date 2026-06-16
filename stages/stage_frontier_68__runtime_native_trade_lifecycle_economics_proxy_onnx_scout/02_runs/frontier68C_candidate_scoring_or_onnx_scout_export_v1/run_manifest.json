@@ -1,0 +1,407 @@
+{
+  "run_id": "frontier68C_candidate_scoring_or_onnx_scout_export_v1",
+  "stage_id": "stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout",
+  "parent_run_id": "frontier68B_runtime_lifecycle_proxy_broad_sweep_v1",
+  "created_at_utc": "2026-06-16T17:14:42Z",
+  "status": "completed_onnx_scout_export_no_authority(ONNX 탐색 내보내기 완료, 권위 없음)",
+  "judgment": "onnx_scout_axes_materialized_mt5_probe_pending_no_authority(ONNX 탐색 축 물질화, MT5 탐침 대기, 권위 없음)",
+  "claim_boundary": "onnx_scout_export_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "producer": "stage_pipelines/stage_frontier_68/frontier68c_candidate_scoring_or_onnx_scout_export.py",
+  "source_inputs": [
+    "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68b_top_candidates_review.json",
+    "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/frontier68B_proxy_broad_sweep_report.md",
+    "docs/agent_control/grok_reviews/2026-06-17_f68c_pre_onnx_candidate_axis_review/f68c_pre_onnx_candidate_axis_receipt.md",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+  ],
+  "artifacts": {
+    "final": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/f68c_candidate_axis_onnx_scout_export.json",
+    "manifest": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/run_manifest.json",
+    "summary": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/f68c_candidate_axis_summary.csv",
+    "kpi": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/f68c_candidate_axis_kpi_by_split.csv",
+    "probability_parity": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/f68c_onnx_probability_parity.csv",
+    "signal_parity": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/f68c_onnx_signal_parity.csv",
+    "features": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/f68c_feature_csv_manifest.csv",
+    "handoff": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/f68c_handoff_intent.json",
+    "review_report": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/frontier68C_onnx_scout_export_report.md",
+    "review_summary": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68c_candidate_axis_summary_review.csv",
+    "review_handoff": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68c_handoff_intent_review.json",
+    "gate_audit": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68c_gate_audit.md"
+  },
+  "model_artifacts": [
+    {
+      "candidate_id": "f68b_23f4d4607a78",
+      "axis_id": "density_axis",
+      "export_status": "exported_onnx_parity_passed",
+      "export_error": "",
+      "model_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_23f4d4607a78.joblib",
+      "model_sha256": "a5aecc4f5fcc153013a09863074354c312d0111f4755781a61638e13fd4930f4",
+      "onnx_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_23f4d4607a78.onnx",
+      "onnx_sha256": "5fb01508a5a1bbdc02d8a1c8ab27241933785c5e2dc9810e070f9d1008f50134",
+      "feature_order_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_23f4d4607a78_feature_order.txt",
+      "feature_order_sha256": "355714ff77e0cbcd086b22564f92905f48fa5dbce50a5e4e6fb843cd81e7d255",
+      "onnx_export": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_23f4d4607a78.onnx",
+        "sha256": "5fb01508a5a1bbdc02d8a1c8ab27241933785c5e2dc9810e070f9d1008f50134",
+        "input_name": "float_input",
+        "target_opset": 12,
+        "zipmap_disabled": true,
+        "label_output_dropped": true,
+        "outputs_before_drop": [
+          {
+            "name": "label",
+            "value_type": "tensor_type",
+            "shape": [
+              null
+            ]
+          },
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "probability_output_name": "probabilities"
+      },
+      "probability_parity": [
+        {
+          "candidate_id": "f68b_23f4d4607a78",
+          "split": "train",
+          "passed": true,
+          "rows": 2048,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.6456767509831494e-07,
+          "mean_abs_diff": 3.269503989006479e-08,
+          "onnx_row_sum_max_abs_error": 2.384185791015625e-07,
+          "input_name": "float_input",
+          "output_names": [
+            "probabilities"
+          ]
+        },
+        {
+          "candidate_id": "f68b_23f4d4607a78",
+          "split": "validation",
+          "passed": true,
+          "rows": 2048,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.6577558464847542e-07,
+          "mean_abs_diff": 3.1714109097348954e-08,
+          "onnx_row_sum_max_abs_error": 2.384185791015625e-07,
+          "input_name": "float_input",
+          "output_names": [
+            "probabilities"
+          ]
+        },
+        {
+          "candidate_id": "f68b_23f4d4607a78",
+          "split": "oos",
+          "passed": true,
+          "rows": 2048,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.5391926577734694e-07,
+          "mean_abs_diff": 3.1748106728741826e-08,
+          "onnx_row_sum_max_abs_error": 2.682209014892578e-07,
+          "input_name": "float_input",
+          "output_names": [
+            "probabilities"
+          ]
+        }
+      ],
+      "signal_parity": [
+        {
+          "candidate_id": "f68b_23f4d4607a78",
+          "split": "validation",
+          "rows": 9844,
+          "sklearn_signal_count": 4864,
+          "onnx_signal_count": 4864,
+          "signal_count_diff": 0,
+          "signal_mismatch_count": 0,
+          "side_mismatch_on_signal_count": 0,
+          "max_edge_abs_diff": 2.1202500422035087e-07,
+          "passed": true
+        },
+        {
+          "candidate_id": "f68b_23f4d4607a78",
+          "split": "oos",
+          "rows": 7584,
+          "sklearn_signal_count": 4782,
+          "onnx_signal_count": 4782,
+          "signal_count_diff": 0,
+          "signal_mismatch_count": 0,
+          "side_mismatch_on_signal_count": 0,
+          "max_edge_abs_diff": 2.023564830144764e-07,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "candidate_id": "f68b_3481a04983ee",
+      "axis_id": "pf_axis",
+      "export_status": "exported_onnx_parity_passed",
+      "export_error": "",
+      "model_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_3481a04983ee.joblib",
+      "model_sha256": "d6126cad814c0495de8c4d82ecdf245939fc6dbee0cd338498d815833c33a9f7",
+      "onnx_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_3481a04983ee.onnx",
+      "onnx_sha256": "167e99f1d2b13aa926e673e0a8d6830fb33c9b0923e4e723bb728ab12da7b43b",
+      "feature_order_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_3481a04983ee_feature_order.txt",
+      "feature_order_sha256": "7367a43f3f7debbaa533c7f8bcdb84130b58ddd32cded6dcda9baa6bcb6e62e7",
+      "onnx_export": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_3481a04983ee.onnx",
+        "sha256": "167e99f1d2b13aa926e673e0a8d6830fb33c9b0923e4e723bb728ab12da7b43b",
+        "input_name": "float_input",
+        "target_opset": 12,
+        "zipmap_disabled": true,
+        "label_output_dropped": true,
+        "outputs_before_drop": [
+          {
+            "name": "label",
+            "value_type": "tensor_type",
+            "shape": [
+              null
+            ]
+          },
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "probability_output_name": "probabilities"
+      },
+      "probability_parity": [
+        {
+          "candidate_id": "f68b_3481a04983ee",
+          "split": "train",
+          "passed": true,
+          "rows": 2048,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.5761130939262458e-07,
+          "mean_abs_diff": 3.225384248748724e-08,
+          "onnx_row_sum_max_abs_error": 2.384185791015625e-07,
+          "input_name": "float_input",
+          "output_names": [
+            "probabilities"
+          ]
+        },
+        {
+          "candidate_id": "f68b_3481a04983ee",
+          "split": "validation",
+          "passed": true,
+          "rows": 2048,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.5282349247192073e-07,
+          "mean_abs_diff": 3.177235936144921e-08,
+          "onnx_row_sum_max_abs_error": 2.682209014892578e-07,
+          "input_name": "float_input",
+          "output_names": [
+            "probabilities"
+          ]
+        },
+        {
+          "candidate_id": "f68b_3481a04983ee",
+          "split": "oos",
+          "passed": true,
+          "rows": 2048,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.4427840250297308e-07,
+          "mean_abs_diff": 3.178565289007157e-08,
+          "onnx_row_sum_max_abs_error": 2.384185791015625e-07,
+          "input_name": "float_input",
+          "output_names": [
+            "probabilities"
+          ]
+        }
+      ],
+      "signal_parity": [
+        {
+          "candidate_id": "f68b_3481a04983ee",
+          "split": "validation",
+          "rows": 9844,
+          "sklearn_signal_count": 2,
+          "onnx_signal_count": 2,
+          "signal_count_diff": 0,
+          "signal_mismatch_count": 0,
+          "side_mismatch_on_signal_count": 0,
+          "max_edge_abs_diff": 2.423367140291788e-07,
+          "passed": true
+        },
+        {
+          "candidate_id": "f68b_3481a04983ee",
+          "split": "oos",
+          "rows": 7584,
+          "sklearn_signal_count": 1,
+          "onnx_signal_count": 1,
+          "signal_count_diff": 0,
+          "signal_mismatch_count": 0,
+          "side_mismatch_on_signal_count": 0,
+          "max_edge_abs_diff": 2.0539639183914105e-07,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "candidate_id": "f68b_547ac8b4ead1",
+      "axis_id": "low_dd_density_axis",
+      "export_status": "export_failed_preserved_clue",
+      "export_error": "ValueError: skl2onnx TreeEnsembleClassifier conversion failed for this HGB pipeline; preserved clue only(HGB 파이프라인 변환 실패, 보존 단서 전용).",
+      "model_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_547ac8b4ead1.joblib",
+      "model_sha256": "8a831be4521e341fc5d56bd9ae78772a91e8116b24d9300e292856a27958c963",
+      "onnx_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_547ac8b4ead1.onnx",
+      "onnx_sha256": null,
+      "feature_order_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_547ac8b4ead1_feature_order.txt",
+      "feature_order_sha256": "7367a43f3f7debbaa533c7f8bcdb84130b58ddd32cded6dcda9baa6bcb6e62e7",
+      "onnx_export": {},
+      "probability_parity": [],
+      "signal_parity": []
+    }
+  ],
+  "feature_artifacts": [
+    {
+      "feature_set_id": "full58(전체58)",
+      "feature_count": 59,
+      "feature_order_hash": "b33f55866d04baeeb33f11d660677d0ac9fd7870773e0e7e65f8692f1e8d7390",
+      "feature_csv_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/features/f68c_full58_58_b33f55866d_features.csv",
+      "feature_csv_sha256": "467e515baf73cfb62d93dd6d106b1c16bf65da354db74515ef92c2dc3ea3a248",
+      "rows": 46650
+    },
+    {
+      "feature_set_id": "no_mega_top3(대형주_상위3제외)",
+      "feature_count": 49,
+      "feature_order_hash": "14a037f12cec16ad2f57a9cb5cafb5d61a374b96640872a6ac51bb6f28baf2a3",
+      "feature_csv_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/features/f68c_no_mega_top3_3_14a037f12c_features.csv",
+      "feature_csv_sha256": "4227ff7f78bf106b483779648a2cc50b5207acd52f8481e58b838865965cfd73",
+      "rows": 46650
+    }
+  ],
+  "artifact_identities": {
+    "final": {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/f68c_candidate_axis_onnx_scout_export.json",
+      "sha256": "a5a3d3468906bf4979c4e6fb382706fe5747a12c663854e53fdc4e5a44def3c0",
+      "bytes": 36850,
+      "rows": null
+    },
+    "manifest": {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/run_manifest.json",
+      "sha256": "ace6c8086f8ba1d334d5868718a9f60314172d6eeac761fe872afff333f293c0",
+      "bytes": 19887,
+      "rows": null
+    },
+    "summary": {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/f68c_candidate_axis_summary.csv",
+      "sha256": "558c9d136d42d69c44b8893194d11681dcb33638942f9f8641e627bfdba70b67",
+      "bytes": 3271,
+      "rows": null
+    },
+    "kpi": {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/f68c_candidate_axis_kpi_by_split.csv",
+      "sha256": "b2f29f742acc6494b85403dfc55329b798d01072475e538c753ecb8b482975b1",
+      "bytes": 3881,
+      "rows": null
+    },
+    "probability_parity": {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/f68c_onnx_probability_parity.csv",
+      "sha256": "2d9ba42633466254fc9a9dbdb8fbd4fb1ce27b579eb386ecc2a7b6a816b017e3",
+      "bytes": 1036,
+      "rows": null
+    },
+    "signal_parity": {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/f68c_onnx_signal_parity.csv",
+      "sha256": "df13826dd27f960c3daf5c98fd7707b002934ebfeb0b5252f57824a95ce3ab1b",
+      "bytes": 445,
+      "rows": null
+    },
+    "features": {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/f68c_feature_csv_manifest.csv",
+      "sha256": "54972b5ef8ebe07b911bf53bcec9a6e4809fccda8926099e11bdf679be65ea2f",
+      "bytes": 818,
+      "rows": null
+    },
+    "handoff": {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/f68c_handoff_intent.json",
+      "sha256": "e0b9f25ed5dd380871175207a7aaede43772417b398165204965d86975656a73",
+      "bytes": 4497,
+      "rows": null
+    },
+    "review_report": {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/frontier68C_onnx_scout_export_report.md",
+      "sha256": "6bc300c9ec1fe58fc3ffc06a59e417fd877156a836fe9c282db27956d4c4b522",
+      "bytes": 5348,
+      "rows": null
+    },
+    "review_summary": {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68c_candidate_axis_summary_review.csv",
+      "sha256": "558c9d136d42d69c44b8893194d11681dcb33638942f9f8641e627bfdba70b67",
+      "bytes": 3271,
+      "rows": null
+    },
+    "review_handoff": {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68c_handoff_intent_review.json",
+      "sha256": "e0b9f25ed5dd380871175207a7aaede43772417b398165204965d86975656a73",
+      "bytes": 4497,
+      "rows": null
+    },
+    "gate_audit": {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68c_gate_audit.md",
+      "sha256": "45cd3e975d2dfcc3760178685d0686a2987f89bc02dc925233434d13bb16ddce",
+      "bytes": 965,
+      "rows": null
+    }
+  },
+  "next_run_id": "frontier68D_mt5_runtime_probe_candidate_axis_materialization_v1"
+}

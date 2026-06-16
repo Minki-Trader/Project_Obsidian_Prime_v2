@@ -1,0 +1,881 @@
+{
+  "created_at_utc": "2026-06-16T17:14:42Z",
+  "stage_id": "stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout",
+  "run_id": "frontier68C_candidate_scoring_or_onnx_scout_export_v1",
+  "parent_run_id": "frontier68B_runtime_lifecycle_proxy_broad_sweep_v1",
+  "next_run_id": "frontier68D_mt5_runtime_probe_candidate_axis_materialization_v1",
+  "status": "completed_onnx_scout_export_no_authority(ONNX 탐색 내보내기 완료, 권위 없음)",
+  "judgment": "onnx_scout_axes_materialized_mt5_probe_pending_no_authority(ONNX 탐색 축 물질화, MT5 탐침 대기, 권위 없음)",
+  "claim_boundary": "onnx_scout_export_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "candidate_axis_count": 3,
+  "exported_count": 2,
+  "parity_pass_count": 2,
+  "summary_rows": [
+    {
+      "candidate_id": "f68b_23f4d4607a78",
+      "axis_id": "density_axis",
+      "role": "density_axis_trade_count_ok_pf_weak",
+      "priority": 1,
+      "candidate_id_match": true,
+      "target_id": "h2_ddp03_min1p5(2봉_손실벌점)",
+      "feature_set_id": "full58(전체58)",
+      "feature_count": 59,
+      "feature_order_hash": "b33f55866d04baeeb33f11d660677d0ac9fd7870773e0e7e65f8692f1e8d7390",
+      "model_id": "extra_trees_shallow(얕은엑스트라트리스)",
+      "model_family": "tree_bagging(트리배깅)",
+      "threshold_quantile": 0.3,
+      "edge_threshold_from_train": 0.005296379852579303,
+      "cooldown_bars": 1,
+      "side_policy": "both(양방향)",
+      "exit_mode": "close_horizon(만기종가)",
+      "validation_net": 1342.5000000000082,
+      "validation_pf": 1.0431014832047087,
+      "validation_tpd": 7.476014760147602,
+      "validation_dd_pct_proxy": 11.91909999999984,
+      "oos_net": 1334.2300000000164,
+      "oos_pf": 1.0478459067961752,
+      "oos_tpd": 9.65979381443299,
+      "oos_dd_pct_proxy": 12.75599999999986,
+      "reference_reconstruction_passed": true,
+      "reference_max_abs_diff": 0.0,
+      "export_status": "exported_onnx_parity_passed",
+      "probability_parity_passed": true,
+      "signal_parity_passed": true,
+      "onnx_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_23f4d4607a78.onnx",
+      "onnx_sha256": "5fb01508a5a1bbdc02d8a1c8ab27241933785c5e2dc9810e070f9d1008f50134",
+      "export_error": "",
+      "claim_boundary": "onnx_scout_export_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    },
+    {
+      "candidate_id": "f68b_3481a04983ee",
+      "axis_id": "pf_axis",
+      "role": "pf_axis_strong_pf_density_gap",
+      "priority": 2,
+      "candidate_id_match": true,
+      "target_id": "h6_ddp04_min3(6봉_손실벌점)",
+      "feature_set_id": "no_mega_top3(대형주_상위3제외)",
+      "feature_count": 49,
+      "feature_order_hash": "14a037f12cec16ad2f57a9cb5cafb5d61a374b96640872a6ac51bb6f28baf2a3",
+      "model_id": "extra_trees_shallow(얕은엑스트라트리스)",
+      "model_family": "tree_bagging(트리배깅)",
+      "threshold_quantile": 0.975,
+      "edge_threshold_from_train": 0.09437399526654683,
+      "cooldown_bars": 0,
+      "side_policy": "long_only(롱만)",
+      "exit_mode": "atr_sltp_conservative(보수적_ATR손익절)",
+      "validation_net": 19.126865673065186,
+      "validation_pf": 99.0,
+      "validation_tpd": 1.0,
+      "validation_dd_pct_proxy": 0.0,
+      "oos_net": 38.232444190979,
+      "oos_pf": 99.0,
+      "oos_tpd": 1.0,
+      "oos_dd_pct_proxy": 0.0,
+      "reference_reconstruction_passed": true,
+      "reference_max_abs_diff": 0.0,
+      "export_status": "exported_onnx_parity_passed",
+      "probability_parity_passed": true,
+      "signal_parity_passed": true,
+      "onnx_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_3481a04983ee.onnx",
+      "onnx_sha256": "167e99f1d2b13aa926e673e0a8d6830fb33c9b0923e4e723bb728ab12da7b43b",
+      "export_error": "",
+      "claim_boundary": "onnx_scout_export_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    },
+    {
+      "candidate_id": "f68b_547ac8b4ead1",
+      "axis_id": "low_dd_density_axis",
+      "role": "low_dd_density_axis_hgb_converter_conditional",
+      "priority": 3,
+      "candidate_id_match": true,
+      "target_id": "h2_ddp03_min1p5(2봉_손실벌점)",
+      "feature_set_id": "no_mega_top3(대형주_상위3제외)",
+      "feature_count": 49,
+      "feature_order_hash": "14a037f12cec16ad2f57a9cb5cafb5d61a374b96640872a6ac51bb6f28baf2a3",
+      "model_id": "hgb_small(작은히스토그램부스팅)",
+      "model_family": "tree_boosting(트리부스팅)",
+      "threshold_quantile": 0.7,
+      "edge_threshold_from_train": 0.07529488634481124,
+      "cooldown_bars": 1,
+      "side_policy": "both(양방향)",
+      "exit_mode": "atr_sltp_conservative(보수적_ATR손익절)",
+      "validation_net": 322.3118579292248,
+      "validation_pf": 1.0153419423970926,
+      "validation_tpd": 5.789667896678967,
+      "validation_dd_pct_proxy": 8.842955861282393,
+      "oos_net": 1536.0055847167932,
+      "oos_pf": 1.0905893434703313,
+      "oos_tpd": 7.22680412371134,
+      "oos_dd_pct_proxy": 9.696685918617442,
+      "reference_reconstruction_passed": true,
+      "reference_max_abs_diff": 0.0,
+      "export_status": "export_failed_preserved_clue",
+      "probability_parity_passed": false,
+      "signal_parity_passed": false,
+      "onnx_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_547ac8b4ead1.onnx",
+      "onnx_sha256": null,
+      "export_error": "ValueError: skl2onnx TreeEnsembleClassifier conversion failed for this HGB pipeline; preserved clue only(HGB 파이프라인 변환 실패, 보존 단서 전용).",
+      "claim_boundary": "onnx_scout_export_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    }
+  ],
+  "kpi_rows": [
+    {
+      "candidate_id": "f68b_23f4d4607a78",
+      "axis_id": "density_axis",
+      "split": "train",
+      "signal_count": 11523,
+      "trade_count": 5111,
+      "trades_per_day": 5.998826291079812,
+      "net_profit_proxy_points": 37901.349999999955,
+      "gross_profit_proxy_points": 76195.81999999995,
+      "gross_loss_proxy_points": 38294.47,
+      "profit_factor": 1.9897342880055513,
+      "expectancy_proxy_points": 7.415642731363716,
+      "win_rate_percent": 63.94052044609665,
+      "average_win_proxy_points": 23.31573439412483,
+      "average_loss_proxy_points": -20.834858541893365,
+      "payoff_ratio": 1.1190733235477979,
+      "max_drawdown_proxy_points": 441.2400000000016,
+      "proxy_dd_percent_on_10000_points": 4.412400000000016,
+      "recovery_factor": 85.89735744719385,
+      "max_consecutive_loss": 9,
+      "long_trade_count": 2035,
+      "short_trade_count": 3076,
+      "claim_boundary": "onnx_scout_export_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    },
+    {
+      "candidate_id": "f68b_23f4d4607a78",
+      "axis_id": "density_axis",
+      "split": "validation",
+      "signal_count": 4864,
+      "trade_count": 2026,
+      "trades_per_day": 7.476014760147602,
+      "net_profit_proxy_points": 1342.5000000000082,
+      "gross_profit_proxy_points": 32489.920000000035,
+      "gross_loss_proxy_points": 31147.420000000024,
+      "profit_factor": 1.0431014832047087,
+      "expectancy_proxy_points": 0.6626357354392933,
+      "win_rate_percent": 50.24679170779862,
+      "average_win_proxy_points": 31.915442043222036,
+      "average_loss_proxy_points": -30.900218253968276,
+      "payoff_ratio": 1.0328549067488668,
+      "max_drawdown_proxy_points": 1191.909999999984,
+      "proxy_dd_percent_on_10000_points": 11.91909999999984,
+      "recovery_factor": 1.1263434319705568,
+      "max_consecutive_loss": 12,
+      "long_trade_count": 1010,
+      "short_trade_count": 1016,
+      "claim_boundary": "onnx_scout_export_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    },
+    {
+      "candidate_id": "f68b_23f4d4607a78",
+      "axis_id": "density_axis",
+      "split": "oos",
+      "signal_count": 4782,
+      "trade_count": 1874,
+      "trades_per_day": 9.65979381443299,
+      "net_profit_proxy_points": 1334.2300000000164,
+      "gross_profit_proxy_points": 29220.21000000002,
+      "gross_loss_proxy_points": 27885.980000000014,
+      "profit_factor": 1.0478459067961752,
+      "expectancy_proxy_points": 0.7119690501600942,
+      "win_rate_percent": 51.65421558164355,
+      "average_win_proxy_points": 30.18616735537192,
+      "average_loss_proxy_points": -30.779227373068448,
+      "payoff_ratio": 0.9807318094600566,
+      "max_drawdown_proxy_points": 1275.5999999999858,
+      "proxy_dd_percent_on_10000_points": 12.75599999999986,
+      "recovery_factor": 1.0459626842270549,
+      "max_consecutive_loss": 11,
+      "long_trade_count": 1019,
+      "short_trade_count": 855,
+      "claim_boundary": "onnx_scout_export_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    },
+    {
+      "candidate_id": "f68b_3481a04983ee",
+      "axis_id": "pf_axis",
+      "split": "train",
+      "signal_count": 17,
+      "trade_count": 14,
+      "trades_per_day": 0.019635343618513323,
+      "net_profit_proxy_points": 84.8054675292976,
+      "gross_profit_proxy_points": 230.29047317504956,
+      "gross_loss_proxy_points": 145.48500564575195,
+      "profit_factor": 1.5829155187015924,
+      "expectancy_proxy_points": 6.057533394949829,
+      "win_rate_percent": 57.14285714285714,
+      "average_win_proxy_points": 28.786309146881194,
+      "average_loss_proxy_points": -24.24750094095866,
+      "payoff_ratio": 1.1871866390261943,
+      "max_drawdown_proxy_points": 93.51510818481373,
+      "proxy_dd_percent_on_10000_points": 0.9351510818481373,
+      "recovery_factor": 0.9068638124408381,
+      "max_consecutive_loss": 3,
+      "long_trade_count": 14,
+      "short_trade_count": 0,
+      "claim_boundary": "onnx_scout_export_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    },
+    {
+      "candidate_id": "f68b_3481a04983ee",
+      "axis_id": "pf_axis",
+      "split": "validation",
+      "signal_count": 2,
+      "trade_count": 1,
+      "trades_per_day": 1.0,
+      "net_profit_proxy_points": 19.126865673065186,
+      "gross_profit_proxy_points": 19.126865673065186,
+      "gross_loss_proxy_points": -0.0,
+      "profit_factor": 99.0,
+      "expectancy_proxy_points": 19.126865673065186,
+      "win_rate_percent": 100.0,
+      "average_win_proxy_points": 19.126865673065186,
+      "average_loss_proxy_points": 0.0,
+      "payoff_ratio": 99.0,
+      "max_drawdown_proxy_points": 0.0,
+      "proxy_dd_percent_on_10000_points": 0.0,
+      "recovery_factor": 99.0,
+      "max_consecutive_loss": 0,
+      "long_trade_count": 1,
+      "short_trade_count": 0,
+      "claim_boundary": "onnx_scout_export_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    },
+    {
+      "candidate_id": "f68b_3481a04983ee",
+      "axis_id": "pf_axis",
+      "split": "oos",
+      "signal_count": 1,
+      "trade_count": 1,
+      "trades_per_day": 1.0,
+      "net_profit_proxy_points": 38.232444190979,
+      "gross_profit_proxy_points": 38.232444190979,
+      "gross_loss_proxy_points": -0.0,
+      "profit_factor": 99.0,
+      "expectancy_proxy_points": 38.232444190979,
+      "win_rate_percent": 100.0,
+      "average_win_proxy_points": 38.232444190979,
+      "average_loss_proxy_points": 0.0,
+      "payoff_ratio": 99.0,
+      "max_drawdown_proxy_points": 0.0,
+      "proxy_dd_percent_on_10000_points": 0.0,
+      "recovery_factor": 99.0,
+      "max_consecutive_loss": 0,
+      "long_trade_count": 1,
+      "short_trade_count": 0,
+      "claim_boundary": "onnx_scout_export_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    },
+    {
+      "candidate_id": "f68b_547ac8b4ead1",
+      "axis_id": "low_dd_density_axis",
+      "split": "train",
+      "signal_count": 8665,
+      "trade_count": 4532,
+      "trades_per_day": 5.31924882629108,
+      "net_profit_proxy_points": 46147.35917291645,
+      "gross_profit_proxy_points": 64909.92557966235,
+      "gross_loss_proxy_points": 18762.5664067459,
+      "profit_factor": 3.459544082217058,
+      "expectancy_proxy_points": 10.182559393847407,
+      "win_rate_percent": 73.38923212709621,
+      "average_win_proxy_points": 19.51591268179866,
+      "average_loss_proxy_points": -15.648512432648792,
+      "payoff_ratio": 1.247141718153413,
+      "max_drawdown_proxy_points": 177.60319709777832,
+      "proxy_dd_percent_on_10000_points": 1.776031970977783,
+      "recovery_factor": 259.8340566330589,
+      "max_consecutive_loss": 8,
+      "long_trade_count": 3406,
+      "short_trade_count": 1126,
+      "claim_boundary": "onnx_scout_export_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    },
+    {
+      "candidate_id": "f68b_547ac8b4ead1",
+      "axis_id": "low_dd_density_axis",
+      "split": "validation",
+      "signal_count": 3065,
+      "trade_count": 1569,
+      "trades_per_day": 5.789667896678967,
+      "net_profit_proxy_points": 322.3118579292248,
+      "gross_profit_proxy_points": 21330.854947643296,
+      "gross_loss_proxy_points": 21008.543089714065,
+      "profit_factor": 1.0153419423970926,
+      "expectancy_proxy_points": 0.2054250209873963,
+      "win_rate_percent": 47.35500318674315,
+      "average_win_proxy_points": 28.709091450394745,
+      "average_loss_proxy_points": -25.4340715371841,
+      "payoff_ratio": 1.1287650665141298,
+      "max_drawdown_proxy_points": 884.2955861282392,
+      "proxy_dd_percent_on_10000_points": 8.842955861282393,
+      "recovery_factor": 0.36448430025577855,
+      "max_consecutive_loss": 8,
+      "long_trade_count": 1242,
+      "short_trade_count": 327,
+      "claim_boundary": "onnx_scout_export_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    },
+    {
+      "candidate_id": "f68b_547ac8b4ead1",
+      "axis_id": "low_dd_density_axis",
+      "split": "oos",
+      "signal_count": 2859,
+      "trade_count": 1402,
+      "trades_per_day": 7.22680412371134,
+      "net_profit_proxy_points": 1536.0055847167932,
+      "gross_profit_proxy_points": 18491.703969039903,
+      "gross_loss_proxy_points": 16955.698384323114,
+      "profit_factor": 1.0905893434703313,
+      "expectancy_proxy_points": 1.0955817294698953,
+      "win_rate_percent": 49.71469329529244,
+      "average_win_proxy_points": 26.530421763328413,
+      "average_loss_proxy_points": -24.050636006132077,
+      "payoff_ratio": 1.1031068682160454,
+      "max_drawdown_proxy_points": 969.6685918617443,
+      "proxy_dd_percent_on_10000_points": 9.696685918617442,
+      "recovery_factor": 1.5840521159581886,
+      "max_consecutive_loss": 13,
+      "long_trade_count": 1159,
+      "short_trade_count": 243,
+      "claim_boundary": "onnx_scout_export_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    }
+  ],
+  "probability_parity_rows": [
+    {
+      "candidate_id": "f68b_23f4d4607a78",
+      "split": "train",
+      "passed": true,
+      "rows": 2048,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 1.6456767509831494e-07,
+      "mean_abs_diff": 3.269503989006479e-08,
+      "onnx_row_sum_max_abs_error": 2.384185791015625e-07,
+      "input_name": "float_input",
+      "output_names": [
+        "probabilities"
+      ]
+    },
+    {
+      "candidate_id": "f68b_23f4d4607a78",
+      "split": "validation",
+      "passed": true,
+      "rows": 2048,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 1.6577558464847542e-07,
+      "mean_abs_diff": 3.1714109097348954e-08,
+      "onnx_row_sum_max_abs_error": 2.384185791015625e-07,
+      "input_name": "float_input",
+      "output_names": [
+        "probabilities"
+      ]
+    },
+    {
+      "candidate_id": "f68b_23f4d4607a78",
+      "split": "oos",
+      "passed": true,
+      "rows": 2048,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 1.5391926577734694e-07,
+      "mean_abs_diff": 3.1748106728741826e-08,
+      "onnx_row_sum_max_abs_error": 2.682209014892578e-07,
+      "input_name": "float_input",
+      "output_names": [
+        "probabilities"
+      ]
+    },
+    {
+      "candidate_id": "f68b_3481a04983ee",
+      "split": "train",
+      "passed": true,
+      "rows": 2048,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 1.5761130939262458e-07,
+      "mean_abs_diff": 3.225384248748724e-08,
+      "onnx_row_sum_max_abs_error": 2.384185791015625e-07,
+      "input_name": "float_input",
+      "output_names": [
+        "probabilities"
+      ]
+    },
+    {
+      "candidate_id": "f68b_3481a04983ee",
+      "split": "validation",
+      "passed": true,
+      "rows": 2048,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 1.5282349247192073e-07,
+      "mean_abs_diff": 3.177235936144921e-08,
+      "onnx_row_sum_max_abs_error": 2.682209014892578e-07,
+      "input_name": "float_input",
+      "output_names": [
+        "probabilities"
+      ]
+    },
+    {
+      "candidate_id": "f68b_3481a04983ee",
+      "split": "oos",
+      "passed": true,
+      "rows": 2048,
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "tolerance": 1e-05,
+      "max_abs_diff": 1.4427840250297308e-07,
+      "mean_abs_diff": 3.178565289007157e-08,
+      "onnx_row_sum_max_abs_error": 2.384185791015625e-07,
+      "input_name": "float_input",
+      "output_names": [
+        "probabilities"
+      ]
+    }
+  ],
+  "signal_parity_rows": [
+    {
+      "candidate_id": "f68b_23f4d4607a78",
+      "split": "validation",
+      "rows": 9844,
+      "sklearn_signal_count": 4864,
+      "onnx_signal_count": 4864,
+      "signal_count_diff": 0,
+      "signal_mismatch_count": 0,
+      "side_mismatch_on_signal_count": 0,
+      "max_edge_abs_diff": 2.1202500422035087e-07,
+      "passed": true
+    },
+    {
+      "candidate_id": "f68b_23f4d4607a78",
+      "split": "oos",
+      "rows": 7584,
+      "sklearn_signal_count": 4782,
+      "onnx_signal_count": 4782,
+      "signal_count_diff": 0,
+      "signal_mismatch_count": 0,
+      "side_mismatch_on_signal_count": 0,
+      "max_edge_abs_diff": 2.023564830144764e-07,
+      "passed": true
+    },
+    {
+      "candidate_id": "f68b_3481a04983ee",
+      "split": "validation",
+      "rows": 9844,
+      "sklearn_signal_count": 2,
+      "onnx_signal_count": 2,
+      "signal_count_diff": 0,
+      "signal_mismatch_count": 0,
+      "side_mismatch_on_signal_count": 0,
+      "max_edge_abs_diff": 2.423367140291788e-07,
+      "passed": true
+    },
+    {
+      "candidate_id": "f68b_3481a04983ee",
+      "split": "oos",
+      "rows": 7584,
+      "sklearn_signal_count": 1,
+      "onnx_signal_count": 1,
+      "signal_count_diff": 0,
+      "signal_mismatch_count": 0,
+      "side_mismatch_on_signal_count": 0,
+      "max_edge_abs_diff": 2.0539639183914105e-07,
+      "passed": true
+    }
+  ],
+  "feature_csv_rows": [
+    {
+      "feature_set_id": "full58(전체58)",
+      "feature_count": 59,
+      "feature_order_hash": "b33f55866d04baeeb33f11d660677d0ac9fd7870773e0e7e65f8692f1e8d7390",
+      "feature_csv_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/features/f68c_full58_58_b33f55866d_features.csv",
+      "feature_csv_sha256": "467e515baf73cfb62d93dd6d106b1c16bf65da354db74515ef92c2dc3ea3a248",
+      "rows": 46650
+    },
+    {
+      "feature_set_id": "no_mega_top3(대형주_상위3제외)",
+      "feature_count": 49,
+      "feature_order_hash": "14a037f12cec16ad2f57a9cb5cafb5d61a374b96640872a6ac51bb6f28baf2a3",
+      "feature_csv_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/features/f68c_no_mega_top3_3_14a037f12c_features.csv",
+      "feature_csv_sha256": "4227ff7f78bf106b483779648a2cc50b5207acd52f8481e58b838865965cfd73",
+      "rows": 46650
+    }
+  ],
+  "handoff_intent_rows": [
+    {
+      "candidate_id": "f68b_23f4d4607a78",
+      "axis_id": "density_axis",
+      "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "probe_eligible": true,
+      "model_backend": "onnx",
+      "model_path_repo": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_23f4d4607a78.onnx",
+      "model_sha256": "5fb01508a5a1bbdc02d8a1c8ab27241933785c5e2dc9810e070f9d1008f50134",
+      "ineligible_reason": "",
+      "feature_csv_repo": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/features/f68c_full58_58_b33f55866d_features.csv",
+      "feature_count": 59,
+      "feature_order_hash": "b33f55866d04baeeb33f11d660677d0ac9fd7870773e0e7e65f8692f1e8d7390",
+      "decision_mode": "threshold_margin",
+      "short_threshold": 0.0,
+      "long_threshold": 0.0,
+      "min_margin": 0.005296379852579303,
+      "side_policy_note": "both(양방향)",
+      "max_hold_bars": 2,
+      "same_direction_reentry_cooldown_bars": 1,
+      "atr_sltp_enabled": false,
+      "atr_stop_multiplier": 0.0,
+      "atr_take_profit_multiplier": 0.0,
+      "proxy_runtime_mapping_boundary": "handoff_intent_only_requires_mt5_runtime_probe(인계 의도 전용, MT5 런타임 탐침 필요)"
+    },
+    {
+      "candidate_id": "f68b_3481a04983ee",
+      "axis_id": "pf_axis",
+      "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "probe_eligible": true,
+      "model_backend": "onnx",
+      "model_path_repo": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_3481a04983ee.onnx",
+      "model_sha256": "167e99f1d2b13aa926e673e0a8d6830fb33c9b0923e4e723bb728ab12da7b43b",
+      "ineligible_reason": "",
+      "feature_csv_repo": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/features/f68c_no_mega_top3_3_14a037f12c_features.csv",
+      "feature_count": 49,
+      "feature_order_hash": "14a037f12cec16ad2f57a9cb5cafb5d61a374b96640872a6ac51bb6f28baf2a3",
+      "decision_mode": "threshold_margin",
+      "short_threshold": 2.0,
+      "long_threshold": 0.0,
+      "min_margin": 0.09437399526654683,
+      "side_policy_note": "long_only(롱만)",
+      "max_hold_bars": 6,
+      "same_direction_reentry_cooldown_bars": 0,
+      "atr_sltp_enabled": true,
+      "atr_stop_multiplier": 1.0,
+      "atr_take_profit_multiplier": 1.5,
+      "proxy_runtime_mapping_boundary": "handoff_intent_only_requires_mt5_runtime_probe(인계 의도 전용, MT5 런타임 탐침 필요)"
+    },
+    {
+      "candidate_id": "f68b_547ac8b4ead1",
+      "axis_id": "low_dd_density_axis",
+      "runtime_path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "probe_eligible": false,
+      "model_backend": "not_exported_preserved_clue",
+      "model_path_repo": "",
+      "model_sha256": "",
+      "ineligible_reason": "ValueError: skl2onnx TreeEnsembleClassifier conversion failed for this HGB pipeline; preserved clue only(HGB 파이프라인 변환 실패, 보존 단서 전용).",
+      "feature_csv_repo": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/features/f68c_no_mega_top3_3_14a037f12c_features.csv",
+      "feature_count": 49,
+      "feature_order_hash": "14a037f12cec16ad2f57a9cb5cafb5d61a374b96640872a6ac51bb6f28baf2a3",
+      "decision_mode": "threshold_margin",
+      "short_threshold": 0.0,
+      "long_threshold": 0.0,
+      "min_margin": 0.07529488634481124,
+      "side_policy_note": "both(양방향)",
+      "max_hold_bars": 2,
+      "same_direction_reentry_cooldown_bars": 1,
+      "atr_sltp_enabled": true,
+      "atr_stop_multiplier": 1.0,
+      "atr_take_profit_multiplier": 1.5,
+      "proxy_runtime_mapping_boundary": "handoff_intent_only_requires_mt5_runtime_probe(인계 의도 전용, MT5 런타임 탐침 필요)"
+    }
+  ],
+  "exports": [
+    {
+      "candidate_id": "f68b_23f4d4607a78",
+      "axis_id": "density_axis",
+      "export_status": "exported_onnx_parity_passed",
+      "export_error": "",
+      "model_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_23f4d4607a78.joblib",
+      "model_sha256": "a5aecc4f5fcc153013a09863074354c312d0111f4755781a61638e13fd4930f4",
+      "onnx_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_23f4d4607a78.onnx",
+      "onnx_sha256": "5fb01508a5a1bbdc02d8a1c8ab27241933785c5e2dc9810e070f9d1008f50134",
+      "feature_order_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_23f4d4607a78_feature_order.txt",
+      "feature_order_sha256": "355714ff77e0cbcd086b22564f92905f48fa5dbce50a5e4e6fb843cd81e7d255",
+      "onnx_export": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_23f4d4607a78.onnx",
+        "sha256": "5fb01508a5a1bbdc02d8a1c8ab27241933785c5e2dc9810e070f9d1008f50134",
+        "input_name": "float_input",
+        "target_opset": 12,
+        "zipmap_disabled": true,
+        "label_output_dropped": true,
+        "outputs_before_drop": [
+          {
+            "name": "label",
+            "value_type": "tensor_type",
+            "shape": [
+              null
+            ]
+          },
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "probability_output_name": "probabilities"
+      },
+      "probability_parity": [
+        {
+          "candidate_id": "f68b_23f4d4607a78",
+          "split": "train",
+          "passed": true,
+          "rows": 2048,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.6456767509831494e-07,
+          "mean_abs_diff": 3.269503989006479e-08,
+          "onnx_row_sum_max_abs_error": 2.384185791015625e-07,
+          "input_name": "float_input",
+          "output_names": [
+            "probabilities"
+          ]
+        },
+        {
+          "candidate_id": "f68b_23f4d4607a78",
+          "split": "validation",
+          "passed": true,
+          "rows": 2048,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.6577558464847542e-07,
+          "mean_abs_diff": 3.1714109097348954e-08,
+          "onnx_row_sum_max_abs_error": 2.384185791015625e-07,
+          "input_name": "float_input",
+          "output_names": [
+            "probabilities"
+          ]
+        },
+        {
+          "candidate_id": "f68b_23f4d4607a78",
+          "split": "oos",
+          "passed": true,
+          "rows": 2048,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.5391926577734694e-07,
+          "mean_abs_diff": 3.1748106728741826e-08,
+          "onnx_row_sum_max_abs_error": 2.682209014892578e-07,
+          "input_name": "float_input",
+          "output_names": [
+            "probabilities"
+          ]
+        }
+      ],
+      "signal_parity": [
+        {
+          "candidate_id": "f68b_23f4d4607a78",
+          "split": "validation",
+          "rows": 9844,
+          "sklearn_signal_count": 4864,
+          "onnx_signal_count": 4864,
+          "signal_count_diff": 0,
+          "signal_mismatch_count": 0,
+          "side_mismatch_on_signal_count": 0,
+          "max_edge_abs_diff": 2.1202500422035087e-07,
+          "passed": true
+        },
+        {
+          "candidate_id": "f68b_23f4d4607a78",
+          "split": "oos",
+          "rows": 7584,
+          "sklearn_signal_count": 4782,
+          "onnx_signal_count": 4782,
+          "signal_count_diff": 0,
+          "signal_mismatch_count": 0,
+          "side_mismatch_on_signal_count": 0,
+          "max_edge_abs_diff": 2.023564830144764e-07,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "candidate_id": "f68b_3481a04983ee",
+      "axis_id": "pf_axis",
+      "export_status": "exported_onnx_parity_passed",
+      "export_error": "",
+      "model_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_3481a04983ee.joblib",
+      "model_sha256": "d6126cad814c0495de8c4d82ecdf245939fc6dbee0cd338498d815833c33a9f7",
+      "onnx_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_3481a04983ee.onnx",
+      "onnx_sha256": "167e99f1d2b13aa926e673e0a8d6830fb33c9b0923e4e723bb728ab12da7b43b",
+      "feature_order_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_3481a04983ee_feature_order.txt",
+      "feature_order_sha256": "7367a43f3f7debbaa533c7f8bcdb84130b58ddd32cded6dcda9baa6bcb6e62e7",
+      "onnx_export": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_3481a04983ee.onnx",
+        "sha256": "167e99f1d2b13aa926e673e0a8d6830fb33c9b0923e4e723bb728ab12da7b43b",
+        "input_name": "float_input",
+        "target_opset": 12,
+        "zipmap_disabled": true,
+        "label_output_dropped": true,
+        "outputs_before_drop": [
+          {
+            "name": "label",
+            "value_type": "tensor_type",
+            "shape": [
+              null
+            ]
+          },
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "outputs": [
+          {
+            "name": "probabilities",
+            "value_type": "tensor_type",
+            "shape": [
+              null,
+              3
+            ]
+          }
+        ],
+        "probability_output_name": "probabilities"
+      },
+      "probability_parity": [
+        {
+          "candidate_id": "f68b_3481a04983ee",
+          "split": "train",
+          "passed": true,
+          "rows": 2048,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.5761130939262458e-07,
+          "mean_abs_diff": 3.225384248748724e-08,
+          "onnx_row_sum_max_abs_error": 2.384185791015625e-07,
+          "input_name": "float_input",
+          "output_names": [
+            "probabilities"
+          ]
+        },
+        {
+          "candidate_id": "f68b_3481a04983ee",
+          "split": "validation",
+          "passed": true,
+          "rows": 2048,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.5282349247192073e-07,
+          "mean_abs_diff": 3.177235936144921e-08,
+          "onnx_row_sum_max_abs_error": 2.682209014892578e-07,
+          "input_name": "float_input",
+          "output_names": [
+            "probabilities"
+          ]
+        },
+        {
+          "candidate_id": "f68b_3481a04983ee",
+          "split": "oos",
+          "passed": true,
+          "rows": 2048,
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "tolerance": 1e-05,
+          "max_abs_diff": 1.4427840250297308e-07,
+          "mean_abs_diff": 3.178565289007157e-08,
+          "onnx_row_sum_max_abs_error": 2.384185791015625e-07,
+          "input_name": "float_input",
+          "output_names": [
+            "probabilities"
+          ]
+        }
+      ],
+      "signal_parity": [
+        {
+          "candidate_id": "f68b_3481a04983ee",
+          "split": "validation",
+          "rows": 9844,
+          "sklearn_signal_count": 2,
+          "onnx_signal_count": 2,
+          "signal_count_diff": 0,
+          "signal_mismatch_count": 0,
+          "side_mismatch_on_signal_count": 0,
+          "max_edge_abs_diff": 2.423367140291788e-07,
+          "passed": true
+        },
+        {
+          "candidate_id": "f68b_3481a04983ee",
+          "split": "oos",
+          "rows": 7584,
+          "sklearn_signal_count": 1,
+          "onnx_signal_count": 1,
+          "signal_count_diff": 0,
+          "signal_mismatch_count": 0,
+          "side_mismatch_on_signal_count": 0,
+          "max_edge_abs_diff": 2.0539639183914105e-07,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "candidate_id": "f68b_547ac8b4ead1",
+      "axis_id": "low_dd_density_axis",
+      "export_status": "export_failed_preserved_clue",
+      "export_error": "ValueError: skl2onnx TreeEnsembleClassifier conversion failed for this HGB pipeline; preserved clue only(HGB 파이프라인 변환 실패, 보존 단서 전용).",
+      "model_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_547ac8b4ead1.joblib",
+      "model_sha256": "8a831be4521e341fc5d56bd9ae78772a91e8116b24d9300e292856a27958c963",
+      "onnx_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_547ac8b4ead1.onnx",
+      "onnx_sha256": null,
+      "feature_order_path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68C_candidate_scoring_or_onnx_scout_export_v1/models/f68b_547ac8b4ead1_feature_order.txt",
+      "feature_order_sha256": "7367a43f3f7debbaa533c7f8bcdb84130b58ddd32cded6dcda9baa6bcb6e62e7",
+      "onnx_export": {},
+      "probability_parity": [],
+      "signal_parity": []
+    }
+  ],
+  "grok_receipt": "docs/agent_control/grok_reviews/2026-06-17_f68c_pre_onnx_candidate_axis_review/f68c_pre_onnx_candidate_axis_receipt.md",
+  "grok_clean_output": "docs/agent_control/grok_reviews/2026-06-17_f68c_pre_onnx_candidate_axis_review/outputs/clean_output.md"
+}
