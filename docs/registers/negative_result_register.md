@@ -1285,3 +1285,16 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - do_not_repeat(반복 금지): same F68F ONNX(동일 F68F 온엑스)에 capped ATR(상한 평균진폭) 또는 SL/TP/ATR width only(손절/익절/평균진폭 폭만) 덧대는 repair loop(수리 반복)를 PF source(수익 팩터 원천)처럼 쓰지 않는다.
 - reopen_condition(재개 조건): feature set(피처 묶음), label/target(라벨/목표), model family(모델 계열), trade shape(거래 형태), or regime/session split(장세/세션 분할) 중 하나 이상이 실제로 바뀌고, 새 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
 - report(보고서): `stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/stage_closeout_report.md`.
+
+
+<!-- NR-FR69-EVENT-FIRST-EXTRATREES-TRADE-SHAPE-REPAIR -->
+## NR-FR69-EVENT-FIRST-EXTRATREES-TRADE-SHAPE-REPAIR
+
+- Stage(단계): `stage_frontier_69__axis_rotation_after_lifecycle_risk_only_negative_memory`
+- Hypothesis(가설): event-first first-hit opportunity model(이벤트 우선 선도달 기회 모델)이 F68 risk-only negative memory(F68 위험 단독 부정 기억) 뒤 새 PF source(수익 팩터 원천)를 만들 수 있다.
+- Why failed(실패 이유): sparse PF clue(희박 PF 단서)는 trades/day(일거래)가 `0.0359` OOS 수준으로 너무 얇고, dense repair(밀도 수리)는 PF가 `1.19` OOS 또는 그 이하로 약했다. F69E 650-row repair sweep(F69E 650행 수리 탐색)에서 final_gate_like(최종 조건 유사) `0`, joint_soft(완화 공동 조건) `0`이었다.
+- Salvage value(회수 가치): ONNX/probability/signal/feature parity(온엑스/확률/신호/피처 동등성)와 RuntimeVetoTape event mask bridge(런타임 차단 테이프 이벤트 마스크 연결)는 관찰 도구로 보존한다.
+- Reopen condition(재개 조건): label/target(라벨/목표) and model family(모델 계열)를 함께 바꾸고, density objective(밀도 목표)를 post-hoc quota(사후 할당)가 아니라 label/selection(라벨/선택)에 내장할 때만 재개한다.
+- Do-not-repeat(반복 금지): same F69 event-first ExtraTrees threshold/cooldown/daily quota repair loop(동일 F69 이벤트 우선 엑스트라트리스 임계값/쿨다운/일별 할당 수리 반복)를 반복하지 않는다.
+- Evidence(근거): `stages/stage_frontier_69__axis_rotation_after_lifecycle_risk_only_negative_memory/03_reviews/stage_closeout_report.md`.
+- Boundary(경계): no authority(권위 없음), no completion(완성 없음).

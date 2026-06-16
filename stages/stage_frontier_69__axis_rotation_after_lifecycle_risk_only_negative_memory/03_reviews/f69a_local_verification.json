@@ -1,0 +1,39 @@
+{
+  "grok_transport_success": true,
+  "grok_prompt_hash": "abd3c8b4e4af23528e62ce0dfb51989bc3063f00091f14d6fc3bd1b5a612c9d8",
+  "five_stage_retrospective_due_status": "not_due",
+  "data_source_usable": true,
+  "raw_model_alignment": true,
+  "first_hit_label_definability": {
+    "h3": 46650,
+    "h6": 46650,
+    "h9": 46650,
+    "h12": 46650,
+    "judgment": "usable_with_closed_bar_future_path_boundary(닫힌 봉 이후 미래 경로 경계에서 사용 가능)"
+  },
+  "event_sparsity_budget": "target 5-10 trades/day remains final-review gate; F69B proxy scout should log event rows/day before MT5(최종 게이트는 5-10회/일, F69B는 MT5 전 이벤트 행/일 기록)",
+  "session_regime_schema": {
+    "session_buckets": {
+      "open_0_30": 4210,
+      "mid_35_300": 38357,
+      "late_305_390": 4083,
+      "outside_or_missing": 0
+    },
+    "regime_buckets": {
+      "trend_adx_ge25": 23460,
+      "chop_adx_lt18": 9881,
+      "vol_expansion_hv5over20_ge1p25": 7207,
+      "bb_squeeze_on": 5475
+    },
+    "judgment": "usable_for_proxy_bucket_attribution(프록시 구간 귀속에 사용 가능)"
+  },
+  "tier_pair_plan": "Tier A separate, Tier B separate, Tier A+B combined required; if unavailable mark missing_required/blocked/out_of_scope_by_claim(티어 A/B/합산 필수, 불가 시 상태 명시)",
+  "forbidden_claims": {
+    "completion": "not_claimed(주장 없음)",
+    "baseline": "not_claimed(주장 없음)",
+    "promotion": "not_claimed(주장 없음)",
+    "runtime_authority": "not_claimed(주장 없음)",
+    "live_readiness": "not_claimed(주장 없음)",
+    "goal_achieve": "not_claimed(주장 없음)"
+  }
+}

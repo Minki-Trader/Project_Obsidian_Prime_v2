@@ -1,0 +1,235 @@
+{
+  "run_id": "frontier69A_stage_open_axis_rotation_hypothesis_design_v1",
+  "stage_id": "stage_frontier_69__axis_rotation_after_lifecycle_risk_only_negative_memory",
+  "created_at_utc": "2026-06-16T19:47:04Z",
+  "idea_id": "IDEA-FR69-EVENT-FIRST-AXIS-ROTATION-PF-SOURCE",
+  "claim_boundary": "stage_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "hypothesis": "A sparse event-first regime/session and candle-path opportunity model(희소 이벤트 우선 장세/세션 및 캔들 경로 기회 모델)이 F68 risk-only repair loop(F68 위험 단독 수리 반복)와 다른 PF source(수익 팩터 원천)를 만들 수 있는지 시험한다.",
+  "decision_use": "Open F69 and authorize F69B proxy sweep only( F69 개방 및 F69B 프록시 탐색 허용만 한다).",
+  "comparison_baseline": "F68 closeout evidence only, not a baseline( F68 마감 근거는 참조일 뿐 기준선 아님).",
+  "control_variables": [
+    "symbol/timeframe US100 M5(심볼/시간프레임 US100 5분봉)",
+    "closed-bar only features(닫힌 봉 피처만)",
+    "train/validation/OOS split v1(학습/검증/표본외 분할 v1)",
+    "risk template frozen in F69B phase 1(F69B 1단계 위험 템플릿 고정)",
+    "no strong claims(강한 주장 없음)"
+  ],
+  "changed_variables": [
+    "feature set becomes event/context compact surface(피처 묶음은 이벤트/문맥 압축 표면)",
+    "label becomes first-hit long/short opportunity(라벨은 선도달 롱/숏 기회)",
+    "model family begins interpretable-first(모델 계열은 해석 가능 우선)",
+    "trade shape becomes sparse event admission(거래 형태는 희소 이벤트 진입)",
+    "regime/session split becomes primary attribution(장세/세션 분할은 주 귀속 축)"
+  ],
+  "sample_scope": {
+    "data_source": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "raw_us100": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "rows": 46650,
+    "splits": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "tier_scope": "Tier A+B planned(티어 A+B 계획)",
+    "data_identity": {
+      "model_input_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "model_input_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "rows": 46650,
+      "columns": 69,
+      "split_counts": {
+        "train": 29222,
+        "validation": 9844,
+        "oos": 7584
+      },
+      "timestamp_min": "2022-09-01 16:40:00+00:00",
+      "timestamp_max": "2026-04-13 22:00:00+00:00",
+      "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "feature_count": 58,
+      "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "feature_order_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb",
+      "raw_us100_path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "raw_us100_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+      "raw_columns": [
+        "time_open_unix",
+        "time_close_unix",
+        "contract_symbol",
+        "broker_symbol",
+        "timeframe",
+        "price_basis",
+        "open",
+        "high",
+        "low",
+        "close",
+        "tick_volume",
+        "spread_points",
+        "real_volume",
+        "time_basis",
+        "timezone_status"
+      ],
+      "aligned_model_rows": 46650,
+      "unaligned_model_rows": 0,
+      "labelable": {
+        "h3_labelable_rows": 46650,
+        "h3_split_counts": {
+          "train": 29222,
+          "validation": 9844,
+          "oos": 7584
+        },
+        "h6_labelable_rows": 46650,
+        "h6_split_counts": {
+          "train": 29222,
+          "validation": 9844,
+          "oos": 7584
+        },
+        "h9_labelable_rows": 46650,
+        "h9_split_counts": {
+          "train": 29222,
+          "validation": 9844,
+          "oos": 7584
+        },
+        "h12_labelable_rows": 46650,
+        "h12_split_counts": {
+          "train": 29222,
+          "validation": 9844,
+          "oos": 7584
+        }
+      },
+      "session_bucket_counts": {
+        "open_0_30": 4210,
+        "mid_35_300": 38357,
+        "late_305_390": 4083,
+        "outside_or_missing": 0
+      },
+      "regime_bucket_counts": {
+        "trend_adx_ge25": 23460,
+        "chop_adx_lt18": 9881,
+        "vol_expansion_hv5over20_ge1p25": 7207,
+        "bb_squeeze_on": 5475
+      }
+    }
+  },
+  "success_criteria": [
+    "F69B shows proxy PF movement not explained only by density or DD repair(F69B가 밀도/손실폭 수리만이 아닌 PF 움직임을 보임)",
+    "session/regime bucket separation is visible(세션/장세 구간 분리가 보임)",
+    "event sparsity remains compatible with eventual 5-10 trades/day target(이벤트 희소성이 최종 5-10회/일 목표와 양립 가능)"
+  ],
+  "failure_criteria": [
+    "all useful rows come only from SL/TP/cooldown width changes(유용 행이 손익절/쿨다운 폭 변경에서만 나옴)",
+    "feature/model surface collapses into F68F reuse(F68F 재사용으로 붕괴)",
+    "proxy signal is zero or only validation-specific(프록시 신호가 0 또는 검증 전용)"
+  ],
+  "invalid_conditions": [
+    "first-hit labels use current or future data incorrectly(선도달 라벨이 현재/미래 데이터를 잘못 사용)",
+    "session buckets use raw broker timestamp as direct UTC(세션 구간이 원천 브로커 시간을 직접 UTC로 사용)",
+    "Tier B or combined record is silently omitted(티어 B 또는 합산 기록이 조용히 누락)"
+  ],
+  "stop_conditions": [
+    "F69B zero signal: record invalid/blocked and repair label/event definition(F69B 영 신호면 무효/차단 기록 후 라벨/이벤트 수리)",
+    "meaningful proxy signal: run pre-MT5 Grok and mandatory MT5 Runtime Probe(의미 있는 프록시 신호면 사전 그록 및 필수 MT5 탐침)",
+    "risk-only repetition detected: cap repair and close as negative memory(위험 단독 반복이면 수리 상한 후 부정 기억 마감)"
+  ],
+  "evidence_plan": [
+    "axis diff table(축 차이표)",
+    "F69B proxy KPI by split and bucket(F69B 분할/구간별 프록시 KPI)",
+    "Tier A/B/combined ledger rows(티어 A/B/합산 장부 행)",
+    "pre-MT5 Grok receipt before runtime probe(런타임 탐침 전 그록 영수증)",
+    "mandatory MT5 Runtime Probe receipt if meaningful proxy signal exists(의미 있는 프록시 신호 시 필수 MT5 탐침 영수증)"
+  ],
+  "exploration_mandate": {
+    "legacy_relation": "prior_evidence_only(이전 근거 전용)",
+    "tier_scope": "Tier A+B planned(티어 A+B 계획)",
+    "broad_sweep": "event labels, compact features, interpretable models, session/regime buckets(이벤트 라벨/압축 피처/해석 모델/세션 장세 구간)",
+    "extreme_sweep": "boundary event definitions and sparse/dense event budgets only after phase 1(1단계 후 경계 이벤트 정의와 희소/밀도 예산)",
+    "micro_search_gate": "proxy PF movement plus bucket separation(프록시 PF 움직임과 구간 분리)",
+    "wfo_plan": "WFO is required after proxy and runtime scout show nonzero material signal(프록시와 런타임 탐색이 0이 아닌 신호를 보이면 WFO 필수)",
+    "failure_memory": "record do-not-repeat if F69 collapses to risk-only or F68F reuse(F69가 위험 단독/F68F 재사용으로 붕괴하면 반복 금지 기록)",
+    "evidence_boundary": "stage_open_design_only(단계 개방 설계 전용)"
+  },
+  "data_integrity": {
+    "data_source": [
+      "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+    ],
+    "time_axis": "bar-close key with project time-axis policy; session columns from verified mapper(봉 닫힘 키와 프로젝트 시간축 정책, 검증 매퍼 세션 컬럼)",
+    "sample_scope": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "missing_or_duplicate_check": "raw/model alignment 46650/46650, unaligned 0(원천/모델 정렬 46650/46650, 미정렬 0)",
+    "feature_label_boundary": "features at current closed bar; labels use future path after entry bar only(피처는 현재 닫힌 봉, 라벨은 진입봉 이후 미래 경로)",
+    "split_boundary": "train/validation/oos split v1 retained(분할 v1 유지)",
+    "leakage_risk": "first-hit path and session bucket construction(선도달 경로와 세션 구간 구성)",
+    "data_hash_or_identity": {
+      "model_input_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "raw_us100_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784"
+    },
+    "integrity_judgment": "usable_with_boundary(경계 내 사용 가능)"
+  },
+  "model_validation": {
+    "model_family": "linear and shallow tree first; optional EBM-like if local support(선형/얕은 트리 우선, 로컬 지원 시 EBM 유사 선택)",
+    "target_and_label": "side-specific first-hit opportunity with MAE guard(불리 이동 보호가 있는 방향별 선도달 기회)",
+    "split_method": "time-ordered train/validation/OOS and later WFO(시간순 학습/검증/표본외 및 이후 WFO)",
+    "selection_metric": "proxy PF movement with trades/day and DD guardrails(프록시 PF 움직임과 일 거래 수/손실폭 가드레일)",
+    "secondary_metrics": "bucket separation, shuffled-label control, long/short mix(구간 분리, 셔플 라벨 대조, 롱/숏 비율)",
+    "threshold_policy": "searched only after event/label signal exists(이벤트/라벨 신호 이후에만 탐색)",
+    "overfit_risk": "multi-axis broad sweep selection bias(다축 넓은 탐색 선택 편향)",
+    "calibration_risk": "scores are ranks, not probabilities until calibrated(보정 전 점수는 확률이 아니라 순위)",
+    "comparison_baseline": "F68 negative memory reference and no-trade/shuffled controls(F68 부정 기억 참조 및 무거래/셔플 대조)",
+    "validation_judgment": "exploratory_stage_open(탐색 단계 개방)"
+  },
+  "grok": {
+    "trigger_reason": "goal requires Grok stage-open review(목표가 그록 단계 개방 검토를 요구)",
+    "review_size": "medium",
+    "direction_before_grok": "Open F69 as event-first axis rotation after F68 risk-only negative memory(F68 위험 단독 부정 기억 뒤 이벤트 우선 축 회전으로 F69 개방)",
+    "bounded_evidence": [
+      "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/stage_closeout_report.md",
+      "docs/registers/five_stage_retrospective_register.yaml",
+      "docs/agent_control/grok_reviews/2026-06-17_f69_stage_open_axis_rotation/prompts/f69_stage_open_axis_rotation_prompt.md"
+    ],
+    "prompt_identity": {
+      "path": "docs/agent_control/grok_reviews/2026-06-17_f69_stage_open_axis_rotation/prompts/f69_stage_open_axis_rotation_prompt.md",
+      "prompt_hash": "abd3c8b4e4af23528e62ce0dfb51989bc3063f00091f14d6fc3bd1b5a612c9d8",
+      "sha256": "e86505149f07c58db0ae5de9a9974ee35f57b6409d10cdc13d3e489100b87772"
+    },
+    "grok_output_identity": {
+      "path": "docs/agent_control/grok_reviews/2026-06-17_f69_stage_open_axis_rotation/outputs/clean_output.md",
+      "sha256": "3740ff9e5802a0d2f534cd0f8b4dbab897e83c173be9dc8fa02dcaa50e2e1f23",
+      "metadata": "docs/agent_control/grok_reviews/2026-06-17_f69_stage_open_axis_rotation/outputs/metadata.json"
+    },
+    "advice_classification": {
+      "accepted": [
+        "axis rotation is directionally sound(축 회전 방향 타당)",
+        "stage open design-only boundary is sound(단계 개방 설계 전용 경계 타당)",
+        "interpretable compact model family first(해석 가능한 압축 모델 우선)",
+        "regime/session bucket attribution required(장세/세션 구간 귀속 필요)"
+      ],
+      "rejected": [
+        "do not use F68J OOS metrics as F69 success preconditions(F68J 표본외 지표를 F69 성공 전제로 쓰지 않음)",
+        "do not let F69 become F68F reuse with event wrappers(F69를 이벤트 포장 F68F 재사용으로 만들지 않음)",
+        "do not frame pre-MT5 probe as due at stage open(사전 MT5 탐침을 단계 개방 시점 의무로 말하지 않음)"
+      ],
+      "needs_local_verification": [
+        "F68 artifact lineage and explicit exclusions(F68 산출물 계보와 명시 제외)",
+        "first-hit label definability(선도달 라벨 정의 가능성)",
+        "event sparsity budget(이벤트 희소성 예산)",
+        "session/regime bucket schema(세션/장세 구간 스키마)",
+        "Tier A/B paired plan(티어 A/B 쌍 계획)"
+      ]
+    },
+    "local_verification": "recorded in f69a_local_verification.json(F69A 로컬 검증 JSON에 기록)",
+    "forbidden_claim_check": "no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음)",
+    "final_codex_direction": "accept with local constraints and open F69A as axis contract(로컬 제약과 함께 수용하고 F69A를 축 계약으로 개방)",
+    "clean_output_excerpt": [
+      "## F69 Stage Open Review (F69 단계 개방 검토)",
+      "",
+      "**Review size:** medium review (중간 검토) — bounded snapshot (제한 스냅샷) + one focused question (집중 질문 하나)  ",
+      "**Claim boundary:** `stage_open_design_only` — no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve",
+      "",
+      "---",
+      "",
+      "### 1. accepted (수용)"
+    ]
+  },
+  "next_run_id": "frontier69B_event_first_first_hit_proxy_sweep_v1"
+}
