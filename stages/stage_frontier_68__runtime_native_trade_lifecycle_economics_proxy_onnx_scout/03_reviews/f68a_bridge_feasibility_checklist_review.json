@@ -1,0 +1,120 @@
+{
+  "run_id": "frontier68A_stage_open_lifecycle_economics_proxy_design_v1",
+  "stage_id": "stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout",
+  "created_at_utc": "2026-06-16T16:23:38Z",
+  "claim_boundary": "preflight_and_label_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "research_path": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "foundation/alpha/scout_runner.py",
+    "foundation/models/onnx_bridge.py"
+  ],
+  "runtime_path": [
+    "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+    "foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh",
+    "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh",
+    "foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh"
+  ],
+  "shared_contract": {
+    "symbol": "US100",
+    "timeframe": "M5",
+    "input_shape": "[1, feature_count]",
+    "output_order": "[p_short, p_flat, p_long]",
+    "tier_records_required": [
+      "Tier A separate(Tier A 분리)",
+      "Tier B separate(Tier B 분리)",
+      "Tier A+B combined(Tier A+B 합산)"
+    ],
+    "feature_order_hash_v2_58": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_count_v2_58": 58
+  },
+  "checks": [
+    {
+      "check": "full_feature_model_input_exists",
+      "status": "pass",
+      "evidence": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "effect": "F68B can build a proxy(F68B는 프록시를 만들 수 있음) from full 58-feature rows(전체 58개 피처 행) instead of only F67D one-column signal replay(F67D 한 컬럼 신호 재생만 쓰는 방식이 아님)."
+    },
+    {
+      "check": "single_signal_runtime_handoff_exists",
+      "status": "pass",
+      "evidence": "stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/02_runs/frontier67D_narrow_cost_order_intent_runtime_probe_v1/features/F31_c416c0dae0c6_oos_features.csv",
+      "effect": "F67D proves(F67D가 증명함) the current RuntimeProbeEA(현재 런타임 탐침 EA)가 staged feature CSV(단계 피처 CSV)를 소비하고 MT5 KPI(MT5 핵심 성과 지표)를 만들 수 있음을 보여준다."
+    },
+    {
+      "check": "full_feature_runtime_handoff_feasible",
+      "status": "pass_pending_f68_model",
+      "evidence": "foundation/alpha/scout_runner.py::materialize_mt5_probe_bundle and RuntimeProbeEA InpFeatureCount",
+      "effect": "If F68B produces a model/proxy artifact(F68B가 모델/프록시 산출물을 만들면), F68 can materialize 56/58-feature ONNX probes(F68은 56/58개 피처 ONNX 탐침을 물질화할 수 있음) without new EA entrypoint(새 EA 진입점 없이)."
+    },
+    {
+      "check": "onnx_export_path_available",
+      "status": "pass_pending_f68_model",
+      "evidence": "foundation/models/onnx_bridge.py",
+      "effect": "Sklearn-compatible F68 candidates(사이킷런 호환 F68 후보)는 zipmap disabled(집맵 비활성) ONNX export(ONNX 내보내기)가 가능하고, EBM table path(EBM 표 경로)는 runtime-compatible fallback(런타임 호환 대체 경로)로 남는다."
+    },
+    {
+      "check": "mandatory_mt5_probe_now",
+      "status": "not_due_no_meaningful_proxy_signal_yet",
+      "evidence": "F68A is preflight and label design only(F68A는 사전확인 및 라벨 설계 전용).",
+      "effect": "MT5 probe(MT5 탐침)는 F68B/F68C가 meaningful proxy signal(의미 있는 프록시 신호)을 만든 뒤 F68 mandatory step(F68 필수 단계)으로 보존된다."
+    }
+  ],
+  "known_differences": [
+    "F67D matrix(F67D 행렬)는 one-feature discrete signal replay(단일 피처 이산 신호 재생)이지 full feature model input(전체 피처 모델 입력)이 아니다.",
+    "F68 has no trained proxy/model/ONNX artifact yet(F68은 아직 학습된 프록시/모델/ONNX 산출물이 없다).",
+    "F68 Tier B partial-context frames(F68 Tier B 부분 문맥 프레임)는 existing helpers(기존 도구)로 가능하지만 this run(이번 실행)에서는 물질화하지 않았다."
+  ],
+  "parity_identity": {
+    "mt5_runtime_module_hashes": [
+      {
+        "path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+        "status": "present",
+        "sha256": "322772eb36777c9570f3fe7a6f0c808b3c929a62d2cae96c44e7d2c08b8a9180"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/DecisionSurface.mqh",
+        "status": "present",
+        "sha256": "73c3f1f93ee04b441c1ef50ec209d52d961211d71bc4e0b206b22de2d2953eaa"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/EbmTableRuntime.mqh",
+        "status": "present",
+        "sha256": "49cc0bf61d6feccc52c47d9246804c99991bb0df7d7cc49dc6398d02f52bc597"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh",
+        "status": "present",
+        "sha256": "6d05002d599692b77ff53327e4b8bc938ec7956d0ca1e6237e094d2a21a58560"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh",
+        "status": "present",
+        "sha256": "314193b3d713d5ee96a89088a33935b2bb203c4ed006f7f4254b119c294a2e00"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh",
+        "status": "present",
+        "sha256": "115f79936493a0d944484ffb619d6120a3f49a8b044c509ec5f4753267373637"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/ProbabilityBinVeto.mqh",
+        "status": "present",
+        "sha256": "3bb2efebb54c0493d08e2e114ddcd8702abef5aa070fb6cecd18a36856d2380a"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh",
+        "status": "present",
+        "sha256": "b9ecadfde682d071e663721c3e761c633b8e525484554e0ceb432e110c6ea6a7"
+      },
+      {
+        "path": "foundation/mt5/include/ObsidianPrime/RuntimeVetoTape.mqh",
+        "status": "present",
+        "sha256": "a9e4fcfbbe21734b7af4d66b3544a91dfb5a9e3e30596d6e47ea10b3f5afd7f2"
+      }
+    ],
+    "f67d_feature_matrix_sha256": "bac97483769354159b438eaa7bed1afc7f53e0b920eda74e4df0ec05e690ac96",
+    "model_input_v2_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
+  },
+  "runtime_claim_boundary": "not_applicable_preflight_only",
+  "next_action": "frontier68B_runtime_lifecycle_proxy_broad_sweep_v1"
+}

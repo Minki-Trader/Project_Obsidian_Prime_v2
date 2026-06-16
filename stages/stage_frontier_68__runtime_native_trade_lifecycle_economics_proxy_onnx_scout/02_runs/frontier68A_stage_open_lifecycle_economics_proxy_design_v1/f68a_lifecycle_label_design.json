@@ -1,0 +1,84 @@
+{
+  "run_id": "frontier68A_stage_open_lifecycle_economics_proxy_design_v1",
+  "stage_id": "stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout",
+  "created_at_utc": "2026-06-16T16:23:38Z",
+  "claim_boundary": "preflight_and_label_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "idea_id": "IDEA-FR68-RUNTIME-LIFECYCLE-ECONOMICS-PROXY-ONNX-SCOUT",
+  "hypothesis": "A proxy(프록시)가 entry-known rows(진입 시점에 알 수 있는 행)을 expected lifecycle economics(예상 생명주기 경제성), cost sensitivity(비용 민감도), drawdown hazard(손실폭 위험)로 점수화하면 count/feature parity alone(개수/피처 동등성 단독)보다 더 나은 MT5 runtime seed(MT5 런타임 씨앗)를 만들 수 있다.",
+  "decision_use": "Choose whether F68B should prototype runtime-lifecycle proxy surfaces(F68B가 런타임 생명주기 프록시 표면을 원형으로 만들지 선택) and which surface earns MT5 materialization(어떤 표면이 MT5 물질화 자격을 얻는지 선택).",
+  "legacy_relation": "prior_evidence_only",
+  "tier_scope": "mixed_tier_a_tier_b_planned",
+  "comparison_baseline": {
+    "f67d": "PF(수익 팩터)=1.0; DD(손실폭)=30.58; trades_per_day(일 거래 수)=1.3282; signal_diff(신호 차이)=0; feature_diff(피처 차이)=0",
+    "f67c": "64 runtime lifecycle rows(64개 런타임 생명주기 행); trade/signal compression(거래/신호 압축) and report-level swap/deal effects(보고서 수준 스왑/딜 효과) observed(관찰됨)"
+  },
+  "control_variables": [
+    "US100 M5 closed-bar timing(확정 봉 시간 규칙)",
+    "no inherited winner/baseline/promotion/runtime authority(승자/기준선/승격/런타임 권위 상속 없음)",
+    "same final four-axis target remains final-review-only hard gate(같은 최종 네 축 목표는 최종 검토 전용 강제 게이트로 유지)",
+    "MT5 RuntimeProbeEA entrypoint unchanged(MT5 런타임 탐침 EA 진입점 유지) unless F68B proves bridge impossibility(F68B가 연결 불가능을 증명할 때만 예외)"
+  ],
+  "changed_variables": [
+    "runtime-lifecycle-aware target or utility score(런타임 생명주기 인식 목표 또는 효용 점수)",
+    "cost/DD hazard penalty in proxy scoring(프록시 점수화 안의 비용/손실폭 위험 벌점)",
+    "feature source may use 58-feature MT5 price-proxy model input(피처 원천은 58개 피처 MT5 가격 대리 모델 입력 사용 가능) instead of one-column discrete signal replay(한 컬럼 이산 신호 재생 대신)",
+    "model/export family remains open-ended(모델/내보내기 계열은 열린 상태) and chosen by evidence(근거로 선택), not by a fixed menu(고정 메뉴가 아님)"
+  ],
+  "sample_scope": {
+    "primary_dataset": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "primary_rows": 46650,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "runtime_reference": "stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/03_reviews/frontier67D_order_intent_receipt_review.csv"
+  },
+  "broad_sweep": [
+    "lifecycle utility scoring with cost/DD penalties(생명주기 효용 점수화와 비용/손실폭 벌점)",
+    "drawdown hazard avoidance as a flat/no-trade pressure(무거래 압력으로 쓰는 손실폭 위험 회피)",
+    "trade-density recovery surfaces that avoid count-only parity repair(개수 동등성 단독 수리를 피하는 거래 밀도 회복 표면)",
+    "other current-evidence alpha sources if they dominate these seeds(이 씨앗보다 강한 현재 근거 기반 알파 원천)"
+  ],
+  "extreme_sweep": [
+    "zero or very light cost/DD penalty(0 또는 매우 약한 비용/손실폭 벌점) to reveal over-trading cliff(과거래 절벽 확인)",
+    "strong DD penalty(강한 손실폭 벌점) to reveal under-trading cliff(과소거래 절벽 확인)",
+    "flat/no-trade pressure from permissive to strict(느슨함부터 엄격함까지 무거래 압력 변화)",
+    "hold/risk settings bounded by runtime bridge capabilities(런타임 연결 능력 안에서 보유/위험 설정 변화)"
+  ],
+  "micro_search_gate": "Only micro-tune(미세 조정은) after at least one F68B surface creates nonzero signals(최소 하나의 F68B 표면이 영이 아닌 신호를 만들고), preserves feature readiness(피처 준비를 보존하며), and improves at least two of PF/DD/trade-density proxy direction versus F67D(F67D 대비 수익 팩터/손실폭/거래 밀도 중 최소 두 축 방향을 개선하고) without hiding a third-axis collapse(세 번째 축 붕괴를 숨기지 않을 때만 한다).",
+  "wfo_plan": "Use validation/OOS as scout split first(검증/표본외를 먼저 탐색 분할로 사용); if a meaningful signal appears(의미 있는 신호가 나오면), move to WFO/stress(워크포워드/스트레스 검증으로 이동) before any completion or authority claim(완성 또는 권위 주장 전).",
+  "success_criteria": [
+    "F68B produces at least one nonzero proxy surface(F68B가 최소 하나의 영이 아닌 프록시 표면을 생성) with explicit Tier A, Tier B, and combined record plan(Tier A/Tier B/합산 기록 계획 포함).",
+    "Proxy KPI(프록시 핵심 성과 지표)는 all four target axes(네 목표 축)를 hard pass/fail(강제 통과/실패)이 아니라 distance-to-goal(목표까지 거리)로 보고한다.",
+    "A selected scout surface(선택된 탐색 표면)는 EA entrypoint changes(EA 진입점 변경) 없이 MT5 export/bridge(MT5 내보내기/연결)가 가능하다."
+  ],
+  "failure_criteria": [
+    "All candidate surfaces(모든 후보 표면)가 zero-signal(영 신호) 또는 pure count-parity repeats(순수 개수 동등성 반복)이다.",
+    "Proxy improves one axis(프록시가 한 축만 개선) while hiding DD or trade-density collapse(손실폭 또는 거래 밀도 붕괴를 숨긴다).",
+    "Required feature/runtime bridge(필수 피처/런타임 연결)를 materialized(물질화)할 수 없고 repair path(수리 경로)가 없다."
+  ],
+  "invalid_conditions": [
+    "Use realized MT5 PnL or future trade outcome(실현 MT5 손익 또는 미래 거래 결과)을 entry feature(진입 피처)로 쓴다.",
+    "Treat F67D single-slice KPI(F67D 단일 조각 핵심 성과 지표)를 broad proof(넓은 증명)처럼 해석한다.",
+    "Use examples(예시)를 non-exhaustive prompts(비한정 프롬프트)가 아니라 fixed checklist(고정 체크리스트)로 쓴다."
+  ],
+  "stop_conditions": [
+    "Stop F68B broad sweep(F68B 넓은 탐색 중지) if source joins fail(원천 결합 실패 시); write bridge repair action(연결 수리 행동 기록).",
+    "Stop before MT5(MT5 전 중지) if proxy signal is zero(프록시 신호가 0이면); classify as invalid/blocked with repair path(수리 경로와 함께 무효/차단으로 분류).",
+    "Request pre-MT5 Grok review(MT5 전 Grok 검토 요청) before runtime materialization(런타임 물질화 전)."
+  ],
+  "failure_memory": {
+    "negative_result_requirement": "Record negative result(부정 결과 기록) if lifecycle-aware proxy(생명주기 인식 프록시)가 meaningful proxy signal(의미 있는 프록시 신호)에도 MT5에서 붕괴하면.",
+    "salvage_value": "Preserve(보존) which lifecycle/cost/DD term(생명주기/비용/손실폭 항)이 which target axis(어떤 목표 축)을 움직였는지.",
+    "reopen_condition": "Reopen only with a new alpha source(새 알파 원천이 있을 때만 재개), not a repeat of count/feature parity(개수/피처 동등성 반복 아님)."
+  },
+  "evidence_plan": [
+    "F68B proxy row table(F68B 프록시 행 표) with Tier A separate, Tier B separate, Tier A+B combined records(Tier A 분리/Tier B 분리/Tier A+B 합산 기록).",
+    "Proxy KPI(프록시 핵심 성과 지표) with net, PF, DD, trade count, trades/day, win rate, expectancy, recovery(순수익/수익 팩터/손실폭/거래 수/일 거래 수/승률/기대값/회복 계수), where computable(계산 가능할 때).",
+    "ONNX or runtime-compatible model bundle identity(ONNX 또는 런타임 호환 모델 묶음 정체성) before MT5(MT5 전).",
+    "Pre-MT5 Grok review(MT5 전 Grok 검토) before Runtime Probe(런타임 탐침 전).",
+    "Mandatory MT5 Strategy Tester output(필수 MT5 전략 테스터 출력) after meaningful proxy signal(의미 있는 프록시 신호 후)."
+  ],
+  "next_action": "frontier68B_runtime_lifecycle_proxy_broad_sweep_v1"
+}
