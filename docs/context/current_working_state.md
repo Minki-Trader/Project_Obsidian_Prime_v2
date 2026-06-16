@@ -3,10 +3,10 @@
 Frontier67(F67, 전선 67단계)는 count parity not PnL parity runtime economics crosswalk(개수 동등성은 손익 동등성이 아닌가 런타임 경제성 대조)로 열려 있다.
 
 - stage(단계): `stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk`
-- current_run(현재 실행): `frontier67A_dd_basis_crosswalk_execution_v1`
-- next_run(다음 실행): `frontier67B_config_parity_depth_pilot_v1`
-- status(상태): `frontier67A_dd_basis_crosswalk_observation_no_authority(F67A 손실폭 기준 대조 관찰, 권위 없음)`
-- latest_completed_run(최근 완료 실행): `frontier67A_dd_basis_crosswalk_execution_v1`
+- current_run(현재 실행): `frontier67B_config_parity_depth_pilot_v1`
+- next_run(다음 실행): `frontier67C_runtime_native_order_intent_economics_v1`
+- status(상태): `frontier67B_config_parity_observation_no_authority(F67B 설정 동등성 관찰, 권위 없음)`
+- latest_completed_run(최근 완료 실행): `frontier67B_config_parity_depth_pilot_v1`
 - five_stage_retrospective(5단계 그록 중간 검토): `not_due_after_F66_1_of_5(66단계 이후 1/5, 아직 아님)`
 
 Action(행동): F66을 `preserved_clue_negative_memory(보존 단서 + 부정 기억)`로 닫고, F67을 Grok stage-open review(그록 단계 개방 검토) 후 새 가설 stage(단계)로 열었다.
@@ -42,6 +42,17 @@ F67A DD basis crosswalk read(F67A 손실폭 기준 대조 판독):
 - next_action(다음 행동): F67B config parity depth pilot(설정 동등성 깊이 파일럿)
 - runtime_probe_status(런타임 탐침 상태): F67 closeout(마감) 전 별도 MT5 Runtime Probe(MT5 런타임 탐침) still required(여전히 필수)
 
+F67B config parity depth pilot read(F67B 설정 동등성 깊이 파일럿 판독):
+
+- row_count(행 수): `64`
+- tester_signature_count(테스터 정체성 서명 수): `1`
+- EA core signature count(EA 핵심 설정 서명 수): `1`
+- trade_shape_signature_count(거래 형태 설정 서명 수): `7`
+- uniform tester fields(동일 테스터 필드): Symbol/Period/Model/Deposit/Leverage/Optimization/ExecutionMode/UseLocal/UseRemote/UseCloud(심볼/주기/모델/예치금/레버리지/최적화/실행 모드/로컬/원격/클라우드)
+- explicit cost identity(명시 비용 정체성): spread/commission/slippage/swap(스프레드/수수료/슬리피지/스왑) `missing 64/64`
+- next_action(다음 행동): F67C runtime-native order intent economics(런타임 기반 주문 의도 경제성) with cost identity reinforcement(비용 정체성 보강)
+- runtime_probe_status(런타임 탐침 상태): F67 closeout(마감) 전 별도 MT5 Runtime Probe(MT5 런타임 탐침) still required(여전히 필수)
+
 Key artifacts(핵심 산출물):
 
 - F66 closeout report(F66 마감 보고서): `stages/stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64/03_reviews/stage_closeout_report.md`
@@ -49,6 +60,7 @@ Key artifacts(핵심 산출물):
 - F67 stage brief(F67 단계 개요): `stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/00_spec/stage_brief.md`
 - F67 Grok receipt(F67 그록 영수증): `stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/03_reviews/grok_stage_open_receipt.md`
 - F67A DD basis report(F67A 손실폭 기준 보고서): `stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/03_reviews/frontier67A_dd_basis_crosswalk_report.md`
+- F67B config parity report(F67B 설정 동등성 보고서): `stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/03_reviews/frontier67B_config_parity_depth_pilot_report.md`
 - five-stage retrospective register(5단계 중간 검토 등록부): `docs/registers/five_stage_retrospective_register.yaml`
 
 Claim boundary(주장 경계): stage-open direction(단계 개방 방향), runtime_probe_observation(런타임 탐침 관찰), preserved clue(보존 단서), negative memory(부정 기억)까지만 말한다. completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.

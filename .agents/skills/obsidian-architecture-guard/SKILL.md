@@ -65,3 +65,5 @@ Run `scripts/validate_agent_settings.py --repo-root .` after editing agent setti
 The validator intentionally treats `agents/openai.yaml` as a small repo-local format: top-level `interface:` and `policy:` sections with two-space indented one-line scalar fields. If richer YAML is needed later, add an explicit YAML dependency and update the validator instead of silently relying on unsupported syntax.
 
 If the full validator fails because of already recorded historical encoding debt(기록된 과거 인코딩 부채), also run `scripts/validate_agent_settings.py --repo-root . --encoding-scope <repo-relative-path>` for each changed Korean `.md` or `.txt` surface and record both results. Effect(효과): the full backlog(전체 백로그)은 숨기지 않으면서 the current patch(현재 패치)가 new mojibake/BOM debt(새 문자 깨짐/BOM 부채)를 만들었는지 분리한다.
+
+For deep stage paths(깊은 단계 경로), scoped encoding validation(범위 인코딩 검증)은 repo-relative path(저장소 상대 경로)를 받되, internally(내부적으로) `foundation.control_plane.ledger.io_path(입출력 경로 보조)`로 existence/read(존재/읽기)를 확인해야 한다. Effect(효과): Windows MAX_PATH(윈도우 경로 길이 한계) 때문에 존재하는 Korean report(한국어 보고서)를 missing(누락)으로 오판하지 않는다.

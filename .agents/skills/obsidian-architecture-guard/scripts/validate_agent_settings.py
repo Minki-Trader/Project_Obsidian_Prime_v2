@@ -5,6 +5,12 @@ import re
 import sys
 from pathlib import Path
 
+REPO_ROOT_FOR_IMPORTS = Path(__file__).resolve().parents[4]
+if str(REPO_ROOT_FOR_IMPORTS) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT_FOR_IMPORTS))
+
+from foundation.control_plane.ledger import io_path, path_exists
+
 
 UTF8_BOM = b"\xef\xbb\xbf"
 HANGUL_RE = re.compile(r"[\uac00-\ud7a3]")
@@ -89,7 +95,7 @@ def check_doc_file(repo_root: Path, path: Path) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
     rel = path.relative_to(repo_root).as_posix()
-    data = path.read_bytes()
+    data = io_path(path).read_bytes()
     try:
         text = data.decode("utf-8")
     except UnicodeDecodeError as exc:
@@ -121,16 +127,18 @@ def check_encoding_scope(repo_root: Path, scope_paths: list[str]) -> tuple[list[
         except ValueError:
             errors.append(f"{scope_path}: encoding scope must stay inside repo root")
             continue
-        if not path.exists():
+        if not path_exists(path):
             errors.append(f"{scope_path}: encoding scope path does not exist")
             continue
-        candidates = [path] if path.is_file() else sorted(
-            p for p in path.rglob("*") if p.is_file() and p.suffix.lower() in {".md", ".txt"}
+        safe_path = io_path(path)
+        candidates = [path] if safe_path.is_file() else sorted(
+            p for p in safe_path.rglob("*") if p.is_file() and p.suffix.lower() in {".md", ".txt"}
         )
         for candidate in candidates:
             if candidate.suffix.lower() not in {".md", ".txt"}:
                 continue
-            path_errors, path_warnings = check_doc_file(repo_root, candidate)
+            durable_candidate = Path(str(candidate).removeprefix("\\\\?\\"))
+            path_errors, path_warnings = check_doc_file(repo_root, durable_candidate)
             errors.extend(path_errors)
             warnings.extend(path_warnings)
     return errors, warnings

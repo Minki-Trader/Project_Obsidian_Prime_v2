@@ -7209,3 +7209,22 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - effect(효과): runtime/proxy DD delta median(런타임-프록시 손실폭 차이 중앙값) `10.4811pp`, runtime DD > 10 rows(런타임 손실폭 10 초과 행) `60/64`, proxy DD > 10 rows(프록시 손실폭 10 초과 행) `31/64`, proxy<10/runtime>10 rows(프록시 10 미만/런타임 10 초과 행) `22/64`를 기록했다.
 - next(다음): F67B config parity depth pilot(설정 동등성 깊이 파일럿)에서 spread/commission/slippage/modeling/deposit/leverage(스프레드/수수료/슬리피지/모델링/예치금/레버리지)를 대조한다.
 - boundary(경계): DD basis observation(손실폭 기준 관찰)이며 F67 closeout(마감) 전 MT5 Runtime Probe(MT5 런타임 탐침)는 still required(여전히 필수)다.
+
+<!-- frontier67B_config_parity_depth_pilot_v1 -->
+
+## 2026-06-16 Frontier67B Config Parity Depth Pilot(F67B 설정 동등성 깊이 파일럿)
+
+- action(행동): F66 MT5 attempts(F66 MT5 시도) `64`개에서 generated `.ini/.set` identity(생성 설정 정체성), F67A DD basis rows(F67A 손실폭 기준 행), runtime KPI rows(런타임 핵심 성과 지표 행)를 결합했다.
+- effect(효과): tester_signature_count(테스터 정체성 서명 수) `1`, EA core signature count(EA 핵심 설정 서명 수) `1`, trade_shape_signature_count(거래 형태 설정 서명 수) `7`, explicit spread/commission/slippage/swap identity(명시 스프레드/수수료/슬리피지/스왑 정체성) `missing 64/64`를 기록했다.
+- next(다음): F67C runtime-native order intent economics(런타임 기반 주문 의도 경제성)에서 cost identity reinforcement(비용 정체성 보강)와 signal->order->trade conversion(신호->주문->거래 전환)을 대조한다.
+- boundary(경계): config parity observation(설정 동등성 관찰)이며 F67 closeout(마감) 전 MT5 Runtime Probe(MT5 런타임 탐침)는 still required(여전히 필수)다.
+
+<!-- encoding_scope_long_path_validator_fix -->
+
+## 2026-06-16 Encoding Scope Long Path Validator Fix(인코딩 범위 긴 경로 검증기 수정)
+
+- action(행동): scoped validator(범위 검증기)의 `check_encoding_scope(인코딩 범위 검사)`가 deep stage path(깊은 단계 경로)를 `io_path(입출력 경로 보조)` 기반으로 존재/읽기 검사하도록 수정하고 regression tests(회귀 테스트)를 추가했다.
+- effect(효과): F67B deep report(F67B 깊은 보고서)처럼 일반 `Path.exists(경로 존재 확인)`가 실패하지만 `io_path(입출력 경로 보조)`로 읽히는 파일을 missing(누락)으로 오판하지 않는다.
+- grok(그록): `docs/agent_control/grok_reviews/2026-06-16_encoding_scope_long_path_validator_fix/receipt.md`에 accepted/rejected/needs_local_verification(수용/거절/로컬 검증 필요) 분류를 기록했다.
+- verification(검증): F67B report scoped encoding validation(F67B 보고서 범위 인코딩 검증)과 `tests/test_validate_agent_settings.py` 통과.
+- boundary(경계): encoding/path validator repair(인코딩/경로 검증기 수리)일 뿐 gate/threshold/MT5 requirement/claim boundary(게이트/임계값/MT5 요구/주장 경계)를 완화하지 않는다.
