@@ -95,6 +95,34 @@ Decision-weight checklist(결정 무게 점검표)는 아래 질문으로 확인
 - 외부 검증(external verification, 외부 검증)이 필요한 claim(주장)은 시도했거나 out_of_scope_by_claim(주장 범위 밖)으로 낮췄는가?
 - repair-to-exploration ratio(수리 대비 탐색 비중)가 반복 루프(loop, 반복)를 숨기지 않는가?
 
+## Five-Stage Retrospective(5단계 중간 검토)
+
+Frontier stage(전선 단계)는 5개 closeout(마감)마다 Grok(그록)과 함께 previous five stages(이전 5개 단계)를 중간 검토한다.
+
+Trigger(트리거)는 두 겹이다.
+
+- primary trigger(주 트리거): closing frontier number(마감 전선 번호)가 5의 배수다.
+- fallback trigger(대체 트리거): 번호가 건너뛰거나 비연속(non-contiguous, 비연속)일 때 `docs/registers/five_stage_retrospective_register.yaml`의 `closed_frontier_ids_since_last_retrospective`가 5개다.
+
+Scope resolver(범위 결정자)는 숫자 `NN-4..NN`만 쓰지 않는다. 실제 closeout receipt(마감 영수증)가 있는 최근 5개 canonical frontier stage id(정식 전선 단계 ID)를 쓴다. missing stage(누락 단계)는 빈칸이 아니라 `missing_required(필수 누락)`, `blocked(차단)`, 또는 `out_of_scope_by_claim(주장 범위 밖)`로 남긴다. 5개보다 적으면 retrospective completion(중간 검토 완료)을 주장하지 않고 `incomplete_block(불완전 블록)`으로 닫는다.
+
+Required evidence row(필수 근거 행)는 아래 field(필드)를 가진다.
+
+```text
+stage_id | hypothesis | proxy_kpi | mt5_runtime_probe_kpi | proxy_runtime_gap_cause | closeout_label | preserved_clue | negative_memory | systemic_repeat | next_action
+```
+
+Block-level synthesis(블록 수준 종합)는 `repeated_systemic_issues(반복 시스템성 문제)`, `repair_priority_delta(수리 우선순위 변화)`, `direction_delta(방향 변화)`, `covered_stage_ids(검토된 단계 ID)`, `retrospective_packet_id(중간 검토 묶음 ID)`를 남긴다.
+
+Report header(보고서 머리말)는 항상 아래 claim boundary(주장 경계)를 포함한다.
+
+```text
+ALLOWED(허용): direction_delta, repair_priority_delta
+FORBIDDEN(금지): completion, baseline, promotion, runtime_authority, live_readiness, goal_achieve
+```
+
+Next frontier open(다음 전선 개방)은 retrospective gate(중간 검토 게이트)가 `passed(통과)`, `not_due(아직 아님)`, 또는 `blocked_with_repair_plan(수리 계획 포함 차단)` 중 하나로 기록될 때까지 열지 않는다. 실패 시 `docs/agent_control/self_correction_policy.yaml`의 `plan_only(계획만)` 흐름을 따르며 gate(게이트), threshold(임계값), claim boundary(주장 경계)를 완화하지 않는다.
+
 ## Forbidden Imports(금지 반입)
 
 Frontier stage(전선 단계)는 아래를 prior stage(이전 단계)에서 가져올 수 없다.

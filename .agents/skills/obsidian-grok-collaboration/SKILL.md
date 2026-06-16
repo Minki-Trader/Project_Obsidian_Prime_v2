@@ -20,6 +20,7 @@ Run Grok collaboration when any current user request, `/goal`, or stage closeout
 - `방향성 제시까지`
 - `Codex 방향성 제시 후 Grok 2차 토론`
 - `agent/skill consulting(에이전트/스킬 상담)`
+- `five-stage retrospective(5단계 중간 검토)` or `5개 stage마다 Grok 중간 검토`
 
 Effect(효과): user-declared external review(사용자 선언 외부 검토)를 optional advice(선택 조언)가 아니라 required gate(필수 게이트)로 다룬다.
 
@@ -34,6 +35,38 @@ Consider Grok when the user asks for:
 - drift check(드리프트 점검)
 
 Do not use Grok for simple edits, path/hash/register recounts, git status, or direct MT5 evidence verification unless the user explicitly asks.
+
+## Five-Stage Retrospective(5단계 중간 검토)
+
+Run this as a cross-stage synthesis(단계 간 종합), not as a repeat of per-stage Grok receipt(단계별 그록 영수증).
+
+Trigger(트리거):
+
+- closing frontier number(마감 전선 번호)가 5의 배수다.
+- or `docs/registers/five_stage_retrospective_register.yaml` has five `closed_frontier_ids_since_last_retrospective(이전 중간 검토 이후 마감 전선 ID)`.
+
+Bounded evidence(제한 근거)는 최근 5개 canonical frontier closeout stage ids(정식 전선 마감 단계 ID)를 행(row, 행)으로 만든다.
+
+Required row fields(필수 행 필드):
+
+```text
+stage_id | hypothesis | proxy_kpi | mt5_runtime_probe_kpi | proxy_runtime_gap_cause | closeout_label | preserved_clue | negative_memory | systemic_repeat | next_action
+```
+
+Required block fields(필수 블록 필드):
+
+- `retrospective_packet_id(중간 검토 묶음 ID)`
+- `covered_stage_ids(검토 단계 ID)`
+- `repeated_systemic_issues(반복 시스템성 문제)`
+- `direction_delta(방향 변화)`
+- `repair_priority_delta(수리 우선순위 변화)`
+- `next_stage_open_block_check(다음 단계 개방 차단 점검)`
+
+If fewer than five closeout receipts(마감 영수증) are available, label the packet `incomplete_block(불완전 블록)` and record the repair action(수리 행동). Do not claim retrospective completion(중간 검토 완료).
+
+Allowed claims(허용 주장): direction_delta(방향 변화), repair_priority_delta(수리 우선순위 변화).
+
+Forbidden claims(금지 주장): completion(완성), selected baseline(선택 기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), Goal Achieve(목표 달성).
 
 ## Required Order
 

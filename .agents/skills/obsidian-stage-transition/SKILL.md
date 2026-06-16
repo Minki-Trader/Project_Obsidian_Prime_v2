@@ -51,10 +51,12 @@ Update in the same pass:
 9. If the transition opens a user-requested extra stage, require charter, lane, question, allowed evidence, exit condition, and no-promotion boundary unless a promotion packet is explicitly opened.
 10. If the transition closes exploration, require negative-result memory or a positive archive record before treating the idea as durable knowledge.
 11. If the transition closes a run-producing stage, require run measurement, managed identity, and lane-aware judgment for the selected or archived run evidence.
+12. If the transition closes a frontier stage(전선 단계), check `docs/registers/five_stage_retrospective_register.yaml` before opening the next frontier stage(다음 전선 단계). If the closing frontier number(마감 전선 번호) is divisible by 5 or five closeout ids(마감 ID 5개) accumulated since the previous retrospective(이전 중간 검토), block next open(다음 개방 차단) until the five-stage Grok retrospective(5단계 Grok 중간 검토) is recorded as `passed(통과)`, `not_due(아직 아님)`, or `blocked_with_repair_plan(수리 계획 포함 차단)`.
 
 ## Validation
 
 - after the sync pass, verify that `docs/workspace/workspace_state.yaml`, `docs/context/current_working_state.md`, and the active stage `selection_status.md` all name the same active stage
+- before opening a frontier stage, verify that the five-stage retrospective gate(5단계 중간 검토 게이트) is not due, already passed(통과), or blocked with a repair plan(수리 계획 포함 차단)
 - if the transition changes durable meaning, make sure a `docs/decisions/*.md` memo exists in the same pass
 - if architecture-sensitive docs or skills changed, run the architecture guard validator
 - if exploration-sensitive docs or skills changed, verify that lane routing, WFO default, and failure-memory references are still linked from the trigger policy

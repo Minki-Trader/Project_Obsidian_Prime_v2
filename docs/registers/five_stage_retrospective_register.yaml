@@ -1,0 +1,51 @@
+version: five_stage_retrospective_register_v1
+source_of_truth: docs/registers/five_stage_retrospective_register.yaml
+purpose: "Track five-stage Grok retrospective(5단계 Grok 중간 검토) cadence without relying on Codex memory(코덱스 기억)."
+adopted_at_utc: '2026-06-16T12:05:00Z'
+adopted_during_stage_id: stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64
+cadence:
+  primary_trigger: "closing_frontier_number % 5 == 0"
+  fallback_trigger: "len(closed_frontier_ids_since_last_retrospective) >= 5"
+  next_open_block: true
+  scope_rule: "Use latest five canonical frontier closeout stage ids with closeout receipts, not numeric NN-4..NN alone."
+required_outputs:
+  - five_stage_retrospective_packet
+  - bounded_evidence_table
+  - grok_receipt
+  - codex_local_verification
+  - advice_classification
+  - compact_retrospective_report
+  - next_stage_open_block_check
+required_row_fields:
+  - stage_id
+  - hypothesis
+  - proxy_kpi
+  - mt5_runtime_probe_kpi
+  - proxy_runtime_gap_cause
+  - closeout_label
+  - preserved_clue
+  - negative_memory
+  - systemic_repeat
+  - next_action
+claim_boundary:
+  allowed:
+    - direction_delta
+    - repair_priority_delta
+  forbidden:
+    - completion
+    - baseline
+    - promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+state:
+  last_completed_packet_id: null
+  last_completed_at_frontier: null
+  last_completed_stage_ids: []
+  last_completed_at_utc: null
+  closed_frontier_ids_since_last_retrospective:
+    - stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64
+  closeouts_since_last: 1
+  next_numeric_trigger_frontier: 70
+  current_due_status: not_due
+  note: "F66 closeout(마감)은 1/5로 계산했다. Next expected numeric trigger(다음 숫자 트리거)는 F70 closeout(마감)이다."

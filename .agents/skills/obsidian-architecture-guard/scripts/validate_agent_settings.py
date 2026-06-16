@@ -79,26 +79,60 @@ def check_docs(repo_root: Path) -> tuple[list[str], list[str]]:
     errors: list[str] = []
     warnings: list[str] = []
     for path in iter_text_docs(repo_root):
-        rel = path.relative_to(repo_root).as_posix()
-        data = path.read_bytes()
-        try:
-            text = data.decode("utf-8")
-        except UnicodeDecodeError as exc:
-            errors.append(f"{rel}: not valid UTF-8: {exc}")
-            continue
+        path_errors, path_warnings = check_doc_file(repo_root, path)
+        errors.extend(path_errors)
+        warnings.extend(path_warnings)
+    return errors, warnings
 
-        bom_count = leading_utf8_bom_count(data)
-        if bom_count > 1:
-            errors.append(f"{rel}: contains repeated UTF-8 BOM markers")
-        has_hangul = bool(HANGUL_RE.search(text))
-        if has_hangul and not has_utf8_bom(data):
-            errors.append(f"{rel}: Korean text requires UTF-8 with BOM")
-        if "\ufffd" in text:
-            errors.append(f"{rel}: contains Unicode replacement character")
-        if MOJIBAKE_RE.search(text):
-            errors.append(f"{rel}: contains likely mojibake")
-        if SUSPICIOUS_CJK_RE.search(text) and not has_hangul:
-            warnings.append(f"{rel}: contains CJK text without Hangul; inspect if unexpected")
+
+def check_doc_file(repo_root: Path, path: Path) -> tuple[list[str], list[str]]:
+    errors: list[str] = []
+    warnings: list[str] = []
+    rel = path.relative_to(repo_root).as_posix()
+    data = path.read_bytes()
+    try:
+        text = data.decode("utf-8")
+    except UnicodeDecodeError as exc:
+        errors.append(f"{rel}: not valid UTF-8: {exc}")
+        return errors, warnings
+
+    bom_count = leading_utf8_bom_count(data)
+    if bom_count > 1:
+        errors.append(f"{rel}: contains repeated UTF-8 BOM markers")
+    has_hangul = bool(HANGUL_RE.search(text))
+    if has_hangul and not has_utf8_bom(data):
+        errors.append(f"{rel}: Korean text requires UTF-8 with BOM")
+    if "\ufffd" in text:
+        errors.append(f"{rel}: contains Unicode replacement character")
+    if MOJIBAKE_RE.search(text):
+        errors.append(f"{rel}: contains likely mojibake")
+    if SUSPICIOUS_CJK_RE.search(text) and not has_hangul:
+        warnings.append(f"{rel}: contains CJK text without Hangul; inspect if unexpected")
+    return errors, warnings
+
+
+def check_encoding_scope(repo_root: Path, scope_paths: list[str]) -> tuple[list[str], list[str]]:
+    errors: list[str] = []
+    warnings: list[str] = []
+    for scope_path in scope_paths:
+        path = (repo_root / scope_path).resolve()
+        try:
+            path.relative_to(repo_root)
+        except ValueError:
+            errors.append(f"{scope_path}: encoding scope must stay inside repo root")
+            continue
+        if not path.exists():
+            errors.append(f"{scope_path}: encoding scope path does not exist")
+            continue
+        candidates = [path] if path.is_file() else sorted(
+            p for p in path.rglob("*") if p.is_file() and p.suffix.lower() in {".md", ".txt"}
+        )
+        for candidate in candidates:
+            if candidate.suffix.lower() not in {".md", ".txt"}:
+                continue
+            path_errors, path_warnings = check_doc_file(repo_root, candidate)
+            errors.extend(path_errors)
+            warnings.extend(path_warnings)
     return errors, warnings
 
 
@@ -359,11 +393,28 @@ def check_skill_routing_completeness(repo_root: Path) -> list[str]:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Validate Obsidian agent settings, skill routing, architecture guard links, and Korean encoding.")
     parser.add_argument("--repo-root", default=".", help="Repository root to validate.")
+    parser.add_argument(
+        "--encoding-scope",
+        action="append",
+        default=[],
+        help="Repo-relative file or directory to validate for Korean UTF-8/BOM only. Repeat for multiple scopes.",
+    )
     args = parser.parse_args()
 
     repo_root = Path(args.repo_root).resolve()
     errors: list[str] = []
     warnings: list[str] = []
+
+    if args.encoding_scope:
+        errors, warnings = check_encoding_scope(repo_root, args.encoding_scope)
+        for warning in warnings:
+            print(f"WARNING: {warning}")
+        if errors:
+            for error in errors:
+                print(f"ERROR: {error}")
+            return 1
+        print("OK: scoped Korean encoding checks passed.")
+        return 0
 
     errors.extend(check_required_paths(repo_root))
     doc_errors, doc_warnings = check_docs(repo_root)

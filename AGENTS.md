@@ -57,6 +57,18 @@ Wrapper defaults(래퍼 기본값)는 `--rules`, `--no-plan`, `--no-subagents`, 
 
 기본 기록 위치(default record location, 기본 기록 위치)는 `docs/agent_control/grok_reviews/`다. 다만 사용자가 이번 작업처럼 patch work material(패치 작업물)을 프로젝트 폴더에 남기지 말라고 명시하면, 새 Grok 패킷(packet, 묶음)을 만들지 않고 기존 산출물(existing artifacts, 기존 산출물), 대화 기록(conversation record, 대화 기록), 또는 프로젝트 밖 임시 경로(temp path, 임시 경로)만 쓴다. 효과(effect, 효과)는 운영 규칙을 지키면서도 사용자가 금지한 임시 산출물을 남기지 않는 것이다.
 
+### 5단계 Grok 중간 검토(Five-Stage Grok Retrospective, 5단계 Grok 중간 검토)
+
+Frontier stage(전선 단계)는 5개 closeout(마감)마다 Grok(그록)과 함께 이전 5개 stage(단계)를 중간 검토(retrospective, 회고)한다.
+
+기본 trigger(트리거)는 closing frontier number(마감 전선 번호)가 5의 배수일 때다. 번호가 건너뛰거나 비연속(non-contiguous, 비연속)으로 닫히면 `docs/registers/five_stage_retrospective_register.yaml`의 `closed_frontier_ids_since_last_retrospective`가 5개가 되는 시점을 대체 trigger(트리거)로 쓴다.
+
+scope(범위)는 숫자 추정 `NN-4..NN`이 아니라 실제 closeout receipt(마감 영수증)가 있는 최근 5개 canonical frontier stage id(정식 전선 단계 ID)다. 빠진 stage(단계)는 생략하지 않고 `missing_required(필수 누락)`, `blocked(차단)`, 또는 `out_of_scope_by_claim(주장 범위 밖)`로 적는다.
+
+이 retrospective(중간 검토)는 per-stage Grok review(단계별 Grok 검토)의 반복이 아니라 cross-stage synthesis(단계 간 종합)다. 필수 row(행)는 `stage_id`, hypothesis(가설), proxy KPI(프록시 핵심 성과 지표), MT5 runtime probe KPI(MT5 런타임 탐침 핵심 성과 지표), gap cause(간극 원인), closeout label(마감 라벨), preserved clue(보존 단서), negative memory(부정 기억), systemic_repeat(시스템성 반복), next action(다음 행동)을 담는다.
+
+다음 frontier stage open(다음 전선 단계 개방)은 five-stage retrospective required gates(5단계 중간 검토 필수 게이트)가 통과하거나 명시적으로 `not_due(아직 아님)`로 판정될 때까지 열지 않는다. 효과(effect, 효과)는 5단계마다 같은 실패 패턴과 수리 반복을 Grok(그록)과 토론하고, 다음 방향을 바꾸되 completion(완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), Goal Achieve(목표 달성)를 만들지 않게 하는 것이다.
+
 ## 가장 중요한 원칙(Non-Negotiable Principle, 양보 불가 원칙)
 
 탐색(exploration, 탐색)에는 게이트(gate, 제한문)가 없다.

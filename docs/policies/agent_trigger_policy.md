@@ -45,6 +45,7 @@
 - `stage close(단계 마감)마다 비판 검토`
 - agent/skill consulting(에이전트/스킬 상담)
 - 방향성 제시(direction proposal, 방향성 제시) 뒤 Grok 2차 토론(second discussion, 2차 토론)을 요구함
+- five-stage retrospective(5단계 중간 검토)가 due(도래)함
 
 필수 순서(required order, 필수 순서)는 Codex(코덱스)가 먼저 current truth(현재 진실), direction(방향성), success criteria(성공 기준), claim boundary(주장 경계), review size(검토 크기)를 제시하고, bounded evidence(제한 근거)를 만든 뒤 Grok을 호출하고, Grok 조언을 accepted/rejected/needs_local_verification(수용/거절/로컬 검증 필요)로 분리한 다음 진행하는 것이다.
 
@@ -59,6 +60,19 @@
 가능하면 `foundation/control_plane/grok_review_wrapper.py` wrapper(래퍼)를 쓴다. wrapper(래퍼)는 prompt quoting(프롬프트 인용), timeout(시간 제한), stdout/stderr capture(표준 출력/오류 캡처), deterministic noise stripping(결정적 잡음 제거), unexpected top-level artifact detection(예상 밖 최상위 산출물 감지)을 담당한다. wrapper(래퍼)는 Grok content(Grok 내용)를 해석하거나 수용/거절하지 않는다.
 
 효과(effect, 효과)는 외부 2차 의견을 쓰되, 연구 방향이 산으로 가거나 stage drift(단계 드리프트)가 생기지 않게 하고, 대규모 검토에서도 같은 capture/verify/classify(캡처/검증/분류) 흐름을 유지하는 것이다.
+
+## 5단계 중간 검토 트리거(Five-Stage Retrospective Trigger, 5단계 중간 검토 트리거)
+
+`five_stage_retrospective(5단계 중간 검토)`는 Grok collaboration trigger overlay(그록 협업 트리거 오버레이)다. Primary work family(주 작업군)를 바꾸지 않고 `obsidian-grok-collaboration(그록 협업)`, `five_stage_retrospective_packet(5단계 중간 검토 묶음)`, `next_stage_open_block_check(다음 단계 개방 차단 점검)`를 덧붙인다.
+
+Due check(도래 점검)는 stage closeout(단계 마감) 때 실행한다.
+
+- closing frontier number(마감 전선 번호)가 5의 배수면 due(도래)다.
+- 그렇지 않아도 `docs/registers/five_stage_retrospective_register.yaml`의 `closed_frontier_ids_since_last_retrospective`가 5개면 due(도래)다.
+- due(도래)가 아니면 `not_due(아직 아님)`로 기록하고 다음 stage open(단계 개방)을 허용한다.
+- due(도래)이면 최근 5개 canonical closeout stage ids(정식 마감 단계 ID)를 scope(범위)로 묶고, Grok review(그록 검토), Codex local verification(코덱스 로컬 검증), advice classification(조언 분류), compact retrospective report(압축 중간 검토 보고)를 남기기 전에는 다음 frontier stage(전선 단계)를 열지 않는다.
+
+이 검토는 per-stage Grok receipt(단계별 그록 영수증)를 다시 읽는 repetition(반복)이 아니다. Cross-stage synthesis(단계 간 종합)만 허용하며, allowed claims(허용 주장)는 direction_delta(방향 변화)와 repair_priority_delta(수리 우선순위 변화)뿐이다.
 
 ## 라우팅 소스
 

@@ -1,4 +1,4 @@
-# Grok Post-MT5 Review Prompt(Grok MT5 후 검토 프롬프트)
+﻿# Grok Post-MT5 Review Prompt(Grok MT5 후 검토 프롬프트)
 
 Context(맥락): F66 is runtime_probe_backfill_gap_audit(런타임 탐침 소급 간극 감사) for F02-F64. This is observation only(관찰 한정) and must not claim completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성).
 

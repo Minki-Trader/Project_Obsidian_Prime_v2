@@ -1,31 +1,42 @@
-# Current Working State(현재 작업 상태)
+﻿# Current Working State(현재 작업 상태)
 
-Frontier66(F66, 전선 66단계)는 F02-F64 runtime probe backfill gap audit(런타임 탐침 소급 간극 감사)로 열려 있다.
+Frontier67(F67, 전선 67단계)는 count parity not PnL parity runtime economics crosswalk(개수 동등성은 손익 동등성이 아닌가 런타임 경제성 대조)로 열려 있다.
 
-- stage(단계): `stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64`
-- current_run(현재 실행): `frontier66C_proxy_signal_mt5_backfill_v1`
-- status(상태): `runtime_probe_gap_audit_observation_no_authority(런타임 탐침 간극 감사 관찰, 권위 없음)`
-- stage-open Grok review(단계 개방 그록 검토): `accepted(수용)` with `needs_local_verification(로컬 검증 필요)`
-- pre-MT5 Grok review(MT5 전 그록 검토): `needs_local_verification(로컬 검증 필요)`, local verification(로컬 검증) completed(완료)
+- stage(단계): `stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk`
+- current_run(현재 실행): `frontier67A_stage_open_dd_basis_crosswalk_v1`
+- next_run(다음 실행): `frontier67A_dd_basis_crosswalk_execution_v1`
+- status(상태): `stage_opened_after_grok_review_no_authority(그록 검토 후 단계 개방, 권위 없음)`
+- latest_completed_run(최근 완료 실행): `frontier66_closeout_preserved_clue_negative_memory_v1`
+- five_stage_retrospective(5단계 그록 중간 검토): `not_due_after_F66_1_of_5(66단계 이후 1/5, 아직 아님)`
 
-Action(행동): F66C에서 F11,F15,F18-F49의 proxy signal(프록시 신호)을 MT5 runtime probe(런타임 탐침)로 실제 실행했다.
+Action(행동): F66을 `preserved_clue_negative_memory(보존 단서 + 부정 기억)`로 닫고, F67을 Grok stage-open review(그록 단계 개방 검토) 후 새 가설 stage(단계)로 열었다.
 
-Effect(효과): "runtime material(런타임 재료)이 없다"는 초기 F66A 판독을 실행 가능 handoff(인계) 수리와 실제 MT5 결과로 갱신했다.
+Effect(효과): F66에서 확인한 L1/L2 feature/signal parity(피처/신호 동등성)는 보존하되, PF/DD economics(수익 팩터/손실폭 경제성) 실패를 F67의 DD basis/config/runtime-native economics(손실폭 기준/설정/런타임 기반 경제성) 대조 질문으로 넘겼다.
 
-- newly executed runtime probe split runs(새로 실행된 런타임 탐침 분할 실행): `64/64`
-- completed tester/runtime/report(테스터/런타임/보고서 완료): `64/64`
-- exact feature/signal handoff(피처/신호 인계 정확): `64/64`
+F66 closeout read(F66 마감 판독):
+
+- MT5 backfill split runs(MT5 소급 분할 실행): `64/64`
+- feature readiness parity(피처 준비 동등성): `64/64 exact`
+- signal count parity(신호 수 동등성): `64/64 exact`
+- actual runtime KPI after F66C(F66C 이후 실제 런타임 KPI): `61/63` frontier stages(전선 단계)
 - logic-zero stages(로직상 신호 0 단계): `F26`, `F34`
-- original actual runtime KPI present(기존 실제 런타임 KPI 있음): `F02-F10, F12-F14, F16-F17, F50-F64`
-- actual runtime KPI now present after F66C(F66C 이후 실제 런타임 KPI 있음): `61/63` frontier stages(전선 단계)
+- validation/OOS trades/day target rows(검증/OOS 거래/일 목표 행): `0/64`
+- DD>10 split rows(손실폭 10 초과 분할 행): `60/64`
+- best PF split(최고 수익 팩터 분할): `F11 OOS PF 2.18`, with DD(손실폭) `10.87` and trades/day(거래/일) `0.3128`
 
-Current read(현재 판독): F66C 결과에서 L1 feature readiness parity(피처 준비 동등성)와 L2 signal emission parity(신호 방출 동등성)는 backfilled split set(소급 실행 분할 묶음)에서 성립했다. 모든 실행 split(분할)에서 `feature_ready_diff=0`, `signal_count_diff=0`이다. 잔여 PF/DD gap(수익 팩터/손실폭 간극)은 L3 order intent(주문 의도), L4 fill/cost model(체결/비용 모델), L5 KPI measurement basis(KPI 측정 기준) mismatch(불일치)와 consistent(일관)하지만 ranked root cause(순위가 있는 근본 원인)로 확정하지 않는다.
+F67 stage-open read(F67 단계 개방 판독):
+
+- Grok advice classification(그록 조언 분류): `accepted_with_conditions(조건부 수용)`
+- accepted(수용): F67A DD basis crosswalk(손실폭 기준 대조)를 F67B config parity depth pilot(설정 동등성 깊이 파일럿)보다 먼저 실행한다.
+- rejected(거절): trade density target(거래 빈도 목표)을 F67 primary success criterion(1차 성공 기준)으로 삼지 않는다.
+- needs_local_verification(로컬 검증 필요): DD field mapping(손실폭 필드 매핑), DD>10 threshold source(손실폭 10 초과 기준 원천), stage aggregate vs split-row denominator(단계 합산 대 분할 행 분모), F67B pilot sampling(파일럿 표본 추출).
 
 Key artifacts(핵심 산출물):
 
-- MT5 runtime rows review copy(MT5 런타임 행 검토 복사본): `stages/stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64/03_reviews/frontier66_proxy_signal_runtime_rows_review.csv`
-- split gap table review copy(분할 간극 표 검토 복사본): `stages/stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64/03_reviews/frontier66_proxy_runtime_gap_by_split_review.csv`
-- stage gap table review copy(단계 간극 표 검토 복사본): `stages/stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64/03_reviews/frontier66_proxy_runtime_gap_by_stage_review.csv`
-- gap report(간극 보고): `stages/stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64/03_reviews/frontier66_proxy_runtime_gap_decomposition_report.md`
+- F66 closeout report(F66 마감 보고서): `stages/stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64/03_reviews/stage_closeout_report.md`
+- F66 gate audit(F66 게이트 감사): `stages/stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64/03_reviews/required_gate_coverage_audit.md`
+- F67 stage brief(F67 단계 개요): `stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/00_spec/stage_brief.md`
+- F67 Grok receipt(F67 그록 영수증): `stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/03_reviews/grok_stage_open_receipt.md`
+- five-stage retrospective register(5단계 중간 검토 등록부): `docs/registers/five_stage_retrospective_register.yaml`
 
-Claim boundary(주장 경계): runtime_probe_observation(런타임 탐침 관찰), materialization status(물질화 상태), proxy-runtime gap analysis(프록시-런타임 간극 분석)까지만 말한다. completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.
+Claim boundary(주장 경계): stage-open direction(단계 개방 방향), runtime_probe_observation(런타임 탐침 관찰), preserved clue(보존 단서), negative memory(부정 기억)까지만 말한다. completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.

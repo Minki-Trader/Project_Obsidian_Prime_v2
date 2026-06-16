@@ -1,0 +1,27 @@
+{
+  "review_size": "medium",
+  "prompt_hash": "b7a02e3fa675dfe5b202c40bcd7395fca196aaceaf213fbab572b4e90cf8b60e",
+  "command": [
+    "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+    "--rules",
+    "You are an external second-opinion reviewer for a bounded evidence snapshot. Answer only from the prompt. Do not inspect files, run tools, browse, spawn subagents, or perform local verification. If evidence is insufficient, say needs_local_verification.",
+    "--no-plan",
+    "--no-subagents",
+    "--disable-web-search",
+    "--prompt-file",
+    "docs/agent_control/grok_reviews/2026-06-16_five_stage_retrospective_routine/prompts/prompt.md"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "success": true,
+  "duration_seconds": 33.369595,
+  "stripped_noise_lines": [],
+  "preflight_warnings": [],
+  "unexpected_top_level_artifacts": [],
+  "packet_paths": {
+    "prompt": "docs/agent_control/grok_reviews/2026-06-16_five_stage_retrospective_routine/outputs/prompt.md",
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-16_five_stage_retrospective_routine/outputs/clean_output.md",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-16_five_stage_retrospective_routine/outputs/raw_diagnostics.json",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-16_five_stage_retrospective_routine/outputs/metadata.json"
+  }
+}

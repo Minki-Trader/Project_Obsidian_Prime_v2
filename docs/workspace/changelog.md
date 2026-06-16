@@ -424,9 +424,9 @@
 - 2026-05-11T00:00:00Z `52_sl_tp_policy__atr_based_adaptive_stop_takeprofit_adapter` recorded(기록) mandatory ATR SL/TP(필수 ATR 손절/익절) stage(단계) as `reviewed_completed_negative_memory_runtime_probe_only`; no baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), or operating reference(운영 참조) created(생성).
 - 2026-05-11T00:00:00Z `53_adapter_signal__side_specific_short_permission_filter` recorded(기록) side permission filter(방향 허용 필터) as `reviewed_completed_adapter_candidate_runtime_probe_only`; no baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), or operating reference(운영 참조) created(생성).
 - 2026-05-11T00:00:00Z `repair_stage53_premature_self_completion_v1` reopened(재개) `OVERNIGHT-AUTONOMOUS-ADAPTER-CAMPAIGN-01`; Stage53(53단계) `spf03_block_early_or_trend_buy` is `adapter_candidate_observed_user_review_required`; Codex self-completion(코덱스 자체 완료)은 금지된다.
-- 2026-05-11T00:00:00Z `54_adapter_signal__cost_aware_side_permission_filter` recorded(湲곕줉) cost-aware side permission filter(諛⑺뼢 ?덉슜 ?꾪꽣) as `reviewed_completed_adapter_candidate_runtime_probe_only`; no baseline(湲곗???, promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, or operating reference(?댁쁺 李몄“) created(?앹꽦).
-- 2026-05-11T00:00:00Z `55_adapter_routing__tier_b_fallback_side_filter_router` recorded(湲곕줉) tier-b fallback side-filter routing filter(諛⑺뼢 ?덉슜 ?꾪꽣) as `reviewed_completed_positive_runtime_probe_only`; no baseline(湲곗???, promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, or operating reference(?댁쁺 李몄“) created(?앹꽦).
-- 2026-05-11T00:00:00Z `55_adapter_routing__tier_b_fallback_side_filter_router` recorded(湲곕줉) tier-b fallback side-filter routing filter(諛⑺뼢 ?덉슜 ?꾪꽣) as `reviewed_completed_adapter_candidate_runtime_probe_only`; no baseline(湲곗???, promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, or operating reference(?댁쁺 李몄“) created(?앹꽦).
+- 2026-05-11T00:00:00Z `54_adapter_signal__cost_aware_side_permission_filter` recorded(기록) cost-aware side permission filter(비용 인식 방향 허용 필터) as `reviewed_completed_adapter_candidate_runtime_probe_only`; no baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), or operating reference(운영 참조) created(생성).
+- 2026-05-11T00:00:00Z `55_adapter_routing__tier_b_fallback_side_filter_router` recorded(기록) tier-b fallback side-filter routing filter(Tier B 대체 방향 필터 라우팅) as `reviewed_completed_positive_runtime_probe_only`; no baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), or operating reference(운영 참조) created(생성).
+- 2026-05-11T00:00:00Z `55_adapter_routing__tier_b_fallback_side_filter_router` recorded(기록) tier-b fallback side-filter routing filter(Tier B 대체 방향 필터 라우팅) as `reviewed_completed_adapter_candidate_runtime_probe_only`; no baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), or operating reference(운영 참조) created(생성).
 - 2026-05-11T00:00:00Z `OVERNIGHT-AUTONOMOUS-ADAPTER-CAMPAIGN-01` stopped(중지) with `campaign_budget_exhausted_candidates_preserved_for_user_review` because `runtime_budget_exhausted_after_stage55_main_sync`; candidates(후보) are preserved for user review(사용자 검토), with no baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), or operating reference(운영 참조).
 
 - 2026-05-11T00:00:00Z `56_base_engine__dense_tier_a_engine_and_tier_b_fallback_selection` opened(개방) as Stage56(56단계) research baseline(연구 기준선) selection work; `run50A_existing_model_density_audit_v1` recorded existing-evidence density audit(기존 근거 밀도 감사) only; no selected research baseline(선택 연구 기준선), live readiness(실거래 준비), runtime authority(런타임 권위), operating promotion(운영 승격), or operating reference(운영 참조) created(생성).
@@ -509,8 +509,8 @@
 - effect(효과): Stage59F-H(59F-H단계)의 v54 repair line(v54 수리 계열)을 final(최종)로 보지 않고 Stage59J(59J단계) 새 bounded model branch(경계 모델 분기)로 넘겼다.
 ## 2026-05-15 - Stage59J new model branch from Stage59I closeout(59J단계 59I단계 기반 새 모델 분기 종료)
 
-- run(?ㅽ뻾): `run59E_stage59j_new_model_branch_from_stage59i_v1`
-- decision(?먯젙): `continue_repair_in_new_bounded_stage`
+- run(실행): `run59E_stage59j_new_model_branch_from_stage59i_v1`
+- decision(판정): `continue_repair_in_new_bounded_stage`
 - effect(효과): Stage59I(59I단계) demotion evidence(강등 근거)를 run50BQ transition variants(run50BQ 전환 변형) 세 개로 측정하고 다음 bounded stage(경계 다음 단계) 조건을 남겼다.
 ## 2026-05-15 - Stage59J new model branch from Stage59I closeout(59J단계 59I단계 기반 새 모델 분기 종료)
 
@@ -3202,26 +3202,26 @@
 - effect(효과): Stage292(292단계)를 `none` 선택 상태로 판정하고 `293_onnx_candidate_campaign__profit_scale_density_calibration_rebuild`를 열었다.
 - boundary(경계): Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 아직 `not_started/not_claimed`다.
 
-## 2026-05-24 run293A Profit-scale Density Calibration materialization(293A ??갑??硫뷀??쇰꺼 嫄곕옒 ?쒕??덉씠??臾쇱쭏??
+## 2026-05-24 run293A Profit-scale Density Calibration materialization(293A 순수익 규모/거래 밀도 보정 물질화)
 
-- status(?곹깭): `completed_profit_scale_density_calibration_candidates_materialized_no_selection`
-- judgment(?먯젙): `profit_scale_density_calibration_inputs_materialized_no_candidate_selection`
-- effect(?④낵): branch(遺꾧린) `6`媛쒖? MT5 queue(MT5 ?湲곗뿴) `6`媛쒕? 留뚮뱾?덈떎.
-- boundary(寃쎄퀎): selected candidate(?좏깮 ?꾨낫), Adapter package(?대뙌???⑦궎吏), ONNX readiness(?⑥뿊??以鍮?, Goal Achieve(紐⑺몴 ?ъ꽦)??`none/not_claimed`??
+- status(상태): `completed_profit_scale_density_calibration_candidates_materialized_no_selection`
+- judgment(판정): `profit_scale_density_calibration_inputs_materialized_no_candidate_selection`
+- effect(효과): branch(분기) `6`개와 MT5 queue(MT5 대기열) `6`개를 만들었다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
-## 2026-05-24 run293B profit-scale density calibration MT5 probe(293B ??갑??硫뷀??쇰꺼 嫄곕옒 ?쒕??덉씠??MT5 ?먯묠)
+## 2026-05-24 run293B profit-scale density calibration MT5 probe(293B 순수익 규모/거래 밀도 보정 MT5 탐침)
 
-- status(?곹깭): `prepared_profit_scale_density_calibration_mt5_probe_no_runtime_kpi`
-- judgment(?먯젙): `anti_direction_meta_trade_sim_runtime_probe_prepared_no_external_execution`
-- effect(?④낵): attempts(?쒕룄) `36`媛쒖? MT5 KPI records(MT5 KPI 湲곕줉) `0`媛쒕? 湲곕줉?덈떎.
-- boundary(寃쎄퀎): selected candidate(?좏깮 ?꾨낫), Adapter package(?대뙌???⑦궎吏), ONNX readiness(?⑥뿊??以鍮?, Goal Achieve(紐⑺몴 ?ъ꽦)??`none/not_claimed`??
+- status(상태): `prepared_profit_scale_density_calibration_mt5_probe_no_runtime_kpi`
+- judgment(판정): `anti_direction_meta_trade_sim_runtime_probe_prepared_no_external_execution`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
-## 2026-05-24 run293B profit-scale density calibration MT5 probe(293B ??갑??硫뷀??쇰꺼 嫄곕옒 ?쒕??덉씠??MT5 ?먯묠)
+## 2026-05-24 run293B profit-scale density calibration MT5 probe(293B 순수익 규모/거래 밀도 보정 MT5 탐침)
 
-- status(?곹깭): `completed_profit_scale_density_calibration_mt5_probe_no_selection`
-- judgment(?먯젙): `runtime_probe_completed_requires_curve_quality_review_no_selection`
-- effect(?④낵): attempts(?쒕룄) `36`媛쒖? MT5 KPI records(MT5 KPI 湲곕줉) `36`媛쒕? 湲곕줉?덈떎.
-- boundary(寃쎄퀎): selected candidate(?좏깮 ?꾨낫), Adapter package(?대뙌???⑦궎吏), ONNX readiness(?⑥뿊??以鍮?, Goal Achieve(紐⑺몴 ?ъ꽦)??`none/not_claimed`??
+- status(상태): `completed_profit_scale_density_calibration_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_curve_quality_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run293C Profit-scale density calibration review(293C 순수익 규모/거래 밀도 보정 검토)
 
@@ -3235,21 +3235,21 @@
 - status(상태): `completed_mt5_outcome_relabel_directional_flip_candidates_materialized_no_selection`
 - judgment(판정): `mt5_outcome_relabel_directional_flip_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run294B MT5 outcome relabel directional flip MT5 probe(294B MT5 결과 재라벨 방향 반전 MT5 탐침)
 
 - status(상태): `prepared_mt5_outcome_relabel_directional_flip_mt5_probe_no_runtime_kpi`
 - judgment(판정): `mt5_outcome_relabel_directional_flip_runtime_probe_prepared_no_external_execution`
 - effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run294B MT5 outcome relabel directional flip MT5 probe(294B MT5 결과 재라벨 방향 반전 MT5 탐침)
 
 - status(상태): `completed_mt5_outcome_relabel_directional_flip_mt5_probe_no_selection`
 - judgment(판정): `runtime_probe_completed_requires_curve_quality_review_no_selection`
 - effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run294C MT5 outcome relabel directional flip review(294C MT5 결과 재라벨 방향 반전 검토)
 
@@ -3263,35 +3263,35 @@
 - status(상태): `completed_mt5_outcome_relabel_directional_flip_candidates_materialized_no_selection`
 - judgment(판정): `mt5_outcome_relabel_directional_flip_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run295A split-consistent outcome distillation materialization(295A 분할 일관 결과 증류 물질화)
 
 - status(상태): `completed_split_consistent_outcome_distillation_candidates_materialized_no_selection`
 - judgment(판정): `split_consistent_outcome_distillation_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run295A split-consistent outcome distillation materialization(295A 분할 일관 결과 증류 물질화)
 
 - status(상태): `completed_split_consistent_outcome_distillation_candidates_materialized_no_selection`
 - judgment(판정): `split_consistent_outcome_distillation_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run295B split-consistent outcome distillation MT5 probe(295B 분할 일관 결과 증류 MT5 탐침)
 
 - status(상태): `prepared_split_consistent_outcome_distillation_mt5_probe_no_runtime_kpi`
 - judgment(판정): `split_consistent_outcome_distillation_runtime_probe_prepared_no_external_execution`
 - effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run295B split-consistent outcome distillation MT5 probe(295B 분할 일관 결과 증류 MT5 탐침)
 
 - status(상태): `completed_split_consistent_outcome_distillation_mt5_probe_no_selection`
 - judgment(판정): `runtime_probe_completed_requires_curve_quality_review_no_selection`
 - effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run295C Split-consistent outcome distillation review(295C 분할 일관 결과 증류 검토)
 
@@ -3305,21 +3305,21 @@
 - status(상태): `completed_density_floor_profit_expansion_candidates_materialized_no_selection`
 - judgment(판정): `density_floor_profit_expansion_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run296B density-floor profit expansion MT5 probe(296B 거래 밀도 하한 수익 확장 MT5 탐침)
 
 - status(상태): `prepared_density_floor_profit_expansion_mt5_probe_no_runtime_kpi`
 - judgment(판정): `density_floor_profit_expansion_runtime_probe_prepared_no_external_execution`
 - effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run296B density-floor profit expansion MT5 probe(296B 거래 밀도 하한 수익 확장 MT5 탐침)
 
 - status(상태): `completed_density_floor_profit_expansion_mt5_probe_no_selection`
 - judgment(판정): `runtime_probe_completed_requires_curve_quality_review_no_selection`
 - effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run296C Density-floor profit expansion review(296C 거래 밀도 하한 수익 확장 검토)
 
@@ -3333,21 +3333,21 @@
 - status(상태): `completed_bilevel_curve_monotonic_profit_candidates_materialized_no_selection`
 - judgment(판정): `bilevel_curve_monotonic_profit_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run297B bi-level curve-monotonic profit MT5 probe(297B 이중 단계 곡선 단조 수익 MT5 탐침)
 
 - status(상태): `prepared_bilevel_curve_monotonic_profit_mt5_probe_no_runtime_kpi`
 - judgment(판정): `bilevel_curve_monotonic_profit_runtime_probe_prepared_no_external_execution`
 - effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run297B bi-level curve-monotonic profit MT5 probe(297B 이중 단계 곡선 단조 수익 MT5 탐침)
 
 - status(상태): `completed_bilevel_curve_monotonic_profit_mt5_probe_no_selection`
 - judgment(판정): `runtime_probe_completed_requires_curve_quality_review_no_selection`
 - effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run297C bilevel curve-monotonic profit review(297C 이중 단계 곡선 단조 수익 검토)
 
@@ -3361,21 +3361,21 @@
 - status(상태): `completed_profit_scale_edge_amplification_candidates_materialized_no_selection`
 - judgment(판정): `profit_scale_edge_amplification_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run298B profit-scale edge amplification MT5 probe(298B 수익 규모 거래우위 증폭 MT5 탐침)
 
 - status(상태): `prepared_profit_scale_edge_amplification_mt5_probe_no_runtime_kpi`
 - judgment(판정): `profit_scale_edge_amplification_runtime_probe_prepared_no_external_execution`
 - effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `0`개를 기록했다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run298B profit-scale edge amplification MT5 probe(298B 수익 규모 거래우위 증폭 MT5 탐침)
 
 - status(상태): `completed_profit_scale_edge_amplification_mt5_probe_no_selection`
 - judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
 - effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run298C profit-scale edge amplification review(298C 수익 규모 거래우위 증폭 검토)
 
@@ -3389,14 +3389,14 @@
 - status(상태): `completed_runtime_realized_trade_shape_candidates_materialized_no_selection`
 - judgment(판정): `runtime_realized_trade_shape_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run299B runtime-realized trade shape MT5 probe(299B 런타임 실제 거래 형태 MT5 탐침)
 
 - status(상태): `completed_runtime_realized_trade_shape_mt5_probe_no_selection`
 - judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
 - effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run299C runtime-realized trade shape review(299C 런타임 실제 거래 형태 검토)
 
@@ -3410,14 +3410,14 @@
 - status(상태): `completed_split_forward_trade_shape_generalization_candidates_materialized_no_selection`
 - judgment(판정): `split_forward_trade_shape_generalization_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run300B split-forward trade shape generalization MT5 probe(300B 런타임 실제 거래 형태 MT5 탐침)
 
 - status(상태): `completed_split_forward_trade_shape_generalization_mt5_probe_no_selection`
 - judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
 - effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run300C split-forward trade shape generalization review(300C 런타임 실제 거래 형태 검토)
 
@@ -3431,21 +3431,21 @@
 - status(상태): `completed_orthogonal_profit_source_candidates_materialized_no_selection`
 - judgment(판정): `orthogonal_profit_source_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run301A Orthogonal profit source materialization(301A 직교 수익 원천 물질화)
 
 - status(상태): `completed_orthogonal_profit_source_candidates_materialized_no_selection`
 - judgment(판정): `orthogonal_profit_source_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run301B orthogonal profit source MT5 probe(301B 직교 수익 원천 MT5 탐침)
 
 - status(상태): `completed_orthogonal_profit_source_mt5_probe_no_selection`
 - judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
 - effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run301C orthogonal profit source review(301C 직교 수익 원천 검토)
 
@@ -3459,14 +3459,14 @@
 - status(상태): `completed_payoff_convexity_profit_scale_candidates_materialized_no_selection`
 - judgment(판정): `payoff_convexity_profit_scale_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run302B payoff convexity profit scale MT5 probe(302B 보상 볼록성 수익 규모 MT5 탐침)
 
 - status(상태): `completed_payoff_convexity_profit_scale_mt5_probe_no_selection`
 - judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
 - effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run302C payoff convexity profit scale review(302C 보상 볼록성 수익 규모 검토)
 
@@ -3480,14 +3480,14 @@
 - status(상태): `completed_regime_balanced_profit_scale_router_candidates_materialized_no_selection`
 - judgment(판정): `regime_balanced_profit_scale_router_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run303B regime balanced profit scale router MT5 probe(302B 보상 볼록성 수익 규모 MT5 탐침)
 
 - status(상태): `completed_regime_balanced_profit_scale_router_mt5_probe_no_selection`
 - judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
 - effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(ONNX 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run303C regime balanced profit scale router review(302C 보상 볼록성 수익 규모 검토)
 
@@ -3501,7 +3501,7 @@
 - status(상태): `completed_curve_pocket_aware_profit_source_candidates_materialized_no_selection`
 - judgment(판정): `curve_pocket_aware_profit_source_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run304B Curve-pocket-aware profit source MT5 probe(304B 곡선 포켓 인식 수익 원천 MT5 탐침)
 
@@ -3522,35 +3522,35 @@
 - status(상태): `completed_runtime_realized_curve_attribution_candidates_materialized_no_selection`
 - judgment(판정): `runtime_realized_curve_attribution_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run305B Curve-pocket-aware profit source MT5 probe(305B 怨≪꽑 ?ъ폆 ?몄떇 ?섏씡 ?먯쿇 MT5 ?먯묠)
 
-- status(?곹깭): `completed_runtime_realized_curve_attribution_mt5_probe_no_selection`
-- judgment(?먯젙): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
-- effect(?④낵): attempts(?쒕룄) `36`媛쒖? MT5 KPI records(MT5 KPI 湲곕줉) `36`媛쒕? 湲곕줉?덈떎.
-- boundary(寃쎄퀎): selected candidate(?좏깮 ?꾨낫), Adapter package(?대뙌???⑦궎吏), ONNX readiness(?⑥뿊??以鍮?, Goal Achieve(紐⑺몴 ?ъ꽦)??`none/not_claimed`??
+- status(상태): `completed_runtime_realized_curve_attribution_mt5_probe_no_selection`
+- judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`
+- effect(효과): attempts(시도) `36`개와 MT5 KPI records(MT5 KPI 기록) `36`개를 기록했다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run305C Runtime-realized curve attribution review(305C 런타임 실제 곡선 기여도 검토)
 
-- status(?곹깭): `completed_runtime_realized_curve_attribution_review_stage306_opened`
-- judgment(?먯젙): `actual_mt5_no_onnx_worthy_candidate_runtime_realized_curve_rebuild_opened`
+- status(상태): `completed_runtime_realized_curve_attribution_review_stage306_opened`
+- judgment(판정): `actual_mt5_no_onnx_worthy_candidate_runtime_realized_curve_rebuild_opened`
 - effect(효과): Stage305(305단계)를 닫고 `306_onnx_candidate_campaign__anti_surface_trade_shape_rebuild`를 열었다.
-- boundary(寃쎄퀎): ?댁쁺 ?밴꺽?대굹 ?고???沅뚯쐞??二쇱옣?섏? ?딅뒗??
+- boundary(경계): operating promotion(운영 승격)이나 runtime authority(런타임 권위)는 주장하지 않는다.
 
 ## 2026-05-24 run306A Anti-surface trade-shape materialization(306A 반표면 거래 형태 물질화)
 
 - status(상태): `completed_anti_surface_trade_shape_candidates_materialized_no_selection`
 - judgment(판정): `anti_surface_trade_shape_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run306A Anti-surface trade-shape materialization(306A 반표면 거래 형태 물질화)
 
 - status(상태): `completed_anti_surface_trade_shape_candidates_materialized_no_selection`
 - judgment(판정): `anti_surface_trade_shape_inputs_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run306B Anti-surface trade-shape MT5 probe(306B 반표면 거래 형태 MT5 탐침)
 
@@ -3571,14 +3571,14 @@
 - status(상태): `completed_post_trade_shape_scale_candidates_materialized_no_selection`
 - judgment(판정): `post_trade_shape_scale_ml_surfaces_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run307A Post-trade-shape scale ML materialization(307A 거래 형태 이후 수익 규모 머신러닝 물질화)
 
 - status(상태): `completed_post_trade_shape_scale_candidates_materialized_no_selection`
 - judgment(판정): `post_trade_shape_scale_ml_surfaces_materialized_no_candidate_selection`
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
-- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비)는 아직 없다.
+- boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
 ## 2026-05-24 run307B Post-trade-shape scale MT5 probe(307B 거래 형태 이후 수익 규모 MT5 탐침)
 
@@ -4977,7 +4977,7 @@
 - 2026-05-31: Stage337 run337HC(337HC 실행) `completed_stage337HC_probability_mismatch_net_recovery_lightgbm_candidates_trained_onnx_materialized_review_required_no_selection_no_mt5`. Effect(효과): probability mismatch/net recovery LightGBM(확률 불일치/순회복 라이트GBM) ONNX 후보 5개를 만들고 HD review(HD 검토)를 열었다. Forward/Goal(전진/목표)은 주장하지 않았다.
 - 2026-05-31: Stage337 run337HD(337HD 실행) `completed_stage337HD_probability_mismatch_net_recovery_lightgbm_training_review_runtime_probe_queue_open_no_selection_no_mt5`. Effect(효과): HC ONNX 후보를 검토하고 HE runtime probe package(HE 런타임 탐침 패키지)를 열었다. Forward/Goal(전진/목표)은 주장하지 않았다.
 - 2026-05-31: Stage337 run337HE(337HE 실행) `completed_stage337HE_probability_mismatch_net_recovery_lightgbm_runtime_probe_package_materialized_no_mt5_execution`. Effect(효과): MT5 runtime probe package(MT5 런타임 탐침 패키지)를 만들고 HF execution(HF 실행)을 열었다. Forward/Goal(전진/목표)은 주장하지 않았다.
-- 2026-05-31: Stage337 run337HF(337HF ?ㅽ뻾) `completed_stage337HF_probability_mismatch_net_recovery_mt5_runtime_probe_executed_review_required_no_forward_decision`. Effect(?④낵): MT5 runtime probe(MT5 ?고????먯묠)瑜??쒕룄?섍퀬 `run337HG_review_mt5_negative_repair_lightgbm_probability_mismatch_and_net_recovery_mt5_runtime_probe_or_repair_without_db_v1`???댁뿀?? Forward/Goal(?꾩쭊/紐⑺몴)? 二쇱옣?섏? ?딆븯??
+- 2026-05-31: Stage337 run337HF(337HF 실행) `completed_stage337HF_probability_mismatch_net_recovery_mt5_runtime_probe_executed_review_required_no_forward_decision`. Effect(효과): MT5 runtime probe(MT5 런타임 탐침)를 시도하고 `run337HG_review_mt5_negative_repair_lightgbm_probability_mismatch_and_net_recovery_mt5_runtime_probe_or_repair_without_db_v1`을 열었다. Forward/Goal(전진/목표)은 주장하지 않았다.
 - 2026-05-31: Stage337 run337HG(337HG 실행) `completed_stage337HG_probability_mismatch_net_recovery_mt5_review_negative_net_probability_mismatch_repair_required_no_forward_decision`. Effect(효과): MT5 runtime probe review(메타트레이더5 런타임 탐침 검토)를 완료하고 `run337HH_design_mt5_negative_repair_probability_mismatch_net_recovery_post_runtime_probe_without_db_v1`을 열었다. Forward/Goal(전진/목표)은 주장하지 않았다.
 - 2026-05-31: Stage337 run337HH(337HH 실행) `completed_stage337HH_post_runtime_probe_repair_or_offensive_design_no_training_no_selection`. Effect(효과): post-runtime repair design(사후 런타임 수리 설계)을 완료하고 `run337HI_materialize_mt5_negative_repair_probability_mismatch_net_recovery_post_runtime_probe_inputs_without_db_v1`을 열었다.
 - 2026-05-31: Stage337 run337HI(337HI 실행) `completed_stage337HI_post_runtime_probe_repair_inputs_materialized_no_training_no_selection`. Effect(효과): post-runtime repair train-only inputs(사후 런타임 수리 학습 전용 입력)을 물질화하고 `run337HJ_review_mt5_negative_repair_probability_mismatch_net_recovery_post_runtime_probe_inputs_without_db_v1`을 열었다.
@@ -7174,3 +7174,29 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - action(행동): `frontier65D_stage_closeout_runtime_semantics_gap_attribution_v1`로 F65 proxy-runtime gap attribution(프록시-런타임 차이 귀속)을 closeout(마감)했다.
 - effect(효과): SL/TP unit semantics(손절/익절 단위 의미)를 preserved clue(보존 단서)로 남기고 `stage_frontier_66__runtime_unit_aligned_exit_economics_pf_source_after_semantics_gap`를 다음 새 가설 stage(단계)로 열 준비를 했다.
 - boundary(경계): completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.
+
+<!-- five_stage_retrospective_routine_policy_v1 -->
+
+## 2026-06-16 Five-Stage Grok Retrospective Routine(5단계 Grok 중간 검토 루틴)
+
+- action(행동): user request(사용자 요청)에 따라 frontier stage(전선 단계) 5개 closeout(마감)마다 Grok(그록)과 이전 5개 작업을 중간 검토하는 routine(루틴)을 `AGENTS.md`, frontier governance(전선 운영), trigger policy(트리거 정책), Grok/stage-transition skills(그록/단계 전환 스킬), work family registry(작업군 등록부), and retrospective register(중간 검토 등록부)에 추가했다.
+- effect(효과): 다음 frontier stage open(전선 단계 개방) 전에 due/not_due/passed/blocked_with_repair_plan(도래/아직 아님/통과/수리 계획 포함 차단)을 확인해 같은 proxy-runtime mismatch pattern(프록시-런타임 불일치 패턴)과 반복 수리(repeated repair, 반복 수리)가 누적될 때 중간 점검을 강제한다.
+- boundary(경계): 이 routine(루틴)은 direction_delta(방향 변화)와 repair_priority_delta(수리 우선순위 변화)만 만들 수 있으며 completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 만들 수 없다.
+
+<!-- frontier66_closeout_stage_frontier67_open_v1 -->
+
+## 2026-06-16 Frontier66 Closeout and Frontier67 Open(F66 마감 및 F67 개방)
+
+- action(행동): `stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64`를 `preserved_clue_negative_memory(보존 단서 + 부정 기억)`로 닫고 `stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk`를 Grok stage-open review(그록 단계 개방 검토) 후 열었다.
+- effect(효과): F66의 64/64 feature/signal parity(피처/신호 동등성)는 보존하고, PF/DD economics(수익 팩터/손실폭 경제성) 실패는 F67A DD basis crosswalk(손실폭 기준 대조)로 넘긴다.
+- five_stage_retrospective(5단계 그록 중간 검토): F66 closeout(마감)은 1/5로 계산했고 next numeric trigger(다음 숫자 트리거)는 F70 closeout(70단계 마감)이다.
+- boundary(경계): completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.
+
+<!-- architecture_guard_scoped_encoding_validator_v1 -->
+
+## 2026-06-16 Architecture Guard Scoped Encoding Validator(구조 보호 범위 인코딩 검증기)
+
+- action(행동): full architecture validator(전체 구조 검증기)가 legacy encoding debt(이전 인코딩 부채)에서 반복 실패하는 문제를 분리하기 위해 `validate_agent_settings.py`에 `--encoding-scope` 옵션과 `tests/test_validate_agent_settings.py`를 추가했다.
+- effect(효과): full scan(전체 검사) 실패를 숨기지 않으면서, 현재 patch(패치)가 새 BOM/mojibake debt(새 BOM/문자 깨짐 부채)를 만들었는지 변경 파일 범위로 검증할 수 있다.
+- repair(수리): 이번에 touched(수정)한 `docs/workspace/changelog.md` 안의 기존 mojibake(문자 깨짐) 줄을 정상 한국어 병행표기로 수리했다.
+- boundary(경계): 이 검증 도구 변경은 gate(게이트), threshold(임계값), MT5 requirement(MT5 요구), completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)를 완화하지 않는다.
