@@ -1,0 +1,105 @@
+{
+  "run_id": "frontier68B_runtime_lifecycle_proxy_broad_sweep_v1",
+  "stage_id": "stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout",
+  "parent_run_id": "frontier68A_stage_open_lifecycle_economics_proxy_design_v1",
+  "created_at_utc": "2026-06-16T16:50:49Z",
+  "status": "completed_proxy_broad_sweep_no_authority(프록시 넓은 탐색 완료, 권위 없음)",
+  "claim_boundary": "proxy_broad_sweep_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "producer": "stage_pipelines/stage_frontier_68/frontier68b_runtime_lifecycle_proxy_broad_sweep.py",
+  "source_inputs": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68a_lifecycle_label_design_review.json"
+  ],
+  "artifacts": [
+    "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68B_runtime_lifecycle_proxy_broad_sweep_v1/f68b_proxy_kpi_by_split.csv",
+    "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68B_runtime_lifecycle_proxy_broad_sweep_v1/f68b_proxy_candidate_summary.csv",
+    "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68B_runtime_lifecycle_proxy_broad_sweep_v1/f68b_top_candidates.json",
+    "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68B_runtime_lifecycle_proxy_broad_sweep_v1/f68b_top_candidate_oos_trade_rows.csv",
+    "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68B_runtime_lifecycle_proxy_broad_sweep_v1/f68b_label_distribution.json",
+    "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68B_runtime_lifecycle_proxy_broad_sweep_v1/reports/result_summary.md",
+    "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/frontier68B_proxy_broad_sweep_report.md"
+  ],
+  "full_artifact_identities": [
+    {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68B_runtime_lifecycle_proxy_broad_sweep_v1/f68b_proxy_kpi_by_split.csv",
+      "sha256": "f74e491f0444a4437a737beb821ff0d0a0ae93b89b462676213db4b8d9855814",
+      "bytes": 43592529,
+      "rows": 60480
+    },
+    {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68B_runtime_lifecycle_proxy_broad_sweep_v1/f68b_proxy_candidate_summary.csv",
+      "sha256": "4952b02a223e75af6f09f2949f9a2d75c7172f6765e6f66dcfda4ffdf9495ca2",
+      "bytes": 17643444,
+      "rows": 30240
+    },
+    {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68B_runtime_lifecycle_proxy_broad_sweep_v1/f68b_top_candidates.json",
+      "sha256": "7805bc1f499a7715e3037877c6ddf5094017f4c3c02fedc51b755ebe65c80931",
+      "bytes": 34417,
+      "rows": 25
+    },
+    {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68B_runtime_lifecycle_proxy_broad_sweep_v1/f68b_top_candidate_oos_trade_rows.csv",
+      "sha256": "218319bb7cd71409141fe4ca190caf4a395ff90bd0836526746acbdc8b7d50dd",
+      "bytes": 163546,
+      "rows": 750
+    },
+    {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68B_runtime_lifecycle_proxy_broad_sweep_v1/f68b_label_distribution.json",
+      "sha256": "30a77a77a136101fc5d94f6fc332117333a73733c8cb395f8c6c986768cc48d4",
+      "bytes": 50486,
+      "rows": 84
+    },
+    {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/02_runs/frontier68B_runtime_lifecycle_proxy_broad_sweep_v1/reports/result_summary.md",
+      "sha256": "b905d0c5ab30003ad7a57da1b4e545bc5bdf0499388b8a3d09ae32aa94b93384",
+      "bytes": 6431,
+      "rows": null
+    }
+  ],
+  "review_artifact_identities": [
+    {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68b_proxy_kpi_by_split_review.csv",
+      "sha256": "73376647fdead173bb0db90d4028662dc53046587a0dd26c15ce0b2707ad58ee",
+      "bytes": 392739,
+      "rows": 552
+    },
+    {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68b_proxy_candidate_summary_review.csv",
+      "sha256": "4e538c26f7a1f79a1d8a3b468abb2997c027b80c1d5fae0ca8f820eae2a47612",
+      "bytes": 168854,
+      "rows": 276
+    },
+    {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68b_top_candidates_review.json",
+      "sha256": "ff51d6e304b5d33a815da062afb121e287c53908dc4c0b8f960ce35b4a6a32d9",
+      "bytes": 34451,
+      "rows": 25
+    },
+    {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68b_top_candidate_oos_trade_rows_review.csv",
+      "sha256": "218319bb7cd71409141fe4ca190caf4a395ff90bd0836526746acbdc8b7d50dd",
+      "bytes": 163546,
+      "rows": 750
+    },
+    {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/f68b_label_distribution_review.json",
+      "sha256": "30a77a77a136101fc5d94f6fc332117333a73733c8cb395f8c6c986768cc48d4",
+      "bytes": 50486,
+      "rows": 84
+    },
+    {
+      "path": "stages/stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout/03_reviews/frontier68B_proxy_broad_sweep_report.md",
+      "sha256": "b905d0c5ab30003ad7a57da1b4e545bc5bdf0499388b8a3d09ae32aa94b93384",
+      "bytes": 6431,
+      "rows": null
+    }
+  ],
+  "review_compaction": {
+    "review_summary_rows": 276,
+    "review_kpi_rows": 552,
+    "reason": "full CSV artifacts stay under 02_runs; 03_reviews carries compact review rows(전체 CSV는 02_runs에 두고 03_reviews는 압축 검토 행만 보관)"
+  },
+  "next_run_id": "frontier68C_candidate_scoring_or_onnx_scout_export_v1"
+}

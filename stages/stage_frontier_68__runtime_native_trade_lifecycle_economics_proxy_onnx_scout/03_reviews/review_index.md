@@ -8,6 +8,10 @@
 - `f68a_input_inventory_review.csv`: F68A input inventory(F68A 입력 목록)
 - `f68a_bridge_feasibility_checklist_review.json`: F68A bridge feasibility checklist(F68A 연결 가능성 체크리스트)
 - `f68a_lifecycle_label_design_review.json`: F68A lifecycle label design(F68A 생명주기 라벨 설계)
+- `frontier68B_proxy_broad_sweep_report.md`: F68B proxy broad sweep report(F68B 프록시 넓은 탐색 보고서)
+- `f68b_proxy_candidate_summary_review.csv`: F68B candidate summary(F68B 후보 요약)
+- `f68b_proxy_kpi_by_split_review.csv`: F68B split KPI(F68B 분할 핵심 성과 지표)
+- `f68b_top_candidates_review.json`: F68B top candidates(F68B 상위 후보)
 
-Current status(현재 상태): `f68a_preflight_design_completed_no_authority(F68A 사전확인 설계 완료, 권위 없음)`
-Next action(다음 행동): `frontier68B_runtime_lifecycle_proxy_broad_sweep_v1`
+Current status(현재 상태): `f68b_proxy_broad_sweep_completed_no_authority(F68B 프록시 넓은 탐색 완료, 권위 없음)`
+Next action(다음 행동): `frontier68C_candidate_scoring_or_onnx_scout_export_v1`
