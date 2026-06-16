@@ -1,0 +1,38 @@
+{
+  "created_at_utc": "2026-06-16T14:16:12Z",
+  "selected_slice": "F31_oos",
+  "advice_classification": {
+    "accepted": [
+      "explicit_cost_identity_block",
+      "order_intent_receipt_schema",
+      "accounting_parity_sheet",
+      "economics_decomposition_template",
+      "narrow_selection_rule_one_trade_shape",
+      "frozen_comparison_anchor",
+      "swap_commission_cross_check"
+    ],
+    "rejected": [
+      "pf_dd_optimization_in_f67d",
+      "full_64_row_replay_in_f67d",
+      "runtime_authority_or_closeout_claim_from_f67d_alone"
+    ],
+    "needs_local_verification": [
+      "row_selection",
+      "manifest_paths",
+      "actual_tester_settings"
+    ]
+  },
+  "checks": {
+    "grok_pre_mt5_review_exists": true,
+    "selected_source_attempt_exists": true,
+    "selected_row_is_f31_oos": true,
+    "model_copy_exists": true,
+    "feature_copy_exists": true,
+    "set_file_exists": true,
+    "ini_file_exists": true,
+    "meaningful_dd_gap": true,
+    "order_fill_deal_mismatch_present": true
+  },
+  "passed": true,
+  "claim_boundary": "runtime_probe_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

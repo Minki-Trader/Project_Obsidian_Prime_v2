@@ -1,17 +1,17 @@
 current_stage_id: stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk
 active_stage: stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk
-current_run_id: frontier67C_runtime_native_order_intent_economics_v1
-latest_completed_run_id: frontier67C_runtime_native_order_intent_economics_v1
-current_status: frontier67C_runtime_native_order_intent_observation_no_authority(F67C 런타임 기반 주문 의도 경제성 관찰, 권위 없음)
-current_judgment: lifecycle_trade_compression_tester_side_exit_deals_swap_cost_observation_no_authority(생명주기 거래 압축/테스터 측 청산 딜/스왑 비용 관찰, 권위 없음)
+current_run_id: frontier67D_narrow_cost_order_intent_runtime_probe_v1
+latest_completed_run_id: frontier67D_narrow_cost_order_intent_runtime_probe_v1
+current_status: frontier67D_runtime_probe_observation_no_authority(F67D 런타임 탐침 관찰, 권위 없음)
+current_judgment: count_feature_parity_exact_but_accounting_dd_cost_gap_runtime_probe_observation_no_authority(개수/피처 동등성 정확하지만 회계/손실폭/비용 간극 관찰, 권위 없음)
 next_stage_id: stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk
-next_run_id: frontier67D_narrow_cost_order_intent_runtime_probe_v1
-runtime_probe_status: runtime_probe_required_before_f67_closeout(67단계 마감 전 런타임 탐침 필수)
+next_run_id: frontier67E_gap_analysis_repair_or_closeout_decision_v1
+runtime_probe_status: runtime_probe_completed_observation_f67_closeout_still_requires_gap_analysis(F67D 런타임 탐침 관찰 완료, F67 마감 전 간극 분석 필요)
 runtime_authority: not_claimed
 operating_promotion: not_claimed
 live_readiness: not_claimed
 goal_achieve: not_claimed
-updated_at_utc: '2026-06-16T14:05:00Z'
+updated_at_utc: '2026-06-16T14:16:12Z'
 notes:
   - "F66 closeout(단계 마감): `stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64` closed(마감) as `preserved_clue_negative_memory(보존 단서 + 부정 기억)`."
   - "F66 preserved clue(보존 단서): F11,F15,F18-F49 MT5 backfill(엠티5 소급 실행)에서 64/64 split runs(분할 실행) feature_ready_diff(피처 준비 차이)=0 and signal_count_diff(신호 수 차이)=0."
@@ -20,6 +20,7 @@ notes:
   - "F67A DD basis crosswalk(손실폭 기준 대조): row_count(행 수)=64, runtime/proxy DD delta median(런타임-프록시 손실폭 차이 중앙값)=10.4811pp, runtime DD > 10 rows(런타임 손실폭 10 초과 행)=60/64, proxy DD > 10 rows(프록시 손실폭 10 초과 행)=31/64, proxy<10/runtime>10 rows(프록시 10 미만/런타임 10 초과 행)=22/64."
   - "F67B config parity depth pilot(설정 동등성 깊이 파일럿): row_count(행 수)=64, tester_signature_count(테스터 정체성 서명 수)=1, EA core signature count(EA 핵심 설정 서명 수)=1, trade_shape_signature_count(거래 형태 설정 서명 수)=7, spread/commission/slippage/swap explicit identity(스프레드/수수료/슬리피지/스왑 명시 정체성)=missing 64/64."
   - "F67C runtime-native order intent economics(런타임 기반 주문 의도 경제성): row_count(행 수)=64, total signals(총 신호)=70032, total trades(총 거래)=24284, overall trade/signal ratio(전체 거래/신호 비율)=0.3468, swap nonzero rows(스왑 0 아님 행)=54/64, deal minus order fill positive rows(거래 표 딜 수가 주문 체결 수보다 큰 행)=53/64."
-  - "Next action(다음 행동): F67D narrow MT5 Runtime Probe(좁은 MT5 런타임 탐침)에서 explicit cost identity(명시 비용 정체성)와 order intent receipt(주문 의도 영수증)를 새 실행으로 확인한다."
+  - "F67D narrow MT5 Runtime Probe(좁은 MT5 런타임 탐침): F31 OOS(F31 표본외) 2025-10-01..2026-04-14, signal_count_diff(신호 수 차이)=0, feature_ready_diff(피처 준비 차이)=0, trade_count(거래 수)=259, trades/day(일 거래 수)=1.3282, net_profit(순수익)=2.31, PF(수익 팩터)=1.0, DD(손실폭)=30.58, deal_minus_order_fill(딜-주문 체결 차이)=157, swap(스왑)=-14.24."
+  - "Next action(다음 행동): F67E gap analysis/repair decision(간극 분석/수리 결정)로 F67D count parity exact(개수 동등성 정확)와 accounting/DD/cost gap(회계/손실폭/비용 간극)의 원인을 분리하고 closeout(마감) 또는 repair(수리)를 결정한다."
   - "Five-stage Grok retrospective(5단계 그록 중간 검토): F66 counts as 1/5 closeouts(마감 1/5); current_due_status(현재 도래 상태)=not_due(아직 아님), next_numeric_trigger_frontier(다음 숫자 트리거)=70."
   - "No completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성) claimed(주장 없음)."

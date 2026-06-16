@@ -14,5 +14,12 @@
 - `frontier67C_runtime_native_order_intent_economics_report.md`: runtime-native order intent economics report(런타임 기반 주문 의도 경제성 보고서)
 - `frontier67C_runtime_native_order_intent_rows_review.csv`: runtime-native order intent row table(런타임 기반 주문 의도 행 표)
 - `frontier67C_runtime_native_order_intent_summary_review.json`: runtime-native order intent summary(런타임 기반 주문 의도 요약)
+- `docs/agent_control/grok_reviews/2026-06-16_f67d_pre_mt5_cost_order_intent_runtime_probe/`: F67D pre-MT5 Grok packet(F67D MT5 전 그록 묶음)
+- `grok_f67d_pre_mt5_receipt.md`: F67D Grok pre-MT5 receipt(F67D MT5 전 그록 영수증)
+- `frontier67D_narrow_cost_order_intent_runtime_probe_report.md`: F67D MT5 Runtime Probe report(F67D MT5 런타임 탐침 보고서)
+- `frontier67D_order_intent_receipt_review.csv`: F67D order intent receipt review(F67D 주문 의도 영수증 검토)
+- `frontier67D_gap_classification_review.csv`: F67D gap classification review(F67D 간극 분류 검토)
+- `frontier67D_runtime_probe_summary_review.json`: F67D runtime probe summary(F67D 런타임 탐침 요약)
 
-Current status(현재 상태): `frontier67C_runtime_native_order_intent_observation_no_authority(F67C 런타임 기반 주문 의도 경제성 관찰, 권위 없음)`
+Current status(현재 상태): `frontier67D_runtime_probe_observation_no_authority(F67D 런타임 탐침 관찰, 권위 없음)`
+Next action(다음 행동): `frontier67E_gap_analysis_repair_or_closeout_decision_v1(F67E 간극 분석/수리 또는 마감 결정)`

@@ -14,9 +14,10 @@
 1. `frontier67A_stage_open_dd_basis_crosswalk_v1`: proxy DD vs runtime DD basis(프록시/런타임 손실폭 기준) crosswalk(대조).
 2. `frontier67B_config_parity_depth_pilot_v1`: spread/commission/slippage/modeling/deposit/leverage(스프레드/수수료/슬리피지/모델링/예치금/레버리지) pilot checklist(파일럿 점검표).
 3. `frontier67C_runtime_native_order_intent_economics_v1`: signal->order->trade conversion(신호->주문->거래 전환) and runtime-native PnL economics(런타임 기반 손익 경제성).
+4. `frontier67D_narrow_cost_order_intent_runtime_probe_v1`: fresh F31 OOS MT5 Runtime Probe(새 F31 표본외 MT5 런타임 탐침) with explicit cost identity(명시 비용 정체성), order intent receipt(주문 의도 영수증), and accounting/DD/cost gap classification(회계/손실폭/비용 간극 분류).
 
 ## Required Runtime Probe Boundary(필수 런타임 탐침 경계)
 
-F67 must run at least one MT5 Runtime Probe(MT5 런타임 탐침) before closeout(마감). If F67A or F67B discovers a logic impossibility(로직상 불가능) before new MT5 execution(실행), record blocked(차단) with repair action(수리 행동), not positive closure(긍정 마감).
+F67 must run at least one MT5 Runtime Probe(MT5 런타임 탐침) before closeout(마감). F67D has now satisfied this as runtime_probe_observation(런타임 탐침 관찰), but F67 closeout(마감) still requires gap analysis/repair decision(간극 분석/수리 결정). If F67A or F67B discovers a logic impossibility(로직상 불가능) before new MT5 execution(실행), record blocked(차단) with repair action(수리 행동), not positive closure(긍정 마감).
 
 F67A non-scope(F67A 범위 밖): signal count revalidation(신호 수 재검증), PF target hunt(수익 팩터 목표 사냥), trade density optimization(거래 빈도 최적화).

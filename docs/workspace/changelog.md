@@ -7237,3 +7237,13 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - effect(효과): total signal/trade(총 신호/거래) `70032/24284`, overall trade/signal ratio(전체 거래/신호 비율) `0.3468`, swap nonzero rows(스왑 0 아님 행) `54/64`, deal minus order fill positive rows(거래 표 딜 수가 런타임 주문 체결 수보다 큰 행) `53/64`를 기록했다.
 - next(다음): F67D narrow MT5 Runtime Probe(F67D 좁은 MT5 런타임 탐침)에서 explicit cost identity(명시 비용 정체성)와 order intent receipt(주문 의도 영수증)를 새 실행으로 확인한다.
 - boundary(경계): runtime-native order intent observation(런타임 기반 주문 의도 관찰)이며 F67 closeout(마감) 전 MT5 Runtime Probe(MT5 런타임 탐침)는 still required(여전히 필수)다.
+
+
+<!-- frontier67D_narrow_cost_order_intent_runtime_probe_v1 -->
+
+## 2026-06-16 Frontier67D Narrow MT5 Runtime Probe(F67D 좁은 MT5 런타임 탐침)
+
+- action(행동): `frontier67D_narrow_cost_order_intent_runtime_probe_v1`로 F31 OOS(F31 표본외) 한 조각을 새 run root(실행 루트)에서 MT5 Strategy Tester(MT5 전략 테스터)로 재실행했다.
+- effect(효과): signal_count_diff(신호 수 차이) `0` and feature_ready_diff(피처 준비 차이) `0`은 보존하면서, order_fill/trade/deal(주문 체결/거래/딜) `361/259/518`, runtime DD(런타임 손실폭) `30.58`, proxy DD(프록시 손실폭) `4.8117`, swap(스왑) `-14.24`를 같은 runtime probe observation(런타임 탐침 관찰)으로 묶었다.
+- next(다음): F67E gap analysis/repair decision(F67E 간극 분석/수리 결정)에서 accounting parity(회계 동등성), DD repricing(손실폭 재가격화), missing cost identity(누락 비용 정체성)을 분리한다.
+- boundary(경계): F67D는 runtime_probe_observation(런타임 탐침 관찰)이며 completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.

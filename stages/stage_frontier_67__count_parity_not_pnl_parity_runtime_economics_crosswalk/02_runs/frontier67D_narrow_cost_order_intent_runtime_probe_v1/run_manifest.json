@@ -1,0 +1,183 @@
+{
+  "run_id": "frontier67D_narrow_cost_order_intent_runtime_probe_v1",
+  "stage_id": "stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk",
+  "created_at_utc": "2026-06-16T14:16:12Z",
+  "status": "completed_runtime_probe_observation_no_authority",
+  "claim_boundary": "runtime_probe_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "producer": "stage_pipelines/stage_frontier_67/frontier67d_narrow_cost_order_intent_runtime_probe.py",
+  "hypothesis": "Fresh F31 OOS MT5 runtime probe can preserve exact signal/feature counts while exposing accounting, DD, and cost gaps.",
+  "selected_slice": "F31_oos",
+  "test_period": {
+    "start": "2025-10-01",
+    "end": "2026-04-14",
+    "calendar_days_exclusive": 195
+  },
+  "source_inputs": {
+    "source_attempt_name": "f66_f31_f31b_0013_oos",
+    "source_run_id": "frontier66C_proxy_signal_mt5_backfill_v1",
+    "parent_run_id": "frontier67C_runtime_native_order_intent_economics_v1",
+    "grok_packet": {
+      "packet_root": "docs/agent_control/grok_reviews/2026-06-16_f67d_pre_mt5_cost_order_intent_runtime_probe",
+      "prompt_path": "docs/agent_control/grok_reviews/2026-06-16_f67d_pre_mt5_cost_order_intent_runtime_probe/prompts/prompt.md",
+      "clean_output_path": "docs/agent_control/grok_reviews/2026-06-16_f67d_pre_mt5_cost_order_intent_runtime_probe/outputs/clean_output.md",
+      "metadata_path": "docs/agent_control/grok_reviews/2026-06-16_f67d_pre_mt5_cost_order_intent_runtime_probe/outputs/metadata.json",
+      "prompt_exists": true,
+      "clean_output_exists": true,
+      "metadata_exists": true
+    }
+  },
+  "execution": {
+    "attempt_name": "f67d_f31_f31b_0013_oos_order_intent",
+    "tester": {
+      "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+      "Symbol": "US100",
+      "Period": "M5",
+      "Model": 4,
+      "Deposit": 500,
+      "Leverage": "1:100",
+      "Optimization": 0,
+      "ExecutionMode": 0,
+      "ForwardMode": 0,
+      "UseLocal": 1,
+      "UseRemote": 0,
+      "UseCloud": 0,
+      "ReplaceReport": 1,
+      "ShutdownTerminal": 1,
+      "FromDate": "2025.10.01",
+      "ToDate": "2026.04.14",
+      "Report": "Project_Obsidian_Prime_v2_frontier67D_narrow_cost_order_intent_runtime_probe_v1_f67d_f31_f31b_0013_oos_order_intent",
+      "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set"
+    },
+    "common_telemetry_path": "Project_Obsidian_Prime_v2/frontier67D_narrow_cost_order_intent_runtime_probe/telemetry/f67d_f31_f31b_0013_oos_order_intent_telemetry.csv",
+    "common_summary_path": "Project_Obsidian_Prime_v2/frontier67D_narrow_cost_order_intent_runtime_probe/telemetry/f67d_f31_f31b_0013_oos_order_intent_summary.csv",
+    "compile_payload": {
+      "compile": {
+        "status": "completed",
+        "command": [
+          "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\MetaEditor64.exe",
+          "/compile:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.mq5",
+          "/log:C:\\Users\\awdse\\AppData\\Local\\Temp\\obsidian_prime_mt5_compile\\compile_6a154736d6f130da.log"
+        ],
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "",
+        "log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/02_runs/frontier67D_narrow_cost_order_intent_runtime_probe_v1/mt5/mt5_compile.log",
+        "command_log_path": "C:/Users/awdse/AppData/Local/Temp/obsidian_prime_mt5_compile/compile_6a154736d6f130da.log",
+        "actual_log_path": "C:/Users/awdse/AppData/Local/Temp/obsidian_prime_mt5_compile/compile_6a154736d6f130da.log",
+        "log_sha256": "5a0aea7d3a0a2dceb500fe52f853cb028b03134a3bdca2118554f772f8ab3322"
+      },
+      "portable_ea": {
+        "repo_ea_ex5": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.ex5",
+        "portable_ea_ex5": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Experts/Project_Obsidian_Prime_v2/foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.ex5",
+        "portable_ea_ex5_exists_before": true,
+        "copied": true,
+        "portable_ea_ex5_exists_after": true,
+        "portable_ea_sha256": "3f5303c1ac01906f680f6402469ecf8b490fd50f97f4c1626d21805111862d9d"
+      }
+    }
+  },
+  "artifacts": [
+    {
+      "role": "execution_result",
+      "path": "stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/02_runs/frontier67D_narrow_cost_order_intent_runtime_probe_v1/frontier67D_runtime_probe_execution_result.json",
+      "required": true,
+      "exists": true,
+      "sha256": "67d1016edb35056588530b2e4768369b06cc8515ceb0c06df73858e86f11c2ab"
+    },
+    {
+      "role": "order_intent_receipt",
+      "path": "stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/02_runs/frontier67D_narrow_cost_order_intent_runtime_probe_v1/frontier67D_order_intent_receipt.csv",
+      "required": true,
+      "exists": true,
+      "sha256": "32ae37292a5ac0798e6ce8f415e705b0ca967beddb6ab38f56ca5189d9fa3bc9"
+    },
+    {
+      "role": "gap_classification",
+      "path": "stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/02_runs/frontier67D_narrow_cost_order_intent_runtime_probe_v1/frontier67D_gap_classification.csv",
+      "required": true,
+      "exists": true,
+      "sha256": "42c931ab187b9244d6d7c937ca4cde4f6515f73a0d2f1fe84b84d4b55076b539"
+    },
+    {
+      "role": "runtime_summary",
+      "path": "stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/02_runs/frontier67D_narrow_cost_order_intent_runtime_probe_v1/frontier67D_runtime_probe_summary.json",
+      "required": true,
+      "exists": true,
+      "sha256": "790e787c2b6664136a8aee93e0b1161363f1039bb248b92341b5bef6a6bd3a37"
+    },
+    {
+      "role": "review_report",
+      "path": "stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/03_reviews/frontier67D_narrow_cost_order_intent_runtime_probe_report.md",
+      "required": true,
+      "exists": true,
+      "sha256": "719a178fb20ba746175a71a6d16492f5b62b0b0106f5b203ba0485e986cfa580"
+    },
+    {
+      "role": "grok_receipt",
+      "path": "stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/03_reviews/grok_f67d_pre_mt5_receipt.md",
+      "required": true,
+      "exists": true,
+      "sha256": "052af9ed60fbff603ea8d0f6572fc5720af8f98fd68e18e2436f7ddf77db0c58"
+    },
+    {
+      "role": "mt5_set",
+      "path": "stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/02_runs/frontier67D_narrow_cost_order_intent_runtime_probe_v1/mt5/f67d_f31_f31b_0013_oos_order_intent.set",
+      "required": true,
+      "exists": true,
+      "sha256": "f056da666531940b334659b8ffa4b1dea933aa1e672da11cd9038b240e8014dd"
+    },
+    {
+      "role": "mt5_ini",
+      "path": "stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/02_runs/frontier67D_narrow_cost_order_intent_runtime_probe_v1/mt5/f67d_f31_f31b_0013_oos_order_intent.ini",
+      "required": true,
+      "exists": true,
+      "sha256": "c34137fb3d81f4586574b7af142f628e24ccb2bc32c09537d0d6932b289a28bf"
+    },
+    {
+      "role": "strategy_tester_html_report",
+      "path": "stages/stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk/02_runs/frontier67D_narrow_cost_order_intent_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier67D_narrow_cost_order_intent_runtime_probe_v1_f67d_f31_f31b_0013_oos_order_intent.htm",
+      "required": true,
+      "exists": true,
+      "sha256": "b131c4b23fb688f74ac12226d254f2e7a5c8e1d53dd1163d8c27964513c8df9c"
+    }
+  ],
+  "summary": {
+    "run_id": "frontier67D_narrow_cost_order_intent_runtime_probe_v1",
+    "stage_id": "stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk",
+    "status": "completed_runtime_probe_observation_no_authority",
+    "selected_slice": "F31_oos",
+    "attempt_name": "f67d_f31_f31b_0013_oos_order_intent",
+    "tester_status": "completed",
+    "runtime_status": "completed",
+    "report_status": "completed",
+    "test_period_start": "2025-10-01",
+    "test_period_end": "2026-04-14",
+    "trades_per_day": 1.3282051282051281,
+    "signal_count_diff": 0,
+    "feature_ready_diff": 0,
+    "deal_minus_order_fill": 157,
+    "deal_count_equals_2x_trade": true,
+    "net_profit": 2.31,
+    "gross_profit": 721.66,
+    "gross_loss": -719.35,
+    "profit_factor": 1.0,
+    "trade_count": 259,
+    "win_rate_percent": 36.29,
+    "average_win": 7.6772340425531915,
+    "average_loss": -4.359696969696969,
+    "payoff_ratio": 1.760955886593837,
+    "expectancy": 0.01,
+    "recovery_factor": 0.01,
+    "long_trade_count": 259,
+    "short_trade_count": 0,
+    "max_drawdown_percent": 30.58,
+    "proxy_dd": 4.811684180485509,
+    "dd_delta_runtime_minus_proxy": 25.76831581951449,
+    "deal_commission_sum": 0.0,
+    "deal_swap_sum": -14.24,
+    "cost_gap_class": "observed_swap_with_missing_config_cost_identity",
+    "claim_boundary": "runtime_probe_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+    "next_action": "F67D gap analysis and repair decision before F67 closeout"
+  },
+  "next_action": "F67E gap analysis/repair decision before F67 closeout"
+}

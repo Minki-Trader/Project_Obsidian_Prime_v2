@@ -1,0 +1,122 @@
+{
+  "run_id": "frontier67D_narrow_cost_order_intent_runtime_probe_v1",
+  "stage_id": "stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk",
+  "created_at_utc": "2026-06-16T14:16:12Z",
+  "status": "completed_runtime_probe_observation_no_authority",
+  "claim_boundary": "runtime_probe_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "test_period": {
+    "start": "2025-10-01",
+    "end": "2026-04-14",
+    "calendar_days_exclusive": 195
+  },
+  "split_view": "F31_oos_runtime_probe",
+  "proxy_expectation": {
+    "expected_signal_count": 876,
+    "expected_rows": 7584,
+    "proxy_dd": 4.811684180485509,
+    "source_f67c_profit_factor": 1.0
+  },
+  "proxy_kpi": {
+    "proxy_dd": 4.811684180485509,
+    "source_f67c_profit_factor": 1.0
+  },
+  "runtime_probe_kpi": {
+    "net_profit": 2.31,
+    "gross_profit": 721.66,
+    "gross_loss": -719.35,
+    "profit_factor": 1.0,
+    "max_drawdown_percent": 30.58,
+    "max_drawdown_amount": 212.16,
+    "trade_count": 259,
+    "trades_per_day": 1.3282051282051281,
+    "win_rate_percent": 36.29,
+    "average_win": 7.6772340425531915,
+    "average_loss": -4.359696969696969,
+    "payoff_ratio": 1.760955886593837,
+    "expectancy": 0.01,
+    "recovery_factor": 0.01,
+    "long_trade_count": 259,
+    "short_trade_count": 0
+  },
+  "parity": {
+    "signal_count_diff": 0,
+    "feature_ready_diff": 0,
+    "order_fill_count": 361,
+    "deal_count": 518,
+    "deal_minus_order_fill": 157
+  },
+  "costs": {
+    "deal_commission_sum": 0.0,
+    "deal_swap_sum": -14.24,
+    "deal_cost_sum": -14.24,
+    "cost_gap_class": "observed_swap_with_missing_config_cost_identity"
+  },
+  "proxy_runtime_gap": {
+    "dd_delta_runtime_minus_proxy": 25.76831581951449,
+    "gap_classification": [
+      {
+        "layer": "count_parity",
+        "metric": "signal_count",
+        "proxy_value": 876,
+        "runtime_value": 876,
+        "delta": 0,
+        "gap_class": "count_parity_exact",
+        "evidence": "runtime_summary_vs_expected_signal_count",
+        "run_id": "frontier67D_narrow_cost_order_intent_runtime_probe_v1",
+        "attempt_name": "f67d_f31_f31b_0013_oos_order_intent",
+        "claim_boundary": "runtime_probe_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+      },
+      {
+        "layer": "feature_readiness",
+        "metric": "feature_ready_count",
+        "proxy_value": 7584,
+        "runtime_value": 7584,
+        "delta": 0,
+        "gap_class": "feature_ready_exact",
+        "evidence": "runtime_summary_feature_ready_count",
+        "run_id": "frontier67D_narrow_cost_order_intent_runtime_probe_v1",
+        "attempt_name": "f67d_f31_f31b_0013_oos_order_intent",
+        "claim_boundary": "runtime_probe_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+      },
+      {
+        "layer": "accounting_parity",
+        "metric": "order_fill_vs_deal_count",
+        "proxy_value": 361,
+        "runtime_value": 518,
+        "delta": 157,
+        "gap_class": "deal_minus_order_fill_positive",
+        "evidence": "runtime_order_fill_count_vs_strategy_report_deal_count",
+        "run_id": "frontier67D_narrow_cost_order_intent_runtime_probe_v1",
+        "attempt_name": "f67d_f31_f31b_0013_oos_order_intent",
+        "claim_boundary": "runtime_probe_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+      },
+      {
+        "layer": "economics_parity",
+        "metric": "drawdown_percent",
+        "proxy_value": "4.811684180485509",
+        "runtime_value": 30.58,
+        "delta": 25.76831581951449,
+        "gap_class": "runtime_dd_exceeds_proxy_dd",
+        "evidence": "f67a_proxy_dd_vs_f67d_strategy_report_dd",
+        "run_id": "frontier67D_narrow_cost_order_intent_runtime_probe_v1",
+        "attempt_name": "f67d_f31_f31b_0013_oos_order_intent",
+        "claim_boundary": "runtime_probe_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+      },
+      {
+        "layer": "cost_identity",
+        "metric": "swap_commission",
+        "proxy_value": "config_identity_missing",
+        "runtime_value": "commission=0.0;swap=-14.24",
+        "delta": -14.24,
+        "gap_class": "observed_swap_with_missing_config_cost_identity",
+        "evidence": "set_ini_identity_vs_strategy_report_deal_table",
+        "run_id": "frontier67D_narrow_cost_order_intent_runtime_probe_v1",
+        "attempt_name": "f67d_f31_f31b_0013_oos_order_intent",
+        "claim_boundary": "runtime_probe_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+      }
+    ],
+    "gap_cause": "count_feature_parity_exact_but_accounting_parity_deal_inflation_plus_runtime_dd_repricing_plus_missing_config_cost_identity"
+  },
+  "source_authority": "F67D MT5 Strategy Tester report and runtime telemetry",
+  "next_action": "F67E gap analysis/repair decision before F67 closeout"
+}
