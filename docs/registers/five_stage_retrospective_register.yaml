@@ -40,16 +40,17 @@ claim_boundary:
     - goal_achieve
 
 state:
-  last_completed_packet_id: null
-  last_completed_at_frontier: null
-  last_completed_stage_ids: []
-  last_completed_at_utc: null
-  closed_frontier_ids_since_last_retrospective:
+  last_completed_packet_id: frontier66_to_70_five_stage_retrospective_v1
+  last_completed_at_frontier: 70
+  last_completed_stage_ids:
     - stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64
     - stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk
     - stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout
     - stage_frontier_69__axis_rotation_after_lifecycle_risk_only_negative_memory
-  closeouts_since_last: 4
-  next_numeric_trigger_frontier: 70
-  current_due_status: not_due
-  note: "F66, F67, F68, and F69 closeouts(마감)은 4/5로 계산했다. Next expected numeric trigger(다음 숫자 트리거)는 F70 closeout(마감)이다."
+    - stage_frontier_70__regime_specific_asymmetric_value_exit_model_rotation
+  last_completed_at_utc: '2026-06-16T22:35:00Z'
+  closed_frontier_ids_since_last_retrospective: []
+  closeouts_since_last: 0
+  next_numeric_trigger_frontier: 75
+  current_due_status: not_due_after_retrospective_completed
+  note: "F66-F70 retrospective(중간 검토)가 완료되어 다음 frontier open(전선 개방) 차단은 해제됐다. 다음 numeric trigger(숫자 트리거)는 F75 closeout(마감)이다."

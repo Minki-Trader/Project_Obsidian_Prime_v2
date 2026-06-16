@@ -1,0 +1,7 @@
+﻿axis,priority,f70_contract,f69_guard,pass_condition
+label/target(라벨/목표),1,lead axis(주도 축): asymmetric value and exit-survival labels(비대칭 가치 및 청산 생존 라벨),not threshold/cooldown/daily quota repair(임계값/쿨다운/일별 할당 수리 아님),PF and density improve together in at least one validation/OOS stratum(검증/표본외 구간에서 수익 팩터와 밀도 동시 개선)
+regime/session split(장세/세션 분할),2,coupled to label strata(라벨 층과 결합): cash open/mid/late plus trend/chop/volatility(정규장 초반/중반/후반 및 추세/횡보/변동성),not same label filtered by smaller bucket(같은 라벨의 작은 구간 필터 아님),stratum explains sparse/dense fracture(희박/조밀 균열 설명)
+model family(모델 계열),3,"regularized linear, EBM-like additive tree, small NN(정규화 선형, EBM 유사 가법 트리, 작은 신경망)",ExtraTrees-light reference only(가벼운 엑스트라트리스는 참조 전용),"family changes Pareto knee, not only noise(모델 계열이 잡음이 아닌 파레토 굴절을 이동)"
+exit shape(청산 형태),4,ablation after label/regime scout(라벨/장세 탐색 후 소거 비교),never lead with exit or quota rescue(청산 또는 할당 구제로 시작 금지),"only used to explain, not rescue, a seed surface(씨앗 표면 설명용이지 구제용 아님)"
+risk logic(위험 로직),5,runtime-compatible fixed envelope(런타임 호환 고정 봉투),no post-hoc ATR/SLTP rescue loop(사후 평균진폭/손익절 구제 반복 금지),keeps MT5 materialization feasible(메타트레이더5 물질화 가능성 유지)
+Tier pair(티어 쌍),6,"Tier A separate, Tier B separate, Tier A+B combined planned(티어 A 분리, 티어 B 분리, 합산 계획)",Tier B missing cannot be hidden(티어 B 누락 숨김 금지),missing_required if not materialized(물질화 못 하면 필수 누락 기록)

@@ -1298,3 +1298,16 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Do-not-repeat(반복 금지): same F69 event-first ExtraTrees threshold/cooldown/daily quota repair loop(동일 F69 이벤트 우선 엑스트라트리스 임계값/쿨다운/일별 할당 수리 반복)를 반복하지 않는다.
 - Evidence(근거): `stages/stage_frontier_69__axis_rotation_after_lifecycle_risk_only_negative_memory/03_reviews/stage_closeout_report.md`.
 - Boundary(경계): no authority(권위 없음), no completion(완성 없음).
+
+
+<!-- NR-FR70-REGIME-VALUE-EXIT-SURVIVAL-ECONOMICS -->
+## NR-FR70-REGIME-VALUE-EXIT-SURVIVAL-ECONOMICS
+
+- Stage(단계): `stage_frontier_70__regime_specific_asymmetric_value_exit_model_rotation`
+- Hypothesis(가설): regime/session-specific asymmetric value and exit-survival labels(장세/세션별 비대칭 가치 및 청산 생존 라벨) with density-aware selection(밀도 인식 선택) could repair sparse/dense fracture(희소/밀집 균열).
+- Why failed(실패 이유): F70B 420 candidates(후보), F70C 936 candidates(후보) produced meaningful signal(의미 신호) `0` and final_like(최종 유사) `0`; after selected-entry runtime repair(선택 진입 런타임 수리), best OOS runtime(최선 표본외 런타임)은 reference axis(참조 축) net(순수익) `68.00`, PF(수익 팩터) `1.29`, DD(손실폭) `5.61%`, trades/day(일 거래 수) `0.8923`로 밀도 목표에 크게 못 미쳤고, small NN axis(작은 신경망 축)는 OOS DD(표본외 손실폭) `10.56%`로 제한을 넘었다.
+- Salvage value(회수 가치): selected-entry tape(선택 진입 테이프) repaired trade-count parity(거래 수 동등성), so future runtime probes(향후 런타임 탐침)는 selected-entry semantics(선택 진입 의미)를 reuse(재사용)할 수 있다.
+- Do-not-repeat(반복 금지): same F70 label/model/selection surface(같은 F70 라벨/모델/선택 표면)를 threshold(임계값)나 tape variant(테이프 변형)만 바꿔 반복하지 않는다.
+- Reopen condition(재개 조건): a genuinely new economic hypothesis(진짜 새 경제 가설)가 feature set(피처 묶음), label/target(라벨/목표), model family(모델 계열), trade shape(거래 형태), risk logic(위험 로직), or regime/session split(장세/세션 분할) 중 하나 이상을 주도적으로 바꿀 때만 다시 연다.
+- Evidence(근거): `stages/stage_frontier_70__regime_specific_asymmetric_value_exit_model_rotation/03_reviews/stage_closeout_report.md`.
+- Boundary(경계): no authority(권위 없음), no completion(완성 없음).

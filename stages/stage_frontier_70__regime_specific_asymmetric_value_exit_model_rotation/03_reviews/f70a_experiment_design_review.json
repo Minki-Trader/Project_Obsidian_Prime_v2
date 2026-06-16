@@ -1,0 +1,143 @@
+{
+  "run_id": "frontier70A_stage_open_regime_specific_asymmetric_value_exit_model_rotation_v1",
+  "stage_id": "stage_frontier_70__regime_specific_asymmetric_value_exit_model_rotation",
+  "created_at_utc": "2026-06-16T21:21:24Z",
+  "idea_id": "IDEA-FR70-REGIME-ASYMMETRIC-VALUE-EXIT-MODEL-ROTATION",
+  "hypothesis": "Regime/session-specific asymmetric value and exit-survival labels(장세/세션별 비대칭 가치 및 청산 생존 라벨)이 density-aware selection(밀도 인식 선택)을 라벨 단계에 내장하면 F69 sparse/dense fracture(F69 희박/조밀 균열)를 줄일 수 있다.",
+  "decision_use": "Decide whether F70B should run label-regime proxy scout first(F70B 라벨-장세 프록시 탐색 우선 실행 여부 결정).",
+  "comparison_baseline": "F69 closeout negative memory only; no inherited winner/baseline/promotion/runtime authority(F69 마감 부정 기억만 참조, 승자/기준선/승격/런타임 권위 상속 없음).",
+  "control_variables": [
+    "US100 M5 split_v1(US100 5분봉 분할 v1)",
+    "Runtime-compatible fixed risk envelope(런타임 호환 고정 위험 봉투)",
+    "Mandatory MT5 Runtime Probe after meaningful proxy signal(의미 있는 프록시 신호 뒤 필수 MT5 런타임 탐침)"
+  ],
+  "changed_variables": [
+    "asymmetric value labels(비대칭 가치 라벨)",
+    "exit-survival labels(청산 생존 라벨)",
+    "regime/session label strata(장세/세션 라벨 층)",
+    "model family rotation(모델 계열 회전)"
+  ],
+  "sample_scope": {
+    "symbol": "US100",
+    "timeframe": "M5(5분봉)",
+    "tier_scope": "Tier A planned with Tier B required record(티어 A 계획 및 티어 B 필수 기록)",
+    "data_identity": {
+      "model_input_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "model_input_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "rows": 46650,
+      "columns": 69,
+      "split_counts": {
+        "train": 29222,
+        "validation": 9844,
+        "oos": 7584
+      },
+      "timestamp_min": "2022-09-01 16:40:00+00:00",
+      "timestamp_max": "2026-04-13 22:00:00+00:00",
+      "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "feature_order_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb",
+      "feature_count": 58,
+      "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "raw_us100_path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "raw_us100_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+      "aligned_model_rows": 46650,
+      "unaligned_model_rows": 0,
+      "labelable": {
+        "h3_labelable_rows": 46650,
+        "h3_split_counts": {
+          "train": 29222,
+          "validation": 9844,
+          "oos": 7584
+        },
+        "h6_labelable_rows": 46650,
+        "h6_split_counts": {
+          "train": 29222,
+          "validation": 9844,
+          "oos": 7584
+        },
+        "h9_labelable_rows": 46650,
+        "h9_split_counts": {
+          "train": 29222,
+          "validation": 9844,
+          "oos": 7584
+        },
+        "h12_labelable_rows": 46650,
+        "h12_split_counts": {
+          "train": 29222,
+          "validation": 9844,
+          "oos": 7584
+        },
+        "h18_labelable_rows": 46650,
+        "h18_split_counts": {
+          "train": 29222,
+          "validation": 9844,
+          "oos": 7584
+        }
+      },
+      "session_counts": {
+        "cash_open_0_60": 8693,
+        "cash_mid_65_270": 29860,
+        "cash_late_275_390": 8097,
+        "outside_cash": 0
+      },
+      "regime_counts": {
+        "trend_adx_ge25": 23460,
+        "chop_adx_lt18": 9881,
+        "vol_expansion_hv5over20_ge1p25": 7207,
+        "bb_squeeze_on": 5475
+      }
+    }
+  },
+  "success_criteria": "At least one label-regime scout row moves PF and trades/day together while DD remains below early scout ceiling(라벨-장세 탐색 행 하나 이상에서 수익 팩터와 일거래가 함께 개선되고 손실폭이 초기 탐색 상한 아래 유지).",
+  "failure_criteria": "Same sparse high-PF/low-density and dense low-PF fracture persists after label-first scout(라벨 우선 탐색 뒤에도 희박 고PF/저밀도 및 조밀 저PF 균열 지속).",
+  "invalid_conditions": "future path includes entry bar, split leakage, raw/model timestamp mismatch, or F69 repair knobs lead the scout(미래 경로가 진입봉 포함, 분할 누수, 원천/모델 시각 불일치, F69 수리 노브가 탐색 주도).",
+  "stop_conditions": [
+    "zero signal or no labelable rows(영 신호 또는 라벨 가능 행 없음)",
+    "joint-soft rows remain zero after bounded label-first scout(상한 있는 라벨 우선 탐색 뒤 공동 완화 행 0)",
+    "exit/threshold/cooldown/quota becomes lead axis(청산/임계값/쿨다운/할당이 주도 축이 됨)"
+  ],
+  "evidence_plan": [
+    "stages/stage_frontier_70__regime_specific_asymmetric_value_exit_model_rotation/02_runs/frontier70A_stage_open_regime_specific_asymmetric_value_exit_model_rotation_v1/f70a_experiment_design.json",
+    "stages/stage_frontier_70__regime_specific_asymmetric_value_exit_model_rotation/02_runs/frontier70A_stage_open_regime_specific_asymmetric_value_exit_model_rotation_v1/f70a_axis_contract.csv",
+    "stages/stage_frontier_70__regime_specific_asymmetric_value_exit_model_rotation/02_runs/frontier70A_stage_open_regime_specific_asymmetric_value_exit_model_rotation_v1/f70a_phase_plan.csv",
+    "stages/stage_frontier_70__regime_specific_asymmetric_value_exit_model_rotation/03_reviews/frontier70A_stage_open_regime_value_exit_model_rotation_report.md",
+    "stages/stage_frontier_70__regime_specific_asymmetric_value_exit_model_rotation/03_reviews/grok_stage_open_receipt.md"
+  ],
+  "grok": {
+    "trigger_reason": "stage open requires Grok second opinion(단계 개방은 그록 2차 의견 필요)",
+    "review_size": "medium",
+    "direction_before_grok": "Open F70 as label-regime asymmetric value scout, not trade-shape repair(F70을 거래 형태 수리가 아니라 라벨-장세 비대칭 가치 탐색으로 개방)",
+    "bounded_evidence": [
+      "stages/stage_frontier_69__axis_rotation_after_lifecycle_risk_only_negative_memory/03_reviews/stage_closeout_report.md",
+      "stages/stage_frontier_69__axis_rotation_after_lifecycle_risk_only_negative_memory/03_reviews/f69d_runtime_probe_receipt_review.csv",
+      "stages/stage_frontier_69__axis_rotation_after_lifecycle_risk_only_negative_memory/03_reviews/f69e_proxy_runtime_gap_decision_review.json",
+      "docs/registers/five_stage_retrospective_register.yaml"
+    ],
+    "prompt_identity": {
+      "path": "docs/agent_control/grok_reviews/2026-06-17_f70_stage_open_regime_value_exit_model_rotation/prompts/f70_stage_open_regime_value_exit_model_rotation_prompt.md",
+      "prompt_hash": "d9be2ccb5fa8211e6d9766b1c32871da146bfccb558fcfdbe812e4eab3fdd603",
+      "sha256": "d9be2ccb5fa8211e6d9766b1c32871da146bfccb558fcfdbe812e4eab3fdd603"
+    },
+    "grok_output_identity": {
+      "path": "docs/agent_control/grok_reviews/2026-06-17_f70_stage_open_regime_value_exit_model_rotation/outputs/clean_output.md",
+      "sha256": "2e28551dddea64e5a44482743afa0fd2e4403d3baa7da2e0fe9373fd51bdb253",
+      "metadata": "docs/agent_control/grok_reviews/2026-06-17_f70_stage_open_regime_value_exit_model_rotation/outputs/metadata.json"
+    },
+    "advice_classification": {
+      "accepted": [
+        "F70 is conditionally new if label/regime/density-in-selection leads(F70은 라벨/장세/밀도 내장 선택이 주도하면 조건부 신규)",
+        "first scout priority should be label/target coupled with regime/session(첫 탐색 우선순위는 장세/세션 결합 라벨/목표)",
+        "exit shape should be ablation only(청산 형태는 소거 비교 전용)"
+      ],
+      "rejected": [
+        "none; forbidden claims were not made(없음; 금지 주장은 없음)"
+      ],
+      "needs_local_verification": [
+        "ensure F70 packet schema enforces label-first ordering(F70 패킷 스키마가 라벨 우선 순서를 강제하는지 확인)"
+      ]
+    },
+    "local_verification": "axis_contract and phase_plan make label/target priority 1 and exit shape priority 4(축 계약과 단계 계획이 라벨/목표를 1순위, 청산 형태를 4순위로 고정)",
+    "forbidden_claim_check": "pass; no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve claimed(통과; 완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 주장 없음)",
+    "final_codex_direction": "Proceed to F70B label-regime asymmetric value proxy scout(F70B 라벨-장세 비대칭 가치 프록시 탐색으로 진행)"
+  },
+  "claim_boundary": "stage_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}
