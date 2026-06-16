@@ -227,3 +227,7 @@ Repo-scoped skill(저장소 전용 스킬)은 기본적으로 `.agents/skills/<s
 ## 인코딩 규칙(Encoding Rule, 인코딩 규칙)
 
 한국어 `.md`와 `.txt` 문서는 UTF-8 with BOM(UTF-8 BOM 포함)을 유지한다.
+
+PowerShell(파워셸)에서 BOM 없는 UTF-8(유티에프8) 문서를 BOM 포함으로 바꿀 때는 반드시 읽기에도 `Get-Content -Encoding UTF8 -Raw`를 명시한 뒤 `Set-Content -Encoding UTF8`로 쓴다. 기본 `Get-Content` 읽기는 금지한다. 효과(effect, 효과)는 한국어 문서가 mojibake(문자 깨짐)로 다시 저장되는 일을 막는 것이다.
+
+`stages/*/02_runs/`처럼 path length(경로 길이)가 긴 산출물은 일반 PowerShell(파워셸) 경로 확인이 실패할 수 있다. 이 경우 `foundation.control_plane.ledger.io_path(입출력 경로)` 또는 `\\?\` long-path prefix(긴 경로 접두사)를 사용한다. 효과(effect, 효과)는 실제 산출물이 존재하는데 missing(누락)으로 오판하는 일을 막는 것이다.

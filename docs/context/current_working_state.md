@@ -1,18 +1,16 @@
 ﻿# Current Working State(현재 작업 상태)
 
-Frontier63(F63, 전선 63단계)가 `negative_memory_inverse_event_compression_failed_runtime_pf(부정 기억, 역전 이벤트 압축 런타임 PF 실패)`로 닫혔다.
+Frontier64(F64, 전선 64단계)는 stage closeout(단계 마감)까지 닫혔다.
 
-- stage(단계): `stage_frontier_63__new_pf_source_after_event_compression_memory`
-- run(실행): `frontier63D_stage_closeout_inverse_event_compressed_side_allocation_v1`
-- runtime_probe_run(런타임 탐침 실행): `frontier63Z_runtime_probe_backfill_v1`
-- candidate(후보): `f63b_inv_evt_t20_m0_h2_cd0_cof1`
-- MT5_validation_is(MT5 검증 내부): PF=0.35, DD=22.56%, trades(거래)=897, density/day(일 밀도)=4.901639344262295, feature_ready_diff(피처 준비 차이)=0, signal_diff(신호 차이)=-670
-- MT5_oos(MT5 표본외): PF=0.44, DD=15.61%, trades(거래)=743, density/day(일 밀도)=5.67175572519084, feature_ready_diff(피처 준비 차이)=0, signal_diff(신호 차이)=-506
-- next_stage(다음 단계): `stage_frontier_64__independent_pf_source_after_inverse_signal_memory`
-- next_run(다음 실행): `frontier64A_stage_open_independent_pf_source_after_inverse_signal_memory_v1`
+- stage(단계): `stage_frontier_64__independent_pf_source_after_inverse_signal_memory`
+- current_run(현재 실행): `frontier64F_stage_closeout_loss_cluster_hazard_v1`
+- judgment(판정): `negative_memory_runtime_probe_quality_gap_no_authority(부정 기억, 런타임 탐침 품질 차이, 권위 없음)`
+- closeout_label(마감 라벨): `negative_memory(부정 기억)`
+- next_stage(다음 단계): `stage_frontier_65__runtime_semantics_pf_source_after_hazard_gate_failure`
+- next_run(다음 실행): `frontier65A_stage_open_runtime_semantics_pf_source_after_hazard_gate_failure_v1`
 
-F63 action(행동): inverse event-compressed short/flat/long side allocation model(역전 이벤트 압축 숏/무거래/롱 방향 배분 모델)을 학습하고 MT5 runtime probe(MT5 런타임 탐침)를 실행했다.
+Action(행동): F64B proxy(프록시), F64C handoff verification(인계 검증), F64D capped repair(상한 수리), F64E MT5 runtime probe(MT5 런타임 탐침), Grok closeout review(그록 마감 검토)를 하나의 hypothesis lifecycle(가설 생명주기)로 묶어 마감했다.
 
-F63 effect(효과): F62의 density-near-target but PF-failed(밀도 목표 근처이나 PF 실패) 기억 뒤, signal polarity inversion(신호 극성 역전)이 PF source(수익 팩터 원천)를 만드는지 proxy-runtime gap(프록시-런타임 차이)으로 판정했다.
+Effect(효과): loss-cluster hazard admit/block(손실 군집 위험 허용/차단) 표면은 proxy(프록시)만으로는 독립 PF source(독립 수익 팩터 원천)로 믿으면 안 된다는 negative memory(부정 기억)로 남았고, 다음 frontier(다음 전선)는 새 PF mechanism(새 수익 팩터 메커니즘)을 열어야 한다.
 
-Claim boundary(주장 경계): completion(완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), Goal Achieve(목표 달성)를 주장하지 않는다.
+Claim boundary(주장 경계): closeout(마감)은 완료 후보가 아니라 negative memory(부정 기억)다. completion(완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), Goal Achieve(목표 달성)는 주장하지 않는다.

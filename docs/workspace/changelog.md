@@ -1,4 +1,12 @@
-﻿## 2026-06-02 run359A Stage Branch(359A 단계 분기)
+﻿## 2026-06-16 Frontier64 Stage Open(전선64 단계 개방)
+
+- action(행동): `stage_frontier_64__independent_pf_source_after_inverse_signal_memory`를 loss-cluster hazard admission source(손실 군집 위험 진입 허용 원천) 가설로 열었다.
+- effect(효과): F61~F63 side allocation(방향 배분) 수리 반복을 멈추고, independent PF source(독립 수익 팩터 원천)를 proxy(프록시)부터 다시 검증하게 했다.
+- grok_review(그록 검토): stage-open review(단계 개방 검토) `accepted(수용)`, prompt_length_exceeds_small_limit(소규모 검토 길이 권장 초과) warning(경고) 기록.
+- next(다음): `frontier64B_loss_cluster_hazard_proxy_scout_v1`.
+- boundary(경계): completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.
+
+## 2026-06-02 run359A Stage Branch(359A 단계 분기)
 
 - action(행동): Stage358B(358B 실행)의 ready package(준비된 패키지)를 Stage359(359단계) MT5 execution(실행) 질문으로 분기했다.
 - effect(효과): Stage358(358단계)은 package handoff(패키지 인계)로 가볍게 고정되고, Stage359B(359B 실행)가 runtime evidence(런타임 근거), proxy-MT5 diff(프록시-MT5 차이), trade density(거래 밀도) 평가를 맡는다.
@@ -7108,3 +7116,37 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - Next(다음): `frontier40A_stage_open_short_pf_edge_non_score_source_hypothesis_design_v1`
 <!-- frontier40D_stage_closeout_non_score_source_v1 -->
 - 2026-06-14T18:49:38Z `frontier40D_stage_closeout_non_score_source_v1` closed `stage_frontier_40__short_pf_edge_non_score_source_pivot_after_regime_gate_negative` as `preserved_clue_negative_memory`. Best `f40b_0001` validation/OOS PF-density-DD 1.154/7.262/11.867 and 1.158/7.985/13.517; runtime `runtime_probe_ineligible_no_seed_or_runtime_candidate_after_f40_proxy_repair`.
+
+
+
+<!-- frontier64B_loss_cluster_hazard_proxy_scout_v1 -->
+
+## 2026-06-16 Frontier64B Proxy Scout(F64B 프록시 탐색)
+
+- action(행동): `frontier64B_loss_cluster_hazard_proxy_scout_v1`로 loss-cluster hazard admission source(손실 군집 위험 진입 허용 원천) proxy(프록시)를 실행했다.
+- effect(효과): best `f64b_f64b_hz_w36_h6_q75_eq55_hz65_h2_cd0`, f63_four_axis_beat_rows(F63 네 축 동시 개선 행) `48`를 기록하고 pre-MT5 Grok review(비싼 MT5 전 그록 검토)로 넘겼다.
+- boundary(경계): MT5 runtime probe(MT5 런타임 탐침)는 아직 pending(대기)이며 completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.
+
+<!-- frontier64C_handoff_verification_loss_cluster_hazard_v1 -->
+
+## 2026-06-16 Frontier64C Handoff Verification(F64C 인계 검증)
+
+- action(행동): `frontier64C_handoff_verification_loss_cluster_hazard_v1`로 F64B composed signal(합성 신호)을 3-class runtime handoff ONNX(3분류 런타임 인계 온엑스)로 검증했다.
+- effect(효과): handoff_pass(인계 통과) `False`를 기록하고 next(다음)를 `frontier64D_handoff_adapter_repair_or_block_v1`로 설정했다.
+- boundary(경계): MT5 runtime probe(MT5 런타임 탐침)는 아직 pending(대기)이며 runtime authority/live readiness/Goal Achieve(런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.
+
+<!-- frontier64D_handoff_adapter_repair_or_block_v1 -->
+
+## 2026-06-16 Frontier64D Handoff Adapter Repair(F64D 인계 어댑터 수리)
+
+- action(행동): `frontier64D_handoff_adapter_repair_or_block_v1`로 direction adapter(방향 어댑터)+runtime veto tape(런타임 차단 테이프) capped repair(상한 있는 수리)를 실행했다.
+- effect(효과): repair_pass(수리 통과) `True`를 기록하고 next(다음)를 `frontier64E_mt5_runtime_probe_loss_cluster_hazard_v1`로 설정했다.
+- boundary(경계): MT5 runtime probe(MT5 런타임 탐침)는 아직 pending(대기)이며 runtime authority/live readiness/Goal Achieve(런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.
+
+<!-- frontier64F_stage_closeout_loss_cluster_hazard_v1 -->
+
+## 2026-06-16 Frontier64F Stage Closeout(F64F 단계 마감)
+
+- action(행동): `frontier64F_stage_closeout_loss_cluster_hazard_v1`로 F64 loss-cluster hazard source(손실 군집 위험 원천)를 negative memory(부정 기억)로 마감했다.
+- effect(효과): MT5 PF/DD(수익 팩터/손실폭) 실패와 proxy-runtime gap(프록시-런타임 차이)을 고정하고 `frontier65A_stage_open_runtime_semantics_pf_source_after_hazard_gate_failure_v1`를 새 PF mechanism(새 수익 팩터 메커니즘) 질문으로 남겼다.
+- boundary(경계): completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.

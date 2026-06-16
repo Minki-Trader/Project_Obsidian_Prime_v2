@@ -1242,3 +1242,25 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Evidence(근거): MT5 validation_is(MT5 검증 내부) PF/DD/trades(수익 팩터/손실폭/거래) `0.35/22.56%/897`; MT5 OOS(MT5 표본외) `0.44/15.61%/743`.
 - Runtime probe status(런타임 탐침 상태): `runtime_probe_observation_no_authority`
 - Effect(효과): inverse event compression(역전 이벤트 압축)이 F62의 wrong-way signal(반대 방향 신호) 가능성을 PF source(수익 팩터 원천)로 바꾸는지 기록한다.
+
+<!-- frontier64E_mt5_runtime_probe_loss_cluster_hazard_v1 -->
+
+## frontier64E_mt5_runtime_probe_loss_cluster_hazard_v1
+
+- Stage(단계): `stage_frontier_64__independent_pf_source_after_inverse_signal_memory`
+- Negative memory(부정 기억): `negative_memory_runtime_probe_quality_gap_no_authority(부정 기억, 런타임 탐침 품질 차이, 권위 없음)`
+- Evidence(근거): `stages/stage_frontier_64__independent_pf_source_after_inverse_signal_memory/03_reviews/runtime_probe_report.md` and `stages/stage_frontier_64__independent_pf_source_after_inverse_signal_memory/03_reviews/proxy_runtime_gap_report.md`.
+- Boundary(경계): no authority(권위 없음), no completion(완성 없음).
+
+<!-- frontier64F_stage_closeout_loss_cluster_hazard_v1 -->
+
+## frontier64F_stage_closeout_loss_cluster_hazard_v1
+
+- Stage(단계): `stage_frontier_64__independent_pf_source_after_inverse_signal_memory`
+- Negative memory(부정 기억): `negative_memory_runtime_probe_quality_gap_no_authority(부정 기억, 런타임 탐침 품질 차이, 권위 없음)`
+- Why failed(실패 이유): loss-cluster hazard admit/block(손실 군집 위험 허용/차단) plus simple symmetric direction entry(단순 대칭 방향 진입)는 proxy(프록시)와 local handoff repair(로컬 인계 수리)에서는 좋아 보여도 MT5 runtime economics(MT5 런타임 경제성)로 전이되지 않았다.
+- Salvage value(회수 가치): F64B proxy clue(프록시 단서), F64D handoff-repair clue(인계 수리 단서), feature_ready_diff=0 with MT5 failure(피처 준비 차이 0인데 MT5 실패)를 보존한다.
+- Reopen condition(재개 조건): same surface(같은 표면)는 새 PF mechanism(새 수익 팩터 메커니즘)과 narrow MT5 runtime probe(좁은 MT5 런타임 탐침)를 함께 제시할 때만 재개한다.
+- Do-not-repeat(반복 금지): Do not treat loss-cluster hazard admit/block(손실 군집 위험 허용/차단) plus simple symmetric direction entry(단순 대칭 방향 진입) as an independent PF source(독립 수익 팩터 원천) from proxy metrics(프록시 지표), ONNX parity(온엑스 동등성), or local handoff repair(로컬 인계 수리) alone. Require a narrow MT5 runtime probe(좁은 MT5 런타임 탐침) with explicit PF/DD gates(명시 수익 팩터/손실폭 게이트) before further work on the same surface(같은 표면). Do not stack more handoff/lifecycle adapter mutations(인계/생명주기 어댑터 변형) unless the next stage(다음 단계) introduces a new PF mechanism(새 수익 팩터 메커니즘), not another parity patch(동등성 패치).
+- Evidence(근거): `stages/stage_frontier_64__independent_pf_source_after_inverse_signal_memory/03_reviews/stage_closeout_report.md` and `stages/stage_frontier_64__independent_pf_source_after_inverse_signal_memory/03_reviews/proxy_runtime_gap_report.md`.
+- Boundary(경계): no authority(권위 없음), no completion(완성 없음).

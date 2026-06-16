@@ -1906,3 +1906,61 @@ Register ideas when they become durable work, not for every passing thought.
 - Result(결과): `negative_memory_inverse_event_compression_failed_runtime_pf(부정 기억, 역전 이벤트 압축 런타임 PF 실패)`
 - Evidence(근거): `stages/stage_frontier_63__new_pf_source_after_event_compression_memory/03_reviews/runtime_probe_report.md`
 - Boundary(경계): runtime_probe_observation only(런타임 탐침 관찰 전용), no authority(권위 없음).
+
+<!-- frontier64A_stage_open_independent_pf_source_after_inverse_signal_memory_v1 -->
+
+## frontier64A_stage_open_independent_pf_source_after_inverse_signal_memory_v1
+
+- Stage(단계): `stage_frontier_64__independent_pf_source_after_inverse_signal_memory`
+- Idea(아이디어): loss-cluster hazard admission source(손실 군집 위험 진입 허용 원천)를 independent PF source(독립 수익 팩터 원천)로 시험한다.
+- Status(상태): `stage_open_exploration_only_no_authority(단계 개방 탐색 전용, 권위 없음)`
+- Evidence(근거): `stages/stage_frontier_64__independent_pf_source_after_inverse_signal_memory/03_reviews/runA_report.md`
+- Grok review(그록 검토): accepted(수용), prompt_length_exceeds_small_limit(소규모 검토 길이 권장 초과) warning(경고) 기록.
+- Next(다음): `frontier64B_loss_cluster_hazard_proxy_scout_v1`
+- Boundary(경계): scout clue(탐색 단서) 전 단계이며 completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.
+
+
+
+<!-- frontier64B_loss_cluster_hazard_proxy_scout_v1 -->
+
+## frontier64B_loss_cluster_hazard_proxy_scout_v1
+
+- Stage(단계): `stage_frontier_64__independent_pf_source_after_inverse_signal_memory`
+- Idea(아이디어): binary hazard model(이진 위험 모델)이 simple symmetric entry surface(단순 대칭 진입 표면)의 손실 군집 위험을 gate(게이트)한다.
+- Result(결과): `scout_clue(탐색 단서)`
+- Evidence(근거): `stages/stage_frontier_64__independent_pf_source_after_inverse_signal_memory/03_reviews/runB_report.md`
+- Next(다음): `frontier64C_grok_pre_mt5_loss_cluster_hazard_review_v1`
+- Boundary(경계): proxy-only(프록시 전용), runtime pending(런타임 대기), no authority(권위 없음).
+
+<!-- frontier64D_handoff_adapter_repair_or_block_v1 -->
+
+## frontier64D_handoff_adapter_repair_or_block_v1
+
+- Stage(단계): `stage_frontier_64__independent_pf_source_after_inverse_signal_memory`
+- Idea(아이디어): F64B loss-cluster hazard gate(손실 군집 위험 게이트)를 direction adapter(방향 어댑터)와 runtime veto tape(런타임 차단 테이프)로 나눠 MT5 handoff gap(MT5 인계 차이)을 줄인다.
+- Result(결과): `runtime_probe_ready_after_adapter_repair(어댑터 수리 후 런타임 탐침 준비)`
+- Evidence(근거): `stages/stage_frontier_64__independent_pf_source_after_inverse_signal_memory/03_reviews/handoff_adapter_repair_report.md`
+- Next(다음): `frontier64E_mt5_runtime_probe_loss_cluster_hazard_v1`
+- Boundary(경계): local handoff repair only(로컬 인계 수리 전용), runtime pending(런타임 대기), no authority(권위 없음).
+
+<!-- frontier64E_mt5_runtime_probe_loss_cluster_hazard_v1 -->
+
+## frontier64E_mt5_runtime_probe_loss_cluster_hazard_v1
+
+- Stage(단계): `stage_frontier_64__independent_pf_source_after_inverse_signal_memory`
+- Idea(아이디어): F64 loss-cluster hazard gate(손실 군집 위험 게이트)를 repaired MT5 handoff(수리된 MT5 인계)로 runtime probe(런타임 탐침)했다.
+- Result(결과): `negative_memory_runtime_probe_quality_gap_no_authority(부정 기억, 런타임 탐침 품질 차이, 권위 없음)`
+- Evidence(근거): `stages/stage_frontier_64__independent_pf_source_after_inverse_signal_memory/03_reviews/runtime_probe_report.md`
+- Boundary(경계): runtime_probe_observation only(런타임 탐침 관찰 전용), no authority(권위 없음).
+
+<!-- frontier64F_stage_closeout_loss_cluster_hazard_v1 -->
+
+## frontier64F_stage_closeout_loss_cluster_hazard_v1
+
+- Stage(단계): `stage_frontier_64__independent_pf_source_after_inverse_signal_memory`
+- Idea(아이디어): loss-cluster hazard admission source(손실 군집 위험 진입 허용 원천)가 independent PF source(독립 수익 팩터 원천)인지 시험했다.
+- Result(결과): `negative_memory_runtime_probe_quality_gap_no_authority(부정 기억, 런타임 탐침 품질 차이, 권위 없음)`
+- Evidence(근거): `stages/stage_frontier_64__independent_pf_source_after_inverse_signal_memory/03_reviews/stage_closeout_report.md` and `stages/stage_frontier_64__independent_pf_source_after_inverse_signal_memory/03_reviews/proxy_runtime_gap_report.md`.
+- Preserved clue(보존 단서): F64B proxy(프록시)와 F64D handoff repair(인계 수리)는 참조 단서로만 보존한다.
+- Next(다음): `frontier65A_stage_open_runtime_semantics_pf_source_after_hazard_gate_failure_v1` with new PF mechanism(새 수익 팩터 메커니즘).
+- Boundary(경계): no authority(권위 없음), no completion(완성 없음).

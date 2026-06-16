@@ -1,0 +1,13 @@
+﻿# F64 Review Index(F64 검토 색인)
+
+- `runA_report.md`: stage-open report(단계 개방 보고)
+- `runB_report.md`: proxy scout report(프록시 탐색 보고)
+- `handoff_verification_report.md`: F64C handoff verification(인계 검증)
+- `handoff_adapter_repair_report.md`: F64D handoff adapter repair(인계 어댑터 수리)
+- `runtime_probe_report.md`: F64E MT5 runtime probe(MT5 런타임 탐침)
+- `proxy_runtime_gap_report.md`: F64E proxy-runtime gap(프록시-런타임 차이)
+- `grok_stage_open_receipt.md`: Grok stage-open receipt(그록 단계 개방 영수증)
+- `grok_stage_closeout_receipt.md`: Grok closeout receipt(그록 마감 영수증)
+- `stage_closeout_report.md`: F64F closeout report(F64F 마감 보고)
+- `required_gate_coverage_audit.md`: required gate coverage audit(필수 게이트 커버리지 감사)
+- `stage_run_ledger.csv`: stage-local run ledger(단계 로컬 실행 장부)
