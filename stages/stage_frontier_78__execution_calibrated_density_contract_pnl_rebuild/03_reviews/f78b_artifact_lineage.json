@@ -1,0 +1,30 @@
+﻿{
+  "source_inputs": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78a_experiment_design_review.json"
+  ],
+  "producer": "stage_pipelines/stage_frontier_78/frontier78b_execution_calibrated_density_contract_pnl_proxy_scout.py",
+  "consumer": "frontier78C_pre_mt5_grok_execution_calibrated_negative_control_runtime_probe_v1",
+  "artifact_paths": [
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78b_contract_proxy_summary.json",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78b_contract_proxy_candidates_all.csv",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78b_contract_proxy_ranked_top100.csv",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78b_contract_proxy_axis_summary.csv",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/frontier78B_execution_calibrated_density_contract_pnl_proxy_scout_report.md",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/02_runs/frontier78B_execution_calibrated_density_contract_pnl_proxy_scout_v1/run_manifest.json"
+  ],
+  "artifact_hashes": {
+    "dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "raw_bars_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+    "script_sha256": "564b3c556a3cd27593bfca6b2cee7b5f97ae1cf46316b364960d0d029d06b10d"
+  },
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/stage_run_ledger.csv"
+  ],
+  "availability": "tracked_reviews_with_reproducible_command(추적 리뷰와 재현 명령)",
+  "lineage_judgment": "connected_with_boundary(경계 있는 연결)"
+}

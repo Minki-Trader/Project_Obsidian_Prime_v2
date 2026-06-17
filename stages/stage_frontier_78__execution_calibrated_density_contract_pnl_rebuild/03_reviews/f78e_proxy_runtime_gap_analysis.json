@@ -1,0 +1,295 @@
+﻿{
+  "run_id": "frontier78E_proxy_runtime_gap_analysis_and_repair_decision_v1",
+  "stage_id": "stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild",
+  "parent_run_id": "frontier78D_mt5_execution_calibrated_negative_control_runtime_probe_v1",
+  "target_candidate_id": "f78b_02234",
+  "test_period": "2025-01-02..2025-10-01",
+  "split_view": "validation/Tier A MT5 Runtime Probe(검증/Tier A MT5 런타임 탐침)",
+  "observed_change": "proxy validation positive but MT5 runtime validation negative(프록시 검증 양수, MT5 런타임 검증 음수)",
+  "comparison_baseline": "F78B next-bar contract proxy validation(다음 봉 계약 프록시 검증)",
+  "proxy_kpi": {
+    "net_profit": 42.453781865295134,
+    "gross_profit": 318.8597751891151,
+    "gross_loss": -276.40599332382,
+    "profit_factor": 1.1535921177206854,
+    "trade_count": 329,
+    "trades_day": 1.2140221402214022,
+    "max_drawdown_percent": 0.21303624788330125,
+    "win_rate": 0.44376899696048633,
+    "average_win": 2.1839710629391447,
+    "average_loss": -1.51041526406459,
+    "payoff_ratio": 1.4459408050882563,
+    "expectancy": 0.1290388506543925,
+    "recovery_factor": 1.9927961690609015
+  },
+  "runtime_kpi": {
+    "run_id": "frontier78D_mt5_execution_calibrated_negative_control_runtime_probe_v1",
+    "attempt_name": "f78d_execution_calibrated_negative_control_validation",
+    "candidate_id": "f78d_runtime_f78b_02234",
+    "axis_id": "short_h18_tp26_sl16_contract_core_logistic_all_none_cd6_q72",
+    "split": "validation",
+    "test_period_start": "2025-01-02",
+    "test_period_end": "2025-10-01",
+    "calendar_days_exclusive": 272,
+    "tester_status": "completed",
+    "runtime_status": "completed",
+    "report_status": "completed",
+    "expected_rows": 9844,
+    "feature_ready_count": 9844,
+    "feature_ready_diff": 0,
+    "expected_signal_count": 329,
+    "signal_count": 329,
+    "signal_count_diff": 0,
+    "expected_selected_trade_count": 329,
+    "order_attempt_count": 329,
+    "order_fill_count": 329,
+    "order_fill_rate": 1.0,
+    "trade_count": 329,
+    "trades_per_day": 1.2095588235294117,
+    "long_trade_count": 0,
+    "short_trade_count": 329,
+    "winning_trade_count": 119,
+    "losing_trade_count": 210,
+    "net_profit": -26.53,
+    "gross_profit": 317.63,
+    "gross_loss": -344.16,
+    "profit_factor": 0.92,
+    "expectancy": -0.08,
+    "win_rate_percent": 36.17,
+    "average_win": 2.669159663865546,
+    "average_loss": -1.638857142857143,
+    "payoff_ratio": 1.628671343014193,
+    "recovery_factor": -0.45,
+    "max_drawdown_amount": 58.87,
+    "max_drawdown_percent": 11.45,
+    "proxy_net_profit": 42.453781865295134,
+    "proxy_profit_factor": 1.1535921177206854,
+    "proxy_trades_per_day": 1.2140221402214022,
+    "proxy_dd_percent": 0.21303624788330125,
+    "dd_delta_runtime_minus_proxy": 11.236963752116697,
+    "gap_cause_summary": "runtime_economics_gap_after_signal_and_feature_parity",
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/02_runs/frontier78D_mt5_execution_calibrated_negative_control_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier78D_mt5_execution_calibrated_negative_control_runtime_probe_v1_f78d_execution_calibrated_negative_control_validation.htm",
+    "telemetry_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/frontier78D_mt5_execution_calibrated_negative_control_runtime_probe/telemetry/f78d_execution_calibrated_negative_control_validation_telemetry.csv",
+    "summary_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/frontier78D_mt5_execution_calibrated_negative_control_runtime_probe/telemetry/f78d_execution_calibrated_negative_control_validation_summary.csv",
+    "claim_boundary": "negative_control_runtime_probe_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  },
+  "delta": {
+    "net_profit": {
+      "proxy": 42.453781865295134,
+      "runtime": -26.53,
+      "runtime_minus_proxy": -68.98378186529513
+    },
+    "gross_profit": {
+      "proxy": 318.8597751891151,
+      "runtime": 317.63,
+      "runtime_minus_proxy": -1.2297751891151165
+    },
+    "gross_loss": {
+      "proxy": -276.40599332382,
+      "runtime": -344.16,
+      "runtime_minus_proxy": -67.75400667618004
+    },
+    "profit_factor": {
+      "proxy": 1.1535921177206854,
+      "runtime": 0.92,
+      "runtime_minus_proxy": -0.23359211772068533
+    },
+    "trade_count": {
+      "proxy": 329,
+      "runtime": 329,
+      "runtime_minus_proxy": 0.0
+    },
+    "trades_day": {
+      "proxy": 1.2140221402214022,
+      "runtime": 1.2095588235294117,
+      "runtime_minus_proxy": -0.004463316691990515
+    },
+    "max_drawdown_percent": {
+      "proxy": 0.21303624788330125,
+      "runtime": 11.45,
+      "runtime_minus_proxy": 11.236963752116697
+    },
+    "win_rate": {
+      "proxy": 0.44376899696048633,
+      "runtime": 36.17,
+      "runtime_minus_proxy": 35.726231003039516
+    },
+    "average_win": {
+      "proxy": 2.1839710629391447,
+      "runtime": 2.669159663865546,
+      "runtime_minus_proxy": 0.4851886009264015
+    },
+    "average_loss": {
+      "proxy": -1.51041526406459,
+      "runtime": -1.638857142857143,
+      "runtime_minus_proxy": -0.12844187879255298
+    },
+    "payoff_ratio": {
+      "proxy": 1.4459408050882563,
+      "runtime": 1.628671343014193,
+      "runtime_minus_proxy": 0.18273053792593674
+    },
+    "expectancy": {
+      "proxy": 0.1290388506543925,
+      "runtime": -0.08,
+      "runtime_minus_proxy": -0.20903885065439248
+    },
+    "recovery_factor": {
+      "proxy": 1.9927961690609015,
+      "runtime": -0.45,
+      "runtime_minus_proxy": -2.4427961690609017
+    }
+  },
+  "gap_decomposition": {
+    "signal_count_diff": 0,
+    "feature_ready_diff": 0,
+    "order_fill_rate": 1.0,
+    "trade_count_diff": 0.0,
+    "gross_profit_delta_runtime_minus_proxy": -1.2297751891151165,
+    "gross_loss_delta_runtime_minus_proxy": -67.75400667618004,
+    "net_delta_runtime_minus_proxy": -68.98378186529513,
+    "loss_side_share_of_net_gap": 0.9821729810128926
+  },
+  "entry_timing_diagnostic": {
+    "paired_trade_count": 329,
+    "entry_diff_minutes_counts": {
+      "-5.0": 328,
+      "-3.4166666666666665": 1
+    },
+    "dominant_entry_diff_minutes": -5.0,
+    "sign_flip_count": 91,
+    "sign_flip_rate": 0.2765957446808511,
+    "runtime_minus_proxy_sum": -68.98378186529516,
+    "runtime_minus_proxy_mean": -0.209677148526733
+  },
+  "same_bar_proxy_rebuild": {
+    "validation": {
+      "net": -10.59193337383514,
+      "gross_profit": 287.4077653256878,
+      "gross_loss": -297.999698699523,
+      "pf": 0.9644565634795653,
+      "dd_pct": 0.44969587815730844,
+      "trade_count": 329,
+      "calendar_days": 271,
+      "calendar_trades_day": 1.2140221402214022,
+      "active_days": 131,
+      "active_trades_day": 2.5114503816793894,
+      "win_rate": 0.4012158054711246,
+      "avg_win": 2.177331555497635,
+      "avg_loss": -1.5126888258859035,
+      "payoff": 1.4393783561020785,
+      "expectancy": -0.03219432636424055,
+      "recovery": -0.235535478271161,
+      "avg_hold_bars": 3.349544072948328,
+      "avg_mae_contract": 3.836137337571678,
+      "avg_spread_cost_contract": 0.10587187811489952,
+      "max_consecutive_loss": 9,
+      "time_under_water_trades": 322,
+      "smooth_equity_proxy": 0,
+      "dd_amount_proxy_balance_10000": 44.96958781573085,
+      "dd_pct_if_deposit_500": 8.99391756314617
+    },
+    "oos": {
+      "net": -19.587092872217696,
+      "gross_profit": 206.10802345702243,
+      "gross_loss": -225.69511632924008,
+      "pf": 0.9132143699394702,
+      "dd_pct": 0.5570966632134332,
+      "trade_count": 243,
+      "calendar_days": 194,
+      "calendar_trades_day": 1.2525773195876289,
+      "active_days": 99,
+      "active_trades_day": 2.4545454545454546,
+      "win_rate": 0.3786008230452675,
+      "avg_win": 2.240304602793722,
+      "avg_loss": -1.4946696445645038,
+      "payoff": 1.4988627158789132,
+      "expectancy": -0.08060532046180122,
+      "recovery": -0.3515923566879012,
+      "avg_hold_bars": 2.925925925925926,
+      "avg_mae_contract": 4.236400987999301,
+      "avg_spread_cost_contract": 0.07184387258551841,
+      "max_consecutive_loss": 12,
+      "time_under_water_trades": 232,
+      "smooth_equity_proxy": 0,
+      "dd_amount_proxy_balance_10000": 55.70966632134332,
+      "dd_pct_if_deposit_500": 11.141933264268664
+    }
+  },
+  "next_bar_proxy_rebuild": {
+    "validation": {
+      "net": 42.453781865295134,
+      "gross_profit": 318.8597751891151,
+      "gross_loss": -276.40599332382,
+      "pf": 1.1535921177206854,
+      "dd_pct": 0.21303624788330125,
+      "trade_count": 329,
+      "calendar_days": 271,
+      "calendar_trades_day": 1.2140221402214022,
+      "active_days": 131,
+      "active_trades_day": 2.5114503816793894,
+      "win_rate": 0.44376899696048633,
+      "avg_win": 2.1839710629391447,
+      "avg_loss": -1.51041526406459,
+      "payoff": 1.4459408050882563,
+      "expectancy": 0.1290388506543925,
+      "recovery": 1.9927961690609015,
+      "avg_hold_bars": 3.4893617021276597,
+      "avg_mae_contract": 3.8073484914585283,
+      "avg_spread_cost_contract": 0.10634913069165587,
+      "max_consecutive_loss": 7,
+      "time_under_water_trades": 105,
+      "smooth_equity_proxy": 1,
+      "dd_amount_proxy_balance_10000": 21.303624788330126,
+      "dd_pct_if_deposit_500": 4.260724957666025
+    },
+    "oos": {
+      "net": 54.58482783574718,
+      "gross_profit": 249.1854342303418,
+      "gross_loss": -194.60060639459454,
+      "pf": 1.2804966996097884,
+      "dd_pct": 0.22925237368512172,
+      "trade_count": 243,
+      "calendar_days": 194,
+      "calendar_trades_day": 1.2525773195876289,
+      "active_days": 99,
+      "active_trades_day": 2.4545454545454546,
+      "win_rate": 0.4609053497942387,
+      "avg_win": 2.224869948485195,
+      "avg_loss": -1.4855008121724773,
+      "payoff": 1.4977238182935921,
+      "expectancy": 0.22462892113476204,
+      "recovery": 2.38099291877865,
+      "avg_hold_bars": 3.234567901234568,
+      "avg_mae_contract": 4.175906841016849,
+      "avg_spread_cost_contract": 0.07170880026409238,
+      "max_consecutive_loss": 12,
+      "time_under_water_trades": 107,
+      "smooth_equity_proxy": 0,
+      "dd_amount_proxy_balance_10000": 22.92523736851217,
+      "dd_pct_if_deposit_500": 4.585047473702434
+    }
+  },
+  "likely_drivers": [
+    "entry_timing_mismatch: MT5 opens at signal bar time while proxy labeled next-bar open(진입 시각 불일치: MT5는 신호 봉 시각 진입, 프록시는 다음 봉 시가 라벨)",
+    "drawdown_denominator_mismatch: proxy DD uses 10000 balance while tester deposit is 500(손실폭 분모 불일치: 프록시 10000, 테스터 500)",
+    "remaining_fill_path_gap: same-bar proxy is closer but MT5 tick/fill path still differs(잔여 체결 경로 간극: 동일 봉 프록시가 더 가깝지만 MT5 틱/체결 경로가 다름)"
+  ],
+  "segment_checks": {
+    "time_period": "2025-01-02..2025-10-01",
+    "tier": "Tier A only(Tier A 전용)",
+    "direction": "short only(숏 전용)",
+    "entry_timing": "performed(수행됨)",
+    "same_bar_rebuild": "performed(수행됨)",
+    "oos_runtime": "missing_by_scope(범위상 미실행)",
+    "regime_split": "missing_next_repair(다음 수리에서 필요)"
+  },
+  "alternative_explanations": [
+    "broker spread/slippage or tick-path microstructure(브로커 스프레드/슬리피지 또는 틱 경로 미세구조)",
+    "TP/SL intrabar hit ordering not fully represented by OHLC proxy(TP/SL 봉내 도달 순서가 OHLC 프록시에 완전 반영되지 않음)",
+    "report DD percent uses tester deposit denominator(보고서 DD 퍼센트는 테스터 예치금 분모 사용)"
+  ],
+  "attribution_confidence": "high_for_entry_timing_and_deposit_denominator_medium_for_remaining_fill_path(진입 시각/예치금 분모는 높음, 잔여 체결 경로는 중간)",
+  "next_probe": "frontier78F_entry_timing_deposit_calibrated_proxy_repair_v1",
+  "claim_boundary": "gap_analysis_and_repair_decision_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

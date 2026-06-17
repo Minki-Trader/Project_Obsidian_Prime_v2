@@ -1,0 +1,60 @@
+﻿{
+  "observed_change": "proxy validation positive but MT5 runtime validation negative(프록시 검증 양수, MT5 런타임 검증 음수)",
+  "comparison_baseline": "F78B next-bar contract proxy validation(다음 봉 계약 프록시 검증)",
+  "likely_drivers": [
+    "entry_timing_mismatch: MT5 opens at signal bar time while proxy labeled next-bar open(진입 시각 불일치: MT5는 신호 봉 시각 진입, 프록시는 다음 봉 시가 라벨)",
+    "drawdown_denominator_mismatch: proxy DD uses 10000 balance while tester deposit is 500(손실폭 분모 불일치: 프록시 10000, 테스터 500)",
+    "remaining_fill_path_gap: same-bar proxy is closer but MT5 tick/fill path still differs(잔여 체결 경로 간극: 동일 봉 프록시가 더 가깝지만 MT5 틱/체결 경로가 다름)"
+  ],
+  "segment_checks": {
+    "time_period": "2025-01-02..2025-10-01",
+    "tier": "Tier A only(Tier A 전용)",
+    "direction": "short only(숏 전용)",
+    "entry_timing": "performed(수행됨)",
+    "same_bar_rebuild": "performed(수행됨)",
+    "oos_runtime": "missing_by_scope(범위상 미실행)",
+    "regime_split": "missing_next_repair(다음 수리에서 필요)"
+  },
+  "trade_shape": {
+    "runtime_trade_count": 329,
+    "runtime_win_rate_percent": 36.17,
+    "runtime_payoff_ratio": 1.628671343014193,
+    "runtime_average_win": 2.669159663865546,
+    "runtime_average_loss": -1.638857142857143,
+    "runtime_drawdown_percent": 11.45,
+    "runtime_short_count": 329,
+    "same_bar_proxy_validation": {
+      "net": -10.59193337383514,
+      "gross_profit": 287.4077653256878,
+      "gross_loss": -297.999698699523,
+      "pf": 0.9644565634795653,
+      "dd_pct": 0.44969587815730844,
+      "trade_count": 329,
+      "calendar_days": 271,
+      "calendar_trades_day": 1.2140221402214022,
+      "active_days": 131,
+      "active_trades_day": 2.5114503816793894,
+      "win_rate": 0.4012158054711246,
+      "avg_win": 2.177331555497635,
+      "avg_loss": -1.5126888258859035,
+      "payoff": 1.4393783561020785,
+      "expectancy": -0.03219432636424055,
+      "recovery": -0.235535478271161,
+      "avg_hold_bars": 3.349544072948328,
+      "avg_mae_contract": 3.836137337571678,
+      "avg_spread_cost_contract": 0.10587187811489952,
+      "max_consecutive_loss": 9,
+      "time_under_water_trades": 322,
+      "smooth_equity_proxy": 0,
+      "dd_amount_proxy_balance_10000": 44.96958781573085,
+      "dd_pct_if_deposit_500": 8.99391756314617
+    }
+  },
+  "alternative_explanations": [
+    "broker spread/slippage or tick-path microstructure(브로커 스프레드/슬리피지 또는 틱 경로 미세구조)",
+    "TP/SL intrabar hit ordering not fully represented by OHLC proxy(TP/SL 봉내 도달 순서가 OHLC 프록시에 완전 반영되지 않음)",
+    "report DD percent uses tester deposit denominator(보고서 DD 퍼센트는 테스터 예치금 분모 사용)"
+  ],
+  "attribution_confidence": "high_for_entry_timing_and_deposit_denominator_medium_for_remaining_fill_path(진입 시각/예치금 분모는 높음, 잔여 체결 경로는 중간)",
+  "next_probe": "frontier78F_entry_timing_deposit_calibrated_proxy_repair_v1"
+}

@@ -1,0 +1,21 @@
+﻿{
+  "run_id": "frontier78E_proxy_runtime_gap_analysis_and_repair_decision_v1",
+  "stage_id": "stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild",
+  "decision": "repair_required(수리 필요)",
+  "next_run_id": "frontier78F_entry_timing_deposit_calibrated_proxy_repair_v1",
+  "accepted_repairs": [
+    "rebuild labels using runtime-aligned same-bar entry or export features shifted so MT5 entry equals proxy next-bar entry(런타임 정렬 동일 봉 진입 라벨 재구성 또는 MT5 진입이 프록시 다음 봉 진입과 같도록 피처 시프트)",
+    "replace proxy DD denominator 10000 with tester/account deposit 500 or report both amount and percent(프록시 DD 분모 10000을 테스터/계좌 예치금 500으로 교체하거나 금액/퍼센트 둘 다 기록)",
+    "score candidates on runtime-calibrated fill path penalty and loss-side gap(런타임 보정 체결 경로 벌점과 손실 측 간극으로 후보 점수화)"
+  ],
+  "rejected_repairs": [
+    "change model family before fixing execution contract(실행 계약을 고치기 전에 모델 계열만 교체)",
+    "raise threshold only to hide the gap(간극을 숨기기 위해 임계값만 올리기)",
+    "claim runtime authority from matched signal count alone(신호 수 일치만으로 런타임 권위 주장)"
+  ],
+  "stop_condition_for_current_mapping": "same F78B next-bar proxy mapping should not be advanced without timing/deposit repair(현재 F78B 다음 봉 프록시 매핑은 시간/예치금 수리 없이 전진 금지)",
+  "preserved_clue": "selected-entry veto and ONNX parity path are valid; signal/feature/fill counts matched exactly(선택 진입 거부 테이프와 ONNX 동등성 경로는 유효; 신호/피처/체결 수가 정확히 맞음)",
+  "negative_memory": "next-bar proxy can look positive while runtime same-bar execution is negative(다음 봉 프록시는 양수여도 런타임 동일 봉 실행은 음수일 수 있음)",
+  "claim_boundary": "gap_analysis_and_repair_decision_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "gap_reference": "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78e_proxy_runtime_gap_analysis.json"
+}

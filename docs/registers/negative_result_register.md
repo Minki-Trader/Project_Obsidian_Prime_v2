@@ -1373,3 +1373,15 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Reopen condition(재개 조건): broker contract P/L(브로커 계약 손익), final density denominator(최종 밀도 분모), fill semantics(체결 의미)를 label/target/trade shape(라벨/목표/거래 형태)에 처음부터 내장할 때만 재개한다.
 - Evidence(근거): `stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/stage_closeout_report.md`.
 - Boundary(경계): no authority(권위 없음), no completion(완성 없음).
+
+<!-- NR-FR78-EXECUTION-CALIBRATED-DENSITY-CONTRACT-PNL -->
+## NR-FR78-EXECUTION-CALIBRATED-DENSITY-CONTRACT-PNL
+
+- Stage(단계): `stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild`
+- Hypothesis(가설): execution-calibrated labels(실행 보정 라벨)이 F77 money/density gap(F77 금액/밀도 간극)을 줄일 수 있는지 확인했다.
+- Why failed(실패 이유): F78D runtime(런타임) validation net/PF/DD/tpd `-26.53/0.92/11.45/1.2095588235294117`; F78F repaired proxy(수리 프록시) scout/meaningful `0/0`.
+- Preserved clue(보존 단서): signal/feature/fill parity(신호/피처/체결 동등성)는 맞출 수 있었다.
+- Do-not-repeat(반복 금지): next-bar proxy(다음 봉 프록시)의 양수 결과를 runtime economics(런타임 경제성)로 해석하지 않는다.
+- Reopen condition(재개 조건): runtime-native entry timing(런타임 네이티브 진입 시각), tester-deposit DD denominator(테스터 예치금 손실폭 분모), fill-path label(체결 경로 라벨)을 처음부터 설계할 때만 재개한다.
+- Evidence(근거): `stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/stage_closeout_report.md`.
+- Boundary(경계): no authority(권위 없음), no completion(완성 없음).

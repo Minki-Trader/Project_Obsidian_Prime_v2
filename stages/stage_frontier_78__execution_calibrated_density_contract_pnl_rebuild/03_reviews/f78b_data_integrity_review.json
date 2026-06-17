@@ -1,0 +1,20 @@
+﻿{
+  "data_source": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+  ],
+  "time_axis": "Feature timestamp(피처 시각)은 closed-bar key(닫힌 봉 키)로 두고, entry(진입)는 next raw bar open(다음 원천 봉 시가)로 둔다.",
+  "sample_scope": "US100 M5 split_v1 train/validation/oos(훈련/검증/표본외). Tier A separate(티어 A 분리); Tier B missing_required(티어 B 필수 누락).",
+  "missing_or_duplicate_check": "entry index(진입 인덱스)는 raw open_ts(원천 시가 시각) mapping(매핑)에서 생성된다; invalid tail rows(끝부분 무효 행)는 label valid=false(라벨 무효)로 빠진다.",
+  "feature_label_boundary": "features(피처)는 current row(현재 행)만 쓰고, label/target(라벨/목표)은 next-bar entry 이후 future OHLC path(미래 OHLC 경로)만 쓴다.",
+  "split_boundary": "model fit(모델 학습), utility quantile(효용 분위수), probability threshold(확률 임계값)는 train only(훈련 전용)에서 계산된다.",
+  "leakage_risk": "session/risk filter(세션/위험 필터)가 label path(라벨 경로)와 섞일 위험; F78B keeps them as entry-time feature filters(진입 시점 피처 필터).",
+  "data_hash_or_identity": {
+    "dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "feature_order_sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "raw_bars_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+    "candidate_rows": 2592
+  },
+  "integrity_judgment": "usable_with_boundary(경계 있는 사용 가능)"
+}

@@ -1,0 +1,78 @@
+﻿{
+  "idea_id": "IDEA-FR78-EXECUTION-CALIBRATED-DENSITY-CONTRACT-PNL",
+  "hypothesis": "Execution-calibrated labels(실행 보정 라벨)이 broker contract P/L(브로커 계약 손익), calendar-day density(달력일 밀도), fill semantics(체결 의미), lifecycle occupancy(생명주기 점유), and risk penalty(위험 벌점)를 proxy stage(프록시 단계)부터 내장하면 PF/density/DD(수익 팩터/밀도/손실폭)를 동시에 더 잘 맞출 수 있다.",
+  "decision_use": "Open F78B proxy scout(F78B 프록시 탐색) with contract-calibrated money and final-density denominator(계약 보정 금액과 최종 밀도 분모).",
+  "comparison_baseline": {
+    "f77_closeout_label": "preserved_clue(보존 단서)",
+    "f77_negative_memory": [
+      "F77B meaningful signal(의미 신호) 0, final-like reference(완성 유사 참조) 0.",
+      "F77F OOS runtime(표본외 런타임) net/PF/DD/tpd(순수익/수익 팩터/손실폭/일 거래 수) 4.48/1.23/1.41/0.1487.",
+      "proxy money(프록시 금액) was not broker contract calibrated(브로커 계약 보정 안 됨).",
+      "proxy density denominator(프록시 밀도 분모) used active dates(활성 날짜), not calendar days(달력일)."
+    ],
+    "f77_preserved_clue": [
+      "point-unit repair(포인트 단위 수리): TP18/SL12 price units(가격 단위) -> TP1800/SL1200 broker points(브로커 포인트).",
+      "ONNX/EA signal parity path(ONNX/EA 신호 동등성 경로) with selected-entry veto tape(선택 진입 거부 테이프).",
+      "runtime bridge mechanics(런타임 연결 메커니즘) can fill after point repair(포인트 수리 후 체결 가능)."
+    ]
+  },
+  "control_variables": [
+    "symbol/timeframe(종목/시간축): FPMarkets US100 M5",
+    "dataset identity(데이터 정체성): data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet sha256 c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "reference rule(참조 규칙): F77 is reference only(참조 전용), not inheritance(상속 아님)",
+    "claim boundary(주장 경계): stage_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  ],
+  "changed_variables": [
+    "feature_set(피처 묶음)",
+    "label_target(라벨/목표)",
+    "model_family(모델 계열)",
+    "trade_shape(거래 형태)",
+    "risk_logic(위험 로직)",
+    "regime_session_split(장세/세션 분할)"
+  ],
+  "sample_scope": {
+    "dataset": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "raw_bars": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "tier_scope": "Tier A separate planned(티어 A 분리 예정); Tier B missing_required(티어 B 필수 누락) until materialized; combined out_of_scope(합산 범위 밖)."
+  },
+  "success_criteria": [
+    "scout clue(탐색 단서): validation/OOS(검증/표본외) both nonzero, PF>=1.15, DD<=12%, calendar trades/day(달력 일 거래 수)>=1.0, and contract P/L identity recorded(계약 손익 정체성 기록).",
+    "meaningful signal(의미 신호): validation/OOS net>0, PF>=1.35, DD<=10%, calendar trades/day>=2.0, active-day trades/day also recorded(활성일 거래 수도 기록), trade_count>=80 each split.",
+    "runtime trigger(런타임 트리거): any meaningful or weak nonzero proxy signal requires pre-MT5 Grok review(사전 MT5 그록 검토) and mandatory MT5 Runtime Probe(필수 MT5 런타임 탐침)."
+  ],
+  "failure_criteria": [
+    "zero signal(영 신호) after broad feature/label/model/trade/risk/session sweep(넓은 피처/라벨/모델/거래/위험/세션 탐색 후).",
+    "proxy looks good only with active-day denominator(활성일 분모에서만 좋음) but calendar density(달력 밀도) collapses.",
+    "PF/DD(수익 팩터/손실폭) improves only through one tiny session slice(작은 세션 조각 하나)."
+  ],
+  "invalid_conditions": [
+    "future leakage(미래 누수): future OHLC path enters features(미래 OHLC 경로가 피처에 들어감).",
+    "contract P/L scale(계약 손익 배율)이 documented proxy constant(기록된 프록시 상수) 없이 바뀜.",
+    "MT5 bridge(런타임 연결) cannot accept generated signal and repair action(수리 행동) is not recorded."
+  ],
+  "stop_conditions": [
+    "If meaningful signal(의미 신호) appears, stop proxy expansion(프록시 확장 중단) and run Grok plus MT5 probe.",
+    "If weak nonzero signal(약한 비영 신호) appears, run bounded negative-control MT5 probe(제한 부정 대조 MT5 탐침) before closeout.",
+    "If zero signal(영 신호) appears, record logic impossibility(로직상 불가능) and repair action(수리 행동) before closeout."
+  ],
+  "evidence_plan": [
+    "F78A stage brief(단계 개요), axis contract(축 계약), experiment design(실험 설계), Grok receipt(그록 영수증), data identity(데이터 정체성).",
+    "F78B candidate table(후보 표), proxy KPI(프록시 KPI), contract P/L scale(계약 손익 배율), calendar/active density(달력/활성 밀도), lifecycle occupancy(생명주기 점유).",
+    "Pre-MT5 Grok review(사전 MT5 그록 검토) before materialization(물질화).",
+    "Mandatory MT5 Runtime Probe(필수 MT5 런타임 탐침) or documented zero-signal logic impossibility(영 신호 로직 불가능 기록)."
+  ],
+  "retrospective_gate": {
+    "current_due_status": "not_due_after_f77_closeout_2_of_5",
+    "closeouts_since_last": 2,
+    "closed_frontier_ids_since_last_retrospective": [
+      "stage_frontier_76__axis_ablation_source_discovery_for_runtime_economics",
+      "stage_frontier_77__runtime_lifecycle_label_density_rebuild"
+    ],
+    "next_numeric_trigger_frontier": 80
+  }
+}

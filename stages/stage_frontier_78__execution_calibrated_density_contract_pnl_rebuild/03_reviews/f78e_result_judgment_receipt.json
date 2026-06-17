@@ -1,0 +1,18 @@
+﻿{
+  "result_subject": "F78D MT5 runtime probe for f78b_02234(F78D f78b_02234 MT5 런타임 탐침)",
+  "evidence_available": [
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78d_mt5_execution_calibrated_runtime_probe_summary.json",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/02_runs/frontier78D_mt5_execution_calibrated_negative_control_runtime_probe_v1/run_manifest.json",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78e_proxy_runtime_gap_analysis.json",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78e_entry_timing_diagnostic.csv"
+  ],
+  "evidence_missing": [
+    "OOS MT5 runtime probe(표본외 MT5 런타임 탐침)",
+    "regime/session repair validation(장세/세션 수리 검증)",
+    "post-repair runtime probe(수리 후 런타임 탐침)"
+  ],
+  "judgment_label": "runtime_probe_negative_for_current_mapping_repair_required(현재 매핑에 대한 런타임 탐침 부정, 수리 필요)",
+  "claim_boundary": "gap_analysis_and_repair_decision_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "next_condition": "F78F must rebuild proxy with same-bar/runtime-aligned entry and tester-deposit DD denominator(F78F는 동일 봉/런타임 정렬 진입과 테스터 예치금 DD 분모로 프록시를 재구성해야 함)",
+  "user_explanation_hook": "신호는 맞았지만 들어가는 시간이 한 봉 빨랐고 손실폭 분모도 달라서, 모델 문제가 아니라 실행 계약이 어긋난 쪽이 먼저다."
+}

@@ -1,0 +1,18 @@
+﻿{
+  "model_family": "logistic_l2_balanced(균형 로지스틱), extra_trees_d8_l60(엑스트라트리), hist_gbm_d4_l2(히스토그램 GBM)",
+  "target_and_label": "contract-calibrated utility labels(계약 보정 효용 라벨) from next-bar first-touch path(다음 봉 선도달 경로), spread cost(스프레드 비용), MAE risk(불리 이동 위험), and hold time(보유 시간).",
+  "split_method": "time-ordered train/validation/oos holdout(시간 순서 훈련/검증/표본외 고정); no WFO(워크포워드 없음) in F78B scout.",
+  "selection_metric": "rank_score(순위 점수) combines meaningful/scout gates(의미/탐색 게이트), PF(수익 팩터), calendar density(달력 밀도), DD(손실폭), net(순수익), smooth proxy(매끄러움 프록시).",
+  "secondary_metrics": "active-day density(활성일 밀도), signal-to-trade ratio(신호-거래 비율), max loss streak(최대 연속 손실), time under water trades(회복 전 거래 수), average spread cost(평균 스프레드 비용).",
+  "threshold_policy": "probability thresholds(확률 임계값)은 train prediction quantile(훈련 예측 분위수)로 검색된다; scores are ranks(순위) not calibrated probabilities(보정 확률 아님).",
+  "overfit_risk": "large axis sweep(큰 축 탐색) across labels/features/models/sessions/risk/cooldown; F78B remains proxy scout(프록시 탐색).",
+  "calibration_risk": "CONTRACT_PNL_SCALE is runtime-observed proxy calibration(런타임 관찰 프록시 보정) from F77 gross profit scale, not broker authority(브로커 권위 아님).",
+  "comparison_baseline": "F77 runtime lifecycle label density closeout(런타임 생명주기 라벨 밀도 마감) and its money/density gap(금액/밀도 간극).",
+  "validation_judgment": "exploratory_proxy_scout(탐색 프록시)",
+  "summary_counts": {
+    "fit_completed": 72,
+    "candidate_rows": 2592,
+    "meaningful_signal_count": 0,
+    "scout_clue_count": 1
+  }
+}

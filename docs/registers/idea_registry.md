@@ -2222,3 +2222,30 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier77H_stage_closeout_runtime_lifecycle_label_density_rebuild_v1 -->
 - `frontier77H_stage_closeout_runtime_lifecycle_label_density_rebuild_v1` closed Frontier77(전선77) as `preserved_clue(보존 단서)`. Best runtime net/PF/DD/tpd(최선 런타임 순수익/수익 팩터/손실폭/일 거래 수): `4.48/1.23/1.41/0.14871794871794872`. Evidence(근거): `stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/stage_closeout_report.md`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier78A_stage_open_execution_calibrated_density_contract_pnl_v1`.
+
+<!-- frontier78A_stage_open_execution_calibrated_density_contract_pnl_v1 -->
+- `IDEA-FR78-EXECUTION-CALIBRATED-DENSITY-CONTRACT-PNL`: `frontier78A_stage_open_execution_calibrated_density_contract_pnl_v1` opens Frontier78(전선78) as execution-calibrated density contract P/L rebuild(실행 보정 밀도 계약 손익 재구성). Hypothesis(가설): broker contract P/L(브로커 계약 손익), calendar density(달력 밀도), fill semantics(체결 의미), lifecycle occupancy(생명주기 점유), and risk penalty(위험 벌점)를 proxy target(프록시 목표)에 내장하면 F77 money/density gap(금액/밀도 간극)을 줄일 수 있다. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier78B_execution_calibrated_density_contract_pnl_proxy_scout_v1`.
+
+<!-- frontier78B_execution_calibrated_density_contract_pnl_proxy_scout_v1 -->
+- `frontier78B_execution_calibrated_density_contract_pnl_proxy_scout_v1` executed F78 execution-calibrated contract P/L proxy scout(F78 실행 보정 계약 손익 프록시 탐색). Result(결과): `scout=1`, `meaningful=0`, `final_like=0`. Best(최선): `f78b_02234` OOS net/PF/DD/calendar_tpd(표본외 순수익/수익 팩터/손실폭/달력일 거래 수) `54.58482783574718/1.2804966996097884/0.22925237368512172/1.2525773195876289`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier78C_pre_mt5_grok_execution_calibrated_negative_control_runtime_probe_v1`.
+
+<!-- frontier78C_pre_mt5_grok_execution_calibrated_negative_control_runtime_probe_v1 -->
+### F78C pre-MT5 Grok review(사전 MT5 Grok 검토)
+
+- status(상태): `pre_mt5_grok_review_completed_execution_calibrated_probe_required_no_authority`
+- judgment(판정): `pre_mt5_grok_accepts_execution_calibrated_negative_control_probe_no_authority`
+- action(행동): weak nonzero execution-calibrated proxy(약한 비영 실행 보정 프록시)를 MT5 negative-control runtime probe(MT5 부정 대조 런타임 탐침)로 보낸다.
+- effect(효과): target(대상) `f78b_02234`의 ONNX parity(ONNX 동등성), signal count parity(신호 수 동등성), feature readiness parity(피처 준비 동등성), trade shape parity(거래 형태 동등성)를 다음 run(실행)에서 확인한다.
+- boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+
+<!-- frontier78D_mt5_execution_calibrated_negative_control_runtime_probe_v1 -->
+- `frontier78D_mt5_execution_calibrated_negative_control_runtime_probe_v1` executed/attempted(실행/시도) F78 MT5 execution-calibrated negative-control runtime probe(F78 MT5 실행 보정 부정 대조 런타임 탐침). Source candidate(원천 후보): `f78b_02234`. Attempts/completed(시도/완료): `1/0`. Best runtime net/PF/DD/tpd(최선 런타임 순수익/수익 팩터/손실폭/일 거래): `///`. Evidence(근거): `stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/frontier78D_mt5_execution_calibrated_negative_control_runtime_probe_report.md`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier78E_proxy_runtime_gap_analysis_and_repair_decision_v1`.
+
+<!-- frontier78E_proxy_runtime_gap_analysis_and_repair_decision_v1 -->
+- `frontier78E_proxy_runtime_gap_analysis_and_repair_decision_v1` completed F78 proxy/runtime gap analysis(F78 프록시/런타임 간극 분석). Result(결과): entry timing mismatch(진입 시각 불일치) dominant -5 minutes(주요 -5분), DD denominator mismatch(손실폭 분모 불일치) 10000 vs 500, signal/feature/fill parity(신호/피처/체결 동등성) matched. Next(다음): `frontier78F_entry_timing_deposit_calibrated_proxy_repair_v1`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+
+<!-- frontier78F_entry_timing_deposit_calibrated_proxy_repair_v1 -->
+- `frontier78F_entry_timing_deposit_calibrated_proxy_repair_v1` executed F78 entry timing/deposit calibrated proxy repair(F78 진입 시각/예치금 보정 프록시 수리). Result(결과): scout `0`, meaningful `0`, final_like `0`. Best(최선): `f78b_01233` OOS net/PF/DD/calendar_tpd(표본외 순수익/수익 팩터/손실폭/달력일 거래) `2.199999561734594/999.0/0.0/0.005154639175257732`. Next(다음): `frontier78G_zero_signal_or_negative_repair_closeout_decision_v1`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+
+<!-- frontier78G_zero_signal_or_negative_repair_closeout_decision_v1 -->
+- `frontier78G_zero_signal_or_negative_repair_closeout_decision_v1` closed Frontier78(전선78) as `negative_memory(부정 기억)`. Runtime net/PF/DD/tpd(런타임 순수익/수익 팩터/손실폭/일 거래): `-26.53/0.92/11.45/1.2095588235294117`. Evidence(근거): `stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/stage_closeout_report.md`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier79A_stage_open_runtime_native_trade_shape_labeling_from_fill_path_v1`.

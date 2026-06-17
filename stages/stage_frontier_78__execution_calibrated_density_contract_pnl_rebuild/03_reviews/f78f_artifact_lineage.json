@@ -1,0 +1,24 @@
+﻿{
+  "source_inputs": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78e_proxy_runtime_gap_analysis.json"
+  ],
+  "producer": "stage_pipelines/stage_frontier_78/frontier78f_entry_timing_deposit_calibrated_proxy_repair.py",
+  "consumer": "frontier78G_zero_signal_or_negative_repair_closeout_decision_v1",
+  "artifact_paths": [
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78f_entry_timing_deposit_repair_proxy_summary.json",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78f_entry_timing_deposit_repair_candidates_all.csv",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78f_entry_timing_deposit_repair_ranked_top100.csv",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78f_entry_timing_deposit_repair_axis_summary.csv",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/frontier78F_entry_timing_deposit_calibrated_proxy_repair_report.md",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/02_runs/frontier78F_entry_timing_deposit_calibrated_proxy_repair_v1/run_manifest.json"
+  ],
+  "artifact_hashes": {
+    "dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "raw_bars_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+    "script_sha256": "992edbffdbbf729232f49fac0a7b76586ece75de74657e1ddd6867b2c853d322"
+  },
+  "lineage_judgment": "connected_repair_proxy_with_boundary(경계 있는 수리 프록시 연결)"
+}

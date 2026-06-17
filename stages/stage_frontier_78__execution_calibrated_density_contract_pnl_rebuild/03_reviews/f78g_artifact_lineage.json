@@ -1,0 +1,38 @@
+﻿{
+  "created_at_utc": "2026-06-17T09:47:01Z",
+  "source_inputs": [
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78b_contract_proxy_summary.json",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78d_mt5_execution_calibrated_runtime_probe_summary.json",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/02_runs/frontier78D_mt5_execution_calibrated_negative_control_runtime_probe_v1/run_manifest.json",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78e_proxy_runtime_gap_analysis.json",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78f_entry_timing_deposit_repair_proxy_summary.json",
+    "docs/agent_control/grok_reviews/2026-06-17_f78g_stage_closeout_execution_calibrated_density_contract_pnl/clean_output.md"
+  ],
+  "producer": "stage_pipelines/stage_frontier_78/frontier78g_stage_closeout_execution_calibrated_density_contract_pnl.py",
+  "consumer": "F78 closeout registers(마감 등록부) and F79 stage-open handoff(F79 단계 개방 인계)",
+  "artifact_paths": [
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/stage_closeout_report.md",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78g_stage_closeout_summary.json",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78g_closeout_kpi_rows.csv",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/grok_stage_closeout_execution_calibrated_density_contract_pnl_receipt.md",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/required_gate_coverage_audit_f78g_closeout.md",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/02_runs/frontier78G_zero_signal_or_negative_repair_closeout_decision_v1/run_manifest.json"
+  ],
+  "artifact_hashes": {
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/stage_closeout_report.md": "b499ff9460de22b9a1f35a02eb6ed65dbbdeaa85de1f650ba76ffae30f2e897e",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/f78g_closeout_kpi_rows.csv": "361275365f5d627d9a7a1d333b164957a1980b026c77dc23c9b2f6de497282d9",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/grok_stage_closeout_execution_calibrated_density_contract_pnl_receipt.md": "1fb7727fc458ad51bf7ce693425b9c4954c3d9b29491d7c0df2750ad4edc545a",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/required_gate_coverage_audit_f78g_closeout.md": "e911a94f9894bfead6a6f3712d9af80dfa4bddfbcea6466e35650d09c2d53430"
+  },
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/stage_run_ledger.csv",
+    "docs/registers/idea_registry.md",
+    "docs/registers/negative_result_register.md"
+  ],
+  "availability": "tracked_or_generated_with_manifest",
+  "lineage_judgment": "connected_with_boundary",
+  "closeout_success": true,
+  "claim_boundary": "stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}
