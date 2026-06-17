@@ -1,0 +1,50 @@
+﻿{
+  "data_source": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+  ],
+  "time_axis": "timestamp(타임스탬프)는 raw broker-clock alignment key(원천 브로커 시계 정렬 키)로 쓰고, future continuity(미래 연속성)는 5분 간격으로 검사했다.",
+  "sample_scope": {
+    "dataset_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "feature_order_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb",
+    "raw_path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "raw_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+    "rows": 46650,
+    "columns": 75,
+    "feature_count": 58,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "missing_raw_rows": 0,
+    "time_min": "2022-09-01 16:40:00+00:00",
+    "time_max": "2026-04-13 22:00:00+00:00"
+  },
+  "missing_or_duplicate_check": "raw merge missing rows=0; duplicate timestamp check is inherited from sorted model input scope(원시 병합 누락 0, 중복은 정렬 입력 범위에서 점검).",
+  "feature_label_boundary": "entry feature(진입 피처)는 current row(현재 행) 58개만 사용하고, future OHLC(미래 시고저종)는 label/proxy outcome(라벨/프록시 결과)에만 사용했다.",
+  "split_boundary": "time-ordered split_v1(시간순 분할 v1): train/validation/oos.",
+  "leakage_risk": "threshold search(임계값 탐색)는 validation split(검증 분할) 기준이라 OOS에는 선택 편향 risk(선택 편향 위험)가 남는다.",
+  "data_hash_or_identity": {
+    "dataset_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "feature_order_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb",
+    "raw_path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "raw_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+    "rows": 46650,
+    "columns": 75,
+    "feature_count": 58,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "missing_raw_rows": 0,
+    "time_min": "2022-09-01 16:40:00+00:00",
+    "time_max": "2026-04-13 22:00:00+00:00"
+  },
+  "integrity_judgment": "usable_with_boundary(경계 포함 사용 가능)"
+}

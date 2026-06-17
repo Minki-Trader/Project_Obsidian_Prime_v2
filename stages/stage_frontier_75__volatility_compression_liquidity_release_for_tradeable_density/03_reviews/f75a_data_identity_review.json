@@ -1,0 +1,47 @@
+﻿{
+  "dataset_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+  "dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+  "dataset_rows": 46650,
+  "dataset_columns": 69,
+  "split_counts": {
+    "train": 29222,
+    "validation": 9844,
+    "oos": 7584
+  },
+  "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+  "feature_order_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb",
+  "feature_count": 58,
+  "feature_order_preview": [
+    "log_return_1",
+    "log_return_3",
+    "hl_range",
+    "close_open_ratio",
+    "gap_percent",
+    "close_prev_close_ratio",
+    "return_zscore_20",
+    "hl_zscore_50",
+    "overnight_return",
+    "return_1_over_atr_14"
+  ],
+  "raw_path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+  "raw_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+  "raw_rows": 261345,
+  "raw_columns": 15,
+  "raw_header": [
+    "time_open_unix",
+    "time_close_unix",
+    "contract_symbol",
+    "broker_symbol",
+    "timeframe",
+    "price_basis",
+    "open",
+    "high",
+    "low",
+    "close",
+    "tick_volume",
+    "spread_points",
+    "real_volume",
+    "time_basis",
+    "timezone_status"
+  ]
+}

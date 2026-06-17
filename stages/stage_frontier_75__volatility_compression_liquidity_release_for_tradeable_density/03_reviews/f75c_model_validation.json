@@ -1,0 +1,10 @@
+﻿{
+  "model_family": "ExtraTrees, HistGradientBoosting, LogisticRegression(엑스트라트리/히스토그램 그래디언트 부스팅/로지스틱 회귀)",
+  "target_and_label": "short-only prior-compression current-release first-touch label(숏 전용 직전 압축 현재 방출 선도달 라벨)",
+  "split_method": "train fit, validation threshold selection, OOS read(학습 적합, 검증 임계값 선택, 표본외 판독)",
+  "selection_metric": "joint_score(공동 점수)",
+  "threshold_policy": "validation target trades/day search(검증 목표 일거래 수 탐색)",
+  "overfit_risk": "repair after F75B and multi-candidate search(F75B 뒤 수리와 다중 후보 탐색)",
+  "calibration_risk": "rank scores only(순위 점수 전용)",
+  "validation_judgment": "exploratory_proxy_repair(탐색 프록시 수리)"
+}

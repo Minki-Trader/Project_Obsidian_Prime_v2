@@ -1,0 +1,32 @@
+﻿{
+  "data_source": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+  ],
+  "time_axis": "same as F75B; prior features use shifted current-row features(F75B와 같고, 직전 피처는 shift된 현재 행 피처 사용).",
+  "feature_label_boundary": "derived repair features(수리 파생 피처)는 past/current only(과거/현재 전용), future OHLC(미래 시고저종)는 label/outcome only(라벨/결과 전용).",
+  "split_boundary": "time ordered train/validation/oos(시간순 학습/검증/표본외).",
+  "leakage_risk": "shifted rolling features may cross session gaps(shift rolling 피처가 세션 갭을 넘을 수 있음), recorded as proxy boundary(프록시 경계로 기록).",
+  "data_hash_or_identity": {
+    "dataset_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "feature_order_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "feature_order_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb",
+    "raw_path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "raw_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+    "rows": 46650,
+    "columns": 75,
+    "feature_count": 58,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "missing_raw_rows": 0,
+    "time_min": "2022-09-01 16:40:00+00:00",
+    "time_max": "2026-04-13 22:00:00+00:00",
+    "repair_feature_count": 66,
+    "repair_features_added": 8
+  },
+  "integrity_judgment": "usable_with_boundary(경계 포함 사용 가능)"
+}

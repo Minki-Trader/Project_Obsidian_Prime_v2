@@ -1,0 +1,12 @@
+﻿{
+  "model_family": "ExtraTrees, HistGradientBoosting, LogisticRegression(엑스트라트리/히스토그램 그래디언트 부스팅/로지스틱 회귀)",
+  "target_and_label": "risk-shaped first-touch profitable trade label(위험 반영 선도달 수익 거래 라벨)",
+  "split_method": "train fit, validation threshold selection, OOS read(학습 적합, 검증 임계값 선택, 표본외 판독)",
+  "selection_metric": "joint_score(공동 점수): net/PF/DD/trades_day balance(순수익/수익 팩터/손실폭/일거래 균형)",
+  "secondary_metrics": "win rate, average win/loss, payoff ratio, expectancy, recovery factor, max consecutive loss(승률/평균 이익·손실/손익비/기대값/회복 계수/최대 연속 손실)",
+  "threshold_policy": "searched on validation target trades/day(검증 목표 일거래 수 기준 탐색)",
+  "overfit_risk": "multiple candidate sweep(다중 후보 탐색) and validation threshold search(검증 임계값 탐색)",
+  "calibration_risk": "model scores are rank scores(순위 점수), not calibrated probabilities(보정 확률 아님)",
+  "comparison_baseline": "F74 runtime negative memory(F74 런타임 부정 기억): validation PF 1.16, OOS PF 1.13.",
+  "validation_judgment": "exploratory_proxy_scout(탐색 프록시 스카우트)"
+}

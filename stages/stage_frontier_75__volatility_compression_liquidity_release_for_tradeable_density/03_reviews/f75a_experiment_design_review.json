@@ -1,0 +1,58 @@
+﻿{
+  "run_id": "frontier75A_stage_open_upstream_mechanism_rotation_after_f74_microburst_negative_memory_v1",
+  "stage_id": "stage_frontier_75__volatility_compression_liquidity_release_for_tradeable_density",
+  "idea_id": "IDEA-FR75-VOLATILITY-COMPRESSION-LIQUIDITY-RELEASE",
+  "hypothesis": "Volatility compression plus liquidity release(변동성 압축 + 유동성 방출) can create tradeable-density signals(거래 가능한 밀도 신호) with better runtime economics(런타임 경제성) than F74 microburst turnover labels(F74 마이크로버스트 회전 라벨).",
+  "decision_use": "Open F75 and route the next work packet(다음 작업 묶음) to F75B broad proxy scout(넓은 프록시 탐색).",
+  "comparison_baseline": "F74 closeout negative memory(F74 마감 부정 기억): runtime PF 1.16/1.13 and trades/day 1.65/1.60.",
+  "control_variables": [
+    "Symbol/timeframe(심볼/시간봉): FPMarkets US100 M5.",
+    "Input contract(입력 계약): feature_set_v2_mt5_price_proxy_58 unless a repair packet changes it explicitly.",
+    "Split identity(분할 정체성): train/validation/oos counts from current model input dataset.",
+    "Claim boundary(주장 경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve."
+  ],
+  "changed_variables": [
+    "feature set(피처 묶음): compression/release/session recombination.",
+    "label/target(라벨/목표): compression-to-release outcomes and failed-release reversals.",
+    "model family(모델 계열): tree/linear/small NN rotation.",
+    "trade shape(거래 형태): direction, exit, hold horizon, first-touch structure.",
+    "risk logic(위험 로직): SL/TP and excursion-aware proxy simulation.",
+    "regime/session split(장세/세션 분할): compression buckets and cash session slices."
+  ],
+  "sample_scope": {
+    "dataset": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "raw": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "rows": 46650,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "feature_count": 58
+  },
+  "success_criteria": [
+    "Scout clue(탐색 단서): validation and OOS both positive with PF/DD/trade-density moving toward all four final axes.",
+    "Meaningful signal(의미 있는 신호): enough signal density to justify mandatory MT5 Runtime Probe(필수 MT5 런타임 탐침).",
+    "Final gates(최종 게이트)는 final completion review(최종 완성 검토)에서만 강제한다."
+  ],
+  "failure_criteria": [
+    "Zero-signal label setup(영 신호 라벨 설정).",
+    "Proxy PF/DD/trade-density stays in weak F74-like economics(약한 F74식 경제성).",
+    "Good density/parity(밀도/동등성) but no runtime-economic path(런타임 경제성 경로 없음)."
+  ],
+  "invalid_conditions": [
+    "Feature readiness parity(피처 준비 동등성)를 런타임에서 만들 수 없는 feature contract change(피처 계약 변경).",
+    "Leakage(누수): future release information(미래 방출 정보)을 entry feature(진입 피처)에 넣는 경우.",
+    "Data identity mismatch(데이터 정체성 불일치)."
+  ],
+  "stop_conditions": [
+    "F75B finds no signal surface(신호 표면 없음): repair with label/risk/session redesign once.",
+    "Proxy signal is meaningful(의미 있음): run pre-MT5 Grok review(Grok 검토) and mandatory MT5 Runtime Probe.",
+    "F75 closeout occurs: five-stage retrospective(5단계 중간 검토) becomes due."
+  ],
+  "evidence_plan": [
+    "F75A stage-open receipt(개방 영수증), Grok receipt(Grok 영수증), data identity(데이터 정체성).",
+    "F75B proxy KPI(프록시 KPI): net/PF/DD/trade count/trades per day/win rate/expectancy/recovery.",
+    "If meaningful signal appears(의미 신호 발생 시): ONNX handoff(온엑스 인계), MT5 Runtime Probe(MT5 런타임 탐침), gap analysis(간극 분석)."
+  ]
+}

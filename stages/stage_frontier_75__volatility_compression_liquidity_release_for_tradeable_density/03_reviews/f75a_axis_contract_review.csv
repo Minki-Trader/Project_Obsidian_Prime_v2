@@ -1,0 +1,7 @@
+axis,f75_action,effect,next_run
+feature_set(피처 묶음),"compression/release/core/session bundles(압축/방출/핵심/세션 묶음)을 빼기, 교체, 재조합한다.","F74의 microburst label-only loop(마이크로버스트 라벨 단독 반복)를 피하고 원천 신호(source signal, 원천 신호)를 바꾼다.",frontier75B_volatility_compression_liquidity_release_proxy_scout_v1
+label_target(라벨/목표),"compression breakout, failed breakout reversal, release continuation(압축 돌파/실패 돌파 반전/방출 지속)을 비교한다.","모델이 단순 방향(direction, 방향)이 아니라 압축 뒤 거래 가능한 움직임(tradeable move, 거래 가능한 움직임)을 맞히게 한다.",frontier75B_volatility_compression_liquidity_release_proxy_scout_v1
+model_family(모델 계열),"ExtraTrees, HistGradientBoosting, linear/logistic, small NN 후보를 단계적으로 비교한다.",한 모델 계열의 inductive bias(귀납 편향)에 갇히지 않는다.,frontier75B_volatility_compression_liquidity_release_proxy_scout_v1
+trade_shape(거래 형태),"long/short, breakout/reversal, hold horizon, first-touch exit(롱/숏, 돌파/반전, 보유 시간, 선도달 청산)을 같이 바꾼다.","trade count(거래 수), payoff ratio(손익비), DD path(손실폭 경로)를 한 축으로 묶어 본다.",frontier75B_volatility_compression_liquidity_release_proxy_scout_v1
+risk_logic(위험 로직),"SL/TP, MAE/MFE, DD guard proxy(손절/익절, 최대 불리/유리 이동, 손실폭 보호 프록시)를 라벨과 시뮬레이션에 넣는다.",proxy/runtime gap(프록시/런타임 간극)이 손익 구조에서 생기는지 초기에 잡는다.,frontier75B_volatility_compression_liquidity_release_proxy_scout_v1
+regime_session_split(장세/세션 분할),"all, cash open, cash mid, cash late, compression buckets(전체/현금장 초반/중반/후반/압축 구간)을 분리한다.",어느 구간에서만 작동하는지 숨기지 않고 기록한다.,frontier75B_volatility_compression_liquidity_release_proxy_scout_v1
