@@ -1,0 +1,58 @@
+{
+  "hypothesis": "axis ablation/replacement/recombination(축 제거/교체/재조합)이 F71-F75의 parity-without-economics(동등성 있으나 경제성 없음) 병목을 원천 축 단위로 식별하거나 반증할 수 있다.",
+  "decision_use": "Decide which axis family(축군)를 F76B proxy scout(프록시 탐색)와 mandatory runtime probe(필수 런타임 탐침)로 보낼지 정한다.",
+  "comparison_baseline": "F71-F75 closeout negative memory(부정 기억): meaningful=0 반복, runtime PF roughly 1.04-1.32, density below target or DD blowout.",
+  "control_variables": [
+    "symbol/timeframe(심볼/시간봉): FPMarkets US100 M5",
+    "base dataset(기본 데이터셋): current 58-feature model input",
+    "split identity(분할 정체성): train/validation/oos 29222/9844/7584",
+    "claim boundary(주장 경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve"
+  ],
+  "changed_variables": [
+    "feature_set(피처 묶음)",
+    "label_target(라벨/목표)",
+    "model_family(모델 계열)",
+    "trade_shape(거래 형태)",
+    "risk_logic(위험 로직)",
+    "regime_session_split(장세/세션 분할)"
+  ],
+  "sample_scope": {
+    "dataset": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "rows": 46650,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "feature_count": 58,
+    "tier_scope": "Tier A separate planned; Tier B separate missing_required until materialized; Tier A+B combined out_of_scope until Tier B exists."
+  },
+  "success_criteria": [
+    "scout clue(탐색 단서): at least one axis family improves validation and OOS jointly without DD blowout.",
+    "scout clue gate(탐색 단서 게이트): at least one split net>0 or PF>=1.15, trade_count>=50, density proxy >=0.75 trades/day, and fragility recorded.",
+    "meaningful signal(의미 신호): validation+OOS net>0, PF>=1.30, DD<=10%, trades/day>=1.0, trade_count>=100 per split.",
+    "runtime materialization(런타임 물질화): meaningful signal triggers pre-MT5 Grok and MT5 Runtime Probe."
+  ],
+  "failure_criteria": [
+    "meaningful candidate(의미 후보) remains 0 across broad axis families.",
+    "all proxy positives are one-split or one-slice artifacts(단일 분할/구간 착시).",
+    "runtime negative-control shows the same parity-without-economics pattern."
+  ],
+  "invalid_conditions": [
+    "feature/label leakage(피처/라벨 누수)",
+    "split drift(분할 드리프트)",
+    "missing F76 stage-open Grok acceptance(Grok 개방 검토 누락)",
+    "MT5 bridge cannot materialize any nonzero signal without documented repair action."
+  ],
+  "stop_conditions": [
+    "Run broad F76B scout before micro-tuning(미세 조정 전 넓은 탐색).",
+    "If meaningful signal appears, stop proxy expansion and materialize MT5 probe.",
+    "If zero or non-meaningful signals persist after one bounded repair, close as negative memory or blocked."
+  ],
+  "evidence_plan": [
+    "stage brief, context anchor, axis matrix, Grok receipt, data identity, experiment design",
+    "F76B candidate table with proxy KPI and axis attribution",
+    "mandatory MT5 runtime probe or documented logic impossibility before closeout",
+    "proxy/runtime gap analysis and closeout KPI table"
+  ]
+}

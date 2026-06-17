@@ -1,0 +1,7 @@
+﻿axis,variants,why,meaningful_gate
+feature_set(피처 묶음),"full58, price_action_core, trend_momentum, volatility_compression, session_macro_removed, mega_cap_removed",F71-F75 parity(동등성)는 맞췄지만 edge(우위)가 없었으므로 어떤 feature family(피처군)가 경제성을 망치거나 살리는지 반증한다.,"validation+OOS net>0, PF>=1.30, DD<=10%, trades/day>=1.0, trade_count>=100 per split"
+label_target(라벨/목표),"fwd_return, first_touch_value, MFE/MAE quality, failed_breakout_reversal, clean_followthrough",direction label(방향 라벨)이 아니라 tradeable move quality(거래 가능한 이동 품질)를 맞히는지 본다.,same joint KPI gate plus label density >= 1.0 trades/day proxy estimate
+model_family(모델 계열),"logistic/linear, ExtraTrees, HistGradientBoosting, EBM-if-available, small NN",한 model bias(모델 편향)가 edge source(우위 원천)를 숨기는지 확인한다.,at least two families survive the scout clue gate or one family survives meaningful gate
+trade_shape(거래 형태),"long_only, short_only, both_sides, fixed_hold, first_touch_exit, max_hold_sweep",one-sided runtime surfaces(단방향 런타임 표면)가 목표 밀도에 못 미친 반복을 반증한다.,side split must not rely on one isolated sparse cluster
+risk_logic(위험 로직),"SL/TP grid, MAE/MFE filter, ATR width, DD guard, daily loss guard proxy",runtime DD blowout(런타임 손실폭 확대)을 proxy 단계에서 먼저 압박한다.,DD<=10% proxy on validation and OOS before MT5 materialization preference
+regime_session_split(장세/세션 분할),"cash_open, cash_mid, cash_late, high_vol, low_vol, trend, chop",좋은 숫자가 특정 세션/장세 한 점에만 갇히는지 확인한다.,no single micro slice may carry the whole result without recorded fragility
