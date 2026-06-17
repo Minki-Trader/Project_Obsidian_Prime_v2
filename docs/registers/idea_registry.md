@@ -2174,3 +2174,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier76A_stage_open_axis_ablation_source_discovery_v1 -->
 - `IDEA-FR76-AXIS-ABLATION-SOURCE-DISCOVERY`: `frontier76A_stage_open_axis_ablation_source_discovery_v1` opens Frontier76(전선76) as axis ablation source discovery(축 제거/교체 원천 탐색). Hypothesis(가설): broad feature/label/model/trade/risk/session ablation(넓은 피처/라벨/모델/거래/위험/세션 제거/교체)이 F71-F75의 parity-without-economics(동등성은 있으나 경제성 없음) 병목을 원천 축 단위로 식별하거나 반증할 수 있다. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier76B_axis_ablation_proxy_scout_v1`.
+
+<!-- frontier76B_axis_ablation_proxy_scout_v1 -->
+- `frontier76B_axis_ablation_proxy_scout_v1` executed F76 axis-ablation proxy scout(F76 축 제거 프록시 탐색). Status(상태): `proxy_scout_meaningful_signal_pre_mt5_probe_required_no_authority`. Judgment(판정): `meaningful_signal_pre_mt5_probe_required_no_authority`. Candidate rows(후보 행) `7680`, scout clue(탐색 단서) `2091`, meaningful signal(의미 신호) `10`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier76C_pre_mt5_grok_axis_ablation_runtime_probe_v1`.
