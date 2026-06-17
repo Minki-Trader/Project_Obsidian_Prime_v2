@@ -30,6 +30,9 @@ schemas:
       - skills_not_used
       - routing_reason
   obsidian-grok-collaboration:
+    retired_archive_only: true
+    no_new_receipts: true
+    archive_use: "Historical Grok receipts(과거 그록 영수증) may be parsed, but new work must route review/critique/consulting to obsidian-task-force-review."
     required_fields:
       - packet_id
       - skill
@@ -53,6 +56,33 @@ schemas:
       - trigger_reason
       - bounded_evidence
       - advice_classification
+      - claim_boundary
+      - final_codex_direction
+  obsidian-task-force-review:
+    required_fields:
+      - packet_id
+      - skill
+      - status
+      - trigger_reason
+      - roster_registry
+      - agents_used
+      - model_policy
+      - bounded_evidence
+      - advice_classification
+      - local_verification
+      - final_codex_direction
+      - forbidden_claim_check
+    compact_required_fields:
+      - packet_id
+      - skill
+      - status
+      - trigger_reason
+      - roster_registry
+      - agents_used
+      - model_policy
+      - bounded_evidence
+      - advice_classification
+      - local_verification
       - claim_boundary
       - final_codex_direction
   obsidian-workflow-drift-guard:

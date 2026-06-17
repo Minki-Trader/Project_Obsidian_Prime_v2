@@ -44,55 +44,38 @@
 
 작은 작업이 파일 수정, 정책/스킬 변경, MT5 실행, 모델 산출물, stage closeout(단계 마감), publish/push(게시/원격 반영), 또는 강한 완료/검증 주장을 만들면 즉시 non-trivial work packet(비사소 작업 묶음)으로 승격한다. 효과(effect, 효과)는 작은 질문에 전체 gate stack(게이트 묶음)이 붙는 것을 막되, 중요한 작업의 증거 요구는 유지하는 것이다.
 
-## Grok 협업 트리거(Grok Collaboration Trigger, 그록 협업 트리거)
+## Codex Task Force 트리거(Codex Task Force Trigger, 코덱스 태스크포스 트리거)
 
-`obsidian-grok-collaboration(그록 협업)`은 새 work family(작업군)가 아니라 trigger overlay(트리거 오버레이, 추가 조건)다. 사용자가 명시했거나 `/goal(목표)`에 들어 있을 때 현재 primary_family(주 작업군)에 Grok receipt(그록 영수증)와 external_review_packet(외부 검토 묶음) gate(게이트)를 덧붙인다.
+`obsidian-task-force-review(태스크포스 검토)`는 Grok role succession(그록 역할 승계)이 아니라 project-native Codex Task Force(프로젝트 전용 코덱스 태스크포스)를 호출하는 active trigger overlay(활성 트리거 오버레이, 추가 조건)다. 사용자 요청이나 `/goal(목표)`가 Grok deactivation(그록 비활성화), Grok replacement(그록 대체), agent/skill governance(요원/스킬 거버넌스), cold start roster(냉시작 명단), 또는 Frontier80 rehearsal(F80 리허설)를 다루면 현재 primary_family(주 작업군)에 Codex Task Force receipt(코덱스 태스크포스 영수증)와 `codex_task_force_review_packet(코덱스 태스크포스 검토 묶음)` gate(게이트)를 덧붙인다.
 
-필수 트리거(required triggers, 필수 트리거):
+효과(effect, 효과)는 internal adversarial review(내부 비판 검토)를 하되, Grok(그록) 외부 권위를 흉내내지 않는 것이다.
 
-- Grok 호출(Grok call, 그록 호출)을 현재 요청에서 명시함
-- `/goal(목표)`에 Grok 검토(Grok review, 그록 검토) 조건이 있음
-- `Stage 종료 후마다 Grok 검토`
-- `closeout 전에 외부 리뷰`
-- `Grok에게 연구방향 점검받기`
-- `Codex 혼자 판단하지 말고 Grok 2차 의견`
-- `stage close(단계 마감)마다 비판 검토`
-- agent/skill consulting(에이전트/스킬 상담)
-- 방향성 제시(direction proposal, 방향성 제시) 뒤 Grok 2차 토론(second discussion, 2차 토론)을 요구함
-- five-stage retrospective(5단계 중간 검토)가 due(도래)함
+## Grok 보관 규칙(Grok Archive Rule, 그록 보관 규칙)
 
-필수 순서(required order, 필수 순서)는 Codex(코덱스)가 먼저 current truth(현재 진실), direction(방향성), success criteria(성공 기준), claim boundary(주장 경계), review size(검토 크기)를 제시하고, bounded evidence(제한 근거)를 만든 뒤 Grok을 호출하고, Grok 조언을 accepted/rejected/needs_local_verification(수용/거절/로컬 검증 필요)로 분리한 다음 진행하는 것이다.
+`obsidian-grok-collaboration(그록 협업)`은 retired/archive-only skill(퇴역/보관 전용 스킬)이다. 새 work family(작업군), trigger overlay(트리거 오버레이), required skill(필수 스킬), required gate(필수 게이트), external review packet(외부 검토 묶음)을 만들지 않는다.
 
-기본 기록 위치(default record location, 기본 기록 위치)는 `docs/agent_control/grok_reviews/` 아래 snapshot/prompt/output/metadata(스냅샷/프롬프트/출력/메타데이터)다. 사용자가 프로젝트 폴더에 patch work material(패치 작업물)을 남기지 말라고 명시하면 새 review packet(검토 묶음)을 만들지 않고, 기존 산출물(existing artifacts, 기존 산출물)이나 프로젝트 밖 임시 경로(temp path, 임시 경로)를 쓴 뒤 final report(최종 보고)에 그 제한을 적는다.
+사용자가 Grok call/review(그록 호출/검토), external review(외부 리뷰), second opinion(2차 의견), no solo Codex judgment(코덱스 단독 판단 금지), stage-close adversarial review(단계 마감 비판 검토), agent/skill consulting(요원/스킬 상담)을 말해도 Grok(그록)을 호출하지 않는다. 해당 요구는 `obsidian-task-force-review(태스크포스 검토)`의 internal adversarial review(내부 비판 검토)로 라우팅한다.
 
-검토 크기(review size, 검토 크기)는 다음 기본값을 따른다.
+기존 `docs/agent_control/grok_reviews/`는 historical evidence(역사 근거)다. 읽을 수는 있지만, 새 prompt(프롬프트), wrapper call(래퍼 호출), Grok output(그록 출력), Grok receipt(그록 영수증), Grok gate(그록 게이트)를 만들지 않는다.
 
-- small review(소규모 검토): 좁은 질문 하나와 compact prompt(압축 프롬프트) 하나.
-- medium review(중간 검토): bounded snapshot(제한 스냅샷) 하나와 focused question(집중 질문) 하나.
-- large review(대규모 검토): architecture/evidence/runtime/policy(구조/근거/런타임/정책)처럼 여러 narrow pass(좁은 회차)로 나누고, 마지막 판단은 Codex synthesis(Codex 종합)로만 닫는다.
-
-small review(소규모 검토) receipt(영수증)는 compact receipt(압축 영수증)를 쓴다. Minimum fields(최소 필드)는 `trigger_reason(트리거 이유)`, `bounded_evidence(제한 근거)`, `advice_classification(조언 분류)`, `claim_boundary(주장 경계)`, `final_codex_direction(최종 Codex 방향)`이다. Medium/large review(중간/대규모 검토)만 full receipt(전체 영수증), full prompt/output identity(전체 프롬프트/출력 정체성), detailed local verification block(상세 로컬 검증 블록)을 기본값으로 쓴다.
-
-가능하면 `foundation/control_plane/grok_review_wrapper.py` wrapper(래퍼)를 쓴다. wrapper(래퍼)는 prompt quoting(프롬프트 인용), timeout(시간 제한), stdout/stderr capture(표준 출력/오류 캡처), deterministic noise stripping(결정적 잡음 제거), unexpected top-level artifact detection(예상 밖 최상위 산출물 감지)을 담당한다. wrapper(래퍼)는 Grok content(Grok 내용)를 해석하거나 수용/거절하지 않는다.
-
-wrapper(래퍼)를 `--output-dir`와 함께 쓸 때 `--json(JSON 출력)`은 summary JSON(요약 JSON)만 사용자/에이전트 출력으로 읽는다. raw diagnostics(원본 진단)는 `raw_diagnostics.json`에 보존하고, failure(실패), timeout(시간초과), transport issue(전송 문제), 또는 audit(감사) 필요가 있을 때만 연다. 효과(effect, 효과)는 기록 보존과 token discipline(토큰 규율)을 동시에 유지하는 것이다.
-
-효과(effect, 효과)는 외부 2차 의견을 쓰되, 연구 방향이 산으로 가거나 stage drift(단계 드리프트)가 생기지 않게 하고, 대규모 검토에서도 같은 capture/verify/classify(캡처/검증/분류) 흐름을 유지하는 것이다.
+효과(effect, 효과)는 이전 Grok(그록) 운영 흔적을 보존하면서도 새 운영체계가 외부 2차 의견 경로로 역류하지 않게 하는 것이다.
 
 ## 5단계 중간 검토 트리거(Five-Stage Retrospective Trigger, 5단계 중간 검토 트리거)
 
-`five_stage_retrospective(5단계 중간 검토)`는 Grok collaboration trigger overlay(그록 협업 트리거 오버레이)다. Primary work family(주 작업군)를 바꾸지 않고 `obsidian-grok-collaboration(그록 협업)`, `five_stage_retrospective_packet(5단계 중간 검토 묶음)`, `next_stage_open_block_check(다음 단계 개방 차단 점검)`를 덧붙인다.
+`five_stage_retrospective(5단계 중간 검토)`는 retired archive rule(퇴역 보관 규칙)로만 보존한다. active trigger(활성 작동 조건), Grok call(그록 호출), next stage open block(다음 단계 개방 차단)을 만들지 않는다.
 
-Due check(도래 점검)는 stage closeout(단계 마감) 때 실행한다.
+효과(effect, 효과)는 기존 register(등록부)와 report(보고서)를 보존하면서도, 새 운영체계가 Grok(그록) 회고 의무로 역류하지 않게 하는 것이다.
+
+Archived due check(보관 도래 점검)는 과거 Grok retrospective(그록 회고) 방식의 설명으로만 보존한다. 아래 조건은 이제 Grok call(그록 호출), required gate(필수 게이트), next-open block(다음 개방 차단)을 만들지 않는다.
 
 - closing frontier number(마감 전선 번호)가 5의 배수면 due(도래)다.
 - 그렇지 않아도 `docs/registers/five_stage_retrospective_register.yaml`의 `closed_frontier_ids_since_last_retrospective`가 5개면 due(도래)다.
 - due(도래)가 아니면 `not_due(아직 아님)`로 기록하고 다음 stage open(단계 개방)을 허용한다.
-- due(도래)이면 최근 5개 canonical closeout stage ids(정식 마감 단계 ID)를 scope(범위)로 묶고, Grok review(그록 검토), Codex local verification(코덱스 로컬 검증), advice classification(조언 분류), compact retrospective report(압축 중간 검토 보고)를 남기기 전에는 다음 frontier stage(전선 단계)를 열지 않는다.
+- due(도래)이면 역사 규칙상 최근 5개 canonical closeout stage ids(정식 마감 단계 ID)를 scope(범위)로 묶었다. 새 운영에서는 Codex Task Force replacement retrospective(코덱스 태스크포스 대체 회고)가 생길 때까지 `inactive_preserve_records(비활성, 기록 보존)`로 남긴다.
 
 이 검토는 per-stage Grok receipt(단계별 그록 영수증)를 다시 읽는 repetition(반복)이 아니다. Cross-stage synthesis(단계 간 종합)만 허용하며, allowed claims(허용 주장)는 direction_delta(방향 변화)와 repair_priority_delta(수리 우선순위 변화)뿐이다.
 
-Due check(도래 점검)는 register-first(등록부 우선)다. `not_due(아직 아님)`이면 이전 5개 stage artifacts(단계 산출물), Grok packets(그록 묶음), synthesis template(종합 템플릿)을 열지 않고 gate status(게이트 상태)만 기록한다. 효과(effect, 효과)는 5단계 루틴을 유지하면서 아직 도래하지 않은 회고 준비가 작업을 길게 늘리지 않게 하는 것이다.
+Due check archive(도래 점검 보관)는 register-first(등록부 우선)다. 효과(effect, 효과)는 기존 5단계 기록을 보존하면서도 F80(전선80) 운영이 Grok packet(그록 묶음) 독해 루프로 역류하지 않게 하는 것이다.
 
 ## 라우팅 소스
 
@@ -161,9 +144,10 @@ Support skill은 작업을 보조한다. 작업을 다시 분류하지 않는다
 - `obsidian-runtime-parity`: Python/MT5/runtime handoff(파이썬/MT5/런타임 인계) 동등성과 외부 검증을 다룬다.
 - `obsidian-session-intake`: 작업 시작 때 current truth(현재 진실), branch/worktree fit(브랜치/작업트리 적합성), work family candidate(작업군 후보)를 좁힌다.
 - `obsidian-stage-transition`: active stage(활성 단계), handoff(인계), closeout(마감), current run(현재 실행)을 같은 회차에 동기화한다.
+- `obsidian-task-force-review`: Codex Task Force(코덱스 태스크포스) roster(명단), model policy(모델 정책), internal adversarial review(내부 비판 검토), Grok deactivation(그록 비활성화), Frontier80 rehearsal(F80 리허설)를 관리한다.
 - `obsidian-work-packet-router`: work family(작업군), primary skill(주 스킬), support skills(보조 스킬), required gates(필수 제한문)를 고른다.
 - `obsidian-workflow-drift-guard`: blocker(차단 지점), missing material(빠진 재료), recovery action(복구 행동)을 정리한다.
-- `obsidian-grok-collaboration`: Grok(Grok)을 외부 2차 의견(second opinion, 2차 의견)으로 호출하고, 방향성 제시(direction proposal, 방향성 제시), 2차 토론(second discussion, 2차 토론), 로컬 재검증(local verification, 로컬 검증)을 하나의 패킷(packet, 묶음)으로 관리한다.
+- `obsidian-grok-collaboration`: retired/archive-only(퇴역/보관 전용) 스킬이다. 기존 Grok record(그록 기록)를 읽을 때만 쓰고, 새 호출/검토/게이트는 만들지 않는다.
 
 ## Receipt 규칙
 

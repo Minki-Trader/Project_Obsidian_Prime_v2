@@ -1,0 +1,21 @@
+﻿packet_id: frontier80A_stage_open_multi_axis_surface_rotation_v1
+skill: obsidian-model-validation
+status: validation_boundary_recorded_no_model_selected
+model_or_threshold_surface: "F80B broad/extreme proxy scout(넓은/극단 프록시 탐색) candidates only; no selected model(선택 모델 없음)."
+validation_split: "time-ordered train/validation/OOS(시간순 훈련/검증/표본외); WFO(워크포워드)는 F80C 이후 필요 시."
+overfit_checks:
+  - "Broad axis sweep(넓은 축 탐색)은 scout-only(탐색 전용)로만 판정한다."
+  - "Validation/OOS dual positivity(검증/표본외 동시 양수), DD(손실폭), density(밀도), and lifecycle occupancy(생명주기 점유)를 함께 본다."
+selection_metric_boundary: "rank score(순위 점수)는 triage(분류)용이며 selected baseline(선택 기준선)을 만들지 않는다."
+allowed_claims:
+  - stage_open_design_only
+  - proxy_scout_candidate_if_f80b_runs
+  - runtime_probe_quality_closeout_if_mt5_probe_runs
+forbidden_claims:
+  - completion
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - parity_only_economics

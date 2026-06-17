@@ -1,0 +1,20 @@
+﻿packet_id: frontier80A_stage_open_multi_axis_surface_rotation_v1
+skill: obsidian-experiment-design
+status: design_boundary_recorded_f80b_execution_pending
+hypothesis: "F80(전선80)은 feature set/label/model family/trade shape/risk logic/regime split(피처 묶음/라벨/모델 계열/거래 형태/위험 로직/장세 분할)을 함께 바꿀 때 runtime economics(런타임 경제성) 단서가 살아나는지 시험한다."
+baseline: "No selected baseline(선택 기준선 없음); F79(전선79)는 negative memory(부정 기억) and preserved clue(보존 단서) only."
+changed_variables:
+  - feature_set
+  - label_target
+  - model_family
+  - trade_shape
+  - risk_logic
+  - regime_session_split
+invalid_conditions:
+  - "Signal count(신호 수)만 증가하고 validation/OOS PnL/DD/density(검증/표본외 손익/손실폭/밀도)가 무너지면 invalid or weak clue(무효 또는 약한 단서)."
+  - "Parity-only economics(동등성 단독 경제성) claim(주장)은 invalid(무효)."
+  - "MT5 runtime probe(MT5 런타임 탐침) 없이 runtime authority(런타임 권위) claim(주장)은 forbidden(금지)."
+evidence_plan:
+  - "F80B(전선80B): data/feature/label/split preflight(데이터/피처/라벨/분할 사전 점검) and broad/extreme proxy scout(넓은/극단 프록시 탐색)."
+  - "F80C(전선80C): WFO-aware selection(워크포워드 인식 선택) only if signal exists(신호가 있을 때만)."
+  - "F80D(전선80D): MT5 runtime probe(MT5 런타임 탐침) only for materialized candidates(물질화 후보)."

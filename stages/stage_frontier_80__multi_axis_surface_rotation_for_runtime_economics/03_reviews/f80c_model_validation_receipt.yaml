@@ -1,0 +1,17 @@
+﻿packet_id: frontier80C_wfo_aware_surface_selection_v1
+skill: obsidian-model-validation
+status: f80c_wfo_exportable_target_selected_for_mt5_materialization_no_authority
+model_or_threshold_surface: "target=f80b_13315 model=extra_trees_d6_l120"
+validation_split: "validation/OOS period stability(검증/표본외 기간 안정성)"
+overfit_checks:
+  - "period positive ratio(기간 양수 비율)"
+  - "ONNX export feasibility(온엑스 내보내기 가능성)"
+selection_metric_boundary: "materialization target only(물질화 대상만), no selected baseline(선택 기준선 없음)"
+allowed_claims:
+  - mt5_materialization_target
+forbidden_claims:
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve

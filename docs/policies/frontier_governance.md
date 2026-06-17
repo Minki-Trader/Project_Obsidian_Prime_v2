@@ -54,6 +54,17 @@ Prior-stage scan(이전 단계 점검)은 vague review(모호한 검토)가 아�
 
 효과(effect, 효과)는 archive amnesia(보관소 망각)를 막되, 과거 결과를 운영 권위(operating authority, 운영 권위)로 세탁하지 않는 것이다.
 
+## Runtime Economics Anchor(런타임 경제성 고정점)
+
+F64-F67(전선64-67)의 교훈은 Frontier stage(전선 단계)의 기본 운영 기억으로 둔다.
+
+- F64(전선64): proxy parity(프록시 동등성), ONNX handoff(온엑스 인계), local handoff quality(로컬 인계 품질)는 MT5 economics(MT5 경제성)를 보장하지 않는다.
+- F65(전선65): SL/TP unit semantics(손절/익절 단위 의미)와 broker point mapping(브로커 포인트 매핑)이 틀리면 좋은 표면도 런타임에서 다른 의미가 된다.
+- F66(전선66): feature/signal count parity(피처/신호 수 동등성)는 PnL/DD/density(손익/손실폭/밀도) 동등성이 아니다.
+- F67(전선67): 이후 작업은 runtime-native lifecycle/cost/DD/order intent economics(런타임 네이티브 생명주기/비용/손실폭/주문 의도 경제성)를 우선한다.
+
+효과(effect, 효과)는 Frontier(전선)가 좁은 repair(수리)나 parity-only economics(동등성 단독 경제성)로 되돌아가지 않고, 실제 MT5 runtime probe(MT5 런타임 탐침)가 필요한 주장을 낮춰 말하게 하는 것이다.
+
 ## Repair Rule(수리 규칙)
 
 Repair work(수리 작업)는 기본적으로 같은 frontier stage(전선 단계) 안의 work packet(작업 묶음)으로 처리한다.
@@ -95,9 +106,13 @@ Decision-weight checklist(결정 무게 점검표)는 아래 질문으로 확인
 - 외부 검증(external verification, 외부 검증)이 필요한 claim(주장)은 시도했거나 out_of_scope_by_claim(주장 범위 밖)으로 낮췄는가?
 - repair-to-exploration ratio(수리 대비 탐색 비중)가 반복 루프(loop, 반복)를 숨기지 않는가?
 
-## Five-Stage Retrospective(5단계 중간 검토)
+## Five-Stage Retrospective Archive(5단계 중간 검토 보관)
 
-Frontier stage(전선 단계)는 5개 closeout(마감)마다 Grok(그록)과 함께 previous five stages(이전 5개 단계)를 중간 검토한다.
+Five-stage Grok retrospective(5단계 그록 중간 검토)는 retired historical archive rule(퇴역 역사 보관 규칙)로 보존한다. 모든 새 frontier operating path(전선 운영 경로)에서 active trigger(활성 트리거), Grok call(그록 호출), Grok receipt(그록 영수증), next-open block(다음 개방 차단)을 만들지 않는다.
+
+효과(effect, 효과)는 기존 기록을 지우지 않으면서도 새 대화/cold start(냉시작)에서 Grok succession(그록 승계)처럼 동작하지 않게 하는 것이다.
+
+Historical trigger(역사 트리거)는 아래와 같았다.
 
 Trigger(트리거)는 두 겹이다.
 
@@ -121,7 +136,7 @@ ALLOWED(허용): direction_delta, repair_priority_delta
 FORBIDDEN(금지): completion, baseline, promotion, runtime_authority, live_readiness, goal_achieve
 ```
 
-Next frontier open(다음 전선 개방)은 retrospective gate(중간 검토 게이트)가 `passed(통과)`, `not_due(아직 아님)`, 또는 `blocked_with_repair_plan(수리 계획 포함 차단)` 중 하나로 기록될 때까지 열지 않는다. 실패 시 `docs/agent_control/self_correction_policy.yaml`의 `plan_only(계획만)` 흐름을 따르며 gate(게이트), threshold(임계값), claim boundary(주장 경계)를 완화하지 않는다.
+Next frontier open block(다음 전선 개방 차단)은 이 archive rule(보관 규칙)에서 발동하지 않는다. 새 대체 회고가 도입되기 전까지는 `docs/registers/five_stage_retrospective_register.yaml`의 보관 상태와 Codex Task Force review receipt(코덱스 태스크포스 검토 영수증)를 함께 보고, gate(게이트), threshold(임계값), claim boundary(주장 경계)를 완화하지 않는다.
 
 ## Forbidden Imports(금지 반입)
 

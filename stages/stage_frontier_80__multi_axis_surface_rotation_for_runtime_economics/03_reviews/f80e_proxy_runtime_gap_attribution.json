@@ -1,0 +1,53 @@
+﻿{
+  "run_id": "frontier80E_proxy_runtime_gap_attribution_v1",
+  "closeout_run_id": "frontier80F_runtime_probe_quality_closeout_v1",
+  "stage_id": "stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics",
+  "parent_run_id": "frontier80D_mt5_runtime_probe_quality_v1",
+  "created_at_utc": "2026-06-17T15:41:05Z",
+  "target_candidate_id": "f80b_13315",
+  "target_model": "extra_trees_d6_l120",
+  "f80b_candidate_rows": 50400,
+  "f80b_materialization_candidate_count": 519,
+  "f80b_meaningful_signal_count": 21,
+  "f80c_wfo_gate_count": 3,
+  "f80d_attempt_count": 1,
+  "f80d_completed_attempt_count": 1,
+  "proxy_validation": {
+    "net_profit": 89.72893373785989,
+    "profit_factor": 1.3786494266857832,
+    "max_drawdown_percent": 4.056337901607913,
+    "expected_selected_trade_count": 396.0,
+    "expected_signal_count": 396.0
+  },
+  "runtime_validation": {
+    "net_profit": -14.61,
+    "profit_factor": 0.95,
+    "max_drawdown_percent": 6.09,
+    "trade_count": 394.0,
+    "signal_count": 396.0,
+    "order_fill_count": 394.0,
+    "order_fill_rate": 1.0,
+    "win_rate_percent": 32.74,
+    "expectancy": -0.04
+  },
+  "gap": {
+    "net_runtime_minus_proxy": -104.33893373785989,
+    "pf_runtime_minus_proxy": -0.4286494266857832,
+    "dd_runtime_minus_proxy": 2.033662098392087,
+    "signal_count_diff": 0.0,
+    "feature_ready_diff": 0.0,
+    "order_fill_minus_expected_selected": -2.0
+  },
+  "gap_attribution": {
+    "not_feature_readiness": true,
+    "not_signal_count": true,
+    "not_onnx_handoff": true,
+    "primary_cause": "runtime_order_economics_after_parity(동등성 이후 런타임 주문 경제성)",
+    "detail": "Expected signal count and feature readiness matched, but validation MT5 net/PF/DD moved from proxy positive to runtime negative."
+  },
+  "closeout_label": "negative_memory(부정 기억)",
+  "preserved_clue": "F80 multi-axis rotation found exportable WFO-aware materialization targets, and selected-entry parity can be made exact.",
+  "negative_memory": "Even after ONNX/feature/signal parity, MT5 validation economics were negative: net -14.61, PF 0.95, DD 6.09%.",
+  "next_frontier_proposal": "stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild",
+  "claim_boundary": "stage_closeout_runtime_probe_quality_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

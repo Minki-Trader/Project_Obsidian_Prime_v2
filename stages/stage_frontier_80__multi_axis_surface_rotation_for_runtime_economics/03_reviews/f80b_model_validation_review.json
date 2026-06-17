@@ -1,0 +1,35 @@
+﻿{
+  "model_surface": [
+    "logistic_l2_balanced",
+    "extra_trees_d6_l120",
+    "histgbm_shallow"
+  ],
+  "feature_sets": {
+    "full58": 58,
+    "runtime_fill_context": 27,
+    "price_vol_session": 25,
+    "trend_order_intent": 29,
+    "micro_reversal": 19,
+    "no_external_contract": 42,
+    "compact_exportable_28": 28
+  },
+  "validation_split": "time-ordered train/validation/OOS(시간순 훈련/검증/표본외)",
+  "overfit_boundary": "Broad sweep(넓은 탐색) is scout-only(탐색 전용); WFO/MT5 evidence(워크포워드/MT5 근거) must follow before authority claims(권위 주장).",
+  "selection_metric_boundary": "rank_score(순위 점수) is triage only(분류 전용).",
+  "risk_boundary": "Deposit=500 DD(예치금 500 손실폭), spread cost(스프레드 비용), density(밀도), lifecycle occupancy(생명주기 점유)를 같이 본다.",
+  "summary_counts": {
+    "scout_clue_count": 2372,
+    "materialization_candidate_count": 519,
+    "meaningful_signal_count": 21,
+    "final_like_reference_count": 0
+  },
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "parity_only_economics"
+  ]
+}

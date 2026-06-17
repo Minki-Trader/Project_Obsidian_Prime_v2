@@ -1,0 +1,96 @@
+﻿version: codex_task_force_registry_v1
+source_of_truth: docs/agent_control/codex_task_force_registry.yaml
+purpose: "Define the permanent Project Obsidian Prime v2 Codex Task Force roster and model policy."
+scope_boundary:
+  replaces: "All Grok-dependent active review routes, including explicit Grok call/review wording"
+  does_not_replace:
+    - "MT5 evidence(MT5 근거)"
+    - "runtime probes(런타임 탐침)"
+    - "ledger/hash/local verification(장부/해시/로컬 검증)"
+    - "claim boundary(주장 경계)"
+model_policy:
+  current_floor_model: gpt-5.5
+  current_reasoning_effort: xhigh
+  current_service_tier: priority
+  default_alias: highest_available_xhigh
+  upgrade_rule: "Use the highest Codex-available model with xhigh reasoning when it is allowed, unless the user explicitly pins another model."
+  non_authority_rule: "Model strength is an execution setting, not evidence and not permission to relax gates, thresholds, or claim boundaries."
+review_policy:
+  review_pass_limit_default: 2
+  third_pass_rule: "Only when new evidence appears."
+  advice_classification:
+    - accepted
+    - rejected
+    - needs_local_verification
+  final_authority: "Codex owns final direction after local verification."
+  forbidden_claims:
+    - completion
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - parity_only_economics
+frontier80_policy:
+  target: "Frontier80 open -> closeout(F80 개방 -> 마감)"
+  not_target: "F79/F79A reopen(F79/F79A 재개방)"
+  closeout_boundary: "runtime_probe_quality_closeout_only"
+  five_stage_grok_retrospective_status: retired_archive_only_preserve_records
+frontier_lessons:
+  f64: "Parity(동등성), ONNX handoff(온엑스 인계), and local handoff quality(로컬 인계 품질) do not guarantee MT5 economics(MT5 경제성)."
+  f65: "SL/TP unit semantics(손절/익절 단위 의미) and broker point mapping(브로커 포인트 매핑) are runtime meaning, not cosmetic metadata(장식 메타데이터)."
+  f66: "Feature/signal count parity(피처/신호 수 동등성) is not PnL/DD/density parity(손익/손실폭/밀도 동등성)."
+  f67: "After F67(전선67 이후), prioritize runtime-native lifecycle/cost/DD/order intent economics(런타임 네이티브 생명주기/비용/손실폭/주문 의도 경제성)."
+roster:
+  - id: agent_01_system_governor
+    display_name: "System Governor(시스템 총괄)"
+    remit: "Keep objective, scope, risk posture, and final claim boundary aligned."
+    required_for:
+      - policy_skill_governance
+      - stage_open
+      - stage_closeout
+  - id: agent_02_platform_routing_architect
+    display_name: "Platform/Routing Architect(플랫폼/라우팅 설계자)"
+    remit: "Own cold-start routing, registry wiring, model policy, and work-family integration."
+    required_for:
+      - agent_routing
+      - skill_routing
+      - cold_start
+  - id: agent_03_philosophy_policy_skill_governance
+    display_name: "Philosophy/Policy/Skill Governance Lead(철학/정책/스킬 거버넌스 책임자)"
+    remit: "Preserve reference-not-inheritance, exploration freedom, and active skill-role reduction."
+    required_for:
+      - AGENTS.md
+      - policies
+      - skills
+  - id: agent_04_evidence_control_plane
+    display_name: "Evidence/Control-Plane Lead(근거/제어면 책임자)"
+    remit: "Own receipts, gate coverage, artifact lineage, and index-first/receipt-first evidence discipline."
+    required_for:
+      - receipts
+      - required_gates
+      - closeout_audit
+  - id: agent_05_data_feature_contract
+    display_name: "Data Integrity/Feature Contract Lead(데이터 무결성/피처 계약 책임자)"
+    remit: "Own data identity, time axis, feature order, label boundary, split boundary, and leakage risks."
+    required_for:
+      - experiment_design
+      - data_integrity
+  - id: agent_06_quant_research
+    display_name: "Quant Research Lead(정량 연구 책임자)"
+    remit: "Push aggressive broad/extreme sweeps and multi-axis surface rotation without baseline claims."
+    required_for:
+      - experiment_design
+      - experiment_execution
+  - id: agent_07_model_validation_risk
+    display_name: "Model Validation/Risk Lead(모델 검증/위험 책임자)"
+    remit: "Own overfit, selection, calibration, risk-stop, and anti-authority-laundering checks."
+    required_for:
+      - model_validation
+      - risk_stop
+  - id: agent_08_mt5_onnx_runtime
+    display_name: "MT5/ONNX Runtime Lead(MT5/ONNX 런타임 책임자)"
+    remit: "Own ONNX/EA parity as preflight and MT5 probe evidence as separate runtime observation."
+    required_for:
+      - runtime_backtest
+      - MT5_probe

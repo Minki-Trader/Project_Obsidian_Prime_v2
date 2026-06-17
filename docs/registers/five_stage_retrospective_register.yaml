@@ -1,16 +1,18 @@
 ﻿version: five_stage_retrospective_register_v1
 source_of_truth: docs/registers/five_stage_retrospective_register.yaml
-purpose: Track five-stage Grok retrospective(5단계 Grok 회고) cadence without relying
-  on Codex memory(코덱스 기억).
+purpose: Preserve retired five-stage Grok retrospective(퇴역 5단계 Grok 회고)
+  history without creating active triggers(활성 트리거), Grok calls(그록 호출),
+  or next-open blocks(다음 개방 차단).
 adopted_at_utc: '2026-06-16T12:05:00Z'
 adopted_during_stage_id: stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64
 cadence:
+  active_mode: retired_archive_only_preserve_records
   primary_trigger: closing_frontier_number % 5 == 0
   fallback_trigger: len(closed_frontier_ids_since_last_retrospective) >= 5
-  next_open_block: true
+  next_open_block: false
   scope_rule: Use latest five canonical frontier closeout stage ids with closeout
     receipts, not numeric NN-4..NN alone.
-required_outputs:
+historical_outputs:
 - five_stage_retrospective_packet
 - bounded_evidence_table
 - grok_receipt
@@ -55,8 +57,11 @@ state:
   - stage_frontier_77__runtime_lifecycle_label_density_rebuild
   - stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild
   - stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path
-  closeouts_since_last: 4
+  - stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics
+  closeouts_since_last: 5
   next_numeric_trigger_frontier: 80
-  current_due_status: not_due_after_f79_closeout_4_of_5
-  note: F79 closeout(마감)을 F71-F75 retrospective(회고) 이후 4/5로 등록했다.
-  last_updated_at_utc: '2026-06-17T11:30:12Z'
+  current_due_status: retired_archive_only_after_f80_closeout_5_of_5_no_new_grok_call
+  active_trigger_status: retired_archive_only_no_new_grok_call
+  note: F80 closeout(마감)을 F71-F75 retrospective(회고) 이후 5/5로 등록했지만 Grok call(그록 호출),
+    required gate(필수 게이트), next-open block(다음 개방 차단)은 만들지 않는다.
+  last_updated_at_utc: '2026-06-17T15:59:03Z'

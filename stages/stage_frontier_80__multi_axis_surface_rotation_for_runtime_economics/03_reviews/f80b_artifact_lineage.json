@@ -1,0 +1,27 @@
+﻿{
+  "producer": "stage_pipelines/stage_frontier_80/frontier80b_broad_extreme_multi_axis_proxy_scout.py",
+  "producer_sha256": "66044dd191e4ca2ba3377dd658b79b0ff770c3828fcddf16f5ec96d30129ca4a",
+  "source_inputs": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "stages/stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics/00_spec/stage_brief.md",
+    "stages/stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics/01_inputs/frontier80_input_boundary.md"
+  ],
+  "artifact_paths": [
+    "stages/stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics/03_reviews/f80b_multi_axis_proxy_summary.json",
+    "stages/stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics/02_runs/frontier80B_broad_extreme_multi_axis_proxy_scout_v1/f80b_multi_axis_candidates_all.csv",
+    "stages/stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics/03_reviews/f80b_multi_axis_ranked_top200.csv",
+    "stages/stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics/03_reviews/f80b_multi_axis_axis_summary.csv",
+    "stages/stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics/03_reviews/f80b_surface_family_summary.csv",
+    "stages/stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics/03_reviews/f80b_model_fit_summary.csv",
+    "stages/stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics/03_reviews/f80b_label_audit.csv",
+    "stages/stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics/03_reviews/f80b_tier_record_audit.csv",
+    "stages/stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics/03_reviews/f80b_data_feature_contract_preflight.json",
+    "stages/stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics/03_reviews/frontier80B_broad_extreme_multi_axis_proxy_scout_report.md",
+    "stages/stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics/02_runs/frontier80B_broad_extreme_multi_axis_proxy_scout_v1/run_manifest.json"
+  ],
+  "consumer": "frontier80C_wfo_aware_surface_selection_v1",
+  "lineage_boundary": "proxy_scout_artifacts_connected_no_authority(프록시 탐색 산출물 연결, 권위 없음)",
+  "canonical_stage_id": "stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics"
+}

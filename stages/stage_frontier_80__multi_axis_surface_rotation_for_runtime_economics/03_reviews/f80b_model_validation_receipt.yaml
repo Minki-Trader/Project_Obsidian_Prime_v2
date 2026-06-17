@@ -1,0 +1,17 @@
+﻿packet_id: frontier80B_broad_extreme_multi_axis_proxy_scout_v1
+skill: obsidian-model-validation
+status: proxy_validation_recorded_no_selection
+model_or_threshold_surface: "F80B proxy candidates(F80B 프록시 후보)"
+validation_split: "train/validation/OOS(훈련/검증/표본외)"
+overfit_checks:
+  - "broad sweep only(넓은 탐색 전용)"
+  - "rank score triage only(순위 점수 분류 전용)"
+selection_metric_boundary: "no selected baseline(선택 기준선 없음)"
+allowed_claims:
+  - proxy_candidate
+forbidden_claims:
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve

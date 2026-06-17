@@ -1,0 +1,23 @@
+﻿{
+  "data_sources": [
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2"
+    },
+    {
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784"
+    }
+  ],
+  "time_axis_boundary": "timestamp(시각) is closed-bar feature key(확정봉 피처 키); entry uses raw open_ts(원천 시가 시각) mapping.",
+  "entry_known_fields": "All feature columns(모든 피처 열) from feature_order(피처 순서) only; regime filters(장세 필터) use entry-known feature columns(진입 시점 피처 열).",
+  "label_only_future_fields": "Post-entry OHLC path(진입 이후 OHLC 경로), spread cost(스프레드 비용), MAE/MFE(최대 불리/유리 이동), DD-normalized utility(손실폭 정규화 효용).",
+  "split_boundary": "Label quantiles(라벨 분위수), model fit(모델 학습), and probability thresholds(확률 임계값) are train-only(훈련 전용).",
+  "tier_boundary": "Tier A separate(티어 A 분리); Tier B separate missing_required(티어 B 분리 필수 누락); Tier A+B combined out_of_scope_by_claim(합산은 주장 범위 밖).",
+  "signal_count_boundary": "Signal count(신호 수)는 diagnostic only(진단 전용)이며 MT5 economics(MT5 경제성) claim(주장)을 만들지 않는다.",
+  "f64_f67_lesson": "Parity(동등성), ONNX handoff(온엑스 인계), and signal count(신호 수) do not guarantee MT5 economics(MT5 경제성)."
+}

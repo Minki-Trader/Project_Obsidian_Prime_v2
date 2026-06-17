@@ -1,0 +1,13 @@
+﻿packet_id: frontier80A_stage_open_multi_axis_surface_rotation_v1
+skill: obsidian-data-integrity
+status: preflight_boundary_recorded_f80b_must_execute
+data_sources_checked:
+  - "F79 closeout report(F79 마감 보고서) as reference only(참조만)."
+  - "Shared F78/F79 feature dataset(공유 피처 데이터셋) to be hashed in F80B."
+time_axis_boundary: "Features(피처)는 entry-known closed-bar fields(진입 시점 확정봉 필드)만 사용해야 하며, label(라벨)은 entry 이후 OHLC path(진입 이후 OHLC 경로)만 사용한다."
+split_boundary: "Train(훈련) statistics, label thresholds(라벨 임계값), and probability thresholds(확률 임계값)는 train split(훈련 분할)에서만 계산한다."
+leakage_checks:
+  - "Regime/session split(장세/세션 분할)은 entry-known fields(진입 시점에 아는 필드)만 쓴다."
+  - "Fill-path/cost/DD/density(체결경로/비용/손실폭/밀도)는 feature(피처)가 아니라 label/outcome(라벨/결과)로만 쓴다."
+  - "Signal count(신호 수)는 diagnostic only(진단 전용)이며 economics claim(경제성 주장)을 만들지 않는다."
+missing_data_boundary: "Tier B separate(티어 B 분리)와 Tier A+B combined(티어 A+B 합산)가 없으면 missing_required/out_of_scope_by_claim(필수 누락/주장 범위 밖)로 기록한다."
