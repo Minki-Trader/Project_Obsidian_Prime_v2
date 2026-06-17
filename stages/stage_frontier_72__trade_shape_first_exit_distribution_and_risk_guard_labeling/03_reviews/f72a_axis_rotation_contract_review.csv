@@ -1,0 +1,7 @@
+﻿axis,role,change,guard
+trade_shape(거래 형태),lead_axis(주도 축),label/exit/risk construction comes before score thresholds(라벨/청산/위험 구성이 점수 임계값보다 먼저 온다),not post-hoc throttling or tape rescue(사후 제한 또는 테이프 구제 아님)
+label_target(라벨/목표),primary_target(주 목표),"exit path quality, MAE/MFE balance, time under water, stop/target feasibility(청산 경로 품질, 불리/유리 이동 균형, 회복 전 체류 시간, 손절/익절 가능성)",not F71 economics-native class or probability-only label(F71 경제성 네이티브 클래스 또는 확률 단독 라벨 아님)
+risk_logic(위험 로직),embedded_constraint(내장 조건),SL/TP/time stop/DD guard is part of proxy label and selection(손절/익절/시간 청산/손실폭 보호가 프록시 라벨과 선택에 포함),not after-the-fact position sizing rescue(사후 비중 구제 아님)
+feature_set(피처 묶음),ablation_recombination(빼기/재조합),"core price, session, volatility, path features are removed and recombined by bundle(핵심 가격/세션/변동성/경로 피처를 묶음별로 제거/재조합)",stop if feature churn replaces label thesis(피처 흔들기가 라벨 논제를 대체하면 중단)
+model_family(모델 계열),supporting_sweep(보조 훑기),"linear/logistic, EBM-like additive tree, small NN, tree reference(선형/로지스틱, EBM 유사 가산 트리, 작은 신경망, 트리 참조)",model sweep is subordinate to fixed exit/risk label hypothesis(모델 훑기는 고정된 청산/위험 라벨 가설에 종속)
+regime_session(장세/세션),first_class_view(일급 보기),cash open/mid/late and trend/chop/vol expansion views(정규장 초/중/후반 및 추세/횡보/변동성 확대 보기),not F70 label-regime density primary axis(F70 라벨-장세 밀도 주도 축 아님)

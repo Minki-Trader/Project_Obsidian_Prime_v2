@@ -1,0 +1,44 @@
+{
+  "spec_id": "f72_label_exit_risk_construction_v1",
+  "lead_axis": "trade_shape_first(거래 형태 우선)",
+  "label_targets": [
+    "exit_path_quality(청산 경로 품질)",
+    "mae_mfe_balance(불리/유리 이동 균형)",
+    "time_under_water_proxy(회복 전 체류 시간 프록시)",
+    "stop_target_feasibility(손절/익절 가능성)",
+    "risk_guard_survival(위험 보호 생존)"
+  ],
+  "trade_shapes": {
+    "hold_bars": [
+      6,
+      12,
+      18,
+      24,
+      36
+    ],
+    "stop_atr_multiples": [
+      0.6,
+      0.9,
+      1.2,
+      1.6
+    ],
+    "target_atr_multiples": [
+      0.8,
+      1.2,
+      1.8,
+      2.4
+    ],
+    "time_stop_policy": "hard_max_hold_with_early_adverse_exit(최대 보유시간과 초기 불리 경로 청산)"
+  },
+  "proxy_success": {
+    "scout_clue": "net>0; PF>=1.10; DD<=15%; trades/day>=1.5; both validation and OOS not collapsing(검증/표본외 동시 붕괴 없음)",
+    "meaningful_candidate": "PF>=1.25; DD<=10%; trades/day>=3.0; smoothness proxy not broken(매끄러움 프록시 미붕괴)",
+    "final_like_reference_only": "PF>=2.0; DD<=10%; 5<=trades/day<=10; smooth equity proxy true(최종 유사 참조 전용)"
+  },
+  "invalid_conditions": [
+    "features include future path information(피처가 미래 경로 정보를 포함)",
+    "exit labels include entry bar leakage(청산 라벨이 진입 봉 누수를 포함)",
+    "selection is only q threshold or tape sweep(선택이 q 임계값 또는 테이프 훑기뿐)",
+    "MT5 bridge cannot express selected trade shape(선택 거래 형태를 MT5 연결이 표현할 수 없음)"
+  ]
+}

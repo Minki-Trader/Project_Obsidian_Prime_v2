@@ -1,0 +1,5 @@
+﻿bundle,action,effect
+core_price(핵심 가격),"keep, then remove slope/momentum subset(유지 후 기울기/모멘텀 부분 제거)",checks whether price path alone carries exit quality(가격 경로만으로 청산 품질이 있는지 확인)
+session_time(세션/시간),"keep, remove, and session-only interaction(유지/제거/세션 전용 상호작용)",separates time-of-day edge from label construction(시간대 우위를 라벨 구성과 분리)
+volatility_path(변동성 경로),swap ATR/HV/range-normalized path features(ATR/HV/범위 정규화 경로 피처 교체),tests whether MAE/MFE labels need volatility context(MAE/MFE 라벨에 변동성 문맥이 필요한지 확인)
+regime_view(장세 보기),view-only split before primary selection(주 선택 전 보기 전용 분할),prevents F70-style regime-primary rerun(F70식 장세 주도 반복 방지)

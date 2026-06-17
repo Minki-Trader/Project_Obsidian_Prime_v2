@@ -1,0 +1,29 @@
+{
+  "review_size": "small",
+  "prompt_hash": "a2b461000c790a593a805a884ead29ec575e1c67b521dc909df67df454c77376",
+  "command": [
+    "C:\\Users\\awdse\\.grok\\bin\\grok.exe",
+    "--rules",
+    "You are an external second-opinion reviewer for a bounded evidence snapshot. Answer only from the prompt. Do not inspect files, run tools, browse, spawn subagents, or perform local verification. If evidence is insufficient, say needs_local_verification.",
+    "--no-plan",
+    "--no-subagents",
+    "--disable-web-search",
+    "--prompt-file",
+    "docs/agent_control/grok_reviews/2026-06-17_f72g_stage_closeout_trade_shape_lifecycle_gap/prompts/f72g_stage_closeout_trade_shape_lifecycle_gap_prompt.md"
+  ],
+  "returncode": 0,
+  "timed_out": false,
+  "success": true,
+  "duration_seconds": 37.160903,
+  "stripped_noise_lines": [],
+  "preflight_warnings": [
+    "prompt_length_exceeds_small_limit"
+  ],
+  "unexpected_top_level_artifacts": [],
+  "packet_paths": {
+    "prompt": "docs/agent_control/grok_reviews/2026-06-17_f72g_stage_closeout_trade_shape_lifecycle_gap/prompt.md",
+    "clean_output": "docs/agent_control/grok_reviews/2026-06-17_f72g_stage_closeout_trade_shape_lifecycle_gap/clean_output.md",
+    "raw_diagnostics": "docs/agent_control/grok_reviews/2026-06-17_f72g_stage_closeout_trade_shape_lifecycle_gap/raw_diagnostics.json",
+    "metadata": "docs/agent_control/grok_reviews/2026-06-17_f72g_stage_closeout_trade_shape_lifecycle_gap/metadata.json"
+  }
+}

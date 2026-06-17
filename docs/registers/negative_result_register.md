@@ -1324,3 +1324,16 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Reopen condition(재개 조건): feature set(피처 묶음), label/target(라벨/목표), model family(모델 계열), trade shape(거래 형태), risk logic(위험 로직), or regime/session split(장세/세션 분할) 중 하나 이상이 실제로 바뀌고 새 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
 - Evidence(근거): `stages/stage_frontier_71__economics_native_label_selection_for_joint_density_pf_dd/03_reviews/stage_closeout_report.md`.
 - Boundary(경계): no authority(권위 없음), no completion(완성 없음).
+
+
+<!-- NR-FR72-TRADE-SHAPE-LIFECYCLE-RUNTIME-ECONOMICS-GAP -->
+## NR-FR72-TRADE-SHAPE-LIFECYCLE-RUNTIME-ECONOMICS-GAP
+
+- Stage(단계): `stage_frontier_72__trade_shape_first_exit_distribution_and_risk_guard_labeling`
+- Hypothesis(가설): trade-shape-first exit distribution and risk-guard labeling(거래 형태 우선 청산 분포 및 위험 보호 라벨링)이 F71 economics-native negative memory(F71 경제성 네이티브 부정 기억) 이후 density/PF/DD(밀도/수익 팩터/손실폭)를 함께 개선하는 seed surface(씨앗 표면)를 만들 수 있다.
+- Why failed(실패 이유): F72B/F72C/F72E meaningful candidate(의미 후보)가 모두 `0`이었고, F72F lifecycle repair MT5 Runtime Probe(생명주기 수리 MT5 런타임 탐침)도 validation/OOS(검증/표본외) PF/DD/trades_day(수익 팩터/손실폭/일거래) `1.07/14.94%/2.1397`, `1.05/18.60%/2.4769`로 최종 네 축에서 멀었다.
+- Salvage value(회수 가치): lifecycle-aligned selected entry(생명주기 정렬 선택 진입)는 expected/runtime trade count gap(예상/런타임 거래 수 간극)을 줄일 수 있고, signal/feature parity(신호/피처 동등성)와 runtime economics(런타임 경제성)는 별개라는 단서를 보존한다.
+- Do-not-repeat(반복 금지): same F72 trade-shape-first label/feature/lifecycle surface(동일 F72 거래 형태 우선 라벨/피처/생명주기 표면)를 새 feature set/label/model/risk/regime axis(새 피처 묶음/라벨/모델/위험/장세 축) 없이 반복하지 않는다.
+- Reopen condition(재개 조건): feature set(피처 묶음), label/target(라벨/목표), model family(모델 계열), trade shape(거래 형태), risk logic(위험 로직), or regime/session split(장세/세션 분할) 중 하나 이상이 실제로 바뀌고 새 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
+- Evidence(근거): `stages/stage_frontier_72__trade_shape_first_exit_distribution_and_risk_guard_labeling/03_reviews/stage_closeout_report.md`.
+- Boundary(경계): no authority(권위 없음), no completion(완성 없음).
