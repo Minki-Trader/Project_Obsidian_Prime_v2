@@ -1,0 +1,20 @@
+﻿{
+  "model_family": "logistic_l2, extra_trees_ref, hist_gbm",
+  "target_and_label": "microburst first-touch reward-before-risk(마이크로버스트 위험 전 보상 선도달)",
+  "split_method": "time holdout scout(시간 홀드아웃 탐색)",
+  "selection_metric": "validation score threshold to target trades/day then lifecycle-filtered KPI(검증 점수 임계값으로 일거래 목표 후 생명주기 필터 KPI)",
+  "secondary_metrics": [
+    "PF(수익 팩터)",
+    "DD(손실폭)",
+    "trades/day(일거래)",
+    "smoothness_r2(매끄러움 R2)",
+    "validation/OOS pair(검증/표본외 쌍)"
+  ],
+  "threshold_policy": "searched on validation by target_tpd(검증에서 목표 일거래별 탐색)",
+  "overfit_risk": "many axes/bundles/models/gates tried; scout-only claim(많은 축/묶음/모델/게이트 시도, 탐색 전용 주장)",
+  "calibration_risk": "scores are ranking signals, not calibrated probabilities(점수는 순위 신호이지 보정 확률 아님)",
+  "comparison_baseline": "F73F runtime observation and F74A design boundary(F73F 런타임 관찰과 F74A 설계 경계)",
+  "validation_judgment": "exploratory_no_meaningful_candidate_yet",
+  "candidate_rows": 648,
+  "meaningful_candidate_count": 0
+}

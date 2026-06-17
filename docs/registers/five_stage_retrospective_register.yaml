@@ -1,59 +1,62 @@
 ﻿version: five_stage_retrospective_register_v1
 source_of_truth: docs/registers/five_stage_retrospective_register.yaml
-purpose: "Track five-stage Grok retrospective(5단계 Grok 중간 검토) cadence without relying on Codex memory(코덱스 기억)."
+purpose: Track five-stage Grok retrospective(5단계 Grok 중간 검토) cadence without relying
+  on Codex memory(코덱스 기억).
 adopted_at_utc: '2026-06-16T12:05:00Z'
 adopted_during_stage_id: stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64
 cadence:
-  primary_trigger: "closing_frontier_number % 5 == 0"
-  fallback_trigger: "len(closed_frontier_ids_since_last_retrospective) >= 5"
+  primary_trigger: closing_frontier_number % 5 == 0
+  fallback_trigger: len(closed_frontier_ids_since_last_retrospective) >= 5
   next_open_block: true
-  scope_rule: "Use latest five canonical frontier closeout stage ids with closeout receipts, not numeric NN-4..NN alone."
+  scope_rule: Use latest five canonical frontier closeout stage ids with closeout
+    receipts, not numeric NN-4..NN alone.
 required_outputs:
-  - five_stage_retrospective_packet
-  - bounded_evidence_table
-  - grok_receipt
-  - codex_local_verification
-  - advice_classification
-  - compact_retrospective_report
-  - next_stage_open_block_check
+- five_stage_retrospective_packet
+- bounded_evidence_table
+- grok_receipt
+- codex_local_verification
+- advice_classification
+- compact_retrospective_report
+- next_stage_open_block_check
 required_row_fields:
-  - stage_id
-  - hypothesis
-  - proxy_kpi
-  - mt5_runtime_probe_kpi
-  - proxy_runtime_gap_cause
-  - closeout_label
-  - preserved_clue
-  - negative_memory
-  - systemic_repeat
-  - next_action
+- stage_id
+- hypothesis
+- proxy_kpi
+- mt5_runtime_probe_kpi
+- proxy_runtime_gap_cause
+- closeout_label
+- preserved_clue
+- negative_memory
+- systemic_repeat
+- next_action
 claim_boundary:
   allowed:
-    - direction_delta
-    - repair_priority_delta
+  - direction_delta
+  - repair_priority_delta
   forbidden:
-    - completion
-    - baseline
-    - promotion
-    - runtime_authority
-    - live_readiness
-    - goal_achieve
-
+  - completion
+  - baseline
+  - promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
 state:
   last_completed_packet_id: frontier66_to_70_five_stage_retrospective_v1
   last_completed_at_frontier: 70
   last_completed_stage_ids:
-    - stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64
-    - stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk
-    - stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout
-    - stage_frontier_69__axis_rotation_after_lifecycle_risk_only_negative_memory
-    - stage_frontier_70__regime_specific_asymmetric_value_exit_model_rotation
+  - stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64
+  - stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk
+  - stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout
+  - stage_frontier_69__axis_rotation_after_lifecycle_risk_only_negative_memory
+  - stage_frontier_70__regime_specific_asymmetric_value_exit_model_rotation
   last_completed_at_utc: '2026-06-16T22:35:00Z'
   closed_frontier_ids_since_last_retrospective:
-    - stage_frontier_71__economics_native_label_selection_for_joint_density_pf_dd
-    - stage_frontier_72__trade_shape_first_exit_distribution_and_risk_guard_labeling
-    - stage_frontier_73__session_regime_feature_model_rotation_for_runtime_economics_gap
-  closeouts_since_last: 3
+  - stage_frontier_71__economics_native_label_selection_for_joint_density_pf_dd
+  - stage_frontier_72__trade_shape_first_exit_distribution_and_risk_guard_labeling
+  - stage_frontier_73__session_regime_feature_model_rotation_for_runtime_economics_gap
+  - stage_frontier_74__microburst_turnover_label_for_dense_smooth_runtime_path
+  closeouts_since_last: 4
   next_numeric_trigger_frontier: 75
-  current_due_status: not_due_after_f73_closeout
-  note: "F73 closeout(마감)이 F66-F70 retrospective(중간 검토) 뒤 3/5로 등록됐다. 다음 numeric trigger(숫자 트리거)는 F75 closeout(마감)이다."
+  current_due_status: not_due_after_f74_closeout
+  note: F74 closeout(마감)이 F66-F70 retrospective(중간 검토) 뒤 4/5로 등록됐다. 다음 numeric trigger(숫자
+    트리거)는 F75 closeout(마감)이다.

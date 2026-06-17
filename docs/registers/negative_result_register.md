@@ -1349,3 +1349,15 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Reopen condition(재개 조건): a new economic mechanism(새 경제 메커니즘)이 trade lifecycle/risk/label/session split(거래 생명주기/위험/라벨/세션 분할) 중 하나 이상을 주도적으로 바꾸고 새 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
 - Evidence(근거): `stages/stage_frontier_73__session_regime_feature_model_rotation_for_runtime_economics_gap/03_reviews/stage_closeout_report.md`.
 - Boundary(경계): no authority(권위 없음), no completion(완성 없음).
+
+<!-- NR-FR74-MICROBURST-DENSITY-WITHOUT-RUNTIME-ECONOMICS -->
+## NR-FR74-MICROBURST-DENSITY-WITHOUT-RUNTIME-ECONOMICS
+
+- Stage(단계): `stage_frontier_74__microburst_turnover_label_for_dense_smooth_runtime_path`
+- Hypothesis(가설): microburst turnover labels(마이크로버스트 회전 라벨)이 dense smooth runtime path(조밀하고 매끄러운 런타임 경로)의 seed surface(씨앗 표면)를 만들 수 있는지 시험했다.
+- Why failed(실패 이유): raw density(원시 밀도)는 통과했지만 F74B/F74C에서 scout clue(탐색 단서) 0, meaningful candidate(의미 후보) 0이었다. MT5 runtime(런타임)은 validation PF/DD/tpd `1.16/11.40%/1.6544`, OOS PF/DD/tpd `1.13/9.66%/1.60`으로 최종 네 축에서 멀다.
+- Salvage value(회수 가치): density feasibility(밀도 실현 가능성)과 signal quality(신호 품질)는 분리해서 봐야 한다. ONNX materialization(온엑스 물질화)과 selected-entry veto parity(선택 진입 차단 동등성)는 정확히 맞출 수 있다.
+- Do-not-repeat(반복 금지): microburst turnover label(마이크로버스트 회전 라벨)을 threshold/clean-label/session tweak(임계값/클린 라벨/세션 미세조정)만으로 다시 밀지 않는다.
+- Reopen condition(재개 조건): order-flow(오더플로), volatility compression(변동성 압축), session liquidity imbalance(세션 유동성 불균형)처럼 upstream mechanism(상류 메커니즘)이 바뀌고 label/risk/trade shape(라벨/위험/거래 형태)가 새로 묶일 때만 재개한다.
+- Evidence(근거): `stages/stage_frontier_74__microburst_turnover_label_for_dense_smooth_runtime_path/03_reviews/stage_closeout_report.md`.
+- Boundary(경계): no authority(권위 없음), no completion(완성 없음).

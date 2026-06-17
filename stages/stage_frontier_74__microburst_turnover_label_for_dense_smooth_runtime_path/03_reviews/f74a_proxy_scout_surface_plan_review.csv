@@ -1,0 +1,5 @@
+﻿surface_id,purpose,features,models,stop_condition
+raw_microburst_density_gate,label-only density feasibility(라벨 단독 밀도 가능성),none(없음),none(없음),"if raw labels are below 2/day, repair label before model(원시 라벨이 일 2회 미만이면 모델 전 라벨 수리)"
+micro_path_core_linear_tree,dense micro path signal scout(조밀한 미세 경로 신호 탐색),"core path, ATR, session(핵심 경로, 평균진폭, 세션)","logistic_l2, extra_trees_ref, hist_gbm",no validation/OOS positive density pair(검증/표본외 양수 밀도 쌍 없음)
+adverse_excursion_ablation,path-veto value test(경로 차단 가치 시험),core plus adverse excursion filters(핵심 + 불리 이동 필터),"extra_trees_ref, hist_gbm",validation DD over 20% despite OOS profit(표본외 이익에도 검증 손실폭 20% 초과)
+session_microburst_split,cash open/mid/late density split(정규장 초/중/후반 밀도 분할),session regime core(세션 장세 핵심),"logistic_l2, hist_gbm",single-session sparse clue below runtime value(단일 세션 희소 단서가 런타임 가치 미달)

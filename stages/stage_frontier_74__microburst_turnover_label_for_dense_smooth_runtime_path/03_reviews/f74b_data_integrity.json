@@ -1,0 +1,27 @@
+﻿{
+  "data_source": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+  ],
+  "time_axis": "frame timestamp and raw time_close_unix are UTC bar-close aligned(프레임 timestamp와 원시 time_close_unix는 UTC 봉마감 정렬)",
+  "sample_scope": {
+    "symbol": "US100",
+    "timeframe": "M5",
+    "frame_rows": 46650,
+    "raw_rows": 261345,
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    }
+  },
+  "missing_or_duplicate_check": {
+    "frame_duplicate_timestamps": 0,
+    "raw_duplicate_time_close_unix": 0,
+    "aligned_frame_rows": 46650
+  },
+  "feature_label_boundary": "features use current/past row; microburst label uses entry at next bar open and future path inside declared horizon(피처는 현재/과거 행, 라벨은 다음 봉 시가 진입과 선언 수평선 내부 미래 경로 사용)",
+  "split_boundary": "train/validation/oos inherited from model input split(모델 입력 분할 상속)",
+  "leakage_risk": "threshold selection on validation may overfit scout; OOS kept as separate read(검증 임계값 선택은 탐색 과최적화 위험, 표본외는 별도 판독)",
+  "integrity_judgment": "usable_with_boundary(경계 포함 사용 가능)"
+}

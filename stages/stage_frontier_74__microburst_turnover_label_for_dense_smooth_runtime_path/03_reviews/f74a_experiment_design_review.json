@@ -1,0 +1,73 @@
+﻿{
+  "idea_id": "IDEA-FR74-MICROBURST-TURNOVER-LABEL-DENSE-SMOOTH-RUNTIME-PATH",
+  "hypothesis": "microburst turnover labels(마이크로버스트 회전 라벨)이 dense smooth runtime path(조밀하고 매끄러운 런타임 경로)의 seed surface(씨앗 표면)를 만들 수 있는지 시험한다.",
+  "decision_use": "short-horizon first-touch labels(짧은 수평선 선도달 라벨)이 proxy scout(프록시 탐색)와 MT5 Runtime Probe(MT5 런타임 탐침)를 받을 가치가 있는지 결정한다.",
+  "comparison_baseline": "F73F direct binary adapter runtime observation(F73F 직접 이진 어댑터 런타임 관찰)",
+  "control_variables": [
+    "US100 M5",
+    "same train/validation/OOS split(동일 학습/검증/표본외 분할)",
+    "no inherited winner/baseline(상속 승자/기준선 없음)"
+  ],
+  "changed_variables": [
+    "label/target(라벨/목표)",
+    "trade shape(거래 형태)",
+    "risk logic inside label(라벨 내부 위험 로직)",
+    "model family after raw gate(원시 게이트 뒤 모델 계열)"
+  ],
+  "sample_scope": {
+    "fwd12_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "fwd12_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "fwd12_rows": 46650,
+    "fwd12_split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "fwd18_path": "data/processed/model_inputs/label_v1_fwd18_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "fwd18_sha256": "adda3aaa6b489bb3511598d074809d4bffd374bba1d224e3d86597cba724bc59",
+    "fwd18_rows": 42567,
+    "fwd18_split_counts": {
+      "train": 26613,
+      "validation": 9014,
+      "oos": 6940
+    },
+    "feature_order_fwd12_sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb",
+    "feature_order_fwd18_sha256": "d44f31835e43b4037678d745fb8d73e0b62d964a61723b4660eab63c7eddf696",
+    "feature_order_hash_fwd12": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_order_hash_fwd18": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_order_same": true,
+    "raw_us100_path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "raw_us100_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+    "raw_us100_rows": 261345,
+    "time_axis": "MT5 M5 bar close time(메타트레이더5 5분봉 종가 시각)"
+  },
+  "success_criteria": [
+    "raw label density >=2/day before model(모델 전 원시 라벨 밀도 일 2회 이상)",
+    "proxy moves toward 5-10 trades/day(프록시가 일 5~10회 방향으로 이동)",
+    "validation and OOS both positive without DD explosion(검증과 표본외가 모두 양수이고 손실폭 폭발 없음)"
+  ],
+  "failure_criteria": [
+    "raw labels sparse below 2/day(원시 라벨 일 2회 미만)",
+    "validation DD >20% with OOS-only gain(표본외만 좋고 검증 손실폭 20% 초과)",
+    "density explained only by threshold/cooldown/quota(밀도가 임계값/쿨다운/할당만으로 설명됨)"
+  ],
+  "invalid_conditions": [
+    "split mismatch(분할 불일치)",
+    "feature order mismatch without record(기록 없는 피처 순서 불일치)",
+    "lookahead beyond horizon(수평선 밖 미래 누수)"
+  ],
+  "stop_conditions": [
+    "raw density failure -> label repair(원시 밀도 실패 -> 라벨 수리)",
+    "proxy near-miss -> Grok then MT5 probe(프록시 근접 -> Grok 뒤 MT5 탐침)",
+    "repeated quota repair -> close or pivot(할당 수리 반복 -> 마감 또는 전환)"
+  ],
+  "evidence_plan": [
+    "stage brief(단계 개요)",
+    "axis contract(축 계약)",
+    "raw label density table(원시 라벨 밀도표)",
+    "proxy KPI(프록시 KPI)",
+    "Grok receipt(그록 영수증)",
+    "MT5 runtime receipt if meaningful(의미 신호면 MT5 런타임 영수증)"
+  ],
+  "claim_boundary": "stage_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}
