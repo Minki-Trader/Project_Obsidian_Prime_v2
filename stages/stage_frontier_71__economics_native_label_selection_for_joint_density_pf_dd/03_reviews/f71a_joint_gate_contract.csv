@@ -1,0 +1,5 @@
+﻿gate_name,validation_requirement,oos_requirement,effect
+scout_clue(탐색 단서),net_profit>0;profit_factor>=1.10;drawdown<=15;trades_day>=1.0,net_profit>0;profit_factor>=1.10;drawdown<=15;trades_day>=1.0,keeps weak but directional economics for repair(약하지만 방향 있는 경제성을 수리 대상으로 보존)
+meaningful_candidate(의미 후보),profit_factor>=1.20;drawdown<=10;trades_day>=3.0,profit_factor>=1.20;drawdown<=10;trades_day>=3.0,allows MT5 Runtime Probe after proxy signal(프록시 신호 뒤 MT5 런타임 탐침 허용)
+density_lift_fracture_test(밀도 상승 균열 시험),candidate remains PF>=1.10 and DD<=12 when selected density is lifted by threshold relaxation or bucket expansion,candidate remains PF>=1.10 and DD<=12 when selected density is lifted by threshold relaxation or bucket expansion,blocks sparse-PF false wins(희소 수익 팩터 허위 승리 차단)
+final_like_reference_only(최종 유사 참조 전용),profit_factor>=2.0;drawdown<=10;5<=trades_day<=10;smooth_equity_proxy=true,profit_factor>=2.0;drawdown<=10;5<=trades_day<=10;smooth_equity_proxy=true,reference only until final completion review(최종 완성 검토 전까지 참조 전용)

@@ -1311,3 +1311,16 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Reopen condition(재개 조건): a genuinely new economic hypothesis(진짜 새 경제 가설)가 feature set(피처 묶음), label/target(라벨/목표), model family(모델 계열), trade shape(거래 형태), risk logic(위험 로직), or regime/session split(장세/세션 분할) 중 하나 이상을 주도적으로 바꿀 때만 다시 연다.
 - Evidence(근거): `stages/stage_frontier_70__regime_specific_asymmetric_value_exit_model_rotation/03_reviews/stage_closeout_report.md`.
 - Boundary(경계): no authority(권위 없음), no completion(완성 없음).
+
+
+<!-- NR-FR71-ECONOMICS-NATIVE-LABEL-SELECTION-RUNTIME-GAP -->
+## NR-FR71-ECONOMICS-NATIVE-LABEL-SELECTION-RUNTIME-GAP
+
+- Stage(단계): `stage_frontier_71__economics_native_label_selection_for_joint_density_pf_dd`
+- Hypothesis(가설): economics-native label/target and selection(경제성 네이티브 라벨/목표와 선택)이 density/PF/DD(밀도/수익 팩터/손실폭)를 함께 보존하는 seed surface(씨앗 표면)를 만들 수 있다.
+- Why failed(실패 이유): F71B 1620 candidates(후보) and F71C 1440 repair candidates(수리 후보) produced meaningful candidate(의미 후보) `0`; after F71E edge_margin q40 runtime semantics repair(F71E 엣지 마진 q40 런타임 의미 수리), best OOS runtime(최선 표본외 런타임)은 net(순수익) `36.35`, PF(수익 팩터) `1.09`, DD(손실폭) `5.92%`, trades/day(일 거래 수) `1.3231`로 final target(최종 목표)보다 약했다.
+- Salvage value(회수 가치): EA-compatible selection semantics(EA 호환 선택 의미)를 맞추면 ONNX/signal/feature parity(온엑스/신호/피처 동등성)는 정확히 복구된다.
+- Do-not-repeat(반복 금지): same F71 label/model/selection surface(같은 F71 라벨/모델/선택 표면)를 q threshold or tape-only sweep(q 임계값 또는 테이프 단독 훑기)으로 반복하지 않는다.
+- Reopen condition(재개 조건): feature set(피처 묶음), label/target(라벨/목표), model family(모델 계열), trade shape(거래 형태), risk logic(위험 로직), or regime/session split(장세/세션 분할) 중 하나 이상이 실제로 바뀌고 새 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
+- Evidence(근거): `stages/stage_frontier_71__economics_native_label_selection_for_joint_density_pf_dd/03_reviews/stage_closeout_report.md`.
+- Boundary(경계): no authority(권위 없음), no completion(완성 없음).

@@ -1,0 +1,32 @@
+{
+  "label_family": "economics_native_lifecycle_outcome(경제성 네이티브 생명주기 결과)",
+  "lead_axis": "label_target_then_selection_objective(라벨/목표 다음 선택 목표)",
+  "candidate_horizons_bars": [
+    6,
+    12,
+    18,
+    24
+  ],
+  "economic_components": [
+    "realized_pnl_after_cost_slippage_swap(비용/슬리피지/스왑 뒤 실현 손익)",
+    "mfe_mae_balance(최대 유리/불리 움직임 균형)",
+    "adverse_path_stress(불리 경로 압박)",
+    "hold_time_penalty(보유 시간 페널티)",
+    "drawdown_contribution(손실폭 기여)"
+  ],
+  "selection_score_candidates": [
+    "expected_net_contribution(예상 순수익 기여)",
+    "pf_contribution_bucket(수익 팩터 기여 구간)",
+    "dd_penalty_adjusted_edge(손실폭 페널티 보정 우위)",
+    "density_band_utility(밀도 구간 효용)"
+  ],
+  "tier_recording": [
+    "Tier A separate(티어 A 분리)",
+    "Tier B separate(티어 B 분리)",
+    "Tier A+B combined(티어 A+B 합산)"
+  ],
+  "forbidden": [
+    "old_direction_or_first_hit_label_without_economics(경제성 없는 기존 방향/최초 도달 라벨)",
+    "post_hoc_quota_as_economics(사후 할당을 경제성으로 부르기)"
+  ]
+}
