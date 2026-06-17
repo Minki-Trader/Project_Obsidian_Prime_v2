@@ -1,15 +1,13 @@
 ﻿version: five_stage_retrospective_register_v1
 source_of_truth: docs/registers/five_stage_retrospective_register.yaml
-purpose: Track five-stage Grok retrospective(5단계 Grok 중간 검토) cadence without relying
-  on Codex memory(코덱스 기억).
+purpose: Track five-stage Grok retrospective(5단계 Grok 회고) cadence without relying on Codex memory(코덱스 기억).
 adopted_at_utc: '2026-06-16T12:05:00Z'
 adopted_during_stage_id: stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64
 cadence:
   primary_trigger: closing_frontier_number % 5 == 0
   fallback_trigger: len(closed_frontier_ids_since_last_retrospective) >= 5
   next_open_block: true
-  scope_rule: Use latest five canonical frontier closeout stage ids with closeout
-    receipts, not numeric NN-4..NN alone.
+  scope_rule: Use latest five canonical frontier closeout stage ids with closeout receipts, not numeric NN-4..NN alone.
 required_outputs:
 - five_stage_retrospective_packet
 - bounded_evidence_table
@@ -41,24 +39,17 @@ claim_boundary:
   - live_readiness
   - goal_achieve
 state:
-  last_completed_packet_id: frontier66_to_70_five_stage_retrospective_v1
-  last_completed_at_frontier: 70
+  last_completed_packet_id: frontier71_to_75_five_stage_retrospective_v1
+  last_completed_at_frontier: 75
   last_completed_stage_ids:
-  - stage_frontier_66__runtime_probe_backfill_gap_audit_frontier02_to_64
-  - stage_frontier_67__count_parity_not_pnl_parity_runtime_economics_crosswalk
-  - stage_frontier_68__runtime_native_trade_lifecycle_economics_proxy_onnx_scout
-  - stage_frontier_69__axis_rotation_after_lifecycle_risk_only_negative_memory
-  - stage_frontier_70__regime_specific_asymmetric_value_exit_model_rotation
-  last_completed_at_utc: '2026-06-16T22:35:00Z'
-  closed_frontier_ids_since_last_retrospective:
   - stage_frontier_71__economics_native_label_selection_for_joint_density_pf_dd
   - stage_frontier_72__trade_shape_first_exit_distribution_and_risk_guard_labeling
   - stage_frontier_73__session_regime_feature_model_rotation_for_runtime_economics_gap
   - stage_frontier_74__microburst_turnover_label_for_dense_smooth_runtime_path
   - stage_frontier_75__volatility_compression_liquidity_release_for_tradeable_density
-  closeouts_since_last: 5
-  next_numeric_trigger_frontier: 75
-  current_due_status: due_after_f75_closeout_pending_retrospective
-  note: F75 closeout(마감)이 F66-F70 retrospective(중간 검토) 뒤 5/5로 등록됐다. F76 open(개방) 전
-    five-stage retrospective(5단계 중간 검토)가 필요하다.
-  last_due_marked_at_utc: '2026-06-17T05:03:53Z'
+  last_completed_at_utc: '2026-06-17T05:14:20Z'
+  closed_frontier_ids_since_last_retrospective: []
+  closeouts_since_last: 0
+  next_numeric_trigger_frontier: 80
+  current_due_status: not_due_after_frontier71_to_75_retrospective_completed
+  note: F71-F75 retrospective(회고)가 완료됐다. F76 open(개방)은 회고 게이트 관점에서 허용되지만, F76 자체 stage-open Grok 검토는 별도로 필요하다.
