@@ -1,0 +1,21 @@
+﻿{
+  "target_and_label": "runtime-native fill-path utility labels(런타임 네이티브 체결 경로 효용 라벨)",
+  "model_families": [
+    "logistic_l2_balanced",
+    "extra_trees_d7_l80"
+  ],
+  "feature_sets": {
+    "runtime_fill_context": 27,
+    "contract_core": 37,
+    "no_external": 42,
+    "no_session": 54
+  },
+  "split_method": "time-ordered train/validation/OOS holdout(시간순 훈련/검증/표본외 고정); WFO(워크포워드)는 signal exists(신호 존재) 뒤 실행.",
+  "overfit_risk": "broad axis sweep(넓은 축 탐색)이므로 scout-only boundary(탐색 전용 경계)를 유지한다.",
+  "export_constraint": "small NN(작은 신경망)은 이번 wave0에서 제외했고, exportable classical surfaces(내보내기 가능한 고전 표면)부터 점검한다.",
+  "summary": {
+    "scout_clue_count": 0,
+    "meaningful_signal_count": 0,
+    "best_candidate": "f79b_02371"
+  }
+}

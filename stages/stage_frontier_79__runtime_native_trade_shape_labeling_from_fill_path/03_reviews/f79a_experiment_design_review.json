@@ -1,0 +1,128 @@
+﻿{
+  "idea_id": "IDEA-FR79-RUNTIME-NATIVE-TRADE-SHAPE-LABELING-FROM-FILL-PATH",
+  "hypothesis": "Runtime-native trade-shape labels(런타임 네이티브 거래 형태 라벨)이 actual fill path(실제 체결 경로), entry timing(진입 시각), tester-deposit risk(테스터 예치금 위험), and lifecycle occupancy(생명주기 점유)를 처음부터 label/target(라벨/목표)에 내장하면 F78의 signal parity without runtime economics(신호 동등성은 있으나 런타임 경제성 없음)를 줄일 수 있다.",
+  "decision_use": "Open F79B proxy scout(F79B 프록시 탐색)를 넓은 축 변화로 실행할지 결정한다.",
+  "comparison_baseline": {
+    "reference_only": "F78 closeout(마감)은 negative memory(부정 기억)와 preserved clue(보존 단서)로만 사용한다.",
+    "f78_closeout_report": "stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/stage_closeout_report.md",
+    "f78_preserved_clue": [
+      "ONNX/EA feature and signal parity(ONNX/EA 피처와 신호 동등성)는 정확히 맞출 수 있었다.",
+      "Selected-entry veto tape(선택 진입 거부 테이프)는 proxy selected count(프록시 선택 수)와 runtime signal count(런타임 신호 수)를 맞추는 도구로 보존한다.",
+      "Entry timing(진입 시각)과 DD denominator(손실폭 분모)는 proxy label(프록시 라벨) 설계 시작부터 명시해야 한다."
+    ],
+    "f78_negative_memory": [
+      "Next-bar proxy(다음 봉 프록시)는 양수여도 MT5 same-bar execution(MT5 동일 봉 실행)에서는 음수가 될 수 있다.",
+      "Runtime-aligned entry(런타임 정렬 진입)와 tester-deposit DD(테스터 예치금 손실폭) 수리 뒤 F78F는 scout clue(탐색 단서) 0, meaningful signal(의미 신호) 0이었다.",
+      "F78은 threshold-only(임계값 단독)나 model-only(모델 단독) 수리로 계속 밀면 반복 수리가 된다."
+    ]
+  },
+  "control_variables": [
+    "symbol/timeframe(종목/시간봉): FPMarkets US100 M5",
+    "tester defaults for later MT5(향후 MT5 기본): Deposit=500, Leverage=100, Every tick based on real ticks(실틱 기반 모든 틱), fixed 0.1 lot(고정 0.1랏)",
+    "dataset identity(데이터 정체성): data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet sha256 c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "claim boundary(주장 경계): stage_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  ],
+  "changed_variables": [
+    "feature_set(피처 묶음)",
+    "label_target(라벨/목표)",
+    "model_family(모델 계열)",
+    "trade_shape(거래 형태)",
+    "risk_logic(위험 로직)",
+    "regime_session_split(장세/세션 분할)"
+  ],
+  "sample_scope": {
+    "dataset": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "raw_bars": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "tier_scope": "Tier A separate(티어 A 분리); Tier B missing_required(티어 B 필수 누락); Tier A+B combined out_of_scope_by_claim(합산은 주장 범위 밖) until materialized."
+  },
+  "success_criteria": [
+    "scout clue(탐색 단서): validation/OOS(검증/표본외) 모두 nonzero(비영), PF>=1.15, DD<=12%, calendar trades/day(달력 일 거래 수)>=1.0, trade_count(거래 수)>=80.",
+    "meaningful signal(의미 신호): validation/OOS net>0, PF>=1.35, DD<=10%, calendar trades/day>=2.0, trade_count>=120, and no single tiny session dependence(작은 세션 단독 의존 없음).",
+    "runtime trigger(런타임 트리거): meaningful signal(의미 신호)나 weak nonzero signal(약한 비영 신호)이 있으면 pre-MT5 Grok(사전 MT5 그록) 뒤 mandatory MT5 Runtime Probe(필수 MT5 런타임 탐침)를 실행한다."
+  ],
+  "failure_criteria": [
+    "broad sweep(넓은 탐색) 뒤 scout clue(탐색 단서) 0.",
+    "positive proxy(양수 프록시)가 active-day density(활성일 밀도)나 tiny regime slice(작은 장세 조각)에만 기대는 경우.",
+    "PF/DD/trades/day(수익 팩터/손실폭/일 거래 수) 중 한 축만 좋아지고 네 축 동시 접근이 없을 때."
+  ],
+  "invalid_conditions": [
+    "future OHLC path(미래 OHLC 경로)가 feature(피처)에 들어가면 invalid(무효).",
+    "same-bar/next-tick entry semantics(동일 봉/다음 틱 진입 의미)가 MT5 handoff(MT5 인계)와 다르면 invalid(무효) 또는 repair required(수리 필요).",
+    "contract P/L scale(계약 손익 배율), Deposit=500 DD denominator(예치금 500 손실폭 분모), spread cost(스프레드 비용)가 기록 없이 바뀌면 invalid(무효)."
+  ],
+  "stop_conditions": [
+    "meaningful signal(의미 신호)이 나오면 proxy expansion(프록시 확장)을 멈추고 Grok plus MT5 probe(Grok 및 MT5 탐침)로 물질화한다.",
+    "weak nonzero signal(약한 비영 신호)이 나오면 negative-control runtime probe(부정 대조 런타임 탐침)를 최소 1회 실행한다.",
+    "zero signal(영 신호)이면 logic impossibility(로직상 불가능) 또는 repair action(수리 행동)을 기록하고 closeout(마감)으로 간다."
+  ],
+  "evidence_plan": [
+    "F79A stage brief(단계 개요), experiment design(실험 설계), axis contract(축 계약), Grok receipt(그록 영수증), data identity(데이터 정체성).",
+    "F79B proxy KPI(프록시 핵심 성과 지표): net/PF/DD/trade count/trades per day/win rate/expectancy/recovery/long-short mix.",
+    "If signal exists(신호가 있으면): pre-MT5 Grok(사전 MT5 그록), bundle/EA handoff(번들/EA 인계), mandatory MT5 Runtime Probe(필수 MT5 런타임 탐침), proxy/runtime gap analysis(프록시/런타임 간극 분석)."
+  ],
+  "legacy_relation": "lesson_only(교훈 전용)",
+  "tier_scope": "Tier A separate now(현재 티어 A 분리); Tier B and combined missing_required until materialized(티어 B와 합산은 물질화 전 필수 누락).",
+  "broad_sweep": [
+    {
+      "axis": "feature_set(피처 묶음)",
+      "f79_action": "test full58, contract_core, price_vol_session, runtime_fill_context, and ablated no_external/no_session sets(전체58, 계약 핵심, 가격/변동성/세션, 런타임 체결 문맥, 외부/세션 제거 묶음 시험)",
+      "effect": "separates actual source value(원천 가치) from F78 parity-only repair(동등성 단독 수리)",
+      "broad_sweep": "full58, contract_core, price_vol_session, runtime_fill_context, no_external, no_session"
+    },
+    {
+      "axis": "label_target(라벨/목표)",
+      "f79_action": "build same-bar/next-tick fill-path labels with first-touch order, MAE/MFE, net utility, DD-normalized utility, and density quota(동일 봉/다음 틱 체결 경로, 선도달 순서, MAE/MFE, 순효용, 손실폭 정규화 효용, 밀도 할당)",
+      "effect": "moves entry timing(진입 시각), fill ordering(체결 순서), and tester-deposit DD(테스터 예치금 손실폭)를 proxy expectation(프록시 예상)에 처음부터 넣는다",
+      "broad_sweep": "fill_path_net, first_touch_utility, mae_mfe_asymmetry, dd_normalized_utility, density_quota"
+    },
+    {
+      "axis": "model_family(모델 계열)",
+      "f79_action": "compare LGBM-like HistGBM, linear/logistic, ExtraTrees, EBM-style shallow additive proxy, and small NN when exportable(히스토그램 GBM, 선형/로지스틱, ExtraTrees, EBM식 얕은 가산 프록시, 내보내기 가능한 작은 신경망)",
+      "effect": "tests whether runtime-native labels(런타임 네이티브 라벨)이 특정 model bias(모델 편향)에만 걸리는지 분리한다",
+      "broad_sweep": "logistic, ridge, HistGradientBoosting, ExtraTrees, shallow additive bins, small MLP proxy"
+    },
+    {
+      "axis": "trade_shape(거래 형태)",
+      "f79_action": "vary long/short/both, entry delay, SL/TP first-touch, max hold, opposite exit, cooldown, and one-position occupancy(롱/숏/양방향, 진입 지연, 손절/익절 선도달, 최대 보유, 반대 신호 청산, 쿨다운, 단일 포지션 점유)",
+      "effect": "treats trade count(거래 수) as realized lifecycle(실현 생명주기), not independent signal count(독립 신호 수)",
+      "broad_sweep": "short, long, both, hold 6/12/18/24, cooldown 0/3/6, SLTP grids"
+    },
+    {
+      "axis": "risk_logic(위험 로직)",
+      "f79_action": "score with Deposit=500 DD, fixed 0.1 lot, spread-aware cost, MAE gate, loss streak guard, and daily DD guard proxies(예치금 500 손실폭, 고정 0.1랏, 스프레드 비용, MAE 게이트, 연속 손실 보호, 일 손실 보호 프록시)",
+      "effect": "brings drawdown control(손실폭 제어) before MT5 materialization(MT5 물질화)",
+      "broad_sweep": "DD penalty, MAE gate, loss streak cap, daily stop proxy, recovery factor filter"
+    },
+    {
+      "axis": "regime_session_split(장세/세션 분할)",
+      "f79_action": "rotate all/cash_open/cash_mid/cash_late/high_vol/low_vol/trend/chop/day-of-week slices(전체, 현금장 초반/중반/후반, 고변동/저변동, 추세/횡보, 요일 구간)",
+      "effect": "changes topic surface(주제 표면) without hiding overfit(과적합)를 tiny slice(작은 구간)에 숨기지 않는다",
+      "broad_sweep": "all, cash_open, cash_mid, cash_late, high_vol, low_vol, trend, chop, dow"
+    }
+  ],
+  "extreme_sweep": [
+    "hold_bars(보유 봉) 3/6/12/24/36",
+    "SL/TP point grid(손절/익절 포인트 격자) tight/medium/wide",
+    "session all versus cash-only(전체 대비 현금장 전용)",
+    "DD penalty off/soft/hard(손실폭 벌점 꺼짐/약함/강함)"
+  ],
+  "micro_search_gate": "Only after at least one scout clue(탐색 단서)가 validation/OOS both nonzero(검증/표본외 모두 비영)일 때.",
+  "wfo_plan": "After proxy scout(프록시 탐색) finds a seed surface(씨앗 표면), run WFO/stress(워크포워드/스트레스) before any stronger claim(강한 주장).",
+  "failure_memory": "If zero signal(영 신호), record which axis family failed and reopen only with new source/label/runtime representation(새 원천/라벨/런타임 표현).",
+  "evidence_boundary": "stage_open_design_only(단계 개방 설계 전용)",
+  "retrospective_gate": {
+    "current_due_status": "not_due_after_f78_closeout_3_of_5",
+    "closeouts_since_last": 3,
+    "closed_frontier_ids_since_last_retrospective": [
+      "stage_frontier_76__axis_ablation_source_discovery_for_runtime_economics",
+      "stage_frontier_77__runtime_lifecycle_label_density_rebuild",
+      "stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild"
+    ],
+    "next_numeric_trigger_frontier": 80
+  }
+}

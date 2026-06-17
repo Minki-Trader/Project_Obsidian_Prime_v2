@@ -1,0 +1,50 @@
+﻿{
+  "run_id": "frontier79G_repair_proxy_weak_nonzero_closeout_decision_v1",
+  "stage_id": "stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path",
+  "created_at_utc": "2026-06-17T11:30:12Z",
+  "source_inputs": [
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79b_runtime_native_proxy_summary.json",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79d_mt5_runtime_native_runtime_probe_summary.json",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/frontier79D_mt5_runtime_native_negative_control_runtime_probe_report.md",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79e_proxy_runtime_gap_analysis_summary.json",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79f_ambiguous_fill_guard_repair_proxy_summary.json",
+    "docs/agent_control/grok_reviews/2026-06-17_f79g_stage_closeout_runtime_native_trade_shape_labeling/clean_output.md"
+  ],
+  "producer": "stage_pipelines/stage_frontier_79/frontier79g_stage_closeout_runtime_native_trade_shape_labeling.py",
+  "consumer": "F79 closeout registers(F79 마감 등록부) and F80 stage-open handoff(F80 단계 개방 인계)",
+  "artifact_paths": [
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/stage_closeout_report.md",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/frontier79G_repair_proxy_weak_nonzero_closeout_decision_report.md",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79g_stage_closeout_summary.json",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79g_closeout_kpi_rows.csv",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79g_artifact_lineage.json",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79g_closeout_local_verification.json",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/grok_stage_closeout_runtime_native_trade_shape_labeling_receipt.md",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/required_gate_coverage_audit_f79g_closeout.md",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/02_runs/frontier79G_repair_proxy_weak_nonzero_closeout_decision_v1/run_manifest.json",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/04_selected/selection_status.md"
+  ],
+  "artifact_hashes": {
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/stage_closeout_report.md": "927934c3a7797f4732dcad264fc63e803f0a538aa7d58a99c4a0fe1c303dd2e9",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/frontier79G_repair_proxy_weak_nonzero_closeout_decision_report.md": "927934c3a7797f4732dcad264fc63e803f0a538aa7d58a99c4a0fe1c303dd2e9",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79g_stage_closeout_summary.json": "685b3af7e0428420d2e9448af53259cc28b16fda49d0e69800aabafc882f130d",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79g_closeout_kpi_rows.csv": "ef7a205ae91adc67d6afad8e6d7e024b1dd11f34c2cf19ee4fac5d3e7859968a",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79g_artifact_lineage.json": "20d350800f41340ec7d89611b77fc3b68d7604deada09e353433ba4d4ec41c2b",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79g_closeout_local_verification.json": "8bfbeed6feb8788d9473e8704551e3e0291bddfd8f3ae8eb2d3de223c1a7536c",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/grok_stage_closeout_runtime_native_trade_shape_labeling_receipt.md": "5f972a39c6b1d14b1b06756c211a31c45524644d56522d08bc321c5a095f0010",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/required_gate_coverage_audit_f79g_closeout.md": "5ef0ada3bc02239dec77af8fdc4ee5296f60ddd5caff64a1b27fb0f00681a194",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/02_runs/frontier79G_repair_proxy_weak_nonzero_closeout_decision_v1/run_manifest.json": "685b3af7e0428420d2e9448af53259cc28b16fda49d0e69800aabafc882f130d",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/04_selected/selection_status.md": "9ba3b0b01e4825a3ece71736cdb89a7e3f1ebabc1e893d4ed89ca281535f8228"
+  },
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/stage_run_ledger.csv",
+    "docs/registers/idea_registry.md",
+    "docs/registers/negative_result_register.md"
+  ],
+  "availability": "tracked_or_generated_with_manifest(추적 또는 목록으로 생성됨)",
+  "lineage_judgment": "connected_with_boundary(경계와 함께 연결됨)",
+  "closeout_success": true,
+  "claim_boundary": "stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

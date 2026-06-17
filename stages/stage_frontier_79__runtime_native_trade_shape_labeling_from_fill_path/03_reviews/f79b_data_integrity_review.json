@@ -1,0 +1,14 @@
+﻿{
+  "data_source": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+  ],
+  "time_axis": "Feature timestamp(피처 시각)은 closed-bar key(닫힌 봉 키)로 사용하고 same_bar_open/next_bar_open entry indices(동일 봉/다음 봉 진입 인덱스)를 raw open_ts(원천 시가 시각)에 매핑한다.",
+  "feature_label_boundary": "features(피처)는 현재 행만 사용하고 label/target(라벨/목표)은 entry 이후 OHLC path(진입 이후 OHLC 경로)만 사용한다.",
+  "split_boundary": "model fit(모델 학습), label quantile(라벨 분위수), probability threshold(확률 임계값)는 train only(훈련 전용)에서 계산한다.",
+  "tier_scope": "Tier A separate(티어 A 분리); Tier B missing_required(티어 B 필수 누락); combined out_of_scope_by_claim(합산은 주장 범위 밖).",
+  "candidate_rows": 3072,
+  "entry_rule": "same_bar_open primary(동일 봉 시가 우선) with next_bar_open_control(다음 봉 시가 대조)",
+  "fill_order_rule": "pessimistic or close_direction when TP and SL both hit within one M5 bar(한 5분봉 안에서 손절/익절 동시 도달 시 보수/종가방향 순서)"
+}

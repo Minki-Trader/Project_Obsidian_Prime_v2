@@ -1,0 +1,22 @@
+﻿{
+  "producer": "stage_pipelines/stage_frontier_79/frontier79b_runtime_native_trade_shape_label_proxy_scout.py",
+  "producer_sha256": "030e278cf1f66463e62d06bb2fe61fba4eba0aa6fc7533a5194d9215678d2eca",
+  "source_inputs": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79a_experiment_design_review.json"
+  ],
+  "artifact_paths": [
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79b_runtime_native_proxy_summary.json",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/02_runs/frontier79B_runtime_native_trade_shape_label_proxy_scout_v1/f79b_runtime_native_candidates_all.csv",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79b_runtime_native_ranked_top200.csv",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79b_runtime_native_axis_summary.csv",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79b_runtime_native_model_fit_summary.csv",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79b_runtime_native_label_audit.csv",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/frontier79B_runtime_native_trade_shape_label_proxy_scout_report.md",
+    "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/02_runs/frontier79B_runtime_native_trade_shape_label_proxy_scout_v1/run_manifest.json"
+  ],
+  "consumer": "frontier79C_pre_mt5_grok_runtime_native_negative_control_runtime_probe_v1",
+  "lineage_judgment": "proxy_scout_artifacts_connected_no_authority(프록시 탐색 산출물 연결, 권위 없음)"
+}

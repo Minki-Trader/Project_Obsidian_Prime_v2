@@ -1,0 +1,62 @@
+﻿{
+  "run_id": "frontier79E_proxy_runtime_gap_analysis_and_repair_decision_v1",
+  "stage_id": "stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path",
+  "parent_run_id": "frontier79D_mt5_runtime_native_negative_control_runtime_probe_v1",
+  "status": "completed_proxy_runtime_gap_analysis_repair_required_no_authority",
+  "judgment": "runtime_economics_gap_caused_by_intrabar_fill_order_and_bidask_geometry_no_authority",
+  "by_split": {
+    "validation": {
+      "proxy_net_profit": 8.037095173111059,
+      "proxy_profit_factor": 3.696428571428572,
+      "proxy_drawdown_percent": 0.19870963783409934,
+      "proxy_trade_count": 12.0,
+      "runtime_net_profit": 0.28,
+      "runtime_profit_factor": 1.04,
+      "runtime_drawdown_percent": 0.76,
+      "runtime_trade_count": 12.0,
+      "signal_count_diff": 0.0,
+      "feature_ready_diff": 0.0,
+      "order_fill_rate": 1.0,
+      "runtime_long_trade_count": 12.0,
+      "runtime_short_trade_count": 0.0,
+      "entry_shift_mean": 1.2000000000007276,
+      "spread_mean": 1.1999999999999997,
+      "entry_shift_matches_spread_rows": 12,
+      "both_hit_ambiguous_rows": 3,
+      "close_direction_vs_runtime_win_mismatch_rows": 3,
+      "pessimistic_vs_runtime_win_mismatch_rows": 0
+    },
+    "oos": {
+      "proxy_net_profit": 3.566128321843979,
+      "proxy_profit_factor": 2.2641509433962264,
+      "proxy_drawdown_percent": 0.18806447866440976,
+      "proxy_trade_count": 8.0,
+      "runtime_net_profit": 2.19,
+      "runtime_profit_factor": 1.53,
+      "runtime_drawdown_percent": 0.53,
+      "runtime_trade_count": 8.0,
+      "signal_count_diff": 0.0,
+      "feature_ready_diff": 0.0,
+      "order_fill_rate": 1.0,
+      "runtime_long_trade_count": 8.0,
+      "runtime_short_trade_count": 0.0,
+      "entry_shift_mean": 1.1000000000008185,
+      "spread_mean": 0.6,
+      "entry_shift_matches_spread_rows": 7,
+      "both_hit_ambiguous_rows": 4,
+      "close_direction_vs_runtime_win_mismatch_rows": 4,
+      "pessimistic_vs_runtime_win_mismatch_rows": 2
+    }
+  },
+  "global": {
+    "diagnostic_trade_rows": 20,
+    "both_hit_ambiguous_rows": 7,
+    "close_direction_vs_runtime_win_mismatch_rows": 7,
+    "pessimistic_vs_runtime_win_mismatch_rows": 2,
+    "signal_and_feature_parity": "passed",
+    "dominant_gap_cause": "M5 close_direction both-hit order is not real-tick order; long entry also shifts by spread into ask price.",
+    "repair_action": "frontier79F_ambiguous_fill_order_guard_repair_proxy_v1"
+  },
+  "claim_boundary": "gap_analysis_and_repair_decision_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "next_run_id": "frontier79F_ambiguous_fill_order_guard_repair_proxy_v1"
+}

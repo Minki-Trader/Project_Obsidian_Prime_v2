@@ -1,0 +1,178 @@
+﻿{
+  "tester_identity": {
+    "terminal": "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\terminal64.exe",
+    "broker_symbol": "US100",
+    "timeframe": "M5",
+    "deposit": 500,
+    "leverage": "1:100",
+    "modeling_mode": "Every tick based on real ticks setting value 4 from tester ini(테스터 ini 값 4)",
+    "date_ranges": [
+      {
+        "split": "validation",
+        "from": "2025.01.02",
+        "to": "2025.10.01"
+      },
+      {
+        "split": "oos",
+        "from": "2025.10.01",
+        "to": "2026.04.14"
+      }
+    ]
+  },
+  "ea_identity": {
+    "ea_source": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+    "compile_payload": {
+      "compile": {
+        "status": "completed",
+        "command": [
+          "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\MetaEditor64.exe",
+          "/compile:C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.mq5",
+          "/log:C:\\Users\\awdse\\AppData\\Local\\Temp\\obsidian_prime_mt5_compile\\compile_d18007bab682f648.log"
+        ],
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "",
+        "log_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/02_runs/frontier79D_mt5_runtime_native_negative_control_runtime_probe_v1/mt5/mt5_compile.log",
+        "command_log_path": "C:/Users/awdse/AppData/Local/Temp/obsidian_prime_mt5_compile/compile_d18007bab682f648.log",
+        "actual_log_path": "C:/Users/awdse/AppData/Local/Temp/obsidian_prime_mt5_compile/compile_d18007bab682f648.log",
+        "log_sha256": "cc6ce0e55e674ee0dab8660a3e7a56809040c8fdfd0cc40e9f76abde86319c2e"
+      },
+      "portable_ea": {
+        "repo_ea_ex5": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.ex5",
+        "portable_ea_ex5": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Experts/Project_Obsidian_Prime_v2/foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.ex5",
+        "portable_ea_ex5_exists_before": true,
+        "copied": true,
+        "portable_ea_ex5_exists_after": true,
+        "portable_ea_sha256": "606aa2269fe2c55d67877418d7ff7ecdfdba00ff483c961f77c3808f84ca4834"
+      }
+    },
+    "set_paths": [
+      "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/02_runs/frontier79D_mt5_runtime_native_negative_control_runtime_probe_v1/mt5/f79d_runtime_native_negative_control_validation.set",
+      "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/02_runs/frontier79D_mt5_runtime_native_negative_control_runtime_probe_v1/mt5/f79d_runtime_native_negative_control_oos.set"
+    ],
+    "model_path": "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/02_runs/frontier79D_mt5_runtime_native_negative_control_runtime_probe_v1/models/f79d_runtime_f79b_02371.onnx",
+    "model_sha256": "6dcb1be02316f3cb9d73fc8c8e7e0ffe33ab177cbcf5503a24a35606cafa8bd1",
+    "feature_order_hash": ""
+  },
+  "report_identity": {
+    "runtime_receipt_path": "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/02_runs/frontier79D_mt5_runtime_native_negative_control_runtime_probe_v1/f79d_runtime_receipt.csv",
+    "execution_results_path": "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/02_runs/frontier79D_mt5_runtime_native_negative_control_runtime_probe_v1/f79d_execution_results.json",
+    "summary_path": "stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/f79d_mt5_runtime_native_runtime_probe_summary.json"
+  },
+  "trade_evidence": [
+    {
+      "run_id": "frontier79D_mt5_runtime_native_negative_control_runtime_probe_v1",
+      "attempt_name": "f79d_runtime_native_negative_control_validation",
+      "candidate_id": "f79d_runtime_f79b_02371",
+      "axis_id": "long_h12_tp15.0_sl10.0_contract_core_logistic_l2_balanced_cash_open_trend_aligned_q0.82",
+      "split": "validation",
+      "test_period_start": "2025-01-02",
+      "test_period_end": "2025-10-01",
+      "calendar_days_exclusive": 272,
+      "tester_status": "completed",
+      "runtime_status": "completed",
+      "report_status": "completed",
+      "expected_rows": 9844,
+      "feature_ready_count": 9844,
+      "feature_ready_diff": 0,
+      "expected_signal_count": 12,
+      "signal_count": 12,
+      "signal_count_diff": 0,
+      "expected_selected_trade_count": 12,
+      "order_attempt_count": 12,
+      "order_fill_count": 12,
+      "order_fill_rate": 1.0,
+      "trade_count": 12,
+      "trades_per_day": 0.04411764705882353,
+      "long_trade_count": 12,
+      "short_trade_count": 0,
+      "winning_trade_count": 5,
+      "losing_trade_count": 7,
+      "net_profit": 0.28,
+      "gross_profit": 7.66,
+      "gross_loss": -7.38,
+      "profit_factor": 1.04,
+      "expectancy": 0.02,
+      "win_rate_percent": 41.67,
+      "average_win": 1.532,
+      "average_loss": -1.0542857142857143,
+      "payoff_ratio": 1.4531165311653118,
+      "recovery_factor": 0.07,
+      "max_drawdown_amount": 3.79,
+      "max_drawdown_percent": 0.76,
+      "proxy_net_profit": 8.037095173111059,
+      "proxy_profit_factor": 3.696428571428572,
+      "proxy_trades_per_day": 0.04428044280442804,
+      "proxy_dd_percent": 0.19870963783409934,
+      "dd_delta_runtime_minus_proxy": 0.5612903621659007,
+      "gap_cause_summary": "runtime_economics_gap_after_signal_and_feature_parity",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/02_runs/frontier79D_mt5_runtime_native_negative_control_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier79D_mt5_runtime_native_negative_control_runtime_probe_v1_f79d_runtime_native_negative_control_validation.htm",
+      "telemetry_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/frontier79D_mt5_runtime_native_negative_control_runtime_probe/telemetry/f79d_runtime_native_negative_control_validation_telemetry.csv",
+      "summary_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/frontier79D_mt5_runtime_native_negative_control_runtime_probe/telemetry/f79d_runtime_native_negative_control_validation_summary.csv",
+      "claim_boundary": "negative_control_runtime_probe_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    },
+    {
+      "run_id": "frontier79D_mt5_runtime_native_negative_control_runtime_probe_v1",
+      "attempt_name": "f79d_runtime_native_negative_control_oos",
+      "candidate_id": "f79d_runtime_f79b_02371",
+      "axis_id": "long_h12_tp15.0_sl10.0_contract_core_logistic_l2_balanced_cash_open_trend_aligned_q0.82",
+      "split": "oos",
+      "test_period_start": "2025-10-01",
+      "test_period_end": "2026-04-14",
+      "calendar_days_exclusive": 195,
+      "tester_status": "completed",
+      "runtime_status": "completed",
+      "report_status": "completed",
+      "expected_rows": 7584,
+      "feature_ready_count": 7584,
+      "feature_ready_diff": 0,
+      "expected_signal_count": 8,
+      "signal_count": 8,
+      "signal_count_diff": 0,
+      "expected_selected_trade_count": 8,
+      "order_attempt_count": 8,
+      "order_fill_count": 8,
+      "order_fill_rate": 1.0,
+      "trade_count": 8,
+      "trades_per_day": 0.041025641025641026,
+      "long_trade_count": 8,
+      "short_trade_count": 0,
+      "winning_trade_count": 4,
+      "losing_trade_count": 4,
+      "net_profit": 2.19,
+      "gross_profit": 6.34,
+      "gross_loss": -4.15,
+      "profit_factor": 1.53,
+      "expectancy": 0.27,
+      "win_rate_percent": 50.0,
+      "average_win": 1.585,
+      "average_loss": -1.0375,
+      "payoff_ratio": 1.5277108433734938,
+      "recovery_factor": 0.82,
+      "max_drawdown_amount": 2.68,
+      "max_drawdown_percent": 0.53,
+      "proxy_net_profit": 3.566128321843979,
+      "proxy_profit_factor": 2.2641509433962264,
+      "proxy_trades_per_day": 0.041237113402061855,
+      "proxy_dd_percent": 0.18806447866440976,
+      "dd_delta_runtime_minus_proxy": 0.34193552133559024,
+      "gap_cause_summary": "runtime_economics_gap_after_signal_and_feature_parity",
+      "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/02_runs/frontier79D_mt5_runtime_native_negative_control_runtime_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier79D_mt5_runtime_native_negative_control_runtime_probe_v1_f79d_runtime_native_negative_control_oos.htm",
+      "telemetry_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/frontier79D_mt5_runtime_native_negative_control_runtime_probe/telemetry/f79d_runtime_native_negative_control_oos_telemetry.csv",
+      "summary_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/frontier79D_mt5_runtime_native_negative_control_runtime_probe/telemetry/f79d_runtime_native_negative_control_oos_summary.csv",
+      "claim_boundary": "negative_control_runtime_probe_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    }
+  ],
+  "cost_assumptions": {
+    "spread": "proxy includes raw spread cost(프록시는 원시 스프레드 비용을 포함); tester uses broker execution(테스터는 브로커 체결을 사용)",
+    "commission": "report parser value if present(보고서 파서 값이 있으면 사용)",
+    "slippage": "not explicitly controlled in this probe(이번 탐침에서 명시 제어 없음)"
+  },
+  "forensic_checks": {
+    "output_path_recorded": true,
+    "settings_paths_recorded": true,
+    "runtime_outputs_recorded": true
+  },
+  "backtest_judgment": "usable_with_boundary",
+  "claim_boundary": "negative_control_runtime_probe_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

@@ -1385,3 +1385,15 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Reopen condition(재개 조건): runtime-native entry timing(런타임 네이티브 진입 시각), tester-deposit DD denominator(테스터 예치금 손실폭 분모), fill-path label(체결 경로 라벨)을 처음부터 설계할 때만 재개한다.
 - Evidence(근거): `stages/stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild/03_reviews/stage_closeout_report.md`.
 - Boundary(경계): no authority(권위 없음), no completion(완성 없음).
+
+<!-- NR-FR79-RUNTIME-NATIVE-TRADE-SHAPE-LABELING -->
+## NR-FR79-RUNTIME-NATIVE-TRADE-SHAPE-LABELING
+
+- Stage(단계): `stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path`
+- Hypothesis(가설): runtime-native trade-shape labels(런타임 네이티브 거래 형태 라벨)이 actual fill path(실제 체결 경로)를 반영하면 proxy/runtime gap(프록시/런타임 간극)을 줄일 수 있다.
+- Why failed(실패 이유): MT5 Runtime Probe(MT5 런타임 탐침)는 signal/feature parity(신호/피처 동등성)를 맞췄지만 validation/OOS trades/day(검증/표본외 일 거래)가 `0.044/0.041`로 목표보다 너무 낮고, F79F ambiguous-fill repair(모호 체결 수리)는 scout/meaningful(탐색/의미) `0/0`이었다.
+- Preserved clue(보존 단서): long-side ONNX mapping(롱 방향 ONNX 매핑), selected-entry veto tape(선택 진입 거부 테이프), runtime bridge(런타임 연결)는 재사용 가치가 있다.
+- Do-not-repeat(반복 금지): close_direction both-hit label(종가방향 동시 도달 라벨)을 real-tick economics(실틱 경제성)처럼 쓰지 않는다.
+- Reopen condition(재개 조건): feature set/label/model family/trade shape/risk logic/regime split(피처 묶음/라벨/모델 계열/거래 형태/위험 로직/장세 분할)을 함께 바꾸는 새 표면에서만 재개한다.
+- Evidence(근거): `stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/stage_closeout_report.md`.
+- Boundary(경계): no authority(권위 없음), no completion(완성 없음).
