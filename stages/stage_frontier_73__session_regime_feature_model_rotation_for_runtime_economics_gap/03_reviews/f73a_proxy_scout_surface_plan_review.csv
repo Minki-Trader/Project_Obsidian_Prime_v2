@@ -1,0 +1,7 @@
+﻿surface,feature_set,label_target,model_family,risk,effect
+all58_fwd12_reference,all58(전체 58개),fwd12 direct(12봉 직접),logistic + ExtraTrees,fixed lifecycle,reference surface only(참조 표면 전용)
+all58_fwd18_horizon_shift,all58(전체 58개),fwd18 direct/inverse(18봉 직접/역방향),linear + tree,fixed lifecycle,tests horizon sensitivity(예측수평선 민감도 시험)
+core_price_path_only,core price/path(핵심 가격/경로),fwd12/fwd18 rank(12/18봉 순위),HistGradientBoosting,bounded SL/TP,checks if proxy/macro noise hurts economics(대리/거시 잡음 손상 확인)
+session_regime_core,session/regime + core(세션/장세+핵심),quality-of-move proxy(움직임 품질 대리),ExtraTrees + small NN if available,fixed lifecycle,tests user-requested regime split(사용자 요청 장세 분할 시험)
+no_top3_proxy_ablation,remove top3 proxy(상위3 대리 제거),fwd12/fwd18,logistic + tree,fixed lifecycle,tests feature-set removal(피처 제거 시험)
+top_importance_recombination,top-importance/low-corr recombination(중요도/저상관 재조합),rank/quality,tree reference,bounded guard,tests recombination without inheriting a winner(승자 상속 없는 재조합 시험)

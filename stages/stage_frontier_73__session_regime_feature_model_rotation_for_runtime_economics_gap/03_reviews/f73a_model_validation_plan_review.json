@@ -1,0 +1,12 @@
+{
+  "model_family": "logistic, ExtraTrees, HistGradientBoosting, small NN if available(로지스틱, 엑스트라트리스, 히스토그램 부스팅, 가능 시 작은 신경망)",
+  "target_and_label": "fwd12/fwd18 direction/rank/quality targets(12봉/18봉 방향/순위/품질 목표)",
+  "split_method": "time holdout scout, WFO planned after meaningful signal(시간 홀드아웃 탐색, 의미 신호 후 워크포워드 계획)",
+  "selection_metric": "joint proxy utility from net/PF/DD/trades_day(순수익/수익 팩터/손실폭/일거래 공동 프록시 효용)",
+  "secondary_metrics": "win rate, payoff, expectancy, long/short mix, session attribution(승률, 손익비, 기대값, 롱/숏 비율, 세션 귀속)",
+  "threshold_policy": "broad scout quantiles, no OOS tuning(넓은 탐색 분위수, 표본외 튜닝 금지)",
+  "overfit_risk": "many surfaces can overfit validation(많은 표면이 검증에 과적합 가능)",
+  "calibration_risk": "scores are ranks unless calibrated(보정 전 점수는 확률이 아니라 순위)",
+  "comparison_baseline": "F72 negative memory and no-trade baseline(F72 부정 기억과 무거래 기준)",
+  "validation_judgment": "exploratory(탐색)"
+}

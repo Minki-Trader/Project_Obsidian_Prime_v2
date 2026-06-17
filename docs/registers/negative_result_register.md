@@ -1337,3 +1337,15 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Reopen condition(재개 조건): feature set(피처 묶음), label/target(라벨/목표), model family(모델 계열), trade shape(거래 형태), risk logic(위험 로직), or regime/session split(장세/세션 분할) 중 하나 이상이 실제로 바뀌고 새 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
 - Evidence(근거): `stages/stage_frontier_72__trade_shape_first_exit_distribution_and_risk_guard_labeling/03_reviews/stage_closeout_report.md`.
 - Boundary(경계): no authority(권위 없음), no completion(완성 없음).
+
+<!-- NR-FR73-SESSION-REGIME-FEATURE-MODEL-RUNTIME-LIFECYCLE-GAP -->
+## NR-FR73-SESSION-REGIME-FEATURE-MODEL-RUNTIME-LIFECYCLE-GAP
+
+- Stage(단계): `stage_frontier_73__session_regime_feature_model_rotation_for_runtime_economics_gap`
+- Hypothesis(가설): session/regime feature/model rotation(세션/장세 피처/모델 회전)이 runtime economics source(런타임 경제성 원천)를 분리할 수 있다.
+- Why failed(실패 이유): direct binary adapter(직접 이진 어댑터)로 bridge divergence(연결 분기)를 제거했지만 F73F validation/OOS runtime(검증/표본외 런타임)은 PF/DD/trades_day(수익 팩터/손실폭/일거래) `1.07/21.00%/0.7721`, `1.32/5.16%/0.6308`에 머물렀다.
+- Salvage value(회수 가치): direct binary adapter(직접 이진 어댑터)는 source reproduction overlap(원천 재현 중복) `1.0`과 probability/signal parity(확률/신호 동등성) `3/3`을 만들 수 있고, F73D OOS DD(표본외 손실폭) `15.33%`를 F73F `5.16%`로 낮췄다.
+- Do-not-repeat(반복 금지): same F73 session/regime feature/model seed(동일 F73 세션/장세 피처/모델 씨앗)를 bridge/adapter-only repair(연결/어댑터 단독 수리)로 반복하지 않는다.
+- Reopen condition(재개 조건): a new economic mechanism(새 경제 메커니즘)이 trade lifecycle/risk/label/session split(거래 생명주기/위험/라벨/세션 분할) 중 하나 이상을 주도적으로 바꾸고 새 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
+- Evidence(근거): `stages/stage_frontier_73__session_regime_feature_model_rotation_for_runtime_economics_gap/03_reviews/stage_closeout_report.md`.
+- Boundary(경계): no authority(권위 없음), no completion(완성 없음).

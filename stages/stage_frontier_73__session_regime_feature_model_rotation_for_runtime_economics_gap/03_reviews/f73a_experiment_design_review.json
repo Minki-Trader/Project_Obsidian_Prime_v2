@@ -1,0 +1,80 @@
+{
+  "idea_id": "IDEA-FR73-SESSION-REGIME-FEATURE-MODEL-ROTATION-RUNTIME-ECONOMICS",
+  "hypothesis": "Session/regime-conditioned feature-set and model-family rotation(세션/장세 조건 피처 묶음과 모델 계열 회전)이 runtime economics gap(런타임 경제성 간극)을 분리할 수 있다.",
+  "decision_use": "Decide whether F73B should run broad proxy scout across feature/label/model/regime axes(F73B가 피처/라벨/모델/장세 축 넓은 프록시 탐색을 실행할지 결정).",
+  "comparison_baseline": "F72 preserved clue only; no inherited baseline/winner/authority(F72 보존 단서만 참조, 기준선/승자/권위 상속 없음).",
+  "control_variables": [
+    "US100 M5 symbol/timeframe(US100 5분봉 심볼/시간프레임)",
+    "time-ordered train/validation/OOS split(시간순 학습/검증/표본외 분할)",
+    "no future feature leakage(미래 피처 누수 금지)",
+    "fixed lifecycle proxy as control(고정 생명주기 프록시를 통제 변수로 사용)"
+  ],
+  "changed_variables": [
+    "feature set removal/replacement/recombination(피처 묶음 제거/교체/재조합)",
+    "label horizon and target semantics(라벨 예측수평선과 목표 의미)",
+    "model family rotation(모델 계열 회전)",
+    "regime/session attribution(장세/세션 귀속)"
+  ],
+  "sample_scope": {
+    "symbol": "US100",
+    "timeframe": "M5(5분봉)",
+    "tier_scope": "Tier A separate planned; Tier B missing_required unless materialized(Tier A 분리 계획, Tier B는 물질화 전 필수 누락 기록)",
+    "data_identity": {
+      "fwd12_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "fwd12_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "fwd12_rows": 46650,
+      "fwd12_columns": 69,
+      "fwd12_split_counts": {
+        "train": 29222,
+        "validation": 9844,
+        "oos": 7584
+      },
+      "fwd12_timestamp_min": "2022-09-01 16:40:00+00:00",
+      "fwd12_timestamp_max": "2026-04-13 22:00:00+00:00",
+      "fwd18_path": "data/processed/model_inputs/label_v1_fwd18_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "fwd18_sha256": "adda3aaa6b489bb3511598d074809d4bffd374bba1d224e3d86597cba724bc59",
+      "fwd18_rows": 42567,
+      "fwd18_columns": 69,
+      "fwd18_split_counts": {
+        "train": 26613,
+        "validation": 9014,
+        "oos": 6940
+      },
+      "fwd18_timestamp_min": "2022-09-01 16:40:00+00:00",
+      "fwd18_timestamp_max": "2026-04-13 21:30:00+00:00",
+      "feature_order_path_fwd12": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "feature_order_path_fwd18": "data/processed/model_inputs/label_v1_fwd18_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "feature_count_fwd12": 58,
+      "feature_count_fwd18": 58,
+      "feature_order_hash_fwd12": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "feature_order_hash_fwd18": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "feature_order_same": true
+    }
+  },
+  "success_criteria": {
+    "scout_clue": "validation/OOS net>0, PF>=1.10, DD<=15%, trades/day>=1.5(검증/표본외 순수익 양수, 수익 팩터 1.10 이상, 손실폭 15% 이하, 일거래 1.5 이상)",
+    "meaningful_signal": "PF>=1.25, DD<=10%, trades/day>=3.0, non-collapse across validation/OOS(수익 팩터 1.25 이상, 손실폭 10% 이하, 일거래 3 이상, 검증/표본외 비붕괴)"
+  },
+  "failure_criteria": [
+    "zero signal across broad sweep(넓은 탐색 전체 영 신호)",
+    "only post-hoc quota/throttle works(사후 할당/제한만 작동)",
+    "same F72 trade-shape-first surface repeats(F72 동일 거래 형태 우선 표면 반복)"
+  ],
+  "invalid_conditions": [
+    "feature leakage across label horizon(라벨 수평선 너머 피처 누수)",
+    "model selection uses OOS for tuning(모델 선택에 표본외 튜닝 사용)",
+    "runtime bridge cannot express selected surface(런타임 연결이 선택 표면을 표현 불가)"
+  ],
+  "stop_conditions": [
+    "run mandatory MT5 Runtime Probe after meaningful proxy signal(의미 있는 프록시 신호 뒤 필수 MT5 런타임 탐침 실행)",
+    "repair only after proxy/runtime gap is named(프록시/런타임 간극 명명 뒤에만 수리)",
+    "close as negative_memory if broad axes produce no scout clue(넓은 축이 탐색 단서를 못 만들면 부정 기억으로 마감)"
+  ],
+  "evidence_plan": [
+    "stage brief(단계 개요)",
+    "Grok stage-open receipt(Grok 단계 개방 영수증)",
+    "proxy surface plan(프록시 표면 계획)",
+    "F73B proxy KPI report(F73B 프록시 핵심 성과 지표 보고)",
+    "MT5 Runtime Probe KPI if meaningful signal appears(의미 신호 발생 시 MT5 런타임 탐침 핵심 성과 지표)"
+  ]
+}

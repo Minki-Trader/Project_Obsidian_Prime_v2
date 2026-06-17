@@ -1,0 +1,44 @@
+{
+  "data_source": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd18_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet"
+  ],
+  "time_axis": "timestamp is closed M5 bar time in UTC-style project contract(타임스탬프는 프로젝트 계약상 확정 5분봉 시간)",
+  "sample_scope": "US100 M5 fwd12/fwd18 model inputs(US100 5분봉 12봉/18봉 모델 입력)",
+  "missing_or_duplicate_check": "deferred to F73B pre-run audit(F73B 실행 전 감사로 이월)",
+  "feature_label_boundary": "features must be known at entry bar close; labels use future horizon only as target(피처는 진입 봉 마감에 알려져야 하고 라벨만 미래 수평선 사용)",
+  "split_boundary": "train/validation/OOS time ordered(학습/검증/표본외 시간순)",
+  "leakage_risk": "feature recombination or top-importance selection could overfit validation(피처 재조합/중요도 선택이 검증에 과적합 가능)",
+  "data_hash_or_identity": {
+    "fwd12_path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "fwd12_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "fwd12_rows": 46650,
+    "fwd12_columns": 69,
+    "fwd12_split_counts": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "fwd12_timestamp_min": "2022-09-01 16:40:00+00:00",
+    "fwd12_timestamp_max": "2026-04-13 22:00:00+00:00",
+    "fwd18_path": "data/processed/model_inputs/label_v1_fwd18_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "fwd18_sha256": "adda3aaa6b489bb3511598d074809d4bffd374bba1d224e3d86597cba724bc59",
+    "fwd18_rows": 42567,
+    "fwd18_columns": 69,
+    "fwd18_split_counts": {
+      "train": 26613,
+      "validation": 9014,
+      "oos": 6940
+    },
+    "fwd18_timestamp_min": "2022-09-01 16:40:00+00:00",
+    "fwd18_timestamp_max": "2026-04-13 21:30:00+00:00",
+    "feature_order_path_fwd12": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "feature_order_path_fwd18": "data/processed/model_inputs/label_v1_fwd18_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "feature_count_fwd12": 58,
+    "feature_count_fwd18": 58,
+    "feature_order_hash_fwd12": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_order_hash_fwd18": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_order_same": true
+  },
+  "integrity_judgment": "usable_with_boundary(경계 포함 사용 가능)"
+}
