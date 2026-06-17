@@ -1,25 +1,17 @@
 ﻿# Current Working State(현재 작업 상태)
 
-Updated(갱신): 2026-06-17T15:59:03Z
+Updated(갱신): 2026-06-17T16:44:02Z
 
-Active stage(활성 단계): `stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics`
+Active stage(활성 단계): `stage_frontier_extra_E01__f001_f050_hypothesis_mixing_runtime_learning`
 
-Current run(현재 실행): `frontier80_closed_next_frontier_not_opened`
+Current run(현재 실행): `frontier_extra_E01_closed_resume_frontier_81_not_opened`
 
-Latest completed run(최근 완료 실행): `frontier80F_runtime_probe_quality_closeout_v1`
+Latest completed run(최근 완료 실행): `frontier_extra_E01_heavy_runtime_learning_campaign_v1`
 
-## Current Truth(현재 진실)
+Action(행동): E01(추가01)을 F01-F50(전선01-50) ingredient mixing(재료 혼합)과 MT5 runtime learning campaign(MT5 런타임 학습 캠페인)으로 닫았다.
 
-Action(행동): F80(전선80)을 open -> closeout(개방 -> 마감)까지 실행했다.
+Effect(효과): F81(전선81)은 아직 열지 않았고, 다음 재개 대상이다.
 
-Effect(효과): F80D MT5 validation(검증)에서 signal/feature/ONNX parity(신호/피처/온엑스 동등성)는 통과했지만 net `-14.61`, PF `0.95`, DD `6.09%`로 runtime economics(런타임 경제성)는 negative memory(부정 기억)로 닫혔다.
+Runtime summary(런타임 요약): attempts `24`, completed runtime `24`, reports `24`.
 
-Next frontier proposal(다음 전선 제안): `stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild`.
-
-Grok active review status(그록 활성 검토 상태): `retired_archive_only_no_new_calls_even_if_explicitly_requested`
-
-Action(행동): Grok call/review(그록 호출/검토), external review(외부 리뷰), second opinion(2차 의견), no-solo-Codex judgment(코덱스 단독 판단 금지), stage-close adversarial review(단계 마감 비판 검토)를 더 이상 Grok(그록)으로 보내지 않는다.
-
-Effect(효과): 해당 요구는 Codex Task Force(코덱스 태스크포스)의 internal adversarial review(내부 비판 검토)로 라우팅되고, 기존 Grok 기록은 historical archive(역사 보관소)로만 읽는다.
-
-Claim boundary(주장 경계): `stage_closeout_runtime_probe_quality_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`
+Claim boundary(주장 경계): `frontier_extra_runtime_learning_only_no_completion_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`

@@ -65,6 +65,40 @@ F64-F67(전선64-67)의 교훈은 Frontier stage(전선 단계)의 기본 운영
 
 효과(effect, 효과)는 Frontier(전선)가 좁은 repair(수리)나 parity-only economics(동등성 단독 경제성)로 되돌아가지 않고, 실제 MT5 runtime probe(MT5 런타임 탐침)가 필요한 주장을 낮춰 말하게 하는 것이다.
 
+## Extra Stage Due Rule(추가 단계 도래 규칙)
+
+Frontier Extra Stage(전선 추가 단계)는 50개 frontier closeout(전선 마감)마다 여는 heavy finite runtime-learning campaign(무겁지만 유한한 런타임 학습 캠페인)이다. 목표는 retrospective(회고)가 아니라, 이전 50개 frontier hypothesis/failure/negative memory/preserved clue/reusable artifact/do-not-repeat/reopen condition(가설/실패/부정 기억/보존 단서/재사용 산출물/반복 금지/재개 조건)을 ingredient(재료)로 바꿔 공격적 mix(혼합)를 실제 MT5 runtime(런타임)까지 밀어보는 것이다.
+
+Due check(도래 점검)는 next frontier open(다음 전선 개방) 전에 실행한다. broad goal(넓은 목표)처럼 stage number(단계 번호)를 직접 말하지 않는 요청도, 새 frontier stage(전선 단계)를 열기 전에 `docs/registers/frontier_extra_stage_register.yaml`와 closeout receipts(마감 영수증)를 먼저 본다.
+
+Trigger(트리거)는 다음이다.
+
+- F50 closeout(전선50 마감) 뒤 E01(추가01)이 due(도래)다.
+- F100 closeout(전선100 마감) 뒤 E02(추가02)가 due(도래)다.
+- F150/F200...(전선150/200...)도 같은 규칙을 쓴다.
+- 과거 due(도래)가 아직 등록되지 않았으면 backfill execution(소급 실행)으로 같은 E-number(추가 번호)를 연다.
+
+Folder rule(폴더 규칙)은 기존 `stages/*` 구조를 유지한다.
+
+```text
+stages/stage_frontier_extra_E01__f001_f050_hypothesis_mixing_runtime_learning/
+  00_spec/
+  01_inputs/
+  02_runs/
+  03_reviews/
+  04_selected/
+```
+
+E01(추가01)은 F01-F50(전선01-50)을 material window(재료 구간)로 쓰고, closeout(마감) 뒤 resume target(재개 대상)으로 원래 next frontier(다음 전선)를 남긴다. 현재 backfill case(소급 사례)에서는 F80 closed(F80 마감) 뒤 E01을 닫고 F81(전선81)로 돌아간다.
+
+Ingredient card(재료 카드)는 최소한 source frontier(원천 전선), hypothesis(가설), artifact path/hash(산출물 경로/해시), salvage value(회수 가치), do-not-repeat(반복 금지), tier scope(티어 범위), claim boundary(주장 경계)를 가진다. 빠진 자료는 missing_material/blocked/out_of_scope_by_claim(자료 누락/차단/주장 범위 밖)으로 적고 빈칸으로 숨기지 않는다.
+
+Mix rule(혼합 규칙)은 소심한 repair(수리)가 아니다. Feature set/label/model family/trade shape/risk logic/regime split(피처 묶음/라벨/모델 계열/거래 형태/위험 로직/장세 분할)을 넓게 섞고, center/low/high/extreme/absurd-but-legal boundary(중앙/저/고/극단/말도 안 되지만 합법 경계)를 포함한다. 같은 threshold/filter/parameter(임계값/필터/파라미터)만 바꾸는 반복은 금지한다.
+
+Runtime rule(런타임 규칙)은 MT5(메타트레이더5)를 final check(최종 확인)가 아니라 learning device(학습 장치)로 둔다. MT5 failure(MT5 실패), zero-trade(무거래), mismatch(불일치), crash/block(충돌/차단), PF/DD collapse(수익 팩터/손실폭 붕괴), density death(밀도 사망)는 negative evidence(부정 근거)로 기록한다. compile(컴파일)은 runtime evidence(런타임 근거)를 대체하지 않는다.
+
+Closeout boundary(마감 경계)는 runtime learning record(런타임 학습 기록)다. Extra stage(추가 단계)는 completion(완성), selected baseline(선택 기준선), operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), Goal Achieve(목표 달성), git push as validation(깃 원격 반영을 검증으로 간주)을 만들지 않는다.
+
 ## Repair Rule(수리 규칙)
 
 Repair work(수리 작업)는 기본적으로 같은 frontier stage(전선 단계) 안의 work packet(작업 묶음)으로 처리한다.

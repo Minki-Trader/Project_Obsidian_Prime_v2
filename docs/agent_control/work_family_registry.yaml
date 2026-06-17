@@ -15,6 +15,7 @@ routing_contract:
   task_force_review_rule: "Codex Task Force review(코덱스 태스크포스 검토) is active for Grok replacement/deactivation(그록 대체/비활성), agent roster(요원 명단), skill routing(스킬 라우팅), policy governance(정책 거버넌스), and Frontier80 rehearsal work(F80 리허설 작업)."
   grok_small_review_rule: "Grok review(그록 검토) is retired/archive-only(퇴역/보관 전용) and never creates a new call, receipt, gate, or external review path."
   five_stage_retrospective_due_rule: "Five-stage Grok retrospective(5단계 그록 회고) is retired/archive-only; preserve records and do not block future frontier stages."
+  frontier_extra_stage_due_rule: "Before opening the next frontier stage or continuing a broad ONNX goal(넓은 ONNX 목표), run frontier_extra_stage_due_check(전선 추가 단계 도래 점검). If due, open and close E01/E02/E03 before the resume frontier."
   common_final_filter:
     - obsidian-answer-clarity
     - obsidian-claim-discipline
@@ -53,6 +54,25 @@ trigger_overlays:
     appends_required_gate: false
     allowed_families: none
     claim_rule: "Historical retrospective records may inform direction_delta(방향 변화) only; they do not block Frontier80 and do not create authority claims."
+  frontier_extra_stage_due_check:
+    status: active
+    active_by_default: true
+    description: "Every 50 closed canonical frontier stages(마감된 정식 전선 50개마다) require an Extra Stage(추가 단계) due check before the next frontier open or broad ONNX continuation."
+    trigger_skill: obsidian-stage-transition
+    appends_required_skill: false
+    appends_required_gate: frontier_extra_due_check
+    allowed_families:
+      - state_sync
+      - policy_skill_governance
+      - experiment_design
+      - experiment_execution
+      - runtime_backtest
+      - kpi_evidence
+      - artifact_lineage
+      - publish_handoff
+    activation_rule: "Check docs/registers/frontier_extra_stage_register.yaml plus frontier closeout receipts. F50/F100/F150 due without matching E01/E02/E03 closeout blocks the next frontier open until extra stage closeout."
+    closeout_rule: "If due, create stages/stage_frontier_extra_EXX__... with ingredient cards, mix queue, MT5 runtime learning campaign, closeout, state sync, gate audit, and final claim guard."
+    claim_rule: "Extra stages may create runtime learning records, preserved clues, negative memory, reference surfaces, invalid setup, blocked retry conditions, or next frontier proposals only; they cannot create completion, selected baseline, operating promotion, runtime authority, live readiness, Goal Achieve, or git-push validation."
 families:
   information_only:
     description: "Read/explain only(읽기/설명 전용 작업)"

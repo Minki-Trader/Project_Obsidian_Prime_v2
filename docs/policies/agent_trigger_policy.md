@@ -77,6 +77,22 @@ Archived due check(보관 도래 점검)는 과거 Grok retrospective(그록 회
 
 Due check archive(도래 점검 보관)는 register-first(등록부 우선)다. 효과(effect, 효과)는 기존 5단계 기록을 보존하면서도 F80(전선80) 운영이 Grok packet(그록 묶음) 독해 루프로 역류하지 않게 하는 것이다.
 
+## 전선 추가 단계 트리거(Frontier Extra Stage Trigger, 전선 추가 단계 트리거)
+
+`frontier_extra_stage_due_check(전선 추가 단계 도래 점검)`는 active trigger overlay(활성 트리거 오버레이, 추가 조건)다. 새 frontier stage(전선 단계)를 열기 전, 또는 broad goal(넓은 목표)에서 frontier campaign(전선 캠페인)을 계속 진행할 때 먼저 실행한다.
+
+Trigger(트리거)는 closed canonical frontier count(마감된 정식 전선 수)가 50개 단위에 도달했는지다. F50/F100/F150...(전선50/100/150...) closeout(마감)이 있고 대응 E01/E02/E03...(추가01/02/03...) closeout record(마감 기록)가 없으면 extra stage(추가 단계)를 먼저 연다.
+
+도래하면 다음 순서를 따른다.
+
+1. `docs/registers/frontier_extra_stage_register.yaml`를 읽어 already_closed/already_open/not_due/due_backfill(이미 마감/이미 개방/아직 아님/소급 도래)을 판정한다.
+2. due(도래)이면 `stages/stage_frontier_extra_EXX__...` 아래 기존 stage structure(단계 구조)로 open packet(개방 묶음)을 만든다.
+3. 해당 50개 frontier stage(전선 단계)의 closeout receipt/MT5 evidence/negative memory/preserved clue(마감 영수증/MT5 근거/부정 기억/보존 단서)를 receipt-first scan(영수증 우선 스캔)한다.
+4. ingredient card(재료 카드), broad/extreme mix queue(넓은/극단 혼합 대기열), WFO-aware mix(워크포워드 인식 혼합), MT5 runtime campaign(MT5 런타임 캠페인)을 생성하고 실행한다.
+5. closeout(마감), state sync(상태 동기화), required gate coverage audit(필수 게이트 커버리지 감사), final claim guard(최종 주장 보호)를 남긴 뒤 resume frontier(재개 전선)를 연다.
+
+효과(effect, 효과)는 사용자가 stage 50/100(단계50/100)을 직접 말하지 않아도 Codex(코덱스)가 “extra due(추가 도래) 먼저”를 자동으로 확인하는 것이다. 이 trigger(트리거)는 Grok(그록)을 호출하지 않고, completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)를 만들지 않는다.
+
 ## 라우팅 소스
 
 라우팅의 진실 원천(source of truth)은 `docs/agent_control/work_family_registry.yaml`이다.

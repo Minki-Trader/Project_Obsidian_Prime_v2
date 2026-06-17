@@ -130,6 +130,22 @@ winner(승자), selected baseline(선택 기준선), promotion history(승격 �
 
 Frontier stage(전선 단계)는 새 최상위 `frontiers/` folder(폴더)를 만들지 않고 기존 `stages/*` 아래에 둔다. 세부 운영 규칙(source of truth, 진실 원천)은 `docs/policies/frontier_governance.md`다.
 
+## 전선 추가 단계 규칙(Frontier Extra Stage Rule, 전선 추가 단계 규칙)
+
+Frontier Extra Stage(전선 추가 단계)는 `stage_frontier_extra_EXX__specific_question(전선 추가 단계 번호와 구체 질문)` 형식으로 둔다. 새 최상위 `frontiers/` 또는 `extra_stages/` folder(폴더)는 만들지 않는다.
+
+Trigger(트리거)는 closed canonical frontier stage(마감된 정식 전선 단계) 50개마다 발동한다. F50/F100/F150...(전선50/100/150...) closeout(마감) 뒤 다음 frontier open(다음 전선 개방) 전에 `frontier_extra_due_check(전선 추가 도래 점검)`를 먼저 한다. broad goal(넓은 목표), 예를 들어 “개쩌는 ONNX(온엑스) 만들어줘”가 들어와도 같은 due check(도래 점검)를 실행한다.
+
+Due(도래)이면 E01/E02/E03...(추가01/02/03...)을 먼저 open -> operate -> closeout(개방 -> 운영 -> 마감)한다. 그 뒤 resume frontier(재개 전선)로 돌아간다. E01(추가01)은 F01-F50(전선01-50)을 재료로 쓰고, E02(추가02)는 F51-F100(전선51-100)을 재료로 쓴다. backfill execution(소급 실행)이 필요한 경우에도 같은 numbering(번호)을 유지한다.
+
+Extra stage(추가 단계)는 retrospective(회고)가 아니다. 50개 frontier closeout(전선 마감)을 ingredient card(재료 카드)로 만들고, feature set/label/model family/trade shape/risk logic/regime split(피처 묶음/라벨/모델 계열/거래 형태/위험 로직/장세 분할)을 공격적으로 섞어 실제 MT5 runtime learning campaign(MT5 런타임 학습 캠페인)까지 밀어본다.
+
+MT5 failure(MT5 실패), zero-trade(무거래), mismatch(불일치), crash/block(충돌/차단), PF/DD collapse(수익 팩터/손실폭 붕괴), density death(밀도 사망)는 waste(낭비)가 아니라 negative evidence(부정 근거)다. compile(컴파일)만으로 runtime evidence(런타임 근거)를 대체하지 않는다.
+
+Extra stage closeout(추가 단계 마감)은 preserved clue/negative memory/seed surface/reference surface/invalid setup/blocked retry condition/next frontier proposal(보존 단서/부정 기억/씨앗 표면/참고 표면/무효 설정/차단 재시도 조건/다음 전선 제안) 중 하나 이상으로 닫는다.
+
+금지 claim(주장)은 completion(완성), selected baseline(선택 기준선), operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), Goal Achieve(목표 달성), git push as validation(깃 원격 반영을 검증으로 간주)이다.
+
 ## 알파 탐색 단계 규칙(Alpha Exploration Stage Rule, 알파 탐색 단계 규칙)
 
 Stage 10(10단계)부터 알파 탐색(alpha exploration, 알파 탐색)이 닫히는 단계(stage, 단계)까지는 탐색 라벨(exploration label, 탐색 라벨)과 실행 번호(run number, 실행 번호) 규칙을 쓴다.
