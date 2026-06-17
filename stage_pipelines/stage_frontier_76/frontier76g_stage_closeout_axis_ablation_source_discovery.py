@@ -6,6 +6,8 @@ import sys
 from pathlib import Path
 from typing import Any, Mapping, Sequence
 
+import yaml
+
 ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
@@ -43,6 +45,8 @@ RECEIPT_PATH = REVIEW_DIR / "grok_stage_closeout_axis_ablation_receipt.md"
 GATE_AUDIT_PATH = REVIEW_DIR / "required_gate_coverage_audit_f76g_closeout.md"
 RUN_MANIFEST_PATH = RUN_DIR / "run_manifest.json"
 CONTEXT_ANCHOR_PATH = f"stages/{STAGE_ID}/03_reviews/context_anchor.md"
+RETROSPECTIVE_REGISTER = ROOT / "docs/registers/five_stage_retrospective_register.yaml"
+RETROSPECTIVE_DUE_STATUS = "not_due_after_f76_closeout_1_of_5"
 
 GROK_PACKET = ROOT / "docs/agent_control/grok_reviews/2026-06-17_f76g_stage_closeout_axis_ablation"
 GROK_PROMPT_PATH = GROK_PACKET / "prompts/f76g_stage_closeout_axis_ablation_prompt.md"
@@ -474,7 +478,31 @@ def ledger_row(created_at: str, grok_success: bool) -> dict[str, Any]:
     }
 
 
+def update_retrospective_register(created_at: str, grok_success: bool) -> None:
+    if not grok_success:
+        return
+    data = yaml.safe_load(io_path(RETROSPECTIVE_REGISTER).read_text(encoding="utf-8-sig"))
+    state = data.setdefault("state", {})
+    closed = list(state.get("closed_frontier_ids_since_last_retrospective") or [])
+    if STAGE_ID not in closed:
+        closed.append(STAGE_ID)
+    state["closed_frontier_ids_since_last_retrospective"] = closed
+    state["closeouts_since_last"] = len(closed)
+    state["next_numeric_trigger_frontier"] = 80
+    state["current_due_status"] = RETROSPECTIVE_DUE_STATUS
+    state["last_updated_at_utc"] = created_at
+    state["note"] = (
+        "F76 closeout(마감)이 F71-F75 retrospective(회고) 이후 1/5로 등록됐다. "
+        "F77 open(개방)은 five-stage retrospective gate(5단계 회고 게이트) 관점에서 not_due(아직 아님)다."
+    )
+    io_path(RETROSPECTIVE_REGISTER).write_text(
+        yaml.safe_dump(data, allow_unicode=True, sort_keys=False),
+        encoding="utf-8-sig",
+    )
+
+
 def update_state_and_ledgers(created_at: str, grok_success: bool) -> None:
+    update_retrospective_register(created_at, grok_success)
     row = ledger_row(created_at, grok_success)
     f76b.upsert_csv(ROOT / "docs/registers/run_registry.csv", "run_id", row)
     f76b.upsert_csv(ROOT / "docs/registers/alpha_run_ledger.csv", "ledger_row_id", row)
@@ -507,7 +535,7 @@ runtime_authority: not_claimed
 operating_promotion: not_claimed
 live_readiness: not_claimed
 goal_achieve: not_claimed
-five_stage_retrospective_due_status: not_due_after_frontier71_to_75_retrospective_completed
+five_stage_retrospective_due_status: {RETROSPECTIVE_DUE_STATUS if grok_success else 'not_due_after_frontier71_to_75_retrospective_completed'}
 updated_at_utc: '{created_at}'
 context_anchor: {CONTEXT_ANCHOR_PATH}
 notes:

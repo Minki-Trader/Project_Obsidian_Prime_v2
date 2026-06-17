@@ -1,0 +1,404 @@
+﻿{
+  "run_id": "frontier77H_stage_closeout_runtime_lifecycle_label_density_rebuild_v1",
+  "stage_id": "stage_frontier_77__runtime_lifecycle_label_density_rebuild",
+  "parent_run_id": "frontier77G_post_repair_gap_analysis_or_closeout_decision_v1",
+  "next_run_id": "frontier78A_stage_open_execution_calibrated_density_contract_pnl_v1",
+  "next_frontier_stage_id": "stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild",
+  "created_at_utc": "2026-06-17T08:13:44Z",
+  "status": "closed_preserved_clue_no_authority",
+  "judgment": "preserved_clue_with_negative_memory_no_authority",
+  "closeout_label": "preserved_clue(보존 단서)",
+  "hypothesis": "Runtime lifecycle-native labels(런타임 생명주기 기본 라벨)이 tradeable density(거래 가능 밀도)와 parity(동등성)를 보존할 수 있는지.",
+  "test_period": "validation 2025-01-02..2025-10-01; OOS 2025-10-01..2026-04-14",
+  "proxy_expectation": "lifecycle label(생명주기 라벨)이 independent proxy overcount(독립 프록시 과대계산)를 줄이고 runtime bridge(런타임 연결)에 더 맞을 것.",
+  "proxy_kpi": {
+    "candidate_id": "f77b_08051",
+    "label_name": "short_h12_tp18_sl12_uq70",
+    "side": "short",
+    "hold_bars": 12,
+    "tp_points": 18.0,
+    "sl_points": 12.0,
+    "utility_quantile": 0.7,
+    "feature_set": "price_action_core",
+    "feature_count": 11,
+    "model": "hist_gbm_d4_l2",
+    "prob_quantile": 0.93,
+    "prob_threshold": 0.35934496629576756,
+    "session": "all",
+    "risk_filter": "trend_aligned",
+    "raw_signal_total": 140,
+    "lifecycle_trade_total": 97,
+    "overall_signal_to_trade_ratio": 0.6928571428571428,
+    "scout_clue": 1,
+    "meaningful_signal": 0,
+    "final_like_reference": 0,
+    "dual_positive": 1,
+    "rank_score": 131662.07931516756,
+    "validation_raw_signal_count": 100,
+    "validation_lifecycle_trade_count": 68,
+    "validation_signal_to_trade_ratio": 0.68,
+    "oos_raw_signal_count": 40,
+    "oos_lifecycle_trade_count": 29,
+    "oos_signal_to_trade_ratio": 0.725,
+    "val_net": 272.40000000000003,
+    "val_gross_profit": 655.1999999999997,
+    "val_gross_loss": -382.7999999999999,
+    "val_pf": 1.7115987460815043,
+    "val_dd_pct": 0.5279999999999927,
+    "val_trade_count": 68,
+    "val_trades_day": 2.2666666666666666,
+    "val_win_rate": 0.5735294117647058,
+    "val_avg_win": 16.799999999999994,
+    "val_avg_loss": -13.199999999999996,
+    "val_payoff": 1.2727272727272727,
+    "val_expectancy": 4.005882352941177,
+    "val_recovery": 5.159090909090981,
+    "val_avg_hold_bars": 2.264705882352941,
+    "val_avg_mae": 26.206617647058813,
+    "val_max_consecutive_loss": 4,
+    "val_time_under_water_trades": 12,
+    "val_smooth_equity_proxy": 1,
+    "oos_net": 127.2,
+    "oos_gross_profit": 285.6,
+    "oos_gross_loss": -158.39999999999998,
+    "oos_pf": 1.8030303030303034,
+    "oos_dd_pct": 0.6239999999999963,
+    "oos_trade_count": 29,
+    "oos_trades_day": 2.230769230769231,
+    "oos_win_rate": 0.5862068965517241,
+    "oos_avg_win": 16.8,
+    "oos_avg_loss": -13.199999999999998,
+    "oos_payoff": 1.272727272727273,
+    "oos_expectancy": 4.386206896551724,
+    "oos_recovery": 2.0384615384615503,
+    "oos_avg_hold_bars": 2.103448275862069,
+    "oos_avg_mae": 19.241034482758675,
+    "oos_max_consecutive_loss": 4,
+    "oos_time_under_water_trades": 10,
+    "oos_smooth_equity_proxy": 1
+  },
+  "runtime_probe_kpi": {
+    "run_id": "frontier77F_mt5_lifecycle_point_unit_repair_probe_v1",
+    "attempt_name": "f77f_point_unit_repair_oos",
+    "candidate_id": "f77f_point_unit_repair_f77b_07979",
+    "axis_id": "short_h12_tp18_sl12_price_action_core_extra_trees_cash_mid_trend_aligned_q80",
+    "split": "oos",
+    "test_period_start": "2025-10-01",
+    "test_period_end": "2026-04-14",
+    "calendar_days_exclusive": 195,
+    "tester_status": "completed",
+    "runtime_status": "completed",
+    "report_status": "completed",
+    "expected_rows": 7584,
+    "feature_ready_count": 7584,
+    "feature_ready_diff": 0,
+    "expected_signal_count": 34,
+    "signal_count": 34,
+    "signal_count_diff": 0,
+    "expected_selected_trade_count": 34,
+    "order_attempt_count": 29,
+    "order_fill_count": 29,
+    "order_fill_rate": 1.0,
+    "trade_count": 29,
+    "trades_per_day": 0.14871794871794872,
+    "long_trade_count": 0,
+    "short_trade_count": 29,
+    "winning_trade_count": 13,
+    "losing_trade_count": 16,
+    "net_profit": 4.48,
+    "gross_profit": 23.96,
+    "gross_loss": -19.48,
+    "profit_factor": 1.23,
+    "expectancy": 0.15,
+    "win_rate_percent": 44.83,
+    "average_win": 1.843076923076923,
+    "average_loss": -1.2175,
+    "payoff_ratio": 1.5138208813773495,
+    "recovery_factor": 0.63,
+    "max_drawdown_amount": 7.1,
+    "max_drawdown_percent": 1.41,
+    "proxy_net_profit": 61.20000000000002,
+    "proxy_profit_factor": 1.272727272727273,
+    "proxy_trades_per_day": 3.4,
+    "proxy_dd_percent": 0.49199999999998906,
+    "dd_delta_runtime_minus_proxy": 0.9180000000000108,
+    "gap_cause_summary": "runtime_economics_gap_after_signal_and_feature_parity",
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier77F_mt5_lifecycle_point_unit_repair_probe_v1_f77f_point_unit_repair_oos.htm",
+    "telemetry_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/frontier77F_mt5_lifecycle_point_unit_repair_probe/telemetry/f77f_point_unit_repair_oos_telemetry.csv",
+    "summary_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/frontier77F_mt5_lifecycle_point_unit_repair_probe/telemetry/f77f_point_unit_repair_oos_summary.csv",
+    "claim_boundary": "repair_runtime_probe_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  },
+  "kpi_rows": [
+    {
+      "split": "validation",
+      "view": "MT5 Runtime Repair Probe(MT5 런타임 수리 탐침)",
+      "test_period": "2025-01-02..2025-10-01",
+      "net_profit": "14.64",
+      "gross_profit": "104.01",
+      "gross_loss": "-89.37",
+      "profit_factor": "1.16",
+      "drawdown_percent": "3.33",
+      "trade_count": "129",
+      "trades_per_day": "0.4742647058823529",
+      "runtime_active_date_trades_per_day": 4.03125,
+      "win_rate_percent": "43.41",
+      "average_win": "1.8573214285714286",
+      "average_loss": "-1.2242465753424658",
+      "payoff_ratio": "1.5171138445307628",
+      "expectancy": "0.11",
+      "recovery_factor": "0.85",
+      "time_under_water": "not_available_in_runtime_receipt(런타임 영수증에 없음)",
+      "max_consecutive_loss": "not_available_in_runtime_receipt(런타임 영수증에 없음)",
+      "long_short_breakdown": "long=0;short=129",
+      "proxy_runtime_kpi_gap": "proxy_net=227.7;runtime_net=14.64;proxy_pf=1.25746;runtime_pf=1.16;proxy_dd=1.479;runtime_dd=3.33;proxy_active_tpd=4.1875;runtime_calendar_tpd=0.474265;runtime_active_tpd=4.03125;net_scale=0.0642951;gross_profit_scale=0.0935258",
+      "proxy_time_under_water": "79",
+      "proxy_max_consecutive_loss": "9"
+    },
+    {
+      "split": "oos",
+      "view": "MT5 Runtime Repair Probe(MT5 런타임 수리 탐침)",
+      "test_period": "2025-10-01..2026-04-14",
+      "net_profit": "4.48",
+      "gross_profit": "23.96",
+      "gross_loss": "-19.48",
+      "profit_factor": "1.23",
+      "drawdown_percent": "1.41",
+      "trade_count": "29",
+      "trades_per_day": "0.14871794871794872",
+      "runtime_active_date_trades_per_day": 2.9,
+      "win_rate_percent": "44.83",
+      "average_win": "1.843076923076923",
+      "average_loss": "-1.2175",
+      "payoff_ratio": "1.5138208813773495",
+      "expectancy": "0.15",
+      "recovery_factor": "0.63",
+      "time_under_water": "not_available_in_runtime_receipt(런타임 영수증에 없음)",
+      "max_consecutive_loss": "not_available_in_runtime_receipt(런타임 영수증에 없음)",
+      "long_short_breakdown": "long=0;short=29",
+      "proxy_runtime_kpi_gap": "proxy_net=61.2;runtime_net=4.48;proxy_pf=1.27273;runtime_pf=1.23;proxy_dd=0.492;runtime_dd=1.41;proxy_active_tpd=3.4;runtime_calendar_tpd=0.148718;runtime_active_tpd=2.9;net_scale=0.0732026;gross_profit_scale=0.0838936",
+      "proxy_time_under_water": "8",
+      "proxy_max_consecutive_loss": "3"
+    }
+  ],
+  "gap_cause_map": [
+    {
+      "gap_cause": "money_scale_gap_after_point_unit_repair",
+      "bucket": "bookkeeping/measurement(장부/측정)",
+      "meaning": "proxy P/L(프록시 손익)이 broker contract P/L(브로커 계약 손익)로 보정되지 않았다."
+    },
+    {
+      "gap_cause": "trade_density_denominator_gap_proxy_active_dates_vs_runtime_calendar_days",
+      "bucket": "bookkeeping/measurement(장부/측정)",
+      "meaning": "proxy trades/day(프록시 일 거래 수)는 selected active dates(선택 활성 날짜)를 분모로 썼고 runtime(런타임)은 calendar days(달력일)를 썼다."
+    },
+    {
+      "gap_cause": "minor_fill_count_gap_from_hold_same_direction_after_realized_runtime_holds",
+      "bucket": "preserved mechanic(보존 메커니즘)",
+      "meaning": "runtime realized holds(런타임 실제 보유)가 proxy selected entries(프록시 선택 진입) 중 일부를 same-direction hold(동방향 보유)로 압축했다."
+    },
+    {
+      "gap_cause": "weak_alpha_gap_pf_and_density_below_goal_after_runtime_materialization",
+      "bucket": "hypothesis-negative(가설 부정)",
+      "meaning": "F77F runtime PF/density(런타임 수익 팩터/밀도)가 목표권과 거리가 멀고 F77B meaningful signal(의미 신호)이 0이었다."
+    }
+  ],
+  "preserved_clue": [
+    "point-unit repair pattern(포인트 단위 수리 패턴): TP18/SL12 price units(가격 단위)을 TP1800/SL1200 broker points(브로커 포인트)로 변환하면 MT5 Invalid stops(잘못된 손절/익절)가 사라진다.",
+    "ONNX/EA signal parity path(ONNX/EA 신호 동등성 경로): three-column short schema(3열 숏 스키마)와 selected-entry veto tape(선택 진입 거부 테이프)가 signal count parity(신호 수 동등성)를 유지했다.",
+    "runtime bridge mechanics(런타임 연결 메커니즘): point-unit repair(포인트 단위 수리) 후 Strategy Tester(전략 테스터)에서 validation/OOS(검증/표본외) 주문이 체결됐다."
+  ],
+  "negative_memory": [
+    "zero meaningful proxy candidates(의미 프록시 후보 0): F77B 10,368 후보 중 meaningful signal(의미 신호)과 final-like reference(완성 유사 참조)가 모두 0이었다.",
+    "density metric misalignment(밀도 지표 불일치): proxy trades/day(프록시 일 거래 수)는 selected active dates(선택 활성 날짜) 기준이라 final review(최종 검토)의 일 거래 수와 다르다.",
+    "money scale not contract-calibrated(금액 배율 계약 미보정): proxy money(프록시 금액)는 MT5 realized P/L(실현 손익)보다 약 12배 크게 보였다.",
+    "exportability distorted target selection(내보내기 가능성이 대상 선택 왜곡): best HistGBM(최선 히스토그램 GBM)은 ONNX export(ONNX 내보내기)가 실패해 weaker ExtraTrees(더 약한 엑스트라트리)를 런타임 대상으로 썼다."
+  ],
+  "next_frontier_hypothesis": "Execution-calibrated labels(실행 보정 라벨)이 broker contract P/L(브로커 계약 손익), final-review density denominator(최종 검토 밀도 분모), fill semantics(체결 의미), and lifecycle risk(생명주기 위험)를 proxy 단계부터 내장하면 PF/density/DD(수익 팩터/밀도/손실폭)를 동시에 더 잘 맞출 수 있는지 본다.",
+  "result_judgment": {
+    "result_subject": "F77 runtime lifecycle label density rebuild(F77 런타임 생명주기 라벨 밀도 재구성)",
+    "evidence_available": [
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77b_lifecycle_proxy_summary.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77f_mt5_lifecycle_point_unit_repair_probe_summary.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77g_post_repair_gap_analysis_closeout_decision.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/stage_closeout_report.md"
+    ],
+    "evidence_missing": [
+      "runtime time_under_water(런타임 회복 전 체류 시간): telemetry/report receipt does not expose closed-trade sequence(종료 거래 순서 미노출)",
+      "runtime max_consecutive_loss(런타임 최대 연속 손실): telemetry/report receipt does not expose closed-trade sequence(종료 거래 순서 미노출)"
+    ],
+    "judgment_label": "preserved_clue(보존 단서)",
+    "claim_boundary": "stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+    "next_condition": "open Frontier78(전선78 개방) with execution-calibrated label/density/money contract(실행 보정 라벨/밀도/금액 계약)",
+    "user_explanation_hook": "F77은 주문 연결을 고쳤지만 알파는 약했다. 배운 수리법만 들고 새 가설로 간다."
+  },
+  "local_verification": {
+    "created_at_utc": "2026-06-17T08:13:44Z",
+    "run_id": "frontier77H_stage_closeout_runtime_lifecycle_label_density_rebuild_v1",
+    "stage_id": "stage_frontier_77__runtime_lifecycle_label_density_rebuild",
+    "checks": [
+      {
+        "check": "kpi_identity_lock(핵심성과지표 정체성 고정)",
+        "passed": true,
+        "evidence": {
+          "proxy_summary": "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77b_lifecycle_proxy_summary.json",
+          "runtime_summary": "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77f_mt5_lifecycle_point_unit_repair_probe_summary.json",
+          "proxy_candidate_id": "f77b_08051",
+          "runtime_candidate_id": "f77f_point_unit_repair_f77b_07979",
+          "proxy_oos_net_pf_dd_tpd": [
+            127.2,
+            1.8030303030303034,
+            0.6239999999999963,
+            2.230769230769231
+          ],
+          "runtime_oos_net_pf_dd_tpd": [
+            4.48,
+            1.23,
+            1.41,
+            0.14871794871794872
+          ]
+        }
+      },
+      {
+        "check": "parity_scope_boundary(동등성 범위 경계)",
+        "passed": true,
+        "evidence": {
+          "signal_parity_pass_rows": 3,
+          "feature_readiness_pass_rows": 1,
+          "claim_boundary": "stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+        }
+      },
+      {
+        "check": "exportability_negative_memory(내보내기 부정 기억)",
+        "passed": true,
+        "evidence": {
+          "negative_memory": [
+            "zero meaningful proxy candidates(의미 프록시 후보 0): F77B 10,368 후보 중 meaningful signal(의미 신호)과 final-like reference(완성 유사 참조)가 모두 0이었다.",
+            "density metric misalignment(밀도 지표 불일치): proxy trades/day(프록시 일 거래 수)는 selected active dates(선택 활성 날짜) 기준이라 final review(최종 검토)의 일 거래 수와 다르다.",
+            "money scale not contract-calibrated(금액 배율 계약 미보정): proxy money(프록시 금액)는 MT5 realized P/L(실현 손익)보다 약 12배 크게 보였다.",
+            "exportability distorted target selection(내보내기 가능성이 대상 선택 왜곡): best HistGBM(최선 히스토그램 GBM)은 ONNX export(ONNX 내보내기)가 실패해 weaker ExtraTrees(더 약한 엑스트라트리)를 런타임 대상으로 썼다."
+          ],
+          "target_selection": "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77c_runtime_materialization_target_selection.json"
+        }
+      },
+      {
+        "check": "five_stage_retrospective_gate(5단계 회고 게이트)",
+        "passed": true,
+        "evidence": {
+          "retrospective_register": "docs/registers/five_stage_retrospective_register.yaml",
+          "current_due_status_before_closeout": "not_due_after_f77_closeout_2_of_5",
+          "closeouts_since_last_before_closeout": 2
+        }
+      },
+      {
+        "check": "f77g_condition_mapping(F77G 조건 매핑)",
+        "passed": true,
+        "evidence": {
+          "f77g_gap_analysis": "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77g_post_repair_gap_analysis_closeout_decision.json",
+          "gap_buckets": {
+            "money_scale_gap_after_point_unit_repair": "bookkeeping/measurement(장부/측정)",
+            "trade_density_denominator_gap_proxy_active_dates_vs_runtime_calendar_days": "bookkeeping/measurement(장부/측정)",
+            "minor_fill_count_gap_from_hold_same_direction_after_realized_runtime_holds": "preserved mechanic(보존 메커니즘)",
+            "weak_alpha_gap_pf_and_density_below_goal_after_runtime_materialization": "hypothesis-negative(가설 부정)"
+          },
+          "next_frontier_stage_id": "stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild"
+        }
+      }
+    ],
+    "all_passed": true,
+    "claim_boundary": "stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  },
+  "artifact_lineage": {
+    "created_at_utc": "2026-06-17T08:13:44Z",
+    "source_inputs": [
+      "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77b_lifecycle_proxy_summary.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77c_runtime_materialization_target_selection.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77f_mt5_lifecycle_point_unit_repair_probe_summary.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/f77f_runtime_receipt.csv",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77g_post_repair_gap_analysis_closeout_decision.json"
+    ],
+    "producer": "stage_pipelines/stage_frontier_77/frontier77h_stage_closeout_runtime_lifecycle_label_density_rebuild.py",
+    "consumer": "frontier78A_stage_open_execution_calibrated_density_contract_pnl_v1",
+    "artifact_paths": [
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/stage_closeout_report.md",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_stage_closeout_summary.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_closeout_kpi_rows.csv",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_artifact_lineage.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_closeout_local_verification.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/grok_stage_closeout_runtime_lifecycle_label_density_receipt.md",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/required_gate_coverage_audit_f77h_closeout.md",
+      "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/prompts/f77h_stage_closeout_runtime_lifecycle_label_density_prompt.md",
+      "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/clean_output.md",
+      "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/metadata.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77H_stage_closeout_runtime_lifecycle_label_density_rebuild_v1/run_manifest.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/f77f_runtime_receipt.csv",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/f77f_execution_results.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/mt5/reports"
+    ],
+    "artifact_hashes": {
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/stage_closeout_report.md": "c749cf9c22fc19861e182a74a1a11c403423fa66fb3e17e3e33949fa6e6ac976",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_stage_closeout_summary.json": "93bc3dbf596f384dd756b19901de544f02f8b7871da2a46b6c3e7c3470743ca6",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_closeout_kpi_rows.csv": "ba0bfde28c5ba5017796f9a03a084d7fb18c5062e5d2c818766823463797343e",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_artifact_lineage.json": "83afee8458ce4c100bb9dff8dec11ca8526f9d78170965aea0fa5a32e1a4cafc",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_closeout_local_verification.json": "d56fd6c78a33e94a5a73594b5383dd902fbceaf56b1cd5bde2fe97f479e47d78",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/grok_stage_closeout_runtime_lifecycle_label_density_receipt.md": "4c7981eade3ae7c3024695b8617b64cb67b484bfaca28e9c7537b8854f7a6286",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/required_gate_coverage_audit_f77h_closeout.md": "62c9e49befcf5d10575d73a90b068bd924460d57c45e819b3124ba5295642ec5",
+      "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/prompts/f77h_stage_closeout_runtime_lifecycle_label_density_prompt.md": "2edda6161e2f7b1280ef01101fcad8844002b66ec95bda363a9889b52fe22db3",
+      "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/clean_output.md": "b5cfb68d10a7e57cfb6650c853cf041ce598a72c46ffb0eca482d50d676da614",
+      "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/metadata.json": "41b46c84499b3d6875f386fc954d81e50166cf1e9367beadd4a2829850834c03",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77H_stage_closeout_runtime_lifecycle_label_density_rebuild_v1/run_manifest.json": "93bc3dbf596f384dd756b19901de544f02f8b7871da2a46b6c3e7c3470743ca6",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/f77f_runtime_receipt.csv": "b8de17f7baa079ad5ff03069b4e56855b99f26adca3345644d9e91c1fbc33e55",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/f77f_execution_results.json": "0548f8e3e5bed81f3e4c223ecd35038ad038ac9c3e4f686e8d2930b8c665a248"
+    },
+    "registry_links": [
+      "docs/registers/run_registry.csv",
+      "docs/registers/alpha_run_ledger.csv",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/stage_run_ledger.csv",
+      "docs/registers/negative_result_register.md",
+      "docs/registers/five_stage_retrospective_register.yaml"
+    ],
+    "availability": "tracked_reviews_with_ignored_runtime_artifacts(추적 리뷰와 무시된 런타임 산출물)",
+    "tracked_artifacts": [
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/stage_closeout_report.md",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_stage_closeout_summary.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_closeout_kpi_rows.csv",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_artifact_lineage.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_closeout_local_verification.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/grok_stage_closeout_runtime_lifecycle_label_density_receipt.md",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/required_gate_coverage_audit_f77h_closeout.md",
+      "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/prompts/f77h_stage_closeout_runtime_lifecycle_label_density_prompt.md",
+      "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/clean_output.md",
+      "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/metadata.json"
+    ],
+    "ignored_runtime_artifacts": [
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77H_stage_closeout_runtime_lifecycle_label_density_rebuild_v1/run_manifest.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/f77f_runtime_receipt.csv",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/f77f_execution_results.json",
+      "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/mt5/reports"
+    ],
+    "ignored_reason": ".gitignore excludes stages/*/02_runs/ and model/export artifacts(.gitignore가 stages/*/02_runs/ 및 모델/내보내기 산출물을 제외함); tracked closeout summaries carry the KPI and identity(추적 마감 요약이 KPI와 정체성을 보존함).",
+    "lineage_judgment": "connected_with_boundary(경계 있는 연결)"
+  },
+  "grok": {
+    "packet_path": "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density",
+    "prompt_path": "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/prompts/f77h_stage_closeout_runtime_lifecycle_label_density_prompt.md",
+    "prompt_sha256": "2edda6161e2f7b1280ef01101fcad8844002b66ec95bda363a9889b52fe22db3",
+    "output_path": "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/clean_output.md",
+    "output_exists": true,
+    "output_sha256": "b5cfb68d10a7e57cfb6650c853cf041ce598a72c46ffb0eca482d50d676da614",
+    "metadata_path": "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/metadata.json",
+    "metadata_exists": true,
+    "metadata_sha256": "41b46c84499b3d6875f386fc954d81e50166cf1e9367beadd4a2829850834c03",
+    "success": true,
+    "returncode": 0,
+    "timed_out": false,
+    "duration_seconds": 31.496898,
+    "prompt_hash": "d972faa3bad166f7c7af0dc91640b363332f3ac6feb6f94adfd6ca5f0fa3253a",
+    "preflight_warnings": [],
+    "unexpected_top_level_artifacts": []
+  },
+  "advice_classification": "accepted_with_conditions(조건부 수용)",
+  "final_codex_direction": "close_as_preserved_clue_with_conditions_satisfied(조건 충족 후 보존 단서로 마감)",
+  "forbidden_claim_hits": []
+}

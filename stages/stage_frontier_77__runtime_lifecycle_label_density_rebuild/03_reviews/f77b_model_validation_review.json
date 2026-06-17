@@ -1,0 +1,18 @@
+﻿{
+  "model_family": "logistic_l2_balanced, extra_trees_d7_l80, hist_gbm_d4_l2",
+  "target_and_label": "runtime lifecycle utility labels(런타임 생명주기 효용 라벨) from TP/SL first-touch, hold, MAE, and PnL.",
+  "split_method": "time-ordered holdout train/validation/oos; no WFO in F77B scout.",
+  "selection_metric": "rank_score combining meaningful gate, scout gate, PF, DD, lifecycle trades/day, net, and smooth proxy.",
+  "secondary_metrics": "signal_to_trade_ratio, avg_hold_bars, MAE, max consecutive loss, time under water trades.",
+  "threshold_policy": "probability/rank quantiles searched on train predictions; scores are ranking scores, not calibrated probabilities.",
+  "overfit_risk": "multiple-testing across label/feature/model/session/risk arms; F77B remains exploratory until MT5 probe.",
+  "calibration_risk": "classifier outputs are selection ranks; no probability calibration claim.",
+  "comparison_baseline": "F76 independent-signal proxy and lifecycle-aware repair negative memory.",
+  "validation_judgment": "exploratory_proxy_scout",
+  "summary_counts": {
+    "fit_completed": 216,
+    "candidate_rows": 10368,
+    "meaningful_signal_count": 0,
+    "scout_clue_count": 364
+  }
+}

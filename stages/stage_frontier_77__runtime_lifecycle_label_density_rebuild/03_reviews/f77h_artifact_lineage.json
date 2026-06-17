@@ -1,0 +1,73 @@
+﻿{
+  "created_at_utc": "2026-06-17T08:13:44Z",
+  "source_inputs": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77b_lifecycle_proxy_summary.json",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77c_runtime_materialization_target_selection.json",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77f_mt5_lifecycle_point_unit_repair_probe_summary.json",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/f77f_runtime_receipt.csv",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77g_post_repair_gap_analysis_closeout_decision.json"
+  ],
+  "producer": "stage_pipelines/stage_frontier_77/frontier77h_stage_closeout_runtime_lifecycle_label_density_rebuild.py",
+  "consumer": "frontier78A_stage_open_execution_calibrated_density_contract_pnl_v1",
+  "artifact_paths": [
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/stage_closeout_report.md",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_stage_closeout_summary.json",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_closeout_kpi_rows.csv",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_artifact_lineage.json",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_closeout_local_verification.json",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/grok_stage_closeout_runtime_lifecycle_label_density_receipt.md",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/required_gate_coverage_audit_f77h_closeout.md",
+    "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/prompts/f77h_stage_closeout_runtime_lifecycle_label_density_prompt.md",
+    "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/clean_output.md",
+    "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/metadata.json",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77H_stage_closeout_runtime_lifecycle_label_density_rebuild_v1/run_manifest.json",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/f77f_runtime_receipt.csv",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/f77f_execution_results.json",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/mt5/reports"
+  ],
+  "artifact_hashes": {
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/stage_closeout_report.md": "c749cf9c22fc19861e182a74a1a11c403423fa66fb3e17e3e33949fa6e6ac976",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_stage_closeout_summary.json": "93bc3dbf596f384dd756b19901de544f02f8b7871da2a46b6c3e7c3470743ca6",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_closeout_kpi_rows.csv": "ba0bfde28c5ba5017796f9a03a084d7fb18c5062e5d2c818766823463797343e",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_artifact_lineage.json": "83afee8458ce4c100bb9dff8dec11ca8526f9d78170965aea0fa5a32e1a4cafc",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_closeout_local_verification.json": "d56fd6c78a33e94a5a73594b5383dd902fbceaf56b1cd5bde2fe97f479e47d78",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/grok_stage_closeout_runtime_lifecycle_label_density_receipt.md": "4c7981eade3ae7c3024695b8617b64cb67b484bfaca28e9c7537b8854f7a6286",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/required_gate_coverage_audit_f77h_closeout.md": "62c9e49befcf5d10575d73a90b068bd924460d57c45e819b3124ba5295642ec5",
+    "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/prompts/f77h_stage_closeout_runtime_lifecycle_label_density_prompt.md": "2edda6161e2f7b1280ef01101fcad8844002b66ec95bda363a9889b52fe22db3",
+    "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/clean_output.md": "b5cfb68d10a7e57cfb6650c853cf041ce598a72c46ffb0eca482d50d676da614",
+    "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/metadata.json": "41b46c84499b3d6875f386fc954d81e50166cf1e9367beadd4a2829850834c03",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77H_stage_closeout_runtime_lifecycle_label_density_rebuild_v1/run_manifest.json": "93bc3dbf596f384dd756b19901de544f02f8b7871da2a46b6c3e7c3470743ca6",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/f77f_runtime_receipt.csv": "b8de17f7baa079ad5ff03069b4e56855b99f26adca3345644d9e91c1fbc33e55",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/f77f_execution_results.json": "0548f8e3e5bed81f3e4c223ecd35038ad038ac9c3e4f686e8d2930b8c665a248"
+  },
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/stage_run_ledger.csv",
+    "docs/registers/negative_result_register.md",
+    "docs/registers/five_stage_retrospective_register.yaml"
+  ],
+  "availability": "tracked_reviews_with_ignored_runtime_artifacts(추적 리뷰와 무시된 런타임 산출물)",
+  "tracked_artifacts": [
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/stage_closeout_report.md",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_stage_closeout_summary.json",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_closeout_kpi_rows.csv",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_artifact_lineage.json",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77h_closeout_local_verification.json",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/grok_stage_closeout_runtime_lifecycle_label_density_receipt.md",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/required_gate_coverage_audit_f77h_closeout.md",
+    "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/prompts/f77h_stage_closeout_runtime_lifecycle_label_density_prompt.md",
+    "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/clean_output.md",
+    "docs/agent_control/grok_reviews/2026-06-17_f77h_stage_closeout_runtime_lifecycle_label_density/metadata.json"
+  ],
+  "ignored_runtime_artifacts": [
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77H_stage_closeout_runtime_lifecycle_label_density_rebuild_v1/run_manifest.json",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/f77f_runtime_receipt.csv",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/f77f_execution_results.json",
+    "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/02_runs/frontier77F_mt5_lifecycle_point_unit_repair_probe_v1/mt5/reports"
+  ],
+  "ignored_reason": ".gitignore excludes stages/*/02_runs/ and model/export artifacts(.gitignore가 stages/*/02_runs/ 및 모델/내보내기 산출물을 제외함); tracked closeout summaries carry the KPI and identity(추적 마감 요약이 KPI와 정체성을 보존함).",
+  "lineage_judgment": "connected_with_boundary(경계 있는 연결)"
+}

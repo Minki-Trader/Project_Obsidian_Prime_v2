@@ -1,0 +1,108 @@
+﻿{
+  "idea_id": "IDEA-FR77-RUNTIME-LIFECYCLE-LABEL-DENSITY-REBUILD",
+  "hypothesis": "Runtime lifecycle-native labels(런타임 생명주기 기본 라벨) built from forward OHLC path(미래 OHLC 경로), first-touch exits(최초접촉 청산), occupancy compression(점유 압축), and risk utility(위험 효용) can find tradeable density(거래 가능한 밀도) that independent-signal proxy(독립 신호 프록시) overstated in F76.",
+  "decision_use": "Open F77B proxy scout(F77B 프록시 탐색)를 path labels and lifecycle density(경로 라벨과 생명주기 밀도) 중심으로 실행할지 결정한다.",
+  "comparison_baseline": {
+    "f76_closeout": "preserved_clue_negative_memory",
+    "f76_runtime_kpi_rows": [
+      {
+        "split": "validation",
+        "period": "2025-01-02..2025-10-01",
+        "net_profit": "152.99",
+        "gross_profit": "294.13",
+        "gross_loss": "-141.14",
+        "profit_factor": "2.08",
+        "drawdown_percent": "6.6",
+        "trade_count": "50",
+        "trades_per_day": "0.18382352941176472",
+        "win_rate_percent": "64.0",
+        "average_win": "9.1915625",
+        "average_loss": "-7.84111111111111",
+        "payoff_ratio": "1.1722270440697182",
+        "expectancy": "3.06",
+        "recovery_factor": "4.36",
+        "time_under_water": "not_available_in_runtime_receipt(런타임 영수증에 없음)",
+        "max_consecutive_loss": "not_available_in_runtime_receipt(런타임 영수증에 없음)",
+        "long_short_breakdown": "long=50;short=0",
+        "proxy_runtime_gap": "proxy_net=1760.31;runtime_net=152.99;proxy_pf=1.59485;runtime_pf=2.08;proxy_dd=6.44469;runtime_dd=6.6;proxy_tpd=1.06011;runtime_tpd=0.183824"
+      },
+      {
+        "split": "oos",
+        "period": "2025-10-01..2026-04-14",
+        "net_profit": "66.09",
+        "gross_profit": "206.2",
+        "gross_loss": "-140.11",
+        "profit_factor": "1.47",
+        "drawdown_percent": "10.04",
+        "trade_count": "38",
+        "trades_per_day": "0.19487179487179487",
+        "win_rate_percent": "63.16",
+        "average_win": "8.591666666666667",
+        "average_loss": "-10.007857142857144",
+        "payoff_ratio": "0.8584921371303499",
+        "expectancy": "1.74",
+        "recovery_factor": "1.13",
+        "time_under_water": "not_available_in_runtime_receipt(런타임 영수증에 없음)",
+        "max_consecutive_loss": "not_available_in_runtime_receipt(런타임 영수증에 없음)",
+        "long_short_breakdown": "long=38;short=0",
+        "proxy_runtime_gap": "proxy_net=1471.79;runtime_net=66.09;proxy_pf=1.68934;runtime_pf=1.47;proxy_dd=7.89168;runtime_dd=10.04;proxy_tpd=1.17557;runtime_tpd=0.194872"
+      }
+    ],
+    "f76_repair_counts": {
+      "candidate_rows": 5120,
+      "meaningful": 0,
+      "density": 0,
+      "near": 0
+    }
+  },
+  "control_variables": [
+    "symbol/timeframe(종목/시간축): FPMarkets US100 M5",
+    "dataset split identity(데이터 분할 정체성): {'train': 29222, 'validation': 9844, 'oos': 7584}",
+    "broker symbol contract(브로커 심볼 계약): reference only, no runtime authority(런타임 권위 없음)",
+    "claim boundary(주장 경계): stage_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  ],
+  "changed_variables": [
+    "feature_set(피처 묶음)",
+    "label_target(라벨/목표)",
+    "model_family(모델 계열)",
+    "trade_shape(거래 형태)",
+    "risk_logic(위험 로직)",
+    "regime_session_split(장세/세션 분할)"
+  ],
+  "sample_scope": {
+    "dataset": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "raw_bars": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "rows": 46650,
+    "raw_rows": 261345,
+    "tier_scope": "Tier A separate planned; Tier B missing_required until materialized; Tier A+B combined out_of_scope until Tier B exists."
+  },
+  "success_criteria": [
+    "scout clue(탐색 단서): validation and OOS net>0 or PF>=1.15, DD<=15%, lifecycle trades/day>=1.0, trade_count>=60 per split, and fragility recorded",
+    "meaningful signal(의미 신호): validation+OOS net>0, PF>=1.30, DD<=10%, lifecycle trades/day>=2.0, trade_count>=80 per split, and single-position compression recorded",
+    "completion-like reference(완성 유사 참조): reference only: PF>=2.0, DD<=10%, 5<=trades/day<=10, smooth equity proxy true",
+    "meaningful signal triggers pre-MT5 Grok review and mandatory MT5 Runtime Probe(의미 신호가 나오면 MT5 전 Grok 검토와 필수 MT5 런타임 탐침 실행)"
+  ],
+  "failure_criteria": [
+    "zero lifecycle signal(생명주기 신호 0개) after broad label/trade-shape sweep",
+    "nonzero signal exists but lifecycle density collapses below scout clue gate(비영 신호가 있으나 생명주기 밀도가 탐색 단서 기준 미달)",
+    "PF/DD improves only in one microscopic session slice(수익 팩터/손실폭 개선이 미세 세션 조각 하나에만 존재)"
+  ],
+  "invalid_conditions": [
+    "future leakage(미래 누수): forward path values enter features before entry bar",
+    "raw bars cannot be joined to feature rows(원천 봉과 피처 행 연결 불가)",
+    "MT5 bridge cannot materialize nonzero signal and no repair action is recorded(MT5 연결이 비영 신호를 물질화하지 못하고 수리 기록도 없음)",
+    "F77 reuses F76 independent signal count as density(F76 독립 신호 수를 그대로 밀도로 재사용)"
+  ],
+  "stop_conditions": [
+    "If meaningful signal appears, stop proxy expansion and run pre-MT5 Grok plus MT5 Runtime Probe.",
+    "If only nonzero weak signal appears, run bounded negative-control MT5 Runtime Probe before closeout unless logic impossibility is documented.",
+    "If zero signal appears, document logic impossibility and repair action before closeout."
+  ],
+  "evidence_plan": [
+    "F77A stage brief, axis contract, experiment design, Grok receipt, data identity",
+    "F77B lifecycle-label proxy candidate table with proxy KPI, density, occupancy compression, and split attribution",
+    "pre-MT5 Grok receipt before materializing any meaningful signal",
+    "mandatory MT5 Runtime Probe or documented zero-signal logic impossibility",
+    "proxy/runtime gap analysis and closeout KPI table"
+  ]
+}

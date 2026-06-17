@@ -2192,3 +2192,33 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier76G_stage_closeout_axis_ablation_source_discovery_v1 -->
 - `frontier76G_stage_closeout_axis_ablation_source_discovery_v1` closed F76 as `preserved_clue_negative_memory`. Evidence(근거): `stages/stage_frontier_76__axis_ablation_source_discovery_for_runtime_economics/03_reviews/stage_closeout_report.md`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier77A_stage_open_runtime_lifecycle_label_density_rebuild_v1`.
+
+<!-- frontier77A_stage_open_runtime_lifecycle_label_density_rebuild_v1 -->
+- `IDEA-FR77-RUNTIME-LIFECYCLE-LABEL-DENSITY-REBUILD`: `frontier77A_stage_open_runtime_lifecycle_label_density_rebuild_v1` opens Frontier77(전선77) as runtime lifecycle label density rebuild(런타임 생명주기 라벨/밀도 재구성). Hypothesis(가설): path outcome labels(경로 결과 라벨) and lifecycle density(생명주기 밀도)가 F76 independent proxy overcount(독립 프록시 과대계산)를 줄일 수 있다. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier77B_runtime_lifecycle_label_density_proxy_scout_v1`.
+
+<!-- frontier77B_runtime_lifecycle_label_density_proxy_scout_v1 -->
+- `frontier77B_runtime_lifecycle_label_density_proxy_scout_v1` executed runtime lifecycle label density proxy scout(런타임 생명주기 라벨/밀도 프록시 탐색). Status(상태): `proxy_lifecycle_weak_nonzero_signal_negative_control_probe_required_no_authority`. Judgment(판정): `lifecycle_proxy_weak_signal_requires_negative_control_runtime_probe_no_authority`. Candidate rows(후보 행) `10368`, scout clue(탐색 단서) `364`, meaningful signal(의미 신호) `0`, best OOS net/PF/DD/tpd(최선 표본외 순수익/수익 팩터/손실폭/일거래) `127.2/1.8030303030303034/0.6239999999999963/2.230769230769231`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier77C_pre_mt5_grok_lifecycle_negative_control_runtime_probe_v1`.
+
+<!-- frontier77C_pre_mt5_grok_lifecycle_negative_control_runtime_probe_v1 -->
+### F77C pre-MT5 Grok review(사전 MT5 Grok 검토)
+
+- status(상태): `pre_mt5_grok_review_completed_lifecycle_negative_control_probe_required_no_authority`
+- judgment(판정): `pre_mt5_grok_accepts_lifecycle_negative_control_probe_with_local_verification_no_authority`
+- action(행동): weak nonzero lifecycle proxy(약한 비영 생명주기 프록시)를 MT5 negative-control runtime probe(MT5 부정 대조 런타임 탐침)로 보낸다.
+- effect(효과): target(대상) `f77b_07979`의 ONNX parity(온엑스 동등성), signal count parity(신호 수 동등성), feature readiness parity(피처 준비 동등성), trade shape parity(거래 형태 동등성)를 다음 run(실행)에서 확인한다.
+- boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+
+<!-- frontier77D_mt5_lifecycle_negative_control_runtime_probe_v1 -->
+- `frontier77D_mt5_lifecycle_negative_control_runtime_probe_v1` executed/attempted(실행/시도) F77 MT5 lifecycle negative-control runtime probe(F77 MT5 생명주기 부정 대조 런타임 탐침). Source candidate(원천 후보): `f77b_07979`; blocked best(차단된 최선): `f77b_08051`. Attempts/completed(시도/완료): `2/2`. Best runtime net/PF/DD/tpd(최선 런타임 순수익/수익 팩터/손실폭/일거래): `0.0/0.0/0.0/0.0`. Evidence(근거): `stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/frontier77D_mt5_lifecycle_negative_control_runtime_probe_report.md`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier77E_proxy_runtime_gap_analysis_and_repair_decision_v1`.
+
+<!-- frontier77E_proxy_runtime_gap_analysis_and_repair_decision_v1 -->
+- `frontier77E_proxy_runtime_gap_analysis_and_repair_decision_v1` identified(식별) F77D gap cause(간극 원인) as SL/TP point-unit mismatch(손절/익절 포인트 단위 불일치) after signal/feature parity(신호/피처 동등성). Next(다음): `frontier77F_mt5_lifecycle_point_unit_repair_probe_v1`. Boundary(경계): no authority(권위 없음).
+
+<!-- frontier77F_mt5_lifecycle_point_unit_repair_probe_v1 -->
+- `frontier77F_mt5_lifecycle_point_unit_repair_probe_v1` executed/attempted(실행/시도) point-unit repair MT5 probe(포인트 단위 수리 MT5 탐침). Best runtime net/PF/DD/tpd(최선 런타임 순수익/수익 팩터/손실폭/일 거래 수): `4.48/1.23/1.41/0.14871794871794872`. Boundary(경계): no authority(권위 없음). Next(다음): `frontier77G_post_repair_gap_analysis_or_closeout_decision_v1`.
+
+<!-- frontier77G_post_repair_gap_analysis_or_closeout_decision_v1 -->
+- `frontier77G_post_repair_gap_analysis_or_closeout_decision_v1` recorded(기록) post-repair gap analysis(수리 후 간극 분석). Proposed closeout label(제안 마감 라벨): `preserved clue(보존 단서)`. Best runtime net/PF/DD/tpd(최선 런타임 순수익/수익 팩터/손실폭/일 거래 수): `4.48/1.23/1.41/0.14871794871794872`. Next(다음): `frontier77H_stage_closeout_runtime_lifecycle_label_density_rebuild_v1`. Boundary(경계): no authority(권위 없음).
+
+<!-- frontier77H_stage_closeout_runtime_lifecycle_label_density_rebuild_v1 -->
+- `frontier77H_stage_closeout_runtime_lifecycle_label_density_rebuild_v1` closed Frontier77(전선77) as `preserved_clue(보존 단서)`. Best runtime net/PF/DD/tpd(최선 런타임 순수익/수익 팩터/손실폭/일 거래 수): `4.48/1.23/1.41/0.14871794871794872`. Evidence(근거): `stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/stage_closeout_report.md`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier78A_stage_open_execution_calibrated_density_contract_pnl_v1`.

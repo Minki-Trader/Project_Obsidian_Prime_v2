@@ -1,0 +1,20 @@
+﻿{
+  "data_source": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+  ],
+  "time_axis": "feature timestamp(피처 시간표시)은 closed-bar key(닫힌 봉 키)로 다루고, raw open_ts == feature timestamp를 next-bar entry open(다음 봉 시가 진입)으로 사용한다.",
+  "sample_scope": "US100 M5 train/validation/oos split_v1; raw bars cover feature range plus forward path.",
+  "missing_or_duplicate_check": "entry open mapping is required for every feature row; missing rows would be invalid for label materialization.",
+  "feature_label_boundary": "features use current closed bar; lifecycle labels use next bar open and future high/low/close path only after entry.",
+  "split_boundary": "time-ordered train/validation/oos; thresholds and probability cutoffs learned from train only.",
+  "leakage_risk": "highest risk is accidentally using the current feature bar high/low as future path; script starts path at next bar open_ts.",
+  "data_hash_or_identity": {
+    "dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "feature_order_sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "raw_bars_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+    "candidate_rows": 10368
+  },
+  "integrity_judgment": "usable_with_boundary"
+}

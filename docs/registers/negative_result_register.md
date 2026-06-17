@@ -1361,3 +1361,15 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Reopen condition(재개 조건): order-flow(오더플로), volatility compression(변동성 압축), session liquidity imbalance(세션 유동성 불균형)처럼 upstream mechanism(상류 메커니즘)이 바뀌고 label/risk/trade shape(라벨/위험/거래 형태)가 새로 묶일 때만 재개한다.
 - Evidence(근거): `stages/stage_frontier_74__microburst_turnover_label_for_dense_smooth_runtime_path/03_reviews/stage_closeout_report.md`.
 - Boundary(경계): no authority(권위 없음), no completion(완성 없음).
+
+<!-- NR-FR77-RUNTIME-LIFECYCLE-LABEL-DENSITY-REBUILD -->
+## NR-FR77-RUNTIME-LIFECYCLE-LABEL-DENSITY-REBUILD
+
+- Stage(단계): `stage_frontier_77__runtime_lifecycle_label_density_rebuild`
+- Hypothesis(가설): runtime lifecycle-native labels(런타임 생명주기 기본 라벨)이 independent proxy overcount(독립 프록시 과대계산)를 줄이고 tradeable density(거래 가능 밀도)를 보존할 수 있다.
+- Why failed(실패 이유): F77B meaningful signal(의미 신호) `0`, final-like reference(완성 유사 참조) `0`; F77F OOS runtime(표본외 런타임) net/PF/DD/tpd `4.48/1.23/1.41/0.14871794871794872`로 PF(수익 팩터)와 밀도(밀도)가 목표권 밖이었다.
+- Salvage value(회수 가치): point-unit repair(포인트 단위 수리), ONNX/EA signal parity(ONNX/EA 신호 동등성), selected-entry veto tape(선택 진입 거부 테이프), runtime bridge mechanics(런타임 연결 메커니즘).
+- Do-not-repeat(반복 금지): F77 lifecycle label surface(F77 생명주기 라벨 표면)를 threshold/session/export repair(임계값/세션/내보내기 수리)만 바꿔 반복하지 않는다.
+- Reopen condition(재개 조건): broker contract P/L(브로커 계약 손익), final density denominator(최종 밀도 분모), fill semantics(체결 의미)를 label/target/trade shape(라벨/목표/거래 형태)에 처음부터 내장할 때만 재개한다.
+- Evidence(근거): `stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/stage_closeout_report.md`.
+- Boundary(경계): no authority(권위 없음), no completion(완성 없음).

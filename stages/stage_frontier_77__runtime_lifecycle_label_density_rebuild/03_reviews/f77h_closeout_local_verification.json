@@ -1,0 +1,76 @@
+﻿{
+  "created_at_utc": "2026-06-17T08:13:44Z",
+  "run_id": "frontier77H_stage_closeout_runtime_lifecycle_label_density_rebuild_v1",
+  "stage_id": "stage_frontier_77__runtime_lifecycle_label_density_rebuild",
+  "checks": [
+    {
+      "check": "kpi_identity_lock(핵심성과지표 정체성 고정)",
+      "passed": true,
+      "evidence": {
+        "proxy_summary": "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77b_lifecycle_proxy_summary.json",
+        "runtime_summary": "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77f_mt5_lifecycle_point_unit_repair_probe_summary.json",
+        "proxy_candidate_id": "f77b_08051",
+        "runtime_candidate_id": "f77f_point_unit_repair_f77b_07979",
+        "proxy_oos_net_pf_dd_tpd": [
+          127.2,
+          1.8030303030303034,
+          0.6239999999999963,
+          2.230769230769231
+        ],
+        "runtime_oos_net_pf_dd_tpd": [
+          4.48,
+          1.23,
+          1.41,
+          0.14871794871794872
+        ]
+      }
+    },
+    {
+      "check": "parity_scope_boundary(동등성 범위 경계)",
+      "passed": true,
+      "evidence": {
+        "signal_parity_pass_rows": 3,
+        "feature_readiness_pass_rows": 1,
+        "claim_boundary": "stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+      }
+    },
+    {
+      "check": "exportability_negative_memory(내보내기 부정 기억)",
+      "passed": true,
+      "evidence": {
+        "negative_memory": [
+          "zero meaningful proxy candidates(의미 프록시 후보 0): F77B 10,368 후보 중 meaningful signal(의미 신호)과 final-like reference(완성 유사 참조)가 모두 0이었다.",
+          "density metric misalignment(밀도 지표 불일치): proxy trades/day(프록시 일 거래 수)는 selected active dates(선택 활성 날짜) 기준이라 final review(최종 검토)의 일 거래 수와 다르다.",
+          "money scale not contract-calibrated(금액 배율 계약 미보정): proxy money(프록시 금액)는 MT5 realized P/L(실현 손익)보다 약 12배 크게 보였다.",
+          "exportability distorted target selection(내보내기 가능성이 대상 선택 왜곡): best HistGBM(최선 히스토그램 GBM)은 ONNX export(ONNX 내보내기)가 실패해 weaker ExtraTrees(더 약한 엑스트라트리)를 런타임 대상으로 썼다."
+        ],
+        "target_selection": "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77c_runtime_materialization_target_selection.json"
+      }
+    },
+    {
+      "check": "five_stage_retrospective_gate(5단계 회고 게이트)",
+      "passed": true,
+      "evidence": {
+        "retrospective_register": "docs/registers/five_stage_retrospective_register.yaml",
+        "current_due_status_before_closeout": "not_due_after_f77_closeout_2_of_5",
+        "closeouts_since_last_before_closeout": 2
+      }
+    },
+    {
+      "check": "f77g_condition_mapping(F77G 조건 매핑)",
+      "passed": true,
+      "evidence": {
+        "f77g_gap_analysis": "stages/stage_frontier_77__runtime_lifecycle_label_density_rebuild/03_reviews/f77g_post_repair_gap_analysis_closeout_decision.json",
+        "gap_buckets": {
+          "money_scale_gap_after_point_unit_repair": "bookkeeping/measurement(장부/측정)",
+          "trade_density_denominator_gap_proxy_active_dates_vs_runtime_calendar_days": "bookkeeping/measurement(장부/측정)",
+          "minor_fill_count_gap_from_hold_same_direction_after_realized_runtime_holds": "preserved mechanic(보존 메커니즘)",
+          "weak_alpha_gap_pf_and_density_below_goal_after_runtime_materialization": "hypothesis-negative(가설 부정)"
+        },
+        "next_frontier_stage_id": "stage_frontier_78__execution_calibrated_density_contract_pnl_rebuild"
+      }
+    }
+  ],
+  "all_passed": true,
+  "claim_boundary": "stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}
