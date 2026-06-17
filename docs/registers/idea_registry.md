@@ -2177,3 +2177,18 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier76B_axis_ablation_proxy_scout_v1 -->
 - `frontier76B_axis_ablation_proxy_scout_v1` executed F76 axis-ablation proxy scout(F76 축 제거 프록시 탐색). Status(상태): `proxy_scout_meaningful_signal_pre_mt5_probe_required_no_authority`. Judgment(판정): `meaningful_signal_pre_mt5_probe_required_no_authority`. Candidate rows(후보 행) `7680`, scout clue(탐색 단서) `2091`, meaningful signal(의미 신호) `10`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier76C_pre_mt5_grok_axis_ablation_runtime_probe_v1`.
+
+<!-- frontier76C_pre_mt5_grok_axis_ablation_runtime_probe_v1 -->
+- `frontier76C_pre_mt5_grok_axis_ablation_runtime_probe_v1` recorded F76 pre-MT5 Grok review(F76 MT5 전 Grok 검토). Target(대상): `f76b_06637`. Advice(조언): `accepted_with_conditions(조건부 수용)`. Evidence(근거): `stages/stage_frontier_76__axis_ablation_source_discovery_for_runtime_economics/03_reviews/frontier76C_pre_mt5_grok_axis_ablation_runtime_probe_report.md`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier76D_mt5_axis_ablation_runtime_probe_v1`.
+
+<!-- frontier76D_mt5_axis_ablation_runtime_probe_v1 -->
+- `frontier76D_mt5_axis_ablation_runtime_probe_v1` executed/attempted F76 MT5 Runtime Probe(F76 MT5 런타임 탐침). Candidate(후보): `f76d_runtime_f76b_06637`. Attempts/completed(시도/완료): `2/0`. Best runtime net/PF/DD/tpd(최선 런타임 순수익/수익 팩터/손실폭/일거래): `///`. Evidence(근거): `stages/stage_frontier_76__axis_ablation_source_discovery_for_runtime_economics/03_reviews/frontier76D_mt5_axis_ablation_runtime_probe_report.md`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier76E_proxy_runtime_gap_analysis_and_repair_decision_v1`.
+
+<!-- frontier76E_proxy_runtime_gap_analysis_and_repair_decision_v1 -->
+- `frontier76E_proxy_runtime_gap_analysis_and_repair_decision_v1` traced F76D proxy/runtime gap(프록시/런타임 간극) to same-direction hold compression(동방향 보유 압축). Evidence(근거): `stages/stage_frontier_76__axis_ablation_source_discovery_for_runtime_economics/03_reviews/frontier76E_proxy_runtime_gap_analysis_and_repair_decision_report.md`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier76F_lifecycle_aware_density_repair_proxy_v1`.
+
+<!-- frontier76F_lifecycle_aware_density_repair_proxy_v1 -->
+- `frontier76F_lifecycle_aware_density_repair_proxy_v1` ran lifecycle-aware density repair proxy(생명주기 인식 거래밀도 수리 프록시). Best(최선): `f76f_00961` with OOS net/PF/DD/tpd(표본외 순수익/수익 팩터/손실폭/일거래) `-924.4258422851562/0.8767163964311262/15.959394531250002/3.9236641221374047`. Evidence(근거): `stages/stage_frontier_76__axis_ablation_source_discovery_for_runtime_economics/03_reviews/frontier76F_lifecycle_aware_density_repair_proxy_report.md`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier76G_stage_closeout_axis_ablation_source_discovery_v1`.
+
+<!-- frontier76G_stage_closeout_axis_ablation_source_discovery_v1 -->
+- `frontier76G_stage_closeout_axis_ablation_source_discovery_v1` closed F76 as `preserved_clue_negative_memory`. Evidence(근거): `stages/stage_frontier_76__axis_ablation_source_discovery_for_runtime_economics/03_reviews/stage_closeout_report.md`. Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음). Next(다음): `frontier77A_stage_open_runtime_lifecycle_label_density_rebuild_v1`.
