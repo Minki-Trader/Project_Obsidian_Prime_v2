@@ -1445,3 +1445,6 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Reopen condition(재개 조건): runtime-realized outcome label(런타임 실현 결과 라벨), stop-touch/fill-path target(손절·익절 터치/체결 경로 목표), risk logic(위험 로직), regime/session split(장세/세션 분할) 중 하나 이상이 실제로 바뀌고 새 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
 - Evidence(근거): `stages/stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation/03_reviews/stage_closeout_report.md`.
 - Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+
+<!-- frontier84C_mt5_runtime_realized_winrate_materialization_v1_exportability_boundary -->
+- `frontier84C_mt5_runtime_realized_winrate_materialization_v1` exportability boundary(내보내기 가능성 경계): F84B top HistGBM(히스토그램 그래디언트 부스팅) material candidates(물질 후보)는 현재 ONNX runtime handoff(온엑스 런타임 인계) 경로에서 직접 물질화하지 않았다. Rejected before target(대상 전 보류): `2`. Next action(다음 행동): HistGBM clue(단서)는 preserved clue(보존 단서)로 남기고, 별도 exporter axis(내보내기 축)가 생길 때 재개한다.

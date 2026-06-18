@@ -1,0 +1,40 @@
+﻿{
+  "packet_id": "frontier84C_mt5_runtime_realized_winrate_materialization_v1",
+  "receipts": [
+    {
+      "skill": "obsidian-runtime-parity",
+      "status": "completed_mt5_runtime_realized_winrate_materialization_observation_no_authority",
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_runtime_parity_receipt.json"
+    },
+    {
+      "skill": "obsidian-backtest-forensics",
+      "status": "completed_mt5_runtime_realized_winrate_materialization_observation_no_authority",
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_backtest_forensics_receipt.json"
+    },
+    {
+      "skill": "obsidian-task-force-review",
+      "status": "executed",
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_task_force_review_receipt.yaml"
+    },
+    {
+      "skill": "obsidian-artifact-lineage",
+      "status": "executed",
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_artifact_lineage.json"
+    },
+    {
+      "skill": "obsidian-result-judgment",
+      "status": "executed",
+      "claim_boundary": "mt5_runtime_materialization_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    }
+  ],
+  "attempt_count": 2,
+  "completed_attempt_count": 2,
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve"
+  ]
+}

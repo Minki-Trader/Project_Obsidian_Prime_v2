@@ -1,0 +1,66 @@
+﻿{
+  "packet_id": "frontier84C_mt5_runtime_realized_winrate_materialization_v1",
+  "skill": "obsidian-runtime-parity",
+  "status": "completed_mt5_runtime_realized_winrate_materialization_observation_no_authority",
+  "python_artifact": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/models/f84c_runtime_f84b_00287.joblib",
+  "runtime_artifact": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/models/f84c_runtime_f84b_00287.onnx",
+  "compared_surface": "Python probability(파이썬 확률), ONNX probability(온엑스 확률), selected-entry veto signal(선택 진입 차단 신호)",
+  "parity_level": "runtime_probe_parity_passed",
+  "source_reproduction": [
+    {
+      "split": "validation",
+      "source_trade_count": "2340",
+      "source_raw_signal_count": "2364",
+      "source_lifecycle_trade_count": "2340",
+      "reproduced_net_profit": 341.63686742584827,
+      "reproduced_profit_factor": 1.377898995489171,
+      "reproduced_max_drawdown_percent": 4.525434582352136,
+      "reproduced_trade_count": 2340,
+      "reproduced_raw_signal_count": 2364,
+      "reproduced_lifecycle_trade_count": 2340,
+      "count_diff": 0,
+      "raw_signal_count_diff": 0,
+      "lifecycle_trade_count_diff": 0,
+      "net_diff": 0.0,
+      "pf_diff": 0.0,
+      "dd_diff": 0.0,
+      "passed": true
+    },
+    {
+      "split": "oos",
+      "source_trade_count": "1805",
+      "source_raw_signal_count": "1813",
+      "source_lifecycle_trade_count": "1805",
+      "reproduced_net_profit": 288.0970393819249,
+      "reproduced_profit_factor": 1.4246374556585157,
+      "reproduced_max_drawdown_percent": 2.930967158052863,
+      "reproduced_trade_count": 1805,
+      "reproduced_raw_signal_count": 1813,
+      "reproduced_lifecycle_trade_count": 1805,
+      "count_diff": 0,
+      "raw_signal_count_diff": 0,
+      "lifecycle_trade_count_diff": 0,
+      "net_diff": 0.0,
+      "pf_diff": 0.0,
+      "dd_diff": 0.0,
+      "passed": true
+    }
+  ],
+  "tester_identity": {
+    "terminal_path": "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\terminal64.exe",
+    "stage_id": "stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap",
+    "run_id": "frontier84C_mt5_runtime_realized_winrate_materialization_v1"
+  },
+  "missing_evidence": [],
+  "allowed_claims": [
+    "runtime_materialization_observation(런타임 물질화 관찰)"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve"
+  ]
+}

@@ -2327,3 +2327,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier84B_runtime_realized_winrate_proxy_scout_v1 -->
 - `frontier84B_runtime_realized_winrate_proxy_scout_v1` executed runtime-realized winrate proxy scout(런타임 실현 승률 프록시 탐색). Result(결과): `scout=579`, `material=269`, `meaningful=127`, `winrate_preserved=1189`. Best(최선): `f84b_01151` `reversal_balance` `long` val(검증) `344.4161/1.3957/2.8653/8.3653/2267`; OOS(표본외) `291.8095/1.4199/2.4484/9.5103/1845`. Boundary(경계): proxy scout only, no authority(프록시 탐색 전용, 권위 없음). Next(다음): `frontier84C_mt5_runtime_realized_winrate_materialization_v1`.
+
+<!-- frontier84C_mt5_runtime_realized_winrate_materialization_v1 -->
+- `frontier84C_mt5_runtime_realized_winrate_materialization_v1` materialized F84B runtime-realized winrate proxy(F84B 런타임 실현 승률 프록시) into ONNX/MT5(온엑스/MT5). Target(대상): `f84b_00287` / `extra_trees_d7_l120`. Source best(원천 최선): `f84b_01151` / `histgbm_density_shallow`. Attempts(시도): `2`, completed(완료): `2`. Boundary(경계): runtime materialization only, no authority(런타임 물질화만, 권위 없음).

@@ -1,0 +1,44 @@
+﻿{
+  "run_id": "frontier84C_mt5_runtime_realized_winrate_materialization_v1",
+  "stage_id": "stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap",
+  "parent_run_id": "frontier84B_runtime_realized_winrate_proxy_scout_v1",
+  "source_inputs": [
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_runtime_realized_winrate_proxy_scout_summary.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_runtime_realized_winrate_proxy_top_candidates.csv"
+  ],
+  "producer": "stage_pipelines/stage_frontier_84/frontier84c_mt5_runtime_realized_winrate_materialization.py",
+  "producer_sha256": "64e63e6ce5cf6d932cbd7fa28b27fd420e85ddc15b7df563db02ac5086c5563a",
+  "consumer": "frontier84D_runtime_realized_winrate_proxy_runtime_gap_analysis_v1",
+  "artifact_paths": [
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_runtime_realized_winrate_materialization_target_selection.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_mt5_runtime_realized_winrate_materialization_summary.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_runtime_parity_receipt.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_backtest_forensics_receipt.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_task_force_review_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/frontier84C_mt5_runtime_realized_winrate_materialization_report.md",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/required_gate_coverage_audit_f84c.md",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/run_manifest.json"
+  ],
+  "runtime_artifacts": [
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/models/f84c_runtime_f84b_00287.joblib",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/models/f84c_runtime_f84b_00287.binary_raw.onnx",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/models/f84c_runtime_f84b_00287.onnx",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/features/f84c_runtime_f84b_00287_features.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/runtime_veto_tapes/f84c_runtime_f84b_00287_selected_entry_runtime_veto_tape.csv"
+  ],
+  "artifact_hashes": {
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_runtime_realized_winrate_materialization_target_selection.json": "ab631746411694276a287c943f7b42dc8798c59915e0868113307104ce28a84e",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_mt5_runtime_realized_winrate_materialization_summary.json": "c190e3aba462aecd8d04f9fead92cdfaa7f6359e79ca21c5c0deda8b9324e3be",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_runtime_parity_receipt.json": "37b5b44d16fac9e646e173f7721c00026bada49fce227a460f415a4774cd5bf9",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_backtest_forensics_receipt.json": "35e9619dd2de0e0b58e7581b13f8ac54ad6768902e06d7ee05f34cb148c6907e",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_task_force_review_receipt.yaml": "0692127d9c16b28131d5159b3b8718a96421b448e1e9bd16ad109c80ab3f7d5a",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/frontier84C_mt5_runtime_realized_winrate_materialization_report.md": "b0bbc6aadc71df89b3f1af272d827cd49005bb1d32a61d1ccbf0fd01774a1950",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/required_gate_coverage_audit_f84c.md": "aa8a2177c824706b82d80139db01c904d9de952dcea7521a5ac7f02982298c04",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/run_manifest.json": "7067000a7bf7d6885c3d88be7145da4279ee59e4e6cd9adc949f314bdb213ec1"
+  },
+  "target_candidate": "f84b_00287",
+  "source_best_candidate": "f84b_01151",
+  "attempt_count": 2,
+  "completed_attempt_count": 2,
+  "lineage_judgment": "runtime_realized_winrate_materialization_connected_with_boundary(경계 있는 런타임 실현 승률 물질화 연결)"
+}
