@@ -1,0 +1,417 @@
+﻿{
+  "allowed_claims": [
+    "f87b_trade_shape_risk_proxy_surface_materialized",
+    "f87b_leakage_and_split_audits_recorded",
+    "f87b_proxy_scout_result_recorded",
+    "f87b_runtime_preflight_decision_recorded"
+  ],
+  "best_model_id": "sequence_context__good_shape_logreg_l2_balanced",
+  "candidate_decision": {
+    "inner_validation_top20": {
+      "bad_risk_rate": 0.75,
+      "candidate_id": "sequence_context__good_shape_logreg_l2_balanced__top_20pct",
+      "good_shape_rate": 0.2571428571428571,
+      "mean_mae_r": 2.1404285714285702,
+      "mean_mfe_r": 1.8166836734693865,
+      "mean_shape_score_r": -0.0887653061224469,
+      "rows": 140,
+      "runtime_claim": "not_claimed",
+      "selection_role": "inner_validation",
+      "selection_uses_oos": false,
+      "shape_score_lift_vs_role": -0.004800918074965049,
+      "top_pct": 0.2,
+      "tp_first_rate": 0.2785714285714286,
+      "trades_per_day_proxy": 0.8536585365853658
+    },
+    "locked_oos_top20_readout_only": {
+      "bad_risk_rate": 0.8614958448753463,
+      "candidate_id": "sequence_context__good_shape_logreg_l2_balanced__top_20pct",
+      "good_shape_rate": 0.14958448753462603,
+      "mean_mae_r": 4.077289275821126,
+      "mean_mfe_r": 3.933292441630398,
+      "mean_shape_score_r": -0.06925207756232687,
+      "rows": 361,
+      "runtime_claim": "not_claimed",
+      "selection_role": "locked_oos_readout",
+      "selection_uses_oos": false,
+      "shape_score_lift_vs_role": -0.10561124310527928,
+      "top_pct": 0.2,
+      "tp_first_rate": 0.31024930747922436,
+      "trades_per_day_proxy": 1.8704663212435233
+    },
+    "meaningful_candidate": false,
+    "next_run_id": "frontier87C_trade_shape_risk_repair_or_rotation_decision_v1",
+    "runtime_probe_trigger_condition_met": false,
+    "selected_candidate_id": "sequence_context__good_shape_logreg_l2_balanced__top_20pct"
+  },
+  "candidate_model_count": 4,
+  "claim_boundary": "f87b_trade_shape_risk_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve",
+  "created_at_utc": "2026-06-18T21:23:25Z",
+  "decision": "complete_f87b_proxy_scout_and_route_next_with_no_runtime_authority",
+  "feature_set_count": 2,
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "oos_selected_model",
+    "task_force_reviewed",
+    "reviewed_by_unspawned_agents"
+  ],
+  "judgment": "weak_or_negative_trade_shape_risk_proxy_no_runtime_evidence",
+  "mismatch_checks": {
+    "decision_mismatches": 0,
+    "label_rows": 4127,
+    "merged_rows": 4127,
+    "source_rows": 4127,
+    "split_mismatches": 0,
+    "timestamp_mismatches": 0
+  },
+  "next_run_id": "frontier87C_trade_shape_risk_repair_or_rotation_decision_v1",
+  "parent_run_id": "frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1",
+  "produced_artifacts": [
+    {
+      "exists": true,
+      "path": "stage_pipelines/stage_frontier_87/frontier87b_trade_shape_risk_proxy_scout.py",
+      "sha256_lf_normalized": "46ea855571e31624ebb04b8e36b446de9048811bd3d6b62d0d0621c15866cf79",
+      "size_bytes": 78924
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/trade_shape_risk_surface.csv",
+      "sha256_lf_normalized": "18cc6fc903d8b4a27b09eacd60425a57daa44594311303c9925f5984bc1eeb2f",
+      "size_bytes": 1572150
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/risk_surface_bins.csv",
+      "sha256_lf_normalized": "e02f4d065b997463ad05e8d2d500003256eacd5fd98419d6d065b9ec735fed07",
+      "size_bytes": 24666
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/f87b_feature_target_schema.json",
+      "sha256_lf_normalized": "29ceae3d23d20034b60638b01dc20370f837f5c96050f243fd587e956180a31c",
+      "size_bytes": 4084
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv",
+      "sha256_lf_normalized": "7d01cff283bb9e2aaf67ee52afea9c7ce3a18d2da7959537889c0374662b71a8",
+      "size_bytes": 852780
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_metrics.json",
+      "sha256_lf_normalized": "c7933e8b90626fc993a13147ab4c77e2a458c066a11d3465af7e1c51e71cc3a6",
+      "size_bytes": 33972
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/candidate_queue.csv",
+      "sha256_lf_normalized": "5ed56d452f7080128b8deb43bdb676d69cdfb54a508918ee348f1674d7a8522c",
+      "size_bytes": 2781
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/models/proxy_model_card.json",
+      "sha256_lf_normalized": "01c5b1096b240d10764ae700fdce9c38aaededf542a6f94e435d8d8e1217c6d2",
+      "size_bytes": 1914
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/run_manifest.json",
+      "sha256_lf_normalized": "227e082abee245a13f60c70b1a850f204625d5f4e2c51d6656ebaaf1c90351de",
+      "size_bytes": 7443
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/summary.json",
+      "sha256_lf_normalized": "6811162f1cbdb09fde4518f4a83165b1225d3ab3a91b7a8fe193975214134f38",
+      "size_bytes": 19919
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/kpi_record.json",
+      "sha256_lf_normalized": "1d22ebf3acd9b497e41864211679a814f1a9ebc467b88612898903a7b53d2813",
+      "size_bytes": 2210
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/reports/result_summary.md",
+      "sha256_lf_normalized": "b7fce7e044388f4539d1cc8aa8a70e3fee4d84b7551ccee99cf5b0b8b05948a5",
+      "size_bytes": 3568
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_execution_summary.json",
+      "sha256_lf_normalized": "6811162f1cbdb09fde4518f4a83165b1225d3ab3a91b7a8fe193975214134f38",
+      "size_bytes": 19919
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_frontier_extra_due_check.json",
+      "sha256_lf_normalized": "626499df5e2723a8afaca01fbf2af2568d14d83f451979035e2da4290e35cf19",
+      "size_bytes": 431
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_frontier_five_stage_direction_synthesis.json",
+      "sha256_lf_normalized": "a4bc507e8a392a059750db48e6bc0d14716767849c7ef45e708c9fbda57ba4d7",
+      "size_bytes": 541
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_frontier_topic_rotation_check.json",
+      "sha256_lf_normalized": "d8bc0009085165517fbb5cf58148da14a34db0d502011c2ef25a0f22973c44cf",
+      "size_bytes": 527
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_feature_leakage_audit.json",
+      "sha256_lf_normalized": "c384862fe918c90826ff23d9270b65bb24b79f45d661e349f675e8824c9ee774",
+      "size_bytes": 463
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_split_boundary_audit.json",
+      "sha256_lf_normalized": "33ff0ee880a54659ced07afffc3110322179cbd3799377e8b7230e6a380dcc4a",
+      "size_bytes": 869
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_data_integrity_audit.json",
+      "sha256_lf_normalized": "85e168eff1026f89ddbdb5edd3dd0d645965792497a1715837dee8c980642488",
+      "size_bytes": 603
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_model_validation_audit.json",
+      "sha256_lf_normalized": "322c8260c506974565eaeb7ca4470ce6fc35ed70310d8b2a2f36f1152b6c76c7",
+      "size_bytes": 1145
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_scope_completion_gate.json",
+      "sha256_lf_normalized": "5ecc960783e348d30e0445cd82085b64ee66226e57c7c5273df6c25310c8bc6c",
+      "size_bytes": 2211
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_kpi_contract_audit.json",
+      "sha256_lf_normalized": "0d4667cbfc1e55039f8a2e30df9a391d4e232900d91c10817a7fa15dba273ba8",
+      "size_bytes": 956
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_artifact_lineage_audit.json",
+      "sha256_lf_normalized": "fb158a86a0570d96b2f79a38b49ad9e32e4066d28605efa68d2e0acbe4af7950",
+      "size_bytes": 25888
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_result_judgment_audit.json",
+      "sha256_lf_normalized": "4c3560630d5197907ae47f7120851de4de6e866d8ea19acf2152a47367b344e2",
+      "size_bytes": 1033
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_final_claim_guard.json",
+      "sha256_lf_normalized": "a935b551a0a0a7e213c835ffe2ef32e2f2a66596eaf2954307300ccc49d85c65",
+      "size_bytes": 1122
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_state_sync_audit.json",
+      "sha256_lf_normalized": "910efb716f9b80467321e4f2346b6d9d912d48ada2dec25bee0466ed2c9021bd",
+      "size_bytes": 1285
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_run_evidence_receipt.json",
+      "sha256_lf_normalized": "f7058c1e3efe94732ae34d1f27b571242aa190c1457604d6db9f155c369aace7",
+      "size_bytes": 9061
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_experiment_design_receipt.json",
+      "sha256_lf_normalized": "a20bccb815f3ca07b64478f15a78e7367e5acd2b93d8a98b094a722531555b12",
+      "size_bytes": 1406
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_data_integrity_receipt.json",
+      "sha256_lf_normalized": "e2aad147391983432d0af1460d09df6de1966ecedad05eaa82dfde9d6ae06428",
+      "size_bytes": 2252
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_model_validation_receipt.json",
+      "sha256_lf_normalized": "408d617b3d7149bea982771ee23834c70378c11797cbe6898eabc7a98dfc6d1c",
+      "size_bytes": 1166
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_artifact_lineage_receipt.json",
+      "sha256_lf_normalized": "00d410db28ddbdc0b81fa413686130c0b49fd8c3e22936bfde8721652de130b4",
+      "size_bytes": 18181
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_result_judgment_receipt.json",
+      "sha256_lf_normalized": "7f2512651947fc3666701053513647d33b182bf5f08b0085dea0753deb7ba014",
+      "size_bytes": 1473
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_claim_discipline_receipt.json",
+      "sha256_lf_normalized": "6fdfd5ad598e4c192e0f788aa224b9ceea3de3a6bc207c0131d996a4108a7edc",
+      "size_bytes": 1090
+    },
+    {
+      "exists": true,
+      "path": "docs/decisions/2026-06-19_frontier87b_trade_shape_risk_proxy_scout.md",
+      "sha256_lf_normalized": "c0ca3e989e936f39de525c977c3a418dd498da4f922661399c5386f1694b84d6",
+      "size_bytes": 510
+    },
+    {
+      "exists": true,
+      "path": "docs/workspace/workspace_state.yaml",
+      "sha256_lf_normalized": "3e393c13a644e37c4c812e422d7814a3bc2f4524fb328bee6885f09ee4eee3bf",
+      "size_bytes": 1488
+    },
+    {
+      "exists": true,
+      "path": "docs/context/current_working_state.md",
+      "sha256_lf_normalized": "309bc71c54d33bba21cce56d43b71c21d256e6ed4bb7c81c200729c08aea43ec",
+      "size_bytes": 931
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/00_spec/stage_brief.md",
+      "sha256_lf_normalized": "4dcfa353a2693f5bdbf7231ef97d1cac5a553f3cf79ddf9eb4d7e3f98e5e1910",
+      "size_bytes": 906
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/04_selected/selection_status.md",
+      "sha256_lf_normalized": "c342e0b9c8521351d2c165d6d5ebf4cecdd01876bedeb6dc522843ebc5b709e0",
+      "size_bytes": 689
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/review_index.md",
+      "sha256_lf_normalized": "403f0c39d85903e4074d48e01fd1f8c0a0d5483c422639f1a407c27cc5ebccd9",
+      "size_bytes": 1032
+    },
+    {
+      "exists": true,
+      "path": "docs/registers/run_registry.csv",
+      "sha256_lf_normalized": "b2b7828a93dd9859d4d29942df99697b1c7c967b2ef114ce7977d4ac9746f0b6",
+      "size_bytes": 2869304
+    },
+    {
+      "exists": true,
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "sha256_lf_normalized": "2bf29d9fce0e6bd0b82594d3e8ed2e7c271a352be6cb70340f903b2b51de72ac",
+      "size_bytes": 17777333
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/stage_run_ledger.csv",
+      "sha256_lf_normalized": "93e20e164e91bb19ac73281ff21a3d4f7a310ba37736cc4fba121905b51c32e7",
+      "size_bytes": 11734
+    },
+    {
+      "exists": true,
+      "path": "docs/registers/artifact_registry.csv",
+      "sha256_lf_normalized": "ee8439699cfb7446ce08739fe74e8af26e356adbc58b1f91ee54fc7115249fe4",
+      "size_bytes": 22113293
+    }
+  ],
+  "rows": 4127,
+  "run_id": "frontier87B_trade_shape_risk_proxy_scout_v1",
+  "source_identities": [
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/design/f87a_experiment_design.json",
+      "sha256_lf_normalized": "796a6c9cd207db26e6d462b4712bdcc50123fe324cebdd8fd1c73185ae72510a",
+      "size_bytes": 12595
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/design/runtime_trade_shape_risk_hypothesis_contract.json",
+      "sha256_lf_normalized": "6c30daf205cda6ccbae741829981a78c8d254bb4bfc2b597fa30ad27acaee33a",
+      "size_bytes": 1232
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/design/f87b_proxy_scout_execution_brief.json",
+      "sha256_lf_normalized": "a0b4428114b5831f0dd582c74c257045434d1e534b2b14c0ea2d0796e6dd41de",
+      "size_bytes": 1040
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv",
+      "sha256_lf_normalized": "02a4d489af9877eabc3503383df6ae4c93d81f37b84a03e4e9fd18e96cef40c7",
+      "size_bytes": 1039915
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_execution_summary.json",
+      "sha256_lf_normalized": "859ba0b7af12d027ce2d4d0eedc1bff5a8718c0d5c1baf9f965ebb9057abd64e",
+      "size_bytes": 2797
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/sequence_feature_surface/sequence_feature_surface.csv",
+      "sha256_lf_normalized": "0851f64dd571e7fb4d20e8a27faff141fd00d469ff074715c6dad80eb39728db",
+      "size_bytes": 3073583
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/sequence_feature_surface/feature_schema.json",
+      "sha256_lf_normalized": "3dae391ef83b1e6f2c1a5456a7bddc5e4461099cee33a1e41b180610e3fe3f5d",
+      "size_bytes": 5996
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86g_execution_summary.json",
+      "sha256_lf_normalized": "ca25f752b2fd156d889560b942d8927c15cc6fca54359b6290b62a644f3f3e88",
+      "size_bytes": 46020
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/training_label_split_contract_fpmarkets_v2.md",
+      "sha256_lf_normalized": "142cbace9a4ddb4868aba8dec7ec1bf0ab43fd51087a33c7c2ccbe0fd906d865",
+      "size_bytes": 3754
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/time_axis_policy_fpmarkets_v2.md",
+      "sha256_lf_normalized": "0c7f606ad696c3cf9fa024752e553185f7b7025edee9943ee81fa92a667a3b31",
+      "size_bytes": 3402
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/feature_calculation_spec_fpmarkets_v2.md",
+      "sha256_lf_normalized": "8c9ebe68f5554dfdd4d93b0131ca3ea7e54d9f3c298a6fc11b59d47a365b5d65",
+      "size_bytes": 14357
+    },
+    {
+      "exists": true,
+      "path": "docs/policies/frontier_governance.md",
+      "sha256_lf_normalized": "69fd04529ba01eb149785d1eecc9f61a42bd72b2b84dfd0876a8a051e1ebe830",
+      "size_bytes": 28483
+    }
+  ],
+  "stage_id": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation",
+  "status": "f87b_trade_shape_risk_proxy_weak_or_negative_repair_or_rotation_required_no_authority",
+  "verification_profile": "proxy_scout"
+}

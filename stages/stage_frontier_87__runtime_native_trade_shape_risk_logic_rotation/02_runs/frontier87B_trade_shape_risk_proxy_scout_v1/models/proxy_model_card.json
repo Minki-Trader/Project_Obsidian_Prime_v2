@@ -1,0 +1,43 @@
+﻿{
+  "best_model_id": "sequence_context__good_shape_logreg_l2_balanced",
+  "claim_boundary": "f87b_trade_shape_risk_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve",
+  "created_at_utc": "2026-06-18T21:23:25Z",
+  "model_artifact_written": false,
+  "model_cards": [
+    {
+      "feature_count": 34,
+      "feature_order_hash": "df9131155c3b8e9d9e2a7fac1e2162f1129cc48ac8c32240e4a30787a961af5f",
+      "feature_set": "sequence_context",
+      "model_id": "sequence_context__good_shape_logreg_l2_balanced",
+      "model_kind": "classification",
+      "selection_uses_oos": false
+    },
+    {
+      "feature_count": 50,
+      "feature_order_hash": "3fdc964335cf9d5e07d362c3218ce0d40a76e0546051b76fdffdb10292b0acb5",
+      "feature_set": "sequence_plus_scalar_context",
+      "model_id": "sequence_plus_scalar_context__good_shape_logreg_l2_balanced",
+      "model_kind": "classification",
+      "selection_uses_oos": false
+    },
+    {
+      "feature_count": 34,
+      "feature_order_hash": "df9131155c3b8e9d9e2a7fac1e2162f1129cc48ac8c32240e4a30787a961af5f",
+      "feature_set": "sequence_context",
+      "model_id": "sequence_context__shape_score_extra_trees_depth5",
+      "model_kind": "regression",
+      "selection_uses_oos": false
+    },
+    {
+      "feature_count": 50,
+      "feature_order_hash": "3fdc964335cf9d5e07d362c3218ce0d40a76e0546051b76fdffdb10292b0acb5",
+      "feature_set": "sequence_plus_scalar_context",
+      "model_id": "sequence_plus_scalar_context__shape_score_extra_trees_depth5",
+      "model_kind": "regression",
+      "selection_uses_oos": false
+    }
+  ],
+  "reason_model_artifact_not_written": "proxy_scout_surface_only; no ONNX or runtime handoff claim",
+  "run_id": "frontier87B_trade_shape_risk_proxy_scout_v1",
+  "stage_id": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation"
+}

@@ -1,0 +1,36 @@
+﻿{
+  "allowed_claims": [
+    "f87b_trade_shape_risk_proxy_surface_materialized",
+    "f87b_leakage_and_split_audits_recorded",
+    "f87b_proxy_scout_result_recorded",
+    "f87b_runtime_preflight_decision_recorded"
+  ],
+  "audit_name": "model_validation_audit",
+  "completed_forbidden": true,
+  "counts": {
+    "best_model_id": "sequence_context__good_shape_logreg_l2_balanced",
+    "candidate_count": 4,
+    "oos_selection_used": false,
+    "selection_basis": "inner_validation_only_top20_shape_score_lift_plus_density_tiebreak"
+  },
+  "created_at_utc": "2026-06-18T21:23:25Z",
+  "findings": [],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "oos_selected_model",
+    "task_force_reviewed",
+    "reviewed_by_unspawned_agents"
+  ],
+  "packet_id": "frontier87B_trade_shape_risk_proxy_scout_v1",
+  "passed": true,
+  "status": "pass_proxy_validation_boundary"
+}

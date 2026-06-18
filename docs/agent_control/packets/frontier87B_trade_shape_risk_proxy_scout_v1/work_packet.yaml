@@ -1,0 +1,457 @@
+version: work_packet_schema_v2_1
+packet_lifecycle: new_packet
+packet_id: frontier87B_trade_shape_risk_proxy_scout_v1
+created_at_utc: '2026-06-18T21:23:25Z'
+user_request:
+  user_quote: /goal active continuation
+  requested_action: Run F87B trade-shape/risk proxy scout
+  requested_count:
+    value: 1
+    n_a_reason: ''
+  ambiguous_terms:
+  - Goal remains active; Goal Achieve is not claimed.
+current_truth:
+  active_stage: stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation
+  current_run: frontier87B_trade_shape_risk_proxy_scout_v1
+  latest_completed_run: frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/04_selected/selection_status.md
+  claim_boundary: f87b_trade_shape_risk_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve
+work_classification:
+  primary_family: experiment_execution
+  detected_families:
+  - experiment_execution
+  - state_sync
+  - artifact_lineage
+  touched_surfaces:
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews
+  - docs/workspace/workspace_state.yaml
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    proxy_overclaimed_as_runtime: high
+    oos_selection_leakage: high
+    same_axis_first_touch_repair: medium
+  hard_stop_risks:
+  - Do not claim runtime economics without Strategy Tester evidence.
+  - Do not use OOS readout for model or threshold selection.
+  - Do not claim Task Force reviewed/pass without actual subagent calls.
+  required_gates:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - kpi_contract_audit
+  - artifact_lineage_audit
+  - result_judgment_receipt
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - completion
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - runtime_verified
+  - strategy_tester_runtime_economics
+  - materialization_ready
+  - ea_onnx_runtime_bundle_ready
+  - oos_selected_model
+  - task_force_reviewed
+  - reviewed_by_unspawned_agents
+decision_lock:
+  mode: assume_safe_default
+  assumptions:
+    task_force_required_now: false
+    strategy_tester_required_now: false
+    proxy_scout_required: true
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+  - experiment_execution
+  target_surfaces:
+  - trade-shape/risk proxy surface
+  - proxy scout readout
+  - runtime preflight routing decision
+  scope_units:
+  - proxy_surface
+  - model_readout
+  - receipt
+  - state_sync
+  execution_layers:
+  - local_python_execution
+  - proxy_scout
+  mutation_policy:
+    allowed: true
+    user_quote: /goal active continuation
+  evidence_layers:
+  - F87A handoff
+  - F86D labels
+  - F86G sequence feature surface
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: false
+    rationale: All 4127 source rows are small enough to process.
+  claim_boundary:
+    allowed_claims:
+    - f87b_trade_shape_risk_proxy_surface_materialized
+    - f87b_leakage_and_split_audits_recorded
+    - f87b_proxy_scout_result_recorded
+    - f87b_runtime_preflight_decision_recorded
+    forbidden_claims:
+    - completion
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - runtime_verified
+    - strategy_tester_runtime_economics
+    - materialization_ready
+    - ea_onnx_runtime_bundle_ready
+    - oos_selected_model
+    - task_force_reviewed
+    - reviewed_by_unspawned_agents
+    claim_boundary: f87b_trade_shape_risk_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve
+  variants_requested:
+    value: 4
+    n_a_reason: ''
+  verification_layers:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - kpi_contract_audit
+  - artifact_lineage_audit
+  - result_judgment_receipt
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  mt5_required: not_required_proxy_scout_no_runtime_claim
+  top_k_reduction_allowed: false
+  scope_reduction_requires_user_quote: false
+verification_profile:
+  profile_id: proxy_scout
+  claim_surface:
+    allowed_claims:
+    - f87b_trade_shape_risk_proxy_surface_materialized
+    - f87b_leakage_and_split_audits_recorded
+    - f87b_proxy_scout_result_recorded
+    - f87b_runtime_preflight_decision_recorded
+    forbidden_claims:
+    - completion
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - runtime_verified
+    - strategy_tester_runtime_economics
+    - materialization_ready
+    - ea_onnx_runtime_bundle_ready
+    - oos_selected_model
+    - task_force_reviewed
+    - reviewed_by_unspawned_agents
+    claim_boundary: f87b_trade_shape_risk_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve
+  trigger_sources:
+  - active_goal
+  - workspace_state_current_run_f87b
+  - F87A_handoff
+  protected_claims:
+  - f87b_trade_shape_risk_proxy_surface_materialized
+  - f87b_leakage_and_split_audits_recorded
+  - f87b_proxy_scout_result_recorded
+  - f87b_runtime_preflight_decision_recorded
+  required_evidence:
+  - stage_pipelines/stage_frontier_87/frontier87b_trade_shape_risk_proxy_scout.py
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/trade_shape_risk_surface.csv
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/risk_surface_bins.csv
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/f87b_feature_target_schema.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_metrics.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/candidate_queue.csv
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/models/proxy_model_card.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/run_manifest.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/summary.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/kpi_record.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/reports/result_summary.md
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_execution_summary.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_frontier_extra_due_check.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_frontier_five_stage_direction_synthesis.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_frontier_topic_rotation_check.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_feature_leakage_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_split_boundary_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_data_integrity_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_model_validation_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_scope_completion_gate.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_kpi_contract_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_artifact_lineage_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_result_judgment_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_final_claim_guard.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_state_sync_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_run_evidence_receipt.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_experiment_design_receipt.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_data_integrity_receipt.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_model_validation_receipt.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_artifact_lineage_receipt.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_result_judgment_receipt.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_claim_discipline_receipt.json
+  - docs/decisions/2026-06-19_frontier87b_trade_shape_risk_proxy_scout.md
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/00_spec/stage_brief.md
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/04_selected/selection_status.md
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/review_index.md
+  - docs/registers/run_registry.csv
+  - docs/registers/alpha_run_ledger.csv
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/stage_run_ledger.csv
+  - docs/registers/artifact_registry.csv
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/work_packet.yaml
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/skill_receipts.json
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/final_claim_guard.json
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/state_sync_audit.json
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/closeout_gate.json
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/required_gate_coverage_audit.json
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/work_packet_schema_lint.json
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/skill_receipt_schema_lint.json
+  gates_not_run_with_reason:
+  - gate: runtime_evidence_gate
+    reason_code: outside_claim_surface
+    reason: F87B does not protect Strategy Tester runtime/materialization/economics claims.
+    claim_effect: Runtime verified/economics/materialization/authority/Goal Achieve claims are forbidden.
+  - gate: codex_task_force_review_packet
+    reason_code: not_triggered_for_f87b_proxy_scout
+    reason: No Task Force reviewed/pass claim, policy change, or roster review claim is made.
+    claim_effect: No Task Force review claim is made; unavailable/not_called is not treated as pass.
+  stop_conditions:
+  - Stop after proxy scout, gates, state sync, and next-run routing decision are recorded.
+acceptance_criteria:
+- id: AC-001
+  text: Trade-shape/risk proxy surface exists.
+  expected_artifact: stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/trade_shape_risk_surface.csv
+  verification_method: scope_completion_gate
+  required: true
+- id: AC-002
+  text: Proxy metrics and candidate queue exist.
+  expected_artifact: stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_metrics.json
+  verification_method: scope_completion_gate
+  required: true
+- id: AC-003
+  text: Final claim guard forbids runtime authority and Goal Achieve.
+  expected_artifact: stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_final_claim_guard.json
+  verification_method: final_claim_guard
+  required: true
+work_plan:
+  phases:
+  - Read F87A handoff and F86 references.
+  - Build trade-shape/risk proxy surface.
+  - Train finite proxy candidates.
+  - Write gates, receipts, state sync.
+  expected_outputs:
+  - stage_pipelines/stage_frontier_87/frontier87b_trade_shape_risk_proxy_scout.py
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/trade_shape_risk_surface.csv
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/risk_surface_bins.csv
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/f87b_feature_target_schema.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_metrics.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/candidate_queue.csv
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/models/proxy_model_card.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/run_manifest.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/summary.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/kpi_record.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/reports/result_summary.md
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_execution_summary.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_frontier_extra_due_check.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_frontier_five_stage_direction_synthesis.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_frontier_topic_rotation_check.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_feature_leakage_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_split_boundary_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_data_integrity_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_model_validation_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_scope_completion_gate.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_kpi_contract_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_artifact_lineage_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_result_judgment_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_final_claim_guard.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_state_sync_audit.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_run_evidence_receipt.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_experiment_design_receipt.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_data_integrity_receipt.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_model_validation_receipt.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_artifact_lineage_receipt.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_result_judgment_receipt.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87b_claim_discipline_receipt.json
+  - docs/decisions/2026-06-19_frontier87b_trade_shape_risk_proxy_scout.md
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/00_spec/stage_brief.md
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/04_selected/selection_status.md
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/review_index.md
+  - docs/registers/run_registry.csv
+  - docs/registers/alpha_run_ledger.csv
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/stage_run_ledger.csv
+  - docs/registers/artifact_registry.csv
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/work_packet.yaml
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/skill_receipts.json
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/final_claim_guard.json
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/state_sync_audit.json
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/closeout_gate.json
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/required_gate_coverage_audit.json
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/work_packet_schema_lint.json
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/skill_receipt_schema_lint.json
+  stop_conditions:
+  - No runtime/materialization/economics/Goal Achieve claim.
+skill_routing:
+  primary_family: experiment_execution
+  primary_skill: obsidian-run-evidence-system
+  support_skills:
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-claim-discipline
+  skills_considered:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-claim-discipline
+  - obsidian-task-force-review
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  skills_selected:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-claim-discipline
+  skills_not_used:
+  - skill: obsidian-task-force-review
+    reason: Not triggered; no Task Force reviewed/pass claim is made for F87B.
+  - skill: obsidian-runtime-parity
+    reason: No EA/ONNX/Strategy Tester runtime parity or handoff claim is made in F87B.
+  - skill: obsidian-backtest-forensics
+    reason: No Strategy Tester report/trade list exists in F87B.
+  required_skill_receipts:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-claim-discipline
+  required_gates:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - kpi_contract_audit
+  - artifact_lineage_audit
+  - result_judgment_receipt
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  raw_evidence:
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/design/f87a_experiment_design.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/design/runtime_trade_shape_risk_hypothesis_contract.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/design/f87b_proxy_scout_execution_brief.json
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_execution_summary.json
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/sequence_feature_surface/sequence_feature_surface.csv
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/sequence_feature_surface/feature_schema.json
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86g_execution_summary.json
+  - docs/contracts/training_label_split_contract_fpmarkets_v2.md
+  - docs/contracts/time_axis_policy_fpmarkets_v2.md
+  - docs/contracts/feature_calculation_spec_fpmarkets_v2.md
+  - docs/policies/frontier_governance.md
+  machine_readable:
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_metrics.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/candidate_queue.csv
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/kpi_record.json
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/summary.json
+  - docs/agent_control/packets/frontier87B_trade_shape_risk_proxy_scout_v1/skill_receipts.json
+  human_readable:
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/reports/result_summary.md
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/00_spec/stage_brief.md
+gates:
+  required:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - kpi_contract_audit
+  - artifact_lineage_audit
+  - result_judgment_receipt
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  work_packet_schema_lint: pending_external_lint
+  skill_receipt_schema_lint: pending_external_lint
+  frontier_extra_due_check: pass_not_due
+  frontier_five_stage_direction_synthesis: pass
+  frontier_topic_rotation_check: pass
+  scope_completion_gate: pass
+  data_integrity_audit: pass
+  model_validation_audit: pass_proxy_validation_boundary
+  kpi_contract_audit: pass
+  artifact_lineage_audit: pass_connected_with_boundary
+  result_judgment_receipt: pass_with_boundary
+  state_sync_audit: pass
+  required_gate_coverage_audit: pending_external_lint
+  final_claim_guard: pass
+  not_applicable_with_reason:
+    runtime_evidence_gate: outside_claim_surface; no Strategy Tester runtime/materialization/economics claim
+    codex_task_force_review_packet: not triggered; no Task Force review claim
+final_claim_policy:
+  allowed_claims:
+  - f87b_trade_shape_risk_proxy_surface_materialized
+  - f87b_leakage_and_split_audits_recorded
+  - f87b_proxy_scout_result_recorded
+  - f87b_runtime_preflight_decision_recorded
+  forbidden_claims:
+  - completion
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - runtime_verified
+  - strategy_tester_runtime_economics
+  - materialization_ready
+  - ea_onnx_runtime_bundle_ready
+  - oos_selected_model
+  - task_force_reviewed
+  - reviewed_by_unspawned_agents
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml

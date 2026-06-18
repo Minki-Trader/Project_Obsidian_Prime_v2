@@ -1,15 +1,15 @@
 ﻿# F87 Selection Status(F87 선택 상태)
 
-Updated(갱신): 2026-06-18T20:55:43Z
+Selected baseline(선택 기준선): not claimed(주장 없음)
 
-Status(상태): `f87a_stage_open_design_prepared_f87b_proxy_scout_planned_no_authority`
+Runtime authority(런타임 권위): not claimed(주장 없음)
 
-Current run(현재 실행): `frontier87B_trade_shape_risk_proxy_scout_v1`
+Goal Achieve(목표 달성): not claimed(주장 없음)
 
-Latest completed run(최근 완료 실행): `frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1`
+Latest completed run(최근 완료 실행): `frontier87B_trade_shape_risk_proxy_scout_v1`
 
-Action(행동): F87A design-only stage open(설계 전용 단계 개방)을 닫고 F87B proxy scout(F87B 프록시 탐색)를 계획했다.
+Current run(현재 실행): `frontier87C_trade_shape_risk_repair_or_rotation_decision_v1`
 
-Effect(효과): F87은 이제 trade-shape/risk proxy surface(거래 형태/위험 프록시 표면) 생성으로 진행하며, 아직 runtime candidate(런타임 후보), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 없다.
+Action(행동): F87B proxy scout(프록시 탐색) 결과를 기록했다.
 
-Claim boundary(주장 경계): `stage_open_design_only_no_runtime_materialization_no_strategy_tester_economics_no_runtime_authority_no_goal_achieve`.
+Effect(효과): proxy clue(프록시 단서)는 남겼지만 MT5 Strategy Tester(전략 테스터) 근거가 없으므로 선택 기준선이나 운영 승격으로 쓰지 않는다.

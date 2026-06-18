@@ -1,0 +1,34 @@
+﻿{
+  "allowed_claims": [
+    "f87b_trade_shape_risk_proxy_surface_materialized",
+    "f87b_leakage_and_split_audits_recorded",
+    "f87b_proxy_scout_result_recorded",
+    "f87b_runtime_preflight_decision_recorded"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "oos_selected_model",
+    "task_force_reviewed",
+    "reviewed_by_unspawned_agents"
+  ],
+  "model_or_threshold_surface": "sequence_context__good_shape_logreg_l2_balanced",
+  "overfit_checks": [
+    "finite candidate set",
+    "no OOS selection",
+    "no threshold-only repair claim"
+  ],
+  "packet_id": "frontier87B_trade_shape_risk_proxy_scout_v1",
+  "selection_metric_boundary": "top20 shape_score lift and proxy density on inner validation only",
+  "skill": "obsidian-model-validation",
+  "status": "executed",
+  "validation_split": "inner_validation selected; locked_oos_readout_only reported after selection"
+}
