@@ -2303,3 +2303,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1 -->
 - `frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1` opened F83(전선83) as runtime-realized PnL teacher distillation(런타임 실현 손익 교사 증류). Result(결과): best exportable seed(최선 내보내기 가능 씨앗) `f83a_0019` OOS net/PF/DD/trades-day(표본외 순손익/수익 팩터/손실폭/일 거래) `24.019999999999996/1.3314932376483577/2.043823928640711/0.7098445595854922`; ONNX parity max diff(온엑스 동등성 최대 차이) `2.970373558230932e-08`. Boundary(경계): proxy seed only, no authority(프록시 씨앗 전용, 권위 없음). Next(다음): `frontier83B_mt5_runtime_materialization_exportable_teacher_overlay_v1`.
+
+<!-- frontier83B_mt5_runtime_materialization_exportable_teacher_overlay_v1 -->
+- `frontier83B_mt5_runtime_materialization_exportable_teacher_overlay_v1` materialized F83A exportable teacher overlay(F83A 내보내기 가능 교사 덧씌움)를 MT5 Strategy Tester(MT5 전략 테스터)로 실행/시도했다. Target(대상): `f83a_0019`. Attempts(시도): `2`, completed(완료): `2`. Boundary(경계): runtime materialization only, no authority(런타임 물질화만, 권위 없음).
