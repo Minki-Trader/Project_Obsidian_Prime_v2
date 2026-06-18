@@ -1,0 +1,308 @@
+{
+  "packet_id": "frontier86I_stage_closeout_or_f87_rotation_handoff_v1",
+  "status": "pass",
+  "completed_forbidden": true,
+  "audits": [
+    {
+      "audit_name": "skill_receipt_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_skills": [
+          "obsidian-stage-transition",
+          "obsidian-run-evidence-system",
+          "obsidian-artifact-lineage",
+          "obsidian-result-judgment",
+          "obsidian-claim-discipline",
+          "obsidian-answer-clarity"
+        ],
+        "receipt_count": 6
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "work_packet_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "version": "work_packet_schema_v2_1",
+        "has_v2_fields": true,
+        "packet_lifecycle": "new_packet"
+      },
+      "allowed_claims": [
+        "work_packet_schema_valid"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "state_sync_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "active_stage": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation",
+        "workspace_active_branch": "",
+        "actual_git_branch": "main",
+        "current_run_values": {
+          "workspace_state": "frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1",
+          "current_working_state": "frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1",
+          "selection_status": "frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1"
+        },
+        "stage_brief_boundary": "",
+        "registry_has_current_run": true,
+        "stage_ledger_has_current_run": true,
+        "source_paths": {
+          "workspace_state": "docs/workspace/workspace_state.yaml",
+          "current_working_state": "docs/context/current_working_state.md",
+          "selection_status": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/04_selected/selection_status.md",
+          "stage_brief": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/00_spec/stage_brief.md",
+          "run_registry": "docs/registers/run_registry.csv",
+          "stage_ledger": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/stage_run_ledger.csv"
+        }
+      },
+      "allowed_claims": [
+        "current_truth_synced",
+        "state_sync_completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "receipt_count": 6,
+        "schema_path": "docs/agent_control/skill_receipt_schema.yaml"
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "frontier_extra_due_check",
+      "status": "pass_not_due",
+      "passed": false,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {},
+      "allowed_claims": [],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "frontier_five_stage_direction_synthesis",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {},
+      "allowed_claims": [],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "frontier_topic_rotation_check",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {},
+      "allowed_claims": [],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "scope_completion_gate",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {},
+      "allowed_claims": [],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "artifact_lineage_audit",
+      "status": "pass_connected_with_boundary",
+      "passed": false,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {},
+      "allowed_claims": [],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "result_judgment_receipt",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": true,
+      "findings": [],
+      "counts": {},
+      "allowed_claims": [
+        "f86_stage_closed_negative_no_authority",
+        "f86_source_label_sequence_evidence_preserved_as_reference",
+        "f87_pending_open_with_material_new_axis",
+        "frontier_extra_due_check_not_due_after_f86",
+        "five_stage_direction_synthesis_recorded",
+        "topic_rotation_check_passed_for_f87"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "runtime_verified",
+        "strategy_tester_runtime_economics",
+        "materialization_ready",
+        "ea_onnx_runtime_bundle_ready",
+        "task_force_reviewed",
+        "reviewed_by_unspawned_agents"
+      ]
+    },
+    {
+      "audit_name": "work_packet_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "version": "work_packet_schema_v2_1",
+        "has_v2_fields": true,
+        "packet_lifecycle": "new_packet"
+      },
+      "allowed_claims": [
+        "work_packet_schema_valid"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "receipt_count": 6,
+        "schema_path": "docs/agent_control/skill_receipt_schema.yaml"
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "closeout_report_check",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/frontier86I_stage_closeout_or_f87_rotation_handoff_report.md",
+        "required_headings": [
+          "Conclusion",
+          "What changed",
+          "What gates passed",
+          "What gates were not applicable",
+          "What is still not enforced",
+          "Allowed claims",
+          "Forbidden claims",
+          "Next hardening step"
+        ]
+      },
+      "allowed_claims": [
+        "human_closeout_available"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_gates": [
+          "artifact_lineage_audit",
+          "final_claim_guard",
+          "frontier_extra_due_check",
+          "frontier_five_stage_direction_synthesis",
+          "frontier_topic_rotation_check",
+          "required_gate_coverage_audit",
+          "result_judgment_receipt",
+          "scope_completion_gate",
+          "skill_receipt_schema_lint",
+          "state_sync_audit",
+          "work_packet_schema_lint"
+        ],
+        "executed_audits": [
+          "artifact_lineage_audit",
+          "closeout_report_check",
+          "final_claim_guard",
+          "frontier_extra_due_check",
+          "frontier_five_stage_direction_synthesis",
+          "frontier_topic_rotation_check",
+          "required_gate_coverage_audit",
+          "result_judgment_receipt",
+          "scope_completion_gate",
+          "skill_receipt_lint",
+          "skill_receipt_schema_lint",
+          "state_sync_audit",
+          "work_packet_schema_lint"
+        ],
+        "not_applicable_with_reason": {
+          "runtime_evidence_gate": "outside_claim_surface; no Strategy Tester runtime/materialization/economics claim",
+          "codex_task_force_review_packet": "not triggered; no Task Force review claim"
+        },
+        "declared_not_implemented": {}
+      },
+      "allowed_claims": [
+        "gate_coverage_complete"
+      ],
+      "forbidden_claims": []
+    }
+  ],
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "status": "pass",
+    "passed": true,
+    "completed_forbidden": false,
+    "findings": [],
+    "counts": {
+      "requested_claims": [
+        "f86_stage_closed_negative_no_authority",
+        "f87_pending_open_with_material_new_axis"
+      ],
+      "source_audits": [
+        "skill_receipt_lint",
+        "work_packet_schema_lint",
+        "state_sync_audit",
+        "skill_receipt_schema_lint",
+        "frontier_extra_due_check",
+        "frontier_five_stage_direction_synthesis",
+        "frontier_topic_rotation_check",
+        "scope_completion_gate",
+        "artifact_lineage_audit",
+        "result_judgment_receipt",
+        "work_packet_schema_lint",
+        "skill_receipt_schema_lint",
+        "closeout_report_check",
+        "required_gate_coverage_audit"
+      ]
+    },
+    "allowed_claims": [
+      "f86_stage_closed_negative_no_authority",
+      "f87_pending_open_with_material_new_axis"
+    ],
+    "forbidden_claims": []
+  }
+}

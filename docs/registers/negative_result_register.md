@@ -1487,3 +1487,11 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 
 <!-- frontier86H_sequence_axis_repair_or_rotation_decision_v1 -->
 - `frontier86H_sequence_axis_repair_or_rotation_decision_v1` records that the F86 first-touch pre-entry sequence axis(첫 터치 진입 전 시퀀스 축) did not create a runtime materialization candidate(런타임 물질화 후보). Salvage value(회수 가치): F86D first-touch label source(첫 터치 라벨 원천) and F86G leakage-safe feature schema(누수 안전 피처 스키마) remain bounded reference evidence(경계 있는 참고 근거). Reopen condition(재개 조건): materially new source/data representation or runtime evidence(실질 신규 원천/데이터 표현 또는 런타임 근거), not same five-minute summary retuning(동일 5분 요약 재조정 아님).
+
+<!-- frontier86I_stage_closeout_or_f87_rotation_handoff_v1 -->
+- Run(실행): `frontier86I_stage_closeout_or_f87_rotation_handoff_v1`
+- Label(라벨): `negative_memory_with_preserved_reference_and_next_frontier_proposal(부정 기억과 보존 참고 및 다음 전선 제안)`
+- Evidence(근거): F86E/F86G proxy surfaces(프록시 표면)는 weak/negative(약함/부정)였고 F86H는 sequence repair(시퀀스 수리)를 capped(상한 처리)했다.
+- Do not repeat(반복 금지): same first-touch pre-entry scalar/sequence threshold/filter retune(동일 첫 터치 진입 전 스칼라/시퀀스 임계값/필터 재조정).
+- Reopen condition(재개 조건): new axis/new evidence/material novelty delta(새 축/새 근거/실질 신규성 차이), not hidden same-axis continuation(숨은 동일 축 지속 아님).
+- Boundary(경계): `stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`

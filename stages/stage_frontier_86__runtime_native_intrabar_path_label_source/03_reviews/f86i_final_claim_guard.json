@@ -1,0 +1,35 @@
+﻿{
+  "audit_name": "final_claim_guard",
+  "status": "pass",
+  "allowed_claims": [
+    "f86_stage_closed_negative_no_authority",
+    "f86_source_label_sequence_evidence_preserved_as_reference",
+    "f87_pending_open_with_material_new_axis",
+    "frontier_extra_due_check_not_due_after_f86",
+    "five_stage_direction_synthesis_recorded",
+    "topic_rotation_check_passed_for_f87"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "task_force_reviewed",
+    "reviewed_by_unspawned_agents"
+  ],
+  "blocked_if_claimed": [
+    "Goal Achieve",
+    "runtime authority",
+    "live readiness",
+    "selected baseline",
+    "Task Force reviewed/pass without actual_subagent_calls",
+    "git push as validation"
+  ],
+  "claim_boundary": "stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

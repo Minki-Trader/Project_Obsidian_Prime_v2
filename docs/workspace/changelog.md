@@ -1,4 +1,12 @@
-﻿# 2026-06-18 - F86A Stage Open(F86A 단계 개방)
+﻿# 2026-06-19 - F86I Closeout Rotate F87(F86I 마감 및 F87 회전)
+
+<!-- frontier86I_stage_closeout_or_f87_rotation_handoff_v1 -->
+
+- Action(행동): `frontier86I_stage_closeout_or_f87_rotation_handoff_v1`로 F86을 negative/no authority(부정/권위 없음) 마감하고 `frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1`를 pending open(개방 대기)으로 동기화했다.
+- Effect(효과): F86 first-touch scalar/sequence repair(첫 터치 스칼라/시퀀스 수리) 반복을 막고 F87 runtime-native trade shape/risk logic(런타임 네이티브 거래 형태/위험 로직) 축으로 회전한다.
+- Boundary(경계): `stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+# 2026-06-18 - F86A Stage Open(F86A 단계 개방)
 
 - Action(행동): `frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1`로 F86을 `work_packet_schema_v2_1(작업 묶음 스키마 2.1)` design_only(설계 전용) frontier open(전선 개방)으로 기록했다.
 - Effect(효과): `frontier_extra_due_check(전선 추가 도래 점검) -> frontier_five_stage_direction_synthesis(전선 5단계 방향 종합) -> frontier_topic_rotation_check(전선 주제 회전 점검)` 순서를 남기고, F86B `frontier86B_intrabar_path_source_integrity_proxy_design_v1`로 넘겼다.

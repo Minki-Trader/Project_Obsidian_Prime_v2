@@ -1,0 +1,140 @@
+﻿{
+  "run_id": "frontier86I_stage_closeout_or_f87_rotation_handoff_v1",
+  "stage_id": "stage_frontier_86__runtime_native_intrabar_path_label_source",
+  "created_at_utc": "2026-06-18T20:40:18Z",
+  "status": "f86_closed_negative_intrabar_first_touch_axis_rotate_to_f87_no_authority",
+  "judgment": "negative_first_touch_intrabar_source_sequence_learning_no_runtime_candidate_no_authority",
+  "decision": "close_f86_negative_rotate_to_f87_runtime_native_trade_shape_risk_logic",
+  "parent_run_id": "frontier86H_sequence_axis_repair_or_rotation_decision_v1",
+  "next_stage_id": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation",
+  "next_run_id": "frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1",
+  "claim_boundary": "stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "frontier_extra_due_status": "not_due_after_f86_closeout_next_boundary_f100_e01_closed_for_f050",
+  "runtime_probe_status": "not_applicable_no_strategy_tester_runtime_claim_for_f86_closeout",
+  "stage_evidence_readout": {
+    "f86d_label_rows": null,
+    "f86d_unresolved_count": null,
+    "f86e_inner_auc": 0.5003647835945972,
+    "f86e_inner_top_decile_lift": 1.1314285714285715,
+    "f86e_locked_oos_auc": 0.47977635870309976,
+    "f86g_inner_auc": 0.48474810213940644,
+    "f86g_inner_top_decile_lift": 0.8957142857142856,
+    "f86g_locked_oos_auc": 0.5073738591827226,
+    "f86g_locked_oos_top_decile_lift": 0.9339247311827957,
+    "f86h_decision": "cap_sequence_axis_and_prepare_stage_closeout_or_f87_rotation",
+    "f86h_sequence_repair_capped": true
+  },
+  "preserved_reference": {
+    "first_touch_label_source": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_execution_summary.json",
+    "scalar_proxy_negative_memory": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86e_execution_summary.json",
+    "sequence_proxy_negative_memory": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86g_execution_summary.json",
+    "sequence_feature_order_hash": "daa111af7857ce9de6ba4e55f71631ca51e597f4c56370159af86ec8ca879850",
+    "sequence_feature_count": 50
+  },
+  "negative_memory": [
+    "F86D produced bounded selected-row tick/M1 first-touch labels but did not create runtime authority.",
+    "F86E scalar first-touch feature/label surface was weak or negative.",
+    "F86G pre-entry sequence feature surface was weak or negative.",
+    "F86H capped same-axis sequence threshold/filter/parameter repair."
+  ],
+  "do_not_repeat": [
+    "Do not keep retuning the same first-touch pre-entry scalar or sequence threshold/filter surface.",
+    "Do not turn F86 proxy-only evidence into MT5 runtime/economics authority.",
+    "Do not inherit F86 as selected baseline or operating promotion."
+  ],
+  "f87_open_proposal": {
+    "stage_id": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation",
+    "run_id": "frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1",
+    "material_new_axis": "runtime-native trade shape and risk logic instead of first-touch pre-entry prediction",
+    "starting_question": "Can a runtime-native trade shape/risk logic surface create a candidate that is more materialization-ready than F86 first-touch prediction surfaces?",
+    "allowed_reuse": [
+      "F86 source/label artifacts as bounded reference only",
+      "F86 negative memory as do-not-repeat guidance",
+      "F86 sequence schema as reference, not candidate authority"
+    ]
+  },
+  "source_identities": [
+    {
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_execution_summary.json",
+      "exists": true,
+      "sha256_lf_normalized": "859ba0b7af12d027ce2d4d0eedc1bff5a8718c0d5c1baf9f965ebb9057abd64e",
+      "size_bytes": 2797
+    },
+    {
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86e_execution_summary.json",
+      "exists": true,
+      "sha256_lf_normalized": "ed4eb07fc635cafbe04e9ff992e935ba6d883b8d9ca9d1572f37385375bd2ddb",
+      "size_bytes": 16011
+    },
+    {
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_execution_summary.json",
+      "exists": true,
+      "sha256_lf_normalized": "2b901129c9d29c48d8d48fc5deac462099cf0397b461a94d8d7b1f357bf8f6ba",
+      "size_bytes": 5612
+    },
+    {
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86g_execution_summary.json",
+      "exists": true,
+      "sha256_lf_normalized": "ca25f752b2fd156d889560b942d8927c15cc6fca54359b6290b62a644f3f3e88",
+      "size_bytes": 46020
+    },
+    {
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/sequence_feature_surface/feature_schema.json",
+      "exists": true,
+      "sha256_lf_normalized": "3dae391ef83b1e6f2c1a5456a7bddc5e4461099cee33a1e41b180610e3fe3f5d",
+      "size_bytes": 5996
+    },
+    {
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/proxy_scout/proxy_metrics.json",
+      "exists": true,
+      "sha256_lf_normalized": "cf85eaf05c9460dbab8872bb32665f7b2832f3d37933cddc947967f47fdfe17d",
+      "size_bytes": 29809
+    },
+    {
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86h_execution_summary.json",
+      "exists": true,
+      "sha256_lf_normalized": "4946b02b1ebabff1fb4804e46ef8eb2006e9c76036ad80a19543db1d533b6063",
+      "size_bytes": 6588
+    },
+    {
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86H_sequence_axis_repair_or_rotation_decision_v1/decision/sequence_axis_repair_or_rotation_decision.json",
+      "exists": true,
+      "sha256_lf_normalized": "89052c369286e6d40ec87e062b9e04b98bf487e56f6a1e60aea19b5fb1c883a5",
+      "size_bytes": 6526
+    },
+    {
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/00_spec/stage_brief.md",
+      "exists": true,
+      "sha256_lf_normalized": "5101c8822468c2c1ed6e194e25bec2d18c1e2d19a0035ec04347934f5b0522ca",
+      "size_bytes": 9272
+    },
+    {
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/04_selected/selection_status.md",
+      "exists": true,
+      "sha256_lf_normalized": "4540615607eb839ec6edb1b45119c40079a284ace5776076ceb898da101c41b8",
+      "size_bytes": 1000
+    }
+  ],
+  "allowed_claims": [
+    "f86_stage_closed_negative_no_authority",
+    "f86_source_label_sequence_evidence_preserved_as_reference",
+    "f87_pending_open_with_material_new_axis",
+    "frontier_extra_due_check_not_due_after_f86",
+    "five_stage_direction_synthesis_recorded",
+    "topic_rotation_check_passed_for_f87"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "task_force_reviewed",
+    "reviewed_by_unspawned_agents"
+  ]
+}
