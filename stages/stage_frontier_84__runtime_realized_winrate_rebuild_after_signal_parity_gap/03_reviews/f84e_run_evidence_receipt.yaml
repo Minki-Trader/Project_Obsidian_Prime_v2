@@ -1,0 +1,10 @@
+﻿packet_id: frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1
+skill: obsidian-run-evidence-system
+status: row_level_reconciliation_recorded_no_authority
+test_period: validation 2025-01-02..2025-10-01; OOS 2025-10-01..2026-04-14
+proxy_kpi: validation proxy matched pnl=338.6402551195823; OOS proxy matched pnl=283.39542741531466
+runtime_kpi: validation net/PF/trades=-378.76/0.712184075745832/2326; OOS net/PF/trades=-133.51/0.8598276061188279/1801
+trade_count: validation selected=2340 filled=2326; OOS selected=1805 filled=1801
+gap_cause: proxy_win_to_runtime_loss_dominant
+next_action: frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1
+claim_boundary: row_level_reconciliation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve

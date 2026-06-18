@@ -28,3 +28,8 @@ Updated(갱신): 2026-06-18T09:15:23Z
 - `f84d_runtime_realized_winrate_gap_rows.csv`: F84D split-level gap rows(F84D 구간별 간극 행)
 - `f84d_task_force_review_receipt.yaml`: F84D actual sub-agent Task Force receipt(F84D 실제 하위 에이전트 태스크포스 영수증)
 - `required_gate_coverage_audit_f84d.md`: F84D gate audit(F84D 게이트 감사)
+- `frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_report.md`: F84E row-level deal reconciliation report(F84E 행 단위 거래 조정 보고서)
+- `f84e_row_level_reconciliation_rows.csv`: F84E selected-entry proxy/runtime rows(F84E 선택 진입 프록시/런타임 행)
+- `f84e_row_level_reconciliation_split_summary.csv`: F84E split-level confusion summary(F84E 구간별 혼동 요약)
+- `f84e_mt5_normalized_deal_rows.csv`: F84E normalized MT5 deal rows(F84E 정규화 MT5 딜 행)
+- `required_gate_coverage_audit_f84e.md`: F84E gate audit(F84E 게이트 감사)

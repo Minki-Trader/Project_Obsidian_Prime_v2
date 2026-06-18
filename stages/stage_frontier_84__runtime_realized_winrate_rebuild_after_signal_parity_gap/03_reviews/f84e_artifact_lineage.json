@@ -1,0 +1,135 @@
+﻿{
+  "run_id": "frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1",
+  "stage_id": "stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap",
+  "producer": "stage_pipelines/stage_frontier_84/frontier84e_runtime_realized_winrate_row_level_deal_reconciliation.py",
+  "producer_sha256": "6b1a9eccf1b12d52ef3e3f1ce505641628631ae532367b48986db2640ad8ff33",
+  "consumer": "frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1",
+  "source_identity": [
+    {
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84B_runtime_realized_winrate_proxy_scout_v1/f84b_runtime_realized_winrate_proxy_candidates_all.csv",
+      "exists": true,
+      "sha256": "ff2a5c6e898a5d1913e5acb65ddc98e6fae13332c8f3a7f56300094b25542a0d"
+    },
+    {
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_runtime_realized_winrate_proxy_top_candidates.csv",
+      "exists": true,
+      "sha256": "49240ffb3924acb7383a5684f2408cd9b997ff7a05170295aa057754d8412f06"
+    },
+    {
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_runtime_realized_winrate_materialization_target_selection.json",
+      "exists": true,
+      "sha256": "ab631746411694276a287c943f7b42dc8798c59915e0868113307104ce28a84e"
+    },
+    {
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_mt5_runtime_realized_winrate_materialization_summary.json",
+      "exists": true,
+      "sha256": "c190e3aba462aecd8d04f9fead92cdfaa7f6359e79ca21c5c0deda8b9324e3be"
+    },
+    {
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/f84c_execution_results.json",
+      "exists": true,
+      "sha256": "ae4642333428eac87f9eb44d982df3890265c347bdddedcd8fdf33264e0e1157"
+    },
+    {
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/f84c_runtime_receipt.csv",
+      "exists": true,
+      "sha256": "2ba7558f1a2b4608817fd195c71ce4399480ef10683432a47bd45641b79ffa4a"
+    },
+    {
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/f84c_signal_parity.csv",
+      "exists": true,
+      "sha256": "fe2c1d8259db94d73aad09ac79a96dae4889b8b424b2b327682b03809276ca39"
+    },
+    {
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/f84c_feature_readiness_parity.csv",
+      "exists": true,
+      "sha256": "f51f0f4b3c994b3a16c02defb0f55e017c0a1ae153c9a5ac24c5a8b5ce379c58"
+    },
+    {
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/f84c_probability_parity.csv",
+      "exists": true,
+      "sha256": "23ed9b7acf239ae8cc2067b91e041a67f396c0ac1752caedd859ee4fcddf1c7d"
+    },
+    {
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/f84c_source_reproduction.csv",
+      "exists": true,
+      "sha256": "50e7226225934d62924ad706d9198771ba2237474a675a4d751dd98d0939deb4"
+    },
+    {
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/features/f84c_runtime_f84b_00287_features.csv",
+      "exists": true,
+      "sha256": "6bf355a088b21d498655e057985c143c0c0bb1067379f6800bebb7fdafd46c0c"
+    },
+    {
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84C_mt5_runtime_realized_winrate_materialization_v1/runtime_veto_tapes/f84c_runtime_f84b_00287_selected_entry_runtime_veto_tape.csv",
+      "exists": true,
+      "sha256": "444a529afcee8909a50b2445c044b5edcc7126ed62058812811db6117d09186d"
+    },
+    {
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84d_runtime_realized_winrate_gap_analysis_summary.json",
+      "exists": true,
+      "sha256": "e87801c54f8ab5450db738ee74e37e03870e03ebc0fdcaedd31b8ea7fa7531ca"
+    },
+    {
+      "path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/frontier84C_runtime_realized_winrate_materialization/telemetry/f84c_runtime_realized_winrate_materialization_validation_telemetry.csv",
+      "exists": true,
+      "sha256": "2678a451f564e2c82565713a587340f2667c36bb54e74b3bba2329137a46a172"
+    },
+    {
+      "path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/frontier84C_runtime_realized_winrate_materialization/telemetry/f84c_runtime_realized_winrate_materialization_oos_telemetry.csv",
+      "exists": true,
+      "sha256": "d8088ecc6a83dfee0f089a3bccd6a73a9a74ba6a46df82b38d3e460acae7f125"
+    }
+  ],
+  "artifact_paths": [
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_rows.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_split_summary.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_month_session_streak_summary.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_unmatched_runtime_mapping_rows.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/f84e_mt5_normalized_deal_rows.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/f84e_mt5_normalized_trade_rows.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_deal_reconciliation_summary.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_report.md",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/required_gate_coverage_audit_f84e.md",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_run_evidence_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_data_integrity_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_backtest_forensics_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_runtime_parity_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_model_validation_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_result_judgment_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_task_force_review_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_claim_discipline_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_actual_subagent_calls.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/run_manifest.json",
+    "docs/agent_control/packets/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/work_packet.yaml",
+    "docs/agent_control/packets/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/skill_receipts.json",
+    "docs/agent_control/packets/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/required_gate_coverage_audit.json",
+    "docs/agent_control/packets/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/final_claim_guard.json"
+  ],
+  "artifact_hashes": {
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_rows.csv": "17697eade8a09ed67c92d0e02c3fa848ae0169d1bbdda4595ca62b94875119c3",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_split_summary.csv": "aab61ebb74c7487ebe1be643def335020161957e33ec0dd8808307b397ab428d",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_month_session_streak_summary.csv": "66b210a3939cc745f12aef30da0186d53dbaca8ded06f0739b2d43bec3241824",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_unmatched_runtime_mapping_rows.csv": "60dae985a29ad425836ad3dd7e89a7a0294019d8305a44ea0138a4ce8770b25b",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/f84e_mt5_normalized_deal_rows.csv": "4f4bce50660384fdf68270b0ac5dd13df2e4146bb1de41a94182ea61ef64e039",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/f84e_mt5_normalized_trade_rows.csv": "dc4dbedd72ee5298cd351f86a81bc027b6bdd7532abfe4b55e4d1d2cf9529d10",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_deal_reconciliation_summary.json": "8de409328daac8dd6c694fe8d431b8db1b65d13911c723ac2421498f17435b23",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_report.md": "fac9ae81243fb3e79d545ed7a9bde1562049eddbd2d437cb065280cccc7abb3f",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/required_gate_coverage_audit_f84e.md": "e003c9d6c3b1b30c99ba772b7a92ff2ecfe3405c26a1e5be8309943ad02ecdd7",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_run_evidence_receipt.yaml": "1ba9d94b16afe4f2331ef9bd1ae36a9a20abc9a38bbd039e61001cdf826affa8",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_data_integrity_receipt.yaml": "51c8b9255bcdd3080aa2003a5c2d3bab6a23a29aa01b380e048cd09a9a3a63b3",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_backtest_forensics_receipt.yaml": "cc8a3ac64dfb8a580d4db451bdf2ba452631c28d8494c3ba3f00f3cdaea8640a",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_runtime_parity_receipt.yaml": "1f55bac56a78058e5c926aa9eed069d6df5dd0ec052cc9a07cced2fbaf85a6b8",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_model_validation_receipt.yaml": "3454fa60a70a7f566ae5e1e901f012daedd22ded9c95abf1b08da84c86e77a79",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_result_judgment_receipt.yaml": "6c555842953a764d573e446ebb655021e8ab67738140ab13a18c5b800aaaee98",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_task_force_review_receipt.yaml": "8334a24657a2837c22f44908b45bb096cfdf473525ebdc1b85eb19473bdabf02",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_claim_discipline_receipt.yaml": "87ee528aab137bf1aab438fae234421a42bac18ee58d190e592b179c74a7c9e2",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_actual_subagent_calls.json": "e39ce81019a3fda67c9aabc18015d8196cd577579c73cb4b0d95c6ba2742dca8",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/run_manifest.json": "8de409328daac8dd6c694fe8d431b8db1b65d13911c723ac2421498f17435b23",
+    "docs/agent_control/packets/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/work_packet.yaml": "6d2a886a74804ec10f92d3b133312d18f411e5105df3301f315c6d96050d7e73",
+    "docs/agent_control/packets/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/skill_receipts.json": "f3f84c1d1e99e19758fb0742ec5672454758f251656141a202b42b0852483368",
+    "docs/agent_control/packets/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/required_gate_coverage_audit.json": "aa0c9263b8dbc5a2985927eeba627f31f2911300be0b6d29969e503b5d5c3fe3",
+    "docs/agent_control/packets/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/final_claim_guard.json": "b49353c3f6803f386074866656bd8105cb92b000ca9dcccae851eca417b82fe6"
+  },
+  "claim_boundary": "row_level_reconciliation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

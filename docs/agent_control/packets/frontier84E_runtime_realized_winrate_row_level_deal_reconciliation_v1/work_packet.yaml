@@ -1,0 +1,31 @@
+﻿version: work_packet_schema_v2
+packet_id: frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1
+created_at_utc: '2026-06-18T11:14:37Z'
+work_classification:
+  primary_family: runtime_backtest
+  mutation_intent: true
+  execution_intent: true
+skill_routing:
+  primary_skill: obsidian-runtime-parity
+  support_skills:
+    - obsidian-backtest-forensics
+    - obsidian-data-integrity
+    - obsidian-run-evidence-system
+    - obsidian-model-validation
+    - obsidian-result-judgment
+    - obsidian-task-force-review
+    - obsidian-artifact-lineage
+required_gates:
+  - row_level_reconciliation
+  - normalized_deal_trade_rows
+  - ticket_join_policy
+  - proxy_runtime_confusion
+  - task_force_actual_calls
+  - final_claim_guard
+interpreted_scope:
+  target_stage: stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap
+  target_run: frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1
+  next_run: frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1
+  status: f84e_row_level_deal_reconciliation_completed_proxy_win_runtime_loss_dominant_no_authority
+  claim_boundary: row_level_reconciliation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+  actual_subagent_calls: 8/8; completed=8/8

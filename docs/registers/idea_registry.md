@@ -2333,3 +2333,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier84D_runtime_realized_winrate_proxy_runtime_gap_analysis_v1 -->
 - `frontier84D_runtime_realized_winrate_proxy_runtime_gap_analysis_v1` attributed F84 proxy/runtime gap(F84 프록시/런타임 간극 귀속). Result(결과): OOS runtime(표본외 런타임) net/PF/DD/TPD/win(순손익/수익 팩터/손실폭/일 거래 수/승률) `-133.51/0.86/29.27/9.235897435897435/30.87`. Clue(단서): density preserved(밀도 보존). Negative memory(부정 기억): win-rate/PF/DD collapsed after parity(동등성 이후 승률/수익 팩터/손실폭 붕괴). Task Force(태스크포스): actual sub-agent calls(실제 하위 에이전트 호출) `9 calls; roster 8/8`. Next(다음): `frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1`.
+
+<!-- frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1 -->
+- `frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1` completed row-level reconciliation(행 단위 조정). OOS(표본외) proxy win -> runtime loss(프록시 승리 -> 런타임 손실) `560`건. Preserved clue(보존 단서): density(밀도)는 유지됐지만 deal economics(거래 경제성)는 무너졌다. Next(다음): `frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1`. Claim boundary(주장 경계): `row_level_reconciliation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

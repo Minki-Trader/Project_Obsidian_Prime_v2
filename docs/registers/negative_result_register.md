@@ -1451,3 +1451,6 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 
 <!-- frontier84D_runtime_realized_winrate_proxy_runtime_gap_analysis_v1_negative_runtime_gap -->
 - `frontier84D_runtime_realized_winrate_proxy_runtime_gap_analysis_v1` negative runtime gap(부정 런타임 간극): F84C target(대상) `f84b_00287` preserved density(밀도 보존) but failed runtime economics(런타임 경제성 실패): OOS PF(표본외 수익 팩터) `0.86`, DD(손실폭) `29.27%`, win rate(승률) `30.87%`. Reopen/repair condition(재개/수리 조건): new evidence or new axis(새 근거 또는 새 축), not threshold-only repair(임계값만 수리 금지).
+
+<!-- frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1_negative_row_level_runtime -->
+- `frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1` negative row-level runtime evidence(부정 행 단위 런타임 근거): OOS(표본외) matched runtime trades(결합 런타임 거래) `1801`건, proxy win -> runtime loss(프록시 승리 -> 런타임 손실) `560`건. Reopen/repair condition(재개/수리 조건): F84F must choose capped repair or rotation with new axis(전선84F는 새 축으로 상한 수리 또는 회전 선택).
