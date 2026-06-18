@@ -1421,3 +1421,15 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Reopen condition(재개 조건): realized runtime PnL teacher(실현 런타임 손익 교사), feature set(피처 묶음), label/target(라벨/목표), model family(모델 계열), trade shape(거래 형태), risk logic(위험 로직), or regime split(장세 분할) 중 하나 이상이 실제로 바뀌고 새 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
 - Evidence(근거): `stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/stage_closeout_report.md`.
 - Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+
+<!-- NR-FR83-SHORT-DENSITY-RUNTIME-WINRATE-EROSION -->
+## NR-FR83-SHORT-DENSITY-RUNTIME-WINRATE-EROSION
+
+- Stage(단계): `stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation`
+- Hypothesis(가설): F83D short density proxy(F83D 숏 밀도 프록시) `f82b_10355`가 MT5 runtime(MT5 런타임)에서도 validation/OOS(검증/외표본) 양수와 5~10 trades/day(일 거래 수)를 보존할 수 있다.
+- Why failed(실패 이유): F83E runtime(F83E 런타임)은 signal/feature parity(신호/피처 동등성)를 보존했지만 validation net/PF/DD(검증 순손익/수익 팩터/손실폭) `-285.66/0.83/58.86`와 OOS `-37.17/0.97/19.24`로 부정이었다. Order fill gap(주문 체결 간극)은 net gap(순손익 간극)을 설명하기에 작고, 핵심은 runtime win-rate/DD erosion(런타임 승률/손실폭 침식)이다.
+- Salvage value(회수 가치): dense short supply(조밀한 숏 공급), ONNX/signal/feature parity(온엑스/신호/피처 동등성), selected-entry veto tape(선택 진입 차단 테이프), win-rate erosion diagnostic(승률 침식 진단)을 보존한다.
+- Do-not-repeat(반복 금지): same `f82b_10355`/F83E close_direction smooth_supply short density surface(동일 종가방향 부드러운 공급 숏 밀도 표면)를 threshold/filter/parameter-only repair(임계값/필터/파라미터만 수리)로 반복하지 않는다.
+- Reopen condition(재개 조건): runtime-realized outcome label(런타임 실현 결과 라벨), stop-touch/fill-path target(스톱 터치/체결 경로 목표), risk logic(위험 로직), or regime/session split(장세/세션 분할) 중 하나 이상이 새로워지고 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
+- Evidence(근거): `stages/stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation/03_reviews/frontier83F_short_density_proxy_runtime_gap_analysis_report.md`.
+- Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).

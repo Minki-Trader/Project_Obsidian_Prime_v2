@@ -2315,3 +2315,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier83E_short_side_density_runtime_materialization_v1 -->
 - `frontier83E_short_side_density_runtime_materialization_v1` materialized F83D selected short density target(F83D 선택 숏 밀도 대상)을 MT5 Strategy Tester(MT5 전략 테스터)로 실행/시도했다. Target(대상): `f82b_10355`. Attempts(시도): `2`, completed(완료): `2`. Boundary(경계): runtime materialization only, no authority(런타임 물질화만, 권위 없음).
+
+<!-- frontier83F_short_density_proxy_runtime_gap_analysis_v1 -->
+- `frontier83F_short_density_proxy_runtime_gap_analysis_v1` attributed F83E short-density runtime gap(F83E 숏 밀도 런타임 간극 귀속). Result(결과): OOS runtime net/PF/DD/trades-day(외표본 런타임 순손익/수익 팩터/손실폭/일 거래) `-37.17/0.97/19.24/8.266666666666667`. Clue(단서): dense short ONNX/signal parity(조밀한 숏 온엑스/신호 동등성). Negative memory(부정 기억): win-rate/DD erosion after signal parity(신호 동등성 이후 승률/손실폭 침식). Next(다음): `frontier83G_runtime_realized_outcome_repair_or_rotation_decision_v1`.

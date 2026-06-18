@@ -1,0 +1,19 @@
+﻿packet_id: frontier83F_short_density_proxy_runtime_gap_analysis_v1
+skill: obsidian-performance-attribution
+status: runtime_gap_attributed_to_winrate_erosion_no_authority
+observed_change: "F83D proxy(F83D 프록시)는 validation/OOS(검증/표본외) 양수였지만 F83E MT5 runtime(F83E MT5 런타임)은 validation/OOS 모두 손실로 뒤집혔다."
+comparison_baseline: "F83D selected target(F83D 선택 대상) proxy metrics and F83E MT5 runtime receipt(F83E MT5 런타임 영수증)."
+likely_drivers:
+  - runtime_win_rate_erosion_after_signal_parity(신호 동등성 이후 런타임 승률 침식)
+  - runtime_dd_expansion(런타임 손실폭 확대)
+  - proxy_label_not_runtime_realized(프록시 라벨이 런타임 실현과 불일치)
+segment_checks:
+  - validation_gap_row: stages/stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation/03_reviews/f83f_short_density_proxy_runtime_gap_rows.csv
+  - oos_gap_row: stages/stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation/03_reviews/f83f_short_density_proxy_runtime_gap_rows.csv
+trade_shape: "{'side': 'short', 'hold_bars': '18', 'tp_broker_points': '2000.0', 'sl_broker_points': '1000.0', 'feature_set': 'density_core', 'model': 'extra_trees_d7_l120', 'regime': 'all', 'risk_filter': 'intent_release'}"
+alternative_explanations:
+  - close_direction_smooth_supply_proxy_label(종가방향 부드러운 공급 프록시 라벨)
+  - runtime_spread_fill_path(런타임 스프레드/체결 경로)
+  - missing_row_level_deal_mapping(행 단위 거래 매핑 미확보)
+attribution_confidence: medium
+next_probe: frontier83G_runtime_realized_outcome_repair_or_rotation_decision_v1

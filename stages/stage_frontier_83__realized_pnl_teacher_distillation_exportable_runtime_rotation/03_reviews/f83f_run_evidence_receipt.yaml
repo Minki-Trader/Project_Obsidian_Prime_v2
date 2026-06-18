@@ -1,0 +1,26 @@
+﻿packet_id: frontier83F_short_density_proxy_runtime_gap_analysis_v1
+skill: obsidian-run-evidence-system
+status: kpi_evidence_recorded_negative_runtime_gap_no_authority
+measurement_scope: runtime_probe_gap_analysis(런타임 탐침 간극 분석)
+management_state:
+  run_manifest: stages/stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation/02_runs/frontier83F_short_density_proxy_runtime_gap_analysis_v1/run_manifest.json
+  summary: stages/stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation/03_reviews/f83f_short_density_proxy_runtime_gap_analysis_summary.json
+  gap_rows: stages/stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation/03_reviews/f83f_short_density_proxy_runtime_gap_rows.csv
+  run_registry_update_required: yes
+judgment_class: negative(부정)
+scoreboard: runtime_probe_gap_attribution(런타임 탐침 간극 귀속)
+parity_level: P3_runtime_shadow_parity_sampled(P3 런타임 그림자 동등성 표본)
+wfo_status: not_completed_gap_analysis_only(간극 분석만, 워크포워드 미완료)
+registry_update_required: yes
+negative_memory_required: yes
+hard_gate_applicable: no
+evidence_boundary: runtime_probe_gap_analysis_negative_memory_only(런타임 탐침 간극 분석/부정 기억만)
+required_records:
+  hypothesis: short_density_proxy_positive_candidate_can_survive_mt5_runtime(숏 밀도 프록시 양수 후보가 MT5 런타임에서 생존 가능)
+  test_period: validation 2025-01-02..2025-10-01; OOS 2025-10-01..2026-04-14
+  proxy_kpi: validation PF/DD/net/trades_day=1.2026641999408263/11.388546118365435/264.3228505696317/8.317343173431734; OOS=1.4727443088117345/4.6767732618809985/401.02621043351246/8.350515463917526
+  runtime_kpi: validation PF/DD/net/trades_day=0.83/58.86/-285.66/8.213235294117647; OOS=0.97/19.24/-37.17/8.266666666666667
+  parity: signal_feature_parity_preserved(신호/피처 동등성 보존)
+  gap_cause: runtime_win_rate_erosion_after_signal_parity(신호 동등성 이후 런타임 승률 침식)
+  next_action: frontier83G_runtime_realized_outcome_repair_or_rotation_decision_v1
+claim_boundary: gap_attribution_negative_memory_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
