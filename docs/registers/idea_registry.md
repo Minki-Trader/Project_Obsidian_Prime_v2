@@ -2330,3 +2330,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier84C_mt5_runtime_realized_winrate_materialization_v1 -->
 - `frontier84C_mt5_runtime_realized_winrate_materialization_v1` materialized F84B runtime-realized winrate proxy(F84B 런타임 실현 승률 프록시) into ONNX/MT5(온엑스/MT5). Target(대상): `f84b_00287` / `extra_trees_d7_l120`. Source best(원천 최선): `f84b_01151` / `histgbm_density_shallow`. Attempts(시도): `2`, completed(완료): `2`. Boundary(경계): runtime materialization only, no authority(런타임 물질화만, 권위 없음).
+
+<!-- frontier84D_runtime_realized_winrate_proxy_runtime_gap_analysis_v1 -->
+- `frontier84D_runtime_realized_winrate_proxy_runtime_gap_analysis_v1` attributed F84 proxy/runtime gap(F84 프록시/런타임 간극 귀속). Result(결과): OOS runtime(표본외 런타임) net/PF/DD/TPD/win(순손익/수익 팩터/손실폭/일 거래 수/승률) `-133.51/0.86/29.27/9.235897435897435/30.87`. Clue(단서): density preserved(밀도 보존). Negative memory(부정 기억): win-rate/PF/DD collapsed after parity(동등성 이후 승률/수익 팩터/손실폭 붕괴). Task Force(태스크포스): actual sub-agent calls(실제 하위 에이전트 호출) `9 calls; roster 8/8`. Next(다음): `frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1`.

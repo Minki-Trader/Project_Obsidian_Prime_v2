@@ -1,0 +1,67 @@
+﻿packet_id: frontier84D_runtime_realized_winrate_proxy_runtime_gap_analysis_v1
+skill: obsidian-task-force-review
+status: completed_for_f84d_gap_analysis_no_authority
+review_mode: actual_subagent_calls_plus_codex_local_verification(실제 하위 에이전트 호출 + 코덱스 로컬 검증)
+roster_registry: docs/agent_control/codex_task_force_registry.yaml
+actual_subagent_call_count: 9
+minimum_expected_subagent_call_count: 8
+required_roster_coverage: 8/8
+missing_roster_ids: []
+extra_roster_ids: ['extra_policy_routing_review']
+actual_subagent_calls:
+  - roster_id: agent_01_system_governor
+    nickname: Ramanujan
+    agent_id: 019eda3d-b738-7490-8727-4a74f4e1d2ba
+    status: completed
+    summary: "F84D는 repair(수리)나 rotation(회전)이 아니라 먼저 gap attribution(간극 귀속)으로 닫아야 하며 F84C는 valid negative runtime observation(유효한 부정 런타임 관찰)이다."
+  - roster_id: agent_02_platform_routing_architect
+    nickname: Cicero
+    agent_id: 019eda3d-cb71-7692-a0b0-6a5e68bd9f58
+    status: completed
+    summary: "F84D는 runtime_backtest(런타임 백테스트)가 아니라 kpi_evidence(KPI 근거) packet(작업 묶음)이며 row grain(행 단위), source authority(원천 권위), performance attribution(성과 귀속)을 기록해야 한다."
+  - roster_id: agent_03_philosophy_policy_skill_governance
+    nickname: Peirce
+    agent_id: 019eda42-4839-7730-8f3e-f956304d9ecd
+    status: completed
+    summary: "reference-not-inheritance(참조이지 상속 아님), Grok archive(그록 보관), threshold-only repair ban(임계값만 수리 금지)을 유지하며 F84D는 proxy/runtime gap attribution(프록시/런타임 간극 귀속)으로 제한한다."
+  - roster_id: agent_04_evidence_control_plane
+    nickname: Hegel
+    agent_id: 019eda3c-aafa-7582-9e7f-2daa566409a3
+    status: completed
+    summary: "F84C evidence(근거)는 F84D 입력으로 쓸 수 있고 signal count(신호 수)는 validation/OOS(검증/표본외)에서 보존됐으므로 F84D는 신호 이후 손익 붕괴를 봐야 한다."
+  - roster_id: agent_05_data_feature_contract
+    nickname: Mendel
+    agent_id: 019eda49-f8ee-7a90-ae9b-d68390ced432
+    status: completed
+    summary: "F84C ONNX/MT5(온엑스/메타트레이더5) materialization(물질화)의 feature/label/time-axis/data-contract(피처/라벨/시간축/데이터 계약)는 경계 안에서 유지되지만 정확한 economics cause(경제성 원인)는 아직 row-level deal reconciliation(행 단위 거래 조정) 전이다."
+  - roster_id: agent_06_quant_research
+    nickname: Hume
+    agent_id: 019eda3c-d862-74a2-9244-62b0a2e76f5b
+    status: completed
+    summary: "거래 밀도는 거의 보존됐지만 승률이 validation(검증) 46.84%->27.43%, OOS(표본외) 45.71%->30.87%로 붕괴해 PF(수익 팩터)와 DD(손실폭)를 무너뜨렸다."
+  - roster_id: agent_07_model_validation_risk
+    nickname: Banach
+    agent_id: 019eda4a-0d15-7b70-a1f7-056693fd4f01
+    status: completed
+    summary: "현재 근거는 execution economics(실행 경제성) 확정보다 overfit/calibration/risk-shape failure(과적합/보정/위험 형태 실패)와 row-level evidence gap(행 단위 근거 간극)을 더 강하게 가리키며 F84E는 row-level diagnostic probe(행 단위 진단 탐침)가 맞다."
+  - roster_id: agent_08_mt5_onnx_runtime
+    nickname: Huygens
+    agent_id: 019eda3c-bf47-7990-adf8-780a983d0f05
+    status: completed
+    summary: "주 실패 원인은 signal/feature/ONNX parity(신호/피처/온엑스 동등성)나 order fill(주문 체결)이 아니라 deal economics/win-rate/drawdown(거래 경제성/승률/손실폭) 붕괴다."
+  - roster_id: extra_policy_routing_review
+    nickname: Dirac
+    agent_id: 019eda3c-fa3c-7282-98a5-a57c58e0e8c7
+    status: completed
+    summary: "추가 routing/policy review(라우팅/정책 검토)로 F84D는 kpi_evidence(KPI 근거) packet(작업 묶음)이고 actual_subagent_calls(실제 하위 에이전트 호출)와 project_native_review(프로젝트 전용 검토)를 분리해야 한다고 확인했다."
+project_native_review:
+  accepted:
+    - "F84C parity(동등성)는 주 원인이 아니며 deal economics/win-rate/DD(거래 경제성/승률/손실폭) 붕괴를 F84D 주 귀속으로 둔다."
+    - "F84B density clue(밀도 단서)는 보존하되 threshold-only repair(임계값만 수리)는 금지한다."
+    - "F84E는 new axis(새 축) 수리 또는 rotation(회전)을 결정해야 한다."
+  rejected:
+    - "Do not treat actual sub-agent calls(실제 하위 에이전트 호출) as runtime authority(런타임 권위)."
+    - "Do not call F84C negative runtime result(부정 런타임 결과) a baseline(기준선)."
+  needs_local_verification:
+    - "Codex must verify all generated files, ledgers, hashes, and claim boundary locally(코덱스가 산출물/장부/해시/주장 경계를 로컬 검증)."
+claim_boundary: gap_attribution_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve

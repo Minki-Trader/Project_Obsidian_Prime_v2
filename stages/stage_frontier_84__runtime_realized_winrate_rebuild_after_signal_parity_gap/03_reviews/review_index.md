@@ -23,3 +23,8 @@ Updated(갱신): 2026-06-18T09:15:23Z
 - `f84c_runtime_parity_receipt.json`: F84C runtime parity receipt(F84C 런타임 동등성 영수증)
 - `f84c_backtest_forensics_receipt.json`: F84C backtest forensics receipt(F84C 백테스트 포렌식 영수증)
 - `f84c_task_force_review_receipt.yaml`: F84C Task Force review receipt(F84C 태스크포스 검토 영수증)
+- `frontier84D_runtime_realized_winrate_proxy_runtime_gap_analysis_report.md`: F84D proxy/runtime gap analysis report(F84D 프록시/런타임 간극 분석 보고서)
+- `f84d_runtime_realized_winrate_gap_analysis_summary.json`: F84D machine gap summary(F84D 기계 간극 요약)
+- `f84d_runtime_realized_winrate_gap_rows.csv`: F84D split-level gap rows(F84D 구간별 간극 행)
+- `f84d_task_force_review_receipt.yaml`: F84D actual sub-agent Task Force receipt(F84D 실제 하위 에이전트 태스크포스 영수증)
+- `required_gate_coverage_audit_f84d.md`: F84D gate audit(F84D 게이트 감사)

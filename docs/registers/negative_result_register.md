@@ -1448,3 +1448,6 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 
 <!-- frontier84C_mt5_runtime_realized_winrate_materialization_v1_exportability_boundary -->
 - `frontier84C_mt5_runtime_realized_winrate_materialization_v1` exportability boundary(내보내기 가능성 경계): F84B top HistGBM(히스토그램 그래디언트 부스팅) material candidates(물질 후보)는 현재 ONNX runtime handoff(온엑스 런타임 인계) 경로에서 직접 물질화하지 않았다. Rejected before target(대상 전 보류): `2`. Next action(다음 행동): HistGBM clue(단서)는 preserved clue(보존 단서)로 남기고, 별도 exporter axis(내보내기 축)가 생길 때 재개한다.
+
+<!-- frontier84D_runtime_realized_winrate_proxy_runtime_gap_analysis_v1_negative_runtime_gap -->
+- `frontier84D_runtime_realized_winrate_proxy_runtime_gap_analysis_v1` negative runtime gap(부정 런타임 간극): F84C target(대상) `f84b_00287` preserved density(밀도 보존) but failed runtime economics(런타임 경제성 실패): OOS PF(표본외 수익 팩터) `0.86`, DD(손실폭) `29.27%`, win rate(승률) `30.87%`. Reopen/repair condition(재개/수리 조건): new evidence or new axis(새 근거 또는 새 축), not threshold-only repair(임계값만 수리 금지).

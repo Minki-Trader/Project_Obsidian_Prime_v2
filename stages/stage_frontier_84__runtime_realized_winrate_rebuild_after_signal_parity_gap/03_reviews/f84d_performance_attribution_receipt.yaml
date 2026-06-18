@@ -1,0 +1,17 @@
+﻿packet_id: frontier84D_runtime_realized_winrate_proxy_runtime_gap_analysis_v1
+skill: obsidian-performance-attribution
+status: runtime_deal_economics_gap_attributed_no_authority
+observed_change: "F84B exportable proxy(내보내기 가능한 프록시)는 5-10 trades/day(일 5~10회 거래) density(밀도)를 보존했지만, MT5 runtime economics(MT5 런타임 경제성)는 win-rate erosion(승률 침식)과 drawdown expansion(손실폭 확대)로 음수 전환했다."
+comparison_baseline: F84B proxy candidate f84b_00287(F84B 프록시 후보)
+likely_drivers:
+  - runtime_deal_economics(런타임 거래 경제성)
+  - win_rate_erosion(승률 침식)
+  - drawdown_expansion(손실폭 팽창)
+not_primary_drivers:
+  - signal_count_mismatch(신호 수 불일치)
+  - feature_readiness_mismatch(피처 준비 불일치)
+  - ONNX_handoff(온엑스 인계)
+  - material_order_fill_gap(중대한 주문 체결 간극)
+attribution_confidence: high_for_not_parity_or_fill_medium_for_exact_deal_mechanism(동등성/체결 원인 배제는 높음, 정확한 거래 메커니즘 귀속은 중간)
+next_probe: "F84E should open row-level deal reconciliation(행 단위 거래 조정) before capped repair or rotation(상한 있는 수리 또는 회전 전): join(결합) proxy rows(프록시 행), veto tape(차단 테이프), telemetry(원격 측정), and MT5 trade/deal rows(MT5 거래/딜 행) to isolate realized win/loss(실현 승패), PnL(손익), cost(비용), and TP/SL path(익절/손절 경로)."
+claim_boundary: gap_attribution_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve

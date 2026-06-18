@@ -1,0 +1,17 @@
+﻿packet_id: frontier84D_runtime_realized_winrate_proxy_runtime_gap_analysis_v1
+skill: obsidian-run-evidence-system
+status: kpi_evidence_recorded_no_authority
+source_authority: parent_mt5_runtime_materialization(F84C 부모 MT5 런타임 물질화)
+required_records:
+  hypothesis: runtime_realized_winrate_labels_rebuild(런타임 실현 승률 라벨 재구축)
+  test_period: validation 2025-01-02..2025-10-01; OOS 2025-10-01..2026-04-14
+  proxy_kpi: validation net/PF/DD/TPD=341.63686742584827/1.377898995489171/4.525434582352136/8.634686346863468; OOS net/PF/DD/TPD=288.0970393819249/1.4246374556585157/2.930967158052863/9.304123711340207
+  runtime_kpi: validation net/PF/DD/TPD=-378.76/0.71/75.89/8.551470588235293; OOS net/PF/DD/TPD=-133.51/0.86/29.27/9.235897435897435
+  parity: signal_feature_onnx_parity_preserved(신호/피처/온엑스 동등성 보존)
+  gap_cause: runtime_deal_economics_winrate_dd_gap_after_signal_parity(신호 동등성 이후 런타임 거래 경제성/승률/손실폭 간극)
+  next_action: frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1
+tier_records:
+  tier_a_separate: recorded
+  tier_b_separate: missing_required
+  combined: out_of_scope_by_claim
+claim_boundary: gap_attribution_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
