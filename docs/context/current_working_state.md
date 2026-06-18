@@ -1,24 +1,24 @@
 ﻿# Current Working State(현재 작업 상태)
 
-Updated(갱신): 2026-06-18T06:27:35Z
+Updated(갱신): 2026-06-18T06:48:31Z
 
 Active stage(활성 단계): `stage_frontier_82__density_first_runtime_economic_mechanism_rotation`
 
-Current run(현재 실행): `frontier82G_mt5_realized_label_rebuild_v1`
+Current run(현재 실행): `frontier82H_capped_repair_closeout_or_f83_rotation_decision_v1`
 
-Latest completed run(최근 완료 실행): `frontier82F_deal_reconciled_runtime_label_preflight_v1`
+Latest completed run(최근 완료 실행): `frontier82G_mt5_realized_label_rebuild_v1`
 
 ## Current Truth(현재 진실)
 
-Action(행동): F82F deal-reconciled runtime label preflight(F82F 거래 손익 대조 런타임 라벨 사전확인)를 완료했다.
+Action(행동): F82G MT5-realized label rebuild(F82G MT5 실현 라벨 재구축) 진단을 완료했다.
 
-Effect(효과): F82C Strategy Tester report(전략 테스터 보고서)에서 deal/trade rows(딜/거래 행)를 회수했고 validation/OOS(검증/표본외) 모두 runtime receipt(런타임 영수증)와 대조됐다.
+Effect(효과): F82F 거래 라벨을 F82C 피처에 붙여 low-density positive seed(저밀도 양수 씨앗)를 찾았지만, exportable density-sufficient materialization candidate(내보내기 가능하고 밀도 충분한 물질화 후보)는 없었다.
 
-## Runtime Deal Evidence(런타임 거래 근거)
+## Best Seed(최선 씨앗)
 
-- deal rows(딜 행): `6602`
-- trade rows(거래 행): `3301`
-- all reconciled(전체 대조): `True`
-- next run(다음 실행): `frontier82G_mt5_realized_label_rebuild_v1`
+- candidate(후보): `f82g_0005`
+- model(모델): `histgbm_realized_label_diagnostic`
+- OOS net/PF/trades/day(표본외 순손익/수익 팩터/거래/일 거래): `25.24/1.2095475300954754/215/1.1025641025641026`
+- materialization candidates(물질화 후보): `0`
 
-Claim boundary(주장 경계): `runtime_deal_evidence_preflight_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`
+Claim boundary(주장 경계): `realized_label_diagnostic_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`

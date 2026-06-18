@@ -1,0 +1,15 @@
+﻿packet_id: frontier82G_mt5_realized_label_rebuild_v1
+skill: obsidian-data-integrity
+status: usable_with_boundary
+data_source:
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82F_deal_reconciled_runtime_label_preflight_v1/f82f_trade_rows.csv
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82C_mt5_runtime_materialization_v1/features/f82c_runtime_f82b_07295_features.csv
+time_axis: timestamp_utc/open_time exact match(UTC 시각/진입 시각 정확 매칭)
+sample_scope: matched trades 3300, unmatched trades 1
+missing_or_duplicate_check: unmatched validation trades are recorded(미매칭 검증 거래 기록)
+feature_label_boundary: features are entry-time fields; labels are post-trade realized PnL(피처는 진입 시점, 라벨은 거래 이후 실현 손익)
+split_boundary: validation_as_train_oos_holdout_diagnostic_only(검증 훈련/표본외 보류 진단 전용)
+leakage_risk: post-hoc selection and validation-as-train overfit(사후 선택 및 검증 훈련 과적합)
+data_hash_or_identity:
+  label_dataset_sha256: 1d54d03914f1a3b32471c545315fb86e12db3e48bb55163942b068a3b67e868c
+integrity_judgment: usable_with_boundary

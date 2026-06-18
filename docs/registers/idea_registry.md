@@ -2295,3 +2295,5 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier82E_capped_repair_or_rotation_decision_v1 -->
 - `frontier82E_capped_repair_or_rotation_decision_v1` selected capped repair(F82E 상한 수리 선택). Result(결과): F82C OOS runtime net/PF/DD/trades-day(표본외 런타임 순손익/수익 팩터/손실폭/일 거래) `-55.21/0.93/20.36/6.861538461538461` stayed negative after exact signal/feature/ONNX parity(정확한 신호/피처/온엑스 동등성 이후에도 부정). Repair axis(수리 축): `deal_reconciled_runtime_label_preflight`. Boundary(경계): decision only, no authority(결정 전용, 권위 없음). Next(다음): `frontier82F_deal_reconciled_runtime_label_preflight_v1`.
+
+- `frontier82G_mt5_realized_label_rebuild_v1` built MT5-realized label diagnostic(F82G MT5 실현 라벨 진단). Result(결과): best seed(최선 씨앗) `f82g_0005` OOS net/PF/trades-day(표본외 순손익/수익 팩터/일 거래) `25.24/1.2095475300954754/1.1025641025641026`, materialization candidates(물질화 후보) `2`. Boundary(경계): diagnostic only, no authority(진단 전용, 권위 없음). Next(다음): `frontier82H_capped_repair_closeout_or_f83_rotation_decision_v1`.

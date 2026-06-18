@@ -36,3 +36,8 @@ Updated(갱신): 2026-06-18T05:15:42Z
 - `frontier82F_deal_reconciled_runtime_label_preflight_v1/f82f_deal_rows.csv`: F82F deal rows(F82F 딜 행)
 - `frontier82F_deal_reconciled_runtime_label_preflight_v1/f82f_trade_rows.csv`: F82F trade rows(F82F 거래 행)
 - `required_gate_coverage_audit_f82f.md`: F82F gate audit(F82F 게이트 감사)
+- `frontier82G_mt5_realized_label_rebuild_report.md`: F82G realized label diagnostic report(F82G 실현 라벨 진단 보고서)
+- `f82g_mt5_realized_label_rebuild_summary.json`: F82G machine summary(F82G 기계 요약)
+- `f82g_realized_label_candidate_rows.csv`: F82G candidate rows(F82G 후보 행)
+- `f82g_mt5_realized_label_dataset.csv`: F82G label dataset(F82G 라벨 데이터셋)
+- `required_gate_coverage_audit_f82g.md`: F82G gate audit(F82G 게이트 감사)

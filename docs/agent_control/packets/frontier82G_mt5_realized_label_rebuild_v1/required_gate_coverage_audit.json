@@ -1,0 +1,44 @@
+﻿{
+  "packet_id": "frontier82G_mt5_realized_label_rebuild_v1",
+  "primary_family": "experiment_execution",
+  "status": "passed_diagnostic_only_no_authority",
+  "gates": [
+    {
+      "gate": "scope_completion_gate",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82g_mt5_realized_label_rebuild_summary.json"
+    },
+    {
+      "gate": "kpi_contract_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82G_mt5_realized_label_rebuild_v1/f82g_realized_label_candidate_rows.csv"
+    },
+    {
+      "gate": "skill_receipt_lint",
+      "status": "passed",
+      "evidence": [
+        "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82g_experiment_design_receipt.yaml",
+        "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82g_data_integrity_receipt.yaml",
+        "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82g_model_validation_receipt.yaml",
+        "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82g_run_evidence_receipt.yaml",
+        "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82g_artifact_lineage_receipt.yaml",
+        "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82g_task_force_review_receipt.yaml"
+      ]
+    },
+    {
+      "gate": "codex_task_force_review_packet",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82g_task_force_review_receipt.yaml"
+    },
+    {
+      "gate": "required_gate_coverage_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/required_gate_coverage_audit_f82g.md"
+    },
+    {
+      "gate": "final_claim_guard",
+      "status": "passed",
+      "evidence": "docs/agent_control/packets/frontier82G_mt5_realized_label_rebuild_v1/final_claim_guard.json"
+    }
+  ]
+}

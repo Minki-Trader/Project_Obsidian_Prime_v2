@@ -1,0 +1,21 @@
+﻿packet_id: frontier82G_mt5_realized_label_rebuild_v1
+skill: obsidian-experiment-design
+status: executed_with_boundary
+hypothesis: "MT5 realized PnL labels can identify a subset of F82C trades worth preserving(MT5 실현 손익 라벨이 F82C 거래 중 보존할 부분집합을 찾을 수 있다)."
+decision_use: F82 closeout or F82 rotation decision(F82 마감 또는 F82 회전 결정)
+comparison_baseline: F82C unfiltered runtime trades(F82C 무필터 런타임 거래)
+control_variables:
+  - F82C feature set(피처 묶음)
+  - F82C executed trade set(실행 거래 집합)
+changed_variables:
+  - realized win/loss label(실현 승/패 라벨)
+  - diagnostic filter model(진단 필터 모델)
+sample_scope: validation/OOS executed trades only(검증/표본외 실행 거래만)
+success_criteria: OOS positive seed with honest density/exportability boundary(표본외 양수 씨앗과 정직한 밀도/내보내기 경계)
+failure_criteria: no OOS positive seed or no label alignment(표본외 양수 씨앗 없음 또는 라벨 정렬 실패)
+invalid_conditions: time join leakage or missing report identity(시간 결합 누수 또는 보고서 정체성 누락)
+stop_conditions: repair cap consumed; no threshold-only repeat(수리 상한 소모, 임계값 반복 금지)
+evidence_plan:
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82G_mt5_realized_label_rebuild_v1/f82g_mt5_realized_label_dataset.csv
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82G_mt5_realized_label_rebuild_v1/f82g_realized_label_candidate_rows.csv
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/frontier82G_mt5_realized_label_rebuild_report.md

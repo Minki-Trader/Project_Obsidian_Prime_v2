@@ -1,0 +1,27 @@
+﻿packet_id: frontier82G_mt5_realized_label_rebuild_v1
+skill: obsidian-task-force-review
+status: passed_project_native_review_no_authority
+review_mode: internal_adversarial_review_two_pass_limit(내부 비판 검토 2회차 제한)
+grok_boundary: no_new_Grok_call_archive_only(새 Grok(그록) 호출 없음, 보관 전용)
+agent_opinions:
+  - agent: agent_01_system_governor
+    opinion: "F82G may record a diagnostic seed only; forbid completion/baseline/promotion/runtime authority(F82G는 진단 씨앗만 기록 가능, 완성/기준선/승격/런타임 권위 금지)."
+    disposition: accepted
+  - agent: agent_04_evidence_control_plane
+    opinion: "Ignored 02_runs artifacts require tracked hashes and registry identity(무시된 02_runs 산출물은 추적 해시와 등록부 정체성이 필요)."
+    disposition: accepted
+  - agent: agent_05_data_feature_contract
+    opinion: "Entry-time feature and post-trade label boundary must be explicit(진입 시점 피처와 거래 후 라벨 경계를 명시해야 함)."
+    disposition: accepted
+  - agent: agent_06_quant_research
+    opinion: "Positive low-density seed is useful clue, not a materialization candidate(양수 저밀도 씨앗은 단서이지 물질화 후보가 아님)."
+    disposition: accepted
+  - agent: agent_07_model_validation_risk
+    opinion: "Validation-as-train diagnostic has high overfit risk and cannot promote(검증 훈련 진단은 과적합 위험이 높아 승격 불가)."
+    disposition: accepted
+  - agent: agent_08_mt5_onnx_runtime
+    opinion: "No exportable density-sufficient candidate means no ONNX handoff in this packet(내보내기 가능하고 밀도 충분한 후보가 없으므로 이 묶음의 ONNX 인계 없음)."
+    disposition: accepted
+local_verification_required: stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82g_local_verification.json
+task_force_judgment: accepted_with_local_verification_boundary(로컬 검증 경계로 수용)
+effect: "Agent review is attached to gates and receipts instead of being treated as informal commentary(요원 검토를 비공식 코멘트가 아니라 게이트와 영수증에 연결)."
