@@ -1,0 +1,159 @@
+﻿{
+  "run_id": "frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1",
+  "stage_id": "stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap",
+  "created_at_utc": "2026-06-18T11:38:16Z",
+  "producer": "stage_pipelines/stage_frontier_84/frontier84f_runtime_realized_winrate_repair_or_rotation_decision.py",
+  "producer_sha256": "93df80f65bf91ae2f55249969bc65213238f3fee4ec69ed34004f12a14dd5308",
+  "source_inputs": [
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_runtime_realized_winrate_proxy_scout_summary.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_mt5_runtime_realized_winrate_materialization_summary.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84d_runtime_realized_winrate_gap_analysis_summary.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_deal_reconciliation_summary.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_rows.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_split_summary.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/f84e_mt5_normalized_trade_rows.csv"
+  ],
+  "source_hash_refresh": {
+    "run_id": "frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1",
+    "created_at_utc": "2026-06-18T11:38:16Z",
+    "purpose": "Refresh current F84E source hashes because prior f84e_artifact_lineage internal hashes were stale(기존 F84E 계보 내부 해시가 낡아 현재 해시를 갱신).",
+    "sources": [
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_runtime_realized_winrate_proxy_scout_summary.json",
+        "exists": true,
+        "data_row_count": "",
+        "sha256_lf_normalized": "cbc36ea7badbff4971224625e1d487f8e047d3d13999282828fee2d24e11b2c1"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_mt5_runtime_realized_winrate_materialization_summary.json",
+        "exists": true,
+        "data_row_count": "",
+        "sha256_lf_normalized": "c190e3aba462aecd8d04f9fead92cdfaa7f6359e79ca21c5c0deda8b9324e3be"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84d_runtime_realized_winrate_gap_analysis_summary.json",
+        "exists": true,
+        "data_row_count": "",
+        "sha256_lf_normalized": "e87801c54f8ab5450db738ee74e37e03870e03ebc0fdcaedd31b8ea7fa7531ca"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_deal_reconciliation_summary.json",
+        "exists": true,
+        "data_row_count": "",
+        "sha256_lf_normalized": "8de409328daac8dd6c694fe8d431b8db1b65d13911c723ac2421498f17435b23"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_rows.csv",
+        "exists": true,
+        "data_row_count": 4145,
+        "sha256_lf_normalized": "17697eade8a09ed67c92d0e02c3fa848ae0169d1bbdda4595ca62b94875119c3"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_split_summary.csv",
+        "exists": true,
+        "data_row_count": 2,
+        "sha256_lf_normalized": "aab61ebb74c7487ebe1be643def335020161957e33ec0dd8808307b397ab428d"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_month_session_streak_summary.csv",
+        "exists": true,
+        "data_row_count": 48,
+        "sha256_lf_normalized": "66b210a3939cc745f12aef30da0186d53dbaca8ded06f0739b2d43bec3241824"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_unmatched_runtime_mapping_rows.csv",
+        "exists": true,
+        "data_row_count": 18,
+        "sha256_lf_normalized": "60dae985a29ad425836ad3dd7e89a7a0294019d8305a44ea0138a4ce8770b25b"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/f84e_mt5_normalized_deal_rows.csv",
+        "exists": true,
+        "data_row_count": 8254,
+        "sha256_lf_normalized": "4f4bce50660384fdf68270b0ac5dd13df2e4146bb1de41a94182ea61ef64e039"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1/f84e_mt5_normalized_trade_rows.csv",
+        "exists": true,
+        "data_row_count": 4127,
+        "sha256_lf_normalized": "dc4dbedd72ee5298cd351f86a81bc027b6bdd7532abfe4b55e4d1d2cf9529d10"
+      }
+    ],
+    "claim_boundary": "stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  },
+  "consumer": "frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1",
+  "artifact_paths": [
+    "stage_pipelines/stage_frontier_84/frontier84f_runtime_realized_winrate_repair_or_rotation_decision.py",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_repair_or_rotation_decision_summary.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_repair_rotation_decision_matrix.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_closeout_kpi_rows.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_runtime_path_contradiction_pivot_rows.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_f84e_source_hash_refresh.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_actual_subagent_calls.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_local_verification.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_report.md",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/stage_closeout_report.md",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/required_gate_coverage_audit_f84f.md",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_state_sync_audit.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_closeout_gate.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1/run_manifest.json",
+    "docs/agent_control/packets/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1/work_packet.yaml",
+    "docs/agent_control/packets/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1/skill_receipts.json",
+    "docs/agent_control/packets/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1/required_gate_coverage_audit.json",
+    "docs/agent_control/packets/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1/final_claim_guard.json",
+    "docs/agent_control/packets/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1/state_sync_audit.json",
+    "docs/agent_control/packets/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1/closeout_gate.json",
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/00_spec/stage_brief.md",
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/01_inputs/input_refs.md",
+    "docs/decisions/2026-06-18_frontier84_closeout_rotate_f85.md",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_run_evidence_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_result_judgment_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_performance_attribution_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_runtime_parity_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_artifact_lineage_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_task_force_review_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_claim_discipline_receipt.yaml"
+  ],
+  "artifact_hashes": {
+    "stage_pipelines/stage_frontier_84/frontier84f_runtime_realized_winrate_repair_or_rotation_decision.py": "93df80f65bf91ae2f55249969bc65213238f3fee4ec69ed34004f12a14dd5308",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_repair_or_rotation_decision_summary.json": "9aad91c7958682b74eeaaaf728bdef67db5e38c434e2e8ec09536085547be6e4",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_repair_rotation_decision_matrix.csv": "c9d5310a0bf9235cff06b7d143b6095dd26ab8a89f79bd0fdb0c830041dcdbb1",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_closeout_kpi_rows.csv": "22ec53c6f38c39bfd912ac28c1c070e6f2338ea7adb5004b693f60777290f32d",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_runtime_path_contradiction_pivot_rows.csv": "2633f624f37a34991cc3e37490561c09c9a4766338773b530da914248884ae51",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_f84e_source_hash_refresh.json": "a5894e36bebca0555cf3432e8e2a1f82026eb044c85a82ad22bf92fedba9259a",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_actual_subagent_calls.json": "50ae11ed8b92270b83f7222192f21a46f425f9dc00306c923e5124a9d508dc91",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_local_verification.json": "bf2654da09d71e9c9e3aa047bd405371edb8ce5b969c060a245beee4b0c64111",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_report.md": "c724c3fa7687b6391abd3181745a61979ecb789d76733e60e5ff0b4b15f43a9f",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/stage_closeout_report.md": "c724c3fa7687b6391abd3181745a61979ecb789d76733e60e5ff0b4b15f43a9f",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/required_gate_coverage_audit_f84f.md": "07c02bd7ec7e5db965895bcc07982fd8e72fdfaae7f28a126af480bc4b38ee97",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_state_sync_audit.json": "5ea480967377be4c636d12056d8705e7f9859f22390fde1137f1774309b5dd3c",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_closeout_gate.json": "9f869882e15666e8b5f8e67e0aeaf677eb8bddee03df5dae97b5333c87dce882",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1/run_manifest.json": "9aad91c7958682b74eeaaaf728bdef67db5e38c434e2e8ec09536085547be6e4",
+    "docs/agent_control/packets/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1/work_packet.yaml": "de7ad308020b5eabcd173e3df7b36fea8874e19f522e1d0fbaf6cafdf4805441",
+    "docs/agent_control/packets/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1/skill_receipts.json": "2c875775940162cdd03adae8c3f7e4d2a8fdf4dde5d5f9b713461d432bf938d8",
+    "docs/agent_control/packets/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1/required_gate_coverage_audit.json": "2338ac71aa53ffc82566b6405a3674bc29b320cbcab18584e726e4dab60e255b",
+    "docs/agent_control/packets/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1/final_claim_guard.json": "654670af1dca81d8d07bad9bbff3ed763c1ceee0e6efdc483e957f24ce85c551",
+    "docs/agent_control/packets/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1/state_sync_audit.json": "5ea480967377be4c636d12056d8705e7f9859f22390fde1137f1774309b5dd3c",
+    "docs/agent_control/packets/frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1/closeout_gate.json": "9f869882e15666e8b5f8e67e0aeaf677eb8bddee03df5dae97b5333c87dce882",
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/00_spec/stage_brief.md": "4dccb0aca4e7161b3b5de99b9c2c4cbef71a62154ce729ae8767cc90dbb3b0b6",
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/01_inputs/input_refs.md": "8f87be510fd8fc156ca9338c6dc4cd26d4d422f665312c9ff590198118398365",
+    "docs/decisions/2026-06-18_frontier84_closeout_rotate_f85.md": "33e1011a398dcff92c9f462f205d9621a712a435015c1eb5f84a19d4cd388303",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_run_evidence_receipt.yaml": "43cb79a8e13b6fb2d1a11f111b18d6c38190cd861d93cae718b58df1ead21710",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_result_judgment_receipt.yaml": "c600253b014f745b8a9383816b2082e88c37a554646571abbcff26b2af94c3a4",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_performance_attribution_receipt.yaml": "00cd2faffb929619fd6fb60841fa57c5e90809d2b84776e8906933c04bbff516",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_runtime_parity_receipt.yaml": "8cdcca5dc91104867ae53b67345f88560309588d2d92c970d9ce1af8f0119ed3",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_artifact_lineage_receipt.yaml": "4eda0256cbdb73520f12c2ca9d1fc7e26b26dc53e14c5e57b367a84ee69acf2c",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_task_force_review_receipt.yaml": "a600bf6b52452800ecadba99eff527b803de040cc2d7108dc35cf568fa1c2113",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_claim_discipline_receipt.yaml": "0b6b9129af47c860ebe0325d70b63d86292cb8f6d07f7fb1b9bcd59f97709e4a"
+  },
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv",
+    "docs/registers/idea_registry.md",
+    "docs/registers/negative_result_register.md"
+  ],
+  "lineage_judgment": "connected_with_refreshed_source_hashes(현재 원천 해시로 연결됨)",
+  "claim_boundary": "stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

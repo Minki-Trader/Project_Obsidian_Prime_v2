@@ -2336,3 +2336,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1 -->
 - `frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1` completed row-level reconciliation(행 단위 조정). OOS(표본외) proxy win -> runtime loss(프록시 승리 -> 런타임 손실) `560`건. Preserved clue(보존 단서): density(밀도)는 유지됐지만 deal economics(거래 경제성)는 무너졌다. Next(다음): `frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1`. Claim boundary(주장 경계): `row_level_reconciliation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+<!-- frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1 -->
+- `frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1` closed F84 as negative/no authority(부정/권위 없음). Preserved clue(보존 단서): runtime path contradiction(런타임 경로 모순), tp_expected_sl_actual(익절예상-손절실제), both-hit ambiguity(양방향 터치 모호성). Next(다음): `frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1`. Boundary(경계): `stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

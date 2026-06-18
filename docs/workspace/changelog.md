@@ -1,4 +1,11 @@
-﻿# 2026-06-18 - F83G Closeout And F84 Rotation(F83G 마감 및 F84 회전)
+﻿# 2026-06-18 - F84F Closeout And F85 Rotation(F84F 마감 및 F85 회전)
+
+- Action(행동): `frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1`로 F84를 negative/no authority(부정/권위 없음) 마감했다.
+- Effect(효과): runtime path contradiction(런타임 경로 모순)을 F85 leakage-safe label rebuild(F85 누수 안전 라벨 재구축) 씨앗으로 넘겼다.
+- Task Force(태스크포스): 8/8 actual calls completed(8/8 실제 호출 완료).
+- Boundary(경계): `stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+# 2026-06-18 - F83G Closeout And F84 Rotation(F83G 마감 및 F84 회전)
 
 - Action(행동): `frontier83G_runtime_realized_outcome_repair_or_rotation_decision_v1`로 F83 lifecycle(F83 생명주기)을 closeout(마감)했다.
 - Effect(효과): MT5 runtime OOS(런타임 표본외) `-37.17/0.97/19.24/8.266666666666667`와 `runtime_win_rate_erosion_after_signal_parity(신호 동등성 이후 런타임 승률 침식)`를 근거로 negative memory(부정 기억)와 F84 runtime-realized win-rate rebuild handoff(전선84 런타임 실현 승률 재구축 인계)를 기록했다.

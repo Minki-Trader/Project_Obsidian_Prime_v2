@@ -1454,3 +1454,14 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 
 <!-- frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1_negative_row_level_runtime -->
 - `frontier84E_runtime_realized_winrate_row_level_deal_reconciliation_v1` negative row-level runtime evidence(부정 행 단위 런타임 근거): OOS(표본외) matched runtime trades(결합 런타임 거래) `1801`건, proxy win -> runtime loss(프록시 승리 -> 런타임 손실) `560`건. Reopen/repair condition(재개/수리 조건): F84F must choose capped repair or rotation with new axis(전선84F는 새 축으로 상한 수리 또는 회전 선택).
+
+<!-- NR-F84-RUNTIME-PATH-CONTRADICTION-CLOSEOUT -->
+## NR-F84-RUNTIME-PATH-CONTRADICTION-CLOSEOUT
+
+- Stage(단계): `stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap`
+- Run(실행): `frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1`
+- Why failed(실패 이유): OOS(표본외) runtime net/PF/DD `-133.51/0.8598276061188279/29.27`, proxy win -> runtime loss(프록시 승리 -> 런타임 손실) `560/821`.
+- Do-not-repeat(반복 금지): same-surface threshold/filter/parameter-only repair(동일 표면 임계값/필터/파라미터만 수리).
+- Salvage value(회수 가치): F85 runtime path contradiction firewall label seed(F85 런타임 경로 모순 방화벽 라벨 씨앗).
+- Reopen condition(재개 조건): leakage-safe pre-entry surrogate(누수 안전 진입 전 대체 신호), WFO-aware split(워크포워드 인식 분할), and MT5 materialization(MT5 물질화)이 포함될 때만 재개.
+- Boundary(경계): `stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
