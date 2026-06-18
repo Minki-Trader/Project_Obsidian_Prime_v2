@@ -1,0 +1,332 @@
+version: work_packet_schema_v2_1
+packet_lifecycle: new_packet
+packet_id: frontier88B_minimal_runtime_substrate_preflight_v1
+created_at_utc: '2026-06-18T22:39:47Z'
+user_request:
+  user_quote: /goal active continuation
+  requested_action: F88B minimal MT5 runtime substrate preflight
+  requested_count:
+    value: 1
+    n_a_reason: ''
+  ambiguous_terms:
+  - Goal remains active; runtime authority and Goal Achieve are not claimed.
+current_truth:
+  active_stage: stage_frontier_88__runtime_substrate_first_materialization_probe
+  current_run: frontier88B_minimal_runtime_substrate_preflight_v1
+  latest_completed_run: frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/04_selected/selection_status.md
+  claim_boundary: runtime_probe_observation_only_no_completion_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+work_classification:
+  primary_family: runtime_backtest
+  detected_families:
+  - runtime_backtest
+  - artifact_lineage
+  - kpi_evidence
+  - state_sync
+  touched_surfaces:
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1
+  - docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1
+  - docs/workspace/workspace_state.yaml
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    compile_only_laundered_as_runtime: controlled_by_runtime_output_hashes
+    runtime_probe_as_authority: blocked_by_final_claim_guard
+    feature_skip_gap_hidden: recorded_as_f88c_repair_target
+  hard_stop_risks:
+  - Do not claim runtime authority from one short runtime probe.
+  - Do not claim Goal Achieve from negative economics.
+  - Do not treat embedded report trades as a separate trade-list file.
+  required_gates:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - runtime_evidence_gate
+  - scope_completion_gate
+  - kpi_contract_audit
+  - backtest_forensics_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - completion
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - runtime_verified
+  - runtime_parity_closed
+  - strategy_tester_economics_pass
+  - materialization_ready
+  - ea_onnx_runtime_bundle_ready
+  - task_force_reviewed
+decision_lock:
+  mode: assume_safe_default
+  assumptions:
+    task_force_required_now: false
+    reason: No Task Force review claim, policy change, or roster review is made.
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+  - runtime_backtest
+  target_surfaces:
+  - F88B MT5 runtime substrate
+  - RuntimeProbeEA
+  - F04D reference ONNX candidate
+  scope_units:
+  - compile
+  - set_ini_materialization
+  - strategy_tester_run
+  - report_telemetry_hashing
+  - state_sync
+  execution_layers:
+  - local_python_execution
+  - mt5_execution
+  - strategy_tester
+  - runtime_telemetry
+  mutation_policy:
+    allowed: true
+    user_quote: /goal active continuation
+  evidence_layers:
+  - EA/ONNX/set/ini hashes
+  - Strategy Tester report
+  - telemetry
+  - summary
+  - KPI record
+  reduction_policy:
+    reduction_allowed: false
+    rationale: Runtime claim requires actual runtime output.
+  claim_boundary:
+    allowed_claims:
+    - f88b_runtime_substrate_preflight_completed
+    - runtime_probe_observation_no_authority
+    - runtime_bundle_identity_recorded
+    - actual_output_identity_recorded
+    - negative_economics_gap_recorded
+    forbidden_claims:
+    - completion
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - runtime_verified
+    - runtime_parity_closed
+    - strategy_tester_economics_pass
+    - materialization_ready
+    - ea_onnx_runtime_bundle_ready
+    - task_force_reviewed
+    claim_boundary: runtime_probe_observation_only_no_completion_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+  verification_layers:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - runtime_evidence_gate
+  - scope_completion_gate
+  - kpi_contract_audit
+  - backtest_forensics_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  mt5_required: required_and_attempted
+  top_k_reduction_allowed: false
+verification_profile:
+  profile_id: runtime_probe
+  claim_surface:
+    allowed_claims:
+    - f88b_runtime_substrate_preflight_completed
+    - runtime_probe_observation_no_authority
+    - runtime_bundle_identity_recorded
+    - actual_output_identity_recorded
+    - negative_economics_gap_recorded
+    forbidden_claims:
+    - completion
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - runtime_verified
+    - runtime_parity_closed
+    - strategy_tester_economics_pass
+    - materialization_ready
+    - ea_onnx_runtime_bundle_ready
+    - task_force_reviewed
+    claim_boundary: runtime_probe_observation_only_no_completion_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+  trigger_sources:
+  - active_goal
+  - F88A_runtime_substrate_contract
+  - runtime_materialization_handoff_claim_surface
+  protected_claims:
+  - f88b_runtime_substrate_preflight_completed
+  - runtime_probe_observation_no_authority
+  - runtime_bundle_identity_recorded
+  - actual_output_identity_recorded
+  - negative_economics_gap_recorded
+  required_evidence:
+  - dataset_id=f88b_runtime_validation_short_probe_2025_01_02_to_2025_01_10
+  - feature_set_id=frontier04d_f04d_read_feature_order_58
+  - label_id=frontier04d_path_label_argmax_reference_only
+  - split_id=validation_is_short_probe_2025_01_02_to_2025_01_10
+  - onnx_hash=4fcc9d835709994190fa782b0610f6997a1a5439be88d3247d3270dc663162ad
+  - ea_source_hash=322772eb36777c9570f3fe7a6f0c808b3c929a62d2cae96c44e7d2c08b8a9180
+  - ea_binary_hash=516f43ce017cae48cdcb5c3f23fd98e9a7b2a4281b4849f8270a515c2b00d781
+  - 'set_ini_hash={''set'': ''ce6e9633803f9f38b03a47c08ec79729b35303df4681db84b87288e62553ddb7'', ''ini'': ''003fae40a4a096e3186911358d6bc99139e7b7df114dbb57a7c26707c1f78687''}'
+  - feature_order_hash=fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2
+  - tester_identity
+  - runtime_bundle_identity
+  - actual_output_strategy_tester_report_hash
+  - actual_output_trade_list_hash_or_embedded_report_boundary
+  - telemetry_hash
+  - operation_proof_ea_loaded_onnx_inference_called_report_generated_telemetry_updated_no_fatal_runtime_mismatch
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_evidence_identity.json
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88B_minimal_runtime_substrate_preflight_v1_f88b_tier_a_validation_is.htm
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_telemetry.csv
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_summary.csv
+  gates_not_run_with_reason:
+  - gate: codex_task_force_review_packet
+    reason_code: not_triggered_for_runtime_probe_claim_surface
+    reason: No Task Force reviewed/pass claim, policy change, roster review, or required overlay claim is made.
+    claim_effect: No Task Force review claim is made.
+  stop_conditions:
+  - 'Stop before authority: one short runtime probe is not runtime authority.'
+  - 'Stop before Goal Achieve: PF/DD/trade density do not meet final entry criteria.'
+  - Open F88C for timestamp coverage/trade-list repair.
+acceptance_criteria:
+- Runtime probe produces tester output or exact blocker.
+- EA/ONNX/set/ini/report/telemetry hashes are recorded.
+- Final claim guard forbids authority/live readiness/Goal Achieve.
+work_plan:
+- Use F04D executable reference ONNX candidate without inheriting authority.
+- Compile RuntimeProbeEA and run one narrow Strategy Tester validation probe.
+- Record runtime output identity, KPI, gaps, and next repair target.
+skill_routing:
+  primary_family: runtime_backtest
+  primary_skill: obsidian-runtime-parity
+  support_skills:
+  - obsidian-backtest-forensics
+  - obsidian-reference-scout
+  - obsidian-run-evidence-system
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-claim-discipline
+  - obsidian-answer-clarity
+  skills_considered:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-reference-scout
+  - obsidian-run-evidence-system
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-claim-discipline
+  - obsidian-answer-clarity
+  skills_selected:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-reference-scout
+  - obsidian-run-evidence-system
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-claim-discipline
+  - obsidian-answer-clarity
+  skills_not_used:
+  - skill: obsidian-task-force-review
+    reason: not_triggered_no_review_claim
+  required_skill_receipts:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-reference-scout
+  - obsidian-run-evidence-system
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-claim-discipline
+  - obsidian-answer-clarity
+  required_gates:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - runtime_evidence_gate
+  - scope_completion_gate
+  - kpi_contract_audit
+  - backtest_forensics_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  raw_evidence:
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/design/f88b_minimal_runtime_substrate_preflight_brief.json
+  - stages/stage_frontier_04__path_aware_cost_dd_event_labeling/02_runs/frontier04D_trainable_path_label_onnx_probe_v1/models/rf_depth5_leaf80_balanced_argmax.onnx
+  - stages/stage_frontier_04__path_aware_cost_dd_event_labeling/02_runs/frontier04D_trainable_path_label_onnx_probe_v1/models/rf_depth5_leaf80_balanced_argmax.joblib
+  - foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5
+  - foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.ex5
+  - docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md
+  - docs/contracts/time_axis_policy_fpmarkets_v2.md
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/feature_matrices/frontier88B_minimal_runtime_substrate_preflight_v1_validation_is_features.csv
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.set
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.ini
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tester_execution.json
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88B_minimal_runtime_substrate_preflight_v1_f88b_tier_a_validation_is.htm
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_telemetry.csv
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_summary.csv
+  machine_readable:
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/run_manifest.json
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/summary.json
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/kpi_record.json
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_evidence_identity.json
+  - docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/skill_receipts.json
+  human_readable:
+  - stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/reports/result_summary.md
+  - docs/decisions/2026-06-19_frontier88b_runtime_substrate_probe.md
+  hash_identity_required: true
+gates:
+  required:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - runtime_evidence_gate
+  - scope_completion_gate
+  - kpi_contract_audit
+  - backtest_forensics_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  runtime_evidence_gate: pass
+  scope_completion_gate: pass
+  kpi_contract_audit: pass
+  backtest_forensics_audit: pass
+  artifact_lineage_audit: pass
+  result_judgment_audit: pass
+  state_sync_audit: pending_external_lint
+  required_gate_coverage_audit: pending_external_lint
+  final_claim_guard: pass
+final_claim_policy:
+  allowed_claims:
+  - f88b_runtime_substrate_preflight_completed
+  - runtime_probe_observation_no_authority
+  - runtime_bundle_identity_recorded
+  - actual_output_identity_recorded
+  - negative_economics_gap_recorded
+  forbidden_claims:
+  - completion
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - runtime_verified
+  - runtime_parity_closed
+  - strategy_tester_economics_pass
+  - materialization_ready
+  - ea_onnx_runtime_bundle_ready
+  - task_force_reviewed
+  claim_boundary: runtime_probe_observation_only_no_completion_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve

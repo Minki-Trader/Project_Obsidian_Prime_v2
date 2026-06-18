@@ -2385,3 +2385,10 @@ Register ideas when they become durable work, not for every passing thought.
 - Action(행동): F88 runtime-substrate-first axis(런타임 바탕 우선 축)을 design-only(설계 전용)로 열었다.
 - Effect(효과): next(다음)는 `frontier88B_minimal_runtime_substrate_preflight_v1`이며, Strategy Tester output identity(전략 테스터 출력 정체성)를 실제로 시도하거나 blocker(차단 사유)를 남긴다.
 - Boundary(경계): `stage_open_design_only_no_runtime_materialization_no_strategy_tester_economics_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+<!-- frontier88B_minimal_runtime_substrate_preflight_v1 -->
+
+## frontier88B_minimal_runtime_substrate_preflight_v1
+
+- Action(행동): Runtime substrate first(런타임 바탕 우선) 축에서 실제 MT5 tester output(테스터 출력)을 만들었다.
+- Effect(효과): 다음 아이디어는 새 threshold tweak(임계값 미세조정)가 아니라 timestamp coverage/trade-list separation repair(타임스탬프 커버리지/거래목록 분리 수리)다.
+- Boundary(경계): `runtime_probe_observation_only_no_completion_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

@@ -1,0 +1,678 @@
+{
+  "packet_id": "frontier88B_minimal_runtime_substrate_preflight_v1",
+  "status": "pass",
+  "completed_forbidden": false,
+  "audits": [
+    {
+      "audit_name": "skill_receipt_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_skills": [
+          "obsidian-runtime-parity",
+          "obsidian-backtest-forensics",
+          "obsidian-reference-scout",
+          "obsidian-run-evidence-system",
+          "obsidian-artifact-lineage",
+          "obsidian-result-judgment",
+          "obsidian-claim-discipline",
+          "obsidian-answer-clarity"
+        ],
+        "receipt_count": 8
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "work_packet_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "version": "work_packet_schema_v2_1",
+        "has_v2_fields": true,
+        "packet_lifecycle": "new_packet"
+      },
+      "allowed_claims": [
+        "work_packet_schema_valid"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "state_sync_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "active_stage": "stage_frontier_88__runtime_substrate_first_materialization_probe",
+        "workspace_active_branch": "",
+        "actual_git_branch": "main",
+        "current_run_values": {
+          "workspace_state": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1",
+          "current_working_state": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1",
+          "selection_status": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1"
+        },
+        "stage_brief_boundary": "",
+        "registry_has_current_run": true,
+        "stage_ledger_has_current_run": true,
+        "source_paths": {
+          "workspace_state": "docs/workspace/workspace_state.yaml",
+          "current_working_state": "docs/context/current_working_state.md",
+          "selection_status": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/04_selected/selection_status.md",
+          "stage_brief": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/00_spec/stage_brief.md",
+          "run_registry": "docs/registers/run_registry.csv",
+          "stage_ledger": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/stage_run_ledger.csv"
+        }
+      },
+      "allowed_claims": [
+        "current_truth_synced",
+        "state_sync_completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "receipt_count": 8,
+        "schema_path": "docs/agent_control/skill_receipt_schema.yaml"
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "runtime_evidence_gate",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "boundary_status": "pass_observation_no_authority",
+        "economics": {
+          "equity_drawdown_maximal_percent": 17.16,
+          "expectancy": -1.57,
+          "gross_loss": -110.97,
+          "gross_profit": 74.77,
+          "judgment": "negative_economics_gap_for_final_entry_gate",
+          "long_trade_count": 14,
+          "max_drawdown_percent": 17.16,
+          "net_profit": -36.2,
+          "profit_factor": 0.67,
+          "recovery_factor": -0.39,
+          "short_trade_count": 9,
+          "trade_count": 23,
+          "trades_per_calendar_day": 2.875,
+          "win_rate_percent": 56.52
+        },
+        "forbidden_claims_delegated_to_final_claim_guard": [
+          "completion",
+          "selected_baseline",
+          "operating_promotion",
+          "runtime_authority",
+          "live_readiness",
+          "goal_achieve",
+          "runtime_verified",
+          "runtime_parity_closed",
+          "strategy_tester_economics_pass",
+          "materialization_ready",
+          "ea_onnx_runtime_bundle_ready",
+          "task_force_reviewed"
+        ],
+        "operation_proof": {
+          "boundary": "feature_skip_count remains high; runtime observation only, not runtime authority",
+          "ea_loaded": true,
+          "no_fatal_runtime_mismatch": true,
+          "onnx_inference_called": true,
+          "report_generated": true,
+          "telemetry_updated": true
+        },
+        "runtime_identity": {
+          "compile_status": "completed",
+          "dataset_id": "f88b_runtime_validation_short_probe_2025_01_02_to_2025_01_10",
+          "ea_binary_hash": "516f43ce017cae48cdcb5c3f23fd98e9a7b2a4281b4849f8270a515c2b00d781",
+          "ea_source_hash": "322772eb36777c9570f3fe7a6f0c808b3c929a62d2cae96c44e7d2c08b8a9180",
+          "feature_matrix_hash": "afd45fa573f60a723fc63c1b9589d85795c84dc557bd8491bc6e553108d639d9",
+          "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "feature_set_id": "frontier04d_f04d_read_feature_order_58",
+          "label_id": "frontier04d_path_label_argmax_reference_only",
+          "onnx_hash": "4fcc9d835709994190fa782b0610f6997a1a5439be88d3247d3270dc663162ad",
+          "parser_contract_version": "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md",
+          "parser_status": {
+            "strategy_report": "utf-16",
+            "summary_csv": "parsed_utf_8_sig",
+            "telemetry_csv": "parsed_cp949_detail_label_mojibake_boundary"
+          },
+          "report_hash": "773f2645cd49268c791adacbfbf751b1478a9ef53cd9acd743386fcfd1de78be",
+          "report_status": "completed",
+          "runtime_contract_version": "ObsidianPrimeV2_RuntimeProbeEA_f88b",
+          "runtime_status": "completed",
+          "set_ini_hash": {
+            "ini": "003fae40a4a096e3186911358d6bc99139e7b7df114dbb57a7c26707c1f78687",
+            "set": "ce6e9633803f9f38b03a47c08ec79729b35303df4681db84b87288e62553ddb7"
+          },
+          "source_candidate": {
+            "candidate_id": "rf_depth5_leaf80_balanced_argmax",
+            "claim_effect": "reference runtime substrate candidate only; no inherited baseline or authority",
+            "source_run_id": "frontier04D_trainable_path_label_onnx_probe_v1",
+            "source_stage_id": "stage_frontier_04__path_aware_cost_dd_event_labeling"
+          },
+          "split_id": "validation_is_short_probe_2025_01_02_to_2025_01_10",
+          "summary_hash": "8f561875b87830d2218f15a46ed4a76d56bc2eefd233320ec416c907528d2e31",
+          "telemetry_hash": "50b371c071db674576e2c9ee541efea79af0ca3d10ecb3a21d5e51e2301d2195",
+          "tester_identity": {
+            "broker": "FPMarkets",
+            "commission": "broker_native_or_report_not_parsed",
+            "date_range": "2025.01.02..2025.01.10",
+            "deposit": 500,
+            "leverage": "1:100",
+            "modeling_mode": "4_Every_tick_based_on_real_ticks",
+            "slippage": "not_explicit_in_ini",
+            "spread": "broker_native_or_report_not_parsed",
+            "swap": "broker_native_or_report_not_parsed",
+            "symbol": "US100",
+            "terminal_command": [
+              "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\terminal64.exe",
+              "/portable",
+              "/config:C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\MQL5\\Profiles\\Tester\\opv2_frontier88B_ta_v.ini"
+            ],
+            "tester_profile_ini": {
+              "destination": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Profiles/Tester/opv2_frontier88B_ta_v.ini",
+              "encoding_policy": "utf-8-no-bom",
+              "sha256": "003fae40a4a096e3186911358d6bc99139e7b7df114dbb57a7c26707c1f78687",
+              "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.ini"
+            },
+            "tester_profile_set": {
+              "destination": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+              "sha256": "ce6e9633803f9f38b03a47c08ec79729b35303df4681db84b87288e62553ddb7",
+              "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.set"
+            },
+            "timeframe": "M5"
+          },
+          "tester_status": "completed",
+          "trade_list_hash": "773f2645cd49268c791adacbfbf751b1478a9ef53cd9acd743386fcfd1de78be",
+          "trade_list_identity": "embedded_in_strategy_tester_html_report_no_separate_trade_list_file"
+        }
+      },
+      "allowed_claims": [
+        "runtime_probe_observation_no_authority"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "scope_completion_gate",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "expected_outputs": [
+          "stage_pipelines/stage_frontier_88/frontier88b_runtime_substrate_preflight_closeout.py",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/run_manifest.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/summary.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/kpi_record.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/reports/result_summary.md",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_evidence_identity.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/backtest_forensics_summary.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/feature_matrices/frontier88B_minimal_runtime_substrate_preflight_v1_validation_is_features.csv",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_telemetry.csv",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_summary.csv",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tester_execution.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_compile_probe.log",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.set",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.ini",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88B_minimal_runtime_substrate_preflight_v1_f88b_tier_a_validation_is.htm",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88B_minimal_runtime_substrate_preflight_v1_f88b_tier_a_validation_is.png",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_runtime_evidence_gate.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_backtest_forensics_audit.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_kpi_contract_audit.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_scope_completion_gate.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_artifact_lineage_audit.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_result_judgment_audit.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_final_claim_guard.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_state_sync_audit.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_runtime_parity_receipt.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_backtest_forensics_receipt.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_reference_scout_receipt.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_run_evidence_system_receipt.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_artifact_lineage_receipt.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_result_judgment_receipt.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_claim_discipline_receipt.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_answer_clarity_receipt.json",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/work_packet.yaml",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/skill_receipts.json",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/final_claim_guard.json",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/closeout_gate.json",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/state_sync_audit.json",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/work_packet_schema_lint.json",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/skill_receipt_schema_lint.json",
+          "docs/decisions/2026-06-19_frontier88b_runtime_substrate_probe.md",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/00_spec/stage_brief.md",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/01_inputs/input_refs.md",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/context_anchor.md",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/review_index.md",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/04_selected/selection_status.md",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/stage_run_ledger.csv"
+        ],
+        "next_run_id": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1"
+      },
+      "allowed_claims": [
+        "f88b_runtime_substrate_preflight_completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "kpi_contract_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "boundary_status": "pass_negative_economics_recorded",
+        "execution_kpi_layer": {
+          "bars_seen": 1566,
+          "feature_ready_count": 316,
+          "feature_skip_count": 1250,
+          "model_ok_count": 316,
+          "order_attempt_count": 40,
+          "order_fill_count": 40,
+          "ticks_seen": 2017746
+        },
+        "forbidden_claims_delegated_to_final_claim_guard": [
+          "completion",
+          "selected_baseline",
+          "operating_promotion",
+          "runtime_authority",
+          "live_readiness",
+          "goal_achieve",
+          "runtime_verified",
+          "runtime_parity_closed",
+          "strategy_tester_economics_pass",
+          "materialization_ready",
+          "ea_onnx_runtime_bundle_ready",
+          "task_force_reviewed"
+        ],
+        "runtime_kpi_layer": {
+          "equity_drawdown_maximal_percent": 17.16,
+          "expectancy": -1.57,
+          "gross_loss": -110.97,
+          "gross_profit": 74.77,
+          "judgment": "negative_economics_gap_for_final_entry_gate",
+          "long_trade_count": 14,
+          "max_drawdown_percent": 17.16,
+          "net_profit": -36.2,
+          "profit_factor": 0.67,
+          "recovery_factor": -0.39,
+          "short_trade_count": 9,
+          "trade_count": 23,
+          "trades_per_calendar_day": 2.875,
+          "win_rate_percent": 56.52
+        }
+      },
+      "allowed_claims": [
+        "negative_economics_gap_recorded"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "backtest_forensics_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [
+        {
+          "check_id": "",
+          "message": "Spread/commission/slippage are broker-native or not separately parsed from report; no runtime authority claim.",
+          "severity": "info",
+          "details": {}
+        },
+        {
+          "check_id": "",
+          "message": "Feature skip count is high and becomes F88C repair target.",
+          "severity": "info",
+          "details": {}
+        }
+      ],
+      "counts": {
+        "backtest_judgment": "usable_with_boundary_runtime_probe_only",
+        "cost_assumptions": {
+          "commission": "broker_native_or_report_not_parsed",
+          "slippage": "not_explicit_in_ini",
+          "spread": "broker_native_or_report_not_parsed",
+          "swap": "broker_native_or_report_not_parsed"
+        },
+        "forbidden_claims_delegated_to_final_claim_guard": [
+          "completion",
+          "selected_baseline",
+          "operating_promotion",
+          "runtime_authority",
+          "live_readiness",
+          "goal_achieve",
+          "runtime_verified",
+          "runtime_parity_closed",
+          "strategy_tester_economics_pass",
+          "materialization_ready",
+          "ea_onnx_runtime_bundle_ready",
+          "task_force_reviewed"
+        ],
+        "report_identity": {
+          "exists": true,
+          "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88B_minimal_runtime_substrate_preflight_v1_f88b_tier_a_validation_is.htm",
+          "role": "strategy_tester_report",
+          "sha256": "773f2645cd49268c791adacbfbf751b1478a9ef53cd9acd743386fcfd1de78be",
+          "size_bytes": 117880
+        },
+        "tester_identity": {
+          "broker": "FPMarkets",
+          "commission": "broker_native_or_report_not_parsed",
+          "date_range": "2025.01.02..2025.01.10",
+          "deposit": 500,
+          "leverage": "1:100",
+          "modeling_mode": "4_Every_tick_based_on_real_ticks",
+          "slippage": "not_explicit_in_ini",
+          "spread": "broker_native_or_report_not_parsed",
+          "swap": "broker_native_or_report_not_parsed",
+          "symbol": "US100",
+          "terminal_command": [
+            "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\terminal64.exe",
+            "/portable",
+            "/config:C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\MQL5\\Profiles\\Tester\\opv2_frontier88B_ta_v.ini"
+          ],
+          "tester_profile_ini": {
+            "destination": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Profiles/Tester/opv2_frontier88B_ta_v.ini",
+            "encoding_policy": "utf-8-no-bom",
+            "sha256": "003fae40a4a096e3186911358d6bc99139e7b7df114dbb57a7c26707c1f78687",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.ini"
+          },
+          "tester_profile_set": {
+            "destination": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+            "sha256": "ce6e9633803f9f38b03a47c08ec79729b35303df4681db84b87288e62553ddb7",
+            "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.set"
+          },
+          "timeframe": "M5"
+        },
+        "trade_evidence": {
+          "equity_drawdown_maximal_percent": 17.16,
+          "expectancy": -1.57,
+          "gross_loss": -110.97,
+          "gross_profit": 74.77,
+          "judgment": "negative_economics_gap_for_final_entry_gate",
+          "long_trade_count": 14,
+          "max_drawdown_percent": 17.16,
+          "net_profit": -36.2,
+          "profit_factor": 0.67,
+          "recovery_factor": -0.39,
+          "short_trade_count": 9,
+          "trade_count": 23,
+          "trades_per_calendar_day": 2.875,
+          "win_rate_percent": 56.52
+        }
+      },
+      "allowed_claims": [
+        "actual_output_identity_recorded"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "artifact_lineage_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "artifact_hashes": {
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/closeout_gate.json": "a60a852b001739007cede3b2b9396cdb5ca411026bd3cf7228fa8b0bbaf98542",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/final_claim_guard.json": "4886574fd767c5b44acf5a2937a1fc9bf2954528ede1f727384feaa8e9be7576",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/skill_receipt_schema_lint.json": "c9610649a6566b6a25eaf46d541e87414f2d38fd6e2e460353f24f7d8bd33e96",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/skill_receipts.json": "758705782b9f5f77ea8710c0416d099fda498446a89245a3323ad9531c35c173",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/state_sync_audit.json": "fe470f14da8e8ba8e9bb6125b39fcd5ddb58883e09064e2d9d3918098adb3701",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/work_packet.yaml": "1d8ec438b474b63a2f24a4cac8198bbcd0791953d123b5e0dc120b7962f77691",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/work_packet_schema_lint.json": "020e90fff527d6c7a35c14a4951307f9a5b7179b6c94bde5df747be0e6b2e8d0",
+          "docs/decisions/2026-06-19_frontier88b_runtime_substrate_probe.md": "7d92595fd0432bcb4f3368e763456c6dcceb9388da9d125099915187306f60d8",
+          "stage_pipelines/stage_frontier_88/frontier88b_runtime_substrate_preflight_closeout.py": "432e5895bfeea568000db46671de4c39cefe9c2841dd5382bb47b9cc31ebf26c",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/00_spec/stage_brief.md": "ca61352a1d40f99680559ca139e187a66a97a042da71083698b00bde707c2301",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/01_inputs/input_refs.md": "f7893ffbc504735aafcb64ed84a10363d10b18b6e46826f7cd00edb395b55831",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/backtest_forensics_summary.json": "10e65818562b43e40aad77f6269d32c5034c607896f7ebcc02fe00e21c0d850f",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/feature_matrices/frontier88B_minimal_runtime_substrate_preflight_v1_validation_is_features.csv": "afd45fa573f60a723fc63c1b9589d85795c84dc557bd8491bc6e553108d639d9",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/kpi_record.json": "73da6a180f04847d14781359499268539a92e9a8e906b0742193779edc516abb",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_compile_probe.log": "a793f48659f92197b6ee831b8b734600c534d443ac62a556e00d015f6d804bb3",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tester_execution.json": "66b3d75d1b7f6f463c425046d205136feb25f10eb394da08b0041d2ec592b3ec",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.ini": "003fae40a4a096e3186911358d6bc99139e7b7df114dbb57a7c26707c1f78687",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.set": "ce6e9633803f9f38b03a47c08ec79729b35303df4681db84b87288e62553ddb7",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88B_minimal_runtime_substrate_preflight_v1_f88b_tier_a_validation_is.htm": "773f2645cd49268c791adacbfbf751b1478a9ef53cd9acd743386fcfd1de78be",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88B_minimal_runtime_substrate_preflight_v1_f88b_tier_a_validation_is.png": "c2b27d00ae46e36a72973273857afc421d3cac802a719948381b04847aa5d309",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/reports/result_summary.md": "d3c3092f5d4ef478e299b9bdd1ac8e3600d3b891575f8d2662d0c523c7009fa8",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/run_manifest.json": "6cae53d7c1603a5df6fd5fda586d80cd3d7b36de43f4f99aaf071bb109000b52",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_evidence_identity.json": "8e8abd2e170fc94b02d360ecc065cb0687bf898acfc90efe014de814e5ef3b43",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_summary.csv": "8f561875b87830d2218f15a46ed4a76d56bc2eefd233320ec416c907528d2e31",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_telemetry.csv": "50b371c071db674576e2c9ee541efea79af0ca3d10ecb3a21d5e51e2301d2195",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/summary.json": "6cae53d7c1603a5df6fd5fda586d80cd3d7b36de43f4f99aaf071bb109000b52",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/context_anchor.md": "d43987f550b17dcf2a2db86440faf0f393894f9e029f944c2c691916f8c3b6cc",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_answer_clarity_receipt.json": "3ac67a89eb6f5a58b43210dd28a61ad41e20379cbcd6e6b9c6023901e98e550a",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_artifact_lineage_audit.json": "867b1a861a765b1e2c0578e980d6d8558b2a5ec9b72c56c48e9ed971271ee56f",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_artifact_lineage_receipt.json": "d78775f4ab06469b75130ee6cefa37a68d74ec6d83cf797091434beacb30896b",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_backtest_forensics_audit.json": "1db809b1e7241791c9bda990d0f0ba90f019d9860e8ec072f80c7f72e0d1776e",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_backtest_forensics_receipt.json": "4a5b79b6db48c7eb86faa14daa4b95bab0b930cfe3ed0e641b3a35f5c4b60f08",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_claim_discipline_receipt.json": "152d1a633c9a3025bb0753e3d9e0c97f29a77c2cf3dd35de85b9fd41e16e50ce",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_final_claim_guard.json": "4886574fd767c5b44acf5a2937a1fc9bf2954528ede1f727384feaa8e9be7576",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_kpi_contract_audit.json": "1a002819bf1d8818208772ccc251fafdfc17bdc12f86e36c5e74cbfb11be7575",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_reference_scout_receipt.json": "850154f9164ef50614d9dae6cf31859ffcce2ccbad50de1dda56854a80a99840",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_result_judgment_audit.json": "4dfb541478e178f76e77d1bec30c8e67d7fec80be34f82a01bccc7fbb9e53602",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_result_judgment_receipt.json": "4391fca2a1be960d5b34483898481b78c662c06f90feed55225381ea27515816",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_run_evidence_system_receipt.json": "c4b5b06b0636adbb01a2c5173442d4dfb3902e9e23f1402f1177f23dbd94e6f8",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_runtime_evidence_gate.json": "084ec868f8e579133f19a9027115b2e67c68002d01a6b0bc2855eb3bd5afee38",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_runtime_parity_receipt.json": "71246f343a9d8684146302c6f0ef5f3bb4a2883cdb0f56e77b7c82e1309e1e1b",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_scope_completion_gate.json": "9508a37c3956fbc2de6cc9bf995c13bb441b485b7a8c04926177c236698a0734",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_state_sync_audit.json": "fe470f14da8e8ba8e9bb6125b39fcd5ddb58883e09064e2d9d3918098adb3701",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/review_index.md": "b42bca4d984ce48f40d7512cce8574991fb52acdad71561fae965e70fe75af41",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/stage_run_ledger.csv": "f2ae60132c00c7619b05e780aa25d1938e4621503bac0d642a9104a1607552ab",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/04_selected/selection_status.md": "2aad43dae958dce26b36c0a817440472a2dc62d966fcefccb277e541c75948f4"
+        },
+        "artifact_paths": [
+          "stage_pipelines/stage_frontier_88/frontier88b_runtime_substrate_preflight_closeout.py",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/run_manifest.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/summary.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/kpi_record.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/reports/result_summary.md",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_evidence_identity.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/backtest_forensics_summary.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/feature_matrices/frontier88B_minimal_runtime_substrate_preflight_v1_validation_is_features.csv",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_telemetry.csv",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_summary.csv",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tester_execution.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_compile_probe.log",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.set",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.ini",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88B_minimal_runtime_substrate_preflight_v1_f88b_tier_a_validation_is.htm",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88B_minimal_runtime_substrate_preflight_v1_f88b_tier_a_validation_is.png",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_runtime_evidence_gate.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_backtest_forensics_audit.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_kpi_contract_audit.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_scope_completion_gate.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_artifact_lineage_audit.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_result_judgment_audit.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_final_claim_guard.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_state_sync_audit.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_runtime_parity_receipt.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_backtest_forensics_receipt.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_reference_scout_receipt.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_run_evidence_system_receipt.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_artifact_lineage_receipt.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_result_judgment_receipt.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_claim_discipline_receipt.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_answer_clarity_receipt.json",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/work_packet.yaml",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/skill_receipts.json",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/final_claim_guard.json",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/closeout_gate.json",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/state_sync_audit.json",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/work_packet_schema_lint.json",
+          "docs/agent_control/packets/frontier88B_minimal_runtime_substrate_preflight_v1/skill_receipt_schema_lint.json",
+          "docs/decisions/2026-06-19_frontier88b_runtime_substrate_probe.md",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/00_spec/stage_brief.md",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/01_inputs/input_refs.md",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/context_anchor.md",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/review_index.md",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/04_selected/selection_status.md",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/stage_run_ledger.csv"
+        ],
+        "availability": "tracked_runtime_probe_outputs_with_hashes",
+        "boundary_status": "pass_connected_with_boundary",
+        "consumer": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1",
+        "forbidden_claims_delegated_to_final_claim_guard": [
+          "completion",
+          "selected_baseline",
+          "operating_promotion",
+          "runtime_authority",
+          "live_readiness",
+          "goal_achieve",
+          "runtime_verified",
+          "runtime_parity_closed",
+          "strategy_tester_economics_pass",
+          "materialization_ready",
+          "ea_onnx_runtime_bundle_ready",
+          "task_force_reviewed"
+        ],
+        "lineage_judgment": "connected_with_boundary",
+        "producer": "manual_runtime_probe_then_stage_pipelines/stage_frontier_88/frontier88b_runtime_substrate_preflight_closeout.py",
+        "registry_links": [
+          "docs/registers/run_registry.csv",
+          "docs/registers/alpha_run_ledger.csv",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/stage_run_ledger.csv",
+          "docs/registers/artifact_registry.csv"
+        ],
+        "source_inputs": [
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/design/f88b_minimal_runtime_substrate_preflight_brief.json",
+          "stages/stage_frontier_04__path_aware_cost_dd_event_labeling/02_runs/frontier04D_trainable_path_label_onnx_probe_v1/models/rf_depth5_leaf80_balanced_argmax.onnx",
+          "stages/stage_frontier_04__path_aware_cost_dd_event_labeling/02_runs/frontier04D_trainable_path_label_onnx_probe_v1/models/rf_depth5_leaf80_balanced_argmax.joblib",
+          "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+          "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.ex5",
+          "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md",
+          "docs/contracts/time_axis_policy_fpmarkets_v2.md",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/feature_matrices/frontier88B_minimal_runtime_substrate_preflight_v1_validation_is_features.csv",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.set",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.ini",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tester_execution.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88B_minimal_runtime_substrate_preflight_v1_f88b_tier_a_validation_is.htm",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_telemetry.csv",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_summary.csv"
+        ]
+      },
+      "allowed_claims": [
+        "runtime_bundle_identity_recorded",
+        "actual_output_identity_recorded"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "result_judgment_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "claim_boundary": "runtime_probe_observation_only_no_completion_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+        "evidence_available": [
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88B_minimal_runtime_substrate_preflight_v1_f88b_tier_a_validation_is.htm",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_telemetry.csv",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_summary.csv",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tester_execution.json",
+          "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/kpi_record.json"
+        ],
+        "evidence_missing": [
+          "separate_trade_list_file",
+          "full tester cost fields parsed separately"
+        ],
+        "judgment_label": "runtime_probe",
+        "next_condition": "F88C should repair timestamp coverage/trade-list separation and rerun or explicitly bound the feature_skip_count=1250 runtime gap before stronger runtime or economics claims.",
+        "result_subject": "frontier88B_minimal_runtime_substrate_preflight_v1"
+      },
+      "allowed_claims": [
+        "runtime_probe_observation_no_authority",
+        "negative_economics_gap_recorded"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_gates": [
+          "artifact_lineage_audit",
+          "backtest_forensics_audit",
+          "final_claim_guard",
+          "kpi_contract_audit",
+          "required_gate_coverage_audit",
+          "result_judgment_audit",
+          "runtime_evidence_gate",
+          "scope_completion_gate",
+          "skill_receipt_schema_lint",
+          "state_sync_audit",
+          "work_packet_schema_lint"
+        ],
+        "executed_audits": [
+          "artifact_lineage_audit",
+          "backtest_forensics_audit",
+          "final_claim_guard",
+          "kpi_contract_audit",
+          "required_gate_coverage_audit",
+          "result_judgment_audit",
+          "runtime_evidence_gate",
+          "scope_completion_gate",
+          "skill_receipt_lint",
+          "skill_receipt_schema_lint",
+          "state_sync_audit",
+          "work_packet_schema_lint"
+        ],
+        "not_applicable_with_reason": {},
+        "declared_not_implemented": {}
+      },
+      "allowed_claims": [
+        "gate_coverage_complete"
+      ],
+      "forbidden_claims": []
+    }
+  ],
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "status": "pass",
+    "passed": true,
+    "completed_forbidden": false,
+    "findings": [],
+    "counts": {
+      "requested_claims": [
+        "runtime_probe_observation_no_authority"
+      ],
+      "source_audits": [
+        "skill_receipt_lint",
+        "work_packet_schema_lint",
+        "state_sync_audit",
+        "skill_receipt_schema_lint",
+        "runtime_evidence_gate",
+        "scope_completion_gate",
+        "kpi_contract_audit",
+        "backtest_forensics_audit",
+        "artifact_lineage_audit",
+        "result_judgment_audit",
+        "required_gate_coverage_audit"
+      ]
+    },
+    "allowed_claims": [
+      "runtime_probe_observation_no_authority"
+    ],
+    "forbidden_claims": []
+  }
+}

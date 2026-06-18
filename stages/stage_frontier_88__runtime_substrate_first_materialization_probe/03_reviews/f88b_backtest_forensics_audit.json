@@ -1,0 +1,94 @@
+{
+  "allowed_claims": [
+    "actual_output_identity_recorded"
+  ],
+  "audit_name": "backtest_forensics_audit",
+  "counts": {
+    "backtest_judgment": "usable_with_boundary_runtime_probe_only",
+    "cost_assumptions": {
+      "commission": "broker_native_or_report_not_parsed",
+      "slippage": "not_explicit_in_ini",
+      "spread": "broker_native_or_report_not_parsed",
+      "swap": "broker_native_or_report_not_parsed"
+    },
+    "forbidden_claims_delegated_to_final_claim_guard": [
+      "completion",
+      "selected_baseline",
+      "operating_promotion",
+      "runtime_authority",
+      "live_readiness",
+      "goal_achieve",
+      "runtime_verified",
+      "runtime_parity_closed",
+      "strategy_tester_economics_pass",
+      "materialization_ready",
+      "ea_onnx_runtime_bundle_ready",
+      "task_force_reviewed"
+    ],
+    "report_identity": {
+      "exists": true,
+      "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88B_minimal_runtime_substrate_preflight_v1_f88b_tier_a_validation_is.htm",
+      "role": "strategy_tester_report",
+      "sha256": "773f2645cd49268c791adacbfbf751b1478a9ef53cd9acd743386fcfd1de78be",
+      "size_bytes": 117880
+    },
+    "tester_identity": {
+      "broker": "FPMarkets",
+      "commission": "broker_native_or_report_not_parsed",
+      "date_range": "2025.01.02..2025.01.10",
+      "deposit": 500,
+      "leverage": "1:100",
+      "modeling_mode": "4_Every_tick_based_on_real_ticks",
+      "slippage": "not_explicit_in_ini",
+      "spread": "broker_native_or_report_not_parsed",
+      "swap": "broker_native_or_report_not_parsed",
+      "symbol": "US100",
+      "terminal_command": [
+        "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\terminal64.exe",
+        "/portable",
+        "/config:C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\MQL5\\Profiles\\Tester\\opv2_frontier88B_ta_v.ini"
+      ],
+      "tester_profile_ini": {
+        "destination": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Profiles/Tester/opv2_frontier88B_ta_v.ini",
+        "encoding_policy": "utf-8-no-bom",
+        "sha256": "003fae40a4a096e3186911358d6bc99139e7b7df114dbb57a7c26707c1f78687",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.ini"
+      },
+      "tester_profile_set": {
+        "destination": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+        "sha256": "ce6e9633803f9f38b03a47c08ec79729b35303df4681db84b87288e62553ddb7",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/f88b_tier_a_validation_is.set"
+      },
+      "timeframe": "M5"
+    },
+    "trade_evidence": {
+      "equity_drawdown_maximal_percent": 17.16,
+      "expectancy": -1.57,
+      "gross_loss": -110.97,
+      "gross_profit": 74.77,
+      "judgment": "negative_economics_gap_for_final_entry_gate",
+      "long_trade_count": 14,
+      "max_drawdown_percent": 17.16,
+      "net_profit": -36.2,
+      "profit_factor": 0.67,
+      "recovery_factor": -0.39,
+      "short_trade_count": 9,
+      "trade_count": 23,
+      "trades_per_calendar_day": 2.875,
+      "win_rate_percent": 56.52
+    }
+  },
+  "findings": [
+    {
+      "message": "Spread/commission/slippage are broker-native or not separately parsed from report; no runtime authority claim.",
+      "severity": "info"
+    },
+    {
+      "message": "Feature skip count is high and becomes F88C repair target.",
+      "severity": "info"
+    }
+  ],
+  "forbidden_claims": [],
+  "passed": true,
+  "status": "pass"
+}

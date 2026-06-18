@@ -1,0 +1,48 @@
+{
+  "allowed_claims": [
+    "f88b_runtime_substrate_preflight_completed",
+    "runtime_probe_observation_no_authority",
+    "runtime_bundle_identity_recorded",
+    "actual_output_identity_recorded",
+    "negative_economics_gap_recorded"
+  ],
+  "claim_boundary": "runtime_probe_observation_only_no_completion_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "evidence_available": [
+    "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88B_minimal_runtime_substrate_preflight_v1_f88b_tier_a_validation_is.htm",
+    "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_telemetry.csv",
+    "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/runtime_telemetry/f88b_tier_a_validation_is_summary.csv",
+    "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/kpi_record.json"
+  ],
+  "evidence_missing": [
+    "separate_trade_list_file",
+    "WFO/stress continuation"
+  ],
+  "evidence_used": [
+    "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_runtime_evidence_gate.json",
+    "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88B_minimal_runtime_substrate_preflight_v1/kpi_record.json",
+    "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_backtest_forensics_audit.json"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "runtime_parity_closed",
+    "strategy_tester_economics_pass",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "task_force_reviewed"
+  ],
+  "judgment_boundary": "runtime_probe_observation_negative_economics_no_authority",
+  "judgment_label": "runtime_probe",
+  "next_condition": "F88C should repair timestamp coverage/trade-list separation and rerun or explicitly bound the feature_skip_count=1250 runtime gap before stronger runtime or economics claims.",
+  "packet_id": "frontier88B_minimal_runtime_substrate_preflight_v1",
+  "receipt_path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88b_result_judgment_receipt.json",
+  "result_subject": "frontier88B_minimal_runtime_substrate_preflight_v1",
+  "skill": "obsidian-result-judgment",
+  "status": "executed",
+  "user_explanation_hook": "Runtime path turned on, but economics and coverage are not good enough for authority."
+}
