@@ -1,0 +1,60 @@
+﻿{
+  "source_inputs": [
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/stage_closeout_report.md",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81h_closeout_or_rotation_decision.json",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81d_proxy_runtime_gap_attribution.json",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81f_deal_reconciliation_summary.json",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81g_mt5_realized_label_rebuild_summary.json"
+  ],
+  "producer": "stage_pipelines/stage_frontier_82/frontier82a_stage_open_density_first_runtime_economic_mechanism_rotation.py",
+  "producer_sha256": "85e3ed3eca7dd808e13fad26757f78bd57d9f7c8592e9bdcc3be2fabce1b20bd",
+  "consumer": "frontier82B_density_first_runtime_economic_mechanism_proxy_scout_v1",
+  "artifact_paths": [
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/00_spec/stage_brief.md",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/01_inputs/input_refs.md",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_report.md",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82a_stage_open_manifest.json",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/04_selected/selection_status.md",
+    "docs/agent_control/packets/frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1/work_packet.yaml",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/required_gate_coverage_audit_f82a_open.md",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82a_state_sync_audit.json",
+    "docs/agent_control/packets/frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1/final_claim_guard.json"
+  ],
+  "artifact_hashes": {
+    "frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1__stage_brief": "37f7c12c13616a8ab4220a5a0999c7ce322bc2b3340f10f61ba7f324001fe434",
+    "frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1__input_refs": "d0d3f956da279e3f3e21f5450f5181d9a35e82e3ced4c3743dd15a88fb131cc7",
+    "frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1__stage_open_report": "d81970277b4343a07021e234a236a742e8abe73ef9b8544ea3817e893cf60b23",
+    "frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1__stage_open_manifest": "de252998507717b1f0196c9bccf2dd259423dc8a8de355bbd69de44021e4ec19",
+    "frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1__selection_status": "0b83163b5fbb429ce617fde0d629d99ace2dce7689d929579213a6daf8df0281",
+    "frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1__work_packet": "6271cb53b48be25e4db3796cc55bd0e1bb7995ad668416c645dd45ea27143e52",
+    "frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1__gate_audit": "3067421b5624dabc89ac070a2d0483656887582b48860f264ce8a44eaaecdca9",
+    "frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1__state_sync_audit": "e49d8894f19471e749740fcafc1b11b09e842d5d5809bc2db736ea642ae8ab8c",
+    "frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1__final_claim_guard": "b557cfdeeff44e939313c74ae0b1ed3761c5cb965aad4d34b30f7c03094ceceb"
+  },
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "availability": "tracked_reports_with_hashes(해시가 있는 추적 보고서)",
+  "lineage_judgment": "connected_with_boundary(경계 있는 연결)",
+  "local_verification": {
+    "status": "pass",
+    "all_passed": true,
+    "checks": {
+      "stage_brief_exists": true,
+      "selection_status_exists": true,
+      "workspace_state_names_f82": true,
+      "current_working_state_names_f82": true,
+      "packet_exists": true,
+      "stage_ledger_exists": true,
+      "run_registry_row_exists": true,
+      "alpha_ledger_row_exists": true,
+      "artifact_registry_rows_exist": true
+    },
+    "claim_boundary": "frontier82_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+    "checked_at_utc": "2026-06-18T05:15:42Z"
+  },
+  "claim_boundary": "frontier82_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

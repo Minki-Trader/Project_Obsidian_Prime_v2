@@ -1,0 +1,99 @@
+﻿version: work_packet_schema_v2
+packet_id: frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1
+created_at_utc: '2026-06-18T05:15:42Z'
+user_request:
+  requested_action: continue_goal_open_frontier82
+  source: persistent_goal(지속 목표)
+current_truth:
+  active_stage_before: stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild
+  active_stage_after: stage_frontier_82__density_first_runtime_economic_mechanism_rotation
+  current_run_after: frontier82B_density_first_runtime_economic_mechanism_proxy_scout_v1
+  latest_completed_run_before: frontier81H_capped_repair_closeout_or_f82_rotation_decision_v1
+  source_documents:
+    - AGENTS.md
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - docs/decisions/2026-06-18_frontier81_closeout_rotate_f82.md
+work_classification:
+  work_packet_lifecycle: stage_open_to_proxy_scout_handoff(단계 개방-프록시 탐색 인계)
+  primary_family: state_sync
+  detected_families:
+    - state_sync
+    - experiment_design
+    - artifact_lineage
+  mutation_intent: true
+  execution_intent: false
+skill_routing:
+  primary_family: state_sync
+  primary_skill: obsidian-stage-transition
+  support_skills:
+    - obsidian-reentry-read
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+  supplemental_skills:
+    - obsidian-experiment-design
+    - obsidian-data-integrity
+    - obsidian-model-validation
+    - obsidian-exploration-mandate
+    - obsidian-answer-clarity
+  required_skill_receipts:
+    - obsidian-stage-transition
+    - obsidian-reentry-read
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+  required_gates:
+    - state_sync_audit
+    - final_claim_guard
+interpreted_scope:
+  target_stage: stage_frontier_82__density_first_runtime_economic_mechanism_rotation
+  target_run: frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1
+  next_run: frontier82B_density_first_runtime_economic_mechanism_proxy_scout_v1
+  execution_layers:
+    - design_only_no_proxy_run_no_model_training_no_wfo_no_mt5
+  mutation_policy: create_stage_open_docs_and_sync_current_truth(단계 개방 문서 생성 및 현재 진실 동기화)
+  claim_boundary: frontier82_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+acceptance_criteria:
+  - id: AC-001
+    text: F82 stage docs exist(F82 단계 문서 존재).
+    expected_artifact: stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/00_spec/stage_brief.md
+  - id: AC-002
+    text: Current truth names F82 as active(현재 진실이 F82를 활성으로 지명).
+    expected_artifact: docs/workspace/workspace_state.yaml
+  - id: AC-003
+    text: F82 selection status agrees with workspace state(F82 선택 상태가 작업공간 상태와 일치).
+    expected_artifact: stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/04_selected/selection_status.md
+evidence_contract:
+  source_inputs:
+    - stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/stage_closeout_report.md
+    - stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81h_closeout_or_rotation_decision.json
+    - docs/registers/negative_result_register.md
+    - docs/registers/frontier_extra_stage_register.yaml
+  produced_artifacts:
+    - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/00_spec/stage_brief.md
+    - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/01_inputs/input_refs.md
+    - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/04_selected/selection_status.md
+    - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_report.md
+    - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82a_stage_open_manifest.json
+    - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/stage_run_ledger.csv
+    - docs/decisions/2026-06-18_stage_frontier_82_open.md
+  external_verification_status: out_of_scope_by_claim(주장 범위 밖)
+gates:
+  required:
+    - state_sync_audit
+    - final_claim_guard
+  not_applicable_with_reason:
+    kpi_contract_audit: No trading KPI(거래 KPI 없음) in stage-open design packet(단계 개방 설계 묶음).
+    mt5_runtime_evidence_gate: No MT5 execution(MT5 실행 없음).
+    model_training_gate: No model training(모델 학습 없음).
+final_claim_policy:
+  allowed_claims:
+    - stage_opened(단계 개방)
+    - no_authority_claimed(권위 주장 없음)
+    - proxy_scout_handoff_named(프록시 탐색 인계 지명)
+  forbidden_claims:
+    - completion
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
