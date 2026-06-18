@@ -1,0 +1,52 @@
+{
+  "allowed_claims": [
+    "leakage_safe_feature_label_surface_materialized",
+    "proxy_scout_model_snapshot_created",
+    "locked_oos_readout_recorded",
+    "repair_or_rotation_required"
+  ],
+  "calibration_risk": "Scores are ranking scores, not calibrated runtime probabilities.",
+  "comparison_baseline": "split base tp_first rate",
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "oos_selected_model"
+  ],
+  "model_family": [
+    "logreg_l2_balanced",
+    "random_forest_depth4_balanced",
+    "extra_trees_depth5_balanced"
+  ],
+  "model_or_threshold_surface": "Fixed sklearn proxy scout model set over pre-entry F86E features.",
+  "overfit_checks": [
+    "chronological validation fit/inner split",
+    "OOS readout excluded from model selection",
+    "fixed model family list, no broad hyperparameter search"
+  ],
+  "overfit_risk": "Small selected-row sample and fixed F85B source surface can overfit validation.",
+  "packet_id": "frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1",
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86e_model_validation_receipt.json",
+  "secondary_metrics": [
+    "brier",
+    "log_loss",
+    "accuracy",
+    "bottom_decile_sl_first_rate"
+  ],
+  "selection_metric": "inner validation roc_auc, top_decile_lift, average_precision",
+  "selection_metric_boundary": "Model selected by validation-inner roc_auc/top_decile_lift/average_precision; OOS not used for selection.",
+  "skill": "obsidian-model-validation",
+  "split_method": "chronological validation fit/inner-selection plus locked OOS readout",
+  "status": "executed",
+  "target_and_label": "target_tp_first_binary from F86D first_touch_label; none_hit rows excluded from binary model",
+  "threshold_policy": "fixed inner-validation top/bottom decile readout thresholds; no OOS threshold search",
+  "validation_judgment": "exploratory_proxy_scout",
+  "validation_split": "validation fit 70% / validation inner-selection 30%; locked OOS readout only"
+}

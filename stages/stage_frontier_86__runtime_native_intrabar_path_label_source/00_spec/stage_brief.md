@@ -6,9 +6,9 @@ Stage ID(단계 ID): `stage_frontier_86__runtime_native_intrabar_path_label_sour
 
 Opening run(개방 실행): `frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1`
 
-Next run(다음 실행): `frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1`
+Next run(다음 실행): `frontier86F_first_touch_surface_repair_or_rotation_decision_v1`
 
-Status(상태): `f86d_bounded_m1_tick_label_source_materialized_no_authority`
+Status(상태): `f86e_first_touch_proxy_surface_weak_scout_repair_or_rotation_required_no_authority`
 
 ## Frontier Thesis(전선 가설)
 
@@ -67,3 +67,14 @@ Effect(효과): F86 can now build leakage-safe first-touch feature/label surface
 Key counts(핵심 수치): input rows(입력 행) `4127`, M1 rows(1분봉 행) `20635`, tick rows(틱 행) `7957499`, labels(라벨) `4127`, unresolved(미해결) `0`.
 
 Claim boundary(주장 경계): `f86d_bounded_selected_row_tick_m1_label_source_materialized_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve`.
+
+
+## F86E Feature/Label Surface Proxy Scout Receipt(F86E 피처/라벨 표면 프록시 스카우트 영수증)
+
+Action(행동): F86E built a leakage-safe feature/label surface(누수 안전 피처/라벨 표면) and proxy scout(프록시 스카우트) from F86D first-touch labels(첫 터치 라벨).
+
+Effect(효과): F86 can decide whether to move toward runtime materialization preflight(런타임 물질화 사전확인) or repair/rotation(수리/회전) without claiming Strategy Tester runtime economics(전략 테스터 런타임 경제성).
+
+Key readout(핵심 판독): best model(최선 모델) `logreg_l2_balanced`, positive_scout(긍정 스카우트) `False`.
+
+Claim boundary(주장 경계): `f86e_leakage_safe_first_touch_feature_label_surface_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve`.

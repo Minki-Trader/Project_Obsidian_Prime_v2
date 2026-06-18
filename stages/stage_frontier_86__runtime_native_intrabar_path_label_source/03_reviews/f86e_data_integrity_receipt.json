@@ -1,0 +1,55 @@
+{
+  "data_hash_or_identity": {
+    "f85b_readout": {
+      "exists": true,
+      "path": "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_selected_firewall_row_readout.csv",
+      "sha256": "7467ba7f3719b2fbdaae6b30c1966f42315bd9f21f0cce10cb72daac19571df3",
+      "size": 1444804
+    },
+    "f86d_labels": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv",
+      "sha256": "02a4d489af9877eabc3503383df6ae4c93d81f37b84a03e4e9fd18e96cef40c7",
+      "size": 1039915
+    },
+    "feature_surface": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/feature_label_surface/feature_label_surface.csv",
+      "sha256": "ccdc13c87e6eb6d50f44228c8223c7042ab23626b71d200b26a189630c9f292b",
+      "size": 1749030
+    }
+  },
+  "data_source": [
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_selected_firewall_row_readout.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv"
+  ],
+  "data_sources_checked": [
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_selected_firewall_row_readout.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/feature_label_surface/feature_label_surface.csv"
+  ],
+  "feature_label_boundary": "Only pre-entry F85B scalar/time features are model inputs; first-touch/tick/M5 path fields are targets/audit.",
+  "integrity_judgment": "usable_with_boundary",
+  "leakage_checks": [
+    "forbidden feature intersection is empty",
+    "locked OOS is readout only",
+    "first-touch/tick/M5 path fields are target or audit only"
+  ],
+  "leakage_risk": "Using m5_high/low/close, tick_count, first_touch_label, runtime_net, or proxy/runtime outcome columns as features would leak.",
+  "missing_data_boundary": "joined_rows=4127; excluded_none_hit_rows=20.",
+  "missing_or_duplicate_check": "one_to_one row_index join passed",
+  "packet_id": "frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1",
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86e_data_integrity_receipt.json",
+  "sample_scope": {
+    "binary_rows": 4107,
+    "excluded_none_hit_rows": 20,
+    "locked_oos_readout": 1797,
+    "validation_fit": 1617,
+    "validation_inner_selection": 693
+  },
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "validation fit/inner-selection, locked OOS readout",
+  "status": "executed",
+  "time_axis": "F85B timestamp_utc selected M5 bar identity; F86D first-touch labels are post-entry targets only.",
+  "time_axis_boundary": "F85B timestamp_utc selected M5 bar identity; F86D first-touch labels are post-entry targets only."
+}

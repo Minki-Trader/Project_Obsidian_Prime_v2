@@ -1,0 +1,328 @@
+version: work_packet_schema_v2_1
+packet_lifecycle: new_packet
+packet_id: frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1
+created_at_utc: '2026-06-18T19:31:59Z'
+user_request:
+  user_quote: /goal active continuation
+  requested_action: F86E leakage-safe first-touch feature/label surface proxy scout
+  requested_count:
+    value: 1
+    n_a_reason: ''
+  ambiguous_terms:
+  - runtime candidate remains not claimed; F86E is proxy scout evidence only
+current_truth:
+  active_stage: stage_frontier_86__runtime_native_intrabar_path_label_source
+  current_run: frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1
+  latest_completed_run: frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/04_selected/selection_status.md
+  claim_boundary: f86e_leakage_safe_first_touch_feature_label_surface_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve
+work_classification:
+  primary_family: experiment_execution
+  detected_families:
+  - experiment_execution
+  - artifact_lineage
+  - state_sync
+  touched_surfaces:
+  - docs/agent_control/packets/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source
+  - docs/workspace/workspace_state.yaml
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    post_entry_label_leakage_into_features: high
+    proxy_scout_overclaimed_as_runtime_economics: high
+    oos_selection_leakage: high
+  hard_stop_risks:
+  - Do not use first-touch/tick/M5 path/runtime outcome fields as features.
+  - Do not use locked OOS for model or threshold selection.
+  - Do not claim Strategy Tester runtime economics, runtime authority, or Goal Achieve.
+  required_gates:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - scope_completion_gate
+  - kpi_contract_audit
+  - feature_leakage_audit
+  - split_boundary_audit
+  - artifact_lineage_audit
+  - result_judgment_receipt
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - completion
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - runtime_verified
+  - strategy_tester_runtime_economics
+  - materialization_ready
+  - ea_onnx_runtime_bundle_ready
+  - oos_selected_model
+decision_lock:
+  mode: assume_safe_default
+  assumptions:
+    task_force_required_now: false
+    strategy_tester_required_now: false
+    proxy_scout_only_allowed: true
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+  - experiment_execution
+  target_surfaces:
+  - F86E feature_label_surface
+  - F86E proxy_scout_scores
+  - F86E model snapshot
+  scope_units:
+  - run
+  - artifact
+  - receipt
+  - state_sync
+  execution_layers:
+  - local_python_execution
+  - sklearn_proxy_scout
+  - csv_json_generation
+  mutation_policy:
+    allowed: true
+    user_quote: /goal active continuation
+  evidence_layers:
+  - feature surface hash
+  - model score metrics
+  - run manifest
+  - KPI record
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: false
+    rationale: F86E uses all joined F86D/F85B rows.
+  claim_boundary:
+    allowed_claims:
+    - leakage_safe_feature_label_surface_materialized
+    - proxy_scout_model_snapshot_created
+    - locked_oos_readout_recorded
+    - repair_or_rotation_required
+    forbidden_claims:
+    - completion
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - runtime_verified
+    - strategy_tester_runtime_economics
+    - materialization_ready
+    - ea_onnx_runtime_bundle_ready
+    - oos_selected_model
+  variants_requested:
+    value: 1
+    n_a_reason: fixed proxy scout model set
+  verification_layers:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - kpi_contract_audit
+  - required_gate_coverage_audit
+  mt5_required: false
+  top_k_reduction_allowed: false
+  scope_reduction_requires_user_quote: false
+verification_profile:
+  profile_id: proxy_scout
+  claim_surface:
+    allowed_claims:
+    - leakage_safe_feature_label_surface_materialized
+    - proxy_scout_model_snapshot_created
+    - locked_oos_readout_recorded
+    - repair_or_rotation_required
+    forbidden_claims:
+    - completion
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - runtime_verified
+    - strategy_tester_runtime_economics
+    - materialization_ready
+    - ea_onnx_runtime_bundle_ready
+    - oos_selected_model
+    claim_boundary: f86e_leakage_safe_first_touch_feature_label_surface_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve
+  trigger_sources:
+  - active_goal
+  - workspace_state_current_run_f86e
+  - F86D_next_condition
+  - frontier_five_stage_direction_synthesis_rule
+  protected_claims:
+  - leakage_safe_feature_label_surface_materialized
+  - proxy_scout_model_snapshot_created
+  - locked_oos_readout_recorded
+  - repair_or_rotation_required
+  required_evidence:
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/feature_label_surface/feature_label_surface.csv
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/proxy_scout/proxy_metrics.json
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/proxy_scout/proxy_scores.csv
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/run_manifest.json
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/kpi_record.json
+  gates_not_run_with_reason:
+  - gate: runtime_evidence_gate
+    reason_code: outside_claim_surface
+    reason: F86E does not protect Strategy Tester runtime/materialization/economics claims.
+    claim_effect: Runtime verified/economics/materialization/authority/Goal Achieve claims are forbidden.
+  - gate: codex_task_force_review_packet
+    reason_code: not_triggered_for_f86e_proxy_scout
+    reason: No Task Force reviewed/pass claim, policy change, roster change, or stage closeout authority claim is made.
+    claim_effect: No Task Force review claim is made.
+  stop_conditions:
+  - Stop after leakage-safe surface, proxy metrics, locked-OOS readout, and F86F route are recorded.
+acceptance_criteria:
+- id: AC-001
+  text: All F86D label rows join to F85B selected pre-entry readout rows.
+  expected_artifact: stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/feature_label_surface/feature_label_surface.csv
+  verification_method: scope_completion_gate
+  required: true
+- id: AC-002
+  text: Forbidden post-entry/runtime/path columns are excluded from model features.
+  expected_artifact: stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86e_feature_leakage_audit.json
+  verification_method: feature_leakage_audit
+  required: true
+- id: AC-003
+  text: Model selection uses validation inner split and locked OOS is readout only.
+  expected_artifact: stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86e_split_boundary_audit.json
+  verification_method: split_boundary_audit
+  required: true
+work_plan:
+  phases:
+  - Read F86D label source and F85B selected-row readout.
+  - Build leakage-safe feature/label surface.
+  - Run fixed proxy model scout with validation-inner selection and locked-OOS readout.
+  - Record receipts/gates/state sync.
+  expected_outputs:
+  - F86E feature surface
+  - F86E proxy metrics
+  - F86E packet receipts
+  - state sync to F86F
+  stop_conditions:
+  - F86E closes as proxy scout only; no runtime/materialization/economics claim.
+skill_routing:
+  primary_family: experiment_execution
+  primary_skill: obsidian-run-evidence-system
+  support_skills:
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-claim-discipline
+  skills_considered:
+  - obsidian-reentry-read
+  - obsidian-work-packet-router
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  - obsidian-claim-discipline
+  - obsidian-stage-transition
+  skills_selected:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-claim-discipline
+  skills_not_used:
+  - skill: obsidian-task-force-review
+    reason: Not triggered; no Task Force reviewed/pass claim is made for F86E.
+  - skill: obsidian-backtest-forensics
+    reason: No Strategy Tester report/trade list exists in F86E.
+  - skill: obsidian-runtime-parity
+    reason: No EA/ONNX/Strategy Tester runtime parity or handoff claim is made in F86E.
+  required_skill_receipts:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-claim-discipline
+  required_gates:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - scope_completion_gate
+  - kpi_contract_audit
+  - feature_leakage_audit
+  - split_boundary_audit
+  - artifact_lineage_audit
+  - result_judgment_receipt
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  raw_evidence:
+  - stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_selected_firewall_row_readout.csv
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv
+  machine_readable:
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/run_manifest.json
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/kpi_record.json
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/summary.json
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86e_execution_summary.json
+  - docs/agent_control/packets/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/skill_receipts.json
+  human_readable:
+  - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/reports/result_summary.md
+  - docs/context/current_working_state.md
+gates:
+  required:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - scope_completion_gate
+  - kpi_contract_audit
+  - feature_leakage_audit
+  - split_boundary_audit
+  - artifact_lineage_audit
+  - result_judgment_receipt
+  - required_gate_coverage_audit
+  - final_claim_guard
+  work_packet_schema_lint: pending_external_lint
+  skill_receipt_schema_lint: pending_external_lint
+  frontier_extra_due_check: pass_not_due
+  frontier_five_stage_direction_synthesis: pass_recorded
+  scope_completion_gate: pass
+  kpi_contract_audit: pending_external_lint
+  feature_leakage_audit: pass
+  split_boundary_audit: pass
+  artifact_lineage_audit: pass_connected_with_boundary
+  result_judgment_receipt: pass
+  required_gate_coverage_audit: pending_external_lint
+  final_claim_guard: pass
+  not_applicable_with_reason:
+    runtime_evidence_gate: outside_claim_surface; no Strategy Tester runtime/materialization/economics claim
+    codex_task_force_review_packet: not triggered; no Task Force review claim
+final_claim_policy:
+  allowed_claims:
+  - leakage_safe_feature_label_surface_materialized
+  - proxy_scout_model_snapshot_created
+  - locked_oos_readout_recorded
+  - repair_or_rotation_required
+  forbidden_claims:
+  - completion
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - runtime_verified
+  - strategy_tester_runtime_economics
+  - materialization_ready
+  - ea_onnx_runtime_bundle_ready
+  - oos_selected_model
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml

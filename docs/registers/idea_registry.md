@@ -2348,3 +2348,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier85C_runtime_path_firewall_repair_or_rotation_decision_v1 -->
 - `frontier85C_runtime_path_firewall_repair_or_rotation_decision_v1` closed F85 as negative/no authority(전선85 부정/권위 없음 마감). Negative memory(부정 기억): leakage-safe firewall(누수 안전 방화벽)은 reversal reduction(반전 감소)을 만들지 못했다. Next(다음): `frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1`. Boundary(경계): `stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+<!-- frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1 -->
+- `frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1` built a leakage-safe first-touch feature/label surface(누수 안전 첫 터치 피처/라벨 표면) and proxy scout(프록시 스카우트). Best model(최선 모델): `logreg_l2_balanced`. Next(다음): `frontier86F_first_touch_surface_repair_or_rotation_decision_v1`. Boundary(경계): no runtime authority(런타임 권위 없음).

@@ -1,0 +1,106 @@
+{
+  "allowed_claims": [
+    "leakage_safe_feature_label_surface_materialized"
+  ],
+  "audit_name": "feature_leakage_audit",
+  "categorical_features": [
+    "decision",
+    "session_bucket"
+  ],
+  "claim_effect": "F86E feature columns are pre-entry only; first-touch/tick/M5 path fields are target or audit fields only.",
+  "feature_columns": [
+    "hour_utc",
+    "p_short",
+    "p_flat",
+    "p_long",
+    "f85b_side_prob",
+    "f85b_probability_margin",
+    "f85b_flat_pressure",
+    "atr_points",
+    "open_sl_points",
+    "open_tp_points",
+    "f85b_atr_sl_ratio",
+    "computed_lot",
+    "side_signed_probability_edge",
+    "opposite_side_probability",
+    "tp_sl_ratio",
+    "sl_atr_ratio",
+    "tp_atr_ratio",
+    "hour_sin",
+    "hour_cos",
+    "decision",
+    "session_bucket"
+  ],
+  "findings": [],
+  "first_touch_group_counts": {
+    "none_hit": 20,
+    "sl_first": 2741,
+    "tp_first": 1366
+  },
+  "forbidden_claims": [
+    "runtime_verified",
+    "strategy_tester_runtime_economics"
+  ],
+  "forbidden_feature_columns": [
+    "runtime_net",
+    "runtime_win_bool",
+    "proxy_win",
+    "proxy_win_runtime_loss",
+    "proxy_loss_runtime_win",
+    "proxy_both_hit",
+    "proxy_exit_path_label",
+    "first_touch_label",
+    "label_resolution_method",
+    "tick_count",
+    "first_sl_time_msc_utc",
+    "first_tp_time_msc_utc",
+    "entry_price_proxy_m5_open",
+    "m5_high",
+    "m5_low",
+    "m5_close",
+    "sl_price",
+    "tp_price",
+    "m5_sl_hit",
+    "m5_tp_hit",
+    "m5_path_class",
+    "m5_close_direction_win"
+  ],
+  "forbidden_feature_intersection": [],
+  "input_rows": 4127,
+  "joined_rows": 4127,
+  "label_counts": {
+    "none_hit_m5": 20,
+    "sl_first_m5_single_hit": 1480,
+    "sl_first_tick": 1261,
+    "tp_first_m5_single_hit": 746,
+    "tp_first_tick": 620
+  },
+  "label_rows": 4127,
+  "numeric_features": [
+    "hour_utc",
+    "p_short",
+    "p_flat",
+    "p_long",
+    "f85b_side_prob",
+    "f85b_probability_margin",
+    "f85b_flat_pressure",
+    "atr_points",
+    "open_sl_points",
+    "open_tp_points",
+    "f85b_atr_sl_ratio",
+    "computed_lot",
+    "side_signed_probability_edge",
+    "opposite_side_probability",
+    "tp_sl_ratio",
+    "sl_atr_ratio",
+    "tp_atr_ratio",
+    "hour_sin",
+    "hour_cos"
+  ],
+  "split_counts": {
+    "oos": 1801,
+    "validation": 2326
+  },
+  "status": "pass",
+  "surface_rows": 4127
+}

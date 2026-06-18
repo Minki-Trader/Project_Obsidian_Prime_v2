@@ -1,0 +1,49 @@
+{
+  "allowed_claims": [
+    "leakage_safe_feature_label_surface_materialized",
+    "proxy_scout_model_snapshot_created",
+    "locked_oos_readout_recorded",
+    "repair_or_rotation_required"
+  ],
+  "claim_boundary": "f86e_leakage_safe_first_touch_feature_label_surface_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve",
+  "evidence_available": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/proxy_scout/proxy_metrics.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/feature_label_surface/feature_schema.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/kpi_record.json"
+  ],
+  "evidence_missing": [
+    "MT5 Strategy Tester report",
+    "EA source/binary identity",
+    "ONNX runtime bundle",
+    "trade list and telemetry",
+    "WFO/stress/runtime validation"
+  ],
+  "evidence_used": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/proxy_scout/proxy_metrics.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86e_feature_leakage_audit.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86e_split_boundary_audit.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/kpi_record.json"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "oos_selected_model"
+  ],
+  "judgment_boundary": "weak_or_negative_proxy_scout_no_runtime_evidence",
+  "judgment_label": "negative",
+  "next_condition": "frontier86F_first_touch_surface_repair_or_rotation_decision_v1",
+  "packet_id": "frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1",
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86e_result_judgment_receipt.json",
+  "result_subject": "frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1",
+  "skill": "obsidian-result-judgment",
+  "status": "executed",
+  "user_explanation_hook": "This tells whether the new first-touch labels have a pre-entry learnable signal, not whether MT5 economics work."
+}

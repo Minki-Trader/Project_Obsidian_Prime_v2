@@ -23,3 +23,7 @@
 - `f86d_source_registration_audit.json`: F86D source registration audit(F86D 원천 등록 감사)
 - `f86d_first_touch_label_materializer_audit.json`: F86D first-touch label materializer audit(F86D 첫 터치 라벨 물질화 감사)
 - `f86d_final_claim_guard.json`: F86D final claim guard(F86D 최종 주장 보호)
+- `f86e_execution_summary.json`: F86E execution summary(F86E 실행 요약)
+- `f86e_feature_leakage_audit.json`: F86E feature leakage audit(F86E 피처 누수 감사)
+- `f86e_split_boundary_audit.json`: F86E split boundary audit(F86E 분할 경계 감사)
+- `f86e_final_claim_guard.json`: F86E final claim guard(F86E 최종 주장 보호)

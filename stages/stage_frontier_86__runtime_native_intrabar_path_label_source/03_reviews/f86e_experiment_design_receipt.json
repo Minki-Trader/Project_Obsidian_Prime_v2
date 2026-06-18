@@ -1,0 +1,36 @@
+{
+  "baseline": "F86D label distribution and split base tp_first rate.",
+  "changed_variables": [
+    "feature-label surface construction",
+    "fixed proxy model families"
+  ],
+  "comparison_baseline": "Validation split base tp_first rate and top-decile lift over base rate.",
+  "control_variables": [
+    "F86D labels",
+    "F85B selected rows",
+    "chronological validation/OOS boundary",
+    "no OOS selection"
+  ],
+  "decision_use": "Decide whether F86F should open runtime materialization preflight or repair/rotation.",
+  "evidence_plan": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/feature_label_surface/feature_label_surface.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/proxy_scout/proxy_metrics.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/proxy_scout/proxy_scores.csv"
+  ],
+  "failure_criteria": "no validation-inner lift or locked-OOS collapse",
+  "hypothesis": "F86D first-touch labels can be predicted from pre-entry F85B probability/risk/session features without using post-entry path fields.",
+  "invalid_conditions": [
+    "forbidden feature intersection",
+    "join mismatch",
+    "OOS-used-for-selection"
+  ],
+  "packet_id": "frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1",
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86e_experiment_design_receipt.json",
+  "sample_scope": "F85B selected validation/OOS rows with F86D first-touch labels",
+  "skill": "obsidian-experiment-design",
+  "status": "executed",
+  "stop_conditions": [
+    "record scout boundary and route to F86F"
+  ],
+  "success_criteria": "validation-inner AUC/lift and locked-OOS non-collapse support a proxy scout clue"
+}
