@@ -2309,3 +2309,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier83C_proxy_runtime_gap_analysis_teacher_overlay_v1 -->
 - `frontier83C_proxy_runtime_gap_analysis_teacher_overlay_v1` attributed F83 proxy/runtime gap(F83 프록시/런타임 간극 귀속). Result(결과): OOS runtime net/PF/DD/trades_day(표본외 런타임 순손익/수익 팩터/손실폭/일 거래) `24.02/1.33/2.06/0.7025641025641025`. Clue(단서): runtime parity seed preserved(런타임 동등성 씨앗 보존). Negative memory(부정 기억): low-density long-only branch(저밀도 롱 전용 가지) cannot be final-like without new axis(새 축 없이는 최종형 아님). Next(다음): `frontier83D_two_sided_density_expansion_or_rotation_decision_v1`.
+
+<!-- frontier83D_two_sided_density_expansion_or_rotation_decision_v1 -->
+- `frontier83D_two_sided_density_expansion_or_rotation_decision_v1` selected short-density materialization target(숏 밀도 물질화 대상) `f82b_10355` after F83C runtime parity/objective gap(F83C 런타임 동등성/목표 간극). Proxy OOS(프록시 표본외): net/PF/DD/tpd `401.02621043351246/1.4727443088117345/4.6767732618809985/8.350515463917526`. Boundary(경계): target selection only, no authority(대상 선택만, 권위 없음). Next(다음): `frontier83E_short_side_density_runtime_materialization_v1`.

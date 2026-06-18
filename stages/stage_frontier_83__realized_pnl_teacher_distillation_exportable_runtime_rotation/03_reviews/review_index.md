@@ -17,3 +17,8 @@
 - `f83c_proxy_runtime_gap_rows.csv`: F83C split-level gap rows(F83C 구간별 간극 행)
 - `required_gate_coverage_audit_f83c.md`: F83C gate audit(F83C 게이트 감사)
 - `f83c_task_force_review_receipt.yaml`: F83C Task Force review receipt(F83C 태스크포스 검토 영수증)
+- `frontier83D_two_sided_density_expansion_or_rotation_decision_report.md`: F83D target selection report(F83D 대상 선택 보고서)
+- `f83d_two_sided_density_expansion_decision_summary.json`: F83D machine summary(F83D 기계 요약)
+- `f83d_short_density_materialization_target_selection.json`: F83D selected short-density target(F83D 선택 숏 밀도 대상)
+- `f83d_short_density_candidate_shortlist.csv`: F83D short candidate shortlist(F83D 숏 후보 압축 목록)
+- `required_gate_coverage_audit_f83d.md`: F83D gate audit(F83D 게이트 감사)
