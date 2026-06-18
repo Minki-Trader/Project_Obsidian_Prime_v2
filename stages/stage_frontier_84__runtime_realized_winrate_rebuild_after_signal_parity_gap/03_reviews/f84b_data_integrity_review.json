@@ -1,0 +1,26 @@
+﻿{
+  "data_source": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+  ],
+  "time_axis": "timestamp(타임스탬프)은 UTC closed-bar feature row(UTC 확정봉 피처 행)이고 label path(라벨 경로)는 next-bar entry 이후 raw bar(원시 봉)로 계산한다.",
+  "sample_scope": {
+    "symbol": "FPMarkets US100",
+    "timeframe": "M5",
+    "splits": {
+      "train": 29222,
+      "validation": 9844,
+      "oos": 7584
+    },
+    "tier_scope": "Tier A separate(티어 A 분리); Tier B separate missing_required(티어 B 분리 필수 누락); Tier A+B combined out_of_scope_by_claim(합산은 주장 범위 밖)."
+  },
+  "feature_label_boundary": "Label quantiles/model thresholds(라벨 분위수/모델 임계값)는 train-only(훈련 전용); validation/OOS(검증/표본외)는 scored only(채점만).",
+  "leakage_risk": "runtime outcome arrays(런타임 결과 배열)는 label-only path(라벨 전용 경로)에 있고 feature matrix(피처 행렬)에 들어가지 않는다.",
+  "data_hash_or_identity": {
+    "dataset_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "feature_order_sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "raw_bars_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784"
+  },
+  "integrity_judgment": "usable_with_boundary(경계 내 사용 가능)"
+}

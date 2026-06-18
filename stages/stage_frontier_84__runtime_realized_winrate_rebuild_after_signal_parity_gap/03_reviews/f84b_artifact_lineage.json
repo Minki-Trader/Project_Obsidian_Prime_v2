@@ -1,0 +1,57 @@
+﻿{
+  "run_id": "frontier84B_runtime_realized_winrate_proxy_scout_v1",
+  "stage_id": "stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap",
+  "source_inputs": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84a_experiment_design.json"
+  ],
+  "producer": "stage_pipelines/stage_frontier_84/frontier84b_runtime_realized_winrate_proxy_scout.py",
+  "producer_sha256": "cdc8dcb7936828c16c3a8111276e72d5ca341d62e47c9b729e902910c4fb783c",
+  "consumer": "frontier84C_mt5_runtime_realized_winrate_materialization_v1",
+  "artifact_paths": [
+    "stage_pipelines/stage_frontier_84/frontier84b_runtime_realized_winrate_proxy_scout.py",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_runtime_realized_winrate_proxy_scout_summary.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84B_runtime_realized_winrate_proxy_scout_v1/f84b_runtime_realized_winrate_proxy_candidates_all.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_runtime_realized_winrate_proxy_top_candidates.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_runtime_realized_winrate_axis_summary.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_model_fit_summary.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_runtime_realized_label_audit.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_tier_record_audit.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_data_integrity_review.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_model_validation_review.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/frontier84B_runtime_realized_winrate_proxy_scout_report.md",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_task_force_review_receipt.yaml",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/required_gate_coverage_audit_f84b.md",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84B_runtime_realized_winrate_proxy_scout_v1/run_manifest.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_local_verification.json"
+  ],
+  "artifact_hashes": {
+    "stage_pipelines/stage_frontier_84/frontier84b_runtime_realized_winrate_proxy_scout.py": "cdc8dcb7936828c16c3a8111276e72d5ca341d62e47c9b729e902910c4fb783c",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_runtime_realized_winrate_proxy_scout_summary.json": "cbc36ea7badbff4971224625e1d487f8e047d3d13999282828fee2d24e11b2c1",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84B_runtime_realized_winrate_proxy_scout_v1/f84b_runtime_realized_winrate_proxy_candidates_all.csv": "ff2a5c6e898a5d1913e5acb65ddc98e6fae13332c8f3a7f56300094b25542a0d",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_runtime_realized_winrate_proxy_top_candidates.csv": "49240ffb3924acb7383a5684f2408cd9b997ff7a05170295aa057754d8412f06",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_runtime_realized_winrate_axis_summary.csv": "cbb648b10921c78f70ba1ae9755f1646d020105bf8f270039a23f0827edc8902",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_model_fit_summary.csv": "2c7475c7ff5570de7f7cdc91db4bff7c8c319111a2b84b85187427fa2011a7da",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_runtime_realized_label_audit.csv": "1ae099198aa586de1f9abf16b281d9e3dd7dafb62c99e8b6fa839ac612f20de2",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_tier_record_audit.csv": "1f95b75315e0abecb1120aff036e23ab79d21c9c7faf2beda199503781d91ad4",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_data_integrity_review.json": "0d43ac0b2d49f0be2e445c7147b638b4bfa5aa66ddd3fb191c1f330276b6167a",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_model_validation_review.json": "7460be33e0b3d41f2e54a8535e4b5de7cabb86095d69ee9ececc118234256418",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/frontier84B_runtime_realized_winrate_proxy_scout_report.md": "ee25d504e6f4dfd1d1442600114d549e188c49540f19bbdc8e02f91c8803d311",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_task_force_review_receipt.yaml": "4af65c1244ae0e39fff1ca3cd6e4d97ddf1674c07f24547092e22739ab4c0f05",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/required_gate_coverage_audit_f84b.md": "e4016c400aa602a95933991fc18305778f266d8d745ae46a9749bbd768da3ad0",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/02_runs/frontier84B_runtime_realized_winrate_proxy_scout_v1/run_manifest.json": "680ae4f1c07f0fd0c145b4a00c07c489989e91d69ccb12e531ce2b864beb8dbe",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84b_local_verification.json": "de1ca09ef878f23401c892610c5aa9722c059117948254c1df22e4b10f24197b"
+  },
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv",
+    "docs/registers/idea_registry.md"
+  ],
+  "availability": "tracked_reports_and_run_outputs_with_hashes(추적 보고서와 실행 산출물 해시)",
+  "lineage_judgment": "connected_with_boundary(경계 있는 연결)",
+  "claim_boundary": "proxy_scout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

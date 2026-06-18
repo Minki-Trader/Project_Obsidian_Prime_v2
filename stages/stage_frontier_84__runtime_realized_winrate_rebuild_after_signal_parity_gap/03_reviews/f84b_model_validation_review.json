@@ -1,0 +1,14 @@
+﻿{
+  "model_family": [
+    "extra_trees_d7_l120",
+    "histgbm_density_shallow"
+  ],
+  "target_and_label": "runtime-realized winrate/stop-touch/fill-path labels(런타임 실현 승률/손절·익절 터치/체결 경로 라벨)",
+  "split_method": "time-ordered train/validation/OOS(시간순 훈련/검증/표본외), WFO planned after material candidate(물질 후보 후 워크포워드 계획)",
+  "selection_metric": "rank_score combines density, win-rate preservation, DD improvement, net, PF, smoothness, and trade count(밀도/승률 보존/DD 개선/순손익/PF/매끄러움/거래 수 결합)",
+  "secondary_metrics": "gross profit/loss, win rate, avg win/loss, payoff, expectancy, recovery, time under water, max consecutive loss(총이익/총손실/승률/평균 이익·손실/손익비/기대값/회복/회복 전 체류/최대 연속 손실)",
+  "threshold_policy": "bounded probability quantile sweep(상한 있는 확률 분위수 탐색); no micro threshold repair(미세 임계값 수리 아님)",
+  "overfit_risk": "many-surface proxy search(다표면 프록시 탐색) can overfit validation/OOS(검증/표본외)에 맞출 위험",
+  "comparison_baseline": "F83E runtime OOS winrate 33.31%, DD 19.24%, PF 0.97(F83E 런타임 표본외 승률 33.31%, 손실폭 19.24%, 수익 팩터 0.97)",
+  "validation_judgment": "candidate"
+}

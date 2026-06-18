@@ -2324,3 +2324,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier84A_stage_open_runtime_realized_winrate_rebuild_after_signal_parity_gap_v1 -->
 - `IDEA-FR84-RUNTIME-REALIZED-WINRATE-REBUILD-AFTER-SIGNAL-PARITY-GAP` opened by `frontier84A_stage_open_runtime_realized_winrate_rebuild_after_signal_parity_gap_v1`. Hypothesis(가설): Runtime-realized win/loss, stop-touch, and fill-path labels(런타임 실현 승패, 손절·익절 터치, 체결 경로 라벨)을 F83E/F83F의 actual MT5 outcome(실제 MT5 결과)에서 재구성하면, proxy success after signal parity(신호 동등성 뒤 프록시 성공)가 actual MT5 win rate(실제 MT5 승률)로 보존되는 exportable ONNX candidate(내보내기 가능 온엑스 후보)를 만들 수 있다. Next(다음): `frontier84B_runtime_realized_winrate_proxy_scout_v1`. Boundary(경계): open/design only(개방/설계만), no authority(권위 없음).
+
+<!-- frontier84B_runtime_realized_winrate_proxy_scout_v1 -->
+- `frontier84B_runtime_realized_winrate_proxy_scout_v1` executed runtime-realized winrate proxy scout(런타임 실현 승률 프록시 탐색). Result(결과): `scout=579`, `material=269`, `meaningful=127`, `winrate_preserved=1189`. Best(최선): `f84b_01151` `reversal_balance` `long` val(검증) `344.4161/1.3957/2.8653/8.3653/2267`; OOS(표본외) `291.8095/1.4199/2.4484/9.5103/1845`. Boundary(경계): proxy scout only, no authority(프록시 탐색 전용, 권위 없음). Next(다음): `frontier84C_mt5_runtime_realized_winrate_materialization_v1`.

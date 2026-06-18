@@ -1,25 +1,30 @@
 ﻿# Current Working State(현재 작업 상태)
 
-Updated(갱신): 2026-06-18T09:15:23Z
+Updated(갱신): 2026-06-18T09:41:32Z
 
 Active stage(활성 단계): `stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap`
 
-Current run(현재 실행): `frontier84B_runtime_realized_winrate_proxy_scout_v1`
+Current run(현재 실행): `frontier84C_mt5_runtime_realized_winrate_materialization_v1`
 
-Latest completed run(최근 완료 실행): `frontier84A_stage_open_runtime_realized_winrate_rebuild_after_signal_parity_gap_v1`
+Latest completed run(최근 완료 실행): `frontier84B_runtime_realized_winrate_proxy_scout_v1`
 
 ## Current Truth(현재 진실)
 
-Action(행동): F84A open(개방)으로 F84를 runtime-realized win-rate rebuild(런타임 실현 승률 재구축) hypothesis lifecycle(가설 생명주기)로 열었다.
+Action(행동): F84B runtime-realized winrate proxy scout(F84B 런타임 실현 승률 프록시 탐색)를 실행했다.
 
-Effect(효과): F83의 same-surface threshold/filter repair(동일 표면 임계값/필터 수리)는 금지하고, F84B에서 runtime-realized label proxy scout(런타임 실현 라벨 프록시 탐색)를 진행한다.
+Effect(효과): F84B는 F83E/F83F의 runtime win-rate erosion(런타임 승률 침식)을 직접 겨냥하는 label axis(라벨 축)를 만들고, validation/OOS proxy KPI(검증/표본외 프록시 KPI)를 기록했다.
 
-## What Is True Now(지금 참인 것)
+## Proxy KPI(프록시 KPI)
 
-- F84A is stage open/design only(F84A는 단계 개방/설계 전용).
-- F83G remains valid negative memory(F83G는 유효한 부정 기억으로 유지).
-- F84B is the next proxy scout(F84B가 다음 프록시 탐색).
+- scout clue(탐색 단서): `579`
+- materialization candidate(물질화 후보): `269`
+- meaningful signal(의미 신호): `127`
+- final-like reference(최종 유사 참고): `0`
+- winrate preserved vs F83E OOS(F83E 표본외 대비 승률 보존): `1189`
+- best candidate(최선 후보): `f84b_01151` `reversal_balance` `long` val(검증) `344.4161/1.3957/2.8653/8.3653/2267`; OOS(표본외) `291.8095/1.4199/2.4484/9.5103/1845`
 
-## Not Yet True(아직 참이 아닌 것)
+## Open Work(열린 작업)
 
-No proxy KPI/runtime KPI/ONNX candidate/completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(프록시 KPI/런타임 KPI/온엑스 후보/완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+- next run(다음 실행): `frontier84C_mt5_runtime_realized_winrate_materialization_v1`
+- runtime probe boundary(런타임 탐침 경계): MT5 Strategy Tester(전략 테스터) 전에는 runtime authority(런타임 권위)를 주장하지 않는다.
+- claim boundary(주장 경계): `proxy_scout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`

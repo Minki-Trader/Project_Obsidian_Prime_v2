@@ -1,0 +1,51 @@
+﻿packet_id: frontier84B_runtime_realized_winrate_proxy_scout_v1
+skill: obsidian-task-force-review
+status: completed_for_f84b_proxy_scout_no_authority
+created_at_utc: '2026-06-18T09:41:32Z'
+trigger_reason: "F84B is experiment execution(실험 실행) after user asked whether Task Force(태스크포스) agents are being used."
+roster_registry: docs/agent_control/codex_task_force_registry.yaml
+agents_used:
+  - agent_01_system_governor
+  - agent_02_platform_routing_architect
+  - agent_03_philosophy_policy_skill_governance
+  - agent_04_evidence_control_plane
+  - agent_05_data_feature_contract
+  - agent_06_quant_research
+  - agent_07_model_validation_risk
+  - agent_08_mt5_onnx_runtime
+advice_classification:
+  accepted:
+    - "System Governor(시스템 총괄): keep claim boundary(주장 경계) at proxy_scout_only(프록시 탐색 전용)."
+    - "Platform Routing Architect(플랫폼 라우팅 설계자): route material candidate(물질 후보) to MT5 materialization(MT5 물질화), not authority(권위)."
+    - "Policy/Skill Governance(정책/스킬 거버넌스): no Grok succession(그록 승계 없음), use project-native Task Force(프로젝트 전용 태스크포스)."
+    - "Evidence/Control-Plane(근거/제어면): attach receipt/gate/ledger/artifact lineage(영수증/게이트/장부/계보)를 packet(작업 묶음)에 연결."
+    - "Data/Feature Contract(데이터/피처 계약): use train-only thresholds(훈련 전용 임계값) and record Tier B missing_required(티어 B 필수 누락)."
+    - "Quant Research(정량 연구): rank by density/win-rate/DD/PF/net(밀도/승률/손실폭/PF/순손익), not signal count(신호 수)."
+    - "Model Validation/Risk(모델 검증/위험): mark many-surface proxy search(다표면 프록시 탐색) as overfit risk(과최적화 위험)."
+    - "MT5/ONNX Runtime(MT5/ONNX 런타임): require Strategy Tester output(전략 테스터 출력) before runtime claim(런타임 주장)."
+  rejected:
+    - "Do not infer completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성) from proxy evidence(프록시 근거)."
+  needs_local_verification:
+    - "MT5 runtime output(MT5 런타임 출력), tester report(테스터 보고서), and ONNX handoff(온엑스 인계)는 next run(다음 실행) 전까지 missing_required(필수 누락)이다."
+local_verification:
+  summary_exists: true
+  report_exists: true
+  data_integrity_exists: true
+  model_validation_exists: true
+  packet_skill_receipts_exists: true
+final_codex_direction: "frontier84C_mt5_runtime_realized_winrate_materialization_v1"
+status: f84b_proxy_material_runtime_realized_winrate_candidate_mt5_materialization_required_no_authority
+judgment: runtime_realized_winrate_proxy_candidate_requires_mt5_runtime_materialization_no_authority
+candidate_counts:
+  scout: 579
+  materialization: 269
+  meaningful: 127
+  final_like_reference: 0
+claim_boundary: proxy_scout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+forbidden_claim_check:
+  completion: not_claimed
+  selected_baseline: not_claimed
+  operating_promotion: not_claimed
+  runtime_authority: not_claimed
+  live_readiness: not_claimed
+  goal_achieve: not_claimed
