@@ -1,0 +1,41 @@
+{
+  "allowed_claims": [
+    "f86f_repair_or_rotation_decision_recorded",
+    "scalar_surface_threshold_repair_capped",
+    "sequence_axis_next_run_planned",
+    "runtime_materialization_not_started_due_to_weak_proxy"
+  ],
+  "calibration_risk": "F86E scores are not runtime probabilities.",
+  "comparison_baseline": "F86E scalar proxy scout metrics.",
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "oos_selected_model"
+  ],
+  "model_family": [
+    "logreg_l2_balanced"
+  ],
+  "model_or_threshold_surface": "F86E scalar proxy model/threshold surface is judged too weak for repair or runtime preflight.",
+  "overfit_checks": [
+    "no new threshold search",
+    "no OOS selection",
+    "no runtime claim"
+  ],
+  "overfit_risk": "Repeating scalar threshold/filter tweaks would overfit a weak validation surface.",
+  "packet_id": "frontier86F_first_touch_surface_repair_or_rotation_decision_v1",
+  "selection_metric_boundary": "F86F does not select a model; it caps scalar repair and chooses a new feature-axis scout.",
+  "skill": "obsidian-model-validation",
+  "status": "executed",
+  "target_and_label": "F86D first-touch tp_first vs sl_first labels, none_hit excluded in F86E binary scout.",
+  "threshold_policy": "no threshold selected",
+  "validation_judgment": "negative_with_new_axis_repair_available",
+  "validation_split": "F86E validation-inner plus locked OOS readout."
+}

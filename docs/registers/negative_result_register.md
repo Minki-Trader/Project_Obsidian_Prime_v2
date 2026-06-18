@@ -1478,3 +1478,6 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 
 <!-- frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1 -->
 - `frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1` did not create a strong first-touch proxy scout clue(강한 첫 터치 프록시 스카우트 단서 없음). Reopen/repair condition(재개/수리 조건): new pre-entry sequence feature(새 진입 전 시퀀스 피처), label target(라벨 목표), or runtime materialization preflight(런타임 물질화 사전확인) axis. Boundary(경계): `f86e_leakage_safe_first_touch_feature_label_surface_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve`.
+
+<!-- frontier86F_first_touch_surface_repair_or_rotation_decision_v1 -->
+- `frontier86F_first_touch_surface_repair_or_rotation_decision_v1` records that F86E scalar pre-entry first-touch prediction(스칼라 진입 전 첫 터치 예측) was too weak for MT5 materialization preflight(MT5 물질화 사전확인). Salvage value(회수 가치): F86D labels remain usable as target-only labels(목표 전용 라벨). Reopen condition(재개 조건): materially new pre-entry sequence/liquidity feature evidence(실질적으로 새로운 진입 전 시퀀스/유동성 피처 근거), not threshold/filter retuning(임계값/필터 재조정 아님).

@@ -1,0 +1,114 @@
+{
+  "allowed_claims": [
+    "f86f_repair_or_rotation_decision_recorded",
+    "scalar_surface_threshold_repair_capped",
+    "sequence_axis_next_run_planned",
+    "runtime_materialization_not_started_due_to_weak_proxy"
+  ],
+  "audit_status": {
+    "kpi_contract_status": "pass"
+  },
+  "best_model_id": "logreg_l2_balanced",
+  "claim_boundary": "f86f_repair_or_rotation_decision_only_scalar_surface_repair_capped_sequence_axis_next_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve",
+  "created_at_utc": "2026-06-18T19:43:58Z",
+  "decision": "repair_with_new_pre_entry_intrabar_sequence_axis",
+  "f86g_design_seed": {
+    "feature_axis": [
+      "pre-entry M1 candle path shape",
+      "pre-entry tick/spread/liquidity summaries",
+      "entry-bar-adjacent volatility compression/expansion"
+    ],
+    "hypothesis": "Pre-entry M1/tick sequence and liquidity/spread state may carry first-touch path information that F85B scalar features did not capture.",
+    "label_axis": "reuse F86D first-touch labels as targets only",
+    "runtime_boundary": "no MT5 materialization until a meaningful sequence-axis candidate appears",
+    "validation_boundary": "validation fit/inner selection, locked OOS readout only"
+  },
+  "feature_schema_reference": {
+    "feature_count": 21,
+    "feature_order_hash": "32bb2d28bdb616029cee9bdfaa99b96478af79deadddd45355e7753067730f8f",
+    "feature_set_id": "f86e_pre_entry_f85b_scalar_plus_time_shape_v1"
+  },
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "oos_selected_model"
+  ],
+  "judgment": "negative_scalar_surface_with_repair_axis_available_no_runtime_evidence",
+  "metrics": {
+    "inner_validation_auc": 0.5003647835945972,
+    "inner_validation_top_decile_lift": 1.1314285714285715,
+    "locked_oos_auc": 0.47977635870309976,
+    "locked_oos_average_precision": 0.32773933116141973,
+    "locked_oos_top_decile_lift": 0.8212096774193548
+  },
+  "next_run_id": "frontier86G_pre_entry_intrabar_sequence_feature_scout_v1",
+  "positive_scout": false,
+  "proxy_metrics_reference": {
+    "model_ids": [
+      "logreg_l2_balanced",
+      "random_forest_depth4_balanced",
+      "extra_trees_depth5_balanced"
+    ],
+    "positive_scout": false,
+    "selection_policy": "best model selected by validation_inner_selection roc_auc, top_decile_lift, average_precision; locked OOS is readout only"
+  },
+  "repair_disposition": {
+    "allowed_repair_axis": "pre_entry_m1_tick_sequence_features_before_entry_bar",
+    "claim_effect": "No Strategy Tester runtime materialization is justified from F86E alone.",
+    "do_not_repeat": "Do not re-run F85B scalar probability/ATR/session threshold tweaks.",
+    "reason": "F86E scalar pre-entry surface is near random on validation-inner and below base on locked OOS.",
+    "threshold_filter_parameter_repair": "capped"
+  },
+  "run_id": "frontier86F_first_touch_surface_repair_or_rotation_decision_v1",
+  "runtime_preflight_allowed": false,
+  "scalar_repair_capped": true,
+  "source_identities": {
+    "f86d_labels": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv",
+      "sha256": "b2e50dbc8688cff507aa40f30d96f03f8d2434a71aa767201fb08ffa44106d3c",
+      "size": 1039915
+    },
+    "f86e_feature_schema": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/feature_label_surface/feature_schema.json",
+      "sha256": "6ed182fa868606bceb1949753e0e33e304a17a67c7dc812b94015b0de2750ed5",
+      "size": 2313
+    },
+    "f86e_leakage_audit": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86e_feature_leakage_audit.json",
+      "sha256": "65640416695b9d6a57cdfc9a8604f515f58ac62b7df4a46b26fdbce6ca1b6cab",
+      "size": 2464
+    },
+    "f86e_proxy_metrics": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/proxy_scout/proxy_metrics.json",
+      "sha256": "243f9c7e09c045f598633fe68280c933795fed2cdb7380f3c15f6b35bc05ba07",
+      "size": 8673
+    },
+    "f86e_split_audit": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86e_split_boundary_audit.json",
+      "sha256": "359928d7718b7d490c0141d66a910778a601a1e87ca966a205b2856c9a5a5b5e",
+      "size": 672
+    },
+    "f86e_summary": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/summary.json",
+      "sha256": "7d7f3df706f616ae8fe900c96fdaeb503d61012ff646fc87bb07e354cea6a470",
+      "size": 16011
+    }
+  },
+  "source_run_id": "frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1",
+  "stage_id": "stage_frontier_86__runtime_native_intrabar_path_label_source",
+  "status": "f86f_scalar_surface_repair_capped_sequence_axis_required_no_authority"
+}

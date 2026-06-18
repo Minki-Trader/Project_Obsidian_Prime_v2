@@ -1,0 +1,78 @@
+{
+  "allowed_claims": [
+    "f86f_repair_or_rotation_decision_recorded",
+    "scalar_surface_threshold_repair_capped",
+    "sequence_axis_next_run_planned",
+    "runtime_materialization_not_started_due_to_weak_proxy"
+  ],
+  "evidence_boundary": "decision-only",
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "oos_selected_model"
+  ],
+  "hard_gate_applicable": "no",
+  "judgment_class": "negative",
+  "ledger_rows": [
+    "docs/registers/run_registry.csv::frontier86F_first_touch_surface_repair_or_rotation_decision_v1",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/stage_run_ledger.csv::frontier86F_first_touch_surface_repair_or_rotation_decision_v1",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/stage_run_ledger.csv::frontier86G_pre_entry_intrabar_sequence_feature_scout_v1"
+  ],
+  "management_state": "run_manifest/kpi_record/summary/result_summary created",
+  "measurement_scope": "structural_scout repair-or-rotation decision over F86E first-touch proxy metrics",
+  "missing_evidence": [
+    "MT5 Strategy Tester report",
+    "EA/ONNX bundle identity",
+    "trade list and telemetry",
+    "WFO/stress/runtime validation"
+  ],
+  "negative_memory_required": "yes",
+  "packet_id": "frontier86F_first_touch_surface_repair_or_rotation_decision_v1",
+  "parity_level": "P0_unverified",
+  "produced_artifacts": [
+    "stage_pipelines/stage_frontier_86/frontier86f_repair_or_rotation_decision.py",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/decision/repair_or_rotation_decision.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/run_manifest.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/kpi_record.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/reports/result_summary.md",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_execution_summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_scope_completion_gate.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_kpi_contract_audit.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_artifact_lineage_audit.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_result_judgment_audit.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_final_claim_guard.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_run_evidence_receipt.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_experiment_design_receipt.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_data_integrity_receipt.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_model_validation_receipt.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_artifact_lineage_receipt.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_result_judgment_receipt.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_claim_discipline_receipt.json",
+    "docs/agent_control/packets/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/work_packet.yaml",
+    "docs/agent_control/packets/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/skill_receipts.json",
+    "docs/agent_control/packets/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/required_gate_coverage_audit.json",
+    "docs/agent_control/packets/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/final_claim_guard.json",
+    "docs/agent_control/packets/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/closeout_gate.json",
+    "docs/agent_control/packets/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/state_sync_audit.json"
+  ],
+  "registry_update_required": "yes",
+  "scoreboard": "structural_scout",
+  "skill": "obsidian-run-evidence-system",
+  "source_inputs": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/proxy_scout/proxy_metrics.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1/feature_label_surface/feature_schema.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv"
+  ],
+  "status": "executed",
+  "wfo_status": "not_applicable"
+}

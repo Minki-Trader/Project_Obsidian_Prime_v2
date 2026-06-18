@@ -1,0 +1,61 @@
+{
+  "allowed_claims": [
+    "f86f_repair_or_rotation_decision_recorded",
+    "scalar_surface_threshold_repair_capped",
+    "sequence_axis_next_run_planned",
+    "runtime_materialization_not_started_due_to_weak_proxy"
+  ],
+  "audits": [
+    {
+      "audit_name": "frontier_extra_due_check",
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_frontier_extra_due_check.json",
+      "status": "pass_not_due"
+    },
+    {
+      "audit_name": "frontier_five_stage_direction_synthesis",
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_frontier_five_stage_direction_synthesis.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "scope_completion_gate",
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_scope_completion_gate.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "kpi_contract_audit",
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_kpi_contract_audit.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "artifact_lineage_audit",
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_artifact_lineage_audit.json",
+      "status": "pass_connected_with_boundary"
+    },
+    {
+      "audit_name": "result_judgment_receipt",
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86f_result_judgment_audit.json",
+      "status": "pass"
+    }
+  ],
+  "claim_boundary": "f86f_repair_or_rotation_decision_only_scalar_surface_repair_capped_sequence_axis_next_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve",
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "path": "docs/agent_control/packets/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/final_claim_guard.json",
+    "status": "pass"
+  },
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "oos_selected_model"
+  ],
+  "packet_id": "frontier86F_first_touch_surface_repair_or_rotation_decision_v1",
+  "status": "pass"
+}

@@ -1,0 +1,32 @@
+{
+  "baseline": "F86E scalar pre-entry proxy scout metrics.",
+  "changed_variables": [
+    "next experiment axis changes from scalar F85B readout to pre-entry M1/tick sequence features"
+  ],
+  "comparison_baseline": "F86E positive_scout and locked OOS readout.",
+  "control_variables": [
+    "F86D first-touch labels",
+    "F86E locked OOS readout remains readout-only",
+    "no Strategy Tester runtime claim"
+  ],
+  "evidence_plan": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/decision/repair_or_rotation_decision.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/reports/result_summary.md"
+  ],
+  "failure_criteria": "AUC near random and OOS top-decile lift below base rate caps scalar repair.",
+  "hypothesis": "If F86E scalar first-touch proxy scout is weak, do not threshold-repair the same scalar surface; use a materially new pre-entry intrabar sequence axis.",
+  "invalid_conditions": [
+    "F86E source artifacts missing",
+    "F86E OOS used for selection",
+    "F86D labels unavailable"
+  ],
+  "packet_id": "frontier86F_first_touch_surface_repair_or_rotation_decision_v1",
+  "sample_scope": "F86E summary/proxy metrics and F86D label source identities",
+  "skill": "obsidian-experiment-design",
+  "status": "executed",
+  "stop_conditions": [
+    "record decision and current-run sync to F86G"
+  ],
+  "success_criteria": "Route to runtime preflight only if proxy scout is positive and locked OOS does not collapse."
+}

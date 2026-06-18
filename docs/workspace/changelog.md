@@ -7364,3 +7364,11 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - Action(행동): `frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1`로 leakage-safe feature/label surface(누수 안전 피처/라벨 표면)와 proxy scout(프록시 스카우트)를 실행했다.
 - Effect(효과): next(다음)는 `frontier86F_first_touch_surface_repair_or_rotation_decision_v1`이며, Strategy Tester runtime economics(전략 테스터 런타임 경제성), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
 - Boundary(경계): `f86e_leakage_safe_first_touch_feature_label_surface_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve`.
+
+<!-- frontier86F_first_touch_surface_repair_or_rotation_decision_v1 -->
+
+## 2026-06-19 Frontier86F Repair/Rotation Decision(F86F 수리/회전 결정)
+
+- Action(행동): `frontier86F_first_touch_surface_repair_or_rotation_decision_v1`로 F86E scalar proxy scout(스칼라 프록시 스카우트)를 판정하고 scalar repair(스칼라 수리)를 capped(상한 처리)했다.
+- Effect(효과): next(다음)는 `frontier86G_pre_entry_intrabar_sequence_feature_scout_v1`이며, Strategy Tester runtime economics(전략 테스터 런타임 경제성), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+- Boundary(경계): `f86f_repair_or_rotation_decision_only_scalar_surface_repair_capped_sequence_axis_next_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve`.

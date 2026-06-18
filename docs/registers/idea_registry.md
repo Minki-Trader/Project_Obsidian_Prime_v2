@@ -2351,3 +2351,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1 -->
 - `frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1` built a leakage-safe first-touch feature/label surface(누수 안전 첫 터치 피처/라벨 표면) and proxy scout(프록시 스카우트). Best model(최선 모델): `logreg_l2_balanced`. Next(다음): `frontier86F_first_touch_surface_repair_or_rotation_decision_v1`. Boundary(경계): no runtime authority(런타임 권위 없음).
+
+<!-- frontier86F_first_touch_surface_repair_or_rotation_decision_v1 -->
+- `frontier86F_first_touch_surface_repair_or_rotation_decision_v1` capped scalar first-touch proxy repair(스칼라 첫 터치 프록시 수리 상한) and opened the next idea seed(다음 아이디어 씨앗): pre-entry M1/tick sequence feature scout(진입 전 1분/틱 시퀀스 피처 스카우트). Boundary(경계): no runtime authority(런타임 권위 없음).
