@@ -44,6 +44,7 @@ V2_REQUIRED = (
     "final_claim_policy",
 )
 V2_1_REQUIRED = (
+    "packet_lifecycle",
     "packet_id",
     "created_at_utc",
     "user_request",
@@ -60,6 +61,8 @@ V2_1_REQUIRED = (
     "gates",
     "final_claim_policy",
 )
+NEW_PACKET_REQUIRED_VERSION = "work_packet_schema_v2_1"
+ARCHIVE_ONLY_PACKET_LIFECYCLES = frozenset({"archive_only", "legacy_archive_only", "historical_archive_only"})
 V2_SCOPE_REQUIRED = (
     "work_families",
     "target_surfaces",
@@ -214,6 +217,21 @@ FRONTIER_EXTRA_CLOSEOUT_GATES = frozenset(
         "final_claim_guard",
     }
 )
+FRONTIER_FIVE_STAGE_DIRECTION_SYNTHESIS_GATE = "frontier_five_stage_direction_synthesis"
+FRONTIER_STAGE_OPEN_TERMS = (
+    "frontier open",
+    "stage open",
+    "canonical frontier",
+    "new frontier",
+    "next frontier",
+    "resume frontier",
+    "frontier continuation",
+    "frontier campaign",
+    "전선 개방",
+    "정식 전선",
+    "다음 전선",
+    "재개 전선",
+)
 
 
 def audit_work_packet_schema(packet: Mapping[str, Any]) -> AuditResult:
@@ -222,6 +240,9 @@ def audit_work_packet_schema(packet: Mapping[str, Any]) -> AuditResult:
     requested_action = str(_mapping(packet.get("user_request")).get("requested_action", ""))
     has_v2_fields = any(key in packet for key in ("work_classification", "risk_vector_scan", "decision_lock", "work_plan"))
     is_v2_1 = "v2_1" in version
+    packet_lifecycle = _normalized_lifecycle(packet.get("packet_lifecycle"))
+
+    _check_new_packet_version(version, is_v2_1, packet_lifecycle, findings)
 
     if is_v2_1:
         _require_top_level(packet, V2_1_REQUIRED, findings, version="v2_1")
@@ -253,12 +274,15 @@ def audit_work_packet_schema(packet: Mapping[str, Any]) -> AuditResult:
             )
 
     status = "blocked" if any(finding.is_blocking for finding in findings) else "pass"
+    allowed_claims = ("work_packet_schema_valid",) if status == "pass" else ("blocked",)
+    if status == "pass" and not is_v2_1:
+        allowed_claims = ("archive_only_work_packet_schema_valid",)
     return AuditResult(
         audit_name="work_packet_schema_lint",
         status=status,
         findings=tuple(findings),
-        counts={"version": version, "has_v2_fields": has_v2_fields},
-        allowed_claims=("work_packet_schema_valid",) if status == "pass" else ("blocked",),
+        counts={"version": version, "has_v2_fields": has_v2_fields, "packet_lifecycle": packet_lifecycle or "missing"},
+        allowed_claims=allowed_claims,
         forbidden_claims=() if status == "pass" else tuple(sorted(COMPLETION_CLAIMS)),
     )
 
@@ -286,6 +310,26 @@ def _require_top_level(packet: Mapping[str, Any], required: tuple[str, ...], fin
                     details={"missing": key, "version": version},
                 )
             )
+
+
+def _check_new_packet_version(version: str, is_v2_1: bool, packet_lifecycle: str, findings: list[AuditFinding]) -> None:
+    if is_v2_1:
+        return
+    if packet_lifecycle in ARCHIVE_ONLY_PACKET_LIFECYCLES:
+        return
+    finding_details = {
+        "version": version,
+        "packet_lifecycle": packet_lifecycle or "missing",
+        "required_version_for_new_packets": NEW_PACKET_REQUIRED_VERSION,
+        "archive_only_lifecycles": sorted(ARCHIVE_ONLY_PACKET_LIFECYCLES),
+    }
+    findings.append(
+        AuditFinding(
+            check_id="work_packet_schema::version::new_packet_requires_v2_1",
+            message="New work packets must use work_packet_schema_v2_1; older schema versions are archive-only.",
+            details=finding_details,
+        )
+    )
 
 
 def _require_fields(payload: Mapping[str, Any], required: tuple[str, ...], findings: list[AuditFinding], *, prefix: str) -> None:
@@ -450,6 +494,15 @@ def _check_frontier_extra_overlay_requirements(packet: Mapping[str, Any], findin
             )
         )
 
+    if _looks_like_canonical_frontier_open(packet_text) and FRONTIER_FIVE_STAGE_DIRECTION_SYNTHESIS_GATE not in required_gates:
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::frontier_direction::missing_five_stage_synthesis",
+                message="Canonical frontier open or continuation packets must include the light five-stage direction synthesis gate.",
+                details={"required_gates": sorted(required_gates)},
+            )
+        )
+
     if _looks_like_frontier_extra_closeout(packet_text):
         missing = sorted(FRONTIER_EXTRA_CLOSEOUT_GATES - required_gates)
         if missing:
@@ -602,6 +655,18 @@ def _looks_like_frontier_extra_closeout(packet_text: str) -> bool:
     has_extra = "stage_frontier_extra" in packet_text or "frontier extra" in packet_text or "전선 추가" in packet_text
     has_closeout = "closeout" in packet_text or "stage_closeout" in packet_text or "마감" in packet_text
     return has_extra and has_closeout
+
+
+def _looks_like_canonical_frontier_open(packet_text: str) -> bool:
+    if "frontier extra" in packet_text or "stage_frontier_extra" in packet_text or "전선 추가" in packet_text:
+        return False
+    has_frontier = "stage_frontier_" in packet_text or "frontier" in packet_text or "전선" in packet_text
+    has_open_shape = any(term in packet_text for term in FRONTIER_STAGE_OPEN_TERMS)
+    return has_frontier and has_open_shape
+
+
+def _normalized_lifecycle(value: Any) -> str:
+    return str(value or "").strip().lower()
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:

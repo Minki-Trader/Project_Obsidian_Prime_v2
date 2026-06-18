@@ -26,12 +26,15 @@ REQUIRED_ROUTING_CONTRACT_KEYS = (
     "required_skill_order",
     "closeout_rule",
     "stage_agnostic_rule",
+    "new_packet_schema_version_rule",
+    "task_force_minimum_agent_selection_rule",
     "verification_profile_rule",
     "verification_gate_selection_rule",
     "verification_trigger_source_rule",
     "governance_evidence_balance_rule",
     "active_verification_over_procedure_rule",
     "runtime_probe_reluctance_rule",
+    "frontier_five_stage_direction_synthesis_rule",
 )
 REQUIRED_FAMILY_KEYS = (
     "description",

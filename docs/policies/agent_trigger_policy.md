@@ -128,9 +128,19 @@ Extra stage receipt(추가 단계 영수증)는 ingredient card receipts(재료 
 
 Depth receipt(깊이 영수증)는 depth_id/candidate_cap/sample_method/selection_lane_counts/top_forward_pf_share/runtime_substrate_count/single_substrate_warning/materialized_count/runtime_completed_count/full_mix_materialized=false/depth_decision/claim_effect/claim_boundary(깊이 ID/후보 상한/표본 방식/선정 선로별 수/상위 전진 수익 팩터 비율/런타임 바탕 수/단일 바탕 경고/물질화 수/런타임 완료 수/전체 혼합 물질화 아님/깊이 결정/주장 효과/주장 경계)를 depth(깊이)별로 남긴다. Materialized attempt(물질화 시도)는 dataset/feature/label/split identity(데이터셋/피처/라벨/분할 정체성), parser/runtime contract version(파서/런타임 계약 버전), ONNX/EA/set/feature/tester/report/trade-list/telemetry hash(온엑스/EA/설정/피처/테스터/보고서/거래목록/텔레메트리 해시)를 남긴다. closeout(마감) 전에는 `frontier_extra_mix_depth_lint(전선 추가 혼합 깊이 점검)`로 이 receipt(영수증)를 검사한다. 효과(effect, 효과)는 `/goal(목표)`에서 “개쩌는 ONNX(온엑스)”처럼 넓은 요청이 들어와도 card/combination selection(카드/조합 선정) 생략, exhaustive search(전체 탐색), PF-only selection(PF 단독 선정), compile-only/proxy-only runtime claim(컴파일 단독/프록시 단독 런타임 주장), full mix materialization(전체 혼합 물질화)을 몰래 주장하지 못하게 하는 것이다.
 
+## 전선 5단계 방향 종합 트리거(Five-Stage Direction Synthesis Trigger, 5단계 방향 종합 트리거)
+
+`frontier_five_stage_direction_synthesis(전선 5단계 방향 종합)`는 Topic Rotation Guard(주제 회전 보호)와 Extra Stage(추가 단계) 사이의 light synthesis(가벼운 종합)다. 실행 순서(effect, 효과)는 `frontier_extra_stage_due_check(전선 추가 단계 도래 점검)` 뒤, canonical frontier open(정식 전선 개방)의 `frontier_topic_rotation_check(전선 주제 회전 점검)` 전에 최근 5개 방향을 짧게 정리하는 것이다.
+
+이 trigger(트리거)는 retrospective(회고), Grok call(그록 호출), heavy Task Force review(무거운 태스크포스 검토), runtime authority(런타임 권위)를 만들지 않는다. Required record(필수 기록)는 covered_frontier_ids/dominant_direction/repeated_mechanism/overused_axis_warning/next_axis_options/allowed_reexperiment_conditions/adjacent_same_axis_block/claim_boundary(검토 전선 ID/지배 방향/반복 메커니즘/과사용 축 경고/다음 축 후보/재실험 허용 조건/인접 동일 축 차단/주장 경계)다.
+
+중요한 경계(boundary, 경계)는 topic ban(주제 금지)이 아니다. 같은 topic(주제)은 나중에 new axis or new evidence(새 축 또는 새 근거)가 있으면 다시 실험할 수 있다. 이 trigger(트리거)가 막는 것은 adjacent same-axis continuation(인접 동일 축 연속), renamed repair(이름만 바꾼 수리), 그리고 최근 5개 흐름과 같은 question class(질문 계열)를 계속 미는 것이다.
+
+Allowed claims(허용 주장)는 direction_delta/axis_rotation_hint/adjacent_repeat_warning(방향 변화/축 회전 힌트/인접 반복 경고)뿐이다. completion/selected baseline/operating promotion/runtime authority/live readiness/Goal Achieve(완성/선택 기준선/운영 승격/런타임 권위/실거래 준비/목표 달성)는 금지한다.
+
 ## 전선 주제 회전 트리거(Frontier Topic Rotation Trigger, 전선 주제 회전 트리거)
 
-`frontier_topic_rotation_check(전선 주제 회전 점검)`는 active trigger overlay(활성 트리거 오버레이, 추가 조건)다. canonical frontier stage(정식 전선 단계)를 새로 열기 전 실행한다. 50개 boundary(경계)에서는 `frontier_extra_stage_due_check(전선 추가 단계 도래 점검)`를 먼저 처리한 뒤, resume frontier open(전선 재개 개방)에 이 점검을 적용한다.
+`frontier_topic_rotation_check(전선 주제 회전 점검)`는 active trigger overlay(활성 트리거 오버레이, 추가 조건)다. canonical frontier stage(정식 전선 단계)를 새로 열기 전 실행한다. 50개 boundary(경계)에서는 `frontier_extra_stage_due_check(전선 추가 단계 도래 점검)`를 먼저 처리하고, `frontier_five_stage_direction_synthesis(전선 5단계 방향 종합)`로 최근 5개 방향을 가볍게 정리한 뒤, resume frontier open(전선 재개 개방)에 이 점검을 적용한다.
 
 Trigger(트리거)는 다음 중 하나다.
 

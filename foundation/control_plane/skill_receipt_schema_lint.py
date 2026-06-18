@@ -54,6 +54,7 @@ TASK_FORCE_CALL_REQUIRED_FIELDS = (
 )
 TASK_FORCE_CALL_TOOL_NAME = "multi_agent_v1.spawn_agent"
 TASK_FORCE_OPINION_CLASSIFICATIONS = {"accepted", "rejected", "needs_local_verification"}
+TASK_FORCE_FULL_ROSTER_SIZE = 8
 
 
 def audit_skill_receipt_schemas(
@@ -173,6 +174,16 @@ def _task_force_review_findings(receipt: Mapping[str, Any], *, requested_claims:
     actual_calls = receipt.get("actual_subagent_calls")
 
     if is_required:
+        agents_used = _string_list(receipt.get("agents_used"))
+        unique_agents_used = sorted(set(agents_used))
+        if len(unique_agents_used) >= TASK_FORCE_FULL_ROSTER_SIZE and _is_missing(receipt.get("full_roster_call_reason")):
+            findings.append(
+                AuditFinding(
+                    check_id="skill_receipt_schema::obsidian-task-force-review::full_roster_call_missing_reason",
+                    message="Calling all Task Force agents is not the default and requires a full_roster_call_reason.",
+                    details={"agents_used": unique_agents_used},
+                )
+            )
         if status in TASK_FORCE_BLOCKED_STATUSES:
             findings.append(
                 AuditFinding(
@@ -267,6 +278,12 @@ def _looks_like_missing_task_force_calls(value: Any) -> bool:
 
 def _normalized(value: Any) -> str:
     return str(value or "").strip().lower()
+
+
+def _string_list(value: Any) -> list[str]:
+    if isinstance(value, Sequence) and not isinstance(value, (str, bytes)):
+        return [str(item) for item in value if str(item).strip()]
+    return []
 
 
 def _is_missing(value: Any) -> bool:

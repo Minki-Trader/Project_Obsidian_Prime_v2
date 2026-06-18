@@ -45,6 +45,7 @@ class OpsInstructionAuditTests(unittest.TestCase):
         registry = yaml.safe_load((ROOT / "docs/agent_control/work_family_registry.yaml").read_text(encoding="utf-8-sig"))
         schema = yaml.safe_load((ROOT / "docs/agent_control/work_packet.schema.yaml").read_text(encoding="utf-8-sig"))
 
+        self.assertIn("new_packet_schema_version_rule", registry["routing_contract"])
         self.assertIn("verification_profile_rule", registry["routing_contract"])
         self.assertIn("governance_evidence_balance_rule", registry["routing_contract"])
         self.assertIn("active_verification_over_procedure_rule", registry["routing_contract"])
@@ -54,6 +55,8 @@ class OpsInstructionAuditTests(unittest.TestCase):
         self.assertIn("authority_candidate", registry["verification_profiles"]["profiles"])
         self.assertIn("runtime_probe_reluctance_rule", registry["verification_profiles"])
         self.assertIn("verification_profile", schema["v2_1_required_top_level"])
+        self.assertIn("packet_lifecycle", schema["v2_1_required_top_level"])
+        self.assertEqual(schema["compatibility"]["new_packet_required_version"], "work_packet_schema_v2_1")
         self.assertIn("verification_profile_ids_allowed", schema)
 
         expected_surfaces = [
@@ -69,6 +72,29 @@ class OpsInstructionAuditTests(unittest.TestCase):
             self.assertIn("trigger_source", text)
             self.assertIn("active verification", text)
             self.assertIn("runtime_probe", text)
+
+    def test_frontier_five_stage_direction_synthesis_is_wired(self) -> None:
+        registry = yaml.safe_load((ROOT / "docs/agent_control/work_family_registry.yaml").read_text(encoding="utf-8-sig"))
+        overlay = registry["trigger_overlays"]["frontier_five_stage_direction_synthesis"]
+
+        self.assertEqual(overlay["status"], "active")
+        self.assertTrue(overlay["active_by_default"])
+        self.assertEqual(overlay["trigger_skill"], "obsidian-stage-transition")
+        self.assertEqual(overlay["appends_required_gate"], "frontier_five_stage_direction_synthesis")
+        self.assertIn("frontier_five_stage_direction_synthesis_rule", registry["routing_contract"])
+        self.assertIn("allowed_reexperiment_conditions", overlay["required_fields"])
+        self.assertIn("adjacent_same_axis_block", overlay["required_fields"])
+
+        for path in [
+            ROOT / "AGENTS.md",
+            ROOT / "docs/policies/frontier_governance.md",
+            ROOT / "docs/policies/agent_trigger_policy.md",
+            ROOT / ".agents/skills/obsidian-stage-transition/SKILL.md",
+        ]:
+            text = path.read_text(encoding="utf-8-sig")
+            self.assertIn("frontier_five_stage_direction_synthesis", text)
+            self.assertIn("topic ban", text.lower())
+            self.assertIn("adjacent", text.lower())
 
     def test_frontier_extra_progressive_mix_depth_contract_is_wired(self) -> None:
         registry = yaml.safe_load((ROOT / "docs/agent_control/work_family_registry.yaml").read_text(encoding="utf-8-sig"))

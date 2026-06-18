@@ -26,6 +26,10 @@ Obsidian Prime의 개념(concept, 개념)과 브로커 심볼 계약(broker symb
 
 효과(effect, 효과)는 Stage 5부터 미래 Stage 50+까지 작업 내용은 달라져도, 스킬 선택(skill selection, 스킬 선택), receipt(영수증), gate(게이트), claim boundary(주장 경계)가 같은 방식으로 작동하게 하는 것이다.
 
+새 work packet(새 작업 묶음)은 `work_packet_schema_v2_1(작업 묶음 스키마 버전 2.1)`과 `packet_lifecycle=new_packet(작업 묶음 생명주기=새 묶음)`을 사용한다. 과거 v1/v2 packet(버전1/2 작업 묶음)은 archive-only(보관 전용)로만 읽고, 새 reviewed/verified/pass(검토됨/검증됨/통과) 주장 근거로 승격하지 않는다.
+
+효과(effect, 효과)는 예전 묶음 형식을 지우지 않으면서도 새 작업이 verification_profile(검증 프로필), trigger source(트리거 원천), protected claim(보호 주장), required evidence(필수 근거), stop condition(중단 조건)을 빠뜨리지 못하게 하는 것이다.
+
 gate(게이트)가 실패하면 `docs/agent_control/self_correction_policy.yaml`의 기본값인 `plan_only` 흐름으로 실패 원인과 repair plan(수정 계획)을 먼저 남긴다. 자동 수정은 allowlist(허용 목록) 안의 packet/closeout 배선 보정으로만 제한하며, gate 완화, threshold 완화, test skip, runtime/model logic 변경은 금지한다.
 
 ### 작은 작업 최소 모드(Small-Work Minimal Mode, 작은 작업 최소 모드)
@@ -68,7 +72,7 @@ model policy(모델 정책)는 현재 `gpt-5.5 xhigh(5.5 매우 높음)`를 floo
 
 `obsidian-task-force-review(태스크포스 검토)`는 internal adversarial review(내부 비판 검토)와 agent routing(요원 라우팅)을 맡는다. 각 agent opinion(요원 의견)은 `accepted/rejected/needs_local_verification(수용/거절/로컬 검증 필요)`로 분류하고, Codex(코덱스)가 local verification(로컬 검증)과 final direction(최종 방향)을 계속 소유한다.
 
-Task Force review(태스크포스 검토)가 trigger(트리거)되면 Codex(코덱스)는 먼저 관련 agent(요원)만 registry(등록부) 기준으로 고르고, `reviewed/verified/pass(검토됨/검증됨/통과)`나 Task Force reviewed(태스크포스 검토됨)를 주장하기 전에 선택한 요원을 즉시 실제 `spawn_agent(서브에이전트 생성 호출)`로 호출한다. 8명 전원 호출은 기본값이 아니며, architecture/policy/runtime/stage-close(구조/정책/런타임/단계 마감)처럼 실제로 전원이 필요한 경우에만 사유를 남긴다. 효과(effect, 효과)는 self-review(자기검토)를 Task Force review(태스크포스 검토)처럼 포장하지 않고, 필요한 요원 호출 증거를 먼저 만들게 하는 것이다.
+Task Force review(태스크포스 검토)가 trigger(트리거)되면 Codex(코덱스)는 먼저 work packet claim surface(작업 묶음 주장 표면), required gate(필수 게이트), roster remit(명단 임무)에 맞는 최소 관련 agent(요원)만 registry(등록부) 기준으로 고르고, `reviewed/verified/pass(검토됨/검증됨/통과)`나 Task Force reviewed(태스크포스 검토됨)를 주장하기 전에 선택한 요원을 즉시 실제 `spawn_agent(서브에이전트 생성 호출)`로 호출한다. 8명 전원 호출은 기본값이 아니며, architecture/policy/runtime/stage-close/cross-system(구조/정책/런타임/단계 마감/교차 시스템)처럼 실제로 전원이 필요한 경우에만 `full_roster_call_reason(전원 호출 사유)`를 남긴다. 효과(effect, 효과)는 self-review(자기검토)를 Task Force review(태스크포스 검토)처럼 포장하지 않고, 필요한 요원 호출 증거를 먼저 만들게 하는 것이다.
 
 Task Force review(태스크포스 검토)가 active goal(`/goal`, 활성 목표), work packet(작업 묶음), required gate(필수 게이트), family rule(작업군 규칙), router-selected required Task Force overlay(라우터가 선택한 필수 태스크포스 오버레이), explicit user instruction requiring review(검토를 요구하는 명시 사용자 지시), 또는 closeout claim(마감 주장)에 필요하면 `spawn_agent(서브에이전트 생성 호출)` 도구 없음이나 미호출은 `blocked_for_task_force_review(태스크포스 검토 차단)`다. `not_applicable_with_reason(사유 있는 해당 없음)`나 claim boundary lowering(주장 경계 낮춤)으로 통과시킬 수 없고, `reviewed/verified/pass/stage closeout pass/internally_reviewed/rehearsed_control_plane(검토됨/검증됨/통과/단계 마감 통과/내부 검토됨/제어면 리허설됨)`을 주장하지 않는다. optional checkpoint(선택 점검)이면 작업은 계속할 수 있지만 Task Force review(태스크포스 검토) 주장은 하지 않는다. dormant/stale agent(대기 중이거나 낡은 맥락의 요원) 의견은 최신 context update(맥락 갱신) 없이 검토 근거로 쓰지 않는다.
 
@@ -161,6 +165,8 @@ Frontier open(전선 개방)은 `frontier_topic_rotation_check(전선 주제 회
 같은 broad topic(넓은 주제)은 나중에 다시 등장할 수 있다. 금지되는 것은 topic(주제) 자체가 아니라 인접한 frontier open(전선 개방)을 같은 surface repair(동일 표면 수리)나 이름만 바꾼 가설로 계속 미는 것이다. 다시 등장하려면 source/data representation/label/runtime representation/validation philosophy/model family/objective/trade shape/risk logic/regime split(원천/데이터 표현/라벨/런타임 표현/검증 철학/모델 계열/목적함수/거래 형태/위험 로직/장세 분할) 중 material novelty delta(실질 신규성 차이)를 적는다.
 
 `frontier_topic_rotation_check(전선 주제 회전 점검)` 실패는 현재 proposed next-open shape(제안된 다음 개방 형태)만 막는다. 같은 topic(주제) 자체를 future stage(미래 단계)에서 금지하지 않는다.
+
+`frontier_five_stage_direction_synthesis(전선 5단계 방향 종합)`는 Topic Rotation Guard(주제 회전 보호)와 Extra Stage(추가 단계) 사이의 가벼운 방향 기록이다. 최근 5개 정식 frontier closeout(전선 마감)의 dominant direction/repeated mechanism/overused axis warning/next-axis options(지배 방향/반복 메커니즘/과사용 축 경고/다음 축 후보)을 요약하지만, retrospective(회고), heavy review(무거운 검토), topic abandonment(주제 폐기), permanent topic ban(영구 주제 금지)을 만들지 않는다. 같은 topic(주제)은 나중에 새 axis/evidence(새 축/근거)로 다시 실험할 수 있고, 이 기록이 막는 것은 adjacent same-axis continuation(인접 동일 축 연속)뿐이다.
 
 ## 전선 추가 단계 규칙(Frontier Extra Stage Rule, 전선 추가 단계 규칙)
 

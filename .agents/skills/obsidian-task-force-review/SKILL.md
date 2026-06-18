@@ -22,7 +22,9 @@ The skill adds a bounded internal review layer(제한 내부 검토층). It does
 
 1. Confirm the request is project-native Task Force work, not Grok role succession(그록 역할 승계).
 2. Treat Grok call/review(그록 호출/검토), external review(외부 리뷰), second opinion(2차 의견), no-solo-Codex judgment(코덱스 단독 판단 금지), stage-close adversarial review(단계 마감 비판 검토), and agent/skill consulting(요원/스킬 상담) as Task Force triggers, not Grok triggers.
-3. Select the minimum necessary agents(요원) from the registry. Use all 8 only for architecture, policy, runtime, or stage-close work that materially needs them.
+3. Select the minimum necessary agents(요원) from the registry. Choose by the packet claim surface(묶음 주장 표면), required gate(필수 게이트), and roster remit(명단 임무), not by habit(습관).
+   - Use all 8 only for architecture, policy, runtime, stage-close, or cross-system work(구조/정책/런타임/단계 마감/교차 시스템 작업) that materially needs every remit(모든 임무).
+   - If all 8 agents(8명 전원)을 호출하면 the receipt(영수증)에 `full_roster_call_reason(전원 호출 사유)`를 남긴다. Without that reason(그 사유 없이는) the review is blocked by receipt lint(영수증 검사에서 차단).
    - The governance/evidence balance rule(운영/근거 균형 규칙) alone is not a Task Force trigger(태스크포스 트리거). It only changes review routing when the current packet already requires Task Force review(태스크포스 검토).
 4. Immediately call the selected agents(선택 요원) with real `spawn_agent(서브에이전트 생성 호출)` before making any Task Force reviewed/reviewed/verified/pass(태스크포스 검토됨/검토됨/검증됨/통과) claim.
    - If Task Force review(태스크포스 검토) is required by active goal(`/goal`, 활성 목표), packet(묶음), required gate(필수 게이트), family rule(작업군 규칙), router-selected required Task Force overlay(라우터 선택 필수 태스크포스 오버레이), explicit user instruction requiring review(검토를 요구하는 명시 사용자 지시), or closeout claim(마감 주장), unavailable or uncalled selected-agent `spawn_agent(선택 요원 서브에이전트 생성 호출)` sets status to `blocked_for_task_force_review(태스크포스 검토 차단)`.
@@ -72,6 +74,7 @@ Frontier80(전선80) must rotate feature set, label, model family, trade shape, 
 - Do not defer selected agent calls until closeout(마감) after already relying on a Task Force review(태스크포스 검토) claim.
 - Do not treat `tool_unavailable/not_called(도구 사용 불가/호출 안 됨)` or `not_applicable_with_reason(사유 있는 해당 없음)` as a passing state for required Task Force review(필수 태스크포스 검토).
 - Do not spawn all 8 agents(8명 전원) by default.
+- Do not omit `full_roster_call_reason(전원 호출 사유)` when all 8 agents(8명 전원)을 actually need to be called.
 - Do not let agent consensus replace MT5 output(MT5 출력), ledger rows(장부 행), hashes(해시), or local filesystem verification(로컬 파일시스템 검증).
 - Do not hand current review, critique, stage closeout, external review, or explicit Grok wording back to Grok(그록).
 - Do not trigger active five-stage Grok retrospective(활성 5단계 그록 회고) during the Task Force migration path. Preserve historical records(역사 기록) instead.

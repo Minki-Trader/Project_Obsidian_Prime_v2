@@ -1,8 +1,10 @@
 version: work_packet_schema_v2_1_compatible
 compatibility:
-  accepts_v1_packets: true
-  accepts_v2_packets: true
+  accepts_v1_packets: archive_only
+  accepts_v2_packets: archive_only
   accepts_v2_1_packets: true
+  new_packet_required_version: work_packet_schema_v2_1
+  prior_versions_claim_boundary: "Prior v1/v2 packets(이전 버전1/2 작업 묶음)은 archive-only(보관 전용)로 읽으며, 새 packet(새 작업 묶음)이나 reviewed/verified/pass(검토됨/검증됨/통과) 근거로 승격하지 않는다."
 required_top_level:
   - packet_id
   - created_at_utc
@@ -33,6 +35,7 @@ v2_required_top_level:
   - gates
   - final_claim_policy
 v2_1_required_top_level:
+  - packet_lifecycle
   - packet_id
   - created_at_utc
   - user_request
@@ -92,6 +95,12 @@ verification_profile_ids_allowed:
   - authority_candidate
   - blocked_pending_decision
 fields:
+  packet_lifecycle:
+    required: true
+    allowed:
+      - new_packet
+      - archive_only
+    rule: "New packets(새 작업 묶음)은 work_packet_schema_v2_1(작업 묶음 스키마 버전 2.1)만 사용할 수 있다. Older v1/v2 packets(이전 버전1/2 작업 묶음)은 archive_only(보관 전용)로만 읽는다."
   packet_id:
     required: true
     rule: "Stable id for this unit of work."
@@ -168,6 +177,7 @@ fields:
       - trade_list_hash
       - telemetry_hash
     rule: "For work_packet_schema_v2_1 packets, verification_profile(검증 프로필) is selected before gate execution. Each verification action must have a trigger source(트리거 원천), protected claim(보호 주장), required evidence(필수 근거), and stop condition(중단 조건). Runtime/materialization/handoff/economics claims(런타임/물질화/인계/경제성 주장) require runtime_probe or authority_candidate(런타임 탐침 또는 권위 후보) profile evidence and active verification(능동 검증), and runtime_evidence_gate(런타임 근거 게이트) cannot be skipped for cost/expense(비용) while the runtime claim is protected."
+    frontier_direction_rule: "Canonical frontier open/continuation(정식 전선 개방/계속 진행) packets must include frontier_five_stage_direction_synthesis(전선 5단계 방향 종합) as a light direction record(가벼운 방향 기록). It is not topic abandonment or a permanent topic ban(주제 폐기나 영구 금지 아님)."
     frontier_extra_rule: "Broad ONNX/frontier continuation(넓은 온엑스/전선 계속 진행) packets must include frontier_extra_due_check(전선 추가 도래 점검). Frontier Extra closeout(전선 추가 마감) packets must include frontier_extra_mix_depth_lint/runtime_evidence_gate/required_gate_coverage_audit/final_claim_guard(전선 추가 혼합 깊이 점검/런타임 근거 게이트/필수 게이트 커버리지 감사/최종 주장 보호)."
   decision_lock:
     required_fields:

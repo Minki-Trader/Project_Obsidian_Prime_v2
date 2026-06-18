@@ -76,6 +76,8 @@ schemas:
       - result_status
       - opinion_classification
     actual_subagent_call_tool_name: multi_agent_v1.spawn_agent
+    full_roster_call_reason_required_when_agents_used_count_at_least: 8
+    full_roster_call_rule: "Calling all 8 agents(8명 전원 호출)는 default(기본값)가 아니며, full_roster_call_reason(전원 호출 사유)을 기록해야 한다."
     opinion_classification_allowed:
       - accepted
       - rejected

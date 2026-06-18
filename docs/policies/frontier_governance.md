@@ -185,6 +185,25 @@ Blocked(차단)는 next frontier stage(다음 전선 단계)가 같은 수리를
 
 `frontier_topic_rotation_check(전선 주제 회전 점검)`가 실패하면 현재 proposed next-open shape(제안된 다음 개방 형태)로는 새 frontier stage(전선 단계)를 열지 않는다. 같은 active stage(활성 단계)의 repair packet(수리 묶음)으로 남기거나, material novelty delta(실질 신규성 차이)가 있는 새 질문(question, 질문)으로 다시 제안한다. 이 실패는 broad topic(넓은 주제)의 future reuse(미래 재사용)를 금지하지 않는다.
 
+## Five-Stage Direction Synthesis(5단계 방향 종합)
+
+`frontier_five_stage_direction_synthesis(전선 5단계 방향 종합)`는 Five-Frontier Topic Rotation Guard(5전선 주제 회전 보호장치)와 Frontier Extra Stage(전선 추가 단계) 사이의 light synthesis(가벼운 종합)다. 효과(effect, 효과)는 매 stage(단계)마다 같은 주제를 미세하게 바꿔 계속 미는 흐름을 줄이고, 50개마다 열리는 heavy extra stage(무거운 추가 단계) 전에는 최근 방향을 짧게 정리하게 하는 것이다.
+
+이 synthesis(종합)는 topic abandonment(주제 폐기)나 topic ban(주제 금지)이 아니다. 같은 topic(주제)은 later re-experiment(나중 재실험)할 수 있다. 필요한 조건은 new axis/new evidence(새 축/새 근거), 또는 source/data representation/label/runtime representation/validation philosophy/model family/objective/trade shape/risk logic/regime split(원천/데이터 표현/라벨/런타임 표현/검증 철학/모델 계열/목적함수/거래 형태/위험 로직/장세 분할) 중 material novelty delta(실질 신규성 차이)다.
+
+필수 기록(required record, 필수 기록)은 아래다.
+
+- `covered_frontier_ids(검토 전선 ID)`
+- `dominant_direction(지배 방향)`
+- `repeated_mechanism(반복 메커니즘)`
+- `overused_axis_warning(과사용 축 경고)`
+- `next_axis_options(다음 축 후보)`
+- `allowed_reexperiment_conditions(재실험 허용 조건)`
+- `adjacent_same_axis_block(인접 동일 축 차단)`
+- `claim_boundary(주장 경계)`
+
+허용 claim(주장)은 direction_delta/axis_rotation_hint/adjacent_repeat_warning(방향 변화/축 회전 힌트/인접 반복 경고)뿐이다. 금지 claim(금지 주장)은 completion/selected baseline/operating promotion/runtime authority/live readiness/Goal Achieve(완성/선택 기준선/운영 승격/런타임 권위/실거래 준비/목표 달성)다.
+
 ## Decision Weight(결정 무게)
 
 Frontier stage(전선 단계)는 run count(실행 수)가 아니라 decision weight(결정 무게)로 닫는다.

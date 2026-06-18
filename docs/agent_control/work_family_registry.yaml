@@ -11,9 +11,11 @@ routing_contract:
   closeout_rule: "Required skills must produce receipts, and required gates must appear in closeout before completed/reviewed/verified claims."
   small_work_rule: "Read-only status, path/hash/register recount, and narrow review packets may use delta reentry, primary skill only, compact receipt, and not_applicable_with_reason gate declarations when they do not mutate files, run tools, publish, close a stage, or claim completed/reviewed/verified status."
   stage_agnostic_rule: "Work families are reusable for Stage 5 through future frontier work; never create a family just for one stage number."
+  new_packet_schema_version_rule: "Every new work packet(새 작업 묶음)은 work_packet_schema_v2_1(작업 묶음 스키마 버전 2.1) and packet_lifecycle=new_packet(작업 묶음 생명주기=새 묶음)을 사용한다. Older v1/v2 packets(이전 버전1/2 작업 묶음)은 archive_only(보관 전용)로만 읽고 새 reviewed/verified/pass(검토됨/검증됨/통과) 근거로 승격하지 않는다."
   skills_to_read_rule: "Read the primary skill first. Add support skill files only when they materially change execution, verification, or closeout evidence; record one-line justification for each support skill."
   task_force_review_rule: "Codex Task Force review(코덱스 태스크포스 검토) is active for Grok replacement/deactivation(그록 대체/비활성), agent roster(요원 명단), skill routing(스킬 라우팅), policy governance(정책 거버넌스), and Frontier80 rehearsal work(F80 리허설 작업)."
   task_force_actual_call_rule: "When Codex Task Force review(코덱스 태스크포스 검토) is triggered, Codex must select only relevant roster agents(관련 명단 요원) and immediately call them with real spawn_agent(서브에이전트 생성 호출) before any Task Force reviewed/reviewed/verified/pass(태스크포스 검토됨/검토됨/검증됨/통과) claim. If Task Force review is required by active goal/packet/gate/family/router-selected required overlay/explicit user instruction/closeout claim(활성 목표/묶음/게이트/작업군/라우터 선택 필수 오버레이/명시 사용자 지시/마감 주장), tool_unavailable/not_called(도구 사용 불가/호출 안 됨) is blocked_for_task_force_review(태스크포스 검토 차단), cannot pass as not_applicable_with_reason(사유 있는 해당 없음), and cannot support reviewed/verified/pass/stage closeout pass/internally_reviewed/rehearsed_control_plane(검토됨/검증됨/통과/단계 마감 통과/내부 검토됨/제어면 리허설됨). Optional checkpoints(선택 점검) may proceed only without any Task Force review claim. Do not call all 8 agents(8명 전원) by default."
+  task_force_minimum_agent_selection_rule: "Task Force review(태스크포스 검토)는 work packet claim surface(작업 묶음 주장 표면)에 필요한 minimum relevant roster agents(최소 관련 명단 요원)만 고른다. Calling all 8 agents(8명 전원 호출)는 default(기본값)가 아니며, full_roster_call_reason(전원 호출 사유)이 없으면 receipt lint(영수증 검사)에서 막는다."
   verification_profile_rule: "Every non-trivial /goal(비사소 목표) packet must select one verification_profile(검증 프로필) before gate selection. The profile is driven by claim_surface(주장 표면), not by anxiety or habit. 효과(effect, 효과)는 /goal(목표)가 전체 검증으로 자동 팽창하지 않고 필요한 검증만 켜지게 하는 것이다."
   verification_gate_selection_rule: "Required gates are family base gates(작업군 기본 게이트) + active overlay gates(활성 오버레이 게이트) + profile extra gates(프로필 추가 게이트), with duplicate gates deduped(중복 제거). A profile may add gates or mark out-of-scope gates N/A with structured reason(구조화 사유 있는 해당 없음), but may never remove or relax gates needed for a protected claim(보호 주장)."
   verification_trigger_source_rule: "Every verification action(검증 행동) must name a trigger source(트리거 원천): registry gate(등록부 게이트), overlay gate(오버레이 게이트), acceptance criterion(수용 기준), risk hard-stop(위험 중단), claim surface(주장 표면), or explicit user scope(명시 사용자 범위). No trigger source means no verification."
@@ -25,6 +27,7 @@ routing_contract:
   frontier_extra_stage_due_rule: "Before opening the next frontier stage or continuing a broad ONNX goal(넓은 ONNX 목표), run frontier_extra_stage_due_check(전선 추가 단계 도래 점검). If due, open and close E01/E02/E03 before the resume frontier."
   frontier_extra_progressive_mix_depth_rule: "When an Extra Stage(추가 단계) is due for a broad ONNX goal(넓은 ONNX 목표), use progressive mix depth(점증 혼합 깊이): 2-mix -> 3-mix -> 4-mix(2개 혼합 -> 3개 혼합 -> 4개 혼합). Do not run exhaustive 50! mix search(50! 전체 혼합 탐색 금지). A later depth(다음 깊이) opens only after diversity/risk/reproducibility/materialization gates(다양성/위험/재현성/물질화 게이트) pass."
   frontier_topic_rotation_rule: "Before opening a canonical frontier stage(정식 전선 단계), run frontier_topic_rotation_check(전선 주제 회전 점검). It compares the proposed question with the immediate prior stage and latest five closed canonical frontier stages, closes repair disposition(수리 처분) inside the active stage, and blocks continuation repair/near-duplicate hypothesis/threshold-filter-session-routing-parameter-only tweak/renamed repair(연속 수리/근접 중복 가설/임계값-필터-세션-라우팅-파라미터만 미세조정/이름만 바꾼 수리) as a new frontier open."
+  frontier_five_stage_direction_synthesis_rule: "Between per-open Topic Rotation Guard(단계별 주제 회전 보호) and every-50 Extra Stage(50개마다 추가 단계) sits a light frontier_five_stage_direction_synthesis(가벼운 전선 5단계 방향 종합). It records dominant direction, repeated mechanism, overused axis warning, and candidate next-axis options(지배 방향/반복 메커니즘/과사용 축 경고/다음 축 후보) without permanently abandoning any topic(어떤 주제도 영구 폐기하지 않음). Same topic(같은 주제)은 later re-experiment(나중 재실험) 가능하지만 adjacent same-axis continuation(인접 동일 축 연속)은 막는다."
   common_final_filter:
     - obsidian-answer-clarity
     - obsidian-claim-discipline
@@ -313,6 +316,33 @@ trigger_overlays:
         - "Same feature family/label/session/trade shape/substrate concentration(동일 피처 계열/라벨/세션/거래 형태/바탕 쏠림)."
         - "Failure cause was not recorded before opening next depth(다음 깊이 개방 전 실패 원인 미기록)."
     claim_rule: "Extra stages may create runtime learning records, preserved clues, negative memory, reference surfaces, invalid setup, blocked retry conditions, or next frontier proposals only; they cannot create completion, selected baseline, operating promotion, runtime authority, live readiness, Goal Achieve, or git-push validation."
+  frontier_five_stage_direction_synthesis:
+    status: active
+    active_by_default: true
+    description: "Light five-stage direction synthesis(가벼운 5단계 방향 종합) between per-stage Topic Rotation Guard(단계별 주제 회전 보호) and every-50 Extra Stage(50개마다 추가 단계). It summarizes the latest five closed canonical frontier stages without creating a heavy retrospective."
+    trigger_skill: obsidian-stage-transition
+    appends_required_skill: false
+    appends_required_gate: frontier_five_stage_direction_synthesis
+    allowed_families:
+      - state_sync
+      - policy_skill_governance
+      - experiment_design
+      - experiment_execution
+      - runtime_backtest
+      - kpi_evidence
+      - artifact_lineage
+      - publish_handoff
+    activation_rule: "Run for canonical frontier open/continuation packets(정식 전선 개방/계속 묶음), especially at five-frontier block boundaries(5전선 블록 경계). It may read the same latest-five scope(최근 5개 범위) as frontier_topic_rotation_check(전선 주제 회전 점검) but must stay receipt-first and concise(영수증 우선/간결)."
+    required_fields:
+      - covered_frontier_ids
+      - dominant_direction
+      - repeated_mechanism
+      - overused_axis_warning
+      - next_axis_options
+      - allowed_reexperiment_conditions
+      - adjacent_same_axis_block
+      - claim_boundary
+    claim_rule: "Allowed claims(허용 주장)은 direction_delta/axis_rotation_hint/adjacent_repeat_warning(방향 변화/축 회전 힌트/인접 반복 경고) only. It cannot create topic abandonment, permanent topic ban, completion, selected baseline, operating promotion, runtime authority, live readiness, Goal Achieve, or Extra Stage authority(주제 폐기/영구 주제 금지/완성/선택 기준선/운영 승격/런타임 권위/실거래 준비/목표 달성/추가 단계 권위 금지)."
   frontier_topic_rotation_check:
     status: active
     active_by_default: true

@@ -34,6 +34,19 @@ class WorkPacketSchemaLintTests(unittest.TestCase):
         result = audit_work_packet_schema(_v2_packet())
 
         self.assertEqual(result.status, "pass", [finding.to_dict() for finding in result.findings])
+        self.assertIn("archive_only_work_packet_schema_valid", result.allowed_claims)
+
+    def test_new_packet_must_use_v2_1(self) -> None:
+        packet = _v2_packet()
+        packet["packet_lifecycle"] = "new_packet"
+
+        result = audit_work_packet_schema(packet)
+
+        self.assertEqual(result.status, "blocked")
+        self.assertIn(
+            "work_packet_schema::version::new_packet_requires_v2_1",
+            {finding.check_id for finding in result.findings},
+        )
 
     def test_v2_1_packet_requires_verification_profile(self) -> None:
         packet = _v2_1_packet()
@@ -261,10 +274,24 @@ class WorkPacketSchemaLintTests(unittest.TestCase):
         packet["user_request"]["user_quote"] = "/goal onnx 개쩌는거 만들어줘"
         packet["user_request"]["requested_action"] = "broad ONNX frontier continuation"
         packet["skill_routing"]["required_gates"].append("frontier_extra_due_check")
+        packet["skill_routing"]["required_gates"].append("frontier_five_stage_direction_synthesis")
 
         result = audit_work_packet_schema(packet)
 
         self.assertEqual(result.status, "pass", [finding.to_dict() for finding in result.findings])
+
+    def test_v2_1_frontier_open_requires_five_stage_direction_synthesis(self) -> None:
+        packet = _v2_1_packet()
+        packet["user_request"]["requested_action"] = "canonical frontier open"
+        packet["skill_routing"]["required_gates"].append("frontier_topic_rotation_check")
+
+        result = audit_work_packet_schema(packet)
+
+        self.assertEqual(result.status, "blocked")
+        self.assertIn(
+            "work_packet_schema::frontier_direction::missing_five_stage_synthesis",
+            {finding.check_id for finding in result.findings},
+        )
 
     def test_v2_1_frontier_extra_closeout_requires_mix_and_runtime_gates(self) -> None:
         packet = _v2_1_packet()
@@ -295,6 +322,7 @@ class WorkPacketSchemaLintTests(unittest.TestCase):
 
 def _v1_packet() -> dict[str, object]:
     return {
+        "packet_lifecycle": "archive_only",
         "packet_id": "unit_v1",
         "created_at_utc": "2026-04-29T00:00:00Z",
         "user_request": {"user_quote": "", "requested_action": "experiment_execution"},
@@ -328,6 +356,7 @@ def _v1_packet() -> dict[str, object]:
 def _v2_packet() -> dict[str, object]:
     return {
         "version": "work_packet_schema_v2",
+        "packet_lifecycle": "archive_only",
         "packet_id": "unit_v2",
         "created_at_utc": "2026-04-29T00:00:00Z",
         "user_request": {"user_quote": "", "requested_action": "state_sync"},
@@ -366,6 +395,7 @@ def _v2_packet() -> dict[str, object]:
 def _v2_1_packet() -> dict[str, object]:
     packet = _v2_packet()
     packet["version"] = "work_packet_schema_v2_1"
+    packet["packet_lifecycle"] = "new_packet"
     packet["verification_profile"] = {
         "profile_id": "static_contract",
         "claim_surface": {

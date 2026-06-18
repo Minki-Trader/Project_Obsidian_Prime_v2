@@ -278,6 +278,46 @@ class SkillReceiptSchemaLintTests(unittest.TestCase):
         self.assertIn("skill_receipt_schema::obsidian-task-force-review::actual_subagent_call_wrong_tool", check_ids)
         self.assertIn("skill_receipt_schema::obsidian-task-force-review::actual_subagent_call_bad_opinion_classification", check_ids)
 
+    def test_required_task_force_review_all_agents_requires_reason(self) -> None:
+        calls = [
+            {
+                "roster_agent_id": f"agent_{index:02d}_role",
+                "spawned_agent_id": f"agent-{index}",
+                "tool_name": "multi_agent_v1.spawn_agent",
+                "result_status": "completed",
+                "opinion_classification": "accepted",
+            }
+            for index in range(1, 9)
+        ]
+        result = audit_skill_receipt_schemas(
+            [
+                {
+                    "packet_id": "unit",
+                    "skill": "obsidian-task-force-review",
+                    "status": "executed",
+                    "trigger_reason": "policy governance",
+                    "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+                    "agents_used": [call["roster_agent_id"] for call in calls],
+                    "actual_subagent_calls": calls,
+                    "review_requirement": "codex_task_force_review_packet",
+                    "model_policy": "highest_available_xhigh",
+                    "bounded_evidence": ["policy diff"],
+                    "advice_classification": {"accepted": ["tighten required gate"]},
+                    "local_verification": "schema lint",
+                    "final_codex_direction": "apply strict block",
+                    "forbidden_claim_check": "no authority claims",
+                }
+            ],
+            schema_path=Path("docs/agent_control/skill_receipt_schema.yaml"),
+            root=Path(__file__).resolve().parents[1],
+        )
+
+        self.assertEqual(result.status, "blocked")
+        self.assertIn(
+            "skill_receipt_schema::obsidian-task-force-review::full_roster_call_missing_reason",
+            {finding.check_id for finding in result.findings},
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
