@@ -1,4 +1,11 @@
-﻿# 2026-06-18 - F82H Closeout And F83 Rotation(F82H 마감 및 F83 회전)
+﻿# 2026-06-18 - F83G Closeout And F84 Rotation(F83G 마감 및 F84 회전)
+
+- Action(행동): `frontier83G_runtime_realized_outcome_repair_or_rotation_decision_v1`로 F83 lifecycle(F83 생명주기)을 closeout(마감)했다.
+- Effect(효과): MT5 runtime OOS(런타임 표본외) `-37.17/0.97/19.24/8.266666666666667`와 `runtime_win_rate_erosion_after_signal_parity(신호 동등성 이후 런타임 승률 침식)`를 근거로 negative memory(부정 기억)와 F84 runtime-realized win-rate rebuild handoff(전선84 런타임 실현 승률 재구축 인계)를 기록했다.
+- Next(다음): `frontier84A_stage_open_runtime_realized_winrate_rebuild_after_signal_parity_gap_v1`.
+- Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+
+# 2026-06-18 - F82H Closeout And F83 Rotation(F82H 마감 및 F83 회전)
 
 - Action(행동): `frontier82H_capped_repair_closeout_or_f83_rotation_decision_v1`로 F82 lifecycle(F82 생명주기)을 closeout(마감)했다.
 - Effect(효과): MT5 runtime OOS(런타임 표본외) `-55.209999999999994/0.9332922526702432/20.36/6.861538461538461`와 F82G materialization-ready(물질화 준비) `0`을 근거로 negative memory(부정 기억)와 preserved clue/seed surface(보존 단서/씨앗 표면)를 기록했다.

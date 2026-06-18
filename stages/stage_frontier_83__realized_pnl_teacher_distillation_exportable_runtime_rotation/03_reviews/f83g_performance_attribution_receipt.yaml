@@ -1,0 +1,20 @@
+﻿packet_id: frontier83G_runtime_realized_outcome_repair_or_rotation_decision_v1
+skill: obsidian-performance-attribution
+status: attributed_runtime_winrate_erosion_after_signal_parity_no_authority
+observed_change: "F83D proxy(프록시)는 validation/OOS 양수였지만 F83E runtime(런타임)은 validation net/PF/DD -285.66/0.83/58.86 and OOS net/PF/DD -37.17/0.97/19.24로 붕괴했다."
+comparison_baseline: F83D proxy short-density KPI(F83D 프록시 숏 밀도 KPI) vs F83E MT5 runtime KPI(F83E MT5 런타임 KPI)
+likely_drivers:
+  - close_direction_smooth_supply_proxy_label_mismatch(종가방향 부드러운 공급 프록시 라벨 불일치)
+  - runtime_win_rate_erosion_after_signal_parity(신호 동등성 이후 런타임 승률 침식)
+  - stop_touch_fill_path_missing_from_label(손절·익절 터치/체결 경로 라벨 누락)
+segment_checks:
+  - validation_split(검증 구간)
+  - oos_split(표본외 구간)
+  - short_only_direction(숏 전용 방향)
+  - fill_gap_share_check(체결 간극 비중 점검)
+trade_shape: short_only_dense_runtime_8_trades_per_day_but_negative_expectancy_and_large_dd(숏 전용 8회/일 밀도지만 음수 기대값과 큰 손실폭)
+alternative_explanations:
+  - spread_or_commission_path(스프레드 또는 수수료 경로)
+  - row_level_mapping_missing(행 단위 매핑 누락)
+attribution_confidence: medium(중간)
+next_probe: frontier84A_stage_open_runtime_realized_winrate_rebuild_after_signal_parity_gap_v1

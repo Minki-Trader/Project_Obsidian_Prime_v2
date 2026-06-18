@@ -2318,3 +2318,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier83F_short_density_proxy_runtime_gap_analysis_v1 -->
 - `frontier83F_short_density_proxy_runtime_gap_analysis_v1` attributed F83E short-density runtime gap(F83E 숏 밀도 런타임 간극 귀속). Result(결과): OOS runtime net/PF/DD/trades-day(외표본 런타임 순손익/수익 팩터/손실폭/일 거래) `-37.17/0.97/19.24/8.266666666666667`. Clue(단서): dense short ONNX/signal parity(조밀한 숏 온엑스/신호 동등성). Negative memory(부정 기억): win-rate/DD erosion after signal parity(신호 동등성 이후 승률/손실폭 침식). Next(다음): `frontier83G_runtime_realized_outcome_repair_or_rotation_decision_v1`.
+
+<!-- frontier83G_runtime_realized_outcome_repair_or_rotation_decision_v1 -->
+- `frontier83G_runtime_realized_outcome_repair_or_rotation_decision_v1` closed Frontier83(전선83) as `negative_memory_with_preserved_runtime_parity_clue_and_winrate_gap_seed(부정 기억과 보존 런타임 동등성 단서 및 승률 간극 씨앗)`. Runtime OOS net/PF/DD/tpd(런타임 표본외 순손익/수익 팩터/손실폭/일 거래) `-37.17/0.97/19.24/8.266666666666667`; primary cause(주 원인) `runtime_win_rate_erosion_after_signal_parity(신호 동등성 이후 런타임 승률 침식)`. Next(다음): `frontier84A_stage_open_runtime_realized_winrate_rebuild_after_signal_parity_gap_v1`. Boundary(경계): no authority(권위 없음).

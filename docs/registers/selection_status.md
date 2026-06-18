@@ -1,17 +1,19 @@
 ﻿# F83 Selection Status(F83 선택 상태)
 
-Updated(갱신): 2026-06-18T07:22:10Z
+Updated(갱신): 2026-06-18T08:55:26Z
 
-Status(상태): `f83a_exportable_teacher_seed_positive_low_density_mt5_probe_required_no_authority`
+Status(상태): `closed_negative_runtime_winrate_erosion_after_signal_parity_rotation_to_f84_no_authority`
 
-Judgment(판정): `exportable_teacher_distillation_seed_found_but_one_sided_density_gap_requires_mt5_probe_and_two_sided_expansion_no_authority`
+Judgment(판정): `negative_memory_with_runtime_realized_winrate_rebuild_rotation_no_authority`
 
-Action(행동): F83A exportable teacher distillation proxy(F83A 내보내기 가능 교사 증류 프록시)를 완료했다.
+Closeout label(마감 라벨): `negative_memory_with_preserved_runtime_parity_clue_and_winrate_gap_seed(부정 기억과 보존 런타임 동등성 단서 및 승률 간극 씨앗)`
 
-Effect(효과): F83은 positive low-density exportable seed(양수 저밀도 내보내기 가능 씨앗)를 얻었지만, 아직 MT5 Strategy Tester(전략 테스터)와 two-sided runtime evidence(양방향 런타임 근거)가 필요하다.
+Action(행동): F83G closeout(F83G 마감)을 기록했다.
 
-Current run(현재 실행): `frontier83B_mt5_runtime_materialization_exportable_teacher_overlay_v1`
+Effect(효과): F83은 selected baseline(선택 기준선) 없이 negative memory(부정 기억)와 preserved clue(보존 단서)로 닫고, F84A stage open(F84A 단계 개방)을 다음 실행으로 둔다.
 
-Latest completed run(최근 완료 실행): `frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1`
+Current run(현재 실행): `frontier84A_stage_open_runtime_realized_winrate_rebuild_after_signal_parity_gap_v1`
 
-Claim boundary(주장 경계): `executed_trade_teacher_proxy_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`
+Latest completed run(최근 완료 실행): `frontier83G_runtime_realized_outcome_repair_or_rotation_decision_v1`
+
+Claim boundary(주장 경계): `stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`

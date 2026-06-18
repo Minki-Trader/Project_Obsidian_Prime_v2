@@ -1,0 +1,40 @@
+﻿packet_id: frontier83G_runtime_realized_outcome_repair_or_rotation_decision_v1
+stage_id: stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation
+router_mode: full
+work_packet_lifecycle: stage_closeout_to_state_sync_to_publish_handoff
+primary_family: publish_handoff
+primary_skill: obsidian-stage-transition
+support_skills:
+  - obsidian-artifact-lineage
+  - obsidian-claim-discipline
+  - obsidian-answer-clarity
+  - obsidian-run-evidence-system
+  - obsidian-result-judgment
+  - obsidian-performance-attribution
+  - obsidian-task-force-review
+required_skill_receipts:
+  - obsidian-stage-transition
+  - obsidian-artifact-lineage
+  - obsidian-claim-discipline
+  - obsidian-answer-clarity
+  - obsidian-run-evidence-system
+  - obsidian-result-judgment
+  - obsidian-performance-attribution
+  - obsidian-task-force-review
+required_gates:
+  - state_sync_audit
+  - closeout_gate
+  - kpi_contract_audit
+  - frontier_extra_due_check
+  - codex_task_force_review_packet
+  - required_gate_coverage_audit
+  - final_claim_guard
+scope: "Close F83 negative runtime win-rate erosion evidence and hand off F84 runtime-realized win-rate rebuild(F83 부정 런타임 승률 침식 근거 마감 및 F84 런타임 실현 승률 재구축 인계)."
+status: closed_negative_runtime_winrate_erosion_after_signal_parity_rotation_to_f84_no_authority
+judgment: negative_memory_with_runtime_realized_winrate_rebuild_rotation_no_authority
+next_run_id: frontier84A_stage_open_runtime_realized_winrate_rebuild_after_signal_parity_gap_v1
+next_frontier_stage_id: stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap
+frontier_extra_due_status: not_due_after_f83_closeout_next_boundary_f100_e01_closed_for_f050
+grok_review: "not_used_retired_archive_only(미사용, 퇴역 보관 전용)"
+claim_boundary: stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+created_at_utc: "2026-06-18T08:55:26Z"

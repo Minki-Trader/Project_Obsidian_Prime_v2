@@ -1433,3 +1433,15 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Reopen condition(재개 조건): runtime-realized outcome label(런타임 실현 결과 라벨), stop-touch/fill-path target(스톱 터치/체결 경로 목표), risk logic(위험 로직), or regime/session split(장세/세션 분할) 중 하나 이상이 새로워지고 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
 - Evidence(근거): `stages/stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation/03_reviews/frontier83F_short_density_proxy_runtime_gap_analysis_report.md`.
 - Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+
+<!-- NR-FR83-REALIZED-PNL-TEACHER-DISTILLATION-RUNTIME-WINRATE-EROSION-CLOSEOUT -->
+## NR-FR83-REALIZED-PNL-TEACHER-DISTILLATION-RUNTIME-WINRATE-EROSION-CLOSEOUT
+
+- Stage(단계): `stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation`
+- Hypothesis(가설): realized PnL teacher distillation(실현 손익 교사 증류) and exportable runtime rotation(내보내기 가능 런타임 회전)이 proxy-positive dense short surface(프록시 양수 고밀도 숏 표면)를 MT5 runtime economics(MT5 런타임 경제성)로 옮길 수 있다.
+- Why failed(실패 이유): F83E/F83F MT5 runtime OOS(런타임 표본외)는 net/PF/DD/trades-day(순손익/수익 팩터/손실폭/일 거래) `-37.17/0.97/19.24/8.266666666666667`였고, primary cause(주 원인)는 `runtime_win_rate_erosion_after_signal_parity(신호 동등성 이후 런타임 승률 침식)`였다.
+- Salvage value(회수 가치): F83E ONNX/signal parity harness(F83E 온엑스/신호 동등성 장치), F83F win-rate erosion attribution(F83F 승률 침식 귀인), F83D dense short proxy supply(F83D 고밀도 숏 프록시 공급), F84 runtime-realized label seed(F84 런타임 실현 라벨 씨앗)를 보존한다.
+- Do-not-repeat(반복 금지): same `f82b_10355` smooth_trade_supply short close_direction surface(동일 f82b_10355 숏 종가방향 부드러운 공급 표면)를 threshold/filter/parameter-only repair(임계값/필터/파라미터만 바꾸는 수리)로 반복하지 않는다.
+- Reopen condition(재개 조건): runtime-realized outcome label(런타임 실현 결과 라벨), stop-touch/fill-path target(손절·익절 터치/체결 경로 목표), risk logic(위험 로직), regime/session split(장세/세션 분할) 중 하나 이상이 실제로 바뀌고 새 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
+- Evidence(근거): `stages/stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation/03_reviews/stage_closeout_report.md`.
+- Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).

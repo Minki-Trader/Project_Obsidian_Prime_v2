@@ -34,3 +34,11 @@
 - `f83f_gap_cause_attribution_rows.csv`: F83F cause attribution rows(F83F 원인 귀속 행)
 - `required_gate_coverage_audit_f83f.md`: F83F gate audit(F83F 게이트 감사)
 - `f83f_task_force_review_receipt.yaml`: F83F Task Force review receipt(F83F 태스크포스 검토 영수증)
+
+<!-- F83G_CLOSEOUT -->
+- `stage_closeout_report.md`: F83 stage closeout report(F83 단계 마감 보고서)
+- `frontier83G_runtime_realized_outcome_repair_or_rotation_decision_report.md`: F83G repair/rotation closeout report(F83G 수리/회전 마감 보고서)
+- `f83g_repair_or_rotation_decision_summary.json`: F83G machine summary(F83G 기계 요약)
+- `f83g_closeout_kpi_rows.csv`: F83G closeout KPI rows(F83G 마감 KPI 행)
+- `required_gate_coverage_audit_f83g.md`: F83G gate audit(F83G 게이트 감사)
+- `f83g_artifact_lineage.json`: F83G artifact lineage(F83G 산출물 계보)
