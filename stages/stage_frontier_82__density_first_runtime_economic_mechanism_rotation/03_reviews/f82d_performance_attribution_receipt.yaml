@@ -1,0 +1,16 @@
+﻿packet_id: frontier82D_proxy_runtime_gap_attribution_v1
+skill: obsidian-performance-attribution
+status: gap_attributed_no_authority
+observed_change: "Proxy positive economics inverted to MT5 negative economics on validation and OOS."
+comparison_baseline: F82B proxy KPI(F82B 프록시 KPI)
+likely_drivers:
+  - runtime deal economics after parity(동등성 이후 런타임 거래 경제성)
+  - win-rate collapse(승률 붕괴)
+  - drawdown expansion(손실폭 확대)
+segment_checks:
+  - validation split(검증 구간)
+  - OOS split(표본외 구간)
+  - signal count parity(신호 수 동등성)
+  - feature readiness parity(피처 준비 동등성)
+attribution_confidence: high_for_parity_not_cause_medium_for_exact_deal_cause
+next_probe: "F82E should decide capped repair or rotation: either deal-level entry/exit PnL reconciliation plus MT5-realized label rebuild, or rotate away from this one-sided long density branch."

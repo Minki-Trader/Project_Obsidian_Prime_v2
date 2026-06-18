@@ -1,0 +1,51 @@
+﻿version: work_packet_schema_v2
+packet_id: frontier82C_mt5_runtime_materialization_v1
+created_at_utc: '2026-06-18T05:50:31Z'
+user_request:
+  requested_action: execute_f82c_mt5_runtime_materialization
+  source: persistent_goal(지속 목표)
+work_classification:
+  primary_family: runtime_backtest
+  mutation_intent: true
+  execution_intent: true
+skill_routing:
+  primary_skill: obsidian-runtime-parity
+  support_skills:
+    - obsidian-backtest-forensics
+    - obsidian-task-force-review
+    - obsidian-artifact-lineage
+    - obsidian-claim-discipline
+required_gates:
+  - materialization_target
+  - onnx_probability_parity
+  - runtime_signal_veto_parity
+  - strategy_tester_attempt
+  - backtest_forensics_receipt
+  - codex_task_force_review_packet
+  - final_claim_guard
+  - required_gate_coverage_audit
+interpreted_scope:
+  target_stage: stage_frontier_82__density_first_runtime_economic_mechanism_rotation
+  target_run: frontier82C_mt5_runtime_materialization_v1
+  next_run: frontier82D_proxy_runtime_gap_attribution_v1
+  status: completed_mt5_runtime_materialization_observation_no_authority
+  claim_boundary: runtime_materialization_observation_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+evidence_contract:
+  source_inputs:
+    - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_density_first_proxy_summary.json
+    - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_density_first_proxy_ranked_top200.csv
+  produced_artifacts:
+    - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82c_runtime_materialization_target_selection.json
+    - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82c_mt5_runtime_materialization_summary.json
+    - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82c_runtime_parity_receipt.json
+    - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82c_backtest_forensics_receipt.json
+    - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/frontier82C_mt5_runtime_materialization_report.md
+    - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82C_mt5_runtime_materialization_v1/run_manifest.json
+final_claim_policy:
+  forbidden_claims:
+    - completion
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve

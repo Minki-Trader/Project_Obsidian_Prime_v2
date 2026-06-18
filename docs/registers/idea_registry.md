@@ -2283,3 +2283,12 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1 -->
 - `IDEA-FR82-DENSITY-FIRST-RUNTIME-ECONOMIC-MECHANISM-ROTATION` opened by `frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1`. Hypothesis(가설): A density-first two-sided runtime economic mechanism(밀도 우선 양방향 런타임 경제 메커니즘) that binds deal-level PnL(거래별 손익), session/regime split(세션/장세 분할), and exportable model family(내보내기 가능한 모델 계열) before threshold search(임계값 탐색) can create a material MT5 candidate(MT5 물질화 후보) without repeating F81 low-density repair(F81 저밀도 수리 반복). Next(다음): `frontier82B_density_first_runtime_economic_mechanism_proxy_scout_v1`. Boundary(경계): open/design only(개방/설계만), no authority(권위 없음).
+
+<!-- frontier82B_density_first_runtime_economic_mechanism_proxy_scout_v1 -->
+- `frontier82B_density_first_runtime_economic_mechanism_proxy_scout_v1` executed F82 density-first runtime economic mechanism proxy scout(F82 밀도 우선 런타임 경제 메커니즘 프록시 탐색). Result(결과): `scout=1919`, `material=717`, `meaningful=160`, `final_like=0`. Best(최선): `f82b_07295` `side_session_release` `long` val(검증) `234.9537/1.2529/3.9148/7.2989/1978`; OOS(표본외) `190.9750/1.3121/2.4484/6.9072/1340`. Boundary(경계): proxy scout only, no authority(프록시 탐색 전용, 권위 없음). Next(다음): `frontier82C_mt5_runtime_materialization_v1`.
+
+<!-- frontier82C_mt5_runtime_materialization_v1 -->
+- `frontier82C_mt5_runtime_materialization_v1` attempted F82 MT5 runtime materialization(F82 MT5 런타임 물질화). Target(대상): `f82b_07295`. Attempts(시도): `2`, completed(완료): `2`. Boundary(경계): runtime materialization only, no authority(런타임 물질화만, 권위 없음).
+
+<!-- frontier82D_proxy_runtime_gap_attribution_v1 -->
+- `frontier82D_proxy_runtime_gap_attribution_v1` attributed F82 proxy/runtime gap(F82 프록시/런타임 간극 귀속). Result(결과): OOS runtime net/PF/DD(표본외 런타임 순손익/수익 팩터/손실폭) `-55.21/0.93/20.36` vs proxy(프록시) `190.97504260071986/1.312138066226088/2.4483866090271933`. Boundary(경계): negative runtime materialization evidence only, no authority(부정 런타임 물질화 근거만, 권위 없음). Next(다음): `frontier82E_capped_repair_or_rotation_decision_v1`.

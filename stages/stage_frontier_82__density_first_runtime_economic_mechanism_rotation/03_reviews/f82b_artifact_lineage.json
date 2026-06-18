@@ -1,0 +1,51 @@
+﻿{
+  "source_inputs": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/00_spec/stage_brief.md"
+  ],
+  "producer": "stage_pipelines/stage_frontier_82/frontier82b_density_first_runtime_economic_mechanism_proxy_scout.py",
+  "producer_sha256": "38dc8391a0122c484a1bfacdc07654b42c45eb9313245b844745a11f8152a911",
+  "consumer": "frontier82C_mt5_runtime_materialization_v1",
+  "artifact_paths": [
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_density_first_proxy_summary.json",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82B_density_first_runtime_economic_mechanism_proxy_scout_v1/f82b_density_first_proxy_candidates_all.csv",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_density_first_proxy_ranked_top200.csv",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_density_first_proxy_axis_summary.csv",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_side_balance_summary.csv",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_model_fit_summary.csv",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_label_audit.csv",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_tier_record_audit.csv",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_data_integrity_review.json",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_model_validation_review.json",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/frontier82B_density_first_runtime_economic_mechanism_proxy_scout_report.md",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_task_force_review_receipt.yaml",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/required_gate_coverage_audit_f82b.md",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82B_density_first_runtime_economic_mechanism_proxy_scout_v1/run_manifest.json"
+  ],
+  "artifact_hashes": {
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_density_first_proxy_summary.json": "be021c8f61e2a5f1a5f933d2cac6740e0e1f80f4b7ccba6a66302164f61add97",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82B_density_first_runtime_economic_mechanism_proxy_scout_v1/f82b_density_first_proxy_candidates_all.csv": "7c7645015ad5913a5411e7032394b2e99eadbef0ad4a775593c1b34a707d3f9c",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_density_first_proxy_ranked_top200.csv": "85a2cca2246e941d669402f8f9841c28271f525451519fa3a4ae5643b61b9dae",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_density_first_proxy_axis_summary.csv": "2e6146198a675fbbd5b7cd9a64d43b15a5c1c2a2b5e206fb3d33c66a2b4aac97",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_side_balance_summary.csv": "fa833f93f5f773715082d9bb0e4f5c37891b50f6a73b2fc4c66b5908ac287c62",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_model_fit_summary.csv": "191143b9a4e61bf04409c7f0101e484c6a696918e6cef849c8d5b675cba4f019",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_label_audit.csv": "b356d27fca53af974b3c1c1727c582ec529b6e01f2292bb080077b5a70c4d7f8",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_tier_record_audit.csv": "",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_data_integrity_review.json": "18431b17eeae381beec649bf16a20e87f8680f9af51579e922556a9ad7346ba8",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_model_validation_review.json": "a76c70addd5858b0a9c837d641dde6c876f0e2efb91f86f3832baeee1d3848b1",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/frontier82B_density_first_runtime_economic_mechanism_proxy_scout_report.md": "83e7e25cccf29aeeea64685470477a93fa453d7b1246b7a7fba11d146237f066",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_task_force_review_receipt.yaml": "246c15fa45382708b1ae23aa6f15cc6b69c71e3e25f9ff8752be8cdf916d9fb6",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/required_gate_coverage_audit_f82b.md": "d91ea6b504de090af98ffa32b787dbafa3717ca93b9cc99bcb66ec5ec88cccd7",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82B_density_first_runtime_economic_mechanism_proxy_scout_v1/run_manifest.json": "278fd410b329c1946cee955876b67a1e6a4a2a5c9bdc16ce5f8f86a09871ca1f"
+  },
+  "registry_links": [
+    "docs/registers/run_registry.csv",
+    "docs/registers/alpha_run_ledger.csv",
+    "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/stage_run_ledger.csv",
+    "docs/registers/artifact_registry.csv"
+  ],
+  "availability": "tracked_reports_and_ignored_run_outputs_with_hashes(추적 보고서와 무시된 실행 산출물 해시)",
+  "lineage_judgment": "connected_with_boundary(경계 있는 연결)"
+}

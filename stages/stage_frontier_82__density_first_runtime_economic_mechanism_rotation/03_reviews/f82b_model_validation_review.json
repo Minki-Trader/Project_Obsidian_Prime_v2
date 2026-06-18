@@ -1,0 +1,16 @@
+﻿{
+  "model_family": [
+    "logistic_l2_balanced",
+    "extra_trees_d7_l120",
+    "histgbm_density_shallow"
+  ],
+  "target_and_label": "density-first runtime economic labels(밀도 우선 런타임 경제 라벨)",
+  "split_method": "time-ordered train/validation/OOS(시간순 훈련/검증/표본외), WFO planned for later(워크포워드는 이후 계획)",
+  "selection_metric": "rank_score combines density, net, PF, DD, smoothness, and trade count(밀도/순손익/PF/DD/매끄러움/거래 수 결합)",
+  "secondary_metrics": "gross profit/loss, win rate, avg win/loss, payoff, expectancy, recovery, time under water, max consecutive loss(총이익/총손실/승률/평균 이익·손실/손익비/기대값/회복/회복 전 체류/최대 연속 손실)",
+  "threshold_policy": "broad probability quantile sweep(넓은 확률 분위수 탐색); no micro search(미세 탐색 아님)",
+  "overfit_risk": "many-surface proxy search(다표면 프록시 탐색) can overfit validation/OOS(검증/표본외)에 맞출 위험",
+  "calibration_risk": "model scores are rank/order evidence(순위 근거) only; not calibrated probability(보정 확률 아님)",
+  "comparison_baseline": "F81C runtime negative and F81G low-density seed(F81C 런타임 부정과 F81G 저밀도 씨앗)",
+  "validation_judgment": "candidate"
+}
