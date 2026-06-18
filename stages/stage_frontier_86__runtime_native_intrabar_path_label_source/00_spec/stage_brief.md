@@ -6,9 +6,9 @@ Stage ID(단계 ID): `stage_frontier_86__runtime_native_intrabar_path_label_sour
 
 Opening run(개방 실행): `frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1`
 
-Next run(다음 실행): `frontier86G_pre_entry_intrabar_sequence_feature_scout_v1`
+Next run(다음 실행): `frontier86H_sequence_axis_repair_or_rotation_decision_v1`
 
-Status(상태): `f86f_scalar_surface_repair_capped_sequence_axis_required_no_authority`
+Status(상태): `f86g_pre_entry_sequence_proxy_weak_or_negative_repair_or_rotation_required_no_authority`
 
 ## Frontier Thesis(전선 가설)
 
@@ -86,3 +86,13 @@ Action(행동): F86F capped scalar threshold/filter repair(스칼라 임계값/�
 Effect(효과): F86G moves to pre-entry M1/tick sequence features(진입 전 1분/틱 시퀀스 피처) instead of repeating F85/F86E scalar firewall repair(스칼라 방화벽 수리 반복).
 
 Claim boundary(주장 경계): `f86f_repair_or_rotation_decision_only_scalar_surface_repair_capped_sequence_axis_next_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve`.
+
+## F86G Pre-Entry Sequence Feature Scout Receipt(F86G 진입 전 시퀀스 피처 스카우트 영수증)
+
+Action(행동): F86G exported pre-entry M1/tick source summaries(진입 전 1분/틱 원천 요약), built sequence features(시퀀스 피처), and ran fixed proxy models(고정 프록시 모델).
+
+Effect(효과): F86E scalar-only weakness(스칼라 단독 약점)을 같은 threshold/filter(임계값/필터)로 반복하지 않고, 새 pre-entry sequence axis(진입 전 시퀀스 축)의 근거를 남긴다.
+
+Key readout(핵심 판독): best model(최선 모델) `sequence_context__logreg_l2_balanced`, positive_scout(긍정 스카우트) `False`.
+
+Claim boundary(주장 경계): `f86g_pre_entry_sequence_feature_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve`.

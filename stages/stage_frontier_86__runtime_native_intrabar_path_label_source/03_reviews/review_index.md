@@ -30,3 +30,8 @@
 - `f86f_execution_summary.json`: F86F execution summary(F86F 실행 요약)
 - `f86f_result_judgment_audit.json`: F86F result judgment audit(F86F 결과 판정 감사)
 - `f86f_final_claim_guard.json`: F86F final claim guard(F86F 최종 주장 보호)
+- `f86g_execution_summary.json`: F86G execution summary(F86G 실행 요약)
+- `f86g_pre_entry_source_audit.json`: F86G pre-entry source audit(F86G 진입 전 원천 감사)
+- `f86g_feature_leakage_audit.json`: F86G feature leakage audit(F86G 피처 누수 감사)
+- `f86g_split_boundary_audit.json`: F86G split boundary audit(F86G 분할 경계 감사)
+- `f86g_final_claim_guard.json`: F86G final claim guard(F86G 최종 주장 보호)

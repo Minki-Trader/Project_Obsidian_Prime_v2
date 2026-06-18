@@ -1,0 +1,37 @@
+{
+  "baseline": "F86E scalar first-touch proxy scout metrics.",
+  "changed_variables": [
+    "new pre-entry M1 sequence summaries",
+    "new pre-entry tick/spread summaries"
+  ],
+  "comparison_baseline": "F86E scalar first-touch proxy scout.",
+  "control_variables": [
+    "F86D first-touch labels as target-only",
+    "validation-inner selection",
+    "locked OOS readout only",
+    "no Strategy Tester runtime claim"
+  ],
+  "decision_use": "Decide whether sequence-axis evidence justifies runtime materialization preflight or needs repair/rotation.",
+  "evidence_plan": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/pre_entry_source/pre_entry_source_summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/sequence_feature_surface/feature_schema.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/proxy_scout/proxy_metrics.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/reports/result_summary.md"
+  ],
+  "failure_criteria": "near-random inner/OOS metrics or OOS collapse",
+  "hypothesis": "Pre-entry M1/tick sequence and liquidity state may explain first-touch path better than F86E scalar context.",
+  "invalid_conditions": [
+    "pre-entry source export unavailable",
+    "post-entry label-window columns enter feature set",
+    "OOS used for model selection"
+  ],
+  "packet_id": "frontier86G_pre_entry_intrabar_sequence_feature_scout_v1",
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86g_experiment_design_receipt.json",
+  "sample_scope": "F86D/F85B selected rows, US100 M5 validation and OOS splits",
+  "skill": "obsidian-experiment-design",
+  "status": "executed",
+  "stop_conditions": [
+    "record proxy scout result and next action without runtime authority"
+  ],
+  "success_criteria": "inner AUC >= 0.53, inner top-decile lift >= 1.15, OOS AUC >= 0.50, OOS top-decile lift >= 1.0"
+}

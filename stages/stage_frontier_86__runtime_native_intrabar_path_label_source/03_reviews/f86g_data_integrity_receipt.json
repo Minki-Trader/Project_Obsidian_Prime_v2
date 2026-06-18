@@ -1,0 +1,48 @@
+{
+  "data_hash_or_identity": {
+    "feature_surface": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/sequence_feature_surface/sequence_feature_surface.csv",
+      "sha256": "0851f64dd571e7fb4d20e8a27faff141fd00d469ff074715c6dad80eb39728db",
+      "size": 3073583
+    },
+    "source_summary": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/pre_entry_source/pre_entry_source_summary.json",
+      "sha256": "6b2a9ec4b9d39486693acfa2ef0a88279e20d175ffcac8dc46658f0efbfdae0d",
+      "size": 8633
+    }
+  },
+  "data_source": [
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_selected_firewall_row_readout.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/decision/repair_or_rotation_decision.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/pre_entry_source/pre_entry_source_summary.json"
+  ],
+  "data_sources_checked": [
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_selected_firewall_row_readout.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/decision/repair_or_rotation_decision.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/pre_entry_source/pre_entry_source_summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/pre_entry_source/pre_entry_m1_registry.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/pre_entry_source/pre_entry_tick_summary.csv"
+  ],
+  "feature_label_boundary": "F86D first-touch labels are target-only; entry-window M1/tick fields are not feature inputs.",
+  "integrity_judgment": "usable_with_boundary",
+  "leakage_checks": [
+    "F86D entry-window M1/tick registry is not a feature source",
+    "forbidden post-entry/path outcome columns are excluded from feature sets",
+    "OOS is not used for model or feature-set selection"
+  ],
+  "leakage_risk": "Using F86D entry-window M1/tick registry as features would leak; F86G avoids it.",
+  "missing_data_boundary": "If pre-entry MT5 API export is blocked, the run can only claim blocked source export and cannot claim model evidence.",
+  "missing_or_duplicate_check": "M1 full-window count and tick rows are recorded in pre_entry_source_summary.",
+  "packet_id": "frontier86G_pre_entry_intrabar_sequence_feature_scout_v1",
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86g_data_integrity_receipt.json",
+  "sample_scope": "US100 M5 selected rows=4127",
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "validation chronological fit/inner; OOS readout only",
+  "status": "executed",
+  "time_axis": "UTC timestamp_utc is selected M5 bar open; feature source window ends strictly before timestamp_utc.",
+  "time_axis_boundary": "Feature windows use [timestamp_utc - 5 minutes, timestamp_utc) in UTC; label windows begin at timestamp_utc."
+}

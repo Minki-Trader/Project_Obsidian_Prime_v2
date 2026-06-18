@@ -1,0 +1,58 @@
+{
+  "allowed_claims": [
+    "f86g_pre_entry_source_export_recorded",
+    "f86g_sequence_feature_surface_materialized",
+    "f86g_proxy_scout_result_recorded",
+    "next_axis_decision_recorded"
+  ],
+  "calibration_risk": "scores are ranks, not calibrated runtime probabilities",
+  "comparison_baseline": "F86E scalar proxy metrics",
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "oos_selected_model"
+  ],
+  "model_family": [
+    "sequence_context__logreg_l2_balanced",
+    "sequence_context__random_forest_depth4_balanced",
+    "sequence_context__extra_trees_depth5_balanced",
+    "sequence_plus_scalar_context__logreg_l2_balanced",
+    "sequence_plus_scalar_context__random_forest_depth4_balanced",
+    "sequence_plus_scalar_context__extra_trees_depth5_balanced"
+  ],
+  "model_or_threshold_surface": "Fixed proxy model family over sequence_context and sequence_plus_scalar_context feature sets; no runtime threshold selected.",
+  "overfit_checks": [
+    "fixed finite candidate model list",
+    "validation-inner only model selection",
+    "locked OOS readout only",
+    "no threshold search"
+  ],
+  "overfit_risk": "multiple fixed model/feature-set scout; OOS is not used for selection",
+  "packet_id": "frontier86G_pre_entry_intrabar_sequence_feature_scout_v1",
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86g_model_validation_receipt.json",
+  "secondary_metrics": [
+    "average_precision",
+    "log_loss",
+    "brier",
+    "accuracy_at_0_5",
+    "top_decile_lift",
+    "OOS readout"
+  ],
+  "selection_metric": "inner_validation roc_auc, tie top_decile_lift",
+  "selection_metric_boundary": "Best model and feature set are selected only on inner_validation roc_auc/top_decile_lift.",
+  "skill": "obsidian-model-validation",
+  "split_method": "chronological validation fit/inner selection with locked OOS readout",
+  "status": "executed",
+  "target_and_label": "F86D first-touch tp_first vs sl_first binary target; none_hit excluded from binary model metrics.",
+  "threshold_policy": "no runtime threshold selected; score readout only",
+  "validation_judgment": "weak_or_negative_sequence_proxy_scout_no_runtime_evidence",
+  "validation_split": "validation split is chronologically divided 70/30 for fit/inner; OOS is readout-only."
+}

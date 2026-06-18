@@ -7372,3 +7372,11 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - Action(행동): `frontier86F_first_touch_surface_repair_or_rotation_decision_v1`로 F86E scalar proxy scout(스칼라 프록시 스카우트)를 판정하고 scalar repair(스칼라 수리)를 capped(상한 처리)했다.
 - Effect(효과): next(다음)는 `frontier86G_pre_entry_intrabar_sequence_feature_scout_v1`이며, Strategy Tester runtime economics(전략 테스터 런타임 경제성), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
 - Boundary(경계): `f86f_repair_or_rotation_decision_only_scalar_surface_repair_capped_sequence_axis_next_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve`.
+
+<!-- frontier86G_pre_entry_intrabar_sequence_feature_scout_v1 -->
+
+## 2026-06-19 Frontier86G Pre-Entry Sequence Feature Scout(F86G 진입 전 시퀀스 피처 스카우트)
+
+- Action(행동): `frontier86G_pre_entry_intrabar_sequence_feature_scout_v1`로 pre-entry M1/tick sequence feature surface(진입 전 1분/틱 시퀀스 피처 표면)와 proxy scout(프록시 스카우트)를 실행했다.
+- Effect(효과): next(다음)는 `frontier86H_sequence_axis_repair_or_rotation_decision_v1`이며, Strategy Tester runtime economics(전략 테스터 런타임 경제성), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.
+- Boundary(경계): `f86g_pre_entry_sequence_feature_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve`.

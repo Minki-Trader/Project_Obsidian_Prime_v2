@@ -1,0 +1,23 @@
+{
+  "audit_name": "f86g_split_boundary_audit",
+  "binary_target_counts_by_split": [
+    {
+      "count": 1797,
+      "mean": 0.34501947690595436,
+      "split": "oos"
+    },
+    {
+      "count": 2310,
+      "mean": 0.3229437229437229,
+      "split": "validation"
+    }
+  ],
+  "claim_effect": "OOS is readout-only and cannot select model, feature set, or threshold.",
+  "oos_selection_allowed": false,
+  "split_counts": {
+    "oos": 1801,
+    "validation": 2326
+  },
+  "split_policy": "validation chronological 70/30 fit/inner selection; locked OOS readout only",
+  "status": "pass"
+}
