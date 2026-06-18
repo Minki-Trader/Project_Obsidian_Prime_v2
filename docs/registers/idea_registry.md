@@ -2399,3 +2399,13 @@ Register ideas when they become durable work, not for every passing thought.
 - Action(행동): F88 runtime substrate(전선88 런타임 바탕)에서 timestamp coverage/trade-list identity(타임스탬프 커버리지/거래목록 정체성)를 수리 축으로 검증했다.
 - Effect(효과): next frontier(다음 전선)는 same threshold/filter tweak(동일 임계값/필터 미세조정)이 아니라 due/rotation check(도래/회전 점검) 뒤 새 hypothesis(가설)를 열어야 한다.
 - Boundary(경계): `runtime_probe_observation_only_no_completion_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+## F89A runtime trade-list adverse-selection teacher(F89A 런타임 거래목록 역선택 교사)
+
+- idea_id: f89_runtime_trade_list_adverse_selection_teacher_v1
+- stage_id: `stage_frontier_89__runtime_trade_list_adverse_selection_teacher`
+- run_id: `frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1`
+- hypothesis(가설): F88C runtime deal rows(F88C 런타임 딜 행)을 adverse-selection teacher label(역선택 교사 라벨)로 바꿔 다음 후보(candidate, 후보)의 취약한 진입을 먼저 걸러본다.
+- novelty_delta(신규성 차이): label/target(라벨/대상), data representation(데이터 표현), risk logic(위험 로직).
+- negative_memory(부정 기억): F88C runtime economics(런타임 경제성) net -36.2, PF 0.67, DD 17.16%, trades 23; no authority(권위 없음).
+- next_action(다음 행동): `frontier89B_deal_path_adverse_selection_proxy_scout_v1`.
+- claim_boundary(주장 경계): `stage_open_design_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

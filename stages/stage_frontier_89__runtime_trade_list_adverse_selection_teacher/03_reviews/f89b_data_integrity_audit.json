@@ -1,0 +1,28 @@
+{
+  "allowed_claims": [],
+  "audit_name": "data_integrity_audit",
+  "completed_forbidden": false,
+  "counts": {
+    "data_sources_checked": [
+      "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_deals.csv",
+      "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/feature_matrices/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_validation_is_features.csv"
+    ],
+    "leakage_checks": "profit targets are used only as teacher labels; runtime input features exclude profit and exit fields",
+    "missing_data_boundary": {
+      "episode_rows": 23,
+      "feature_rows": 316,
+      "future_leakage_boundary": "entry rows join only to same closed bar feature record already used by F88C runtime probe",
+      "join_key": "entry_time_server_to_bar_time_server_exact",
+      "joined_rows": 23,
+      "unmatched_episode_ids": [
+        "none_detected"
+      ]
+    },
+    "split_boundary": "inner_train and locked_forward_readout are time-ordered within the short F88C validation window",
+    "time_axis_boundary": "entry_time_server joins to F88C bar_time_server exact closed M5 rows"
+  },
+  "findings": [],
+  "forbidden_claims": [],
+  "passed": true,
+  "status": "pass_with_boundary"
+}

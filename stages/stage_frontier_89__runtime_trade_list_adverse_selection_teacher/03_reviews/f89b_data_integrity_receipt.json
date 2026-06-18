@@ -1,0 +1,23 @@
+{
+  "data_sources_checked": [
+    "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_deals.csv",
+    "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/feature_matrices/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_validation_is_features.csv"
+  ],
+  "leakage_checks": "profit/exit fields excluded from feature columns",
+  "missing_data_boundary": {
+    "episode_rows": 23,
+    "feature_rows": 316,
+    "future_leakage_boundary": "entry rows join only to same closed bar feature record already used by F88C runtime probe",
+    "join_key": "entry_time_server_to_bar_time_server_exact",
+    "joined_rows": 23,
+    "unmatched_episode_ids": [
+      "none_detected"
+    ]
+  },
+  "packet_id": "frontier89B_deal_path_adverse_selection_proxy_scout_v1",
+  "receipt_path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_data_integrity_receipt.json",
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "short time-ordered inner_train/locked_forward_readout only",
+  "status": "executed",
+  "time_axis_boundary": "entry_time_server exact joins to closed M5 bar_time_server"
+}

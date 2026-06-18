@@ -1,0 +1,335 @@
+{
+  "claim_boundary": "stage_open_design_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "packet_id": "frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1",
+  "primary_skill": "obsidian-experiment-design",
+  "receipts": [
+    {
+      "baseline": {
+        "negative_memory_used": [
+          "F88C runtime economics were negative: net=-36.2, PF=0.67, DD=17.16%, trades=23.",
+          "F88C reduced timestamp skip but still had 1063 feature skips.",
+          "F88C separated a deals CSV, while the expected trades CSV path is missing in the current folder."
+        ],
+        "not_inherited": [
+          "selected baseline",
+          "promotion history",
+          "runtime authority",
+          "live readiness",
+          "Goal Achieve"
+        ],
+        "reference_only": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1"
+      },
+      "changed_variables": [
+        "label target changes from path-label or threshold repair to runtime deal-path adverse-selection teacher",
+        "source representation changes from proxy-only feature rows to Strategy Tester deal and telemetry output as teacher evidence",
+        "risk logic changes from post-hoc PF selection to pre-entry fragile-entry rejection design"
+      ],
+      "evidence_plan": {
+        "f89a_required": [
+          "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/design/f89a_experiment_design.json",
+          "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/design/runtime_trade_list_adverse_selection_teacher_contract.json",
+          "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/design/f89b_deal_path_adverse_selection_proxy_scout_brief.json",
+          "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/run_manifest.json",
+          "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/reports/result_summary.md"
+        ],
+        "f89b_required_if_signal_exists": [
+          "dataset_id",
+          "feature_set_id",
+          "label_id",
+          "split_id",
+          "ONNX/EA/set/feature hashes if materialized",
+          "Strategy Tester report/trade-list/telemetry hashes if runtime claim is made"
+        ]
+      },
+      "hypothesis": {
+        "id": "f89_runtime_trade_list_adverse_selection_teacher_v1",
+        "plain_korean": "F88C의 런타임 딜 행을 사전 진입 교사 라벨로 바꾸면, 새 ONNX/EA 표면을 물질화하기 전에 역선택, 손익 비대칭, 취약한 진입 타이밍을 먼저 걸러낼 수 있다는 가설이다.",
+        "statement": "F88C's runtime deal rows can be converted into a pre-entry teacher label that marks adverse selection, payoff asymmetry, and fragile entry timing before another ONNX/EA surface is materialized."
+      },
+      "invalid_conditions": [
+        "Deal rows cannot be paired into trade episodes and the packet still claims a teacher label.",
+        "Entry-time features cannot be joined without future leakage and the packet still trains a candidate.",
+        "Task Force review is claimed without actual selected-agent calls."
+      ],
+      "packet_id": "frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1",
+      "receipt_path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_experiment_design_receipt.json",
+      "skill": "obsidian-experiment-design",
+      "status": "executed"
+    },
+    {
+      "exploration_lane": "frontier_stage_open_runtime_output_teacher",
+      "idea_boundary": "new label/data/risk axis; no inherited winner or authority",
+      "negative_memory_effect": [
+        "F88C runtime economics were negative: net=-36.2, PF=0.67, DD=17.16%, trades=23.",
+        "F88C reduced timestamp skip but still had 1063 feature skips.",
+        "F88C separated a deals CSV, while the expected trades CSV path is missing in the current folder."
+      ],
+      "operating_claim_boundary": "stage_open_design_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+      "packet_id": "frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1",
+      "receipt_path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_exploration_mandate_receipt.json",
+      "skill": "obsidian-exploration-mandate",
+      "status": "executed"
+    },
+    {
+      "allowed_claims": [
+        "current_truth_synced",
+        "state_sync_completed"
+      ],
+      "canonical_state_after": {
+        "active_stage": "stage_frontier_89__runtime_trade_list_adverse_selection_teacher",
+        "current_run_id": "frontier89B_deal_path_adverse_selection_proxy_scout_v1",
+        "latest_completed_run_id": "frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1",
+        "runtime_authority": "not_claimed"
+      },
+      "changed_or_checked_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/04_selected/selection_status.md",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/00_spec/stage_brief.md",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/stage_run_ledger.csv",
+        "docs/registers/run_registry.csv"
+      ],
+      "detected_conflicts": [
+        "none_detected"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "completed",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "runtime_probe",
+        "runtime_verified",
+        "strategy_tester_runtime_economics",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "task_force_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "reviewed_by_unspawned_agents"
+      ],
+      "packet_id": "frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1",
+      "receipt_path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_stage_transition_receipt.json",
+      "skill": "obsidian-stage-transition",
+      "source_current_truth_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/04_selected/selection_status.md"
+      ],
+      "status": "executed"
+    },
+    {
+      "hashes_or_missing_reasons": [
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/summary.json",
+          "sha256_lf_normalized": "b66c6db99189dbda2fe537386410a8fc625c8423bd5c6c9067a9e4ca92169112",
+          "size_bytes": 40685
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/kpi_record.json",
+          "sha256_lf_normalized": "e02c79ae06136b744b646ced180b9627e9d5b0255a3e501d084683ad1b1a4d7c",
+          "size_bytes": 11655
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/reports/result_summary.md",
+          "sha256_lf_normalized": "2ebc49612790f0418ce607181fb0039351cb64d8c6b9f32bb9477a4b05d71417",
+          "size_bytes": 2121
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/runtime_evidence_identity.json",
+          "sha256_lf_normalized": "4b1ba4f824f28228d8a3007f7363bc8e0ad12445eda3759bb4387bb3bbe04f95",
+          "size_bytes": 4211
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_deals.csv",
+          "sha256_lf_normalized": "64e12ce186cbe3df3ddbe990d3cde656142b0ac11e90a0e616431828c5ab2690",
+          "size_bytes": 4757
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_trades.csv",
+          "sha256_lf_normalized": "df58f19a9e9116f979c68c9f9dcb73d9668e5985a249ebc0619bcdd3ca21cc5d",
+          "size_bytes": 2137
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/runtime_telemetry/f88c_tier_a_validation_is_summary.csv",
+          "sha256_lf_normalized": "d43789e9a3d7ae2f5f43a149a8213c1064a65ad9f0fa7895dbb16998ff30a991",
+          "size_bytes": 1056
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/feature_matrices/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_validation_is_features.csv",
+          "sha256_lf_normalized": "a9c41c4191954bd151e1f2832cb7c4c3b762f8a89c080b18508915e9679f4a86",
+          "size_bytes": 247692
+        },
+        {
+          "exists": true,
+          "path": "docs/registers/frontier_extra_stage_register.yaml",
+          "sha256_lf_normalized": "cdc4deea661015e46c52c02d2fd1476c8e2b527b118635cdfb52f1900b644c6c",
+          "size_bytes": 2237
+        },
+        {
+          "exists": true,
+          "path": "docs/policies/frontier_governance.md",
+          "sha256_lf_normalized": "69fd04529ba01eb149785d1eecc9f61a42bd72b2b84dfd0876a8a051e1ebe830",
+          "size_bytes": 28483
+        },
+        {
+          "exists": true,
+          "path": "docs/agent_control/work_family_registry.yaml",
+          "sha256_lf_normalized": "bcabf5f0f06fee21d7242dbda4f48bc0d9c3956fdbf64d52cabcbddfb574d7e3",
+          "size_bytes": 36064
+        },
+        {
+          "exists": true,
+          "path": "docs/registers/negative_result_register.md",
+          "sha256_lf_normalized": "79e8226a79ea46b765eea45689c48bcbc11cd2f80c4d5d21b54161c0fe2356b0",
+          "size_bytes": 233829
+        },
+        {
+          "exists": true,
+          "path": "docs/registers/idea_registry.md",
+          "sha256_lf_normalized": "ce3fd047795609658a3a3119e060cb7f7704ee4ed5d9a5bf80cf3eb135056861",
+          "size_bytes": 376085
+        },
+        {
+          "exists": true,
+          "path": "docs/workspace/workspace_state.yaml",
+          "sha256_lf_normalized": "efcc4cb861193db108129cb64e1fac84edaa506a459115777ed966c399638d61",
+          "size_bytes": 1835
+        },
+        {
+          "exists": true,
+          "path": "docs/context/current_working_state.md",
+          "sha256_lf_normalized": "942762f2a50e5767e6c6e9437df9db18c254f28475dcaf104a286dc1ed8ae225",
+          "size_bytes": 1156
+        }
+      ],
+      "human_readable": [
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/reports/result_summary.md",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/00_spec/stage_brief.md",
+        "docs/context/current_working_state.md"
+      ],
+      "lineage_boundary": "F88C artifacts are reference inputs only; no authority or selected baseline is inherited.",
+      "machine_readable": [
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/design/f89a_experiment_design.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/design/runtime_trade_list_adverse_selection_teacher_contract.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/design/f89b_deal_path_adverse_selection_proxy_scout_brief.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/run_manifest.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/summary.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/kpi_record.json"
+      ],
+      "packet_id": "frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1",
+      "produced_artifacts": [
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/run_manifest.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/summary.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/kpi_record.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/reports/result_summary.md",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/design/f89a_experiment_design.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/design/runtime_trade_list_adverse_selection_teacher_contract.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/design/f89b_deal_path_adverse_selection_proxy_scout_brief.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_stage_open_summary.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_frontier_extra_due_check.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_frontier_five_stage_direction_synthesis.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_frontier_topic_rotation_check.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_task_force_trigger_check.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_scope_completion_gate.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_artifact_lineage_audit.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_final_claim_guard.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_state_sync_audit.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_required_gate_coverage_audit.json",
+        "docs/agent_control/packets/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/work_packet.yaml",
+        "docs/agent_control/packets/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/skill_receipts.json",
+        "docs/agent_control/packets/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/closeout_gate.json",
+        "docs/agent_control/packets/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/final_claim_guard.json",
+        "docs/agent_control/packets/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/state_sync_audit.json",
+        "docs/agent_control/packets/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/required_gate_coverage_audit.json",
+        "docs/agent_control/packets/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/work_packet_schema_lint.json",
+        "docs/agent_control/packets/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/skill_receipt_schema_lint.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/00_spec/stage_brief.md",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/01_inputs/input_refs.md",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/context_anchor.md",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/review_index.md",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/stage_run_ledger.csv",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/04_selected/selection_status.md",
+        "docs/decisions/2026-06-19_frontier89_stage_open_runtime_trade_list_teacher.md"
+      ],
+      "raw_evidence": [
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_deals.csv",
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/runtime_telemetry/f88c_tier_a_validation_is_summary.csv",
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/runtime_evidence_identity.json"
+      ],
+      "receipt_path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_artifact_lineage_receipt.json",
+      "skill": "obsidian-artifact-lineage",
+      "source_inputs": [
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/summary.json",
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/kpi_record.json",
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/reports/result_summary.md",
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/runtime_evidence_identity.json",
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_deals.csv",
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_trades.csv",
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/runtime_telemetry/f88c_tier_a_validation_is_summary.csv",
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/feature_matrices/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_validation_is_features.csv",
+        "docs/registers/frontier_extra_stage_register.yaml",
+        "docs/policies/frontier_governance.md",
+        "docs/agent_control/work_family_registry.yaml",
+        "docs/registers/negative_result_register.md",
+        "docs/registers/idea_registry.md",
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md"
+      ],
+      "status": "executed"
+    },
+    {
+      "allowed_claims": [
+        "f89a_stage_open_design_prepared",
+        "f89_runtime_trade_list_teacher_axis_opened",
+        "f89b_deal_path_proxy_scout_planned",
+        "frontier_extra_due_check_not_due_after_f88",
+        "five_stage_direction_synthesis_recorded_for_f84_to_f88",
+        "topic_rotation_check_passed_for_f89"
+      ],
+      "final_status": "bounded_design_only_no_authority",
+      "forbidden_claims": [
+        "completion",
+        "completed",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "runtime_probe",
+        "runtime_verified",
+        "strategy_tester_runtime_economics",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "task_force_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "reviewed_by_unspawned_agents"
+      ],
+      "packet_id": "frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1",
+      "receipt_path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_claim_discipline_receipt.json",
+      "requested_claims": [
+        "f89a_stage_open_design_prepared",
+        "f89_runtime_trade_list_teacher_axis_opened",
+        "f89b_deal_path_proxy_scout_planned",
+        "frontier_extra_due_check_not_due_after_f88",
+        "five_stage_direction_synthesis_recorded_for_f84_to_f88",
+        "topic_rotation_check_passed_for_f89"
+      ],
+      "skill": "obsidian-claim-discipline",
+      "status": "executed"
+    }
+  ]
+}

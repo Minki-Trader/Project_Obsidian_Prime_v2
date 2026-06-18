@@ -1,0 +1,84 @@
+{
+  "allowed_claims": [
+    "f89a_stage_open_design_prepared",
+    "f89_runtime_trade_list_teacher_axis_opened",
+    "f89b_deal_path_proxy_scout_planned",
+    "frontier_extra_due_check_not_due_after_f88",
+    "five_stage_direction_synthesis_recorded_for_f84_to_f88",
+    "topic_rotation_check_passed_for_f89"
+  ],
+  "audits": [
+    {
+      "audit_name": "work_packet_schema_lint",
+      "path": "docs/agent_control/packets/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/work_packet_schema_lint.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "path": "docs/agent_control/packets/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/skill_receipt_schema_lint.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "frontier_extra_due_check",
+      "path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_frontier_extra_due_check.json",
+      "status": "pass_not_due"
+    },
+    {
+      "audit_name": "frontier_five_stage_direction_synthesis",
+      "path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_frontier_five_stage_direction_synthesis.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "frontier_topic_rotation_check",
+      "path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_frontier_topic_rotation_check.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "scope_completion_gate",
+      "path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_scope_completion_gate.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "artifact_lineage_audit",
+      "path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_artifact_lineage_audit.json",
+      "status": "pass_connected_with_boundary"
+    },
+    {
+      "audit_name": "state_sync_audit",
+      "path": "docs/agent_control/packets/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/state_sync_audit.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "path": "docs/agent_control/packets/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/required_gate_coverage_audit.json",
+      "status": "pass"
+    }
+  ],
+  "claim_boundary": "stage_open_design_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "path": "docs/agent_control/packets/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/final_claim_guard.json",
+    "status": "pass"
+  },
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents"
+  ],
+  "packet_id": "frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1",
+  "status": "pass"
+}

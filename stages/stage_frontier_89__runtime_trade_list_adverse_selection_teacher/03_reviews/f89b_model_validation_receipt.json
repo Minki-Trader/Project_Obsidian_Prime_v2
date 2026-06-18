@@ -1,0 +1,38 @@
+{
+  "allowed_claims": [
+    "f89b_deal_episode_surface_recorded",
+    "f89b_entry_feature_join_recorded",
+    "f89b_teacher_proxy_scout_recorded",
+    "f89b_negative_or_inconclusive_memory_recorded"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents"
+  ],
+  "model_or_threshold_surface": "adverse-selection teacher proxy",
+  "overfit_checks": [
+    "sample_size_below_materialization_minimum",
+    "no Tier B fallback deal rows"
+  ],
+  "packet_id": "frontier89B_deal_path_adverse_selection_proxy_scout_v1",
+  "receipt_path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_model_validation_receipt.json",
+  "selection_metric_boundary": "proxy scout only; no runtime/economics claim",
+  "skill": "obsidian-model-validation",
+  "status": "executed",
+  "validation_split": "time ordered inner_train/locked_forward_readout"
+}

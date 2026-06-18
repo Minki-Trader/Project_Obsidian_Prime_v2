@@ -1,0 +1,416 @@
+{
+  "allowed_claims": [
+    "f89a_stage_open_design_prepared",
+    "f89_runtime_trade_list_teacher_axis_opened",
+    "f89b_deal_path_proxy_scout_planned",
+    "frontier_extra_due_check_not_due_after_f88",
+    "five_stage_direction_synthesis_recorded_for_f84_to_f88",
+    "topic_rotation_check_passed_for_f89"
+  ],
+  "changed_variables": [
+    "label target changes from path-label or threshold repair to runtime deal-path adverse-selection teacher",
+    "source representation changes from proxy-only feature rows to Strategy Tester deal and telemetry output as teacher evidence",
+    "risk logic changes from post-hoc PF selection to pre-entry fragile-entry rejection design"
+  ],
+  "claim_boundary": "stage_open_design_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "comparison_baseline": {
+    "negative_memory_used": [
+      "F88C runtime economics were negative: net=-36.2, PF=0.67, DD=17.16%, trades=23.",
+      "F88C reduced timestamp skip but still had 1063 feature skips.",
+      "F88C separated a deals CSV, while the expected trades CSV path is missing in the current folder."
+    ],
+    "not_inherited": [
+      "selected baseline",
+      "promotion history",
+      "runtime authority",
+      "live readiness",
+      "Goal Achieve"
+    ],
+    "reference_only": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1"
+  },
+  "control_variables": [
+    "FPMarkets US100 M5 symbol/timeframe contract",
+    "closed-bar feature boundary",
+    "no inherited authority from F04D/F88 runtime substrate",
+    "no threshold/filter/parameter-only repair"
+  ],
+  "created_at_utc": "2026-06-18T23:32:05Z",
+  "decision": "open_f89_runtime_trade_list_adverse_selection_teacher_axis_and_plan_f89b_proxy_scout",
+  "decision_use": "Open F89 as a design-only frontier stage and hand off to F89B proxy scout.",
+  "evidence_plan": {
+    "f89a_required": [
+      "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/design/f89a_experiment_design.json",
+      "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/design/runtime_trade_list_adverse_selection_teacher_contract.json",
+      "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/design/f89b_deal_path_adverse_selection_proxy_scout_brief.json",
+      "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/run_manifest.json",
+      "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/reports/result_summary.md"
+    ],
+    "f89b_required_if_signal_exists": [
+      "dataset_id",
+      "feature_set_id",
+      "label_id",
+      "split_id",
+      "ONNX/EA/set/feature hashes if materialized",
+      "Strategy Tester report/trade-list/telemetry hashes if runtime claim is made"
+    ]
+  },
+  "f88c_reference": {
+    "deal_rows": 46,
+    "expected_trades_csv_exists": true,
+    "kpi": {
+      "avg_loss": -11.097,
+      "avg_win": 5.7515,
+      "equity_drawdown_maximal_percent": 17.16,
+      "expectancy": -1.57,
+      "gross_loss": -110.97,
+      "gross_profit": 74.77,
+      "judgment": "negative_or_inconclusive_for_final_entry_gate",
+      "long_short_breakdown": {
+        "report": {
+          "long_trade_count": 14,
+          "long_win_rate_percent": 57.14,
+          "short_trade_count": 9,
+          "short_win_rate_percent": 55.56
+        },
+        "trade_list_net": {
+          "long": {
+            "net_profit": -39.54,
+            "trade_count": 14
+          },
+          "short": {
+            "net_profit": 3.34,
+            "trade_count": 9
+          }
+        }
+      },
+      "max_consecutive_loss": 3,
+      "max_drawdown_percent": 17.16,
+      "net_profit": -36.2,
+      "payoff_ratio": 0.5183,
+      "profit_factor": 0.67,
+      "recovery_factor": -0.39,
+      "time_under_water": "not_parsed_from_mt5_html_report",
+      "trade_count": 23,
+      "trades_per_calendar_day": 3.2857,
+      "trades_per_feature_day": 4.6,
+      "win_rate_percent": 56.52
+    },
+    "runtime_identity": {
+      "compile_status": "existing_binary_reused_no_compile_only_claim",
+      "dataset_id": "f88c_runtime_validation_short_probe_2025_01_02_to_2025_01_09",
+      "deal_list_hash": "64e12ce186cbe3df3ddbe990d3cde656142b0ac11e90a0e616431828c5ab2690",
+      "ea_binary_hash": "516f43ce017cae48cdcb5c3f23fd98e9a7b2a4281b4849f8270a515c2b00d781",
+      "ea_source_hash": "322772eb36777c9570f3fe7a6f0c808b3c929a62d2cae96c44e7d2c08b8a9180",
+      "feature_matrix_hash": "afd45fa573f60a723fc63c1b9589d85795c84dc557bd8491bc6e553108d639d9",
+      "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "feature_set_id": "frontier04d_f04d_read_feature_order_58",
+      "label_id": "frontier04d_path_label_argmax_reference_only",
+      "onnx_hash": "4fcc9d835709994190fa782b0610f6997a1a5439be88d3247d3270dc663162ad",
+      "parser_contract_version": "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md",
+      "parser_status": {
+        "strategy_report": "utf-16",
+        "summary_csv": "parsed_utf_8_sig",
+        "trade_report": "separated"
+      },
+      "report_hash": "564d87fd5302e3809ecffcfe37f0be154ea60b81d9833112965b8c27336d842e",
+      "report_status": "completed",
+      "runtime_contract_version": "ObsidianPrimeV2_RuntimeProbeEA_f88c",
+      "runtime_status": "completed",
+      "set_ini_hash": {
+        "ini": "6af0fb85f8ad725f4b0ffe1158e2a326e28707bc9d8596221796641ee62d7b50",
+        "set": "dfdd0088e8b87a5381fc480fb5da109eea07a6ac399da3559bc10a10df73bbf5"
+      },
+      "source_candidate": {
+        "candidate_id": "rf_depth5_leaf80_balanced_argmax",
+        "claim_effect": "reference runtime substrate candidate only; no inherited baseline or authority",
+        "source_run_id": "frontier04D_trainable_path_label_onnx_probe_v1",
+        "source_stage_id": "stage_frontier_04__path_aware_cost_dd_event_labeling"
+      },
+      "split_id": "validation_is_short_probe_2025_01_02_to_2025_01_09",
+      "summary_hash": "64754f24e188c592b83cb12a1786037dcd269a6069799d470690d960b6a59702",
+      "telemetry_hash": "cd44920f13c5a22d67165cb665215836698f3a390540a562ba797b27c4221e2e",
+      "tester_identity": {
+        "broker": "FPMarkets",
+        "commission": "broker_native_or_report_not_parsed",
+        "date_range": "2025.01.02..2025.01.09",
+        "deposit": 500,
+        "leverage": "1:100",
+        "modeling_mode": "4_Every_tick_based_on_real_ticks",
+        "slippage": "not_explicit_in_ini",
+        "spread": "broker_native_or_report_not_parsed",
+        "swap": "broker_native_or_report_not_parsed",
+        "symbol": "US100",
+        "terminal_command": [
+          "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\terminal64.exe",
+          "/portable",
+          "/config:C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\MQL5\\Profiles\\Tester\\opv2_frontier88C_ta_v.ini"
+        ],
+        "tester_profile_ini": {
+          "destination": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Profiles/Tester/opv2_frontier88C_ta_v.ini",
+          "encoding_policy": "utf-8-no-bom",
+          "sha256": "6af0fb85f8ad725f4b0ffe1158e2a326e28707bc9d8596221796641ee62d7b50",
+          "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/f88c_tier_a_validation_is.ini"
+        },
+        "tester_profile_set": {
+          "destination": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+          "sha256": "dfdd0088e8b87a5381fc480fb5da109eea07a6ac399da3559bc10a10df73bbf5",
+          "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/f88c_tier_a_validation_is.set"
+        },
+        "timeframe": "M5"
+      },
+      "tester_status": "completed",
+      "trade_list_hash": "df58f19a9e9116f979c68c9f9dcb73d9668e5985a249ebc0619bcdd3ca21cc5d",
+      "trade_list_identity": "separate_trade_list_csv_from_mt5_html_report"
+    },
+    "telemetry_summary": {
+      "bars_seen": "1379",
+      "deinit_reason": "remove",
+      "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "feature_ready_count": "316",
+      "feature_skip_count": "1063",
+      "flat_count": "1181",
+      "last_skip_reason": "feature_csv_timestamp_not_found:2025.01.08 23:55:00",
+      "long_count": "145",
+      "max_actual_risk_pct_after_floor": "0.0000000000",
+      "max_model_risk_pct": "0.0000000000",
+      "min_lot_floor_applied_count": "0",
+      "model_fail_count": "1063",
+      "model_id": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_f88c_tier_a",
+      "model_ok_count": "316",
+      "no_tier_count": "1063",
+      "order_attempt_count": "40",
+      "order_fill_count": "40",
+      "run_id": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1",
+      "short_count": "53",
+      "ticks_seen": "1899288",
+      "tier_a_flat_count": "118",
+      "tier_a_long_count": "145",
+      "tier_a_order_attempt_count": "40",
+      "tier_a_order_fill_count": "40",
+      "tier_a_short_count": "53",
+      "tier_a_used_count": "316",
+      "tier_b_fallback_flat_count": "0",
+      "tier_b_fallback_long_count": "0",
+      "tier_b_fallback_order_attempt_count": "0",
+      "tier_b_fallback_order_fill_count": "0",
+      "tier_b_fallback_short_count": "0",
+      "tier_b_fallback_used_count": "0",
+      "written_at": "2025.01.08 23:59:57"
+    }
+  },
+  "failure_criteria": [
+    "F89A opens as another F88 runtime-substrate repair.",
+    "F89A treats F88C negative runtime output as authority.",
+    "F89A uses compile-only, proxy-only, parity-only, or ONNX handoff as runtime economics evidence."
+  ],
+  "five_stage_direction_synthesis": {
+    "claim_boundary": "stage_open_design_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+    "covered_frontier_ids": [
+      "F84",
+      "F85",
+      "F86",
+      "F87",
+      "F88"
+    ],
+    "dominant_direction": "recent frontiers repeatedly exposed proxy/runtime gaps, label fragility, and runtime-output identity without authority",
+    "next_axis_options": [
+      "runtime output as teacher label",
+      "deal-path adverse-selection target",
+      "payoff asymmetry risk gate",
+      "entry-time feature join integrity"
+    ],
+    "overused_axis_warning": [
+      "do not reopen the F04D reference ONNX by threshold/filter/parameter retune",
+      "do not repeat first-touch scalar/sequence-only repair",
+      "do not repeat trade-shape/risk proxy retune",
+      "do not repeat F88 timestamp/trade-list substrate repair as the main question"
+    ],
+    "repeated_mechanism": "threshold/filter/parameter repair pressure after negative or weak signal"
+  },
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents"
+  ],
+  "frontier_extra_due": {
+    "due": false,
+    "effect": "F89 can proceed to topic rotation without opening an extra stage.",
+    "next_due_boundary": "F100",
+    "reason": "F89 is below the next F100 boundary and E01 is already closed for F050."
+  },
+  "hypothesis": {
+    "id": "f89_runtime_trade_list_adverse_selection_teacher_v1",
+    "plain_korean": "F88C의 런타임 딜 행을 사전 진입 교사 라벨로 바꾸면, 새 ONNX/EA 표면을 물질화하기 전에 역선택, 손익 비대칭, 취약한 진입 타이밍을 먼저 걸러낼 수 있다는 가설이다.",
+    "statement": "F88C's runtime deal rows can be converted into a pre-entry teacher label that marks adverse selection, payoff asymmetry, and fragile entry timing before another ONNX/EA surface is materialized."
+  },
+  "invalid_conditions": [
+    "Deal rows cannot be paired into trade episodes and the packet still claims a teacher label.",
+    "Entry-time features cannot be joined without future leakage and the packet still trains a candidate.",
+    "Task Force review is claimed without actual selected-agent calls."
+  ],
+  "judgment": "design_only_runtime_trade_list_teacher_surface_no_runtime_evidence",
+  "next_run_id": "frontier89B_deal_path_adverse_selection_proxy_scout_v1",
+  "parent_run_id": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1",
+  "run_id": "frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1",
+  "sample_scope": {
+    "f89a_current_packet": "design-only stage open; no MT5 execution and no economics claim",
+    "f89b_expected_scope": "deal-path teacher construction plus Tier A, Tier B, and combined or routed records when data allows",
+    "runtime_output_reference": {
+      "deal_rows": 46,
+      "expected_trade_rows_path_exists": true,
+      "telemetry_feature_ready_count": "316",
+      "telemetry_feature_skip_count": "1063",
+      "trade_count_from_kpi": 23
+    },
+    "tier_scope": "F89A design only; F89B must record Tier A separate, Tier B separate, and combined/routed total or structured missing_required/out_of_scope_by_claim."
+  },
+  "source_identities": [
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/summary.json",
+      "sha256_lf_normalized": "b66c6db99189dbda2fe537386410a8fc625c8423bd5c6c9067a9e4ca92169112",
+      "size_bytes": 40685
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/kpi_record.json",
+      "sha256_lf_normalized": "e02c79ae06136b744b646ced180b9627e9d5b0255a3e501d084683ad1b1a4d7c",
+      "size_bytes": 11655
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/reports/result_summary.md",
+      "sha256_lf_normalized": "2ebc49612790f0418ce607181fb0039351cb64d8c6b9f32bb9477a4b05d71417",
+      "size_bytes": 2121
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/runtime_evidence_identity.json",
+      "sha256_lf_normalized": "4b1ba4f824f28228d8a3007f7363bc8e0ad12445eda3759bb4387bb3bbe04f95",
+      "size_bytes": 4211
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_deals.csv",
+      "sha256_lf_normalized": "64e12ce186cbe3df3ddbe990d3cde656142b0ac11e90a0e616431828c5ab2690",
+      "size_bytes": 4757
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_trades.csv",
+      "sha256_lf_normalized": "df58f19a9e9116f979c68c9f9dcb73d9668e5985a249ebc0619bcdd3ca21cc5d",
+      "size_bytes": 2137
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/runtime_telemetry/f88c_tier_a_validation_is_summary.csv",
+      "sha256_lf_normalized": "d43789e9a3d7ae2f5f43a149a8213c1064a65ad9f0fa7895dbb16998ff30a991",
+      "size_bytes": 1056
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/feature_matrices/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_validation_is_features.csv",
+      "sha256_lf_normalized": "a9c41c4191954bd151e1f2832cb7c4c3b762f8a89c080b18508915e9679f4a86",
+      "size_bytes": 247692
+    },
+    {
+      "exists": true,
+      "path": "docs/registers/frontier_extra_stage_register.yaml",
+      "sha256_lf_normalized": "cdc4deea661015e46c52c02d2fd1476c8e2b527b118635cdfb52f1900b644c6c",
+      "size_bytes": 2237
+    },
+    {
+      "exists": true,
+      "path": "docs/policies/frontier_governance.md",
+      "sha256_lf_normalized": "69fd04529ba01eb149785d1eecc9f61a42bd72b2b84dfd0876a8a051e1ebe830",
+      "size_bytes": 28483
+    },
+    {
+      "exists": true,
+      "path": "docs/agent_control/work_family_registry.yaml",
+      "sha256_lf_normalized": "bcabf5f0f06fee21d7242dbda4f48bc0d9c3956fdbf64d52cabcbddfb574d7e3",
+      "size_bytes": 36064
+    },
+    {
+      "exists": true,
+      "path": "docs/registers/negative_result_register.md",
+      "sha256_lf_normalized": "79e8226a79ea46b765eea45689c48bcbc11cd2f80c4d5d21b54161c0fe2356b0",
+      "size_bytes": 233829
+    },
+    {
+      "exists": true,
+      "path": "docs/registers/idea_registry.md",
+      "sha256_lf_normalized": "ce3fd047795609658a3a3119e060cb7f7704ee4ed5d9a5bf80cf3eb135056861",
+      "size_bytes": 376085
+    },
+    {
+      "exists": true,
+      "path": "docs/workspace/workspace_state.yaml",
+      "sha256_lf_normalized": "9f40217fbae6f8c7957a8fb7b7cc391d7be1009c85807e0a1018cedb6f9c5bd5",
+      "size_bytes": 1835
+    },
+    {
+      "exists": true,
+      "path": "docs/context/current_working_state.md",
+      "sha256_lf_normalized": "7426ae235e68967e5eb96562c2335e5a38a00ef81068d53095406c8b6a9a62b1",
+      "size_bytes": 1156
+    }
+  ],
+  "stage_id": "stage_frontier_89__runtime_trade_list_adverse_selection_teacher",
+  "status": "f89a_stage_open_design_prepared_f89b_deal_path_proxy_scout_planned_no_authority",
+  "stop_conditions": [
+    "Stop F89A after design artifacts, pre-open checks, packet receipts, gates, and state sync are written.",
+    "Do not run MT5 in F89A because no runtime/materialization/economics claim is protected in this packet.",
+    "F89B must attempt a narrow MT5 runtime probe in the same packet if a meaningful candidate and runtime/economics claim emerges.",
+    "F89B must close negative/inconclusive/invalid/blocked if deal pairing, feature join, or runtime probe evidence cannot be produced."
+  ],
+  "success_criteria": [
+    "F89A records extra due, five-stage synthesis, and topic rotation before formal open.",
+    "F89A defines an F89B teacher-label contract that is not a threshold/filter/parameter-only repair.",
+    "F89A records Task Force trigger status without claiming Task Force review."
+  ],
+  "task_force_trigger_check": {
+    "actual_subagent_calls": [],
+    "claim_effect": "No Task Force review claim is made. If a later packet requires review, relevant roster agents must be called and recorded.",
+    "reason": "No Task Force reviewed/pass claim, policy change, roster review, architecture cross-system claim, or stage closeout pass claim is made in F89A.",
+    "required": false,
+    "trigger_sources_checked": [
+      "explicit_user_instruction",
+      "work_packet_claim_surface",
+      "required_gates",
+      "family_rule",
+      "stage_open_claim"
+    ]
+  },
+  "topic_rotation_check": {
+    "decision": "pass_for_f89_runtime_trade_list_adverse_selection_teacher",
+    "novelty_delta": {
+      "not_f88_runtime_substrate_repair": true,
+      "not_threshold_filter_parameter_tweak": true,
+      "primary_axis": "label_target_and_runtime_output_teacher",
+      "supporting_axes": [
+        "data representation",
+        "risk logic",
+        "entry-time feature join"
+      ]
+    },
+    "previous_stage_id": "stage_frontier_88__runtime_substrate_first_materialization_probe",
+    "proposed_stage_id": "stage_frontier_89__runtime_trade_list_adverse_selection_teacher",
+    "same_surface_repair_block": true,
+    "topic_ban": false
+  }
+}

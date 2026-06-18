@@ -1,21 +1,25 @@
-﻿# F88 Selection Status(F88 선택 상태)
+﻿# F89 Selection Status(F89 선택 상태)
 
-Updated(갱신): 2026-06-18T23:12:47Z
+Updated(갱신): 2026-06-18T23:41:47Z
 
-Status(상태): `f88c_runtime_probe_observation_timestamp_coverage_trade_list_repair_no_authority`
+Current run(현재 실행): `frontier89C_deal_path_teacher_repair_or_rotation_decision_v1`
 
-Current run(현재 실행): `frontier89_pending_frontier_extra_due_and_topic_rotation_check_v1`
+Latest completed run(최근 완료 실행): `frontier89B_deal_path_adverse_selection_proxy_scout_v1`
 
-Latest completed run(최근 완료 실행): `frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1`
+Status(상태): `f89b_deal_path_teacher_proxy_scout_inconclusive_no_materialization_candidate_no_authority`
 
-Selected baseline(선택 기준선): not claimed(주장 없음)
+Judgment(판정): `inconclusive_small_sample_deal_path_teacher_proxy_no_runtime_candidate_no_runtime_evidence`
 
-Operating promotion(운영 승격): not claimed(주장 없음)
+Runtime probe(런타임 탐침): `not_run_no_meaningful_materialization_candidate_no_runtime_claim`
 
-Runtime authority(런타임 권위): not claimed(주장 없음)
+Selected baseline(선택 기준선): not_claimed(주장하지 않음)
 
-Goal Achieve(목표 달성): not claimed(주장 없음)
+Operating promotion(운영 승격): not_claimed(주장하지 않음)
 
-Action(행동): F88C recorded runtime probe evidence(F88C는 런타임 탐침 근거를 기록).
+Runtime authority(런타임 권위): not_claimed(주장하지 않음)
 
-Effect(효과): F89 formal open(F89 정식 개방)은 아직 하지 않았고, due/rotation checks(도래/회전 점검)가 다음 묶음이다.
+Live readiness(실거래 준비): not_claimed(주장하지 않음)
+
+Goal Achieve(목표 달성): not_claimed(주장하지 않음)
+
+Next action(다음 행동): `frontier89C_deal_path_teacher_repair_or_rotation_decision_v1`.

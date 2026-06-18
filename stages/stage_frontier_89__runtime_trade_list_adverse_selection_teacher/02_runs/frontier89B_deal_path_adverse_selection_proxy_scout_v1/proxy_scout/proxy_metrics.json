@@ -1,0 +1,212 @@
+{
+  "allowed_claims": [
+    "f89b_deal_episode_surface_recorded",
+    "f89b_entry_feature_join_recorded",
+    "f89b_teacher_proxy_scout_recorded",
+    "f89b_negative_or_inconclusive_memory_recorded"
+  ],
+  "candidate_decision": {
+    "gap_cause": "joined deal episode count below predeclared runtime-candidate minimum and no Tier B fallback deal surface",
+    "inner_train_top20": {
+      "adverse_rate_lift": 0.5714285714285714,
+      "avg_rejected_score": 0.9600403170697985,
+      "candidate_id": "deal_path_adverse_teacher__inner_train__top_20pct",
+      "net_delta_vs_take_all": 48.66,
+      "net_if_reject_top_risk": 13.569999999999993,
+      "rejected_profit_sum": -48.66,
+      "role_adverse_rate": 0.42857142857142855,
+      "role_net_profit_take_all": -35.09,
+      "rows": 14,
+      "runtime_claim": "not_claimed",
+      "selected_episode_ids": "f89b_ep_012;f89b_ep_004;f89b_ep_005",
+      "selected_rows": 3,
+      "selection_role": "inner_train",
+      "selection_uses_locked_forward": false,
+      "top_adverse_rate": 1.0,
+      "top_frac": 0.2
+    },
+    "locked_forward_readout_top20": {
+      "adverse_rate_lift": 0.05555555555555558,
+      "avg_rejected_score": 0.89454923207716,
+      "candidate_id": "deal_path_adverse_teacher__locked_forward_readout__top_20pct",
+      "net_delta_vs_take_all": 5.450000000000001,
+      "net_if_reject_top_risk": 4.339999999999999,
+      "rejected_profit_sum": -5.450000000000001,
+      "role_adverse_rate": 0.4444444444444444,
+      "role_net_profit_take_all": -1.110000000000002,
+      "rows": 9,
+      "runtime_claim": "not_claimed",
+      "selected_episode_ids": "f89b_ep_021;f89b_ep_022",
+      "selected_rows": 2,
+      "selection_role": "locked_forward_readout",
+      "selection_uses_locked_forward": false,
+      "top_adverse_rate": 0.5,
+      "top_frac": 0.2
+    },
+    "meaningful_candidate": false,
+    "minimum_runtime_candidate_episodes": 50,
+    "next_run_id": "frontier89C_deal_path_teacher_repair_or_rotation_decision_v1",
+    "runtime_probe_status": "not_run_no_meaningful_materialization_candidate_no_runtime_claim",
+    "runtime_probe_trigger_condition_met": false,
+    "scout_clue": true,
+    "selected_candidate_id": "deal_path_adverse_teacher__locked_forward_readout__top_20pct"
+  },
+  "claim_boundary": "proxy_scout_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "created_at_utc": "2026-06-18T23:41:47Z",
+  "decision": "close_f89b_proxy_scout_inconclusive_route_to_f89c_repair_or_rotation",
+  "economics_reference_from_deal_episodes": {
+    "avg_loss": -11.097,
+    "avg_win": 5.751538461538463,
+    "calendar_days": 7.0,
+    "expectancy": -1.5739130434782613,
+    "gross_loss": -110.97,
+    "gross_profit": 74.77000000000001,
+    "long_trade_count": 14,
+    "max_consecutive_loss": 3,
+    "net_profit": -36.20000000000001,
+    "profit_factor": 0.6737857078489683,
+    "short_trade_count": 9,
+    "trade_count": 23,
+    "trades_per_day": 3.2857142857142856,
+    "win_rate": 0.5652173913043478
+  },
+  "episode_diagnostics": {
+    "avg_loss": -11.097,
+    "avg_win": 5.751538461538463,
+    "blockers": [
+      "none_detected"
+    ],
+    "episode_rows": 23,
+    "gross_loss": -110.97,
+    "gross_profit": 74.77000000000001,
+    "input_deal_rows": 46,
+    "loss_rate": 0.43478260869565216,
+    "net_profit": -36.20000000000001,
+    "win_rate": 0.5652173913043478
+  },
+  "feature_join_diagnostics": {
+    "episode_rows": 23,
+    "feature_rows": 316,
+    "future_leakage_boundary": "entry rows join only to same closed bar feature record already used by F88C runtime probe",
+    "join_key": "entry_time_server_to_bar_time_server_exact",
+    "joined_rows": 23,
+    "unmatched_episode_ids": [
+      "none_detected"
+    ]
+  },
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents"
+  ],
+  "judgment": "inconclusive_small_sample_deal_path_teacher_proxy_no_runtime_candidate_no_runtime_evidence",
+  "model_diagnostics": {
+    "coefficients_top_abs": [
+      {
+        "coefficient": -0.5783517593976203,
+        "feature": "adx_14"
+      },
+      {
+        "coefficient": -0.5741999322574015,
+        "feature": "us10yr_zscore_20"
+      },
+      {
+        "coefficient": 0.5103296276152404,
+        "feature": "stoch_kd_diff"
+      },
+      {
+        "coefficient": 0.4904841774268907,
+        "feature": "stochrsi_kd_diff"
+      },
+      {
+        "coefficient": -0.3918883622849688,
+        "feature": "historical_vol_5_over_20"
+      },
+      {
+        "coefficient": -0.3262835822415367,
+        "feature": "us10yr_change_1"
+      },
+      {
+        "coefficient": -0.31263628267010185,
+        "feature": "us100_minus_mega8_equal_return_1"
+      },
+      {
+        "coefficient": 0.30276772571669464,
+        "feature": "amzn_xnas_log_return_1"
+      },
+      {
+        "coefficient": 0.27548844582880744,
+        "feature": "mega8_equal_return_1"
+      },
+      {
+        "coefficient": -0.2521406397022836,
+        "feature": "roc_12"
+      },
+      {
+        "coefficient": 0.2366610118292053,
+        "feature": "msft_xnas_log_return_1"
+      },
+      {
+        "coefficient": -0.22060179128012952,
+        "feature": "vortex_indicator"
+      }
+    ],
+    "feature_count": 62,
+    "inner_train_auc": 1.0,
+    "inner_train_average_precision": 1.0,
+    "inner_train_brier": 0.00888790076311963,
+    "joined_all_auc": 0.9076923076923077,
+    "joined_all_average_precision": 0.9288888888888888,
+    "joined_all_brier": 0.11036357575734021,
+    "joined_rows": 23,
+    "locked_forward_readout_auc": 0.7000000000000001,
+    "locked_forward_readout_average_precision": 0.7291666666666666,
+    "locked_forward_readout_brier": 0.26821462574835003,
+    "model_status": "trained_logistic_regression_inner_train_only",
+    "readout_rows": 9,
+    "target_negative_rows": 13,
+    "target_positive_rows": 10,
+    "train_rows": 14
+  },
+  "next_run_id": "frontier89C_deal_path_teacher_repair_or_rotation_decision_v1",
+  "parent_run_id": "frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1",
+  "run_id": "frontier89B_deal_path_adverse_selection_proxy_scout_v1",
+  "runtime_probe_status": "not_run_no_meaningful_materialization_candidate_no_runtime_claim",
+  "stage_id": "stage_frontier_89__runtime_trade_list_adverse_selection_teacher",
+  "status": "f89b_deal_path_teacher_proxy_scout_inconclusive_no_materialization_candidate_no_authority",
+  "tier_scope_records": {
+    "Tier A used": {
+      "claim_effect": "reference runtime output only; no authority",
+      "episodes": 23,
+      "net_profit": -36.20000000000001,
+      "source": "F88C Tier A runtime validation deal output",
+      "status": "recorded"
+    },
+    "Tier B fallback used": {
+      "claim_effect": "F89B cannot generalize Tier B behavior.",
+      "reason": "F88C telemetry has tier_b_fallback_used_count=0 and no Tier B deal output for this packet.",
+      "status": "missing_required"
+    },
+    "actual routed total": {
+      "claim_effect": "combined/routed view equals available Tier A source rows only.",
+      "episodes": 23,
+      "route": "Tier A only in source runtime probe; no fallback rows",
+      "status": "recorded_with_boundary"
+    },
+    "runtime_probe_trigger_condition_met": false
+  }
+}

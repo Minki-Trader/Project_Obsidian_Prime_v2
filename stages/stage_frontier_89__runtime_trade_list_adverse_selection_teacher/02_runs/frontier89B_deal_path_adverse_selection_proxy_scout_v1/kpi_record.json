@@ -1,0 +1,79 @@
+{
+  "allowed_claims": [
+    "f89b_deal_episode_surface_recorded",
+    "f89b_entry_feature_join_recorded",
+    "f89b_teacher_proxy_scout_recorded",
+    "f89b_negative_or_inconclusive_memory_recorded"
+  ],
+  "claim_boundary": "proxy_scout_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents"
+  ],
+  "gap_cause": "joined deal episode count below predeclared runtime-candidate minimum and no Tier B fallback deal surface",
+  "kpi_scope": "proxy_scout_no_runtime_economics",
+  "next_action": "frontier89C_deal_path_teacher_repair_or_rotation_decision_v1",
+  "proxy_kpi": {
+    "episodes": 23,
+    "joined_rows": 23,
+    "meaningful_candidate": false,
+    "readout_top20_adverse_lift": 0.05555555555555558,
+    "readout_top20_net_delta": 5.450000000000001,
+    "scout_clue": true
+  },
+  "run_id": "frontier89B_deal_path_adverse_selection_proxy_scout_v1",
+  "runtime_kpi": "not_applicable_no_strategy_tester_run",
+  "runtime_reference_economics_from_deals": {
+    "avg_loss": -11.097,
+    "avg_win": 5.751538461538463,
+    "calendar_days": 7.0,
+    "expectancy": -1.5739130434782613,
+    "gross_loss": -110.97,
+    "gross_profit": 74.77000000000001,
+    "long_trade_count": 14,
+    "max_consecutive_loss": 3,
+    "net_profit": -36.20000000000001,
+    "profit_factor": 0.6737857078489683,
+    "short_trade_count": 9,
+    "trade_count": 23,
+    "trades_per_day": 3.2857142857142856,
+    "win_rate": 0.5652173913043478
+  },
+  "stage_id": "stage_frontier_89__runtime_trade_list_adverse_selection_teacher",
+  "tier_scope_records": {
+    "Tier A used": {
+      "claim_effect": "reference runtime output only; no authority",
+      "episodes": 23,
+      "net_profit": -36.20000000000001,
+      "source": "F88C Tier A runtime validation deal output",
+      "status": "recorded"
+    },
+    "Tier B fallback used": {
+      "claim_effect": "F89B cannot generalize Tier B behavior.",
+      "reason": "F88C telemetry has tier_b_fallback_used_count=0 and no Tier B deal output for this packet.",
+      "status": "missing_required"
+    },
+    "actual routed total": {
+      "claim_effect": "combined/routed view equals available Tier A source rows only.",
+      "episodes": 23,
+      "route": "Tier A only in source runtime probe; no fallback rows",
+      "status": "recorded_with_boundary"
+    },
+    "runtime_probe_trigger_condition_met": false
+  }
+}

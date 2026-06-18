@@ -1,0 +1,83 @@
+{
+  "allowed_claims": [],
+  "audit_name": "model_validation_audit",
+  "completed_forbidden": false,
+  "counts": {
+    "model_diagnostics": {
+      "coefficients_top_abs": [
+        {
+          "coefficient": -0.5783517593976203,
+          "feature": "adx_14"
+        },
+        {
+          "coefficient": -0.5741999322574015,
+          "feature": "us10yr_zscore_20"
+        },
+        {
+          "coefficient": 0.5103296276152404,
+          "feature": "stoch_kd_diff"
+        },
+        {
+          "coefficient": 0.4904841774268907,
+          "feature": "stochrsi_kd_diff"
+        },
+        {
+          "coefficient": -0.3918883622849688,
+          "feature": "historical_vol_5_over_20"
+        },
+        {
+          "coefficient": -0.3262835822415367,
+          "feature": "us10yr_change_1"
+        },
+        {
+          "coefficient": -0.31263628267010185,
+          "feature": "us100_minus_mega8_equal_return_1"
+        },
+        {
+          "coefficient": 0.30276772571669464,
+          "feature": "amzn_xnas_log_return_1"
+        },
+        {
+          "coefficient": 0.27548844582880744,
+          "feature": "mega8_equal_return_1"
+        },
+        {
+          "coefficient": -0.2521406397022836,
+          "feature": "roc_12"
+        },
+        {
+          "coefficient": 0.2366610118292053,
+          "feature": "msft_xnas_log_return_1"
+        },
+        {
+          "coefficient": -0.22060179128012952,
+          "feature": "vortex_indicator"
+        }
+      ],
+      "feature_count": 62,
+      "inner_train_auc": 1.0,
+      "inner_train_average_precision": 1.0,
+      "inner_train_brier": 0.00888790076311963,
+      "joined_all_auc": 0.9076923076923077,
+      "joined_all_average_precision": 0.9288888888888888,
+      "joined_all_brier": 0.11036357575734021,
+      "joined_rows": 23,
+      "locked_forward_readout_auc": 0.7000000000000001,
+      "locked_forward_readout_average_precision": 0.7291666666666666,
+      "locked_forward_readout_brier": 0.26821462574835003,
+      "model_status": "trained_logistic_regression_inner_train_only",
+      "readout_rows": 9,
+      "target_negative_rows": 13,
+      "target_positive_rows": 10,
+      "train_rows": 14
+    },
+    "model_or_threshold_surface": "logistic adverse-selection teacher proxy or prior-only fallback",
+    "overfit_checks": "small sample blocks materialization candidate even if readout clue appears",
+    "selection_metric_boundary": "locked_forward_readout is readout only; no runtime/economics claim",
+    "validation_split": "time ordered inner_train/locked_forward_readout"
+  },
+  "findings": [],
+  "forbidden_claims": [],
+  "passed": true,
+  "status": "pass_with_inconclusive_boundary"
+}

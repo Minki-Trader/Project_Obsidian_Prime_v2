@@ -1,15 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-Updated(갱신): 2026-06-18T23:12:47Z
+Updated(갱신): 2026-06-18T23:41:47Z
 
-Active stage(활성 단계): `stage_frontier_88__runtime_substrate_first_materialization_probe`
+Active stage(활성 단계): `stage_frontier_89__runtime_trade_list_adverse_selection_teacher`
 
-Current run(현재 실행): `frontier89_pending_frontier_extra_due_and_topic_rotation_check_v1`
+Current run(현재 실행): `frontier89C_deal_path_teacher_repair_or_rotation_decision_v1`
 
-Latest completed run(최근 완료 실행): `frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1`
+Latest completed run(최근 완료 실행): `frontier89B_deal_path_adverse_selection_proxy_scout_v1`
 
-Action(행동): F88C ran one MT5 Strategy Tester runtime probe(F88C는 MT5 전략 테스터 런타임 탐침 1회를 실행) and separated trade-list CSV(거래목록 CSV를 분리).
+Action(행동): F89B converted F88C runtime deals(F88C 런타임 딜)을 episode/teacher proxy(에피소드/교사 프록시)로 바꿨다.
 
-Effect(효과): Runtime evidence(런타임 근거)는 강화됐지만 runtime authority(런타임 권위), selected baseline(선택 기준선), live readiness(실거래 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+Effect(효과): sample size(표본 수)와 Tier B absence(Tier B 부재) 때문에 runtime materialization candidate(런타임 물질화 후보)는 만들지 않고 repair/rotation decision(수리/회전 결정)으로 넘긴다.
 
-Claim boundary(주장 경계): `runtime_probe_observation_only_no_completion_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+Claim boundary(주장 경계): `proxy_scout_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

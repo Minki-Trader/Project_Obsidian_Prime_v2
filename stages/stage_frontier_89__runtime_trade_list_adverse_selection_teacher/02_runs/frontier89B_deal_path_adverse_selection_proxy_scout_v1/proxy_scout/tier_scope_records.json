@@ -1,0 +1,21 @@
+{
+  "Tier A used": {
+    "claim_effect": "reference runtime output only; no authority",
+    "episodes": 23,
+    "net_profit": -36.20000000000001,
+    "source": "F88C Tier A runtime validation deal output",
+    "status": "recorded"
+  },
+  "Tier B fallback used": {
+    "claim_effect": "F89B cannot generalize Tier B behavior.",
+    "reason": "F88C telemetry has tier_b_fallback_used_count=0 and no Tier B deal output for this packet.",
+    "status": "missing_required"
+  },
+  "actual routed total": {
+    "claim_effect": "combined/routed view equals available Tier A source rows only.",
+    "episodes": 23,
+    "route": "Tier A only in source runtime probe; no fallback rows",
+    "status": "recorded_with_boundary"
+  },
+  "runtime_probe_trigger_condition_met": false
+}

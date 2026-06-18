@@ -1,0 +1,106 @@
+{
+  "created_at_utc": "2026-06-18T23:32:05Z",
+  "hypothesis": {
+    "id": "f89_runtime_trade_list_adverse_selection_teacher_v1",
+    "plain_korean": "F88C의 런타임 딜 행을 사전 진입 교사 라벨로 바꾸면, 새 ONNX/EA 표면을 물질화하기 전에 역선택, 손익 비대칭, 취약한 진입 타이밍을 먼저 걸러낼 수 있다는 가설이다.",
+    "statement": "F88C's runtime deal rows can be converted into a pre-entry teacher label that marks adverse selection, payoff asymmetry, and fragile entry timing before another ONNX/EA surface is materialized."
+  },
+  "minimum_work": [
+    "Build deal episodes from F88C deals CSV or close invalid with exact blocker.",
+    "Join entry times to closed-bar feature matrix without future leakage or close invalid.",
+    "Train or score a narrow adverse-selection teacher surface across Tier A, Tier B, and combined/routed views where available.",
+    "If a meaningful materialization candidate appears, attempt narrow MT5 Strategy Tester runtime probe in the same packet.",
+    "Record zero-signal, mismatch, crash, or block as negative/inconclusive/invalid/blocked evidence."
+  ],
+  "not_allowed": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents",
+    "threshold_filter_parameter_only_repair",
+    "proxy_only_runtime_claim"
+  ],
+  "parent_run_id": "frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1",
+  "protected_claims": [
+    "deal_path_teacher_proxy_scout_attempted",
+    "teacher_join_gap_recorded",
+    "candidate_or_negative_memory_recorded"
+  ],
+  "recommended_primary_family": "experiment_execution",
+  "recommended_verification_profile": "proxy_scout",
+  "required_evidence": {
+    "claim_boundary": "stage_open_design_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+    "contract_version": "f89_runtime_trade_list_adverse_selection_teacher_contract_v1",
+    "created_at_utc": "2026-06-18T23:32:05Z",
+    "episode_builder": {
+      "known_gap": "Expected separate trades CSV path is missing; F89B must not pretend the missing path exists.",
+      "pairing_rule": "pair in/out deal rows by sequence, direction, volume, and symbol; block if pairing is ambiguous",
+      "required_columns": [
+        "time",
+        "ticket",
+        "symbol",
+        "order_type",
+        "direction",
+        "volume",
+        "price",
+        "profit",
+        "balance"
+      ],
+      "source": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_deals.csv"
+    },
+    "f89b_minimum_outputs": [
+      "episode_table_or_blocker",
+      "entry_feature_join_report_or_blocker",
+      "Tier A separate, Tier B separate, and combined/routed records or structured missing_required rows",
+      "proxy KPI with gap cause and next action",
+      "runtime probe attempt if a meaningful materialization candidate and protected runtime claim exists"
+    ],
+    "purpose": "Define how F89B may transform runtime deal rows into a pre-entry teacher surface without authority claims.",
+    "run_id": "frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1",
+    "runtime_claim_rule": "Proxy-only and ONNX handoff are not runtime evidence; Strategy Tester identity and output hashes are required for runtime claims.",
+    "stage_id": "stage_frontier_89__runtime_trade_list_adverse_selection_teacher",
+    "teacher_labels": [
+      {
+        "effect": "marks entries that should be rejected or down-weighted before runtime materialization",
+        "label_id": "adverse_selection_loss_episode",
+        "positive_condition": "episode profit <= 0 or loss-after-cost if costs are available"
+      },
+      {
+        "effect": "targets low-payoff entries that create negative expectancy despite acceptable win rate",
+        "label_id": "payoff_asymmetry_fragile_episode",
+        "positive_condition": "loss magnitude or duration-adjusted loss dominates recent average win potential"
+      },
+      {
+        "effect": "blocks training if runtime rows cannot be represented at pre-entry time",
+        "label_id": "entry_time_join_validity",
+        "positive_condition": "entry timestamp joins to closed-bar features without future leakage"
+      }
+    ]
+  },
+  "run_id": "frontier89B_deal_path_adverse_selection_proxy_scout_v1",
+  "stage_id": "stage_frontier_89__runtime_trade_list_adverse_selection_teacher",
+  "stop_conditions": [
+    "Stop F89A after design artifacts, pre-open checks, packet receipts, gates, and state sync are written.",
+    "Do not run MT5 in F89A because no runtime/materialization/economics claim is protected in this packet.",
+    "F89B must attempt a narrow MT5 runtime probe in the same packet if a meaningful candidate and runtime/economics claim emerges.",
+    "F89B must close negative/inconclusive/invalid/blocked if deal pairing, feature join, or runtime probe evidence cannot be produced."
+  ],
+  "trigger_sources": [
+    "active_goal",
+    "F89A teacher contract",
+    "F88C runtime deal output reference"
+  ]
+}

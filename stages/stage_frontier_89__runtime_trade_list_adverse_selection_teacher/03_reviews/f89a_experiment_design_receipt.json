@@ -1,0 +1,53 @@
+{
+  "baseline": {
+    "negative_memory_used": [
+      "F88C runtime economics were negative: net=-36.2, PF=0.67, DD=17.16%, trades=23.",
+      "F88C reduced timestamp skip but still had 1063 feature skips.",
+      "F88C separated a deals CSV, while the expected trades CSV path is missing in the current folder."
+    ],
+    "not_inherited": [
+      "selected baseline",
+      "promotion history",
+      "runtime authority",
+      "live readiness",
+      "Goal Achieve"
+    ],
+    "reference_only": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1"
+  },
+  "changed_variables": [
+    "label target changes from path-label or threshold repair to runtime deal-path adverse-selection teacher",
+    "source representation changes from proxy-only feature rows to Strategy Tester deal and telemetry output as teacher evidence",
+    "risk logic changes from post-hoc PF selection to pre-entry fragile-entry rejection design"
+  ],
+  "evidence_plan": {
+    "f89a_required": [
+      "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/design/f89a_experiment_design.json",
+      "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/design/runtime_trade_list_adverse_selection_teacher_contract.json",
+      "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/design/f89b_deal_path_adverse_selection_proxy_scout_brief.json",
+      "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/run_manifest.json",
+      "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/reports/result_summary.md"
+    ],
+    "f89b_required_if_signal_exists": [
+      "dataset_id",
+      "feature_set_id",
+      "label_id",
+      "split_id",
+      "ONNX/EA/set/feature hashes if materialized",
+      "Strategy Tester report/trade-list/telemetry hashes if runtime claim is made"
+    ]
+  },
+  "hypothesis": {
+    "id": "f89_runtime_trade_list_adverse_selection_teacher_v1",
+    "plain_korean": "F88C의 런타임 딜 행을 사전 진입 교사 라벨로 바꾸면, 새 ONNX/EA 표면을 물질화하기 전에 역선택, 손익 비대칭, 취약한 진입 타이밍을 먼저 걸러낼 수 있다는 가설이다.",
+    "statement": "F88C's runtime deal rows can be converted into a pre-entry teacher label that marks adverse selection, payoff asymmetry, and fragile entry timing before another ONNX/EA surface is materialized."
+  },
+  "invalid_conditions": [
+    "Deal rows cannot be paired into trade episodes and the packet still claims a teacher label.",
+    "Entry-time features cannot be joined without future leakage and the packet still trains a candidate.",
+    "Task Force review is claimed without actual selected-agent calls."
+  ],
+  "packet_id": "frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1",
+  "receipt_path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89a_experiment_design_receipt.json",
+  "skill": "obsidian-experiment-design",
+  "status": "executed"
+}

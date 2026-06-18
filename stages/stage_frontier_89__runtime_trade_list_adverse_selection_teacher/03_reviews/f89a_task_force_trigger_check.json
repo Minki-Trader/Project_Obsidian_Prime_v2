@@ -1,0 +1,28 @@
+{
+  "allowed_claims": [
+    "task_force_trigger_status_recorded"
+  ],
+  "audit_name": "task_force_trigger_check",
+  "counts": {
+    "actual_subagent_calls": [],
+    "claim_effect": "No Task Force review claim is made. If a later packet requires review, relevant roster agents must be called and recorded.",
+    "reason": "No Task Force reviewed/pass claim, policy change, roster review, architecture cross-system claim, or stage closeout pass claim is made in F89A.",
+    "required": false,
+    "trigger_sources_checked": [
+      "explicit_user_instruction",
+      "work_packet_claim_surface",
+      "required_gates",
+      "family_rule",
+      "stage_open_claim"
+    ]
+  },
+  "findings": [],
+  "forbidden_claims": [
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass"
+  ],
+  "passed": true,
+  "status": "not_triggered_no_review_claim"
+}

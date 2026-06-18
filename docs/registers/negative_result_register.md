@@ -1520,3 +1520,13 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Do-not-repeat(반복 금지): same F04D reference ONNX(동일 F04D 참고 온엑스)를 threshold/filter/parameter-only repair(임계값/필터/파라미터만 수리)로 반복하지 않는다.
 - Reopen condition(재개 조건): new source/data representation/label/runtime representation/risk logic/regime split(새 원천/데이터 표현/라벨/런타임 표현/위험 로직/장세 분할) 중 하나 이상이 있어야 한다.
 - Boundary(경계): `runtime_probe_observation_only_no_completion_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+## F89B deal-path teacher proxy scout(F89B 딜 경로 교사 프록시 탐색)
+
+- run_id: `frontier89B_deal_path_adverse_selection_proxy_scout_v1`
+- judgment(판정): `inconclusive_small_sample_deal_path_teacher_proxy_no_runtime_candidate_no_runtime_evidence`
+- proxy KPI(프록시 핵심 성과 지표): episodes `23`, joined rows `23`, meaningful candidate `False`.
+- runtime KPI(런타임 핵심 성과 지표): not_applicable(해당 없음), no Strategy Tester run(전략 테스터 실행 없음).
+- gap cause(간극 원인): `joined deal episode count below predeclared runtime-candidate minimum and no Tier B fallback deal surface`.
+- do_not_repeat(반복 금지): do not promote this small-sample teacher proxy by threshold/filter retune only(이 소표본 교사 프록시를 임계값/필터 조정만으로 승격하지 않기).
+- next_action(다음 행동): `frontier89C_deal_path_teacher_repair_or_rotation_decision_v1`.
+- claim_boundary(주장 경계): `proxy_scout_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

@@ -1,0 +1,24 @@
+{
+  "baseline": "F88C reference runtime output only; no authority inherited",
+  "changed_variables": [
+    "deal episode teacher label",
+    "entry feature join",
+    "adverse rejection proxy"
+  ],
+  "evidence_plan": [
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/episodes/deal_episodes.csv",
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/proxy_scout/feature_join_report.json",
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/proxy_scout/proxy_metrics.json",
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/proxy_scout/candidate_queue.csv"
+  ],
+  "hypothesis": "runtime deal rows can teach adverse-selection rejection before ONNX/EA materialization",
+  "invalid_conditions": [
+    "episode pairing fails",
+    "feature join leaks future data",
+    "runtime claim made without Strategy Tester output"
+  ],
+  "packet_id": "frontier89B_deal_path_adverse_selection_proxy_scout_v1",
+  "receipt_path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_experiment_design_receipt.json",
+  "skill": "obsidian-experiment-design",
+  "status": "executed"
+}

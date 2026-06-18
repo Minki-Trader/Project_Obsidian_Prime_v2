@@ -7440,3 +7440,8 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 
 - Action(행동): F88C ran MT5 runtime timestamp coverage/trade-list repair probe(F88C가 MT5 런타임 타임스탬프 커버리지/거래목록 수리 탐침을 실행).
 - Effect(효과): report/telemetry/trade-list hashes(보고서/기록/거래목록 해시)를 남겼고 authority/live readiness/Goal Achieve(권위/실거래 준비/목표 달성)는 주장하지 않았다.
+## 2026-06-18T23:30:47Z - F89A stage open(F89A 단계 개방)
+
+- Action(행동): opened `stage_frontier_89__runtime_trade_list_adverse_selection_teacher` with runtime trade-list adverse-selection teacher design(런타임 거래목록 역선택 교사 설계).
+- Effect(효과): current run(현재 실행)은 `frontier89B_deal_path_adverse_selection_proxy_scout_v1`이며, authority/promotion/Goal Achieve(권위/승격/목표 달성)는 주장하지 않는다.
+- Packet(묶음): `docs/agent_control/packets/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/work_packet.yaml`.
