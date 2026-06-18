@@ -1,0 +1,57 @@
+{
+  "data_hash_or_identity": [
+    {
+      "exists": true,
+      "path": "docs/contracts/time_axis_policy_fpmarkets_v2.md",
+      "sha256_lf_normalized": "0c7f606ad696c3cf9fa024752e553185f7b7025edee9943ee81fa92a667a3b31",
+      "size_bytes": 3402
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/feature_calculation_spec_fpmarkets_v2.md",
+      "sha256_lf_normalized": "8c9ebe68f5554dfdd4d93b0131ca3ea7e54d9f3c298a6fc11b59d47a365b5d65",
+      "size_bytes": 14357
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md",
+      "sha256_lf_normalized": "492142c1b2292eeb704dc506668d66fd61ec84ab35a0fcb44b76a6a83523818b",
+      "size_bytes": 14663
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md",
+      "sha256_lf_normalized": "263460622878df974b1e3b5f11f7032a925673b8b338b66a4161c02eee6425e4",
+      "size_bytes": 20198
+    }
+  ],
+  "data_source": "F88A design-only; F88B expected runtime data contracts listed.",
+  "data_sources_checked": [
+    "docs/contracts/time_axis_policy_fpmarkets_v2.md",
+    "docs/contracts/feature_calculation_spec_fpmarkets_v2.md",
+    "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md",
+    "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md"
+  ],
+  "feature_label_boundary": "No feature/label matrix generated in F88A; F88B must name boundary before runtime economics.",
+  "integrity_judgment": "usable_with_boundary",
+  "leakage_checks": [
+    "no dataset consumed",
+    "F88B must block prior artifact authority laundering",
+    "F88B must block future outcome in runtime inputs"
+  ],
+  "leakage_risk": "prior artifact authority laundering or future outcome in runtime inputs",
+  "missing_data_boundary": "not_applicable_design_only_no_dataset_consumed",
+  "missing_or_duplicate_check": "not_applicable_design_only",
+  "packet_id": "frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1",
+  "receipt_path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88a_data_integrity_receipt.json",
+  "sample_scope": {
+    "current_packet": "design-only stage open; no data/model/runtime execution",
+    "f88b_expected_scope": "narrow MT5 preflight on current foundation/mt5 runtime helpers",
+    "tier_scope": "not_applicable_design; F88B must record Tier A/B/combined or out_of_scope_by_claim if runtime economics are attempted"
+  },
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "not_applicable_design_only",
+  "status": "executed",
+  "time_axis": "closed M5 bar only; no current-bar contamination",
+  "time_axis_boundary": "closed M5 bar only; no current-bar contamination"
+}

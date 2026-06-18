@@ -1,0 +1,26 @@
+{
+  "allowed_claims": [
+    "model_validation_boundary_named"
+  ],
+  "audit_name": "model_validation_audit",
+  "counts": {
+    "calibration_risk": "F88B must not treat rank/proxy scores as calibrated probabilities without evidence.",
+    "comparison_baseline": "no selected baseline inherited",
+    "model_family": "not_selected_in_f88a",
+    "overfit_risk": "F88B must not select based on OOS or tester hindsight.",
+    "secondary_metrics": [
+      "runtime output identity",
+      "telemetry/report/trade-list presence",
+      "fatal mismatch absence"
+    ],
+    "selection_metric": "not_applicable_design_only",
+    "split_method": "not_applicable_design_only",
+    "target_and_label": "not_selected_in_f88a",
+    "threshold_policy": "not_selected_in_f88a",
+    "validation_judgment": "exploratory_design"
+  },
+  "findings": [],
+  "forbidden_claims": [],
+  "passed": true,
+  "status": "pass_design_boundary"
+}

@@ -1,10 +1,16 @@
 ﻿# F88 Input References(F88 입력 참조)
 
-- `stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/frontier87D_stage_closeout_or_f88_rotation_handoff_report.md`
-- `stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87d_stage_closeout_summary.json`
-- `stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/summary.json`
-- `stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_metrics.json`
-- `stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87C_trade_shape_risk_repair_or_rotation_decision_v1/decision/trade_shape_risk_repair_or_rotation_decision.json`
-- `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
+- `stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/stage_closeout_report.md`
+- `stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87D_stage_closeout_or_f88_rotation_handoff_v1/summary.json`
+- `stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/design/runtime_substrate_identity_contract.json`
+- `stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/design/runtime_tool_inventory.json`
+- `stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/design/f88b_minimal_runtime_substrate_preflight_brief.json`
+- `docs/contracts/time_axis_policy_fpmarkets_v2.md`
+- `docs/contracts/feature_calculation_spec_fpmarkets_v2.md`
 - `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
-- `docs/policies/frontier_governance.md`
+- `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
+- `foundation/mt5/README.md`
+- `foundation/mt5/runtime_artifacts.py`
+- `foundation/mt5/terminal_runner.py`
+- `foundation/mt5/mql5_compile.py`
+- `foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5`

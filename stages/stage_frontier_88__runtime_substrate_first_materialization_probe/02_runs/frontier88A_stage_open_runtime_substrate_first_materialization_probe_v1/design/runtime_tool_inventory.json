@@ -1,0 +1,126 @@
+{
+  "created_at_utc": "2026-06-18T22:14:48Z",
+  "default_local_mt5_paths_from_backfill_runner": {
+    "common_files": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files",
+    "metaeditor": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MetaEditor64.exe",
+    "portable_root": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E",
+    "terminal": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/terminal64.exe",
+    "tester_profile_root": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Profiles/Tester"
+  },
+  "discovery_method": "rg --files foundation | rg \"(bundle|runtime|tester|mt5|onnx|compile)\"",
+  "inventory_boundary": "Inventory only; no compile, tester, runtime, economics, or handoff claim.",
+  "local_existence_probe": {
+    "common_files_exists": true,
+    "metaeditor_exists": true,
+    "terminal_exists": true,
+    "tester_profile_root_exists": true
+  },
+  "missing_skill_documented_bundle_helpers": [
+    {
+      "claim_effect": "Do not claim bundle helper availability; F88B must use current foundation/mt5 helpers or create a new helper in-scope.",
+      "exists": false,
+      "path": "foundation/pipelines/run_mt5_bundle_tester.py"
+    },
+    {
+      "claim_effect": "Do not claim bundle helper availability; F88B must use current foundation/mt5 helpers or create a new helper in-scope.",
+      "exists": false,
+      "path": "foundation/pipelines/compile_mt5_bundle_runtime.py"
+    },
+    {
+      "claim_effect": "Do not claim bundle helper availability; F88B must use current foundation/mt5 helpers or create a new helper in-scope.",
+      "exists": false,
+      "path": "foundation/pipelines/export_experiment_bundle_assets.py"
+    },
+    {
+      "claim_effect": "Do not claim bundle helper availability; F88B must use current foundation/mt5 helpers or create a new helper in-scope.",
+      "exists": false,
+      "path": "foundation/pipelines/build_experiment_bundle.py"
+    }
+  ],
+  "present_runtime_tools": [
+    {
+      "exists": true,
+      "path": "foundation/mt5/README.md",
+      "sha256_lf_normalized": "51e52c7d04500a8d405fc07a1f64e0f6d2671dbc64ed096d6361c47e160dd290",
+      "size_bytes": 1160
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/runtime_artifacts.py",
+      "sha256_lf_normalized": "d58364d4ead0279fafff0097495459069a69d104f63cf7895d4f3b0ef94c448d",
+      "size_bytes": 9085
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/terminal_runner.py",
+      "sha256_lf_normalized": "b12935cd3930a46e6bc77074f2906d3fdd9587a0ca869cfb4aa77b711d07914a",
+      "size_bytes": 4900
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/mql5_compile.py",
+      "sha256_lf_normalized": "d81eb73adceffca302d278bb15a01d255cfae161e3556b0b48a5fe4d4a0497ed",
+      "size_bytes": 4574
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "sha256_lf_normalized": "7ac7fe2ca7fe20924d7cc7aa88b6a754e155eeedf5ff3c722938663677af0e7f",
+      "size_bytes": 66702
+    },
+    {
+      "exists": true,
+      "path": "stage_pipelines/stage_frontier_runtime_backfill/run_frontier_runtime_probe_backfill.py",
+      "sha256_lf_normalized": "fef87af5e2344a1c62488079f50a460fb64fbc3ae1cfae9f621941d37fb5d565",
+      "size_bytes": 70583
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/DecisionSurface.mqh",
+      "sha256_lf_normalized": "2111ef31c959b92d68ce1759efa6d27d4caed6deefa5c76b514763918d4fead3",
+      "size_bytes": 7166
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/EbmTableRuntime.mqh",
+      "sha256_lf_normalized": "364323f70ee0fc8b4fe7fe7c2d5d41aeab0acef2ab427eadc0ed1922b08e0bd5",
+      "size_bytes": 11196
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh",
+      "sha256_lf_normalized": "073c35a299d0927b55a29e6f87fa7d8cdc8155995b01abfca18a6d1760b2a2bc",
+      "size_bytes": 21104
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh",
+      "sha256_lf_normalized": "c339bc33d16adb3effee93900f5451f439b6694f7ec265780c310bfae9cfd351",
+      "size_bytes": 14950
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh",
+      "sha256_lf_normalized": "d92c6473673130bcca076183875db983a45a8ba3dd97162f74fe1312e344c82d",
+      "size_bytes": 9491
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/ProbabilityBinVeto.mqh",
+      "sha256_lf_normalized": "3bb2efebb54c0493d08e2e114ddcd8702abef5aa070fb6cecd18a36856d2380a",
+      "size_bytes": 8111
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh",
+      "sha256_lf_normalized": "f0f32f0e084c025cf573b0f134f41ef323cb3900941ab798141afb641347f482",
+      "size_bytes": 17584
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/RuntimeVetoTape.mqh",
+      "sha256_lf_normalized": "a9e4fcfbbe21734b7af4d66b3544a91dfb5a9e3e30596d6e47ea10b3f5afd7f2",
+      "size_bytes": 6599
+    }
+  ]
+}

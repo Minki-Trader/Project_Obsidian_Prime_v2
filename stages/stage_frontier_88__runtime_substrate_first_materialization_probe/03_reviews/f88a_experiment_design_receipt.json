@@ -1,0 +1,120 @@
+{
+  "allowed_claims": [
+    "f88a_stage_open_design_prepared",
+    "f88_runtime_substrate_first_axis_opened",
+    "f88b_runtime_substrate_preflight_planned",
+    "frontier_extra_due_check_not_due_after_f87",
+    "five_stage_direction_synthesis_recorded",
+    "topic_rotation_check_passed_for_f88"
+  ],
+  "baseline": {
+    "not_inherited": [
+      "selected_baseline",
+      "operating_promotion",
+      "runtime_authority",
+      "live_readiness",
+      "goal_achieve"
+    ],
+    "previous_frontier": "frontier87D_stage_closeout_or_f88_rotation_handoff_v1",
+    "previous_judgment": "negative_trade_shape_risk_proxy_learning_no_runtime_candidate_no_authority"
+  },
+  "changed_variables": [
+    "stage purpose from candidate ranking to runtime substrate proof",
+    "first success criterion from proxy KPI to artifact/output/operation identity closure",
+    "next run may use runtime_probe profile if it protects runtime/materialization/handoff claims"
+  ],
+  "comparison_baseline": {
+    "not_inherited": [
+      "selected_baseline",
+      "operating_promotion",
+      "runtime_authority",
+      "live_readiness",
+      "goal_achieve"
+    ],
+    "previous_frontier": "frontier87D_stage_closeout_or_f88_rotation_handoff_v1",
+    "previous_judgment": "negative_trade_shape_risk_proxy_learning_no_runtime_candidate_no_authority"
+  },
+  "control_variables": {
+    "closed_bar_only": true,
+    "feature_contracts": [
+      "docs/contracts/time_axis_policy_fpmarkets_v2.md",
+      "docs/contracts/feature_calculation_spec_fpmarkets_v2.md",
+      "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md",
+      "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md"
+    ],
+    "output_schema_default": "[p_short, p_flat, p_long]",
+    "symbol": "US100",
+    "tester_defaults": {
+      "broker": "FPMarkets",
+      "deposit": 500,
+      "entry_timing": "next tick after closed-bar signal",
+      "fixed_lot": 0.1,
+      "leverage": 100,
+      "max_concurrent_positions": 1,
+      "model": "Every tick based on real ticks"
+    },
+    "timeframe": "M5"
+  },
+  "decision_use": "Prepare F88B to attempt the narrowest runtime substrate preflight or return a precise repair-ready blocker.",
+  "evidence_plan": {
+    "f88a_required": [
+      "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/design/f88a_experiment_design.json",
+      "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/design/runtime_substrate_identity_contract.json",
+      "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/design/runtime_tool_inventory.json",
+      "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/design/f88b_minimal_runtime_substrate_preflight_brief.json",
+      "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/run_manifest.json",
+      "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/reports/result_summary.md"
+    ],
+    "f88b_required_minimum": [
+      "tester_identity",
+      "runtime_bundle_identity",
+      "actual_output_identity_or_blocker",
+      "operation_proof_or_repair_target",
+      "runtime_evidence_gate if runtime/materialization/handoff claim is protected"
+    ]
+  },
+  "failure_criteria": [
+    "F88A opens as another F87 threshold/filter/parameter retune.",
+    "F88A claims materialization-ready or runtime authority from design-only artifacts.",
+    "F88A hides missing bundle helper scripts instead of naming the current helper gap."
+  ],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "task_force_reviewed",
+    "reviewed_by_unspawned_agents"
+  ],
+  "hypothesis": "If the runtime substrate identity is fixed first, later model candidates can be tested without confusing compile/parity/path existence with runtime economics.",
+  "invalid_conditions": [
+    "Compile-only evidence is treated as runtime evidence.",
+    "A report path alone is treated as actual Strategy Tester output.",
+    "Legacy or prior frontier runtime artifacts are treated as selected baseline or authority."
+  ],
+  "packet_id": "frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1",
+  "receipt_path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/f88a_experiment_design_receipt.json",
+  "sample_scope": {
+    "current_packet": "design-only stage open; no data/model/runtime execution",
+    "f88b_expected_scope": "narrow MT5 preflight on current foundation/mt5 runtime helpers",
+    "tier_scope": "not_applicable_design; F88B must record Tier A/B/combined or out_of_scope_by_claim if runtime economics are attempted"
+  },
+  "skill": "obsidian-experiment-design",
+  "status": "executed",
+  "stop_conditions": [
+    "Stop F88A after stage open design, runtime substrate contract, tool inventory, F88B brief, receipts, gates, and state sync are written.",
+    "Do not run MT5 or claim runtime economics in F88A.",
+    "F88B must use runtime_probe profile if it protects runtime/materialization/handoff/economics claims."
+  ],
+  "success_criteria": [
+    "F88A writes the runtime substrate identity contract.",
+    "F88A identifies present and missing MT5 helper surfaces without claiming runtime readiness.",
+    "F88A hands off to F88B with explicit probe/blocker stop conditions."
+  ]
+}

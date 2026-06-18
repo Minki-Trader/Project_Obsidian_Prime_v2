@@ -2378,3 +2378,10 @@ Register ideas when they become durable work, not for every passing thought.
 
 - Action(행동): F87 trade-shape/risk proxy axis(거래 형태/위험 프록시 축)를 negative/no authority(부정/권위 없음)로 닫았다.
 - Effect(효과): next(다음)는 `frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1`이며, runtime-substrate-first materialization probe(런타임 바탕 우선 물질화 탐침)로 회전한다.
+<!-- frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1 -->
+
+## frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1
+
+- Action(행동): F88 runtime-substrate-first axis(런타임 바탕 우선 축)을 design-only(설계 전용)로 열었다.
+- Effect(효과): next(다음)는 `frontier88B_minimal_runtime_substrate_preflight_v1`이며, Strategy Tester output identity(전략 테스터 출력 정체성)를 실제로 시도하거나 blocker(차단 사유)를 남긴다.
+- Boundary(경계): `stage_open_design_only_no_runtime_materialization_no_strategy_tester_economics_no_runtime_authority_no_live_readiness_no_goal_achieve`.

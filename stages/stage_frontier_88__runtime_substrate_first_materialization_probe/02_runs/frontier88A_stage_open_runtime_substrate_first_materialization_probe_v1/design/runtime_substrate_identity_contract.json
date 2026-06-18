@@ -1,0 +1,51 @@
+{
+  "actual_output_required": [
+    "strategy_tester_report_hash",
+    "trade_list_hash",
+    "telemetry_hash",
+    "terminal_or_tester_log_hash",
+    "normalized_kpi",
+    "parser_status"
+  ],
+  "claim_boundary": "stage_open_design_only_no_runtime_materialization_no_strategy_tester_economics_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "claim_effect": {
+    "all_present": "runtime_probe observation can be claimed, not runtime authority",
+    "compile_only": "not runtime/economics evidence",
+    "missing_runtime_output": "blocked/inconclusive/repair_ready_with_boundary only",
+    "path_only": "not runtime/economics evidence"
+  },
+  "contract_version": "f88_runtime_substrate_identity_contract_v1",
+  "created_at_utc": "2026-06-18T22:14:48Z",
+  "f88b_minimum_action": "Attempt narrow runtime substrate preflight, or write exact blocker/repair/rerun condition.",
+  "operation_proof_required": [
+    "ea_loaded",
+    "onnx_inference_called",
+    "report_generated",
+    "telemetry_updated",
+    "no_fatal_runtime_mismatch"
+  ],
+  "purpose": "Define the minimum evidence needed before runtime/materialization/handoff/economics claims can be strengthened.",
+  "run_id": "frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1",
+  "runtime_bundle_identity_required": [
+    "onnx_hash",
+    "ea_source_hash",
+    "ea_binary_hash",
+    "set_or_ini_hash",
+    "feature_order_hash",
+    "parser_runtime_contract_version"
+  ],
+  "stage_id": "stage_frontier_88__runtime_substrate_first_materialization_probe",
+  "tester_identity_required": [
+    "broker",
+    "symbol",
+    "timeframe",
+    "date_range",
+    "modeling_mode",
+    "deposit",
+    "leverage",
+    "spread",
+    "commission",
+    "slippage",
+    "swap"
+  ]
+}

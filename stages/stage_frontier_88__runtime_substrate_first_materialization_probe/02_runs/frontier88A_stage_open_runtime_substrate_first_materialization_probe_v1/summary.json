@@ -1,0 +1,491 @@
+{
+  "allowed_claims": [
+    "f88a_stage_open_design_prepared",
+    "f88_runtime_substrate_first_axis_opened",
+    "f88b_runtime_substrate_preflight_planned",
+    "frontier_extra_due_check_not_due_after_f87",
+    "five_stage_direction_synthesis_recorded",
+    "topic_rotation_check_passed_for_f88"
+  ],
+  "changed_variables": [
+    "stage purpose from candidate ranking to runtime substrate proof",
+    "first success criterion from proxy KPI to artifact/output/operation identity closure",
+    "next run may use runtime_probe profile if it protects runtime/materialization/handoff claims"
+  ],
+  "claim_boundary": "stage_open_design_only_no_runtime_materialization_no_strategy_tester_economics_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "comparison_baseline": {
+    "not_inherited": [
+      "selected_baseline",
+      "operating_promotion",
+      "runtime_authority",
+      "live_readiness",
+      "goal_achieve"
+    ],
+    "previous_frontier": "frontier87D_stage_closeout_or_f88_rotation_handoff_v1",
+    "previous_judgment": "negative_trade_shape_risk_proxy_learning_no_runtime_candidate_no_authority"
+  },
+  "control_variables": {
+    "closed_bar_only": true,
+    "feature_contracts": [
+      "docs/contracts/time_axis_policy_fpmarkets_v2.md",
+      "docs/contracts/feature_calculation_spec_fpmarkets_v2.md",
+      "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md",
+      "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md"
+    ],
+    "output_schema_default": "[p_short, p_flat, p_long]",
+    "symbol": "US100",
+    "tester_defaults": {
+      "broker": "FPMarkets",
+      "deposit": 500,
+      "entry_timing": "next tick after closed-bar signal",
+      "fixed_lot": 0.1,
+      "leverage": 100,
+      "max_concurrent_positions": 1,
+      "model": "Every tick based on real ticks"
+    },
+    "timeframe": "M5"
+  },
+  "created_at_utc": "2026-06-18T22:14:48Z",
+  "decision": "open_f88_runtime_substrate_first_axis_and_plan_f88b_minimal_preflight",
+  "decision_use": "Prepare F88B to attempt the narrowest runtime substrate preflight or return a precise repair-ready blocker.",
+  "evidence_plan": {
+    "f88a_required": [
+      "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/design/f88a_experiment_design.json",
+      "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/design/runtime_substrate_identity_contract.json",
+      "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/design/runtime_tool_inventory.json",
+      "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/design/f88b_minimal_runtime_substrate_preflight_brief.json",
+      "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/run_manifest.json",
+      "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1/reports/result_summary.md"
+    ],
+    "f88b_required_minimum": [
+      "tester_identity",
+      "runtime_bundle_identity",
+      "actual_output_identity_or_blocker",
+      "operation_proof_or_repair_target",
+      "runtime_evidence_gate if runtime/materialization/handoff claim is protected"
+    ]
+  },
+  "failure_criteria": [
+    "F88A opens as another F87 threshold/filter/parameter retune.",
+    "F88A claims materialization-ready or runtime authority from design-only artifacts.",
+    "F88A hides missing bundle helper scripts instead of naming the current helper gap."
+  ],
+  "five_stage_direction_synthesis": {
+    "adjacent_same_axis_block": true,
+    "allowed_reexperiment_conditions": [
+      "new runtime representation",
+      "new validation philosophy",
+      "new artifact identity proof layer"
+    ],
+    "claim_boundary": "stage_open_design_only_no_runtime_materialization_no_strategy_tester_economics_no_runtime_authority_no_live_readiness_no_goal_achieve",
+    "covered_frontier_ids": [
+      "F83",
+      "F84",
+      "F85",
+      "F86",
+      "F87"
+    ],
+    "dominant_direction": "runtime-adjacent proxy and realized-outcome repair surfaces repeatedly failed to produce authority",
+    "next_axis_options": [
+      "runtime substrate identity",
+      "Strategy Tester output proof",
+      "EA/ONNX/set/feature handoff identity"
+    ],
+    "overused_axis_warning": "another trade-shape/risk proxy retune is blocked as adjacent same-axis continuation",
+    "repeated_mechanism": "proxy/runtime gap and same-axis repair pressure"
+  },
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "task_force_reviewed",
+    "reviewed_by_unspawned_agents"
+  ],
+  "frontier_extra_due": {
+    "due": false,
+    "next_due_boundary": "F100",
+    "reason": "F88 is below the next F100 boundary and E01 is already closed for F050."
+  },
+  "frontier_thesis": "A runtime-substrate-first frontier can make the project better by closing MT5 tester identity, EA/ONNX/set/feature identity, output identity, and operation proof before judging strategy edge.",
+  "hypotheses": [
+    {
+      "changed_variables": [
+        "validation philosophy",
+        "runtime representation"
+      ],
+      "hypothesis_id": "H1_tester_identity_first",
+      "question": "Can F88B lock tester identity fields before any economics claim?",
+      "success_signal": "F88B writes broker/symbol/timeframe/date range/modeling mode/deposit/leverage/spread/commission/slippage/swap identity before runtime claim."
+    },
+    {
+      "changed_variables": [
+        "artifact identity discipline",
+        "handoff proof layer"
+      ],
+      "hypothesis_id": "H2_bundle_identity_first",
+      "question": "Can F88B lock ONNX/EA/set/feature/parser-runtime contract hashes before saying handoff is usable?",
+      "success_signal": "F88B records ONNX hash, EA source/binary hash, set/ini hash, feature order hash, and contract version or exact missing field."
+    },
+    {
+      "changed_variables": [
+        "operation proof",
+        "output identity"
+      ],
+      "hypothesis_id": "H3_operation_proof_first",
+      "question": "Can F88B prove EA loaded, ONNX inference was called, reports/telemetry were produced, and fatal mismatches were absent?",
+      "success_signal": "F88B produces Strategy Tester report/trade-list/telemetry/log hashes or closes repair_ready_with_boundary."
+    }
+  ],
+  "hypothesis": "If the runtime substrate identity is fixed first, later model candidates can be tested without confusing compile/parity/path existence with runtime economics.",
+  "invalid_conditions": [
+    "Compile-only evidence is treated as runtime evidence.",
+    "A report path alone is treated as actual Strategy Tester output.",
+    "Legacy or prior frontier runtime artifacts are treated as selected baseline or authority."
+  ],
+  "judgment": "design_only_runtime_substrate_first_materialization_no_runtime_evidence",
+  "next_run_id": "frontier88B_minimal_runtime_substrate_preflight_v1",
+  "novelty_delta": [
+    "Primary axis changes from proxy/risk ranking to runtime substrate identity.",
+    "Success is not a profitable model yet; success is a reproducible tester/bundle/output/operation proof path.",
+    "The next packet must either attempt a narrow runtime probe or record an exact blocker and repair target."
+  ],
+  "parent_run_id": "frontier87D_stage_closeout_or_f88_rotation_handoff_v1",
+  "run_id": "frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1",
+  "runtime_tool_inventory": {
+    "created_at_utc": "2026-06-18T22:14:48Z",
+    "default_local_mt5_paths_from_backfill_runner": {
+      "common_files": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files",
+      "metaeditor": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MetaEditor64.exe",
+      "portable_root": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E",
+      "terminal": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/terminal64.exe",
+      "tester_profile_root": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Profiles/Tester"
+    },
+    "discovery_method": "rg --files foundation | rg \"(bundle|runtime|tester|mt5|onnx|compile)\"",
+    "inventory_boundary": "Inventory only; no compile, tester, runtime, economics, or handoff claim.",
+    "local_existence_probe": {
+      "common_files_exists": true,
+      "metaeditor_exists": true,
+      "terminal_exists": true,
+      "tester_profile_root_exists": true
+    },
+    "missing_skill_documented_bundle_helpers": [
+      {
+        "claim_effect": "Do not claim bundle helper availability; F88B must use current foundation/mt5 helpers or create a new helper in-scope.",
+        "exists": false,
+        "path": "foundation/pipelines/run_mt5_bundle_tester.py"
+      },
+      {
+        "claim_effect": "Do not claim bundle helper availability; F88B must use current foundation/mt5 helpers or create a new helper in-scope.",
+        "exists": false,
+        "path": "foundation/pipelines/compile_mt5_bundle_runtime.py"
+      },
+      {
+        "claim_effect": "Do not claim bundle helper availability; F88B must use current foundation/mt5 helpers or create a new helper in-scope.",
+        "exists": false,
+        "path": "foundation/pipelines/export_experiment_bundle_assets.py"
+      },
+      {
+        "claim_effect": "Do not claim bundle helper availability; F88B must use current foundation/mt5 helpers or create a new helper in-scope.",
+        "exists": false,
+        "path": "foundation/pipelines/build_experiment_bundle.py"
+      }
+    ],
+    "present_runtime_tools": [
+      {
+        "exists": true,
+        "path": "foundation/mt5/README.md",
+        "sha256_lf_normalized": "51e52c7d04500a8d405fc07a1f64e0f6d2671dbc64ed096d6361c47e160dd290",
+        "size_bytes": 1160
+      },
+      {
+        "exists": true,
+        "path": "foundation/mt5/runtime_artifacts.py",
+        "sha256_lf_normalized": "d58364d4ead0279fafff0097495459069a69d104f63cf7895d4f3b0ef94c448d",
+        "size_bytes": 9085
+      },
+      {
+        "exists": true,
+        "path": "foundation/mt5/terminal_runner.py",
+        "sha256_lf_normalized": "b12935cd3930a46e6bc77074f2906d3fdd9587a0ca869cfb4aa77b711d07914a",
+        "size_bytes": 4900
+      },
+      {
+        "exists": true,
+        "path": "foundation/mt5/mql5_compile.py",
+        "sha256_lf_normalized": "d81eb73adceffca302d278bb15a01d255cfae161e3556b0b48a5fe4d4a0497ed",
+        "size_bytes": 4574
+      },
+      {
+        "exists": true,
+        "path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+        "sha256_lf_normalized": "7ac7fe2ca7fe20924d7cc7aa88b6a754e155eeedf5ff3c722938663677af0e7f",
+        "size_bytes": 66702
+      },
+      {
+        "exists": true,
+        "path": "stage_pipelines/stage_frontier_runtime_backfill/run_frontier_runtime_probe_backfill.py",
+        "sha256_lf_normalized": "fef87af5e2344a1c62488079f50a460fb64fbc3ae1cfae9f621941d37fb5d565",
+        "size_bytes": 70583
+      },
+      {
+        "exists": true,
+        "path": "foundation/mt5/include/ObsidianPrime/DecisionSurface.mqh",
+        "sha256_lf_normalized": "2111ef31c959b92d68ce1759efa6d27d4caed6deefa5c76b514763918d4fead3",
+        "size_bytes": 7166
+      },
+      {
+        "exists": true,
+        "path": "foundation/mt5/include/ObsidianPrime/EbmTableRuntime.mqh",
+        "sha256_lf_normalized": "364323f70ee0fc8b4fe7fe7c2d5d41aeab0acef2ab427eadc0ed1922b08e0bd5",
+        "size_bytes": 11196
+      },
+      {
+        "exists": true,
+        "path": "foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh",
+        "sha256_lf_normalized": "073c35a299d0927b55a29e6f87fa7d8cdc8155995b01abfca18a6d1760b2a2bc",
+        "size_bytes": 21104
+      },
+      {
+        "exists": true,
+        "path": "foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh",
+        "sha256_lf_normalized": "c339bc33d16adb3effee93900f5451f439b6694f7ec265780c310bfae9cfd351",
+        "size_bytes": 14950
+      },
+      {
+        "exists": true,
+        "path": "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh",
+        "sha256_lf_normalized": "d92c6473673130bcca076183875db983a45a8ba3dd97162f74fe1312e344c82d",
+        "size_bytes": 9491
+      },
+      {
+        "exists": true,
+        "path": "foundation/mt5/include/ObsidianPrime/ProbabilityBinVeto.mqh",
+        "sha256_lf_normalized": "3bb2efebb54c0493d08e2e114ddcd8702abef5aa070fb6cecd18a36856d2380a",
+        "size_bytes": 8111
+      },
+      {
+        "exists": true,
+        "path": "foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh",
+        "sha256_lf_normalized": "f0f32f0e084c025cf573b0f134f41ef323cb3900941ab798141afb641347f482",
+        "size_bytes": 17584
+      },
+      {
+        "exists": true,
+        "path": "foundation/mt5/include/ObsidianPrime/RuntimeVetoTape.mqh",
+        "sha256_lf_normalized": "a9e4fcfbbe21734b7af4d66b3544a91dfb5a9e3e30596d6e47ea10b3f5afd7f2",
+        "size_bytes": 6599
+      }
+    ]
+  },
+  "sample_scope": {
+    "current_packet": "design-only stage open; no data/model/runtime execution",
+    "f88b_expected_scope": "narrow MT5 preflight on current foundation/mt5 runtime helpers",
+    "tier_scope": "not_applicable_design; F88B must record Tier A/B/combined or out_of_scope_by_claim if runtime economics are attempted"
+  },
+  "source_identities": [
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87D_stage_closeout_or_f88_rotation_handoff_v1/summary.json",
+      "sha256_lf_normalized": "379f1a43a01b432114c17639c9ec16f5c6b3041cd0eb123c2c36863dcb4e1c58",
+      "size_bytes": 11595
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/stage_closeout_report.md",
+      "sha256_lf_normalized": "d6a192851fd4b4a83f432061801bd72822d7d02988432369473982eb5e244bdd",
+      "size_bytes": 4001
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87d_frontier_five_stage_direction_synthesis.json",
+      "sha256_lf_normalized": "01625ac20dd890b6719eb41bd7ff1cde43854402be276e6f4f96e18bd3500839",
+      "size_bytes": 1288
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87d_frontier_topic_rotation_check.json",
+      "sha256_lf_normalized": "d1a57948a9b28eb326b40be660a54882d002c0c6f20d994547eee7277868accf",
+      "size_bytes": 841
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87d_frontier_extra_due_check.json",
+      "sha256_lf_normalized": "53e085160afe516e4c1abfed0b38120ef1bf33096e8367b75f3693ee4d50b80a",
+      "size_bytes": 318
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/00_spec/stage_brief.md",
+      "sha256_lf_normalized": "4d94ebeee8c021c8a36732f881802e992901cc8949737f58abc34c9a64f3b4b8",
+      "size_bytes": 1640
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/01_inputs/input_refs.md",
+      "sha256_lf_normalized": "e41bcf244e6b1b2c23760dc675d8b1bd05d66bfe9c6400af013a572d82291cfe",
+      "size_bytes": 1370
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/04_selected/selection_status.md",
+      "sha256_lf_normalized": "ef1a491b2593fae2b4c8717c3a3fead276f266d087f2c10435e725cca9f9fc33",
+      "size_bytes": 1233
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/time_axis_policy_fpmarkets_v2.md",
+      "sha256_lf_normalized": "0c7f606ad696c3cf9fa024752e553185f7b7025edee9943ee81fa92a667a3b31",
+      "size_bytes": 3402
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/feature_calculation_spec_fpmarkets_v2.md",
+      "sha256_lf_normalized": "8c9ebe68f5554dfdd4d93b0131ca3ea7e54d9f3c298a6fc11b59d47a365b5d65",
+      "size_bytes": 14357
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/python_feature_parser_spec_fpmarkets_v2.md",
+      "sha256_lf_normalized": "492142c1b2292eeb704dc506668d66fd61ec84ab35a0fcb44b76a6a83523818b",
+      "size_bytes": 14663
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md",
+      "sha256_lf_normalized": "263460622878df974b1e3b5f11f7032a925673b8b338b66a4161c02eee6425e4",
+      "size_bytes": 20198
+    },
+    {
+      "exists": true,
+      "path": "docs/policies/frontier_governance.md",
+      "sha256_lf_normalized": "69fd04529ba01eb149785d1eecc9f61a42bd72b2b84dfd0876a8a051e1ebe830",
+      "size_bytes": 28483
+    },
+    {
+      "exists": true,
+      "path": "docs/agent_control/work_family_registry.yaml",
+      "sha256_lf_normalized": "bcabf5f0f06fee21d7242dbda4f48bc0d9c3956fdbf64d52cabcbddfb574d7e3",
+      "size_bytes": 36064
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/README.md",
+      "sha256_lf_normalized": "51e52c7d04500a8d405fc07a1f64e0f6d2671dbc64ed096d6361c47e160dd290",
+      "size_bytes": 1160
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/runtime_artifacts.py",
+      "sha256_lf_normalized": "d58364d4ead0279fafff0097495459069a69d104f63cf7895d4f3b0ef94c448d",
+      "size_bytes": 9085
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/terminal_runner.py",
+      "sha256_lf_normalized": "b12935cd3930a46e6bc77074f2906d3fdd9587a0ca869cfb4aa77b711d07914a",
+      "size_bytes": 4900
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/mql5_compile.py",
+      "sha256_lf_normalized": "d81eb73adceffca302d278bb15a01d255cfae161e3556b0b48a5fe4d4a0497ed",
+      "size_bytes": 4574
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "sha256_lf_normalized": "7ac7fe2ca7fe20924d7cc7aa88b6a754e155eeedf5ff3c722938663677af0e7f",
+      "size_bytes": 66702
+    },
+    {
+      "exists": true,
+      "path": "stage_pipelines/stage_frontier_runtime_backfill/run_frontier_runtime_probe_backfill.py",
+      "sha256_lf_normalized": "fef87af5e2344a1c62488079f50a460fb64fbc3ae1cfae9f621941d37fb5d565",
+      "size_bytes": 70583
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/DecisionSurface.mqh",
+      "sha256_lf_normalized": "2111ef31c959b92d68ce1759efa6d27d4caed6deefa5c76b514763918d4fead3",
+      "size_bytes": 7166
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/EbmTableRuntime.mqh",
+      "sha256_lf_normalized": "364323f70ee0fc8b4fe7fe7c2d5d41aeab0acef2ab427eadc0ed1922b08e0bd5",
+      "size_bytes": 11196
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/ExecutionBridge.mqh",
+      "sha256_lf_normalized": "073c35a299d0927b55a29e6f87fa7d8cdc8155995b01abfca18a6d1760b2a2bc",
+      "size_bytes": 21104
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/FeatureInputs.mqh",
+      "sha256_lf_normalized": "c339bc33d16adb3effee93900f5451f439b6694f7ec265780c310bfae9cfd351",
+      "size_bytes": 14950
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/ModelRuntime.mqh",
+      "sha256_lf_normalized": "d92c6473673130bcca076183875db983a45a8ba3dd97162f74fe1312e344c82d",
+      "size_bytes": 9491
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/ProbabilityBinVeto.mqh",
+      "sha256_lf_normalized": "3bb2efebb54c0493d08e2e114ddcd8702abef5aa070fb6cecd18a36856d2380a",
+      "size_bytes": 8111
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/RuntimeTelemetry.mqh",
+      "sha256_lf_normalized": "f0f32f0e084c025cf573b0f134f41ef323cb3900941ab798141afb641347f482",
+      "size_bytes": 17584
+    },
+    {
+      "exists": true,
+      "path": "foundation/mt5/include/ObsidianPrime/RuntimeVetoTape.mqh",
+      "sha256_lf_normalized": "a9e4fcfbbe21734b7af4d66b3544a91dfb5a9e3e30596d6e47ea10b3f5afd7f2",
+      "size_bytes": 6599
+    }
+  ],
+  "stage_id": "stage_frontier_88__runtime_substrate_first_materialization_probe",
+  "status": "f88a_stage_open_design_prepared_f88b_runtime_substrate_preflight_planned_no_authority",
+  "stop_conditions": [
+    "Stop F88A after stage open design, runtime substrate contract, tool inventory, F88B brief, receipts, gates, and state sync are written.",
+    "Do not run MT5 or claim runtime economics in F88A.",
+    "F88B must use runtime_probe profile if it protects runtime/materialization/handoff/economics claims."
+  ],
+  "success_criteria": [
+    "F88A writes the runtime substrate identity contract.",
+    "F88A identifies present and missing MT5 helper surfaces without claiming runtime readiness.",
+    "F88A hands off to F88B with explicit probe/blocker stop conditions."
+  ],
+  "topic_rotation_check": {
+    "decision": "pass_for_f88_runtime_substrate_first_axis",
+    "novelty_delta": {
+      "not_threshold_filter_parameter_tweak": true,
+      "primary_axis": "runtime representation",
+      "supporting_axes": [
+        "artifact identity",
+        "actual MT5 output proof",
+        "validation philosophy"
+      ]
+    },
+    "previous_stage_id": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation",
+    "proposed_stage_id": "stage_frontier_88__runtime_substrate_first_materialization_probe",
+    "same_surface_repair_block": true,
+    "topic_ban": false
+  },
+  "verification_profile": "design_only"
+}
