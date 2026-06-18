@@ -2306,3 +2306,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier83B_mt5_runtime_materialization_exportable_teacher_overlay_v1 -->
 - `frontier83B_mt5_runtime_materialization_exportable_teacher_overlay_v1` materialized F83A exportable teacher overlay(F83A 내보내기 가능 교사 덧씌움)를 MT5 Strategy Tester(MT5 전략 테스터)로 실행/시도했다. Target(대상): `f83a_0019`. Attempts(시도): `2`, completed(완료): `2`. Boundary(경계): runtime materialization only, no authority(런타임 물질화만, 권위 없음).
+
+<!-- frontier83C_proxy_runtime_gap_analysis_teacher_overlay_v1 -->
+- `frontier83C_proxy_runtime_gap_analysis_teacher_overlay_v1` attributed F83 proxy/runtime gap(F83 프록시/런타임 간극 귀속). Result(결과): OOS runtime net/PF/DD/trades_day(표본외 런타임 순손익/수익 팩터/손실폭/일 거래) `24.02/1.33/2.06/0.7025641025641025`. Clue(단서): runtime parity seed preserved(런타임 동등성 씨앗 보존). Negative memory(부정 기억): low-density long-only branch(저밀도 롱 전용 가지) cannot be final-like without new axis(새 축 없이는 최종형 아님). Next(다음): `frontier83D_two_sided_density_expansion_or_rotation_decision_v1`.

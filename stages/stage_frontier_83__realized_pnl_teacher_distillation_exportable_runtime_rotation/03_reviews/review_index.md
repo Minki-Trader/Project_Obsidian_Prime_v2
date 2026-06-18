@@ -12,3 +12,8 @@
 - `f83b_runtime_parity_receipt.json`: F83B runtime parity receipt(F83B 런타임 동등성 영수증)
 - `f83b_backtest_forensics_receipt.json`: F83B backtest forensics receipt(F83B 백테스트 포렌식 영수증)
 - `f83b_task_force_review_receipt.yaml`: F83B Task Force review receipt(F83B 태스크포스 검토 영수증)
+- `frontier83C_proxy_runtime_gap_analysis_teacher_overlay_report.md`: F83C proxy/runtime gap analysis report(F83C 프록시/런타임 간극 분석 보고서)
+- `f83c_proxy_runtime_gap_analysis_summary.json`: F83C machine gap analysis(F83C 기계 간극 분석)
+- `f83c_proxy_runtime_gap_rows.csv`: F83C split-level gap rows(F83C 구간별 간극 행)
+- `required_gate_coverage_audit_f83c.md`: F83C gate audit(F83C 게이트 감사)
+- `f83c_task_force_review_receipt.yaml`: F83C Task Force review receipt(F83C 태스크포스 검토 영수증)
