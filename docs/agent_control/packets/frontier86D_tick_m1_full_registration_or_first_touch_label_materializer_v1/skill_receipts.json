@@ -1,0 +1,246 @@
+{
+  "claim_boundary": "f86d_bounded_selected_row_tick_m1_label_source_materialized_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve",
+  "packet_id": "frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1",
+  "receipts": [
+    {
+      "allowed_claims": [
+        "bounded_selected_row_m1_registered",
+        "bounded_first_touch_label_source_materialized",
+        "source_materialization_learning_recorded"
+      ],
+      "evidence_boundary": "bounded-source-label-materializer",
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "runtime_verified",
+        "mt5_strategy_tester_verified",
+        "runtime_economics",
+        "materialization_ready",
+        "handoff_complete",
+        "ea_onnx_runtime_bundle_ready"
+      ],
+      "judgment_class": "positive_source_materialization_with_boundary",
+      "ledger_rows": [
+        "docs/registers/run_registry.csv::frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/stage_run_ledger.csv::frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1"
+      ],
+      "management_state": "run_manifest/kpi_record/summary/result_summary created",
+      "measurement_scope": "bounded selected-row source materializer",
+      "missing_evidence": [
+        "Strategy Tester report/trade list/telemetry not in scope",
+        "EA/ONNX runtime bundle not built"
+      ],
+      "packet_id": "frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1",
+      "parity_level": "P0_unverified",
+      "produced_artifacts": [
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/run_manifest.json",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/kpi_record.json",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/summary.json",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/reports/result_summary.md",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/source_registration_summary.json",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/mt5_m1_selected_bar_registry.csv",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/mt5_tick_both_hit_registry.csv",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/tick_segment_identity.csv",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_label_summary.json",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_execution_summary.json"
+      ],
+      "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_run_evidence_receipt.json",
+      "scoreboard": "structural_scout",
+      "skill": "obsidian-run-evidence-system",
+      "source_inputs": [
+        "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_selected_firewall_row_readout.csv",
+        "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+        "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json"
+      ],
+      "status": "executed",
+      "wfo_status": "not_applicable"
+    },
+    {
+      "baseline": "F86C sample-only MT5 API source probe and M5 ambiguity scout.",
+      "changed_variables": [
+        "source registration scope",
+        "tick-based first-touch label materialization",
+        "M1 selected-window registry"
+      ],
+      "decision_use": "Open F86E leakage-safe feature/label surface proxy scout if labels are complete.",
+      "evidence_plan": [
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/summary.json",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv"
+      ],
+      "hypothesis": "F85B selected rows can be converted into bounded M1/tick first-touch label source evidence.",
+      "invalid_conditions": [
+        "claiming runtime economics",
+        "using post-entry label source as pre-entry feature",
+        "claiming broad full-history market registration"
+      ],
+      "packet_id": "frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1",
+      "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_experiment_design_receipt.json",
+      "skill": "obsidian-experiment-design",
+      "status": "executed"
+    },
+    {
+      "data_sources_checked": [
+        "F85B selected readout",
+        "raw US100 M5 CSV",
+        "MT5 API M1 rates",
+        "MT5 API tick segments"
+      ],
+      "integrity_judgment": "usable_as_bounded_label_source_with_boundary",
+      "leakage_checks": [
+        "post-entry tick path is label-only until a later leakage-safe feature surface is built",
+        "first-touch labels are not used as same-row pre-entry features in F86D",
+        "no Strategy Tester or candidate promotion claim"
+      ],
+      "missing_data_boundary": "M1 complete rows=4127; unresolved labels=0.",
+      "packet_id": "frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1",
+      "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_data_integrity_receipt.json",
+      "skill": "obsidian-data-integrity",
+      "split_boundary": "validation and OOS labels are materialized as readout/source rows only; no OOS threshold or model selection is performed.",
+      "status": "executed",
+      "time_axis_boundary": "F85B timestamp_utc defines selected M5 bar open; MT5 API returns UTC-like Unix seconds stored with UTC strings."
+    },
+    {
+      "allowed_claims": [
+        "source_label_materialized"
+      ],
+      "forbidden_claims": [
+        "model_selected",
+        "threshold_selected",
+        "runtime_verified",
+        "runtime_authority",
+        "goal_achieve"
+      ],
+      "model_or_threshold_surface": "No model, threshold, candidate ranking, or calibration selected in F86D.",
+      "overfit_checks": [
+        "no model trained",
+        "no threshold selected",
+        "no OOS optimization",
+        "no WFO claim"
+      ],
+      "packet_id": "frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1",
+      "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_model_validation_receipt.json",
+      "selection_metric_boundary": "Label completion counts are source materiality metrics, not trading performance metrics.",
+      "skill": "obsidian-model-validation",
+      "status": "executed",
+      "validation_judgment": "no_model_selection_source_materialization_only",
+      "validation_split": "validation/OOS split is preserved as source metadata only."
+    },
+    {
+      "availability": "ignored_with_manifest_hashes",
+      "hashes_or_missing_reasons": [
+        "m1_registered_rows=20635",
+        "tick_rows_registered=7957499",
+        "first_touch_labels_sha256=b2e50dbc8688cff507aa40f30d96f03f8d2434a71aa767201fb08ffa44106d3c",
+        "Strategy Tester report not in scope"
+      ],
+      "human_readable": [
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/reports/result_summary.md",
+        "docs/context/current_working_state.md"
+      ],
+      "lineage_boundary": "bounded selected-row source/label lineage connected; runtime bundle lineage absent by claim",
+      "machine_readable": [
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/run_manifest.json",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/kpi_record.json",
+        "docs/agent_control/packets/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/work_packet.yaml"
+      ],
+      "packet_id": "frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1",
+      "produced_artifacts": [
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/run_manifest.json",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/kpi_record.json",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/summary.json",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/reports/result_summary.md",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/source_registration_summary.json",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/mt5_m1_selected_bar_registry.csv",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/mt5_tick_both_hit_registry.csv",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/tick_segment_identity.csv",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_label_summary.json",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_execution_summary.json"
+      ],
+      "raw_evidence": [
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/mt5_tick_both_hit_registry.csv",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/mt5_m1_selected_bar_registry.csv"
+      ],
+      "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_artifact_lineage_receipt.json",
+      "skill": "obsidian-artifact-lineage",
+      "source_inputs": [
+        "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_selected_firewall_row_readout.csv",
+        "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+        "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json"
+      ],
+      "status": "executed"
+    },
+    {
+      "allowed_claims": [
+        "bounded_selected_row_m1_registered",
+        "bounded_first_touch_label_source_materialized",
+        "source_materialization_learning_recorded"
+      ],
+      "evidence_missing": [
+        "Strategy Tester report",
+        "EA/ONNX runtime bundle",
+        "runtime economics",
+        "WFO/stress"
+      ],
+      "evidence_used": [
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_execution_summary.json",
+        "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/kpi_record.json"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "runtime_verified",
+        "mt5_strategy_tester_verified",
+        "runtime_economics",
+        "materialization_ready",
+        "handoff_complete",
+        "ea_onnx_runtime_bundle_ready"
+      ],
+      "judgment_boundary": "positive_source_materialization_with_boundary_no_runtime_economics",
+      "next_condition": "F86E leakage-safe feature/label surface proxy scout.",
+      "packet_id": "frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1",
+      "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_result_judgment_receipt.json",
+      "skill": "obsidian-result-judgment",
+      "status": "executed"
+    },
+    {
+      "allowed_claims": [
+        "bounded_selected_row_m1_registered",
+        "bounded_first_touch_label_source_materialized",
+        "source_materialization_learning_recorded"
+      ],
+      "final_status": "completed_with_boundary_no_runtime_authority_no_goal_achieve",
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "runtime_verified",
+        "mt5_strategy_tester_verified",
+        "runtime_economics",
+        "materialization_ready",
+        "handoff_complete",
+        "ea_onnx_runtime_bundle_ready"
+      ],
+      "packet_id": "frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1",
+      "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_claim_discipline_receipt.json",
+      "requested_claims": [
+        "bounded_selected_row_m1_registered",
+        "bounded_first_touch_label_source_materialized"
+      ],
+      "skill": "obsidian-claim-discipline",
+      "status": "executed"
+    }
+  ]
+}

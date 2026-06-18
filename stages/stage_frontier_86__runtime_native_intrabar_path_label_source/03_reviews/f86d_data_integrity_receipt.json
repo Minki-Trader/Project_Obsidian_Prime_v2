@@ -1,0 +1,21 @@
+{
+  "data_sources_checked": [
+    "F85B selected readout",
+    "raw US100 M5 CSV",
+    "MT5 API M1 rates",
+    "MT5 API tick segments"
+  ],
+  "integrity_judgment": "usable_as_bounded_label_source_with_boundary",
+  "leakage_checks": [
+    "post-entry tick path is label-only until a later leakage-safe feature surface is built",
+    "first-touch labels are not used as same-row pre-entry features in F86D",
+    "no Strategy Tester or candidate promotion claim"
+  ],
+  "missing_data_boundary": "M1 complete rows=4127; unresolved labels=0.",
+  "packet_id": "frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1",
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_data_integrity_receipt.json",
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "validation and OOS labels are materialized as readout/source rows only; no OOS threshold or model selection is performed.",
+  "status": "executed",
+  "time_axis_boundary": "F85B timestamp_utc defines selected M5 bar open; MT5 API returns UTC-like Unix seconds stored with UTC strings."
+}

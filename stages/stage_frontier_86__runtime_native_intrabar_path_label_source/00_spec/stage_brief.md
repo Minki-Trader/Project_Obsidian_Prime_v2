@@ -6,9 +6,9 @@ Stage ID(단계 ID): `stage_frontier_86__runtime_native_intrabar_path_label_sour
 
 Opening run(개방 실행): `frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1`
 
-Next run(다음 실행): `frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1`
+Next run(다음 실행): `frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1`
 
-Status(상태): `f86c_source_probe_completed_sample_intrabar_payload_no_authority`
+Status(상태): `f86d_bounded_m1_tick_label_source_materialized_no_authority`
 
 ## Frontier Thesis(전선 가설)
 
@@ -57,3 +57,13 @@ Action(행동): F86C ran MT5 API source probe(MT5 API 소스 탐침) and exporte
 Effect(효과): intrabar payload(봉 내부 자료) is available as sample evidence(샘플 근거), so F86D can attempt bounded full tick/M1 registration(범위 있는 전체 틱/1분봉 등록) or first-touch label materializer(첫 터치 라벨 물질화기). It still does not claim full history(전체 이력), Strategy Tester runtime economics(전략 테스터 런타임 경제성), first-touch order authority(첫 터치 순서 권위), runtime authority(런타임 권위), or Goal Achieve(목표 달성).
 
 Claim boundary(주장 경계): `f86c_source_probe_and_surrogate_scout_only_no_full_tick_m1_history_no_runtime_materialization_no_first_touch_order_authority_no_goal_achieve`.
+
+## F86D First-Touch Label Source Receipt(F86D 첫 터치 라벨 원천 영수증)
+
+Action(행동): F86D registered bounded selected-row M1/tick source(범위 있는 선택 행 1분봉/틱 원천) and materialized first-touch labels(첫 터치 라벨).
+
+Effect(효과): F86 can now build leakage-safe first-touch feature/label surfaces(누수 안전 첫 터치 피처/라벨 표면) from materialized source evidence(물질화된 원천 근거). It still does not claim Strategy Tester runtime economics(전략 테스터 런타임 경제성), runtime authority(런타임 권위), live readiness(실거래 준비), or Goal Achieve(목표 달성).
+
+Key counts(핵심 수치): input rows(입력 행) `4127`, M1 rows(1분봉 행) `20635`, tick rows(틱 행) `7957499`, labels(라벨) `4127`, unresolved(미해결) `0`.
+
+Claim boundary(주장 경계): `f86d_bounded_selected_row_tick_m1_label_source_materialized_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve`.

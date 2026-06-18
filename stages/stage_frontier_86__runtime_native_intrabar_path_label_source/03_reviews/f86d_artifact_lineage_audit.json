@@ -1,0 +1,79 @@
+{
+  "audit_name": "artifact_lineage_audit",
+  "availability": "large_tick_artifact_ignored_with_manifest_hashes",
+  "claim_boundary": "f86d_bounded_selected_row_tick_m1_label_source_materialized_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve",
+  "claim_effect": "Large tick CSV remains local/ignored; tracked packet and reviews store path/hash identity.",
+  "produced_artifacts": [
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/run_manifest.json",
+      "sha256": "7ccfced952dad283bb7a88241ad1624707ea48d4926564a25cb14d89c83c7178",
+      "size": 5090
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/kpi_record.json",
+      "sha256": "5c780e636ff59cfe5a290023365620274d33c05a6a4934dac59d88066b5ac010",
+      "size": 1324
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/summary.json",
+      "sha256": "a0f90b003b7d421843c5b84affd30fb871f66a2bf53ec15f17efd2cb50bc5476",
+      "size": 12333
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/source_registration_summary.json",
+      "sha256": "33ab873f561cb7da1bf3efa5b770cc3e4517297410643a1b7976825badefed46",
+      "size": 10085
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/mt5_m1_selected_bar_registry.csv",
+      "sha256": "82393e241070d1bdb23a23f627237f264c518ba2967be068ade230fbfc429b9a",
+      "size": 2186879
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/mt5_tick_both_hit_registry.csv",
+      "sha256": "3c413ea21ad7254ac74a27d134a41c9ce7e55d144191878990f400a8a24f4ecd",
+      "size": 1145250531
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv",
+      "sha256": "b2e50dbc8688cff507aa40f30d96f03f8d2434a71aa767201fb08ffa44106d3c",
+      "size": 1039915
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_execution_summary.json",
+      "sha256": "c343a3e2e6339acfabef210d3b2a92e5cc5b0e385f30a2a603497b32a9fcb810",
+      "size": 2797
+    }
+  ],
+  "run_id": "frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1",
+  "source_inputs": [
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_selected_firewall_row_readout.csv",
+      "sha256": "f62d31027c6cde4487e33bae65dce8c0384391adc2aea743b2d9a44e6ca61afa",
+      "size": 1444804
+    },
+    {
+      "exists": true,
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+      "size": 38125907
+    },
+    {
+      "exists": true,
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+      "sha256": "86a772a2b73dc2d7684f37ba41243596bad54749ef1461db17c6957600787cde",
+      "size": 1338
+    }
+  ],
+  "stage_id": "stage_frontier_86__runtime_native_intrabar_path_label_source",
+  "status": "pass_connected_with_boundary"
+}

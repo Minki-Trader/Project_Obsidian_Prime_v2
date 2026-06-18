@@ -1,0 +1,58 @@
+{
+  "allowed_claims": [
+    "bounded_selected_row_m1_registered",
+    "bounded_first_touch_label_source_materialized",
+    "source_materialization_learning_recorded"
+  ],
+  "evidence_boundary": "bounded-source-label-materializer",
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "mt5_strategy_tester_verified",
+    "runtime_economics",
+    "materialization_ready",
+    "handoff_complete",
+    "ea_onnx_runtime_bundle_ready"
+  ],
+  "judgment_class": "positive_source_materialization_with_boundary",
+  "ledger_rows": [
+    "docs/registers/run_registry.csv::frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/stage_run_ledger.csv::frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1"
+  ],
+  "management_state": "run_manifest/kpi_record/summary/result_summary created",
+  "measurement_scope": "bounded selected-row source materializer",
+  "missing_evidence": [
+    "Strategy Tester report/trade list/telemetry not in scope",
+    "EA/ONNX runtime bundle not built"
+  ],
+  "packet_id": "frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1",
+  "parity_level": "P0_unverified",
+  "produced_artifacts": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/run_manifest.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/kpi_record.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/reports/result_summary.md",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/source_registration_summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/mt5_m1_selected_bar_registry.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/mt5_tick_both_hit_registry.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/source_registration/tick_segment_identity.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_label_summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_execution_summary.json"
+  ],
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_run_evidence_receipt.json",
+  "scoreboard": "structural_scout",
+  "skill": "obsidian-run-evidence-system",
+  "source_inputs": [
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_selected_firewall_row_readout.csv",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json"
+  ],
+  "status": "executed",
+  "wfo_status": "not_applicable"
+}

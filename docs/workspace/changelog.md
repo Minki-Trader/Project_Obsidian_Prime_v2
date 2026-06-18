@@ -7347,3 +7347,11 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 
 - Action(행동): `frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1`로 F83(전선83)을 열고 ONNX-exportable teacher seed(온엑스 내보내기 가능 교사 씨앗)를 만들었다.
 - Effect(효과): best seed(최선 씨앗) `f83a_0019`는 F83B MT5 Strategy Tester probe(F83B MT5 전략 테스터 탐침)로 넘길 수 있지만, runtime authority(런타임 권위)는 아직 없다.
+
+<!-- frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1 -->
+
+## 2026-06-19 Frontier86D First-Touch Label Source(F86D 첫 터치 라벨 원천)
+
+- Action(행동): `frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1`로 bounded selected-row M1/tick registration(범위 있는 선택 행 1분봉/틱 등록)과 first-touch label materialization(첫 터치 라벨 물질화)을 실행했다.
+- Effect(효과): M1(1분봉) `20635` rows(행), tick(틱) `7957499` rows(행), label(라벨) `4127` rows(행)를 기록했고, next(다음)는 `frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1`다.
+- Boundary(경계): source/label evidence(원천/라벨 근거)이며 Strategy Tester runtime economics(전략 테스터 런타임 경제성), runtime authority(런타임 권위), Goal Achieve(목표 달성)는 주장하지 않는다.

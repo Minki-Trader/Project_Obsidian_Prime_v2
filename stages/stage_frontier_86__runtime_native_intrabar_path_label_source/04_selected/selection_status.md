@@ -1,15 +1,15 @@
 ﻿# F86 Selection Status(F86 선택 상태)
 
-Updated(갱신): 2026-06-18T18:23:20Z
+Updated(갱신): 2026-06-18T18:57:03Z
 
-Status(상태): `f86c_source_probe_completed_sample_intrabar_payload_no_authority`
+Status(상태): `f86d_bounded_m1_tick_first_touch_label_source_materialized_no_authority`
 
-Current run(현재 실행): `frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1`
+Current run(현재 실행): `frontier86E_leakage_safe_first_touch_feature_label_surface_proxy_scout_v1`
 
-Latest completed run(최근 완료 실행): `frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1`
+Latest completed run(최근 완료 실행): `frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1`
 
-Action(행동): F86C에서 MT5 API(MT5 API) M1/tick(1분봉/틱) sample export(샘플 내보내기)와 M5 ambiguity scout(5분봉 모호성 탐색)를 닫았다.
+Action(행동): F86D에서 F85B selected rows(선택 행) 전체의 bounded M1/tick source(범위 있는 1분봉/틱 원천)와 first-touch labels(첫 터치 라벨)을 물질화했다.
 
-Effect(효과): F86D는 source absence(원천 부재) 가정이 아니라 bounded full registration(범위 있는 전체 등록) 또는 first-touch label materializer(첫 터치 라벨 물질화기)로 전진할 수 있다.
+Effect(효과): F86E는 source absence(원천 부재)가 아니라 leakage-safe feature/label surface(누수 안전 피처/라벨 표면) 설계로 전진할 수 있다.
 
-Claim boundary(주장 경계): `f86c_source_probe_and_surrogate_scout_only_no_full_tick_m1_history_no_runtime_materialization_no_first_touch_order_authority_no_goal_achieve`.
+Claim boundary(주장 경계): `f86d_bounded_selected_row_tick_m1_label_source_materialized_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve`.

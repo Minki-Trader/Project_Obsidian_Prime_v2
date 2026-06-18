@@ -19,3 +19,7 @@
 - `f86c_source_sample_export_audit.json`: F86C MT5 API source sample export audit(MT5 API 소스 샘플 내보내기 감사)
 - `f86c_m5_ambiguity_scout_audit.json`: F86C M5 ambiguity scout audit(5분봉 모호성 탐색 감사)
 - `f86c_final_claim_guard.json`: F86C final claim guard(최종 주장 보호)
+- `f86d_execution_summary.json`: F86D execution summary(F86D 실행 요약)
+- `f86d_source_registration_audit.json`: F86D source registration audit(F86D 원천 등록 감사)
+- `f86d_first_touch_label_materializer_audit.json`: F86D first-touch label materializer audit(F86D 첫 터치 라벨 물질화 감사)
+- `f86d_final_claim_guard.json`: F86D final claim guard(F86D 최종 주장 보호)

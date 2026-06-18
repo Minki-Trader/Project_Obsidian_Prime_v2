@@ -1,0 +1,26 @@
+{
+  "allowed_claims": [
+    "source_label_materialized"
+  ],
+  "forbidden_claims": [
+    "model_selected",
+    "threshold_selected",
+    "runtime_verified",
+    "runtime_authority",
+    "goal_achieve"
+  ],
+  "model_or_threshold_surface": "No model, threshold, candidate ranking, or calibration selected in F86D.",
+  "overfit_checks": [
+    "no model trained",
+    "no threshold selected",
+    "no OOS optimization",
+    "no WFO claim"
+  ],
+  "packet_id": "frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1",
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_model_validation_receipt.json",
+  "selection_metric_boundary": "Label completion counts are source materiality metrics, not trading performance metrics.",
+  "skill": "obsidian-model-validation",
+  "status": "executed",
+  "validation_judgment": "no_model_selection_source_materialization_only",
+  "validation_split": "validation/OOS split is preserved as source metadata only."
+}
