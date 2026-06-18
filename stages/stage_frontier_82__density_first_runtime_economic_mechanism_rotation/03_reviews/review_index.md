@@ -26,3 +26,7 @@ Updated(갱신): 2026-06-18T05:15:42Z
 - `f82d_proxy_runtime_gap_attribution.json`: F82D machine gap attribution(F82D 기계 간극 귀속)
 - `f82d_proxy_runtime_gap_rows.csv`: F82D split-level gap rows(F82D 구간별 간극 행)
 - `required_gate_coverage_audit_f82d.md`: F82D gate audit(F82D 게이트 감사)
+- `frontier82E_capped_repair_or_rotation_decision_report.md`: F82E capped repair or rotation decision(F82E 상한 수리 또는 회전 결정 보고서)
+- `f82e_capped_repair_or_rotation_decision.json`: F82E machine decision(F82E 기계 결정)
+- `f82e_capped_repair_or_rotation_decision_rows.csv`: F82E decision row grain(F82E 결정 행 단위)
+- `required_gate_coverage_audit_f82e.md`: F82E gate audit(F82E 게이트 감사)

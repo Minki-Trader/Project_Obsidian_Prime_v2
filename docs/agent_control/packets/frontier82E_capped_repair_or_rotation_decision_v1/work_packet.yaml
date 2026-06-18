@@ -1,0 +1,38 @@
+﻿packet_id: frontier82E_capped_repair_or_rotation_decision_v1
+stage_id: stage_frontier_82__density_first_runtime_economic_mechanism_rotation
+router_mode: full
+work_packet_lifecycle: kpi_evidence_to_decision_to_state_sync
+primary_family: kpi_evidence
+primary_skill: obsidian-run-evidence-system
+support_skills:
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-performance-attribution
+  - obsidian-experiment-design
+  - obsidian-task-force-review
+  - obsidian-claim-discipline
+required_skill_receipts:
+  - obsidian-run-evidence-system
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-performance-attribution
+  - obsidian-experiment-design
+  - obsidian-task-force-review
+  - obsidian-claim-discipline
+required_gates:
+  - kpi_contract_audit
+  - row_grain_audit
+  - source_authority_audit
+  - task_force_review_packet
+  - required_gate_coverage_audit
+  - final_claim_guard
+scope: "Decide capped repair versus rotation after F82D runtime economics gap(F82D 런타임 경제성 간극 이후 상한 수리 또는 회전 결정)."
+status: f82e_capped_repair_selected_deal_reconciled_runtime_label_preflight_no_authority
+judgment: deal_level_pnl_evidence_axis_selected_one_cycle_repair_before_rotation_no_authority
+decision: capped_repair_selected
+repair_axis: deal_reconciled_runtime_label_preflight
+repair_cap: one_repair_cycle_before_rotation
+next_run_id: frontier82F_deal_reconciled_runtime_label_preflight_v1
+rotation_if_blocked: frontier82G_capped_repair_closeout_or_f83_rotation_decision_v1
+claim_boundary: decision_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+created_at_utc: "2026-06-18T06:10:42Z"

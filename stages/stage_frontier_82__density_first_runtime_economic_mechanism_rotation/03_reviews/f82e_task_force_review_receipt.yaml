@@ -1,0 +1,20 @@
+﻿packet_id: frontier82E_capped_repair_or_rotation_decision_v1
+skill: obsidian-task-force-review
+status: completed_for_repair_decision_no_authority
+roster_registry: docs/agent_control/codex_task_force_registry.yaml
+agents_used:
+  - agent_01_system_governor
+  - agent_04_evidence_control_plane
+  - agent_06_quant_research
+  - agent_07_model_validation_risk
+  - agent_08_mt5_onnx_runtime
+advice_classification:
+  accepted:
+    - "Allow one capped repair(상한 수리 1회) only because deal-level PnL capture(거래별 손익 캡처) is a new evidence axis(새 근거 축)."
+    - "Reject threshold-only repair(임계값 전용 수리 거절)."
+    - "If F82F cannot produce deal evidence(F82F가 거래 근거를 만들 수 없으면), rotate(회전)."
+  rejected:
+    - "Do not treat F82B proxy density(프록시 밀도) as runtime economics(런타임 경제성)."
+  needs_local_verification:
+    - "F82F must verify report/telemetry/deal identity(F82F가 보고서/텔레메트리/거래 정체성을 확인해야 함)."
+claim_boundary: decision_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve

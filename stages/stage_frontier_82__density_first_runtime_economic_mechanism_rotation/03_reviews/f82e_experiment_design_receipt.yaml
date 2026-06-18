@@ -1,0 +1,13 @@
+﻿packet_id: frontier82E_capped_repair_or_rotation_decision_v1
+skill: obsidian-experiment-design
+status: next_repair_experiment_defined
+hypothesis: "Deal-level PnL capture/reconciliation(거래별 손익 캡처/대조)이 proxy/runtime gap(프록시/런타임 간극)의 정확한 손실 원인을 설명하고 MT5-realized label(MT5 실현 라벨) 재구축 가능성을 판정한다."
+decision_use: F82F preflight decides repair continuation or rotation(F82F 사전확인이 수리 지속 또는 회전을 결정)
+comparison_baseline: F82C/F82D negative runtime materialization(F82C/F82D 부정 런타임 물질화)
+control_variables: symbol US100, timeframe M5, F82C candidate, no threshold-only repair(심볼/시간프레임/F82C 후보/임계값 전용 수리 금지)
+changed_variables: telemetry/deal evidence axis only(텔레메트리/거래 근거 축만 변경)
+success_criteria: deal-level entry/exit/PnL evidence exists and can be linked to selected signals(거래별 진입/청산/손익 근거가 선택 신호에 연결됨)
+failure_criteria: no deal-level evidence and no narrow telemetry patch path(거래별 근거와 좁은 텔레메트리 패치 경로가 없음)
+invalid_conditions: report/telemetry identity mismatch or missing runtime receipt(보고서/텔레메트리 정체성 불일치 또는 런타임 영수증 누락)
+stop_conditions: one repair cycle only, then rotate if blocked or still negative(1회 수리만 허용, 차단 또는 계속 부정이면 회전)
+evidence_plan: F82F report, manifest, telemetry audit, optional EA telemetry patch receipt(F82F 보고서/목록/텔레메트리 감사/선택 EA 패치 영수증)

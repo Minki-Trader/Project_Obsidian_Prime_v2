@@ -1,0 +1,20 @@
+﻿packet_id: frontier82E_capped_repair_or_rotation_decision_v1
+skill: obsidian-performance-attribution
+status: capped_repair_axis_selected
+observed_change: "Proxy positive economics inverted to MT5 negative economics(프록시 양수 경제성이 MT5 음수 경제성으로 반전)."
+comparison_baseline: F82B proxy KPI vs F82C runtime KPI(F82B 프록시 KPI 대 F82C 런타임 KPI)
+likely_drivers:
+  - runtime deal economics after parity(동등성 이후 런타임 거래 경제성)
+  - win-rate collapse(승률 붕괴)
+  - drawdown expansion(손실폭 확대)
+segment_checks:
+  - validation split(검증 구간)
+  - OOS split(표본외 구간)
+  - signal parity(신호 동등성)
+  - feature readiness parity(피처 준비 동등성)
+trade_shape: "long-only, OOS trades 1338.0, OOS trades/day 6.861538461538461(롱 전용, 표본외 거래/일거래)"
+alternative_explanations:
+  - intrabar TP/SL ordering(봉 내부 익절/손절 순서)
+  - spread/commission/slippage/deal accounting(스프레드/수수료/슬리피지/거래 회계)
+attribution_confidence: high_for_repair_axis_medium_for_exact_deal_cause
+next_probe: frontier82F_deal_reconciled_runtime_label_preflight_v1

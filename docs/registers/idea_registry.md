@@ -2292,3 +2292,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier82D_proxy_runtime_gap_attribution_v1 -->
 - `frontier82D_proxy_runtime_gap_attribution_v1` attributed F82 proxy/runtime gap(F82 프록시/런타임 간극 귀속). Result(결과): OOS runtime net/PF/DD(표본외 런타임 순손익/수익 팩터/손실폭) `-55.21/0.93/20.36` vs proxy(프록시) `190.97504260071986/1.312138066226088/2.4483866090271933`. Boundary(경계): negative runtime materialization evidence only, no authority(부정 런타임 물질화 근거만, 권위 없음). Next(다음): `frontier82E_capped_repair_or_rotation_decision_v1`.
+
+<!-- frontier82E_capped_repair_or_rotation_decision_v1 -->
+- `frontier82E_capped_repair_or_rotation_decision_v1` selected capped repair(F82E 상한 수리 선택). Result(결과): F82C OOS runtime net/PF/DD/trades-day(표본외 런타임 순손익/수익 팩터/손실폭/일 거래) `-55.21/0.93/20.36/6.861538461538461` stayed negative after exact signal/feature/ONNX parity(정확한 신호/피처/온엑스 동등성 이후에도 부정). Repair axis(수리 축): `deal_reconciled_runtime_label_preflight`. Boundary(경계): decision only, no authority(결정 전용, 권위 없음). Next(다음): `frontier82F_deal_reconciled_runtime_label_preflight_v1`.
