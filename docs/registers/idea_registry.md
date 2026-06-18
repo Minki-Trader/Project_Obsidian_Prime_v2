@@ -2372,3 +2372,9 @@ Register ideas when they become durable work, not for every passing thought.
 
 - Action(행동): trade-shape/risk proxy repair(거래 형태/위험 프록시 수리)를 capped(상한 처리)했다.
 - Effect(효과): topic(주제)을 버리지 않고, adjacent same-axis retune(인접 동일 축 재조정)만 막는다. Next(다음): `frontier87D_stage_closeout_or_f88_rotation_handoff_v1`.
+<!-- frontier87D_stage_closeout_or_f88_rotation_handoff_v1 -->
+
+## frontier87D_stage_closeout_or_f88_rotation_handoff_v1
+
+- Action(행동): F87 trade-shape/risk proxy axis(거래 형태/위험 프록시 축)를 negative/no authority(부정/권위 없음)로 닫았다.
+- Effect(효과): next(다음)는 `frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1`이며, runtime-substrate-first materialization probe(런타임 바탕 우선 물질화 탐침)로 회전한다.

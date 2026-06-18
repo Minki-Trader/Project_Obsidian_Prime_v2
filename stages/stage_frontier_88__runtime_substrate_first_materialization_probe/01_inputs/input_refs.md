@@ -1,0 +1,10 @@
+﻿# F88 Input References(F88 입력 참조)
+
+- `stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/frontier87D_stage_closeout_or_f88_rotation_handoff_report.md`
+- `stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87d_stage_closeout_summary.json`
+- `stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/summary.json`
+- `stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_metrics.json`
+- `stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87C_trade_shape_risk_repair_or_rotation_decision_v1/decision/trade_shape_risk_repair_or_rotation_decision.json`
+- `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
+- `docs/contracts/python_feature_parser_spec_fpmarkets_v2.md`
+- `docs/policies/frontier_governance.md`

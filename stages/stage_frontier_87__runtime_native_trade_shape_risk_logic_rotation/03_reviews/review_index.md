@@ -13,3 +13,10 @@
 - Action(행동): F87B trade-shape/risk proxy(거래 형태/위험 프록시)를 repair/rotation decision(수리/회전 결정)으로 닫았다.
 - Effect(효과): `frontier87D_stage_closeout_or_f88_rotation_handoff_v1`가 현재 실행이 되며, Strategy Tester runtime economics(전략 테스터 런타임 경제성)는 주장하지 않는다.
 - Evidence(근거): `stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87C_trade_shape_risk_repair_or_rotation_decision_v1/reports/result_summary.md`.
+<!-- frontier87D_stage_closeout_or_f88_rotation_handoff_v1 -->
+
+## frontier87D_stage_closeout_or_f88_rotation_handoff_v1
+
+- Action(행동): F87 stage closeout(단계 마감) and F88 rotation handoff(F88 회전 인계).
+- Effect(효과): `frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1` becomes the next current run(다음 현재 실행) without claiming runtime authority(런타임 권위).
+- Evidence(근거): `stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87D_stage_closeout_or_f88_rotation_handoff_v1/reports/result_summary.md`.

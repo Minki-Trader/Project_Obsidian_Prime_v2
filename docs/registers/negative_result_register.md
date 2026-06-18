@@ -1502,3 +1502,10 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Negative memory(부정 기억): F87B trade-shape/risk top20 proxy(거래 형태/위험 상위20 프록시)는 positive lift(긍정 상승)를 만들지 못했고 runtime probe trigger(런타임 탐침 트리거)도 false(거짓)였다.
 - Salvage value(회수 가치): bad-risk concentration(나쁜 위험 집중)과 density gap(밀도 간극)은 다음 축 설계의 반례 근거로 쓴다.
 - Reopen condition(재개 조건): new axis/new evidence/material novelty delta(새 축/새 근거/실질 신규성 차이)가 있을 때만 재실험한다.
+<!-- frontier87D_stage_closeout_or_f88_rotation_handoff_v1 -->
+
+## frontier87D_stage_closeout_or_f88_rotation_handoff_v1
+
+- Negative memory(부정 기억): F87 trade-shape/risk proxy surface(거래 형태/위험 프록시 표면)는 meaningful runtime candidate(의미 있는 런타임 후보)를 만들지 못했다.
+- Salvage value(회수 가치): bad-risk concentration(나쁜 위험 집중), density gap(밀도 간극), and no runtime trigger(런타임 트리거 없음)는 다음 축의 반례 근거다.
+- Reopen condition(재개 조건): new axis/new evidence/material novelty delta(새 축/새 근거/실질 신규성 차이), especially runtime representation(런타임 표현)이 있을 때만 재실험한다.

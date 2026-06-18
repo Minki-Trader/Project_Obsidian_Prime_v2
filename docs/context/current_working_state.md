@@ -1,25 +1,15 @@
 ﻿# Current Working State(현재 작업 상태)
 
-Updated(갱신): 2026-06-18T21:38:01Z
+Updated(갱신): 2026-06-18T21:55:57Z
 
-Active stage(활성 단계): `stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation`
+Active stage(활성 단계): `stage_frontier_88__runtime_substrate_first_materialization_probe`
 
-Current run(현재 실행): `frontier87D_stage_closeout_or_f88_rotation_handoff_v1`
+Current run(현재 실행): `frontier88A_stage_open_runtime_substrate_first_materialization_probe_v1`
 
-Latest completed run(최근 완료 실행): `frontier87C_trade_shape_risk_repair_or_rotation_decision_v1`
+Latest completed run(최근 완료 실행): `frontier87D_stage_closeout_or_f88_rotation_handoff_v1`
 
-Status(상태): `f87c_trade_shape_risk_repair_capped_stage_closeout_required_no_authority`
+Action(행동): F87D closed F87 negative/no authority(F87D가 F87을 부정/권위 없음으로 마감) and handed off to F88 runtime-substrate-first materialization probe(F88 런타임 바탕 우선 물질화 탐침).
 
-Judgment(판정): `negative_trade_shape_risk_proxy_axis_no_runtime_candidate_no_runtime_evidence`
+Effect(효과): 다음 작업은 trade-shape/risk proxy retune(거래 형태/위험 프록시 재조정)가 아니라 MT5 output identity(메타트레이더5 출력 정체성), EA/ONNX/set handoff identity(EA/온엑스/설정 인계 정체성), tester report/trade-list/telemetry evidence(테스터 보고서/거래목록/기록 근거)를 먼저 닫는 방향으로 간다.
 
-F87C action(행동): F87B trade-shape/risk proxy scout(거래 형태/위험 프록시 탐색)의 weak/negative(약함/부정) 결과를 근거로 same-axis repair(동일 축 수리)를 capped(상한 처리)했다.
-
-Effect(효과): 다음 작업은 `frontier87D_stage_closeout_or_f88_rotation_handoff_v1`로 F87 preserved clue/negative memory(보존 단서/부정 기억)와 F88 rotation proposal(F88 회전 제안)을 닫는다. 이건 topic ban(주제 금지)이 아니라 adjacent same-axis continuation(인접 동일 축 연속) 방지다.
-
-Runtime boundary(런타임 경계): Strategy Tester runtime/economics(전략 테스터 런타임/경제성), selected baseline(선택 기준선), runtime authority(런타임 권위), live readiness(실거래 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
-
-Key readout(핵심 판독):
-
-- Inner top20 shape lift(내부 상위20 형태 상승): `-0.004800918074965049`
-- Locked OOS top20 shape lift(잠금 OOS 상위20 형태 상승): `-0.10561124310527928`
-- Runtime trigger(런타임 트리거): `False`
+Claim boundary(주장 경계): `stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
