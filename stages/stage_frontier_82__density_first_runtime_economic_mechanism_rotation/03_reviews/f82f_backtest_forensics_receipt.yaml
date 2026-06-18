@@ -1,0 +1,18 @@
+﻿packet_id: frontier82F_deal_reconciled_runtime_label_preflight_v1
+skill: obsidian-backtest-forensics
+status: usable_with_boundary
+tester_identity: F82C manifest/report settings(F82C 목록/보고서 설정)
+ea_identity: stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82C_mt5_runtime_materialization_v1/run_manifest.json
+report_identity:
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82f_deal_reconciliation_summary.json
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82f_split_reconciliation.csv
+trade_evidence:
+  deal_rows: 6602
+  trade_rows: 3301
+  reconciled: True
+cost_assumptions: broker tester report values(브로커 테스터 보고서 값)
+forensic_checks:
+  - parsed tester deal table(테스터 딜 표 파싱)
+  - paired in/out deals into trades(진입/청산 딜을 거래로 결합)
+  - reconciled net and trade count to receipt(순손익과 거래 수를 영수증과 대조)
+backtest_judgment: usable_with_boundary

@@ -1,0 +1,109 @@
+﻿{
+  "run_id": "frontier82F_deal_reconciled_runtime_label_preflight_v1",
+  "stage_id": "stage_frontier_82__density_first_runtime_economic_mechanism_rotation",
+  "status": "passed_local_verification_no_authority",
+  "created_at_utc": "2026-06-18T06:27:35Z",
+  "checks": {
+    "deal_rows_positive": true,
+    "trade_rows_positive": true,
+    "all_reconciled": true,
+    "next_run_id": "frontier82G_mt5_realized_label_rebuild_v1",
+    "claim_boundary": "runtime_deal_evidence_preflight_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  },
+  "split_reconciliation": [
+    {
+      "split": "validation",
+      "report_sha256": "52a1421bb247b2c1902157cd9488bfe84c507379c3abbe4caca86f663ef846b7",
+      "net_delta_vs_receipt": 0.0,
+      "trade_count_delta_vs_receipt": 0,
+      "reconciled": true
+    },
+    {
+      "split": "oos",
+      "report_sha256": "c0c5fc1985a863eabe0e5086024f6cb7cf41f136712d9232099f0c3843c848ab",
+      "net_delta_vs_receipt": 7.105427357601002e-15,
+      "trade_count_delta_vs_receipt": 0,
+      "reconciled": true
+    }
+  ],
+  "required_paths": [
+    {
+      "path": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82f_deal_reconciliation_summary.json",
+      "exists": true,
+      "sha256": "6fb9712e7183d5ce6238a9b7f3d2c187b47d5004cde807cf596a695c29d021c6"
+    },
+    {
+      "path": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82F_deal_reconciled_runtime_label_preflight_v1/f82f_deal_rows.csv",
+      "exists": true,
+      "sha256": "d7fadb875cd7a8e661096896c889215c9114c499ba3f26f0ddc107aff43e9cfe"
+    },
+    {
+      "path": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82F_deal_reconciled_runtime_label_preflight_v1/f82f_trade_rows.csv",
+      "exists": true,
+      "sha256": "8ee01d03062b8fb417349799ffb64d40bb588b9bb9f672e3d6b83d3a4c6d5cdd"
+    },
+    {
+      "path": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82f_split_reconciliation.csv",
+      "exists": true,
+      "sha256": "42e3f189ff51c3cedb6241a1460688f75d8ff26d81a24685ade38c6693203eed"
+    },
+    {
+      "path": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/frontier82F_deal_reconciled_runtime_label_preflight_report.md",
+      "exists": true,
+      "sha256": "acc46d6de32874a3062adeb4a212a5820bc20d8d6ef0409107f3412065267bc0"
+    },
+    {
+      "path": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/required_gate_coverage_audit_f82f.md",
+      "exists": true,
+      "sha256": "cd4152e812ba70444f2518fc4951765162b64a8f67c1b76e3ad10e171aaee266"
+    },
+    {
+      "path": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82f_runtime_parity_receipt.yaml",
+      "exists": true,
+      "sha256": "38686738d9bbb014a021c8f9f1b751b8bccef0b4192c09ab5de9fbb21d9a8561"
+    },
+    {
+      "path": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82f_backtest_forensics_receipt.yaml",
+      "exists": true,
+      "sha256": "31d65c1b6681718371c9d8cdc9da3d9c0612e3b8f340adf2015e28c488b0ab06"
+    },
+    {
+      "path": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82f_reference_scout_receipt.yaml",
+      "exists": true,
+      "sha256": "58e37d613f04734d0832dd13bb677e4270a9921f48fdd6b5ea0d52af1575ccb1"
+    },
+    {
+      "path": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82f_run_evidence_receipt.yaml",
+      "exists": true,
+      "sha256": "9638d0c98d5e2d789c8690d53d0a39fa2dbe7a8bb6fc3546d7cb817ee98f08bd"
+    },
+    {
+      "path": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82f_artifact_lineage_receipt.yaml",
+      "exists": true,
+      "sha256": "65c0fd4333668e2afb6f37eb3766576329dbb4e5123ba39b073b53129bb35310"
+    },
+    {
+      "path": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82f_task_force_review_receipt.yaml",
+      "exists": true,
+      "sha256": "8252d62aff89c525c2105e8da000d7bbf5dd88bdf0450d29580cdeec6d3e73dc"
+    },
+    {
+      "path": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82f_claim_discipline_receipt.yaml",
+      "exists": true,
+      "sha256": "ef73c4b2f78f5e868f4675d39d16b97e0df2166fdde7c2869d0157e339d7cf59"
+    },
+    {
+      "path": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82F_deal_reconciled_runtime_label_preflight_v1/run_manifest.json",
+      "exists": true,
+      "sha256": "6fb9712e7183d5ce6238a9b7f3d2c187b47d5004cde807cf596a695c29d021c6"
+    }
+  ],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "Goal Achieve"
+  ]
+}

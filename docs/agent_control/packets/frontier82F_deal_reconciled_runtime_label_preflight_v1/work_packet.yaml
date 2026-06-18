@@ -1,0 +1,37 @@
+﻿packet_id: frontier82F_deal_reconciled_runtime_label_preflight_v1
+stage_id: stage_frontier_82__density_first_runtime_economic_mechanism_rotation
+router_mode: full
+work_packet_lifecycle: runtime_report_evidence_to_reconciliation_to_next_label_rebuild
+primary_family: runtime_backtest
+primary_skill: obsidian-runtime-parity
+support_skills:
+  - obsidian-backtest-forensics
+  - obsidian-reference-scout
+  - obsidian-run-evidence-system
+  - obsidian-artifact-lineage
+  - obsidian-task-force-review
+  - obsidian-claim-discipline
+required_skill_receipts:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-reference-scout
+  - obsidian-run-evidence-system
+  - obsidian-artifact-lineage
+  - obsidian-task-force-review
+  - obsidian-claim-discipline
+required_gates:
+  - runtime_evidence_gate
+  - scope_completion_gate
+  - kpi_contract_audit
+  - task_force_review_packet
+  - required_gate_coverage_audit
+  - final_claim_guard
+scope: "Recover and reconcile F82C deal-level Strategy Tester evidence(F82C 거래별 전략 테스터 근거 회수 및 대조)."
+status: f82f_deal_level_report_evidence_reconciled_label_rebuild_ready_no_authority
+judgment: deal_level_pnl_recovered_and_reconciled_runtime_label_rebuild_required_no_authority
+next_run_id: frontier82G_mt5_realized_label_rebuild_v1
+branch_worktree_fit: "passed_on_codex/frontier82-deal-preflight"
+ea_variant_boundary: "no_code_change_existing_report_parse(코드 변경 없음, 기존 보고서 파싱)"
+reference_scout: "not_required_existing_internal_parser_no_new_mql5_api(기존 내부 파서, 새 MQL5 API 없음)"
+claim_boundary: runtime_deal_evidence_preflight_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+created_at_utc: "2026-06-18T06:27:35Z"

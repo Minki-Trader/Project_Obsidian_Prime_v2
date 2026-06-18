@@ -1,4 +1,11 @@
-﻿# 2026-06-18 - F81H Closeout And F82 Rotation(F81H 마감 및 F82 회전)
+﻿# 2026-06-18 - F82F Deal Reconciliation(F82F 거래 대조)
+
+- Action(행동): `frontier82F_deal_reconciled_runtime_label_preflight_v1`로 F82C Strategy Tester report(전략 테스터 보고서)의 deal/trade rows(딜/거래 행)를 파싱했다.
+- Effect(효과): deal rows `6602`, trade rows `3301`를 runtime receipt(런타임 영수증)와 대조해 MT5-realized label rebuild(MT5 실현 손익 라벨 재구축) 입력을 만들었다.
+- Next(다음): `frontier82G_mt5_realized_label_rebuild_v1`.
+- Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+
+# 2026-06-18 - F81H Closeout And F82 Rotation(F81H 마감 및 F82 회전)
 
 - Action(행동): `frontier81H_capped_repair_closeout_or_f82_rotation_decision_v1`로 F81 lifecycle(전선81 생명주기)을 closeout(마감)했다.
 - Effect(효과): MT5 runtime OOS(런타임 표본외) `-115.71/0.7332887700534759/23.72/3.4358974358974357`와 F81G materialization-ready(물질화 준비) `0`을 근거로 negative memory(부정 기억)와 preserved clue(보존 단서)를 기록했다.
