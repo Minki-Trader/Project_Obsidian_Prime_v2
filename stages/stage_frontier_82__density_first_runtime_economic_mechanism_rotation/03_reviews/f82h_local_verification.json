@@ -1,0 +1,42 @@
+﻿{
+  "packet_id": "frontier82H_capped_repair_closeout_or_f83_rotation_decision_v1",
+  "checks": [
+    {
+      "check": "runtime_probe_completed",
+      "passed": true,
+      "effect": "Runtime report and deal evidence are reconciled(런타임 보고서와 거래 근거가 대조됨)."
+    },
+    {
+      "check": "runtime_oos_negative",
+      "passed": true,
+      "effect": "Stage closeout has negative runtime evidence(단계 마감에 부정 런타임 근거가 있음)."
+    },
+    {
+      "check": "materialization_candidate_zero",
+      "passed": true,
+      "effect": "No ONNX handoff candidate is claimed(온엑스 인계 후보를 주장하지 않음)."
+    },
+    {
+      "check": "idea_registry_stale_count_corrected",
+      "passed": true,
+      "effect": "Stale registry count is corrected(낡은 등록부 수치가 보정됨)."
+    },
+    {
+      "check": "frontier_extra_not_due",
+      "passed": true,
+      "effect": "F83 open is not blocked by extra stage due check(F83 개방이 추가 단계 도래 점검에 막히지 않음)."
+    },
+    {
+      "check": "task_force_receipt_written",
+      "passed": true,
+      "effect": "Task Force review is materialized(태스크포스 검토가 물질화됨)."
+    },
+    {
+      "check": "no_forbidden_claims",
+      "passed": true,
+      "effect": "Completion/promotion/runtime authority remain forbidden(완성/승격/런타임 권위가 계속 금지됨)."
+    }
+  ],
+  "all_passed": true,
+  "claim_boundary": "stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

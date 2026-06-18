@@ -41,3 +41,11 @@ Updated(갱신): 2026-06-18T05:15:42Z
 - `f82g_realized_label_candidate_rows.csv`: F82G candidate rows(F82G 후보 행)
 - `f82g_mt5_realized_label_dataset.csv`: F82G label dataset(F82G 라벨 데이터셋)
 - `required_gate_coverage_audit_f82g.md`: F82G gate audit(F82G 게이트 감사)
+
+<!-- F82H_CLOSEOUT -->
+- `stage_closeout_report.md`: F82 stage closeout report(F82 단계 마감 보고서)
+- `frontier82H_capped_repair_closeout_or_f83_rotation_decision_report.md`: F82H closeout/rotation report(F82H 마감/회전 보고서)
+- `f82h_closeout_or_rotation_decision.json`: F82H machine closeout summary(F82H 기계 마감 요약)
+- `f82h_closeout_kpi_rows.csv`: F82H closeout KPI rows(F82H 마감 KPI 행)
+- `required_gate_coverage_audit_f82h.md`: F82H gate audit(F82H 게이트 감사)
+- `f82h_artifact_lineage.json`: F82H artifact lineage(F82H 산출물 계보)

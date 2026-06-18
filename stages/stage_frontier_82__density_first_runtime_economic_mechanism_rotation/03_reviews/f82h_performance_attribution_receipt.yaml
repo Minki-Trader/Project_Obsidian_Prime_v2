@@ -1,0 +1,15 @@
+﻿packet_id: frontier82H_capped_repair_closeout_or_f83_rotation_decision_v1
+skill: obsidian-performance-attribution
+observed_change: proxy OOS net/PF/DD/tpd 190.975/1.312/2.448/6.907 -> runtime OOS -55.209999999999994/0.9332922526702432/20.36/6.861538461538461
+comparison_baseline: F82B proxy best candidate f82b_07295(F82B 프록시 최선 후보 f82b_07295)
+likely_drivers:
+  - runtime deal PnL after parity(동등성 이후 런타임 거래 손익)
+  - win-rate collapse(승률 붕괴)
+  - drawdown expansion(손실폭 확대)
+segment_checks:
+  - validation and OOS split(검증 및 표본외 분할)
+  - long-only trade shape(롱 단방향 거래 형태)
+trade_shape: OOS trades=1338; win_rate=36.771300448430495; payoff=1.6048074100793206; max_loss_streak=11
+alternative_explanations: proxy contract PnL scale and close-direction label miss tester deal economics(프록시 계약 손익 척도와 종가방향 라벨이 테스터 거래 경제성을 놓침)
+attribution_confidence: medium_high(중상)
+next_probe: F83 runtime PnL teacher distillation(F83 런타임 손익 교사 증류)

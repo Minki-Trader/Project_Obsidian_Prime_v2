@@ -1409,3 +1409,15 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Reopen condition(재개 조건): feature set/label/model family/trade shape/risk logic/regime split(피처 묶음/라벨/모델 계열/거래 형태/위험 로직/장세 분할) 중 하나 이상이 실제로 바뀌고 새 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
 - Evidence(근거): `stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/stage_closeout_report.md`.
 - Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+
+<!-- NR-FR82-DENSITY-FIRST-RUNTIME-ECONOMIC-MECHANISM-ROTATION -->
+## NR-FR82-DENSITY-FIRST-RUNTIME-ECONOMIC-MECHANISM-ROTATION
+
+- Stage(단계): `stage_frontier_82__density_first_runtime_economic_mechanism_rotation`
+- Hypothesis(가설): density-first two-sided runtime economic mechanism(밀도 우선 양방향 런타임 경제 메커니즘)이 deal-level PnL(거래별 손익), session/regime split(세션/장세 분할), and exportable model family(내보내기 가능한 모델 계열)를 묶으면 material MT5 candidate(MT5 물질화 후보)를 만들 수 있다.
+- Why failed(실패 이유): F82C/F82F MT5 runtime OOS(런타임 표본외)는 net/PF/DD/trades-day(순손익/수익 팩터/손실폭/일 거래) `-55.209999999999994/0.9332922526702432/20.36/6.861538461538461`였고, F82G realized-label repair(실현 라벨 수리)는 positive low-density seed(양수 저밀도 씨앗) `8`개를 찾았지만 materialization-ready candidate(물질화 준비 후보)는 `0`개였다.
+- Salvage value(회수 가치): density-first proxy surface(밀도 우선 프록시 표면), Strategy Tester report deal parser(전략 테스터 보고서 딜 파서), reconciled runtime realized-label dataset(대조된 런타임 실현 라벨 데이터셋), f82g_0005 seed reference(f82g_0005 씨앗 참조)를 보존한다.
+- Do-not-repeat(반복 금지): same F82 f82b_07295/F82G surface(같은 F82 표면)를 threshold/filter/parameter-only repair(임계값/필터/파라미터만 바꾸는 수리)로 반복하지 않는다.
+- Reopen condition(재개 조건): realized runtime PnL teacher(실현 런타임 손익 교사), feature set(피처 묶음), label/target(라벨/목표), model family(모델 계열), trade shape(거래 형태), risk logic(위험 로직), or regime split(장세 분할) 중 하나 이상이 실제로 바뀌고 새 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
+- Evidence(근거): `stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/stage_closeout_report.md`.
+- Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).

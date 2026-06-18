@@ -1,0 +1,37 @@
+﻿{
+  "packet_id": "frontier82H_capped_repair_closeout_or_f83_rotation_decision_v1",
+  "primary_family": "publish_handoff",
+  "status": "passed_stage_closeout_only_no_authority",
+  "gates": [
+    {
+      "gate": "state_sync_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82h_state_sync_audit.json"
+    },
+    {
+      "gate": "closeout_gate",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82h_closeout_gate.json"
+    },
+    {
+      "gate": "kpi_contract_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82h_closeout_kpi_rows.csv"
+    },
+    {
+      "gate": "codex_task_force_review_packet",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82h_task_force_review_receipt.yaml"
+    },
+    {
+      "gate": "required_gate_coverage_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/required_gate_coverage_audit_f82h.md"
+    },
+    {
+      "gate": "final_claim_guard",
+      "status": "passed",
+      "evidence": "docs/agent_control/packets/frontier82H_capped_repair_closeout_or_f83_rotation_decision_v1/final_claim_guard.json"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+﻿packet_id: frontier82H_capped_repair_closeout_or_f83_rotation_decision_v1
+skill: obsidian-artifact-lineage
+status: connected_with_boundary
+source_inputs:
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82b_density_first_proxy_summary.json
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82c_mt5_runtime_materialization_summary.json
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82d_proxy_runtime_gap_attribution.json
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82f_deal_reconciliation_summary.json
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82g_mt5_realized_label_rebuild_summary.json
+producer: stage_pipelines/stage_frontier_82/frontier82h_capped_repair_closeout_or_f83_rotation_decision.py
+consumer: frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1
+artifact_paths:
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82h_closeout_or_rotation_decision.json
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/f82h_closeout_kpi_rows.csv
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/stage_closeout_report.md
+  - docs/decisions/2026-06-18_frontier82_closeout_rotate_f83.md
+registry_links:
+  - docs/registers/run_registry.csv
+  - docs/registers/alpha_run_ledger.csv
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/03_reviews/stage_run_ledger.csv
+  - docs/registers/artifact_registry.csv
+availability: tracked_reports_and_ignored_run_outputs_with_hashes(추적 보고서와 무시된 실행 산출물 해시)
+lineage_judgment: connected_with_boundary
