@@ -2321,3 +2321,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier83G_runtime_realized_outcome_repair_or_rotation_decision_v1 -->
 - `frontier83G_runtime_realized_outcome_repair_or_rotation_decision_v1` closed Frontier83(전선83) as `negative_memory_with_preserved_runtime_parity_clue_and_winrate_gap_seed(부정 기억과 보존 런타임 동등성 단서 및 승률 간극 씨앗)`. Runtime OOS net/PF/DD/tpd(런타임 표본외 순손익/수익 팩터/손실폭/일 거래) `-37.17/0.97/19.24/8.266666666666667`; primary cause(주 원인) `runtime_win_rate_erosion_after_signal_parity(신호 동등성 이후 런타임 승률 침식)`. Next(다음): `frontier84A_stage_open_runtime_realized_winrate_rebuild_after_signal_parity_gap_v1`. Boundary(경계): no authority(권위 없음).
+
+<!-- frontier84A_stage_open_runtime_realized_winrate_rebuild_after_signal_parity_gap_v1 -->
+- `IDEA-FR84-RUNTIME-REALIZED-WINRATE-REBUILD-AFTER-SIGNAL-PARITY-GAP` opened by `frontier84A_stage_open_runtime_realized_winrate_rebuild_after_signal_parity_gap_v1`. Hypothesis(가설): Runtime-realized win/loss, stop-touch, and fill-path labels(런타임 실현 승패, 손절·익절 터치, 체결 경로 라벨)을 F83E/F83F의 actual MT5 outcome(실제 MT5 결과)에서 재구성하면, proxy success after signal parity(신호 동등성 뒤 프록시 성공)가 actual MT5 win rate(실제 MT5 승률)로 보존되는 exportable ONNX candidate(내보내기 가능 온엑스 후보)를 만들 수 있다. Next(다음): `frontier84B_runtime_realized_winrate_proxy_scout_v1`. Boundary(경계): open/design only(개방/설계만), no authority(권위 없음).

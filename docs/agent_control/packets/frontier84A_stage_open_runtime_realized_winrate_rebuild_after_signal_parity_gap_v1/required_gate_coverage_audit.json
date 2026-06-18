@@ -1,0 +1,20 @@
+﻿{
+  "packet_id": "frontier84A_stage_open_runtime_realized_winrate_rebuild_after_signal_parity_gap_v1",
+  "status": "passed",
+  "required_gates": {
+    "state_sync_audit": "pass",
+    "frontier_open_contract": "pass",
+    "frontier_extra_due_check": "pass_not_due",
+    "codex_task_force_review_packet": "pass",
+    "experiment_design_receipt": "pass",
+    "exploration_mandate_receipt": "pass",
+    "artifact_lineage_audit": "pass",
+    "final_claim_guard": "pass"
+  },
+  "not_applicable_with_reason": {
+    "kpi_contract_audit": "No proxy/runtime KPI(프록시/런타임 KPI 없음) in F84A stage-open design packet.",
+    "mt5_runtime_evidence_gate": "No MT5 execution(MT5 실행 없음) in F84A.",
+    "model_training_gate": "No model training(모델 학습 없음) in F84A."
+  },
+  "claim_boundary": "frontier84_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}
