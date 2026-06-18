@@ -1,0 +1,54 @@
+{
+  "allowed_claims": [
+    "f87c_trade_shape_risk_decision_recorded",
+    "trade_shape_risk_threshold_filter_repair_capped",
+    "stage_closeout_or_f88_rotation_handoff_next_planned",
+    "runtime_materialization_not_started_due_to_no_meaningful_proxy_candidate"
+  ],
+  "evidence_boundary": "decision_only_no_runtime_economics",
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "task_force_reviewed",
+    "reviewed_by_unspawned_agents",
+    "oos_selected_model"
+  ],
+  "judgment": "negative_trade_shape_risk_proxy_axis_no_runtime_candidate_no_runtime_evidence",
+  "next_action": "frontier87D_stage_closeout_or_f88_rotation_handoff_v1",
+  "parent_run_id": "frontier87B_trade_shape_risk_proxy_scout_v1",
+  "parity": "P0_unverified",
+  "proxy_kpi": {
+    "best_model_id": "sequence_context__good_shape_logreg_l2_balanced",
+    "inner_validation_top20_bad_risk_rate": 0.75,
+    "inner_validation_top20_good_shape_rate": 0.2571428571428571,
+    "inner_validation_top20_shape_lift": -0.004800918074965049,
+    "inner_validation_top20_trades_per_day_proxy": 0.8536585365853658,
+    "locked_oos_top20_bad_risk_rate_readout_only": 0.8614958448753463,
+    "locked_oos_top20_good_shape_rate_readout_only": 0.14958448753462603,
+    "locked_oos_top20_shape_lift_readout_only": -0.10561124310527928,
+    "locked_oos_top20_trades_per_day_proxy_readout_only": 1.8704663212435233,
+    "meaningful_candidate": false,
+    "selected_candidate_id": "sequence_context__good_shape_logreg_l2_balanced__top_20pct"
+  },
+  "run_id": "frontier87C_trade_shape_risk_repair_or_rotation_decision_v1",
+  "runtime_kpi": {
+    "drawdown": null,
+    "n_a_reason": "F87C is a repair/rotation decision over F87B proxy evidence; no MT5 Strategy Tester run was executed.",
+    "net_profit": null,
+    "profit_factor": null,
+    "trade_count": null,
+    "trades_per_day": null
+  },
+  "scoreboard": "structural_scout",
+  "stage_id": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation",
+  "status": "f87c_trade_shape_risk_repair_capped_stage_closeout_required_no_authority",
+  "wfo_status": "not_applicable"
+}

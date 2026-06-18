@@ -1,0 +1,70 @@
+{
+  "allowed_claims": [
+    "f87c_trade_shape_risk_decision_recorded",
+    "trade_shape_risk_threshold_filter_repair_capped",
+    "stage_closeout_or_f88_rotation_handoff_next_planned",
+    "runtime_materialization_not_started_due_to_no_meaningful_proxy_candidate"
+  ],
+  "evidence_boundary": "decision-only",
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "task_force_reviewed",
+    "reviewed_by_unspawned_agents",
+    "oos_selected_model"
+  ],
+  "hard_gate_applicable": "no",
+  "judgment_class": "negative",
+  "ledger_rows": [
+    "docs/registers/run_registry.csv::frontier87C_trade_shape_risk_repair_or_rotation_decision_v1",
+    "docs/registers/alpha_run_ledger.csv::frontier87C_trade_shape_risk_repair_or_rotation_decision_v1__trade_shape_risk_decision",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/stage_run_ledger.csv::frontier87C_trade_shape_risk_repair_or_rotation_decision_v1__trade_shape_risk_decision"
+  ],
+  "measurement_scope": "decision over F87B structural_scout proxy metrics",
+  "missing_evidence": [
+    "Strategy Tester report",
+    "EA/ONNX bundle identity",
+    "runtime telemetry"
+  ],
+  "negative_memory_required": "yes",
+  "packet_id": "frontier87C_trade_shape_risk_repair_or_rotation_decision_v1",
+  "parity_level": "P0_unverified",
+  "produced_artifacts": [
+    "stage_pipelines/stage_frontier_87/frontier87c_trade_shape_risk_repair_or_rotation_decision.py",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87C_trade_shape_risk_repair_or_rotation_decision_v1/decision/trade_shape_risk_repair_or_rotation_decision.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87C_trade_shape_risk_repair_or_rotation_decision_v1/summary.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87C_trade_shape_risk_repair_or_rotation_decision_v1/run_manifest.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87C_trade_shape_risk_repair_or_rotation_decision_v1/kpi_record.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87C_trade_shape_risk_repair_or_rotation_decision_v1/reports/result_summary.md",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87c_execution_summary.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87c_frontier_extra_due_check.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87c_frontier_five_stage_direction_synthesis.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87c_frontier_topic_rotation_check.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87c_scope_completion_gate.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87c_kpi_contract_audit.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87c_artifact_lineage_audit.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87c_result_judgment_audit.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87c_final_claim_guard.json",
+    "docs/agent_control/packets/frontier87C_trade_shape_risk_repair_or_rotation_decision_v1/final_claim_guard.json"
+  ],
+  "receipt_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87c_run_evidence_system_receipt.json",
+  "registry_update_required": "yes",
+  "scoreboard": "structural_scout",
+  "skill": "obsidian-run-evidence-system",
+  "source_inputs": [
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/summary.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_metrics.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/models/proxy_model_card.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/f87b_feature_target_schema.json"
+  ],
+  "status": "executed",
+  "wfo_status": "not_applicable"
+}

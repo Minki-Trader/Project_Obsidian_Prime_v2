@@ -1,0 +1,150 @@
+{
+  "allowed_claims": [
+    "f87c_trade_shape_risk_decision_recorded",
+    "trade_shape_risk_threshold_filter_repair_capped",
+    "stage_closeout_or_f88_rotation_handoff_next_planned",
+    "runtime_materialization_not_started_due_to_no_meaningful_proxy_candidate"
+  ],
+  "candidate_decision": {
+    "inner_validation_top20": {
+      "bad_risk_rate": 0.75,
+      "candidate_id": "sequence_context__good_shape_logreg_l2_balanced__top_20pct",
+      "good_shape_rate": 0.2571428571428571,
+      "mean_mae_r": 2.1404285714285702,
+      "mean_mfe_r": 1.8166836734693865,
+      "mean_shape_score_r": -0.0887653061224469,
+      "rows": 140,
+      "runtime_claim": "not_claimed",
+      "selection_role": "inner_validation",
+      "selection_uses_oos": false,
+      "shape_score_lift_vs_role": -0.004800918074965049,
+      "top_pct": 0.2,
+      "tp_first_rate": 0.2785714285714286,
+      "trades_per_day_proxy": 0.8536585365853658
+    },
+    "locked_oos_top20_readout_only": {
+      "bad_risk_rate": 0.8614958448753463,
+      "candidate_id": "sequence_context__good_shape_logreg_l2_balanced__top_20pct",
+      "good_shape_rate": 0.14958448753462603,
+      "mean_mae_r": 4.077289275821126,
+      "mean_mfe_r": 3.933292441630398,
+      "mean_shape_score_r": -0.06925207756232687,
+      "rows": 361,
+      "runtime_claim": "not_claimed",
+      "selection_role": "locked_oos_readout",
+      "selection_uses_oos": false,
+      "shape_score_lift_vs_role": -0.10561124310527928,
+      "top_pct": 0.2,
+      "tp_first_rate": 0.31024930747922436,
+      "trades_per_day_proxy": 1.8704663212435233
+    },
+    "meaningful_candidate": false,
+    "next_run_id": "frontier87C_trade_shape_risk_repair_or_rotation_decision_v1",
+    "runtime_probe_trigger_condition_met": false,
+    "selected_candidate_id": "sequence_context__good_shape_logreg_l2_balanced__top_20pct"
+  },
+  "capped_repairs": [
+    "same threshold/filter/parameter retune on F87B score ranks",
+    "same F86G-derived sequence context without new source evidence",
+    "same MFE/MAE target reshaping without material label novelty",
+    "session or density-only tweak without a new execution/runtime axis"
+  ],
+  "claim_boundary": "f87c_trade_shape_risk_repair_capped_stage_closeout_prepared_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve",
+  "created_at_utc": "2026-06-18T21:38:01Z",
+  "decision": "cap_trade_shape_risk_axis_and_prepare_stage_closeout_or_f88_rotation",
+  "decision_reasons": [
+    "F87B inner-validation top20 shape lift was negative, not a material positive edge.",
+    "F87B locked OOS readout was worse and remains readout-only, not selection authority.",
+    "Trade density stayed below the goal entry density and cannot support runtime economics.",
+    "Bad-risk concentration stayed high, so threshold/filter repair would mostly retune a weak surface.",
+    "No MT5 Strategy Tester runtime claim is made, so runtime evidence gate is outside F87C claim surface."
+  ],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "task_force_reviewed",
+    "reviewed_by_unspawned_agents",
+    "oos_selected_model"
+  ],
+  "judgment": "negative_trade_shape_risk_proxy_axis_no_runtime_candidate_no_runtime_evidence",
+  "metrics": {
+    "best_model_id": "sequence_context__good_shape_logreg_l2_balanced",
+    "inner_validation_top20_bad_risk_rate": 0.75,
+    "inner_validation_top20_good_shape_rate": 0.2571428571428571,
+    "inner_validation_top20_shape_lift": -0.004800918074965049,
+    "inner_validation_top20_trades_per_day_proxy": 0.8536585365853658,
+    "locked_oos_top20_bad_risk_rate_readout_only": 0.8614958448753463,
+    "locked_oos_top20_good_shape_rate_readout_only": 0.14958448753462603,
+    "locked_oos_top20_shape_lift_readout_only": -0.10561124310527928,
+    "locked_oos_top20_trades_per_day_proxy_readout_only": 1.8704663212435233,
+    "meaningful_candidate": false,
+    "selected_candidate_id": "sequence_context__good_shape_logreg_l2_balanced__top_20pct"
+  },
+  "next_axis_options": [
+    "F87D closes F87 with preserved clue/negative memory and proposes F88.",
+    "F88 candidate should favor runtime-substrate-first materialization or a materially new evidence axis."
+  ],
+  "next_run_id": "frontier87D_stage_closeout_or_f88_rotation_handoff_v1",
+  "not_a_topic_ban": true,
+  "parent_run_id": "frontier87B_trade_shape_risk_proxy_scout_v1",
+  "proxy_metrics_reference": {
+    "best_model_id": "sequence_context__good_shape_logreg_l2_balanced",
+    "candidate_queue_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/candidate_queue.csv",
+    "model_ids": []
+  },
+  "reopen_conditions": [
+    "new source evidence or material label novelty",
+    "broker/runtime telemetry that changes the trade-shape question",
+    "a different trade lifecycle formulation, not the same top-percent score retune",
+    "runtime-substrate evidence that makes MT5 materialization the primary axis"
+  ],
+  "repair_disposition": "capped",
+  "rotation_disposition": "prepare_stage_closeout_or_f88_rotation_handoff",
+  "run_id": "frontier87C_trade_shape_risk_repair_or_rotation_decision_v1",
+  "runtime_materialization_not_started_reason": "F87B did not create a meaningful signal/candidate; no runtime, materialization, economics, authority, or Goal Achieve claim is protected by F87C.",
+  "runtime_materialization_started": false,
+  "runtime_probe_trigger_condition_met": false,
+  "source_identities": {
+    "f87b_feature_schema": {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/f87b_feature_target_schema.json",
+      "sha256": "65f926bde453fd28e24ec64bd65a9c83b8b7b31c721116809984528ec7a41107",
+      "size": 4084
+    },
+    "f87b_model_card": {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/models/proxy_model_card.json",
+      "sha256": "cfb9108de1ef49655820e2eae9f6975de1a6606cf838555c745771013aa98c8b",
+      "size": 1914
+    },
+    "f87b_proxy_metrics": {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_metrics.json",
+      "sha256": "8884728695846ca4d2bf2537f408b596b2f227760ccde559cfef9c0842b0c16e",
+      "size": 33972
+    },
+    "f87b_result_summary": {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/reports/result_summary.md",
+      "sha256": "623cef84c6701896793097fde5522b2be975e0ce703130f6183d0aab7afcb017",
+      "size": 3568
+    },
+    "f87b_summary": {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/summary.json",
+      "sha256": "9e31970782ee34251800b00f9c6939b29ca3526b37389ad13ef096282b9b7b05",
+      "size": 19920
+    }
+  },
+  "stage_id": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation",
+  "status": "f87c_trade_shape_risk_repair_capped_stage_closeout_required_no_authority",
+  "topic_policy": "Trade-shape/risk can reappear later with new axis/new evidence/material novelty delta; only adjacent same-axis continuation is blocked."
+}

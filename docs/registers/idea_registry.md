@@ -2366,3 +2366,9 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1 -->
 - `frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1` opened F87 runtime-native trade shape/risk logic(전선87 런타임 네이티브 거래 형태/위험 로직) as design-only(설계 전용). Next(다음): `frontier87B_trade_shape_risk_proxy_scout_v1`. Boundary(경계): `stage_open_design_only_no_runtime_materialization_no_strategy_tester_economics_no_runtime_authority_no_goal_achieve`.
+<!-- frontier87C_trade_shape_risk_repair_or_rotation_decision_v1 -->
+
+## frontier87C_trade_shape_risk_repair_or_rotation_decision_v1
+
+- Action(행동): trade-shape/risk proxy repair(거래 형태/위험 프록시 수리)를 capped(상한 처리)했다.
+- Effect(효과): topic(주제)을 버리지 않고, adjacent same-axis retune(인접 동일 축 재조정)만 막는다. Next(다음): `frontier87D_stage_closeout_or_f88_rotation_handoff_v1`.

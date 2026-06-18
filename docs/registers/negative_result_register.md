@@ -1495,3 +1495,10 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Do not repeat(반복 금지): same first-touch pre-entry scalar/sequence threshold/filter retune(동일 첫 터치 진입 전 스칼라/시퀀스 임계값/필터 재조정).
 - Reopen condition(재개 조건): new axis/new evidence/material novelty delta(새 축/새 근거/실질 신규성 차이), not hidden same-axis continuation(숨은 동일 축 지속 아님).
 - Boundary(경계): `stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`
+<!-- frontier87C_trade_shape_risk_repair_or_rotation_decision_v1 -->
+
+## frontier87C_trade_shape_risk_repair_or_rotation_decision_v1
+
+- Negative memory(부정 기억): F87B trade-shape/risk top20 proxy(거래 형태/위험 상위20 프록시)는 positive lift(긍정 상승)를 만들지 못했고 runtime probe trigger(런타임 탐침 트리거)도 false(거짓)였다.
+- Salvage value(회수 가치): bad-risk concentration(나쁜 위험 집중)과 density gap(밀도 간극)은 다음 축 설계의 반례 근거로 쓴다.
+- Reopen condition(재개 조건): new axis/new evidence/material novelty delta(새 축/새 근거/실질 신규성 차이)가 있을 때만 재실험한다.

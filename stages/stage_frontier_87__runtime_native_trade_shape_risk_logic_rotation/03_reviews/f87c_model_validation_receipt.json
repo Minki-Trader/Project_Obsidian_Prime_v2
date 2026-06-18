@@ -1,0 +1,36 @@
+{
+  "allowed_claims": [
+    "f87c_trade_shape_risk_decision_recorded",
+    "trade_shape_risk_threshold_filter_repair_capped",
+    "stage_closeout_or_f88_rotation_handoff_next_planned",
+    "runtime_materialization_not_started_due_to_no_meaningful_proxy_candidate"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "task_force_reviewed",
+    "reviewed_by_unspawned_agents",
+    "oos_selected_model"
+  ],
+  "model_or_threshold_surface": "F87B fixed proxy model/score surface; no new threshold selected.",
+  "overfit_checks": [
+    "OOS not used for selection",
+    "no additional parameter search in F87C"
+  ],
+  "packet_id": "frontier87C_trade_shape_risk_repair_or_rotation_decision_v1",
+  "receipt_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87c_model_validation_receipt.json",
+  "selection_metric_boundary": "Decision uses F87B predeclared candidate criteria; OOS remains readout only.",
+  "skill": "obsidian-model-validation",
+  "status": "executed",
+  "threshold_policy": "same-axis threshold/filter repair capped",
+  "validation_judgment": "negative_trade_shape_risk_proxy_axis_no_runtime_candidate_no_runtime_evidence",
+  "validation_split": "F87B chronological validation with locked OOS readout."
+}

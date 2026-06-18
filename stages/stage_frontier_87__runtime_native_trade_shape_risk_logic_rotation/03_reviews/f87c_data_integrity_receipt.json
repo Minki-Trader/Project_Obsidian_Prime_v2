@@ -1,0 +1,58 @@
+{
+  "data_hash_or_identity": {
+    "f87b_feature_schema": {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/f87b_feature_target_schema.json",
+      "sha256": "65f926bde453fd28e24ec64bd65a9c83b8b7b31c721116809984528ec7a41107",
+      "size": 4084
+    },
+    "f87b_model_card": {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/models/proxy_model_card.json",
+      "sha256": "cfb9108de1ef49655820e2eae9f6975de1a6606cf838555c745771013aa98c8b",
+      "size": 1914
+    },
+    "f87b_proxy_metrics": {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_metrics.json",
+      "sha256": "8884728695846ca4d2bf2537f408b596b2f227760ccde559cfef9c0842b0c16e",
+      "size": 33972
+    },
+    "f87b_result_summary": {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/reports/result_summary.md",
+      "sha256": "623cef84c6701896793097fde5522b2be975e0ce703130f6183d0aab7afcb017",
+      "size": 3568
+    },
+    "f87b_summary": {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/summary.json",
+      "sha256": "9e31970782ee34251800b00f9c6939b29ca3526b37389ad13ef096282b9b7b05",
+      "size": 19920
+    }
+  },
+  "data_source": [
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/summary.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_metrics.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/models/proxy_model_card.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/f87b_feature_target_schema.json"
+  ],
+  "data_sources_checked": [
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/summary.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_metrics.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/models/proxy_model_card.json",
+    "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/f87b_feature_target_schema.json"
+  ],
+  "leakage_checks": [
+    "no OOS selection in F87C",
+    "no post-entry runtime evidence invented"
+  ],
+  "missing_data_boundary": "missing F87B summary or proxy metrics would block this decision.",
+  "missing_or_duplicate_check": "not_applicable_decision_over_existing_metrics",
+  "packet_id": "frontier87C_trade_shape_risk_repair_or_rotation_decision_v1",
+  "receipt_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/03_reviews/f87c_data_integrity_receipt.json",
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "validation inner and locked OOS readout inherited from F87B.",
+  "status": "executed",
+  "time_axis_boundary": "F87C consumes F87B metrics only; no new rows or time windows are created."
+}
