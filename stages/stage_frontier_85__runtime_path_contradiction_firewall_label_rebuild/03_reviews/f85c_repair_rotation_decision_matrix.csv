@@ -1,0 +1,5 @@
+﻿option,decision,reason,risk,next_action
+mt5_materialize_f85b_best,rejected,Best candidate is not validation eligible(최상위 후보 검증 부적격) and reversal_rate_reduction=0.0.,Would create runtime work from no meaningful signal(의미 신호 없는 런타임 작업 생성).,do_not_materialize
+capped_repair_same_firewall_axis,rejected,Same probability/ATR/session threshold family would repeat threshold-only repair(동일 임계값 수리 반복).,Multiple-testing drift(다중 시험 표류) and OOS tuning temptation(표본외 최적화 유혹).,do_not_repeat_without_new_axis
+close_negative_rotate_f86,accepted,F85B produced no materialization-ready signal; Task Force 8/8 recommends rotation(8명 전원 회전 권고).,F86 must not inherit winner/baseline/authority(F86은 승자/기준선/권위 상속 금지).,frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1
+f86_new_axis,proposed,Runtime-native path label source or tick/M1 intrabar representation is a new data/representation axis(새 데이터/표현 축).,Must keep first-touch/both-hit order labels label-only until leakage audit(첫 터치/양방향 터치 순서 라벨은 감사 전 라벨 전용).,open_f86_stage_design

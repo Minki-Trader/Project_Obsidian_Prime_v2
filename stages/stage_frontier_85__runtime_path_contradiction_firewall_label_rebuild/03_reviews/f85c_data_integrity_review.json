@@ -1,0 +1,17 @@
+﻿{
+  "run_id": "frontier85C_runtime_path_firewall_repair_or_rotation_decision_v1",
+  "data_source": [
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_leakage_safe_runtime_path_firewall_proxy_scout_summary.json",
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_firewall_candidate_split_metrics.csv",
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_selected_firewall_row_readout.csv",
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_feature_manifest.json"
+  ],
+  "time_axis": "F85C consumes F85B broker-clock aligned rows only(F85C는 F85B 브로커 시계 정렬 행만 소비).",
+  "sample_scope": "F85B matched validation/OOS rows; Tier A/B separate missing_required because source has no tier column(F85B 검증/표본외 매칭 행, 티어 열 없음).",
+  "feature_label_boundary": "F85C is judgment-only and does not create new features(F85C는 판정 전용, 새 피처 없음).",
+  "split_boundary": "Validation-only selection already used in F85B; OOS remained locked readout(F85B에서 검증 전용 선택, 표본외 잠금 판독).",
+  "leakage_risk": "Reinterpreting F85B diagnostics as positive or selecting new threshold after OOS(진단값 긍정 재해석/표본외 후 임계값 선택).",
+  "lineage_correction_status": "corrected_by_current_source_hash_refresh",
+  "integrity_judgment": "usable_with_current_hash_refresh(현재 해시 갱신으로 경계부 사용 가능)",
+  "claim_boundary": "stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

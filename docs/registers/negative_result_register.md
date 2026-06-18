@@ -1468,3 +1468,10 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 
 <!-- frontier85B_leakage_safe_runtime_path_firewall_proxy_scout_v1 -->
 - `frontier85B_leakage_safe_runtime_path_firewall_proxy_scout_v1` did not produce a materialization-ready locked-OOS candidate(잠금 표본외 기준 물질화 준비 후보 없음). Next(다음): `frontier85C_runtime_path_firewall_repair_or_rotation_decision_v1`. Boundary(경계): `proxy_scout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+<!-- frontier85C_runtime_path_firewall_repair_or_rotation_decision_v1 -->
+- Run(실행): `frontier85C_runtime_path_firewall_repair_or_rotation_decision_v1`
+- Label(라벨): `negative_memory_with_next_frontier_proposal(부정 기억과 다음 전선 제안)`
+- Evidence(근거): F85B best candidate reversal reduction(반전 감소) `0.0`, no materialization-ready candidate(물질화 준비 후보 없음), Task Force(태스크포스) 8/8 rotation recommendation(회전 권고).
+- Next(다음): `frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1`
+- Boundary(경계): `stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`

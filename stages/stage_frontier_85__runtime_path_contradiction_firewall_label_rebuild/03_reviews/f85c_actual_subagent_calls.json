@@ -1,0 +1,101 @@
+﻿{
+  "actual_subagent_calls": [
+    {
+      "roster_id": "agent_01_system_governor",
+      "nickname": "Herschel",
+      "agent_id": "019edab8-cd68-7c40-9777-c8d25733468a",
+      "status": "completed",
+      "classification": "negative_closeout_rotation_recommended",
+      "accepted": "F85B is valid negative evidence(유효한 부정 근거); reversal_rate_reduction(반전율 감소) 0.0 means no meaningful signal.",
+      "rejected": "F85B candidate MT5 materialization(물질화), threshold-only repair(임계값 단독 수리), authority claims(권위 주장).",
+      "recommended_decision": "close_f85_negative_rotate_to_f86"
+    },
+    {
+      "roster_id": "agent_02_platform_routing_architect",
+      "nickname": "Gibbs",
+      "agent_id": "019edab9-0db5-7cb0-80f8-d350048861de",
+      "status": "completed",
+      "classification": "kpi_evidence_decision_packet",
+      "accepted": "F85C is kpi_evidence/rotation decision(근거 판정/회전 결정) rather than experiment execution(실험 실행).",
+      "rejected": "MT5 handoff without materialization schema(물질화 스키마 없는 MT5 인계).",
+      "recommended_decision": "rotate_to_F86"
+    },
+    {
+      "roster_id": "agent_03_philosophy_policy_skill_governance",
+      "nickname": "Kepler",
+      "agent_id": "019edab9-5628-7bf2-ae75-65b5b2e85413",
+      "status": "completed",
+      "classification": "accepted_with_rotation_bias",
+      "accepted": "F85B negative memory(부정 기억) is valid; Grok(그록) remains archive-only.",
+      "rejected": "Same probability/ATR/session threshold-only repair(확률/ATR/세션 임계값 반복 수리).",
+      "recommended_decision": "negative_memory_preserved_clue_next_frontier_proposal"
+    },
+    {
+      "roster_id": "agent_04_evidence_control_plane",
+      "nickname": "Avicenna",
+      "agent_id": "019edab9-a874-78e0-872d-870d0e97d2e1",
+      "status": "completed",
+      "classification": "accepted_with_local_verification",
+      "accepted": "F85A/F85B linkage(연결) and F85B negative KPI(부정 KPI) are usable with current source hash refresh(현재 원천 해시 갱신).",
+      "rejected": "Reviewed claim(검토 완료 주장) with stale lineage hash(낡은 계보 해시) unaddressed.",
+      "recommended_decision": "refresh_hashes_then_rotate"
+    },
+    {
+      "roster_id": "agent_05_data_feature_contract",
+      "nickname": "Hilbert",
+      "agent_id": "019edabc-6374-7591-9564-7ee8f2a280ca",
+      "status": "completed",
+      "classification": "rotate_recommended",
+      "accepted": "F85B feature boundary(피처 경계) is valid; Tier A/B separate missing_required(필수 누락) is correct.",
+      "rejected": "F85 continuation on same firewall/filter axis(동일 방화벽/필터 축 지속).",
+      "recommended_decision": "rotate_to_runtime_native_or_tick_m1_intrabar_representation"
+    },
+    {
+      "roster_id": "agent_06_quant_research",
+      "nickname": "Turing",
+      "agent_id": "019edabc-a311-79a3-8689-a97f76d0d52e",
+      "status": "completed",
+      "classification": "negative_closeout_rotation_recommended",
+      "accepted": "F85B net/PF deltas are quantitatively negligible(정량 의미 거의 없음).",
+      "rejected": "F85B best candidate(최상위 후보) MT5 materialization(물질화).",
+      "recommended_decision": "rotate_to_runtime_native_path_representation_or_fill_aware_label_source"
+    },
+    {
+      "roster_id": "agent_07_model_validation_risk",
+      "nickname": "Maxwell",
+      "agent_id": "019edabc-f19b-7092-acb2-ac1b9f9be61b",
+      "status": "completed",
+      "classification": "negative_closeout_rotation_recommended",
+      "accepted": "Validation-only selection and OOS locked readout(검증 전용 선택/표본외 잠금 판독) are sound.",
+      "rejected": "Multiple-testing drift(다중 시험 표류) through same-family threshold search(동일 계열 임계값 탐색).",
+      "recommended_decision": "rotate_to_F86_with_pre_registered_split_and_wfo_optional"
+    },
+    {
+      "roster_id": "agent_08_mt5_onnx_runtime",
+      "nickname": "Russell",
+      "agent_id": "019edabd-4caa-72c1-9ca5-b1028d4abcf0",
+      "status": "completed",
+      "classification": "no_mt5_now_rotate_boundary",
+      "accepted": "No MT5 now(현재 MT5 없음) because no materialization-ready candidate(물질화 준비 후보 없음).",
+      "rejected": "Runtime claim(런타임 주장) without Strategy Tester report/log/snapshot/trade list(전략 테스터 보고서/로그/스냅샷/거래 목록).",
+      "recommended_decision": "close_negative_and_rotate_to_F86"
+    }
+  ],
+  "coverage": {
+    "required_count": 8,
+    "actual_call_count": 8,
+    "completed_count": 8,
+    "all_required_completed": true,
+    "incomplete_roster_ids": [],
+    "call_ids": [
+      "019edab8-cd68-7c40-9777-c8d25733468a",
+      "019edab9-0db5-7cb0-80f8-d350048861de",
+      "019edab9-5628-7bf2-ae75-65b5b2e85413",
+      "019edab9-a874-78e0-872d-870d0e97d2e1",
+      "019edabc-6374-7591-9564-7ee8f2a280ca",
+      "019edabc-a311-79a3-8689-a97f76d0d52e",
+      "019edabc-f19b-7092-acb2-ac1b9f9be61b",
+      "019edabd-4caa-72c1-9ca5-b1028d4abcf0"
+    ]
+  }
+}
