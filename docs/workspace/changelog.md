@@ -1,4 +1,12 @@
-﻿# 2026-06-19 - F86I Closeout Rotate F87(F86I 마감 및 F87 회전)
+﻿# 2026-06-19 - F87A Stage Open(F87A 단계 개방)
+
+<!-- frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1 -->
+
+- Action(행동): `frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1`로 F87 runtime-native trade shape/risk logic(런타임 네이티브 거래 형태/위험 로직) 설계를 열었다.
+- Effect(효과): 다음 실행은 `frontier87B_trade_shape_risk_proxy_scout_v1`이며, runtime authority(런타임 권위), live readiness(실거래 준비), Goal Achieve(목표 달성)는 주장하지 않는다.
+- Boundary(경계): `stage_open_design_only_no_runtime_materialization_no_strategy_tester_economics_no_runtime_authority_no_goal_achieve`.
+
+# 2026-06-19 - F86I Closeout Rotate F87(F86I 마감 및 F87 회전)
 
 <!-- frontier86I_stage_closeout_or_f87_rotation_handoff_v1 -->
 

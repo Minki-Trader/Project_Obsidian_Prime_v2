@@ -1,0 +1,244 @@
+﻿{
+  "allowed_claims": [
+    "f87a_stage_open_design_prepared",
+    "f87_runtime_native_trade_shape_risk_axis_opened",
+    "f87b_proxy_scout_planned",
+    "frontier_extra_due_check_not_due_after_f86",
+    "five_stage_direction_synthesis_recorded",
+    "topic_rotation_check_passed_for_f87"
+  ],
+  "changed_variables": [
+    "target surface from first-touch prediction to trade-shape/risk viability",
+    "KPI lane from probability quality to trade_shape/risk proxy",
+    "next materialization criteria include density/DD/hold-time feasibility before runtime probe"
+  ],
+  "claim_boundary": "stage_open_design_only_no_runtime_materialization_no_strategy_tester_economics_no_runtime_authority_no_goal_achieve",
+  "comparison_baseline": {
+    "f86g_inner_auc": 0.48474810213940644,
+    "f86g_oos_top_decile_lift": 0.9339247311827957,
+    "primary": "F86 first-touch scalar/sequence proxy surfaces closed negative/no authority"
+  },
+  "control_variables": {
+    "closed_bar_only": true,
+    "runtime_defaults_when_reached": {
+      "deposit": 500,
+      "entry_timing": "next tick after closed-bar signal",
+      "fixed_lot": 0.1,
+      "leverage": 100,
+      "max_concurrent_positions": 1,
+      "tester_model": "Every tick based on real ticks"
+    },
+    "split_policy": "train/validation/OOS chronological; no OOS selection",
+    "symbol": "US100",
+    "time_axis_policy": "docs/contracts/time_axis_policy_fpmarkets_v2.md",
+    "timeframe": "M5"
+  },
+  "created_at_utc": "2026-06-18T20:55:43Z",
+  "decision": "open_f87_runtime_native_trade_shape_risk_logic_and_plan_f87b_proxy_scout",
+  "decision_use": "Prepare F87B proxy scout and decide whether any trade-shape/risk surface deserves runtime materialization preflight.",
+  "evidence_plan": {
+    "f87a_required": [
+      "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/design/f87a_experiment_design.json",
+      "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/design/runtime_trade_shape_risk_hypothesis_contract.json",
+      "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/design/f87b_proxy_scout_execution_brief.json",
+      "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/run_manifest.json",
+      "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/reports/result_summary.md"
+    ],
+    "f87b_required": [
+      "trade_shape/risk proxy surface",
+      "feature/target leakage audit",
+      "split audit",
+      "Tier A/B/combined or explicit out_of_scope rows",
+      "candidate density/risk metrics",
+      "runtime materialization preflight decision"
+    ]
+  },
+  "f86_closeout_reference": "negative_first_touch_intrabar_source_sequence_learning_no_runtime_candidate_no_authority",
+  "failure_criteria": [
+    "All trade-shape/risk surfaces collapse to same first-touch axis or threshold-only tweaks.",
+    "Validation ranking is weak, density dies, or DD proxy worsens without offsetting materiality.",
+    "Required source artifacts are missing and cannot be regenerated in the same packet."
+  ],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "task_force_reviewed",
+    "reviewed_by_unspawned_agents"
+  ],
+  "frontier_thesis": "Runtime-native trade shape and risk logic can expose a more materialization-ready strategy surface than F86 first-touch pre-entry prediction.",
+  "hypotheses": [
+    {
+      "changed_variables": [
+        "label target",
+        "trade shape metrics",
+        "risk envelope objective"
+      ],
+      "hypothesis_id": "H1_trade_shape_envelope",
+      "question": "Can closed-bar state identify bars where a simple runtime policy has favorable MFE/MAE and bounded adverse excursion?",
+      "runtime_mapping": "entry side, fixed max-hold bars, ATR-like stop/target envelope, no concurrent position change in F87B proxy",
+      "success_signal": "Validation split shows useful ranking without OOS selection and with enough trade density for later MT5 probe."
+    },
+    {
+      "changed_variables": [
+        "risk throttle",
+        "skip policy",
+        "drawdown-sensitive target"
+      ],
+      "hypothesis_id": "H2_risk_throttle_surface",
+      "question": "Can entry-known context classify skip/allow states that reduce DD collapse without killing density?",
+      "runtime_mapping": "EA-readable filter rule before order submission, fail-safe skip when unavailable",
+      "success_signal": "Risk proxy improves drawdown and recovery-factor surrogate while preserving candidate density."
+    },
+    {
+      "changed_variables": [
+        "exit horizon",
+        "time stop",
+        "MFE/MAE attribution"
+      ],
+      "hypothesis_id": "H3_exit_shape_rotation",
+      "question": "Can max-hold and exit-shape families explain why F86 first-touch surfaces were weak?",
+      "runtime_mapping": "position and exit rule-stack settings, not model output contract changes",
+      "success_signal": "At least one exit-shape family produces a distinct seed surface for MT5 materialization preflight."
+    }
+  ],
+  "invalid_conditions": [
+    "Feature rows use future trade outcome fields as input.",
+    "OOS rows influence model/threshold/candidate selection.",
+    "Current in-progress M5 bar is used in features.",
+    "F86 artifacts are claimed as selected baseline or runtime authority."
+  ],
+  "judgment": "design_only_runtime_native_trade_shape_risk_surface_no_runtime_evidence",
+  "next_run_id": "frontier87B_trade_shape_risk_proxy_scout_v1",
+  "novelty_delta": [
+    "Primary axis changes from direction/first-touch prediction to trade shape and risk lifecycle.",
+    "Target surface changes from first_touch_label to policy viability and excursion/risk envelope.",
+    "Runtime representation is designed to map to entry/position/exit rule categories, not a renamed threshold filter."
+  ],
+  "parent_run_id": "frontier86I_stage_closeout_or_f87_rotation_handoff_v1",
+  "run_id": "frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1",
+  "sample_scope": {
+    "base": "F86 selected-row bounded evidence plus FPMarkets US100 M5 contract references",
+    "f86_reference_only": true,
+    "missing_source_policy": "missing_required, blocked, or out_of_scope_by_claim; no silent substitution",
+    "next_execution_expected_input": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv"
+  },
+  "source_identities": [
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/stage_closeout_report.md",
+      "sha256_lf_normalized": "db99e1805020a5ab4d1c3312ca0fbe8f2397d3bd366b17d9ef7f41f2e505d783",
+      "size_bytes": 4004
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86i_stage_closeout_summary.json",
+      "sha256_lf_normalized": "e709f9a1f8b702aa477468272ddc765c299f31c024dbc74698ee8db743cc1f96",
+      "size_bytes": 7445
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86d_execution_summary.json",
+      "sha256_lf_normalized": "859ba0b7af12d027ce2d4d0eedc1bff5a8718c0d5c1baf9f965ebb9057abd64e",
+      "size_bytes": 2797
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86e_execution_summary.json",
+      "sha256_lf_normalized": "ed4eb07fc635cafbe04e9ff992e935ba6d883b8d9ca9d1572f37385375bd2ddb",
+      "size_bytes": 16011
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86g_execution_summary.json",
+      "sha256_lf_normalized": "ca25f752b2fd156d889560b942d8927c15cc6fca54359b6290b62a644f3f3e88",
+      "size_bytes": 46020
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86h_execution_summary.json",
+      "sha256_lf_normalized": "4946b02b1ebabff1fb4804e46ef8eb2006e9c76036ad80a19543db1d533b6063",
+      "size_bytes": 6588
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/sequence_feature_surface/feature_schema.json",
+      "sha256_lf_normalized": "3dae391ef83b1e6f2c1a5456a7bddc5e4461099cee33a1e41b180610e3fe3f5d",
+      "size_bytes": 5996
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv",
+      "sha256_lf_normalized": "02a4d489af9877eabc3503383df6ae4c93d81f37b84a03e4e9fd18e96cef40c7",
+      "size_bytes": 1039915
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/training_label_split_contract_fpmarkets_v2.md",
+      "sha256_lf_normalized": "142cbace9a4ddb4868aba8dec7ec1bf0ab43fd51087a33c7c2ccbe0fd906d865",
+      "size_bytes": 3754
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/time_axis_policy_fpmarkets_v2.md",
+      "sha256_lf_normalized": "0c7f606ad696c3cf9fa024752e553185f7b7025edee9943ee81fa92a667a3b31",
+      "size_bytes": 3402
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/feature_calculation_spec_fpmarkets_v2.md",
+      "sha256_lf_normalized": "8c9ebe68f5554dfdd4d93b0131ca3ea7e54d9f3c298a6fc11b59d47a365b5d65",
+      "size_bytes": 14357
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md",
+      "sha256_lf_normalized": "263460622878df974b1e3b5f11f7032a925673b8b338b66a4161c02eee6425e4",
+      "size_bytes": 20198
+    },
+    {
+      "exists": true,
+      "path": "docs/policies/frontier_governance.md",
+      "sha256_lf_normalized": "69fd04529ba01eb149785d1eecc9f61a42bd72b2b84dfd0876a8a051e1ebe830",
+      "size_bytes": 28483
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/00_spec/stage_brief.md",
+      "sha256_lf_normalized": "924c0d26919ec4e5bbefcc4eb3b9b69911f73553d4a61797f54f7eb416c87678",
+      "size_bytes": 1561
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/01_inputs/input_refs.md",
+      "sha256_lf_normalized": "f531574c6c093dbf5ccf161c40e9eb026333748daec54413515c0e70e13e1680",
+      "size_bytes": 1209
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/04_selected/selection_status.md",
+      "sha256_lf_normalized": "a60231021fb0954ef1461a54a92cbd166b624feb147c5767b5b4fd278d0adb38",
+      "size_bytes": 670
+    }
+  ],
+  "stage_id": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation",
+  "status": "f87a_stage_open_design_prepared_f87b_proxy_scout_planned_no_authority",
+  "stop_conditions": [
+    "Stop F87A after design, receipts, gates, state sync, and F87B handoff are written.",
+    "Do not run MT5 or claim runtime economics in F87A.",
+    "Escalate to runtime_probe only in a later packet if F87B creates a meaningful candidate."
+  ],
+  "success_criteria": [
+    "F87B writes Tier A/B/combined or out_of_scope_by_claim rows explicitly.",
+    "At least one candidate surface has material density and risk-shape separation on validation without OOS selection.",
+    "A positive F87B result names exact MT5 materialization preflight inputs rather than only proxy score."
+  ],
+  "verification_profile": "design_only"
+}

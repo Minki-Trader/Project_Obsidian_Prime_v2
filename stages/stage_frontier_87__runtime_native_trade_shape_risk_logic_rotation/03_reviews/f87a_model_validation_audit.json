@@ -1,0 +1,34 @@
+﻿{
+  "allowed_claims": [
+    "f87a_stage_open_design_prepared",
+    "f87_runtime_native_trade_shape_risk_axis_opened",
+    "f87b_proxy_scout_planned",
+    "frontier_extra_due_check_not_due_after_f86",
+    "five_stage_direction_synthesis_recorded",
+    "topic_rotation_check_passed_for_f87"
+  ],
+  "audit_name": "model_validation_audit",
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "task_force_reviewed",
+    "reviewed_by_unspawned_agents"
+  ],
+  "model_or_threshold_surface": "F87B planned proxy scout only; no model selected in F87A.",
+  "overfit_checks": [
+    "No threshold-only continuation",
+    "No OOS selection",
+    "No model promotion from design"
+  ],
+  "selection_metric_boundary": "F87B must not use PF-only or probability-only selection; trade density, DD proxy, and risk shape are required.",
+  "status": "pass_design_boundary",
+  "validation_split": "Chronological validation-only selection; OOS readout only."
+}

@@ -2363,3 +2363,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier86I_stage_closeout_or_f87_rotation_handoff_v1 -->
 - `frontier86I_stage_closeout_or_f87_rotation_handoff_v1` closed F86 negative/no authority(전선86 부정/권위 없음 마감) and proposed `frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1`. Preserved clue(보존 단서): F86D first-touch label source(첫 터치 라벨 원천) and F86G sequence schema(시퀀스 스키마) remain reference-only(참조 전용). Boundary(경계): `stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+<!-- frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1 -->
+- `frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1` opened F87 runtime-native trade shape/risk logic(전선87 런타임 네이티브 거래 형태/위험 로직) as design-only(설계 전용). Next(다음): `frontier87B_trade_shape_risk_proxy_scout_v1`. Boundary(경계): `stage_open_design_only_no_runtime_materialization_no_strategy_tester_economics_no_runtime_authority_no_goal_achieve`.

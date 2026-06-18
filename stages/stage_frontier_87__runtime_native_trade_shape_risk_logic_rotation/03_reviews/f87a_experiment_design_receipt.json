@@ -1,0 +1,39 @@
+﻿{
+  "baseline": {
+    "f86g_inner_auc": 0.48474810213940644,
+    "f86g_oos_top_decile_lift": 0.9339247311827957,
+    "primary": "F86 first-touch scalar/sequence proxy surfaces closed negative/no authority"
+  },
+  "changed_variables": [
+    "target surface from first-touch prediction to trade-shape/risk viability",
+    "KPI lane from probability quality to trade_shape/risk proxy",
+    "next materialization criteria include density/DD/hold-time feasibility before runtime probe"
+  ],
+  "evidence_plan": {
+    "f87a_required": [
+      "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/design/f87a_experiment_design.json",
+      "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/design/runtime_trade_shape_risk_hypothesis_contract.json",
+      "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/design/f87b_proxy_scout_execution_brief.json",
+      "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/run_manifest.json",
+      "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1/reports/result_summary.md"
+    ],
+    "f87b_required": [
+      "trade_shape/risk proxy surface",
+      "feature/target leakage audit",
+      "split audit",
+      "Tier A/B/combined or explicit out_of_scope rows",
+      "candidate density/risk metrics",
+      "runtime materialization preflight decision"
+    ]
+  },
+  "hypothesis": "Runtime-native trade shape and risk logic can expose a more materialization-ready strategy surface than F86 first-touch pre-entry prediction.",
+  "invalid_conditions": [
+    "Feature rows use future trade outcome fields as input.",
+    "OOS rows influence model/threshold/candidate selection.",
+    "Current in-progress M5 bar is used in features.",
+    "F86 artifacts are claimed as selected baseline or runtime authority."
+  ],
+  "packet_id": "frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1",
+  "skill": "obsidian-experiment-design",
+  "status": "executed"
+}

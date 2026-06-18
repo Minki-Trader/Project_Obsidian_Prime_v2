@@ -1,0 +1,44 @@
+﻿{
+  "audit_name": "data_integrity_audit",
+  "data_sources_checked": [
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86i_stage_closeout_summary.json",
+      "sha256_lf_normalized": "e709f9a1f8b702aa477468272ddc765c299f31c024dbc74698ee8db743cc1f96",
+      "size_bytes": 7445
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1/first_touch_labels/first_touch_labels.csv",
+      "sha256_lf_normalized": "02a4d489af9877eabc3503383df6ae4c93d81f37b84a03e4e9fd18e96cef40c7",
+      "size_bytes": 1039915
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/sequence_feature_surface/feature_schema.json",
+      "sha256_lf_normalized": "3dae391ef83b1e6f2c1a5456a7bddc5e4461099cee33a1e41b180610e3fe3f5d",
+      "size_bytes": 5996
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/training_label_split_contract_fpmarkets_v2.md",
+      "sha256_lf_normalized": "142cbace9a4ddb4868aba8dec7ec1bf0ab43fd51087a33c7c2ccbe0fd906d865",
+      "size_bytes": 3754
+    },
+    {
+      "exists": true,
+      "path": "docs/contracts/time_axis_policy_fpmarkets_v2.md",
+      "sha256_lf_normalized": "0c7f606ad696c3cf9fa024752e553185f7b7025edee9943ee81fa92a667a3b31",
+      "size_bytes": 3402
+    }
+  ],
+  "leakage_checks": [
+    "No future outcome columns as features",
+    "No current-bar contamination",
+    "F86 first-touch labels are reference/target context only, not authority"
+  ],
+  "missing_data_boundary": "Missing F86 long-path artifacts must be checked with io_path before missing/blocked judgment.",
+  "split_boundary": "F87B must use chronological train/validation/OOS and no OOS selection.",
+  "status": "pass_with_boundary",
+  "time_axis_boundary": "Use closed M5 bar timing and FPMarkets dual time-axis policy; F87A does not materialize new rows."
+}
