@@ -6,9 +6,9 @@ Stage ID(단계 ID): `stage_frontier_86__runtime_native_intrabar_path_label_sour
 
 Opening run(개방 실행): `frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1`
 
-Next run(다음 실행): `frontier86H_sequence_axis_repair_or_rotation_decision_v1`
+Next run(다음 실행): `frontier86I_stage_closeout_or_f87_rotation_handoff_v1`
 
-Status(상태): `f86g_pre_entry_sequence_proxy_weak_or_negative_repair_or_rotation_required_no_authority`
+Status(상태): `f86h_sequence_axis_repair_capped_stage_closeout_required_no_authority`
 
 ## Frontier Thesis(전선 가설)
 
@@ -96,3 +96,11 @@ Effect(효과): F86E scalar-only weakness(스칼라 단독 약점)을 같은 thr
 Key readout(핵심 판독): best model(최선 모델) `sequence_context__logreg_l2_balanced`, positive_scout(긍정 스카우트) `False`.
 
 Claim boundary(주장 경계): `f86g_pre_entry_sequence_feature_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve`.
+
+## F86H Sequence-Axis Repair/Rotation Decision Receipt(F86H 시퀀스 축 수리/회전 결정 영수증)
+
+Action(행동): F86H capped sequence-axis threshold/filter/parameter repair(시퀀스 축 임계값/필터/파라미터 수리 상한) after weak F86G proxy metrics(약한 F86G 프록시 지표).
+
+Effect(효과): F86I will prepare F86 closeout or F87 rotation handoff(F86 마감 또는 F87 회전 인계) instead of repeating the same first-touch pre-entry sequence axis(첫 터치 진입 전 시퀀스 축 반복).
+
+Claim boundary(주장 경계): `f86h_sequence_axis_repair_capped_stage_closeout_prepared_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve`.

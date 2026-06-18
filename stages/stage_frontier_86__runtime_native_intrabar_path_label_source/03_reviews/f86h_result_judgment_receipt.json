@@ -1,0 +1,46 @@
+{
+  "allowed_claims": [
+    "f86h_sequence_axis_decision_recorded",
+    "sequence_axis_threshold_filter_repair_capped",
+    "stage_closeout_or_rotation_handoff_next_planned",
+    "runtime_materialization_not_started_due_to_weak_sequence_proxy"
+  ],
+  "claim_boundary": "f86h_sequence_axis_repair_capped_stage_closeout_prepared_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve",
+  "evidence_available": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86H_sequence_axis_repair_or_rotation_decision_v1/decision/sequence_axis_repair_or_rotation_decision.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86H_sequence_axis_repair_or_rotation_decision_v1/kpi_record.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86H_sequence_axis_repair_or_rotation_decision_v1/reports/result_summary.md"
+  ],
+  "evidence_missing": [
+    "Strategy Tester output",
+    "ONNX/EA bundle",
+    "runtime parity"
+  ],
+  "evidence_used": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86H_sequence_axis_repair_or_rotation_decision_v1/decision/sequence_axis_repair_or_rotation_decision.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86H_sequence_axis_repair_or_rotation_decision_v1/summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86H_sequence_axis_repair_or_rotation_decision_v1/reports/result_summary.md"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "oos_selected_model"
+  ],
+  "judgment_boundary": "negative_sequence_axis_no_runtime_candidate_no_runtime_evidence",
+  "judgment_label": "negative",
+  "next_condition": "frontier86I_stage_closeout_or_f87_rotation_handoff_v1",
+  "packet_id": "frontier86H_sequence_axis_repair_or_rotation_decision_v1",
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86h_result_judgment_receipt.json",
+  "result_subject": "frontier86H_sequence_axis_repair_or_rotation_decision_v1",
+  "skill": "obsidian-result-judgment",
+  "status": "executed",
+  "user_explanation_hook": "The sequence axis is useful as negative learning, not as a runtime candidate."
+}

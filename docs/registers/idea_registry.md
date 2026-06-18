@@ -2357,3 +2357,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier86G_pre_entry_intrabar_sequence_feature_scout_v1 -->
 - `frontier86G_pre_entry_intrabar_sequence_feature_scout_v1` tested pre-entry M1/tick sequence feature scout(진입 전 1분/틱 시퀀스 피처 스카우트). Best model(최선 모델): `sequence_context__logreg_l2_balanced`. Positive scout(긍정 스카우트): `False`. Boundary(경계): no runtime authority(런타임 권위 없음).
+
+<!-- frontier86H_sequence_axis_repair_or_rotation_decision_v1 -->
+- `frontier86H_sequence_axis_repair_or_rotation_decision_v1` capped F86G pre-entry sequence proxy repair(진입 전 시퀀스 프록시 수리 상한) and prepared `frontier86I_stage_closeout_or_f87_rotation_handoff_v1`. Boundary(경계): no runtime authority(런타임 권위 없음).

@@ -1484,3 +1484,6 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 
 <!-- frontier86G_pre_entry_intrabar_sequence_feature_scout_v1 -->
 - `frontier86G_pre_entry_intrabar_sequence_feature_scout_v1` did not create a strong sequence-axis proxy scout clue(강한 시퀀스 축 프록시 단서 없음). Salvage value(회수 가치): pre-entry source export and feature schema(진입 전 원천 내보내기와 피처 스키마) are reusable as bounded reference evidence(경계 있는 참고 근거). Reopen condition(재개 조건): new representation beyond five-minute M1/tick summaries(5분 1분/틱 요약을 넘는 새 표현) or runtime materialization evidence(런타임 물질화 근거), not scalar threshold/filter retuning(스칼라 임계값/필터 재조정 아님). Boundary(경계): `f86g_pre_entry_sequence_feature_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve`.
+
+<!-- frontier86H_sequence_axis_repair_or_rotation_decision_v1 -->
+- `frontier86H_sequence_axis_repair_or_rotation_decision_v1` records that the F86 first-touch pre-entry sequence axis(첫 터치 진입 전 시퀀스 축) did not create a runtime materialization candidate(런타임 물질화 후보). Salvage value(회수 가치): F86D first-touch label source(첫 터치 라벨 원천) and F86G leakage-safe feature schema(누수 안전 피처 스키마) remain bounded reference evidence(경계 있는 참고 근거). Reopen condition(재개 조건): materially new source/data representation or runtime evidence(실질 신규 원천/데이터 표현 또는 런타임 근거), not same five-minute summary retuning(동일 5분 요약 재조정 아님).

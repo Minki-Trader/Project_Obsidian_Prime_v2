@@ -1,0 +1,32 @@
+{
+  "baseline": "F86G positive scout criteria and F86E scalar weakness.",
+  "changed_variables": [
+    "decision threshold from sequence proxy evidence to repair/rotation disposition"
+  ],
+  "comparison_baseline": "F86G positive scout criteria and F86E scalar weakness.",
+  "control_variables": [
+    "locked OOS remains readout only",
+    "no Strategy Tester runtime claim"
+  ],
+  "decision_use": "Choose runtime preflight or cap sequence-axis repair.",
+  "evidence_plan": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86H_sequence_axis_repair_or_rotation_decision_v1/decision/sequence_axis_repair_or_rotation_decision.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86H_sequence_axis_repair_or_rotation_decision_v1/summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86H_sequence_axis_repair_or_rotation_decision_v1/reports/result_summary.md"
+  ],
+  "failure_criteria": "weak inner metrics or top-decile lift below requirement",
+  "hypothesis": "F86G sequence proxy evidence might justify runtime materialization preflight if it creates a meaningful signal.",
+  "invalid_conditions": [
+    "missing F86G metrics",
+    "OOS used as selector"
+  ],
+  "packet_id": "frontier86H_sequence_axis_repair_or_rotation_decision_v1",
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86h_experiment_design_receipt.json",
+  "sample_scope": "F86G selected-row proxy metrics",
+  "skill": "obsidian-experiment-design",
+  "status": "executed",
+  "stop_conditions": [
+    "record decision and next run without runtime authority"
+  ],
+  "success_criteria": "positive_scout=True with inner and OOS support"
+}

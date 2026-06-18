@@ -1,0 +1,132 @@
+{
+  "allowed_claims": [
+    "f86h_sequence_axis_decision_recorded",
+    "sequence_axis_threshold_filter_repair_capped",
+    "stage_closeout_or_rotation_handoff_next_planned",
+    "runtime_materialization_not_started_due_to_weak_sequence_proxy"
+  ],
+  "audit_status": {
+    "kpi_contract_status": "pass"
+  },
+  "best_model_id": "sequence_context__logreg_l2_balanced",
+  "claim_boundary": "f86h_sequence_axis_repair_capped_stage_closeout_prepared_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve",
+  "created_at_utc": "2026-06-18T20:23:30Z",
+  "decision": "cap_sequence_axis_and_prepare_stage_closeout_or_f87_rotation",
+  "decision_reasons": [
+    "inner validation AUC and top-decile lift failed the predeclared positive scout threshold",
+    "locked OOS top-decile lift stayed below 1.0 despite a tiny AUC edge",
+    "no Strategy Tester runtime/economics evidence exists",
+    "further threshold/filter/parameter tuning would repeat the same weak surface"
+  ],
+  "feature_schema_reference": {
+    "feature_count": 50,
+    "feature_order_hash": "daa111af7857ce9de6ba4e55f71631ca51e597f4c56370159af86ec8ca879850",
+    "feature_set_id": null
+  },
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "oos_selected_model"
+  ],
+  "judgment": "negative_sequence_axis_no_runtime_candidate_no_runtime_evidence",
+  "metrics": {
+    "inner_validation_auc": 0.48474810213940644,
+    "inner_validation_top_decile_lift": 0.8957142857142856,
+    "locked_oos_auc": 0.5073738591827226,
+    "locked_oos_average_precision": 0.34549991282030645,
+    "locked_oos_top_decile_lift": 0.9339247311827957
+  },
+  "next_run_id": "frontier86I_stage_closeout_or_f87_rotation_handoff_v1",
+  "positive_scout": false,
+  "proxy_metrics_reference": {
+    "model_ids": [
+      "sequence_context__logreg_l2_balanced",
+      "sequence_context__random_forest_depth4_balanced",
+      "sequence_context__extra_trees_depth5_balanced",
+      "sequence_plus_scalar_context__logreg_l2_balanced",
+      "sequence_plus_scalar_context__random_forest_depth4_balanced",
+      "sequence_plus_scalar_context__extra_trees_depth5_balanced"
+    ],
+    "positive_scout": false,
+    "selection_policy": "max inner_validation roc_auc, tie inner top_decile_lift; locked OOS readout only"
+  },
+  "repair_disposition": {
+    "claim_effect": "No Strategy Tester runtime materialization is justified from F86G.",
+    "do_not_repeat": "Do not retune the same F86G five-minute pre-entry M1/tick summary feature surface or scalar threshold filters.",
+    "reason": "F86G sequence proxy scout did not create a meaningful signal/candidate for runtime materialization.",
+    "sequence_axis_repair": "capped_for_current_five_minute_pre_entry_summary_surface",
+    "threshold_filter_parameter_repair": "capped"
+  },
+  "run_id": "frontier86H_sequence_axis_repair_or_rotation_decision_v1",
+  "runtime_preflight_allowed": false,
+  "sequence_repair_capped": true,
+  "source_identities": {
+    "f86f_decision": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86F_first_touch_surface_repair_or_rotation_decision_v1/decision/repair_or_rotation_decision.json",
+      "sha256": "17a1c1a321dfa082717df9483aab70320f1e0041a0b39fb6664db81d32baf444",
+      "size": 5550
+    },
+    "f86g_feature_schema": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/sequence_feature_surface/feature_schema.json",
+      "sha256": "4c1fbea5afcc43774b787261109078bb2e5094babc67399495474cdd3108e217",
+      "size": 5996
+    },
+    "f86g_leakage_audit": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86g_feature_leakage_audit.json",
+      "sha256": "b77b804d119bd81e4ee418ab76dfce93b1a003a8a3795ab18e38643e2ad2eb9a",
+      "size": 5530
+    },
+    "f86g_proxy_metrics": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/proxy_scout/proxy_metrics.json",
+      "sha256": "c6c1e6bd6a52970397a8c294db729cc6624c2495a66d3c0e67442fdc40e9b350",
+      "size": 29809
+    },
+    "f86g_source_summary": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/pre_entry_source/pre_entry_source_summary.json",
+      "sha256": "463e6d943a9c95873f70e267354dc0d36763db9f0061000f3addb68654a38211",
+      "size": 8633
+    },
+    "f86g_split_audit": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86g_split_boundary_audit.json",
+      "sha256": "fdcd993fdc69826b984ff4552261c2a27531df774f1e87205f41ac1f742419e3",
+      "size": 607
+    },
+    "f86g_summary": {
+      "exists": true,
+      "path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/summary.json",
+      "sha256": "d2c890d2c3045864368d40f9204d0cec450f3cf234dcdca7eb08952afb1ed225",
+      "size": 46020
+    }
+  },
+  "source_run_id": "frontier86G_pre_entry_intrabar_sequence_feature_scout_v1",
+  "stage_disposition_seed": {
+    "candidate_next_frontier_axis": "runtime-native execution/trade-shape or risk-logic surface instead of first-touch pre-entry prediction",
+    "closeout_direction": "close F86 as negative source/label/sequence-learning record unless new evidence appears before closeout",
+    "negative_memory": [
+      "F86E scalar first-touch proxy was weak",
+      "F86G pre-entry sequence proxy was weak"
+    ],
+    "preserved_clues": [
+      "bounded selected-row tick/M1 source registration",
+      "first-touch label materializer with unresolved=0",
+      "pre-entry sequence feature schema and leakage boundary"
+    ],
+    "recommended_next": "frontier86I_stage_closeout_or_f87_rotation_handoff_v1"
+  },
+  "stage_id": "stage_frontier_86__runtime_native_intrabar_path_label_source",
+  "status": "f86h_sequence_axis_repair_capped_stage_closeout_required_no_authority"
+}

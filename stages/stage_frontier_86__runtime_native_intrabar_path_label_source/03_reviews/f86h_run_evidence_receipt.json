@@ -1,0 +1,66 @@
+{
+  "allowed_claims": [
+    "f86h_sequence_axis_decision_recorded",
+    "sequence_axis_threshold_filter_repair_capped",
+    "stage_closeout_or_rotation_handoff_next_planned",
+    "runtime_materialization_not_started_due_to_weak_sequence_proxy"
+  ],
+  "evidence_boundary": "decision-only",
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "oos_selected_model"
+  ],
+  "hard_gate_applicable": "no",
+  "judgment_class": "negative",
+  "ledger_rows": [
+    "docs/registers/run_registry.csv::frontier86H_sequence_axis_repair_or_rotation_decision_v1",
+    "docs/registers/alpha_run_ledger.csv::frontier86H_sequence_axis_repair_or_rotation_decision_v1__sequence_axis_decision",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/stage_run_ledger.csv::frontier86H_sequence_axis_repair_or_rotation_decision_v1__sequence_axis_decision"
+  ],
+  "measurement_scope": "decision over F86G structural_scout proxy metrics",
+  "missing_evidence": [
+    "Strategy Tester report",
+    "EA/ONNX bundle identity",
+    "runtime telemetry"
+  ],
+  "negative_memory_required": "yes",
+  "packet_id": "frontier86H_sequence_axis_repair_or_rotation_decision_v1",
+  "parity_level": "P0_unverified",
+  "produced_artifacts": [
+    "stage_pipelines/stage_frontier_86/frontier86h_sequence_axis_repair_or_rotation_decision.py",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86H_sequence_axis_repair_or_rotation_decision_v1/decision/sequence_axis_repair_or_rotation_decision.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86H_sequence_axis_repair_or_rotation_decision_v1/summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86H_sequence_axis_repair_or_rotation_decision_v1/run_manifest.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86H_sequence_axis_repair_or_rotation_decision_v1/kpi_record.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86H_sequence_axis_repair_or_rotation_decision_v1/reports/result_summary.md",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86h_execution_summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86h_frontier_extra_due_check.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86h_frontier_five_stage_direction_synthesis.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86h_scope_completion_gate.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86h_artifact_lineage_audit.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86h_result_judgment_audit.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86h_final_claim_guard.json",
+    "docs/agent_control/packets/frontier86H_sequence_axis_repair_or_rotation_decision_v1/final_claim_guard.json"
+  ],
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86h_run_evidence_receipt.json",
+  "registry_update_required": "yes",
+  "scoreboard": "structural_scout",
+  "skill": "obsidian-run-evidence-system",
+  "source_inputs": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/proxy_scout/proxy_metrics.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/sequence_feature_surface/feature_schema.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86G_pre_entry_intrabar_sequence_feature_scout_v1/pre_entry_source/pre_entry_source_summary.json"
+  ],
+  "status": "executed",
+  "wfo_status": "not_applicable"
+}

@@ -35,3 +35,6 @@
 - `f86g_feature_leakage_audit.json`: F86G feature leakage audit(F86G 피처 누수 감사)
 - `f86g_split_boundary_audit.json`: F86G split boundary audit(F86G 분할 경계 감사)
 - `f86g_final_claim_guard.json`: F86G final claim guard(F86G 최종 주장 보호)
+- `f86h_execution_summary.json`: F86H execution summary(F86H 실행 요약)
+- `f86h_result_judgment_audit.json`: F86H result judgment audit(F86H 결과 판정 감사)
+- `f86h_final_claim_guard.json`: F86H final claim guard(F86H 최종 주장 보호)
