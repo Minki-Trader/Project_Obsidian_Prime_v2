@@ -1,15 +1,15 @@
 ﻿# F86 Selection Status(F86 선택 상태)
 
-Updated(갱신): 2026-06-18T12:48:52Z
+Updated(갱신): 2026-06-18T18:23:20Z
 
-Status(상태): `pending_open_after_f85_negative_rotation_no_authority`
+Status(상태): `f86c_source_probe_completed_sample_intrabar_payload_no_authority`
 
-Current run(현재 실행): `frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1`
+Current run(현재 실행): `frontier86D_tick_m1_full_registration_or_first_touch_label_materializer_v1`
 
-Latest completed run(최근 완료 실행): `frontier85C_runtime_path_firewall_repair_or_rotation_decision_v1`
+Latest completed run(최근 완료 실행): `frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1`
 
-Action(행동): F86 is prepared as a new-axis frontier(F86은 새 축 전선으로 준비됨).
+Action(행동): F86C에서 MT5 API(MT5 API) M1/tick(1분봉/틱) sample export(샘플 내보내기)와 M5 ambiguity scout(5분봉 모호성 탐색)를 닫았다.
 
-Effect(효과): F85 negative memory(부정 기억)를 버리지 않고 runtime-native intrabar path label source(런타임 네이티브 봉내 경로 라벨 원천)로 전환한다.
+Effect(효과): F86D는 source absence(원천 부재) 가정이 아니라 bounded full registration(범위 있는 전체 등록) 또는 first-touch label materializer(첫 터치 라벨 물질화기)로 전진할 수 있다.
 
-Claim boundary(주장 경계): `no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+Claim boundary(주장 경계): `f86c_source_probe_and_surrogate_scout_only_no_full_tick_m1_history_no_runtime_materialization_no_first_touch_order_authority_no_goal_achieve`.

@@ -1,0 +1,351 @@
+version: work_packet_schema_v2_1
+packet_lifecycle: new_packet
+packet_id: frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1
+created_at_utc: '2026-06-18T17:41:32Z'
+user_request:
+  user_quote: "/goal active continuation after F85C closed negative/no authority; open F86 with current goal rules."
+  requested_action: "canonical frontier open for stage_frontier_86__runtime_native_intrabar_path_label_source"
+  requested_count:
+    value: 1
+    n_a_reason: ""
+  ambiguous_terms:
+    - "Goal Achieve(목표 달성)는 ONNX 완성이나 live readiness(실거래 준비)가 아니라 real-operation validation entry(실운영 검증 진입)로 해석한다."
+current_truth:
+  active_stage: stage_frontier_86__runtime_native_intrabar_path_label_source
+  current_run: frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1
+  latest_completed_run: frontier85C_runtime_path_firewall_repair_or_rotation_decision_v1
+  source_documents:
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/00_spec/stage_brief.md
+    - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/04_selected/selection_status.md
+  claim_boundary: f86_stage_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+work_classification:
+  primary_family: experiment_design
+  detected_families:
+    - experiment_design
+    - state_sync
+    - artifact_lineage
+  touched_surfaces:
+    - docs/agent_control/packets/frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1
+    - stages/stage_frontier_86__runtime_native_intrabar_path_label_source
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+  mutation_intent: true
+  execution_intent: false
+risk_vector_scan:
+  risks:
+    runtime_claim_without_mt5_evidence: high
+    f85_firewall_repair_laundering: high
+    tick_m1_label_leakage: high
+    oos_reselection: high
+    task_force_claim_without_actual_calls: high
+  hard_stop_risks:
+    - "Do not claim runtime/economics evidence without MT5 Strategy Tester output(MT5 전략 테스터 출력)."
+    - "Do not reuse OOS locked readout(표본외 잠금 판독) for selection."
+    - "Do not treat prior v1/v2 packet(이전 묶음)을 reviewed/verified/pass(검토/검증/통과) 근거로 승격."
+  required_decision_locks:
+    - "F86A is design_only(설계 전용) stage open."
+    - "F85C is reference-only negative memory(참조 전용 부정 기억)."
+  required_gates:
+    - work_packet_schema_lint
+    - skill_receipt_schema_lint
+    - frontier_extra_due_check
+    - frontier_five_stage_direction_synthesis
+    - frontier_topic_rotation_check
+    - codex_task_force_review_packet
+    - experiment_design_receipt
+    - data_integrity_leakage_guard
+    - model_validation_risk_guard
+    - runtime_materialization_boundary
+    - artifact_lineage_audit
+    - required_gate_coverage_audit
+    - final_claim_guard
+  forbidden_claims:
+    - completion
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - onnx_completion
+    - materialization_ready
+    - handoff_complete
+verification_profile:
+  profile_id: design_only
+  claim_surface:
+    allowed_claims:
+      - stage_open_design_prepared
+      - frontier_open_discipline_recorded
+      - task_force_consulted_with_actual_calls
+    forbidden_claims:
+      - runtime_verified
+      - runtime_probe_completed
+      - mt5_verification_complete
+      - runtime_economics
+      - materialization_ready
+      - runtime_authority
+      - operating_promotion
+      - live_readiness
+      - goal_achieve
+    claim_boundary: f86_stage_open_design_only_no_runtime_or_economics_claim
+  trigger_sources:
+    - active_goal
+    - workspace_state_f86_pending_open
+    - frontier_extra_stage_due_rule
+    - frontier_five_stage_direction_synthesis_rule
+    - frontier_topic_rotation_rule
+    - codex_task_force_review_packet_required_by_goal
+  protected_claims:
+    - stage_open_design_prepared
+    - frontier_open_discipline_recorded
+    - task_force_consulted_with_actual_calls
+  required_evidence:
+    - work_packet_schema_v2_1 packet with packet_lifecycle=new_packet
+    - frontier_extra_due_check receipt
+    - frontier_five_stage_direction_synthesis receipt
+    - frontier_topic_rotation_check receipt
+    - actual selected-agent spawn_agent calls for Task Force review
+    - F86 experiment design receipt
+    - F86 data integrity leakage boundary receipt
+    - F86 model validation risk receipt
+    - F86 runtime materialization boundary receipt
+    - final claim guard
+  gates_not_run_with_reason:
+    - gate: runtime_evidence_gate
+      reason_code: outside_claim_surface
+      reason: "F86A opens design only(설계 전용) and makes no runtime/materialization/economics claim(런타임/물질화/경제성 주장 없음)."
+      claim_effect: "Runtime, economics, materialization, handoff, authority, live-readiness, and Goal Achieve claims are forbidden."
+    - gate: kpi_contract_audit
+      reason_code: no_kpi_result_yet
+      reason: "No proxy, MT5, or KPI result is created in F86A."
+      claim_effect: "No performance or superiority claim is allowed."
+  stop_conditions:
+    - "Stop after F86 stage-open design receipts and state sync are recorded."
+    - "If a runtime/materialization/economics claim becomes protected, re-open under runtime_probe profile and attempt narrow MT5 Strategy Tester probe."
+decision_lock:
+  mode: assume_safe_default
+  assumptions:
+    f86_open_allowed: true
+    task_force_scope: minimum_relevant_agents_only
+    mt5_runtime_required_now: false
+  questions: []
+  required_user_decisions: []
+preflight:
+  needs_clarification: false
+  selected_option_id: f86_design_only_open
+  selected_option_user_quote: "/goal active continuation; F86 pending open."
+  blocked_until_answer: false
+interpreted_scope:
+  work_families:
+    - experiment_design
+  target_surfaces:
+    - stage_frontier_86__runtime_native_intrabar_path_label_source
+    - F86 stage-open design receipts
+    - current truth state sync
+  scope_units:
+    - stage
+    - run
+    - document
+    - artifact
+  execution_layers:
+    - read_only
+    - document_edit
+  mutation_policy:
+    allowed: true
+    user_quote: "/goal operating continuation permits stage-open packet/state sync."
+  evidence_layers:
+    - current_truth_docs
+    - stage_open_receipts
+    - task_force_actual_subagent_calls
+    - gate_audit
+  reduction_policy:
+    reduction_allowed: true
+    requires_user_quote: false
+    rationale: "Design-only packet(설계 전용 묶음)은 MT5 execution(실행)을 주장하지 않으므로 runtime probe(런타임 탐침)를 켜지 않는다."
+  claim_boundary:
+    allowed_claims:
+      - stage_open_design_prepared
+      - frontier_open_discipline_recorded
+      - task_force_consulted_with_actual_calls
+    forbidden_claims:
+      - completion
+      - selected_baseline
+      - operating_promotion
+      - runtime_authority
+      - live_readiness
+      - goal_achieve
+      - runtime_verified
+      - materialization_ready
+  variants_requested:
+    value: null
+    n_a_reason: "No variant execution in F86A stage open."
+  verification_layers:
+    - packet_schema_lint
+    - skill_receipt_schema_lint
+    - frontier_due_direction_rotation
+    - task_force_actual_call_receipt
+    - final_claim_guard
+  mt5_required: false
+  top_k_reduction_allowed: false
+  scope_reduction_requires_user_quote: true
+acceptance_criteria:
+  - id: AC-001
+    text: "F86 opens as design_only/no_authority with work_packet_schema_v2_1 and packet_lifecycle=new_packet."
+    expected_artifact: docs/agent_control/packets/frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1/work_packet.yaml
+    verification_method: work_packet_schema_lint
+    required: true
+  - id: AC-002
+    text: "Pre-open order records frontier_extra_due_check, frontier_five_stage_direction_synthesis, and frontier_topic_rotation_check."
+    expected_artifact: stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86a_frontier_topic_rotation_check.json
+    verification_method: required_gate_coverage_audit
+    required: true
+  - id: AC-003
+    text: "Task Force review uses minimum relevant agents and records actual_subagent_calls."
+    expected_artifact: stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86a_task_force_review_receipt.json
+    verification_method: skill_receipt_schema_lint
+    required: true
+  - id: AC-004
+    text: "State sync moves current run to F86B without claiming runtime authority or Goal Achieve."
+    expected_artifact: docs/workspace/workspace_state.yaml
+    verification_method: final_claim_guard
+    required: true
+work_plan:
+  phases:
+    - "Read current truth and F86 stage brief."
+    - "Call minimum relevant Task Force agents."
+    - "Record extra due, five-stage synthesis, and topic rotation receipts."
+    - "Record experiment/data/model/runtime-boundary/lineage/claim receipts."
+    - "Run schema/gate lint and sync state."
+  expected_outputs:
+    - f86a stage-open packet
+    - f86a stage-local receipts
+    - required gate coverage audit
+    - state sync to F86B
+  stop_conditions:
+    - "F86A design/open complete with no runtime claim."
+row_grain:
+  reference: docs/agent_control/row_grain_contract.yaml
+  normalized_row_key:
+    - run_id
+    - packet_id
+    - stage_id
+kpi_contract:
+  kpi_standard_version: kpi_7layer_v1
+  normalized_record_path: ""
+  source_authority_reference: docs/agent_control/kpi_source_authority.yaml
+  n_a_reason_reference: docs/agent_control/n_a_reason_registry.yaml
+artifact_contract:
+  raw_evidence:
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/00_spec/stage_brief.md
+  machine_readable:
+    - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86a_stage_open_manifest.json
+    - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86a_frontier_extra_due_check.json
+    - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86a_frontier_five_stage_direction_synthesis.json
+    - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86a_frontier_topic_rotation_check.json
+  human_readable:
+    - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/00_spec/stage_brief.md
+  external_artifacts: []
+evidence_contract:
+  raw_evidence:
+    - docs/workspace/workspace_state.yaml
+    - docs/context/current_working_state.md
+    - docs/workspace/changelog.md
+  machine_readable:
+    - docs/agent_control/packets/frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1/work_packet.yaml
+    - docs/agent_control/packets/frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1/skill_receipts.json
+    - docs/agent_control/packets/frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1/closeout_gate.json
+  human_readable:
+    - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/00_spec/stage_brief.md
+    - stages/stage_frontier_86__runtime_native_intrabar_path_label_source/04_selected/selection_status.md
+skill_routing:
+  primary_family: experiment_design
+  primary_skill: obsidian-experiment-design
+  support_skills:
+    - obsidian-data-integrity
+    - obsidian-model-validation
+    - obsidian-artifact-lineage
+    - obsidian-task-force-review
+    - obsidian-claim-discipline
+  skills_considered:
+    - obsidian-reentry-read
+    - obsidian-stage-transition
+    - obsidian-experiment-design
+    - obsidian-data-integrity
+    - obsidian-model-validation
+    - obsidian-artifact-lineage
+    - obsidian-task-force-review
+    - obsidian-claim-discipline
+    - obsidian-result-judgment
+    - obsidian-runtime-parity
+  skills_selected:
+    - obsidian-experiment-design
+    - obsidian-data-integrity
+    - obsidian-model-validation
+    - obsidian-artifact-lineage
+    - obsidian-task-force-review
+    - obsidian-claim-discipline
+  skills_not_used:
+    - skill: obsidian-result-judgment
+      reason: "No run/result KPI is judged; claim boundary is handled by obsidian-claim-discipline."
+    - skill: obsidian-runtime-parity
+      reason: "No runtime or parity claim is made in F86A; runtime boundary is recorded without MT5 execution."
+  required_skill_receipts:
+    - obsidian-experiment-design
+    - obsidian-data-integrity
+    - obsidian-model-validation
+    - obsidian-artifact-lineage
+    - obsidian-task-force-review
+    - obsidian-claim-discipline
+  required_gates:
+    - work_packet_schema_lint
+    - skill_receipt_schema_lint
+    - frontier_extra_due_check
+    - frontier_five_stage_direction_synthesis
+    - frontier_topic_rotation_check
+    - codex_task_force_review_packet
+    - experiment_design_receipt
+    - data_integrity_leakage_guard
+    - model_validation_risk_guard
+    - runtime_materialization_boundary
+    - artifact_lineage_audit
+    - required_gate_coverage_audit
+    - final_claim_guard
+gates:
+  work_packet_schema_lint: pass
+  skill_receipt_schema_lint: pass
+  frontier_extra_due_check: pass_not_due
+  frontier_five_stage_direction_synthesis: pass_recorded
+  frontier_topic_rotation_check: pass_open_allowed
+  codex_task_force_review_packet: pass_actual_selected_agent_calls_recorded
+  experiment_design_receipt: pass
+  data_integrity_leakage_guard: pass_with_boundary
+  model_validation_risk_guard: pass_with_boundary
+  runtime_materialization_boundary: pass_design_only_no_runtime_claim
+  artifact_lineage_audit: pass_connected_with_boundary
+  required_gate_coverage_audit: pass
+  final_claim_guard: pass
+  not_applicable_with_reason:
+    runtime_evidence_gate: "outside_claim_surface; no runtime/materialization/economics claim in F86A"
+    kpi_contract_audit: "no KPI result in F86A stage-open design"
+final_claim_policy:
+  allowed_claims:
+    - stage_open_design_prepared
+    - frontier_open_discipline_recorded
+    - task_force_consulted_with_actual_calls
+  forbidden_claims:
+    - completion
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - runtime_verified
+    - runtime_probe_completed
+    - mt5_verification_complete
+    - runtime_economics
+    - materialization_ready
+    - handoff_complete
+  claim_vocabulary_reference: docs/agent_control/claim_vocabulary.yaml

@@ -1,0 +1,71 @@
+{
+  "packet_id": "frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1",
+  "status": "stage_open_gate_passed_design_only",
+  "audits": [
+    {
+      "audit_name": "work_packet_schema_lint",
+      "status": "pass",
+      "evidence": "docs/agent_control/packets/frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1/work_packet_schema_lint.json"
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "status": "pass",
+      "evidence": "docs/agent_control/packets/frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1/skill_receipt_schema_lint.json"
+    },
+    {
+      "audit_name": "frontier_extra_due_check",
+      "status": "pass_not_due",
+      "evidence": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86a_frontier_extra_due_check.json"
+    },
+    {
+      "audit_name": "frontier_five_stage_direction_synthesis",
+      "status": "pass_recorded",
+      "evidence": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86a_frontier_five_stage_direction_synthesis.json"
+    },
+    {
+      "audit_name": "frontier_topic_rotation_check",
+      "status": "pass_open_allowed",
+      "evidence": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86a_frontier_topic_rotation_check.json"
+    },
+    {
+      "audit_name": "codex_task_force_review_packet",
+      "status": "pass_actual_selected_agent_calls_recorded",
+      "evidence": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86a_task_force_review_receipt.json"
+    },
+    {
+      "audit_name": "experiment_design_receipt",
+      "status": "pass",
+      "evidence": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86a_experiment_design_receipt.json"
+    },
+    {
+      "audit_name": "data_integrity_leakage_guard",
+      "status": "pass_with_boundary",
+      "evidence": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86a_data_integrity_receipt.json"
+    },
+    {
+      "audit_name": "model_validation_risk_guard",
+      "status": "pass_with_boundary",
+      "evidence": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86a_model_validation_receipt.json"
+    },
+    {
+      "audit_name": "runtime_materialization_boundary",
+      "status": "pass_design_only_no_runtime_claim",
+      "evidence": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86a_runtime_materialization_boundary.json"
+    },
+    {
+      "audit_name": "artifact_lineage_audit",
+      "status": "pass_connected_with_boundary",
+      "evidence": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86a_artifact_lineage_receipt.json"
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "status": "pass",
+      "evidence": "docs/agent_control/packets/frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1/required_gate_coverage_audit.json"
+    }
+  ],
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "status": "pass",
+    "evidence": "docs/agent_control/packets/frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1/final_claim_guard.json"
+  }
+}

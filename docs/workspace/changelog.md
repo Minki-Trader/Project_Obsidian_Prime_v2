@@ -1,4 +1,18 @@
-﻿# 2026-06-18 - F85C Closeout Rotate F86(F85C 마감 및 F86 회전)
+﻿# 2026-06-18 - F86A Stage Open(F86A 단계 개방)
+
+- Action(행동): `frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1`로 F86을 `work_packet_schema_v2_1(작업 묶음 스키마 2.1)` design_only(설계 전용) frontier open(전선 개방)으로 기록했다.
+- Effect(효과): `frontier_extra_due_check(전선 추가 도래 점검) -> frontier_five_stage_direction_synthesis(전선 5단계 방향 종합) -> frontier_topic_rotation_check(전선 주제 회전 점검)` 순서를 남기고, F86B `frontier86B_intrabar_path_source_integrity_proxy_design_v1`로 넘겼다.
+- Task Force(태스크포스): minimum relevant agents 6/6 actual calls completed(최소 관련 요원 6명 실제 호출 완료); 8명 전원 호출 아님.
+- Boundary(경계): `f86_stage_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+# 2026-06-18 - F86B Source Integrity Proxy Design(F86B 원천 무결성 프록시 설계)
+
+- Action(행동): `frontier86B_intrabar_path_source_integrity_proxy_design_v1`로 raw M5/training/model input(원천 5분봉/학습/모델 입력) source inventory(원천 목록)와 intrabar path problem statement(봉내 경로 문제 정의)를 기록했다.
+- Effect(효과): M5 OHLC(5분봉 시가고가저가종가)는 surrogate ambiguity scout(대체 모호성 탐색)에만 쓰고, tick/M1 payload(틱/1분봉 자료)가 등록되기 전까지 authoritative first-touch order(권위 있는 첫 터치 순서)는 주장하지 않는다.
+- Next(다음): `frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1`.
+- Boundary(경계): `f86b_source_integrity_proxy_design_only_no_runtime_materialization_no_authority_no_goal_achieve`.
+
+# 2026-06-18 - F85C Closeout Rotate F86(F85C 마감 및 F86 회전)
 
 - Action(행동): `frontier85C_runtime_path_firewall_repair_or_rotation_decision_v1`로 F85를 negative/no authority(부정/권위 없음) 마감했다.
 - Effect(효과): F85B no reversal reduction(반전 감소 없음)을 negative memory(부정 기억)로 보존하고 `frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1`로 회전했다.

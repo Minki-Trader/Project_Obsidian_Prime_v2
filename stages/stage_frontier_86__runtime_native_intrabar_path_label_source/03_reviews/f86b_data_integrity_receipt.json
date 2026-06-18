@@ -1,0 +1,58 @@
+{
+  "run_id": "frontier86B_intrabar_path_source_integrity_proxy_design_v1",
+  "skill": "obsidian-data-integrity",
+  "status": "executed",
+  "data_source": [
+    {
+      "id": "raw_us100_m5_mt5api",
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+      "rows": 261345
+    },
+    {
+      "id": "training_fwd12_proxyw58",
+      "path": "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset.parquet",
+      "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "rows": 46650
+    },
+    {
+      "id": "real_ticks_us100",
+      "path": "data/raw/real_ticks/us100/",
+      "payload_status": "README_only_no_tick_or_m1_payload_found"
+    }
+  ],
+  "time_axis": "Raw M5 time_open_unix/time_close_unix are MT5_PY_API_UNIX_SECONDS but timezone_status is UNRESOLVED_REQUIRES_MANUAL_BINDING; project time-axis policy treats raw timestamps as broker-clock alignment keys until mapped.",
+  "sample_scope": "US100 M5 raw rows 261345; fwd12/model-input rows 46650; F85 selected readout rows 4127; no tick/M1 source payload registered.",
+  "missing_or_duplicate_check": {
+    "raw_m5_time_open_monotonic": true,
+    "raw_m5_time_open_unique": true,
+    "raw_m5_invalid_ohlc_rows": 0,
+    "training_timestamp_monotonic": true,
+    "training_timestamp_unique": true,
+    "tick_m1_payload_missing": true
+  },
+  "feature_label_boundary": {
+    "features_allowed": "Closed-bar pre-entry features and entry-known source state only.",
+    "labels_allowed": "Future path/order/outcome labels only on label side.",
+    "blocked": "Future first-touch order, realized PnL, runtime winner/loser, and post-entry high/low cannot become features for the same decision."
+  },
+  "split_boundary": {
+    "train_rows": 29222,
+    "validation_rows": 9844,
+    "oos_rows": 7584,
+    "policy": "Validation may select within predeclared rules; OOS remains locked readout."
+  },
+  "leakage_risk": [
+    "M5 OHLC both-hit label can leak future path if reused as a pre-entry feature.",
+    "OOS F85 readout can leak if used to select F86 thresholds.",
+    "Timezone unresolved status can distort session features if directly treated as UTC."
+  ],
+  "data_hash_or_identity": [
+    "raw_us100_m5_sha256=2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+    "training_model_input_sha256=c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "source_inventory_sha256=pending_file_hash_after_write"
+  ],
+  "integrity_judgment": "usable_with_boundary",
+  "boundary": "Current sources are usable for M5 ambiguity/proxy design but insufficient for authoritative intrabar first-touch order.",
+  "claim_boundary": "data_integrity_boundary_only_no_runtime_or_order_authority"
+}

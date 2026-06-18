@@ -1,0 +1,32 @@
+{
+  "audit_name": "m5_ambiguity_scout_audit",
+  "claim_boundary": "f86c_source_probe_and_surrogate_scout_only_no_full_tick_m1_history_no_runtime_materialization_no_first_touch_order_authority_no_goal_achieve",
+  "claim_effect": "M5 OHLC identifies both-hit ambiguity but cannot determine first-touch order inside a bar.",
+  "findings": [],
+  "input_rows": 4127,
+  "joined_m5_rows": 4127,
+  "judgment": "negative_memory_confirms_path_order_ambiguity_material",
+  "m5_path_class_counts": {
+    "both_hit_order_unknown": 1881,
+    "neither": 20,
+    "proxy_both_hit_false": 2256,
+    "proxy_both_hit_true": 1871,
+    "proxy_loss_runtime_win_true": 639,
+    "proxy_win_runtime_loss_true": 1355,
+    "sl_only": 1480,
+    "tp_only": 746
+  },
+  "missing_m5_rows": 0,
+  "passed": true,
+  "proxy_vs_m5_confusion": {
+    "proxy_both_hit=False|m5_path=both_hit_order_unknown": 901,
+    "proxy_both_hit=False|m5_path=neither": 19,
+    "proxy_both_hit=False|m5_path=sl_only": 884,
+    "proxy_both_hit=False|m5_path=tp_only": 452,
+    "proxy_both_hit=True|m5_path=both_hit_order_unknown": 980,
+    "proxy_both_hit=True|m5_path=neither": 1,
+    "proxy_both_hit=True|m5_path=sl_only": 596,
+    "proxy_both_hit=True|m5_path=tp_only": 294
+  },
+  "status": "pass"
+}

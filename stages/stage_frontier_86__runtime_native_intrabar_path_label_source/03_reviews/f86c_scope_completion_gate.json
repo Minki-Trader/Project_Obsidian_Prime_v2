@@ -1,0 +1,36 @@
+{
+  "allowed_claims": [
+    "source_sample_exported",
+    "surrogate_ambiguity_scout_recorded"
+  ],
+  "audit_name": "scope_completion_gate",
+  "checks": [
+    {
+      "actual": 1,
+      "check_id": "mt5_source_probe_summary_exists",
+      "expected": 1,
+      "status": "pass"
+    },
+    {
+      "actual": 53972,
+      "check_id": "m1_tick_sample_rows_positive",
+      "expected": ">0",
+      "status": "pass"
+    },
+    {
+      "actual": 4127,
+      "check_id": "m5_scout_joined_rows",
+      "expected": 4127,
+      "status": "pass"
+    },
+    {
+      "actual": "no_strategy_tester",
+      "check_id": "runtime_economics_absent_by_claim",
+      "expected": "no_strategy_tester",
+      "status": "pass"
+    }
+  ],
+  "claim_boundary": "f86c_source_probe_and_surrogate_scout_only_no_full_tick_m1_history_no_runtime_materialization_no_first_touch_order_authority_no_goal_achieve",
+  "forbidden_claims": [],
+  "status": "pass"
+}

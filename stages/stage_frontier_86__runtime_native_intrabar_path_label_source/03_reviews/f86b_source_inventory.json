@@ -1,0 +1,165 @@
+{
+  "run_id": "frontier86B_intrabar_path_source_integrity_proxy_design_v1",
+  "stage_id": "stage_frontier_86__runtime_native_intrabar_path_label_source",
+  "created_at_utc": "2026-06-18T18:00:41Z",
+  "purpose": "F86B source inventory(원천 목록) for runtime-native intrabar path label source(런타임 네이티브 봉내 경로 라벨 원천)",
+  "discovery_methods": [
+    "rg --files(기본 파일 검색) for tracked surfaces",
+    "rg --files --no-ignore(무시 제외 파일 검색) for raw data ignored by git",
+    "PowerShell Test-Path/Get-FileHash(경로 확인/해시 확인)",
+    "Python pandas schema/time-axis sample(파이썬 판다스 스키마/시간축 샘플)"
+  ],
+  "sources": [
+    {
+      "source_id": "raw_us100_m5_mt5api",
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "exists": true,
+      "tracked_by_git": false,
+      "gitignore_boundary": "discoverable_with_rg_no_ignore",
+      "size": 38125907,
+      "sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+      "rows": 261345,
+      "columns": [
+        "time_open_unix",
+        "time_close_unix",
+        "contract_symbol",
+        "broker_symbol",
+        "timeframe",
+        "price_basis",
+        "open",
+        "high",
+        "low",
+        "close",
+        "tick_volume",
+        "spread_points",
+        "real_volume",
+        "time_basis",
+        "timezone_status"
+      ],
+      "time_open_monotonic": true,
+      "time_open_unique": true,
+      "time_close_monotonic": true,
+      "time_close_unique": true,
+      "invalid_ohlc_rows": 0,
+      "timezone_status_counts": {
+        "UNRESOLVED_REQUIRES_MANUAL_BINDING": 261345
+      },
+      "spread_points": {
+        "min": 0.0,
+        "median": 140.0,
+        "max": 435.0
+      },
+      "tick_volume": {
+        "min": 1,
+        "median": 574.0,
+        "max": 42327
+      },
+      "intrabar_order_authority": "not_available_from_m5_ohlc",
+      "claim_effect": "Usable for M5 OHLC ambiguity scout(5분봉 모호성 탐색) but not authoritative first-touch order(첫 터치 순서 권위)."
+    },
+    {
+      "source_id": "raw_us100_m5_manifest",
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+      "exists": true,
+      "tracked_by_git": false,
+      "size": 1338,
+      "sha256": "86a772a2b73dc2d7684f37ba41243596bad54749ef1461db17c6957600787cde",
+      "time_basis": "MT5_PY_API_UNIX_SECONDS",
+      "timezone_status": "UNRESOLVED_REQUIRES_MANUAL_BINDING",
+      "price_basis": "Bid"
+    },
+    {
+      "source_id": "training_fwd12_proxyw58",
+      "path": "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset.parquet",
+      "exists": true,
+      "tracked_by_git": false,
+      "size": 14278154,
+      "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "rows": 46650,
+      "columns_count": 69,
+      "timestamp_min": "2022-09-01 16:40:00+00:00",
+      "timestamp_max": "2026-04-13 22:00:00+00:00",
+      "timestamp_monotonic_increasing": true,
+      "timestamp_unique": true,
+      "split_counts": {
+        "train": 29222,
+        "validation": 9844,
+        "oos": 7584
+      },
+      "label_counts": {
+        "flat": 16242,
+        "long": 16165,
+        "short": 14243
+      },
+      "horizon_minutes_counts": {
+        "60": 46650
+      },
+      "future_after_current_all": true,
+      "claim_effect": "Usable as existing fwd12 direction label(60분 방향 라벨) reference only; not an intrabar order label."
+    },
+    {
+      "source_id": "model_input_feature_set_v2_proxy58",
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "exists": true,
+      "tracked_by_git": false,
+      "size": 14278154,
+      "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "rows": 46650,
+      "columns_count": 69,
+      "split_counts": {
+        "train": 29222,
+        "validation": 9844,
+        "oos": 7584
+      },
+      "claim_effect": "Usable for existing 58-feature closed-bar model input(닫힌 봉 58피처 모델 입력) only."
+    },
+    {
+      "source_id": "real_ticks_us100_folder",
+      "path": "data/raw/real_ticks/us100/README.md",
+      "exists": true,
+      "tracked_by_git": true,
+      "size": 157,
+      "sha256": "9fcc6373b672dee45999b41fe16b43fd30a638f965500da033e031d4b8b70162",
+      "tick_or_m1_payload_found": false,
+      "claim_effect": "Folder intent exists, but no broker-native tick/M1 payload is registered yet."
+    }
+  ],
+  "m1_or_tick_payload_search": {
+    "command": "rg --files --no-ignore data/raw | rg -i \"(^|[\\\\/])m1([\\\\/]|$)|_m1_|ticks?.*\\\\.csv|\\\\.tks|\\\\.hcc|\\\\.hc\"",
+    "result_status": "no_matches",
+    "claim_effect": "Authoritative intrabar path ordering cannot be claimed from current local files."
+  },
+  "f85_negative_memory_readout": {
+    "source_path": "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_selected_firewall_row_readout.csv",
+    "sha256": "f62d31027c6cde4487e33bae65dce8c0384391adc2aea743b2d9a44e6ca61afa",
+    "rows": 4127,
+    "proxy_exit_path_label_counts": {
+      "both_hit_close_direction": 1871,
+      "sl_expected": 1493,
+      "tp_expected": 763
+    },
+    "proxy_both_hit_counts": {
+      "false": 2256,
+      "true": 1871
+    },
+    "proxy_win_runtime_loss_count": 1355,
+    "proxy_loss_runtime_win_count": 639,
+    "runtime_win_count": 1194,
+    "proxy_win_count": 1910,
+    "open_sl_points": {
+      "min": 700.0,
+      "median": 700.0,
+      "max": 700.0
+    },
+    "open_tp_points": {
+      "min": 1400.0,
+      "median": 1400.0,
+      "max": 1400.0
+    },
+    "claim_effect": "F85 path contradiction is materially tied to both-hit/path-order ambiguity and should not be repaired by threshold-only scalar filtering."
+  },
+  "inventory_judgment": "usable_with_boundary",
+  "boundary": "M5/source and fwd12/model input sources are available. Tick/M1 payload required for authoritative first-touch/both-hit order is not currently registered.",
+  "next_condition": "Export or register US100 tick/M1 source identity, or run an M5 OHLC ambiguity scout explicitly labelled surrogate-only.",
+  "claim_boundary": "source_inventory_only_no_runtime_materialization_no_order_authority_no_goal_achieve"
+}

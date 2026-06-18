@@ -1,0 +1,43 @@
+{
+  "availability": "tracked_metadata_with_stage-local_sample_csv_outputs",
+  "hashes_or_missing_reasons": [
+    "m1_rows=157",
+    "tick_rows=53815",
+    "full_tick_m1_history_registration_missing",
+    "strategy_tester_report_not_in_scope"
+  ],
+  "human_readable": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/reports/result_summary.md",
+    "docs/context/current_working_state.md"
+  ],
+  "lineage_boundary": "sample_source_and_surrogate_scout_lineage_connected_no_runtime_bundle_identity",
+  "machine_readable": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/run_manifest.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/kpi_record.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/summary.json",
+    "docs/agent_control/packets/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/work_packet.yaml",
+    "docs/agent_control/packets/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/skill_receipts.json"
+  ],
+  "packet_id": "frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1",
+  "produced_artifacts": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/source_probe/mt5_m1_f85b_first_selected_2025_10_03_1630_1705.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/source_probe/mt5_ticks_f85b_first_selected_2025_10_03_1630_1705.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/source_probe/mt5_m1_f85b_oos_tail_2026_04_13_2100_2200.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/source_probe/mt5_ticks_f85b_oos_tail_2026_04_13_2100_2200.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/source_probe/mt5_m1_recent_60m.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/m5_ambiguity_scout/m5_ambiguity_scout_rows.csv",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86c_execution_summary.json"
+  ],
+  "raw_evidence": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/source_probe/mt5_source_probe_summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/m5_ambiguity_scout/m5_ambiguity_scout_summary.json"
+  ],
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86c_artifact_lineage_receipt.json",
+  "skill": "obsidian-artifact-lineage",
+  "source_inputs": [
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_selected_firewall_row_readout.csv"
+  ],
+  "status": "executed"
+}

@@ -1,0 +1,26 @@
+{
+  "allowed_claims": [
+    "source_materiality_recorded"
+  ],
+  "forbidden_claims": [
+    "model_selected",
+    "threshold_selected",
+    "runtime_verified",
+    "runtime_authority",
+    "goal_achieve"
+  ],
+  "model_or_threshold_surface": "No model, threshold, or candidate ranking selected in F86C.",
+  "overfit_checks": [
+    "no model trained",
+    "no threshold selected",
+    "no OOS optimization",
+    "no runtime candidate promoted"
+  ],
+  "packet_id": "frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1",
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86c_model_validation_receipt.json",
+  "selection_metric_boundary": "M1/tick rows and M5 ambiguity counts are source materiality metrics, not performance selection metrics.",
+  "skill": "obsidian-model-validation",
+  "status": "executed",
+  "validation_judgment": "no_model_selection_scout_only",
+  "validation_split": "Not applicable for model selection; OOS readout used only to choose source-probe windows already present in F85B evidence."
+}

@@ -1,0 +1,90 @@
+{
+  "packet_id": "frontier86B_intrabar_path_source_integrity_proxy_design_v1",
+  "status": "design_boundary_completed_no_authority",
+  "audits": [
+    {
+      "audit_name": "work_packet_schema_lint",
+      "status": "pass",
+      "evidence": "docs/agent_control/packets/frontier86B_intrabar_path_source_integrity_proxy_design_v1/work_packet_schema_lint.json"
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "status": "pass",
+      "evidence": "docs/agent_control/packets/frontier86B_intrabar_path_source_integrity_proxy_design_v1/skill_receipt_schema_lint.json"
+    },
+    {
+      "audit_name": "skill_receipt_lint",
+      "status": "pass",
+      "evidence": "docs/agent_control/packets/frontier86B_intrabar_path_source_integrity_proxy_design_v1/skill_receipt_schema_lint.json"
+    },
+    {
+      "audit_name": "frontier_five_stage_direction_synthesis",
+      "status": "pass_recorded",
+      "evidence": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86b_frontier_five_stage_direction_synthesis.json"
+    },
+    {
+      "audit_name": "source_inventory_audit",
+      "status": "pass_with_boundary",
+      "evidence": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86b_source_inventory.json"
+    },
+    {
+      "audit_name": "experiment_design_receipt",
+      "status": "pass",
+      "evidence": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86b_experiment_design_receipt.json"
+    },
+    {
+      "audit_name": "data_integrity_leakage_guard",
+      "status": "pass_with_boundary",
+      "evidence": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86b_data_integrity_receipt.json"
+    },
+    {
+      "audit_name": "model_validation_risk_guard",
+      "status": "pass_with_boundary",
+      "evidence": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86b_model_validation_receipt.json"
+    },
+    {
+      "audit_name": "artifact_lineage_audit",
+      "status": "pass_connected_with_boundary",
+      "evidence": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86b_artifact_lineage_receipt.json"
+    },
+    {
+      "audit_name": "scope_completion_gate",
+      "status": "pass_design_scope_complete",
+      "evidence": "docs/agent_control/packets/frontier86B_intrabar_path_source_integrity_proxy_design_v1/closeout_gate.json"
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "status": "pass",
+      "evidence": "docs/agent_control/packets/frontier86B_intrabar_path_source_integrity_proxy_design_v1/required_gate_coverage_audit.json"
+    },
+    {
+      "audit_name": "state_sync_audit",
+      "status": "pass",
+      "evidence": "docs/agent_control/packets/frontier86B_intrabar_path_source_integrity_proxy_design_v1/state_sync_audit.json"
+    },
+    {
+      "audit_name": "final_claim_guard",
+      "status": "pass",
+      "evidence": "docs/agent_control/packets/frontier86B_intrabar_path_source_integrity_proxy_design_v1/final_claim_guard.json"
+    }
+  ],
+  "not_applicable_with_reason": [
+    {
+      "audit_name": "runtime_evidence_gate",
+      "status": "not_applicable_with_reason",
+      "reason": "F86B does not make runtime/materialization/economics claims."
+    },
+    {
+      "audit_name": "kpi_contract_audit",
+      "status": "not_applicable_with_reason",
+      "reason": "F86B does not produce KPI result rows."
+    },
+    {
+      "audit_name": "codex_task_force_review_packet",
+      "status": "not_applicable_with_reason",
+      "reason": "F86B does not make Task Force review claim and has no required Task Force trigger."
+    }
+  ],
+  "next_run_id": "frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1",
+  "claim_boundary": "design_boundary_completed_no_runtime_materialization_no_authority_no_goal_achieve"
+}

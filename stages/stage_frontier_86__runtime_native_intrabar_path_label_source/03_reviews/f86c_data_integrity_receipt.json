@@ -1,0 +1,21 @@
+{
+  "data_sources_checked": [
+    "MT5 API copy_rates_range M1 samples",
+    "MT5 API copy_ticks_range samples",
+    "raw US100 M5 CSV",
+    "F85B selected readout"
+  ],
+  "integrity_judgment": "usable_as_source_probe_with_boundary",
+  "leakage_checks": [
+    "post-entry tick path is label/source evidence only",
+    "M5 both-hit scout not used as same-decision feature",
+    "no threshold repair or OOS reselection"
+  ],
+  "missing_data_boundary": "Full historical tick/M1 coverage is not registered; F86C only proves sample availability.",
+  "packet_id": "frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1",
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86c_data_integrity_receipt.json",
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "F85B OOS rows are readout/reference only; F86C does not select/tune on OOS.",
+  "status": "executed",
+  "time_axis_boundary": "MT5 API timestamps are recorded as UTC-like Unix seconds; broader timezone/calendar binding remains unresolved until full registration."
+}

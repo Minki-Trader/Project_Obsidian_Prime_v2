@@ -1,0 +1,27 @@
+{
+  "packet_id": "frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1",
+  "skill": "obsidian-data-integrity",
+  "status": "executed",
+  "data_sources_checked": [
+    "F86 stage brief",
+    "workspace_state current truth",
+    "frontier_extra_stage_register",
+    "Task Force agent_05 data-feature review"
+  ],
+  "data_source": "Tick/M1 intrabar path source is required but not yet selected; broker feed, Strategy Tester export, or exported bars/ticks must be fixed in F86B.",
+  "time_axis_boundary": "timestamp_utc remains broker-clock alignment key, not true UTC authority, until time-axis contract audit confirms ordering. F86B must lock tick/M1 order and bar open/close convention.",
+  "sample_scope": "FPMarkets US100 M5; concrete date range, tiers, row counts, and exclusions are pending F86B data source lock.",
+  "missing_or_duplicate_check": "Pending F86B tick/M1 coverage, duplicate timestamp, gap policy, and Tier A/B/combined status checks.",
+  "feature_label_boundary": "first-touch/both-hit order, post-entry excursion, and runtime close result are label-only/diagnostic-only until leakage audit; they cannot enter features.",
+  "split_boundary": "pre-registered train/validation/OOS or WFO split required before selection. OOS locked readout cannot feed tuning.",
+  "leakage_checks": [
+    "feature timestamp must be <= entry decision timestamp",
+    "no post-entry path or realized runtime result in features",
+    "no OOS reselection",
+    "no F85 ex-post runtime label as direct filter"
+  ],
+  "leakage_risk": "Highest risk is intrabar first-touch/both-hit order leaking post-entry path into pre-entry features.",
+  "data_hash_or_identity": "pending_f86b_source_identity_lock",
+  "missing_data_boundary": "Missing tick/M1 identity is not invalid for F86A design, but blocks proxy/runtime claims until resolved.",
+  "integrity_judgment": "usable_with_boundary_for_design_only"
+}

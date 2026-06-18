@@ -1,0 +1,54 @@
+{
+  "allowed_claims": [
+    "source_sample_exported",
+    "surrogate_ambiguity_scout_recorded",
+    "negative_memory_materiality_recorded"
+  ],
+  "evidence_boundary": "scout-only",
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "runtime_probe_completed",
+    "mt5_verification_complete",
+    "runtime_economics",
+    "materialization_ready",
+    "handoff_complete",
+    "first_touch_order_authority",
+    "full_tick_m1_history_registered"
+  ],
+  "judgment_class": "inconclusive",
+  "ledger_rows": [
+    "docs/registers/run_registry.csv::frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/stage_run_ledger.csv::frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1"
+  ],
+  "management_state": "run_manifest/kpi_record/summary/result_summary created",
+  "measurement_scope": "structural_scout_only",
+  "missing_evidence": [
+    "Strategy Tester report/trade list/telemetry not in scope",
+    "full historical tick/M1 registration not closed"
+  ],
+  "packet_id": "frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1",
+  "parity_level": "P0_unverified",
+  "produced_artifacts": [
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/run_manifest.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/kpi_record.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/summary.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/02_runs/frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1/reports/result_summary.md",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86c_execution_summary.json"
+  ],
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86c_run_evidence_receipt.json",
+  "scoreboard": "structural_scout",
+  "skill": "obsidian-run-evidence-system",
+  "source_inputs": [
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_selected_firewall_row_readout.csv"
+  ],
+  "status": "executed",
+  "wfo_status": "not_applicable"
+}

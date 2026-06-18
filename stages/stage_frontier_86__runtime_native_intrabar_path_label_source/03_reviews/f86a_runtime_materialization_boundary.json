@@ -1,0 +1,23 @@
+{
+  "packet_id": "frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1",
+  "audit_name": "runtime_materialization_boundary",
+  "status": "pass_design_only_no_runtime_claim",
+  "runtime_preconditions": [
+    "leakage-safe feature schema",
+    "rule/model artifact hash",
+    "EA/ONNX input-output schema",
+    "tester .set or .ini",
+    "symbol/timeframe contract",
+    "MT5 Strategy Tester identity and output hashes before any runtime/economics claim"
+  ],
+  "cannot_count_as_runtime_evidence": [
+    "Python proxy score",
+    "design document",
+    "compile pass",
+    "ONNX file existence",
+    "hash record without tester output",
+    "KPI without Strategy Tester report/trade-list/telemetry"
+  ],
+  "future_runtime_probe_trigger": "Open runtime_probe profile only after candidate, feature order, EA/ONNX/set contract, and tester execution path are ready for narrow MT5 Strategy Tester observation.",
+  "claim_boundary": "runtime_precondition_definition_only_no_runtime_verified_no_materialization_ready_no_goal_achieve"
+}

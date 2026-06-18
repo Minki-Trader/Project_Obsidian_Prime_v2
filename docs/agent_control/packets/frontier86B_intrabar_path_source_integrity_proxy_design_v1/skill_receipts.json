@@ -1,0 +1,151 @@
+{
+  "packet_id": "frontier86B_intrabar_path_source_integrity_proxy_design_v1",
+  "receipts": [
+    {
+      "packet_id": "frontier86B_intrabar_path_source_integrity_proxy_design_v1",
+      "skill": "obsidian-experiment-design",
+      "status": "executed",
+      "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86b_experiment_design_receipt.json",
+      "hypothesis": "Tick/M1 intrabar path source can explain F85 path contradiction better than scalar firewall repair.",
+      "baseline": "F85B negative proxy scout; no inherited baseline or authority.",
+      "decision_use": "Route F86C to source export/register or surrogate-only M5 ambiguity scout.",
+      "comparison_baseline": "F85B negative proxy scout with no materialization-ready candidate.",
+      "changed_variables": [
+        "source representation",
+        "label source",
+        "intrabar ambiguity handling"
+      ],
+      "invalid_conditions": [
+        "M5 OHLC first-touch order authority claim",
+        "OOS reselection",
+        "runtime claim without MT5 output"
+      ],
+      "evidence_plan": [
+        "f86b_source_inventory.json",
+        "f86b_intrabar_path_problem_statement.json"
+      ]
+    },
+    {
+      "packet_id": "frontier86B_intrabar_path_source_integrity_proxy_design_v1",
+      "skill": "obsidian-data-integrity",
+      "status": "executed",
+      "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86b_data_integrity_receipt.json",
+      "data_source": "raw US100 M5, training/model-input parquet, F85 selected readout; tick/M1 payload not registered",
+      "data_sources_checked": [
+        "raw_us100_m5_mt5api",
+        "training_fwd12_proxyw58",
+        "model_input_feature_set_v2_proxy58",
+        "real_ticks_us100_folder",
+        "f85b_selected_firewall_row_readout"
+      ],
+      "time_axis": "raw broker-clock alignment key with unresolved timezone status until mapped",
+      "time_axis_boundary": "Raw M5 timezone_status is UNRESOLVED_REQUIRES_MANUAL_BINDING and must follow project time-axis policy before session claims.",
+      "sample_scope": "261345 raw M5 rows, 46650 model rows, 4127 F85 selected readout rows",
+      "feature_label_boundary": "post-entry path/order/outcome is label-only and forbidden as same-decision feature",
+      "split_boundary": "Train/validation/OOS are time-ordered; OOS remains locked readout only.",
+      "leakage_checks": [
+        "post-entry path not used as same-decision feature",
+        "OOS not used for selection",
+        "M5 both-hit surrogate not treated as order authority"
+      ],
+      "missing_data_boundary": "No tick/M1 payload is registered for authoritative first-touch order.",
+      "integrity_judgment": "usable_with_boundary"
+    },
+    {
+      "packet_id": "frontier86B_intrabar_path_source_integrity_proxy_design_v1",
+      "skill": "obsidian-model-validation",
+      "status": "executed",
+      "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86b_model_validation_receipt.json",
+      "model_family": "none_selected_design_only",
+      "model_or_threshold_surface": "No model or threshold selected; source/label boundary only.",
+      "target_and_label": "future intrabar first-touch/both-hit order label pending tick/M1 source",
+      "split_method": "time-ordered train/validation/OOS with OOS locked readout",
+      "validation_split": "validation can be used only after predeclared source/materiality metric; OOS locked readout only.",
+      "selection_metric": "not selected yet",
+      "overfit_checks": [
+        "no OOS reselection",
+        "no threshold-only F85 repair",
+        "no surrogate score as calibrated probability"
+      ],
+      "selection_metric_boundary": "Future metric must separate source materiality from performance KPIs.",
+      "allowed_claims": [
+        "model_validation_risk_boundary_recorded"
+      ],
+      "forbidden_claims": [
+        "model_selected",
+        "threshold_selected",
+        "runtime_verified",
+        "runtime_authority",
+        "goal_achieve"
+      ],
+      "validation_judgment": "exploratory_design_with_boundary"
+    },
+    {
+      "packet_id": "frontier86B_intrabar_path_source_integrity_proxy_design_v1",
+      "skill": "obsidian-artifact-lineage",
+      "status": "executed",
+      "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86b_artifact_lineage_receipt.json",
+      "source_inputs": [
+        "raw US100 M5 csv",
+        "training/model-input parquet",
+        "F85B selected readout"
+      ],
+      "producer": "Codex local inventory and design pass",
+      "consumer": "frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1",
+      "produced_artifacts": [
+        "F86B work packet",
+        "F86B source inventory",
+        "F86B intrabar path problem statement"
+      ],
+      "raw_evidence": [
+        "raw US100 M5 csv",
+        "training/model-input parquet",
+        "F85B selected readout"
+      ],
+      "machine_readable": [
+        "f86b_source_inventory.json",
+        "f86b_intrabar_path_problem_statement.json",
+        "skill_receipts.json"
+      ],
+      "human_readable": [
+        "stage_brief.md",
+        "selection_status.md",
+        "current_working_state.md"
+      ],
+      "hashes_or_missing_reasons": [
+        "raw_us100_m5_sha256=2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+        "training_model_input_sha256=c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+        "tick_m1_payload_missing"
+      ],
+      "availability": "tracked_design_artifacts_with_local_ignored_raw_data",
+      "lineage_judgment": "connected_with_boundary",
+      "lineage_boundary": "connected_for_design_only_no_runtime_bundle_identity"
+    },
+    {
+      "packet_id": "frontier86B_intrabar_path_source_integrity_proxy_design_v1",
+      "skill": "obsidian-claim-discipline",
+      "status": "executed",
+      "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86b_claim_discipline_receipt.json",
+      "requested_claims": [
+        "source inventory recorded",
+        "leakage-safe proxy design prepared",
+        "next source probe boundary defined"
+      ],
+      "allowed_claims": [
+        "source_inventory_recorded",
+        "leakage_safe_proxy_design_prepared",
+        "next_source_probe_boundary_defined"
+      ],
+      "forbidden_claims": [
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "runtime_verified",
+        "materialization_ready",
+        "first_touch_order_authority"
+      ],
+      "final_status": "design_completed_with_source_gap_boundary_no_authority"
+    }
+  ],
+  "claim_boundary": "f86b_design_only_no_runtime_or_economics_claim"
+}

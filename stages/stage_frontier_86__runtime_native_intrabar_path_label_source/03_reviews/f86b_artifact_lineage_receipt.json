@@ -1,0 +1,34 @@
+{
+  "run_id": "frontier86B_intrabar_path_source_integrity_proxy_design_v1",
+  "skill": "obsidian-artifact-lineage",
+  "status": "executed",
+  "source_inputs": [
+    "docs/workspace/workspace_state.yaml",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/00_spec/stage_brief.md",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "data/processed/training_datasets/label_v1_fwd12_split_v1_proxyw58/training_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85b_selected_firewall_row_readout.csv"
+  ],
+  "producer": "Codex local inventory and design pass",
+  "consumer": "frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1",
+  "artifact_paths": [
+    "docs/agent_control/packets/frontier86B_intrabar_path_source_integrity_proxy_design_v1/work_packet.yaml",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86b_source_inventory.json",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86b_intrabar_path_problem_statement.json"
+  ],
+  "artifact_hashes": {
+    "raw_us100_m5_csv": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+    "raw_us100_m5_manifest": "86a772a2b73dc2d7684f37ba41243596bad54749ef1461db17c6957600787cde",
+    "training_model_input_parquet": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "f85b_selected_firewall_row_readout": "f62d31027c6cde4487e33bae65dce8c0384391adc2aea743b2d9a44e6ca61afa"
+  },
+  "registry_links": [
+    "docs/workspace/workspace_state.yaml",
+    "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/review_index.md"
+  ],
+  "availability": "tracked_design_artifacts_with_local_ignored_raw_data",
+  "lineage_judgment": "connected_with_boundary",
+  "boundary": "Raw/parquet files are local ignored data and must be addressed by manifest/hash rather than assumed git-tracked availability.",
+  "claim_boundary": "lineage_connected_for_design_only_no_runtime_bundle_identity"
+}

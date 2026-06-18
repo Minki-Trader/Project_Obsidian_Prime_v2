@@ -1,0 +1,73 @@
+{
+  "run_id": "frontier86B_intrabar_path_source_integrity_proxy_design_v1",
+  "stage_id": "stage_frontier_86__runtime_native_intrabar_path_label_source",
+  "created_at_utc": "2026-06-18T18:00:41Z",
+  "hypothesis": "Runtime-native intrabar path source(런타임 네이티브 봉내 경로 원천), especially tick/M1 first-touch order(틱/1분봉 첫 터치 순서), can explain proxy/runtime contradiction better than F85 scalar firewall(스칼라 방화벽).",
+  "problem_evidence": {
+    "f85b_selected_rows": 4127,
+    "f85b_both_hit_surrogate_rows": 1871,
+    "f85b_proxy_win_runtime_loss_rows": 1355,
+    "f85b_proxy_loss_runtime_win_rows": 639,
+    "f85b_best_candidate_reversal_reduction": 0.0,
+    "f85b_materialization_ready": false
+  },
+  "source_boundary": {
+    "m5_ohlc_available": true,
+    "m5_ohlc_can_identify": [
+      "bar high/low crossed both candidate stop/take levels",
+      "bar range, spread_points, tick_volume, and coarse ambiguity pressure",
+      "surrogate-only first-touch risk buckets"
+    ],
+    "m5_ohlc_cannot_identify": [
+      "whether high or low occurred first inside the M5 bar",
+      "tick-level bid/ask path after spread/liquidity changes",
+      "authoritative first-touch order for both-hit bars"
+    ],
+    "tick_m1_payload_available": false,
+    "authoritative_intrabar_order_status": "blocked_until_tick_or_m1_source_registered"
+  },
+  "leakage_safe_design": {
+    "feature_side_allowed": [
+      "pre-entry closed-bar M5 features",
+      "entry-known spread_points/tick_volume/range context",
+      "M5 ambiguity pressure computed before simulated trade outcome",
+      "session/time features from verified event time mapper"
+    ],
+    "label_side_allowed": [
+      "future first-touch order if tick/M1 source exists",
+      "both-hit ambiguity label from future path, label-only",
+      "runtime outcome labels from tester/trade-list, label-only"
+    ],
+    "forbidden_feature_inputs": [
+      "post-entry high/low after entry when used as feature for the same decision",
+      "future first-touch order",
+      "realized PnL",
+      "runtime winner/loser flag",
+      "OOS selection rank"
+    ],
+    "split_policy": "Train/validation/OOS remain time-ordered. OOS is locked readout only and cannot select alternate thresholds or candidates."
+  },
+  "candidate_next_runs": [
+    {
+      "run_id": "frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1",
+      "preferred_path": true,
+      "action": "Try to export/register US100 tick or M1 source; if unavailable, run M5 OHLC ambiguity scout with surrogate-only claim boundary.",
+      "required_profile": "targeted_local_execution or proxy_scout",
+      "runtime_claim_allowed": false
+    },
+    {
+      "run_id": "frontier86C_tick_m1_first_touch_label_materializer_v1",
+      "preferred_path": false,
+      "open_condition": "US100 tick/M1 payload exists with source identity and time-axis contract.",
+      "required_profile": "experiment_run",
+      "runtime_claim_allowed": false
+    }
+  ],
+  "stop_conditions": [
+    "Stop source-export path if no tick/M1 payload can be produced or registered in the packet; record blocker and run M5 ambiguity scout only as surrogate.",
+    "Stop M5 ambiguity scout before any first-touch order authority claim.",
+    "Do not proceed to MT5 runtime probe until a meaningful candidate, feature/order contract, and artifact identity exist."
+  ],
+  "judgment": "design_prepared_with_source_gap_boundary",
+  "claim_boundary": "no_runtime_evidence_no_materialization_ready_no_first_touch_order_authority_no_goal_achieve"
+}

@@ -1,0 +1,39 @@
+{
+  "packet_id": "frontier86A_stage_open_runtime_native_intrabar_path_label_source_v1",
+  "skill": "obsidian-model-validation",
+  "status": "executed",
+  "model_or_threshold_surface": "No model or threshold is selected in F86A. Future surfaces must treat scores as rank-only unless calibration evidence supports probability language.",
+  "model_family": "pending_f86b_design",
+  "target_and_label": "runtime-native intrabar path label source; first-touch/both-hit order label-only until leakage audit",
+  "validation_split": "pre-registered split required before selection; validation-only selection and locked OOS readout",
+  "split_method": "pending_f86b_pre_registration",
+  "selection_metric_boundary": "Future selection metric must state what it optimizes and what it may harm; no single PF/DD or OOS-only selection.",
+  "selection_metric": "pending",
+  "secondary_metrics": [
+    "trade density",
+    "drawdown",
+    "reversal risk",
+    "false veto of runtime winners",
+    "long/short and regime split"
+  ],
+  "threshold_policy": "No threshold search in F86A; future threshold policy must be fixed/searched/calibrated with train/validation scope only.",
+  "overfit_checks": [
+    "block threshold/filter-only repetition",
+    "block single-split PF/DD overclaim",
+    "block OOS reuse for tuning",
+    "block runtime claim without MT5 evidence"
+  ],
+  "calibration_risk": "Scores are rank-only unless calibration evidence is generated.",
+  "comparison_baseline": "F85 negative/no authority reference only; no inherited selected baseline.",
+  "validation_judgment": "exploratory_design_only",
+  "allowed_claims": [
+    "model_validation_risk_boundary_recorded"
+  ],
+  "forbidden_claims": [
+    "model_selected",
+    "threshold_selected",
+    "runtime_verified",
+    "runtime_authority",
+    "goal_achieve"
+  ]
+}

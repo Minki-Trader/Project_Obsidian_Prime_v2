@@ -1,0 +1,57 @@
+{
+  "allowed_claims": [
+    "mt5_api_source_sample_exported"
+  ],
+  "compared_surface": "MT5 API source export identity versus runtime claim boundary",
+  "forbidden_claims": [
+    "runtime_verified",
+    "runtime_probe_completed",
+    "runtime_authority",
+    "goal_achieve",
+    "first_touch_order_authority"
+  ],
+  "missing_evidence": [
+    "EA source/binary hash",
+    "ONNX hash",
+    "set/ini hash",
+    "Strategy Tester report",
+    "trade list",
+    "telemetry"
+  ],
+  "packet_id": "frontier86C_intrabar_source_export_or_m5_ambiguity_scout_v1",
+  "parity_level": "P0_unverified",
+  "python_artifact": "stage_pipelines/stage_frontier_86/frontier86c_intrabar_source_probe.py",
+  "receipt_path": "stages/stage_frontier_86__runtime_native_intrabar_path_label_source/03_reviews/f86c_runtime_parity_receipt.json",
+  "runtime_artifact": "not_applicable_no_EA_ONNX_Strategy_Tester_artifact",
+  "runtime_claim_boundary": "source_probe_only_not_runtime_probe",
+  "skill": "obsidian-runtime-parity",
+  "status": "executed",
+  "tester_identity": {
+    "status": "not_applicable_no_strategy_tester",
+    "symbol_info": {
+      "currency_base": "USD",
+      "currency_profit": "USD",
+      "description": "US Tech 100 Index Cash",
+      "digits": 2,
+      "name": "US100",
+      "path": "Indices\\US100",
+      "point": 0.01,
+      "select": true,
+      "spread": 60,
+      "trade_contract_size": 1.0,
+      "trade_mode": 4,
+      "visible": true
+    },
+    "terminal_info": {
+      "build": 5833,
+      "company": "MetaQuotes Ltd.",
+      "connected": true,
+      "data_path": "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075",
+      "dlls_allowed": false,
+      "maxbars": 100000000,
+      "name": "MetaTrader 5",
+      "path": "C:\\Program Files\\MetaTrader 5",
+      "trade_allowed": true
+    }
+  }
+}
