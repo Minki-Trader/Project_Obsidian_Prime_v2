@@ -1,4 +1,11 @@
-﻿# 2026-06-18 - F85A Stage Open(F85A 단계 개방)
+﻿# 2026-06-18 - F85B Proxy Scout(F85B 프록시 탐색)
+
+- Action(행동): `frontier85B_leakage_safe_runtime_path_firewall_proxy_scout_v1`로 leakage-safe runtime path firewall proxy scout(누수 안전 런타임 경로 방화벽 프록시 탐색)를 실행했다.
+- Effect(효과): Task Force(태스크포스) 8/8 실제 호출, feature guard(피처 가드), validation-only selection(검증 전용 선택), OOS locked readout(표본외 잠금 판독)을 기록했다.
+- Next(다음): `frontier85C_runtime_path_firewall_repair_or_rotation_decision_v1`.
+- Boundary(경계): `proxy_scout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+# 2026-06-18 - F85A Stage Open(F85A 단계 개방)
 
 - Action(행동): `frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1`로 F85 leakage-safe runtime path firewall label(누수 안전 런타임 경로 방화벽 라벨) 설계를 열었다.
 - Effect(효과): F85B proxy scout(F85B 프록시 탐색)를 다음 실행으로 두고, F84 부정 기억은 참조 전용으로 고정했다.

@@ -1465,3 +1465,6 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Salvage value(회수 가치): F85 runtime path contradiction firewall label seed(F85 런타임 경로 모순 방화벽 라벨 씨앗).
 - Reopen condition(재개 조건): leakage-safe pre-entry surrogate(누수 안전 진입 전 대체 신호), WFO-aware split(워크포워드 인식 분할), and MT5 materialization(MT5 물질화)이 포함될 때만 재개.
 - Boundary(경계): `stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+<!-- frontier85B_leakage_safe_runtime_path_firewall_proxy_scout_v1 -->
+- `frontier85B_leakage_safe_runtime_path_firewall_proxy_scout_v1` did not produce a materialization-ready locked-OOS candidate(잠금 표본외 기준 물질화 준비 후보 없음). Next(다음): `frontier85C_runtime_path_firewall_repair_or_rotation_decision_v1`. Boundary(경계): `proxy_scout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
