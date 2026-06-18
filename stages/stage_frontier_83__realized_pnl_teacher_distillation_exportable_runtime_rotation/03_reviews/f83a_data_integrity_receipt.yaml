@@ -1,0 +1,13 @@
+﻿packet_id: frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1
+skill: obsidian-data-integrity
+status: usable_with_boundary
+data_source:
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82G_mt5_realized_label_rebuild_v1/f82g_mt5_realized_label_dataset.csv
+  - stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82C_mt5_runtime_materialization_v1/features/f82c_runtime_f82b_07295_features.csv
+time_axis: F82C/F82F entry open_time matched to closed-bar feature timestamp(F82C/F82F 진입 시간이 닫힌 봉 피처 시간과 매칭됨)
+sample_scope: validation 1962; oos 1338; train labels unavailable by design(학습 라벨은 설계상 없음)
+missing_or_duplicate_check: matched rows 3300; unmatched inherited from F82G 1
+feature_label_boundary: entry-known features vs post-trade realized PnL teacher(진입시점 피처 대 거래 후 실현 손익 교사)
+split_boundary: train_on_validation_teacher_eval_on_oos(검증 교사로 학습하고 표본외 평가)
+leakage_risk: teacher selection and threshold use validation realized outcomes(교사 선택과 임계값은 검증 실현 결과를 사용)
+integrity_judgment: usable_with_boundary(경계 내 사용 가능)

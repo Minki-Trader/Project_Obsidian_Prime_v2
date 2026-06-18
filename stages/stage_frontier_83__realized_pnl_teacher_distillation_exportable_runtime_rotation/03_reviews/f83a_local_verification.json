@@ -1,0 +1,38 @@
+﻿{
+  "run_id": "frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1",
+  "stage_id": "stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation",
+  "created_at_utc": "2026-06-18T07:22:10Z",
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "source_files_exist",
+      "passed": true,
+      "effect": "F83A did not start from stale memory(F83A가 낡은 기억에서 시작하지 않음)."
+    },
+    {
+      "check": "teacher_rows_positive",
+      "passed": true,
+      "effect": "Teacher train/eval rows exist(교사 학습/평가 행이 있음)."
+    },
+    {
+      "check": "onnx_parity_passed",
+      "passed": true,
+      "effect": "Exported ONNX models match Python sample outputs(내보낸 온엑스 모델이 파이썬 표본 출력과 일치)."
+    },
+    {
+      "check": "positive_seed_found",
+      "passed": true,
+      "effect": "F83A produced a meaningful seed(F83A가 의미 있는 씨앗을 생성)."
+    },
+    {
+      "check": "task_force_receipt_written",
+      "passed": true,
+      "effect": "Task Force review is materialized(태스크포스 검토가 물질화됨)."
+    },
+    {
+      "check": "claim_guard_no_authority",
+      "passed": true,
+      "effect": "No runtime authority claim is made(런타임 권위 주장 없음)."
+    }
+  ]
+}

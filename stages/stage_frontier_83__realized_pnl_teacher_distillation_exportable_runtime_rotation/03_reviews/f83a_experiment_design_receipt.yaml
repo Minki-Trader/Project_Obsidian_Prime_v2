@@ -1,0 +1,12 @@
+﻿packet_id: frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1
+skill: obsidian-experiment-design
+status: passed
+hypothesis: runtime realized PnL teacher labels(런타임 실현 손익 교사 라벨)을 exportable model family(내보내기 가능 모델 계열)에 증류하면 MT5 probe seed(MT5 탐침 씨앗)를 만들 수 있다.
+decision_use: F83B MT5 runtime materialization candidate selection(F83B MT5 런타임 물질화 후보 선택)
+comparison_baseline: F82C unfiltered runtime and F82G nonexportable diagnostic(F82C 무필터 런타임 및 F82G 내보내기 불가 진단)
+control_variables: F82C feature rows, F82F realized PnL rows, validation to OOS split(F82C 피처 행, F82F 실현 손익 행, 검증-표본외 분할)
+changed_variables: exportable sklearn model family and ONNX parity(내보내기 가능 사이킷런 모델 계열 및 온엑스 동등성)
+success_criteria: positive OOS seed with ONNX export/parity(온엑스 내보내기/동등성을 가진 양수 표본외 씨앗)
+failure_criteria: no positive seed or export/parity failure(양수 씨앗 없음 또는 내보내기/동등성 실패)
+invalid_conditions: source mismatch, missing labels, missing feature order(원천 불일치/라벨 누락/피처 순서 누락)
+stop_conditions: create MT5 probe candidate or rotate to two-sided density expansion(MT5 탐침 후보 생성 또는 양방향 밀도 확장으로 회전)

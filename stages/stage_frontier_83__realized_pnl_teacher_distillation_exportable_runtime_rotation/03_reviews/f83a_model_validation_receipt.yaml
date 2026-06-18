@@ -1,0 +1,13 @@
+﻿packet_id: frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1
+skill: obsidian-model-validation
+status: exploratory_exportable_seed
+model_family: sklearn logistic/tree/forest/extra-trees exported to ONNX(사이킷런 로지스틱/트리/포리스트/엑스트라트리 온엑스 내보내기)
+target_and_label: mt5_realized_win_label from executed F82 runtime trades(F82 실행 런타임 거래의 MT5 실현 승패 라벨)
+split_method: validation teacher train, OOS evaluation(검증 교사 학습, 표본외 평가)
+selection_metric: rank_score using OOS net/PF/trade count/DD/density(표본외 순손익/수익 팩터/거래수/손실폭/밀도 점수)
+threshold_policy: validation probability quantiles(검증 확률 분위수)
+overfit_risk: high, due to validation teacher training and threshold sweep(검증 교사 학습과 임계값 탐색 때문에 높음)
+calibration_risk: probabilities are ranking scores until calibrated(보정 전 확률은 순위 점수)
+comparison_baseline: F82C runtime and F82G diagnostic(F82C 런타임 및 F82G 진단)
+validation_judgment: exploratory MT5-probe seed only(탐색적 MT5 탐침 씨앗 전용)
+best_candidate: f83a_0019

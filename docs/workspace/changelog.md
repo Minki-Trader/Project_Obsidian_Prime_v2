@@ -7294,3 +7294,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - effect(효과): signal_count_diff(신호 수 차이) `0` and feature_ready_diff(피처 준비 차이) `0`은 보존하면서, order_fill/trade/deal(주문 체결/거래/딜) `361/259/518`, runtime DD(런타임 손실폭) `30.58`, proxy DD(프록시 손실폭) `4.8117`, swap(스왑) `-14.24`를 같은 runtime probe observation(런타임 탐침 관찰)으로 묶었다.
 - next(다음): F67E gap analysis/repair decision(F67E 간극 분석/수리 결정)에서 accounting parity(회계 동등성), DD repricing(손실폭 재가격화), missing cost identity(누락 비용 정체성)을 분리한다.
 - boundary(경계): F67D는 runtime_probe_observation(런타임 탐침 관찰)이며 completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.
+
+<!-- frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1 -->
+## 2026-06-18 - F83A Teacher Distillation Proxy(F83A 교사 증류 프록시)
+
+- Action(행동): `frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1`로 F83(전선83)을 열고 ONNX-exportable teacher seed(온엑스 내보내기 가능 교사 씨앗)를 만들었다.
+- Effect(효과): best seed(최선 씨앗) `f83a_0019`는 F83B MT5 Strategy Tester probe(F83B MT5 전략 테스터 탐침)로 넘길 수 있지만, runtime authority(런타임 권위)는 아직 없다.

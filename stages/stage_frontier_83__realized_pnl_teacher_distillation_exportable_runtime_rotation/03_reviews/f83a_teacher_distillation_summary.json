@@ -1,0 +1,155 @@
+﻿{
+  "run_id": "frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1",
+  "stage_id": "stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation",
+  "parent_run_id": "frontier82H_capped_repair_closeout_or_f83_rotation_decision_v1",
+  "next_run_id": "frontier83B_mt5_runtime_materialization_exportable_teacher_overlay_v1",
+  "created_at_utc": "2026-06-18T07:22:10Z",
+  "status": "f83a_exportable_teacher_seed_positive_low_density_mt5_probe_required_no_authority",
+  "judgment": "exportable_teacher_distillation_seed_found_but_one_sided_density_gap_requires_mt5_probe_and_two_sided_expansion_no_authority",
+  "claim_boundary": "executed_trade_teacher_proxy_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "label_source": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82G_mt5_realized_label_rebuild_v1/f82g_mt5_realized_label_dataset.csv",
+  "feature_source": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82C_mt5_runtime_materialization_v1/features/f82c_runtime_f82b_07295_features.csv",
+  "feature_order": "stages/stage_frontier_82__density_first_runtime_economic_mechanism_rotation/02_runs/frontier82C_mt5_runtime_materialization_v1/models/f82c_runtime_f82b_07295_feature_order.txt",
+  "feature_count": 28,
+  "feature_order_sha256": "e5a7fd1a050f4a03b9cfbf27967a36116462f6fa0236a5107b606d16dd41ce20",
+  "matched_trade_rows": 3300,
+  "unmatched_trade_rows": 1,
+  "validation_label_rows": 1962,
+  "oos_label_rows": 1338,
+  "validation_win_rate": 0.32772680937818555,
+  "oos_win_rate": 0.36771300448430494,
+  "candidate_count": 40,
+  "positive_seed_count": 6,
+  "mt5_probe_candidate_count": 2,
+  "final_like_reference_count": 0,
+  "best_candidate": {
+    "candidate_id": "f83a_0019",
+    "model": "decision_tree_d4_balanced",
+    "threshold_source": "validation_probability_quantile_0.9",
+    "prob_threshold": 0.6326362193616636,
+    "export_status": "onnx_exported_and_runtime_checked",
+    "onnx_path": "stages/stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation/02_runs/frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1/models/decision_tree_d4_balanced.onnx",
+    "onnx_sha256": "dbcc0bded6916c06a5330ff4ce62f1ae79790265f76e1ce229c20a47d80723cd",
+    "onnx_probability_max_abs_diff": 2.970373558230932e-08,
+    "oos_auc": 0.5062561263910511,
+    "oos_average_precision": 0.378530288300736,
+    "train_label_source": "validation_mt5_realized_trade_pnl_teacher(검증 MT5 실현 거래 손익 교사)",
+    "validation_trade_count": 256,
+    "validation_trades_per_day": 0.9552238805970149,
+    "validation_net_profit": 79.97,
+    "validation_profit_factor": 1.6432593307593308,
+    "validation_drawdown_percent": 1.737035381895195,
+    "validation_win_rate": 0.5078125,
+    "validation_avg_win": 1.5714615384615387,
+    "validation_avg_loss": -0.9866666666666667,
+    "validation_payoff_ratio": 1.5926975051975054,
+    "validation_expectancy": 0.3123828125,
+    "validation_time_under_water_trades": 184,
+    "validation_max_consecutive_loss": 6,
+    "oos_trade_count": 137,
+    "oos_trades_per_day": 0.7098445595854922,
+    "oos_net_profit": 24.019999999999996,
+    "oos_profit_factor": 1.3314932376483577,
+    "oos_drawdown_percent": 2.043823928640711,
+    "oos_win_rate": 0.45255474452554745,
+    "oos_avg_win": 1.5561290322580643,
+    "oos_avg_loss": -0.9661333333333333,
+    "oos_payoff_ratio": 1.6106773036068842,
+    "oos_expectancy": 0.17532846715328465,
+    "oos_time_under_water_trades": 113,
+    "oos_max_consecutive_loss": 10,
+    "long_short_breakdown": "validation_long=256;validation_short=0;oos_long=137;oos_short=0",
+    "positive_exportable_teacher_seed": true,
+    "mt5_probe_candidate": true,
+    "final_like_reference": false,
+    "two_sided_status": "not_satisfied_source_runtime_trades_are_long_only(원천 런타임 거래가 롱 전용이라 미충족)",
+    "rank_score": 24630.113509110466,
+    "created_at_utc": "2026-06-18T07:22:10Z"
+  },
+  "two_sided_status": "not_satisfied_source_runtime_trades_are_long_only(원천 런타임 거래가 롱 전용이라 미충족)",
+  "period_days": {
+    "oos": 193,
+    "validation": 268
+  },
+  "onnx_parity_rows": [
+    {
+      "model": "logreg_l2_balanced",
+      "onnx_path": "stages/stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation/02_runs/frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1/models/logreg_l2_balanced.onnx",
+      "onnx_sha256": "96229987e64f5035bfc74eff41065898505bfc9fda96964b7c194f9ea3430de9",
+      "onnx_input_count": 28,
+      "onnx_output_names": [
+        "label",
+        "probabilities"
+      ],
+      "onnx_parity_sample_rows": 512,
+      "onnx_probability_max_abs_diff": 6.781569772407181e-08,
+      "onnx_parity_passed": true
+    },
+    {
+      "model": "decision_tree_d4_balanced",
+      "onnx_path": "stages/stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation/02_runs/frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1/models/decision_tree_d4_balanced.onnx",
+      "onnx_sha256": "dbcc0bded6916c06a5330ff4ce62f1ae79790265f76e1ce229c20a47d80723cd",
+      "onnx_input_count": 28,
+      "onnx_output_names": [
+        "label",
+        "probabilities"
+      ],
+      "onnx_parity_sample_rows": 512,
+      "onnx_probability_max_abs_diff": 2.970373558230932e-08,
+      "onnx_parity_passed": true
+    },
+    {
+      "model": "random_forest_d5_balanced",
+      "onnx_path": "stages/stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation/02_runs/frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1/models/random_forest_d5_balanced.onnx",
+      "onnx_sha256": "b660f0b77963cf5608c22ca5db2ffe0d8aa64962971ecb18a2146d123d15a1c0",
+      "onnx_input_count": 28,
+      "onnx_output_names": [
+        "label",
+        "probabilities"
+      ],
+      "onnx_parity_sample_rows": 512,
+      "onnx_probability_max_abs_diff": 1.5699832778270917e-07,
+      "onnx_parity_passed": true
+    },
+    {
+      "model": "extra_trees_d5_balanced",
+      "onnx_path": "stages/stage_frontier_83__realized_pnl_teacher_distillation_exportable_runtime_rotation/02_runs/frontier83A_stage_open_realized_pnl_teacher_distillation_exportable_runtime_rotation_v1/models/extra_trees_d5_balanced.onnx",
+      "onnx_sha256": "409f62f93c5eec9978e809b9dea7cd0d7968bcb1d0078beb5586d6ad0b19d97d",
+      "onnx_input_count": 28,
+      "onnx_output_names": [
+        "label",
+        "probabilities"
+      ],
+      "onnx_parity_sample_rows": 512,
+      "onnx_probability_max_abs_diff": 1.712817072618833e-07,
+      "onnx_parity_passed": true
+    }
+  ],
+  "source_summaries": {
+    "f82f": {
+      "trade_row_count": 3301,
+      "deal_row_count": 6602,
+      "all_reconciled": true
+    },
+    "f82g": {
+      "matched_trade_rows": 3300,
+      "materialization_candidate_count": 0,
+      "positive_low_density_seed_count": 8
+    },
+    "f82h": {
+      "status": "closed_negative_runtime_economics_gap_positive_seed_no_materialization_no_authority",
+      "judgment": "negative_memory_with_preserved_realized_label_seed_and_f83_teacher_distillation_rotation_no_authority"
+    }
+  },
+  "next_condition": "Run MT5 Strategy Tester with the best exported teacher overlay before runtime claims(F83B에서 최선 내보내기 교사 덧씌움을 MT5 전략 테스터로 실행해야 함)",
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "Goal Achieve"
+  ],
+  "producer": "stage_pipelines/stage_frontier_83/frontier83a_stage_open_teacher_distillation_proxy.py",
+  "producer_sha256": "4a3329081ffd5b58901300edc58155d635841b5dc7fa4cd5107d303fdd463e27"
+}
