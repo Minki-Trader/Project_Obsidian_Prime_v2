@@ -13,9 +13,18 @@ routing_contract:
   stage_agnostic_rule: "Work families are reusable for Stage 5 through future frontier work; never create a family just for one stage number."
   skills_to_read_rule: "Read the primary skill first. Add support skill files only when they materially change execution, verification, or closeout evidence; record one-line justification for each support skill."
   task_force_review_rule: "Codex Task Force review(코덱스 태스크포스 검토) is active for Grok replacement/deactivation(그록 대체/비활성), agent roster(요원 명단), skill routing(스킬 라우팅), policy governance(정책 거버넌스), and Frontier80 rehearsal work(F80 리허설 작업)."
+  task_force_actual_call_rule: "When Codex Task Force review(코덱스 태스크포스 검토) is triggered, Codex must select only relevant roster agents(관련 명단 요원) and immediately call them with real spawn_agent(서브에이전트 생성 호출) before any Task Force reviewed/reviewed/verified/pass(태스크포스 검토됨/검토됨/검증됨/통과) claim. If Task Force review is required by active goal/packet/gate/family/router-selected required overlay/explicit user instruction/closeout claim(활성 목표/묶음/게이트/작업군/라우터 선택 필수 오버레이/명시 사용자 지시/마감 주장), tool_unavailable/not_called(도구 사용 불가/호출 안 됨) is blocked_for_task_force_review(태스크포스 검토 차단), cannot pass as not_applicable_with_reason(사유 있는 해당 없음), and cannot support reviewed/verified/pass/stage closeout pass/internally_reviewed/rehearsed_control_plane(검토됨/검증됨/통과/단계 마감 통과/내부 검토됨/제어면 리허설됨). Optional checkpoints(선택 점검) may proceed only without any Task Force review claim. Do not call all 8 agents(8명 전원) by default."
+  verification_profile_rule: "Every non-trivial /goal(비사소 목표) packet must select one verification_profile(검증 프로필) before gate selection. The profile is driven by claim_surface(주장 표면), not by anxiety or habit. 효과(effect, 효과)는 /goal(목표)가 전체 검증으로 자동 팽창하지 않고 필요한 검증만 켜지게 하는 것이다."
+  verification_gate_selection_rule: "Required gates are family base gates(작업군 기본 게이트) + active overlay gates(활성 오버레이 게이트) + profile extra gates(프로필 추가 게이트), with duplicate gates deduped(중복 제거). A profile may add gates or mark out-of-scope gates N/A with structured reason(구조화 사유 있는 해당 없음), but may never remove or relax gates needed for a protected claim(보호 주장)."
+  verification_trigger_source_rule: "Every verification action(검증 행동) must name a trigger source(트리거 원천): registry gate(등록부 게이트), overlay gate(오버레이 게이트), acceptance criterion(수용 기준), risk hard-stop(위험 중단), claim surface(주장 표면), or explicit user scope(명시 사용자 범위). No trigger source means no verification."
+  governance_evidence_balance_rule: "Use the lightest routing that preserves the claim(주장을 지키는 가장 가벼운 라우팅) and the strongest evidence required by that claim(그 주장에 필요한 가장 강한 근거). This rule creates no new gate, overlay, family, skill, agent call, or review pass(새 게이트/오버레이/작업군/스킬/요원 호출/검토 회차를 만들지 않는다)."
+  active_verification_over_procedure_rule: "When a protected claim(보호 주장) can be tested by a narrow sufficient run(좁고 충분한 실행), prefer active verification(능동 검증) over procedural expansion/advisory loops/deferred checkpoints(절차 확장/자문 반복/지연 점검)."
+  runtime_probe_reluctance_rule: "Runtime/materialization/handoff/economics claims(런타임/물질화/인계/경제성 주장) cannot defer runtime_probe(런타임 탐침) because it is costly or expensive. Try the narrow sufficient probe in the same packet(같은 묶음) or lower the claim boundary(주장 경계) to blocked/inconclusive/out_of_scope_by_claim(차단/불충분/주장 범위 밖) after a recovery attempt."
   grok_small_review_rule: "Grok review(그록 검토) is retired/archive-only(퇴역/보관 전용) and never creates a new call, receipt, gate, or external review path."
   five_stage_retrospective_due_rule: "Five-stage Grok retrospective(5단계 그록 회고) is retired/archive-only; preserve records and do not block future frontier stages."
   frontier_extra_stage_due_rule: "Before opening the next frontier stage or continuing a broad ONNX goal(넓은 ONNX 목표), run frontier_extra_stage_due_check(전선 추가 단계 도래 점검). If due, open and close E01/E02/E03 before the resume frontier."
+  frontier_extra_progressive_mix_depth_rule: "When an Extra Stage(추가 단계) is due for a broad ONNX goal(넓은 ONNX 목표), use progressive mix depth(점증 혼합 깊이): 2-mix -> 3-mix -> 4-mix(2개 혼합 -> 3개 혼합 -> 4개 혼합). Do not run exhaustive 50! mix search(50! 전체 혼합 탐색 금지). A later depth(다음 깊이) opens only after diversity/risk/reproducibility/materialization gates(다양성/위험/재현성/물질화 게이트) pass."
+  frontier_topic_rotation_rule: "Before opening a canonical frontier stage(정식 전선 단계), run frontier_topic_rotation_check(전선 주제 회전 점검). It compares the proposed question with the immediate prior stage and latest five closed canonical frontier stages, closes repair disposition(수리 처분) inside the active stage, and blocks continuation repair/near-duplicate hypothesis/threshold-filter-session-routing-parameter-only tweak/renamed repair(연속 수리/근접 중복 가설/임계값-필터-세션-라우팅-파라미터만 미세조정/이름만 바꾼 수리) as a new frontier open."
   common_final_filter:
     - obsidian-answer-clarity
     - obsidian-claim-discipline
@@ -24,6 +33,107 @@ routing_contract:
     default_mode: plan_only
     closeout_audit: self_correction_plan
     rule: "Failed gates are classified into a repair plan before any completion claim is repeated; automatic mutation may not relax gates, thresholds, tests, or claim boundaries."
+verification_profiles:
+  source_of_truth: docs/agent_control/work_family_registry.yaml
+  purpose: "Make /goal(목표) verification claim-driven(주장 기반) and scope-bound(범위 제한) instead of arbitrary or full-stack by default; keep governance lightweight(운영은 가볍게) while preserving heavyweight evidence(무거운 근거)."
+  governance_weight_rule: "Do not create a new gate, overlay, family, skill, agent call, or review pass(새 게이트/오버레이/작업군/스킬/요원 호출/검토 회차) solely because this balance rule exists."
+  runtime_probe_reluctance_rule: "If runtime/materialization/handoff/economics claim(런타임/물질화/인계/경제성 주장) is protected, runtime_probe(런타임 탐침) is a required active verification path(능동 검증 경로) unless the packet lowers the claim boundary(주장 경계) after a recovery attempt."
+  required_packet_fields:
+    - profile_id
+    - claim_surface
+    - trigger_sources
+    - protected_claims
+    - required_evidence
+    - gates_not_run_with_reason
+    - stop_conditions
+  gate_selection_formula: "family_required_gates + active_overlay_gates + profile_extra_required_gates, then dedupe(중복 제거)."
+  n_a_reason_required_fields:
+    - gate
+    - reason_code
+    - reason
+    - claim_effect
+  profiles:
+    read_only_minimal:
+      intent: "Narrow status/path/hash/register recount or information-only answer(좁은 상태/경로/해시/등록부 재확인 또는 정보 전용 답변)."
+      extra_required_gates: []
+      allowed_claim_boundary: "No completed/reviewed/verified/runtime/promotion claim(완료/검토/검증/런타임/승격 주장 없음)."
+      default_receipt_mode: compact
+    design_only:
+      intent: "Stage open or experiment design(단계 개방 또는 실험 설계) before execution or model selection."
+      extra_required_gates: []
+      allowed_claim_boundary: "Design prepared(설계 준비됨) only; no runtime, KPI superiority, baseline, or authority claim."
+    static_contract:
+      intent: "Policy, skill, schema, contract, or code static checks(정책/스킬/스키마/계약/코드 정적 점검)."
+      extra_required_gates:
+        - work_packet_schema_lint
+      allowed_claim_boundary: "Static contract updated or checked(정적 계약 갱신/점검) only."
+    targeted_local_execution:
+      intent: "Local tests, scripts, or lint for touched surfaces only(수정 표면에 대한 로컬 테스트/스크립트/린트 한정)."
+      extra_required_gates:
+        - test_gate
+      allowed_claim_boundary: "Local execution result(로컬 실행 결과) only; no runtime or external authority."
+    proxy_scout:
+      intent: "Python/data/model scout(파이썬/데이터/모델 탐색) that can create clues or negative memory."
+      extra_required_gates:
+        - kpi_contract_audit
+      allowed_claim_boundary: "Scout clue/negative memory(탐색 단서/부정 기억) only unless stronger evidence is present."
+    experiment_run:
+      intent: "Training, threshold search, candidate ranking, or material experiment execution(학습/임계값 탐색/후보 순위화/실험 실행)."
+      extra_required_gates:
+        - kpi_contract_audit
+        - required_gate_coverage_audit
+      allowed_claim_boundary: "Experiment result(실험 결과) only; no MT5 runtime authority."
+    runtime_probe:
+      intent: "MT5/ONNX/EA runtime observation or Strategy Tester materialization(MT5/ONNX/EA 런타임 관찰 또는 전략 테스터 물질화), chosen when runtime/materialization/handoff/economics claims(런타임/물질화/인계/경제성 주장) need active verification(능동 검증)."
+      extra_required_gates:
+        - runtime_evidence_gate
+        - kpi_contract_audit
+        - required_gate_coverage_audit
+        - final_claim_guard
+      allowed_claim_boundary: "Runtime probe observation(런타임 탐침 관찰) only; not operating promotion or runtime authority."
+      reluctance_guard: "Do not mark runtime_evidence_gate(런타임 근거 게이트) not_applicable_with_reason(사유 있는 해당 없음) because the probe is costly/expensive(비용이 듦). Attempt the narrow sufficient probe(좁고 충분한 탐침) or lower the claim boundary(주장 경계)."
+    stage_closeout:
+      intent: "Stage transition or closeout(단계 전환 또는 마감)."
+      extra_required_gates:
+        - required_gate_coverage_audit
+        - final_claim_guard
+      allowed_claim_boundary: "Closeout judgment(마감 판정) only unless the protected claim requires stronger evidence."
+    authority_candidate:
+      intent: "Operating promotion, runtime authority, live readiness, or Goal Achieve candidate(운영 승격/런타임 권위/실거래 준비/목표 달성 후보)."
+      extra_required_gates:
+        - runtime_evidence_gate
+        - kpi_contract_audit
+        - required_gate_coverage_audit
+        - final_claim_guard
+      allowed_claim_boundary: "Strong claims only with full matching evidence(일치 근거가 있을 때만 강한 주장)."
+    blocked_pending_decision:
+      intent: "Stop before verification because a decision, tool, artifact, or environment is missing(결정/도구/산출물/환경 누락으로 검증 전 중단)."
+      extra_required_gates: []
+      allowed_claim_boundary: "Blocked or out_of_scope_by_claim(차단 또는 주장 범위 밖) only."
+runtime_evidence_contract:
+  standard_required_fields:
+    - dataset_id
+    - feature_set_id
+    - label_id
+    - split_id
+    - source_identities
+    - parser_contract_version
+    - runtime_contract_version
+    - compile_status
+    - tester_status
+    - runtime_status
+    - report_status
+    - onnx_hash
+    - ea_source_hash
+    - ea_binary_hash
+    - set_ini_hash
+    - feature_order_hash
+    - tester_identity
+    - report_hash
+    - trade_list_hash
+    - telemetry_hash
+  compile_not_runtime_rule: "compile_status(컴파일 상태) alone never satisfies runtime_evidence_gate(런타임 근거 게이트). tester_status/runtime_status/report_status(테스터/런타임/보고서 상태) plus output identity hashes(출력 정체성 해시)가 필요하다."
+  claim_effect: "Missing proof fields(증명 필드 누락)는 runtime/materialization/handoff/economics claim(런타임/물질화/인계/경제성 주장)을 blocked/inconclusive/out_of_scope_by_claim(차단/불충분/주장 범위 밖)으로 낮춘다."
 trigger_overlays:
   codex_task_force_review:
     status: active
@@ -71,8 +181,157 @@ trigger_overlays:
       - artifact_lineage
       - publish_handoff
     activation_rule: "Check docs/registers/frontier_extra_stage_register.yaml plus frontier closeout receipts. F50/F100/F150 due without matching E01/E02/E03 closeout blocks the next frontier open until extra stage closeout."
-    closeout_rule: "If due, create stages/stage_frontier_extra_EXX__... with ingredient cards, mix queue, MT5 runtime learning campaign, closeout, state sync, gate audit, and final claim guard."
+    closeout_rule: "If due, create stages/stage_frontier_extra_EXX__... with ingredient cards, progressive depth-sampled mix queue(점증 깊이 표본 혼합 대기열), MT5 runtime learning campaign, closeout, state sync, gate audit, and final claim guard."
+    closeout_required_audits:
+      - frontier_extra_due_check
+      - frontier_extra_mix_depth_lint
+      - required_gate_coverage_audit
+      - final_claim_guard
+    progressive_mix_depth_contract:
+      status: active_for_e02_and_later
+      claim_boundary: "frontier_extra_depth_sampled_runtime_learning_only_no_exhaustive_mix_no_full_mix_materialization_no_completion_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+      total_mt5_attempt_cap_default: 24
+      total_mt5_attempt_cap_with_invalid_or_block_recovery: 30
+      depth_sequence:
+        - depth_id: "2mix(2개 혼합)"
+          queue_cap: 60
+          materialized_mix_cap: 6
+          mt5_attempt_cap: 12
+          open_gate: "Card digest/axis tags/candidate cap/sample method fixed(카드 요약/축 태그/후보 상한/표본 방식 고정)."
+          close_gate: "Attempt rows for selected mixes and manifest_only_not_tested rows for untested mixes(선정 혼합 시도 행과 미시험 혼합 목록 행)."
+        - depth_id: "3mix(3개 혼합)"
+          queue_cap: 36
+          materialized_mix_cap: 4
+          mt5_attempt_cap: 8
+          open_gate: "Only independent 2-mix clusters with diversity/risk/reproducibility/materialization pass(독립 2개 혼합 군집의 다양성/위험/재현성/물질화 통과) may add one complementary axis(보완 축 하나 추가)."
+          close_gate: "Judge additive/dilutive/blocked versus parent 2-mix(부모 2개 혼합 대비 가산/희석/차단 판정)."
+        - depth_id: "4mix(4개 혼합)"
+          queue_cap: 12
+          materialized_mix_cap: 2
+          mt5_attempt_cap: 4
+          open_gate: "Only 3-mix survivors with demonstrated complementarity(보완성이 드러난 3개 혼합 생존 후보) may open synthesis stress probe(종합 압박 탐침)."
+          close_gate: "Close as runtime learning record/negative memory/reference surface(런타임 학습 기록/부정 기억/참고 표면으로 마감); 5-mix default forbidden(5개 혼합 기본 금지)."
+      selection_lanes:
+        - "PF(수익 팩터)"
+        - "DD resilience(손실폭 회복력)"
+        - "density/materiality(밀도/물질성)"
+        - "runtime materialization(런타임 물질화)"
+        - "negative-memory repair(부정 기억 수리)"
+      selection_lane_limits:
+        top_forward_pf_max_share: 0.25
+        near_duplicate_cluster_limit_per_depth: 1
+      required_ingredient_card_fields:
+        - ingredient_card_id
+        - source_frontier_id
+        - source_run_id
+        - hypothesis
+        - axis_tags
+        - artifact_path_hash
+        - salvage_value
+        - negative_memory
+        - do_not_repeat
+        - tier_scope
+        - claim_boundary
+        - selection_eligibility
+        - selection_lane_candidates
+      required_mix_queue_receipt_fields:
+        - mix_id
+        - depth_id
+        - source_card_ids
+        - axis_tags
+        - selection_lanes
+        - novelty_delta
+        - near_duplicate_cluster_id
+        - sample_method
+        - selected_for_runtime
+        - selection_reason
+        - risk_notes
+        - claim_boundary
+      required_depth_receipt_fields:
+        - depth_id
+        - candidate_possible_count
+        - candidate_queued_count
+        - candidate_cap
+        - sample_method
+        - selected_for_runtime_count
+        - materialized_count
+        - runtime_completed_count
+        - selection_lane_counts
+        - top_forward_pf_share
+        - runtime_substrate_count
+        - single_substrate_warning
+        - full_mix_materialized
+        - depth_decision
+        - claim_effect
+        - claim_boundary
+      required_attempt_receipt_fields:
+        - attempt_id
+        - depth_id
+        - mix_id
+        - parent_mix_id
+        - candidate_id
+        - dataset_id
+        - feature_set_id
+        - label_id
+        - split
+        - split_id
+        - split_contract
+        - source_identities
+        - parser_contract_version
+        - runtime_contract_version
+        - runtime_substrate_id
+        - compile_status
+        - tester_status
+        - runtime_status
+        - report_status
+        - onnx_path_hash
+        - onnx_hash
+        - ea_source_binary_hash
+        - ea_source_hash
+        - ea_binary_hash
+        - set_ini_hash
+        - feature_order_hash
+        - tester_identity
+        - telemetry_path
+        - telemetry_hash
+        - summary_path
+        - report_path_hash
+        - report_hash
+        - snapshot_path
+        - execution_log_path
+        - trade_list_hash
+        - trade_count
+        - profit_factor
+        - drawdown
+        - gap_cause
+        - claim_effect
+        - claim_boundary
+      no_advance_conditions:
+        - "Survivors selected only by top_forward_pf(상위 전진 수익 팩터 단독 생존)."
+        - "OOS PF survives but DD collapses(표본외 수익 팩터 유지이나 손실폭 붕괴)."
+        - "Validation/OOS split is unclear or OOS was used in selection(검증/표본외 분할 불명확 또는 표본외 선정 사용)."
+        - "Same feature family/label/session/trade shape/substrate concentration(동일 피처 계열/라벨/세션/거래 형태/바탕 쏠림)."
+        - "Failure cause was not recorded before opening next depth(다음 깊이 개방 전 실패 원인 미기록)."
     claim_rule: "Extra stages may create runtime learning records, preserved clues, negative memory, reference surfaces, invalid setup, blocked retry conditions, or next frontier proposals only; they cannot create completion, selected baseline, operating promotion, runtime authority, live readiness, Goal Achieve, or git-push validation."
+  frontier_topic_rotation_check:
+    status: active
+    active_by_default: true
+    description: "Before opening a canonical frontier stage(정식 전선 단계), compare the proposed stage question with the immediate prior frontier stage and latest five closed canonical frontier stages to prevent continuation repair, near-duplicate hypothesis, threshold/filter/session/routing/parameter-only tweak, or renamed repair(연속 수리/근접 중복 가설/임계값/필터/세션/라우팅/파라미터만 미세조정/이름만 바꾼 수리)."
+    trigger_skill: obsidian-stage-transition
+    appends_required_skill: false
+    appends_required_gate: frontier_topic_rotation_check
+    allowed_families:
+      - state_sync
+      - policy_skill_governance
+      - experiment_design
+      - experiment_execution
+      - runtime_backtest
+      - kpi_evidence
+      - artifact_lineage
+      - publish_handoff
+    activation_rule: "Run after frontier_extra_stage_due_check(전선 추가 단계 도래 점검) when a resume frontier open(전선 재개 개방) is being created, and before any other canonical frontier open."
+    closeout_rule: "Record repair_disposition_closed_in_stage(단계 내 수리 처분 마감), prior_five_frontier_scope(이전 5개 전선 범위), novelty_delta(신규성 차이), and same_surface_repair_block(동일 표면 수리 차단) in the stage open or transition packet."
+    claim_rule: "This overlay may support next-frontier-open discipline(다음 전선 개방 규율) only. A failed check blocks only the current proposed next-open shape(현재 제안된 다음 개방 형태), not future reuse of the broad topic(넓은 주제의 미래 재사용). It cannot create completion, selected baseline, operating promotion, runtime authority, live readiness, Goal Achieve, or a topic ban forever(주제 영구 금지)."
 families:
   information_only:
     description: "Read/explain only(읽기/설명 전용 작업)"

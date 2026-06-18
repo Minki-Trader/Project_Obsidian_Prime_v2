@@ -16,6 +16,9 @@ COMPLETION_CLAIMS = frozenset(
         "runtime_probe_completed",
         "runtime_authority",
         "operating_promotion",
+        "live_readiness",
+        "goal_achieve",
+        "selected_baseline",
     }
 )
 

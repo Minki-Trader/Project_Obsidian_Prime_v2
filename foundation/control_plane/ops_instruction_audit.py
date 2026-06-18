@@ -26,6 +26,12 @@ REQUIRED_ROUTING_CONTRACT_KEYS = (
     "required_skill_order",
     "closeout_rule",
     "stage_agnostic_rule",
+    "verification_profile_rule",
+    "verification_gate_selection_rule",
+    "verification_trigger_source_rule",
+    "governance_evidence_balance_rule",
+    "active_verification_over_procedure_rule",
+    "runtime_probe_reluctance_rule",
 )
 REQUIRED_FAMILY_KEYS = (
     "description",
@@ -54,6 +60,15 @@ REQUIRED_TRIGGER_OVERLAY_KEYS = (
     "allowed_families",
     "claim_rule",
 )
+REQUIRED_VERIFICATION_PROFILE_FIELDS = (
+    "profile_id",
+    "claim_surface",
+    "trigger_sources",
+    "protected_claims",
+    "required_evidence",
+    "gates_not_run_with_reason",
+    "stop_conditions",
+)
 
 
 def audit_ops_instructions(root: Path | str = Path(".")) -> AuditResult:
@@ -68,12 +83,14 @@ def audit_ops_instructions(root: Path | str = Path(".")) -> AuditResult:
 
     routing_contract = _mapping(family_registry.get("routing_contract"))
     trigger_overlays = _mapping(family_registry.get("trigger_overlays"))
+    verification_profiles = _mapping(family_registry.get("verification_profiles"))
     families = _mapping(family_registry.get("families"))
     schemas = _mapping(receipt_schema.get("schemas"))
     default_support_limit = _int_value(routing_contract.get("support_skill_limit_default"), fallback=3)
     max_required = _int_value(routing_contract.get("max_required_skills_per_family"), fallback=5)
 
     _check_routing_contract(routing_contract, findings)
+    _check_verification_profiles(verification_profiles, findings)
     _check_families(root_path, families, schemas, default_support_limit, max_required, findings)
     _check_trigger_overlays(root_path, trigger_overlays, families, schemas, findings)
     _check_policy_surfaces(agent_policy, agents, work_packet_schema, findings)
@@ -86,6 +103,7 @@ def audit_ops_instructions(root: Path | str = Path(".")) -> AuditResult:
         counts={
             "family_count": len(families),
             "trigger_overlay_count": len(trigger_overlays),
+            "verification_profile_count": len(_mapping(verification_profiles.get("profiles"))),
             "explicit_skill_schema_count": max(0, len(schemas) - (1 if "default" in schemas else 0)),
             "default_support_skill_limit": default_support_limit,
             "max_required_skills_per_family": max_required,
@@ -111,6 +129,35 @@ def _check_routing_contract(routing_contract: Mapping[str, Any], findings: list[
                 check_id="ops_instruction::routing_contract::primary_skill_limit",
                 message="Routing contract must limit each work packet to exactly one primary skill.",
                 details={"actual": routing_contract.get("primary_skill_limit")},
+            )
+        )
+
+
+def _check_verification_profiles(verification_profiles: Mapping[str, Any], findings: list[AuditFinding]) -> None:
+    if not verification_profiles:
+        findings.append(
+            AuditFinding(
+                check_id="ops_instruction::verification_profiles::missing",
+                message="Work family registry must define verification profiles for stable /goal routing.",
+            )
+        )
+        return
+    required_fields = _string_list(verification_profiles.get("required_packet_fields"))
+    missing_fields = [field for field in REQUIRED_VERIFICATION_PROFILE_FIELDS if field not in required_fields]
+    if missing_fields:
+        findings.append(
+            AuditFinding(
+                check_id="ops_instruction::verification_profiles::missing_required_packet_fields",
+                message="Verification profile contract must require the fields needed to explain each verification action.",
+                details={"missing": missing_fields},
+            )
+        )
+    profiles = _mapping(verification_profiles.get("profiles"))
+    if not profiles:
+        findings.append(
+            AuditFinding(
+                check_id="ops_instruction::verification_profiles::missing_profile_definitions",
+                message="Verification profile contract must define allowed profile ids.",
             )
         )
 
@@ -300,6 +347,11 @@ def _check_policy_surfaces(
         "support_skills",
         "required_gates",
         "required_gate_coverage_audit",
+        "verification_profile",
+        "claim_surface",
+        "trigger_source",
+        "active verification",
+        "runtime_probe",
     )
     for needle in policy_needles:
         if needle not in agent_policy:
@@ -311,7 +363,16 @@ def _check_policy_surfaces(
                 )
             )
 
-    agent_needles = ("work_family_registry.yaml", "primary_skill", "required_gate_coverage_audit")
+    agent_needles = (
+        "work_family_registry.yaml",
+        "primary_skill",
+        "required_gate_coverage_audit",
+        "verification_profile",
+        "claim_surface",
+        "trigger_source",
+        "active verification",
+        "runtime probe",
+    )
     for needle in agent_needles:
         if needle not in agents:
             findings.append(
@@ -330,6 +391,24 @@ def _check_policy_surfaces(
                 check_id="ops_instruction::work_packet_schema::missing_skill_routing_fields",
                 message="Work packet schema must require primary-family routing fields.",
                 details={"missing": missing_fields},
+            )
+        )
+
+    profile_fields = _string_list(_mapping(_mapping(work_packet_schema.get("fields")).get("verification_profile")).get("required_fields"))
+    missing_profile_fields = [field for field in REQUIRED_VERIFICATION_PROFILE_FIELDS if field not in profile_fields]
+    if missing_profile_fields:
+        findings.append(
+            AuditFinding(
+                check_id="ops_instruction::work_packet_schema::missing_verification_profile_fields",
+                message="Work packet schema must require verification_profile fields for claim-driven /goal verification.",
+                details={"missing": missing_profile_fields},
+            )
+        )
+    if not _string_list(work_packet_schema.get("verification_profile_ids_allowed")):
+        findings.append(
+            AuditFinding(
+                check_id="ops_instruction::work_packet_schema::missing_verification_profile_ids_allowed",
+                message="Work packet schema must list allowed verification_profile ids.",
             )
         )
 

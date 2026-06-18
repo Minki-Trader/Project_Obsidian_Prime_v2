@@ -8,6 +8,16 @@ schemas:
       - status
       - primary_output
       - evidence_used
+    compact_required_fields:
+      - packet_id
+      - skill
+      - status
+      - receipt_mode
+      - source_current_truth_docs
+      - evidence_used
+      - claim_boundary
+      - gates_not_run_with_reason
+      - forbidden_claims
   obsidian-session-intake:
     required_fields:
       - packet_id
@@ -59,6 +69,17 @@ schemas:
       - claim_boundary
       - final_codex_direction
   obsidian-task-force-review:
+    actual_subagent_call_required_fields:
+      - roster_agent_id
+      - spawned_agent_id
+      - tool_name
+      - result_status
+      - opinion_classification
+    actual_subagent_call_tool_name: multi_agent_v1.spawn_agent
+    opinion_classification_allowed:
+      - accepted
+      - rejected
+      - needs_local_verification
     required_fields:
       - packet_id
       - skill
@@ -66,6 +87,8 @@ schemas:
       - trigger_reason
       - roster_registry
       - agents_used
+      - actual_subagent_calls
+      - review_requirement
       - model_policy
       - bounded_evidence
       - advice_classification
@@ -79,6 +102,8 @@ schemas:
       - trigger_reason
       - roster_registry
       - agents_used
+      - actual_subagent_calls
+      - review_requirement
       - model_policy
       - bounded_evidence
       - advice_classification

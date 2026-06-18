@@ -1,3 +1,4 @@
+version: work_packet_schema_v2_1
 packet_id: ""
 created_at_utc: ""
 user_request:
@@ -23,6 +24,35 @@ risk_vector_scan:
   required_decision_locks: []
   required_gates: []
   forbidden_claims: []
+verification_profile:
+  profile_id: ""
+  claim_surface:
+    allowed_claims: []
+    forbidden_claims: []
+    claim_boundary: ""
+  trigger_sources: []
+  protected_claims: []
+  required_evidence:
+    # Runtime/ONNX/EA claims(런타임/온엑스/EA 주장)이 있을 때는 아래 identity/output proof fields(정체성/출력 증명 필드)를 채운다.
+    - dataset_id
+    - feature_set_id
+    - label_id
+    - split_id
+    - onnx_hash
+    - ea_source_hash
+    - ea_binary_hash
+    - set_ini_hash
+    - feature_order_hash
+    - tester_identity
+    - report_hash
+    - trade_list_hash
+    - telemetry_hash
+  gates_not_run_with_reason:
+    - gate: ""
+      reason_code: ""
+      reason: ""
+      claim_effect: ""
+  stop_conditions: []
 decision_lock:
   mode: assume_safe_default
   assumptions: {}

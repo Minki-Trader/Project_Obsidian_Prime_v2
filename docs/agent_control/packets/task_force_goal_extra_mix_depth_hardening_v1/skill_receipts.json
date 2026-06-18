@@ -1,0 +1,121 @@
+{
+  "receipts": [
+    {
+      "packet_id": "task_force_goal_extra_mix_depth_hardening_v1",
+      "skill": "obsidian-task-force-review",
+      "status": "executed",
+      "trigger_reason": "Active /goal(목표) requested Task Force(태스크포스) consultation and durable policy hardening for Frontier Extra Stage(전선 추가 단계) progressive mix depth(점증 혼합 깊이), ONNX(온엑스), MT5 runtime evidence(MT5 런타임 근거), and verification weight(검증 무게).",
+      "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+      "agents_used": [
+        "agent_01_system_governor",
+        "agent_02_platform_routing_architect",
+        "agent_03_philosophy_policy_skill_governance",
+        "agent_04_evidence_control_plane",
+        "agent_05_data_feature_contract",
+        "agent_06_quant_research",
+        "agent_07_model_validation_risk",
+        "agent_08_mt5_onnx_runtime"
+      ],
+      "actual_subagent_calls": [
+        {
+          "roster_agent_id": "agent_01_system_governor",
+          "spawned_agent_id": "019edb62-1017-7890-ae5d-1cdb55834727",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted"
+        },
+        {
+          "roster_agent_id": "agent_02_platform_routing_architect",
+          "spawned_agent_id": "019edb62-27b4-7841-a347-568ee1dfb6c5",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted"
+        },
+        {
+          "roster_agent_id": "agent_03_philosophy_policy_skill_governance",
+          "spawned_agent_id": "019edb62-4127-7a61-9aab-799b877b9a0c",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification"
+        },
+        {
+          "roster_agent_id": "agent_04_evidence_control_plane",
+          "spawned_agent_id": "019edb62-5adc-73a2-9317-fb2d83ae247b",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification"
+        },
+        {
+          "roster_agent_id": "agent_05_data_feature_contract",
+          "spawned_agent_id": "019edb62-745d-7283-b0b0-ab3abab54244",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted"
+        },
+        {
+          "roster_agent_id": "agent_06_quant_research",
+          "spawned_agent_id": "019edb62-8fb8-7031-938a-2a63e983765b",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted"
+        },
+        {
+          "roster_agent_id": "agent_07_model_validation_risk",
+          "spawned_agent_id": "019edb69-b45f-74f0-a441-17998910da44",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification"
+        },
+        {
+          "roster_agent_id": "agent_08_mt5_onnx_runtime",
+          "spawned_agent_id": "019edb69-c8e3-7ef3-804f-97da5a6463db",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification"
+        }
+      ],
+      "review_requirement": "active_goal_required",
+      "model_policy": "inherited_parent_model_with_project_floor_gpt-5.5_xhigh_or_highest_available_xhigh",
+      "bounded_evidence": [
+        "docs/agent_control/work_family_registry.yaml",
+        "docs/policies/frontier_governance.md",
+        "docs/policies/agent_trigger_policy.md",
+        "AGENTS.md",
+        "foundation/control_plane/skill_receipt_schema_lint.py",
+        "foundation/control_plane/work_packet_schema_lint.py",
+        "foundation/control_plane/required_gate_coverage_audit.py",
+        "foundation/control_plane/frontier_extra_mix_depth_lint.py",
+        "tests/test_skill_receipt_schema_lint.py",
+        "tests/test_work_packet_schema_lint.py",
+        "tests/test_required_gate_coverage_audit.py",
+        "tests/test_frontier_extra_mix_depth_lint.py",
+        "tests/test_ops_instruction_audit.py"
+      ],
+      "advice_classification": {
+        "accepted": [
+          "Use progressive 2mix -> 3mix -> 4mix(2개 혼합 -> 3개 혼합 -> 4개 혼합) instead of exhaustive search(전체 탐색).",
+          "Keep verification claim-driven(주장 기반) instead of always-on full verification(상시 전체 검증).",
+          "Require actual selected-agent spawn_agent evidence(선택 요원 실제 생성 호출 근거)."
+        ],
+        "needs_local_verification": [
+          "Task Force receipt structure(태스크포스 영수증 구조).",
+          "runtime evidence proof fields(런타임 근거 증명 필드).",
+          "Extra Stage mix depth caps and single-substrate warning(추가 단계 혼합 깊이 상한과 단일 바탕 경고)."
+        ],
+        "rejected": [
+          "Exhaustive 50! mix search(50! 전체 혼합 탐색).",
+          "PF-only selection(PF 단독 선정).",
+          "compile-only runtime verification claim(컴파일 단독 런타임 검증 주장)."
+        ]
+      },
+      "local_verification": {
+        "yaml_parse": "pass",
+        "pytest": "67 passed: skill_receipt_schema_lint, required_gate_coverage_audit, work_packet_schema_lint, frontier_extra_mix_depth_lint, ops_instruction_audit, agent_control_gates, validate_run_evidence",
+        "compileall": "pass for foundation/control_plane"
+      },
+      "claim_boundary": "Policy/schema/lint/test hardening complete(정책/스키마/점검/테스트 경화 완료). No completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성) claim for any trading result.",
+      "final_codex_direction": "Apply lightweight-by-default governance(기본 경량 거버넌스) with Extra Stage-only progressive mix depth lint(추가 단계 전용 점증 혼합 깊이 점검) and runtime proof-field enforcement(런타임 증명 필드 강제).",
+      "forbidden_claim_check": "No operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성) is claimed."
+    }
+  ]
+}

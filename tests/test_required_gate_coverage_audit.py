@@ -43,6 +43,24 @@ class RequiredGateCoverageAuditTests(unittest.TestCase):
         self.assertTrue(coverage.completed_forbidden)
         self.assertEqual(final_guard.status, "blocked")
 
+    def test_required_gate_coverage_reads_skill_routing_required_gates(self) -> None:
+        result = audit_required_gate_coverage(
+            {"skill_routing": {"required_gates": ["work_packet_schema_lint"]}},
+            {"audits": [], "final_claim_guard": {"audit_name": "final_claim_guard"}},
+        )
+
+        self.assertEqual(result.status, "blocked")
+        self.assertIn("work_packet_schema_lint", result.counts["required_gates"])
+
+    def test_required_gate_coverage_reads_top_level_required_gates(self) -> None:
+        result = audit_required_gate_coverage(
+            {"required_gates": ["codex_task_force_review_packet"]},
+            {"audits": [{"audit_name": "codex_task_force_review_packet"}]},
+        )
+
+        self.assertEqual(result.status, "pass", [finding.to_dict() for finding in result.findings])
+        self.assertIn("codex_task_force_review_packet", result.counts["required_gates"])
+
 
 if __name__ == "__main__":
     unittest.main()

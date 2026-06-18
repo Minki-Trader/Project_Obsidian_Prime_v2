@@ -51,12 +51,13 @@ Update in the same pass:
 9. If the transition opens a user-requested extra stage, require charter, lane, question, allowed evidence, exit condition, and no-promotion boundary unless a promotion packet is explicitly opened.
 10. If the transition closes exploration, require negative-result memory or a positive archive record before treating the idea as durable knowledge.
 11. If the transition closes a run-producing stage, require run measurement, managed identity, and lane-aware judgment for the selected or archived run evidence.
-12. If the transition closes a frontier stage(전선 단계), check `docs/registers/five_stage_retrospective_register.yaml` before opening the next frontier stage(다음 전선 단계). If the closing frontier number(마감 전선 번호) is divisible by 5 or five closeout ids(마감 ID 5개) accumulated since the previous retrospective(이전 중간 검토), block next open(다음 개방 차단) until the five-stage Grok retrospective(5단계 Grok 중간 검토) is recorded as `passed(통과)`, `not_due(아직 아님)`, or `blocked_with_repair_plan(수리 계획 포함 차단)`.
+12. If the transition closes a frontier stage(전선 단계), run `frontier_extra_stage_due_check(전선 추가 단계 도래 점검)` first, then run `frontier_topic_rotation_check(전선 주제 회전 점검)` before opening the next canonical frontier stage(정식 전선 단계). The historical five-stage Grok retrospective(역사 5단계 그록 회고)는 archive-only(보관 전용)이며 next-open block(다음 개방 차단)을 만들지 않는다.
+13. `frontier_topic_rotation_check(전선 주제 회전 점검)` must verify that repair disposition(수리 처분) closed inside the active stage(활성 단계), and that the next stage question(다음 단계 질문) is not continuation repair(연속 수리), near-duplicate hypothesis(근접 중복 가설), threshold/filter/session/routing/parameter-only tweak(임계값/필터/세션/라우팅/파라미터만 미세조정), or renamed repair(이름만 바꾼 수리).
 
 ## Validation
 
 - after the sync pass, verify that `docs/workspace/workspace_state.yaml`, `docs/context/current_working_state.md`, and the active stage `selection_status.md` all name the same active stage
-- before opening a frontier stage, verify that the five-stage retrospective gate(5단계 중간 검토 게이트) is not due, already passed(통과), or blocked with a repair plan(수리 계획 포함 차단)
+- before opening a frontier stage, verify `frontier_extra_stage_due_check(전선 추가 단계 도래 점검)` first and then `frontier_topic_rotation_check(전선 주제 회전 점검)`; do not use historical five-stage Grok retrospective(역사 5단계 그록 회고) as an active gate(활성 게이트)
 - if the transition changes durable meaning, make sure a `docs/decisions/*.md` memo exists in the same pass
 - if architecture-sensitive docs or skills changed, run the architecture guard validator
 - if exploration-sensitive docs or skills changed, verify that lane routing, WFO default, and failure-memory references are still linked from the trigger policy

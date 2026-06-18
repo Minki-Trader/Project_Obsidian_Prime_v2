@@ -1,0 +1,146 @@
+{
+  "receipts": [
+    {
+      "packet_id": "kpi_interpretation_governance_audit_v1",
+      "skill": "obsidian-task-force-review",
+      "status": "executed",
+      "trigger_reason": "Active /goal(목표) required related agent consultation(관련 요원 상담) for KPI/PnL/trade interpretation governance(KPI/손익/거래 해석 관리), multidimensional analysis(다차원 분석), and one-dimensional drift risk(일차원 표류 위험).",
+      "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+      "agents_used": [
+        "agent_04_evidence_control_plane",
+        "agent_05_data_feature_contract",
+        "agent_06_quant_research",
+        "agent_07_model_validation_risk",
+        "agent_08_mt5_onnx_runtime"
+      ],
+      "actual_subagent_calls": [
+        {
+          "roster_agent_id": "agent_04_evidence_control_plane",
+          "spawned_agent_id": "019edb8c-1a8e-7cb0-bc54-49d7f4ee3929",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification"
+        },
+        {
+          "roster_agent_id": "agent_05_data_feature_contract",
+          "spawned_agent_id": "019edb7b-908a-78c1-abba-35e2c2a30663",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification"
+        },
+        {
+          "roster_agent_id": "agent_06_quant_research",
+          "spawned_agent_id": "019edb7b-aa80-7fa0-85c4-7ec7054d4636",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted"
+        },
+        {
+          "roster_agent_id": "agent_07_model_validation_risk",
+          "spawned_agent_id": "019edb7b-deeb-76a3-bff5-2bec9b9f816d",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification"
+        },
+        {
+          "roster_agent_id": "agent_08_mt5_onnx_runtime",
+          "spawned_agent_id": "019edb7b-fff8-74f2-a662-9889b1b02907",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification"
+        }
+      ],
+      "review_requirement": "active_goal_required",
+      "model_policy": "inherited_parent_model_with_project_floor_gpt-5.5_xhigh_or_highest_available_xhigh",
+      "bounded_evidence": [
+        "docs/policies/kpi_measurement_standard.md",
+        "docs/policies/run_result_management.md",
+        "docs/policies/result_judgment_policy.md",
+        "docs/agent_control/packets/kpi_interpretation_governance_audit_v1/kpi_interpretation_audit.json",
+        "docs/agent_control/packets/kpi_interpretation_governance_audit_v1/kpi_interpretation_cleanup_manifest.json",
+        "docs/agent_control/packets/kpi_interpretation_governance_audit_v1/kpi_interpretation_audit_report.md",
+        "foundation/control_plane/kpi_interpretation_audit.py",
+        "foundation/control_plane/kpi_interpretation_cleanup.py",
+        "tests/test_kpi_interpretation_audit.py",
+        "tests/test_kpi_interpretation_cleanup.py"
+      ],
+      "advice_classification": {
+        "accepted": [
+          "Recent F83-F85 interpretation(최근 F83-F85 해석)은 PF/PnL-only(수익 팩터/손익 단독)로만 흐르지 않고 win-rate erosion/path contradiction/firewall failure(승률 침식/경로 모순/방화벽 실패)를 분해했다.",
+          "KPI policy structure(KPI 정책 구조)는 signal/trading/risk/execution(신호/거래/위험/실행)을 분리한다."
+        ],
+        "rejected": [
+          "Historical ledgers are warning-free(역사 장부에 경고가 전혀 없음).",
+          "Missing/out-of-scope rows(누락/범위 밖 행)가 economic KPI(경제 KPI)를 채워도 관리가 철저하다는 주장."
+        ],
+        "needs_local_verification": [
+          "613 warning rows(경고 613행) gradual context enrichment(점진 문맥 보강).",
+          "Future F86+ rows(향후 F86+ 행) source/schema/hash/split verification status(원천/스키마/해시/분할 검증 상태) prefill(사전 기입)."
+        ]
+      },
+      "local_verification": {
+        "kpi_interpretation_cleanup": "executed: 64 rows and 478 economic values cleared, originals preserved in cleanup manifest(정리 목록 기록)",
+        "kpi_interpretation_audit": "pass_with_warnings: 6 ledger files, 16623 rows, 952 economic rows, 0 direct missing/out-of-scope economic rows, 245 mixed-scope warnings, 368 context warnings",
+        "pytest": "58 passed: kpi_interpretation_audit/cleanup, skill_receipt_schema_lint, frontier_extra_mix_depth_lint, work_packet_schema_lint, ops_instruction_audit, required_gate_coverage_audit(58개 통과: KPI 해석 감사/정리, 스킬 영수증 구조 검사, 전선 추가 혼합 깊이 검사, 작업 묶음 구조 검사, 운영 지침 감사, 필수 게이트 커버리지 감사)",
+        "claim_boundary": "goal-specific KPI interpretation governance audit may close as pass_with_warnings(목표 한정 KPI 해석 관리 감사는 경고 포함 통과로 마감 가능)"
+      },
+      "final_codex_direction": "Close the goal-specific audit(목표 한정 감사) as pass_with_warnings(경고 포함 통과) after full regression(전체 회귀) passes. Keep residual warnings(잔여 경고) as enrichment work(보강 작업), not as runtime authority(런타임 권위).",
+      "forbidden_claim_check": "No verified/full_verification/runtime_authority/operating_promotion/live_readiness/Goal Achieve/selected_baseline(검증됨/전체 검증/런타임 권위/운영 승격/실거래 준비/목표 달성/선택 기준선) claim is made."
+    },
+    {
+      "packet_id": "kpi_interpretation_governance_audit_v1",
+      "skill": "obsidian-performance-attribution",
+      "status": "executed",
+      "attribution_layers_checked": [
+        "time/sample/run ledger rows(시간/표본/실행 장부 행)",
+        "tier scope(티어 범위)",
+        "scoreboard lane(점수판 선로)",
+        "economic KPI columns(경제 KPI 열)",
+        "runtime/proxy boundary(런타임/프록시 경계)",
+        "missing/out-of-scope boundary(누락/범위 밖 경계)"
+      ],
+      "missing_layers": [
+        "245 mixed-scope warning rows need clearer attribution boundary(혼합 범위 경고 245행 귀속 경계 보강 필요)",
+        "368 economic rows need fuller context fields(경제 행 368개 문맥 필드 보강 필요)"
+      ],
+      "allowed_claims": [
+        "future_guard_exists(미래 보호 존재)",
+        "multidimensional_structure_present(다차원 구조 존재)",
+        "direct_historical_blocker_cleaned(직접 역사 차단 요인 정리됨)",
+        "goal_specific_pass_with_warnings(목표 한정 경고 포함 통과)"
+      ],
+      "forbidden_claims": [
+        "warning_free_historical_ledgers(경고 없는 역사 장부)",
+        "runtime_authority(런타임 권위)",
+        "verified(검증됨)"
+      ]
+    },
+    {
+      "packet_id": "kpi_interpretation_governance_audit_v1",
+      "skill": "obsidian-result-judgment",
+      "status": "executed",
+      "judgment_boundary": "pass_with_warnings_kpi_interpretation_governance_no_runtime_authority(런타임 권위 없는 KPI 해석 관리 경고 포함 통과)",
+      "allowed_claims": [
+        "goal_specific_kpi_audit_complete_with_warnings(목표 한정 KPI 감사 경고 포함 완료)",
+        "direct_blocking_rows_cleaned(직접 차단 행 정리됨)",
+        "no_runtime_authority_claim(런타임 권위 주장 없음)"
+      ],
+      "forbidden_claims": [
+        "reviewed",
+        "verified",
+        "full_verification_complete",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ],
+      "evidence_used": [
+        "docs/agent_control/packets/kpi_interpretation_governance_audit_v1/kpi_interpretation_audit.json",
+        "docs/agent_control/packets/kpi_interpretation_governance_audit_v1/kpi_interpretation_cleanup_manifest.json",
+        "docs/agent_control/packets/kpi_interpretation_governance_audit_v1/kpi_interpretation_audit_report.md",
+        "agent_04_evidence_control_plane actual call 019edb8c-1a8e-7cb0-bc54-49d7f4ee3929"
+      ]
+    }
+  ]
+}

@@ -82,6 +82,9 @@ def audit_required_gate_coverage_paths(
 
 def _required_gates(work_packet: Mapping[str, Any]) -> set[str]:
     required: set[str] = set()
+    required.update(_string_list(work_packet.get("required_gates")))
+    required.update(_string_list(_mapping(work_packet.get("skill_routing")).get("required_gates")))
+
     risk_scan = _mapping(work_packet.get("risk_vector_scan"))
     required.update(_string_list(risk_scan.get("required_gates")))
 

@@ -38,6 +38,26 @@ gate(게이트)가 실패하면 `docs/agent_control/self_correction_policy.yaml`
 
 이 최소 모드는 gate(게이트), threshold(임계값), evidence requirement(근거 요구), MT5 runtime probe(MT5 런타임 탐침), final claim guard(최종 주장 보호)를 완화하지 않는다. 작업이 파일 수정, 실행, stage closeout(단계 마감), runtime/backtest(런타임/백테스트), model export(모델 내보내기), 또는 publish/push(게시/원격 반영)로 넘어가면 즉시 non-trivial packet(비사소 작업 묶음)으로 승격한다.
 
+### `/goal` 검증 프로필 규칙(`/goal` Verification Profile Rule, `/goal` 검증 프로필 규칙)
+
+`/goal(목표)` 자체는 full verification(전체 검증), all gates(모든 게이트), all agents(전체 요원), MT5 runtime(MT5 런타임)을 자동으로 켜는 trigger(트리거)가 아니다. Codex(코덱스)는 먼저 work packet(작업 묶음)에 `verification_profile(검증 프로필)` 하나를 고르고, 그 profile(프로필)은 `claim_surface(주장 표면)`가 결정한다.
+
+허용 profile id(프로필 ID)의 진실 원천(source of truth, 진실 원천)은 `docs/agent_control/work_family_registry.yaml`의 `verification_profiles(검증 프로필)`다. 기본 효과(effect, 효과)는 `/goal(목표)` 운영이 안정적으로 돌아가되, 불안감이나 습관 때문에 무거운 검증을 덧붙이지 않게 하는 것이다.
+
+모든 verification action(검증 행동)은 `trigger_source(트리거 원천)`, `protected_claim(보호 주장)`, `required_evidence(필수 근거)`, `stop_condition(중단 조건)`을 가져야 한다. `trigger_source(트리거 원천)`가 없으면 그 검증은 실행하지 않는다. 효과(effect, 효과)는 random verification(무작위 검증)을 막고, 필요한 검증만 packet(묶음)에 남기는 것이다.
+
+`required_gates(필수 게이트)`는 family base gates(작업군 기본 게이트) + active overlay gates(활성 오버레이 게이트) + profile extra gates(프로필 추가 게이트)를 합친 뒤 중복 제거(dedupe, 중복 제거)한다. `verification_profile(검증 프로필)`은 protected claim(보호 주장)에 필요한 gate(게이트), threshold(임계값), evidence requirement(근거 요구), MT5 output(MT5 출력), Task Force actual call(태스크포스 실제 호출)을 제거하거나 완화할 수 없다.
+
+gate(게이트)를 실행하지 않을 때는 `not_applicable_with_reason(사유 있는 해당 없음)`를 gate별 구조화 기록(structured record, 구조화 기록)으로 남긴다. 최소 필드는 `gate(게이트)`, `reason_code(사유 코드)`, `reason(사유)`, `claim_effect(주장 효과)`다. 효과(effect, 효과)는 “검증 안 함”이 조용히 통과되지 않고, 어떤 claim(주장)을 포기하거나 낮췄는지 보이게 하는 것이다.
+
+Runtime/MT5(런타임/MT5) 검증은 runtime claim(런타임 주장), Strategy Tester output(전략 테스터 출력), EA/ONNX handoff(EA/ONNX 인계), `.mq5/.mqh/.set` behavior(`.mq5/.mqh/.set` 동작), 또는 operating promotion/runtime authority/live readiness(운영 승격/런타임 권위/실거래 준비) 주장에만 켠다. Design/proxy/Python-only(설계/프록시/파이썬 전용) 작업은 MT5 Strategy Tester(전략 테스터)를 자동 요구하지 않는다.
+
+Governance stays lightweight(운영은 가볍게 유지): Codex(코덱스)는 claim(주장)을 보호하는 가장 작은 router/profile/skill set(라우터/프로필/스킬 묶음)을 고른다. Evidence stays heavyweight(근거는 무겁게 유지): 강한 claim(주장)은 그 claim(주장)에 맞는 artifact/run/hash/MT5 output/actual Task Force call(산출물/실행/해시/MT5 출력/실제 태스크포스 호출)을 요구한다. 이 규칙은 새 gate/overlay/family/skill/agent call/review pass(게이트/오버레이/작업군/스킬/요원 호출/검토 회차)를 만들지 않는다.
+
+When a protected claim(보호 주장)을 narrow sufficient run(좁고 충분한 실행)으로 시험할 수 있으면, Codex(코덱스)는 procedural expansion(절차 확장), advisory loop(자문 반복), deferred checkpoint(지연 점검)를 늘리는 것보다 active verification(능동 검증)을 우선한다. 효과(effect, 효과)는 운영 문장은 작게 유지하고 토큰/시간을 실제 근거 생성에 쓰게 하는 것이다.
+
+Runtime/materialization/handoff/economics claim(런타임/물질화/인계/경제성 주장)이 걸린 work packet(작업 묶음)은 runtime probe(런타임 탐침)를 cost/expense(비용)를 이유로 다음 작업(next work, 다음 작업)으로 미루지 않는다. 같은 packet(묶음)에서 가장 좁은 충분한 runtime probe(런타임 탐침)를 시도하거나, 복구 시도(recovery attempt, 복구 시도) 뒤 `blocked/inconclusive/out_of_scope_by_claim(차단/불충분/주장 범위 밖)`으로 낮춘다. Probe(탐침)가 없으면 `runtime verified/economics pass/materialization-ready/handoff complete(런타임 검증됨/경제성 통과/물질화 준비/인계 완료)`를 주장하지 않는다.
+
 ## Codex Task Force 운영 규칙(Codex Task Force Operating Rule, 코덱스 태스크포스 운영 규칙)
 
 Project Obsidian Prime v2는 Grok role succession(그록 역할 승계)이 아니라 project-native Codex Task Force operating system(프로젝트 전용 코덱스 태스크포스 운영체계)을 쓴다.
@@ -47,6 +67,10 @@ Project Obsidian Prime v2는 Grok role succession(그록 역할 승계)이 아�
 model policy(모델 정책)는 현재 `gpt-5.5 xhigh(5.5 매우 높음)`를 floor(하한)로 둔다. 더 높은 Codex model(코덱스 모델)이 허용되면 사용자가 명시적으로 고정하지 않는 한 `highest available xhigh(사용 가능 최상위 매우 높음)`로 자동 교체한다. 효과(effect, 효과)는 최신 상위 모델을 쓰되, model strength(모델 강도)가 gate(게이트), threshold(임계값), evidence requirement(근거 요구), claim boundary(주장 경계)를 완화하지 못하게 하는 것이다.
 
 `obsidian-task-force-review(태스크포스 검토)`는 internal adversarial review(내부 비판 검토)와 agent routing(요원 라우팅)을 맡는다. 각 agent opinion(요원 의견)은 `accepted/rejected/needs_local_verification(수용/거절/로컬 검증 필요)`로 분류하고, Codex(코덱스)가 local verification(로컬 검증)과 final direction(최종 방향)을 계속 소유한다.
+
+Task Force review(태스크포스 검토)가 trigger(트리거)되면 Codex(코덱스)는 먼저 관련 agent(요원)만 registry(등록부) 기준으로 고르고, `reviewed/verified/pass(검토됨/검증됨/통과)`나 Task Force reviewed(태스크포스 검토됨)를 주장하기 전에 선택한 요원을 즉시 실제 `spawn_agent(서브에이전트 생성 호출)`로 호출한다. 8명 전원 호출은 기본값이 아니며, architecture/policy/runtime/stage-close(구조/정책/런타임/단계 마감)처럼 실제로 전원이 필요한 경우에만 사유를 남긴다. 효과(effect, 효과)는 self-review(자기검토)를 Task Force review(태스크포스 검토)처럼 포장하지 않고, 필요한 요원 호출 증거를 먼저 만들게 하는 것이다.
+
+Task Force review(태스크포스 검토)가 active goal(`/goal`, 활성 목표), work packet(작업 묶음), required gate(필수 게이트), family rule(작업군 규칙), router-selected required Task Force overlay(라우터가 선택한 필수 태스크포스 오버레이), explicit user instruction requiring review(검토를 요구하는 명시 사용자 지시), 또는 closeout claim(마감 주장)에 필요하면 `spawn_agent(서브에이전트 생성 호출)` 도구 없음이나 미호출은 `blocked_for_task_force_review(태스크포스 검토 차단)`다. `not_applicable_with_reason(사유 있는 해당 없음)`나 claim boundary lowering(주장 경계 낮춤)으로 통과시킬 수 없고, `reviewed/verified/pass/stage closeout pass/internally_reviewed/rehearsed_control_plane(검토됨/검증됨/통과/단계 마감 통과/내부 검토됨/제어면 리허설됨)`을 주장하지 않는다. optional checkpoint(선택 점검)이면 작업은 계속할 수 있지만 Task Force review(태스크포스 검토) 주장은 하지 않는다. dormant/stale agent(대기 중이거나 낡은 맥락의 요원) 의견은 최신 context update(맥락 갱신) 없이 검토 근거로 쓰지 않는다.
 
 internal adversarial review(내부 비판 검토)는 기본 2회차(pass, 회차)로 제한한다. 1차는 critique(비판), 2차는 owner response plus local verification(소유자 응답 + 로컬 검증)이다. 3차는 new evidence(새 근거)가 있을 때만 허용한다. 효과(effect, 효과)는 검토가 과한 loop(반복)가 되지 않으면서도 rubber stamp(형식 승인)가 되지 않게 하는 것이다.
 
@@ -130,6 +154,14 @@ winner(승자), selected baseline(선택 기준선), promotion history(승격 �
 
 Frontier stage(전선 단계)는 새 최상위 `frontiers/` folder(폴더)를 만들지 않고 기존 `stages/*` 아래에 둔다. 세부 운영 규칙(source of truth, 진실 원천)은 `docs/policies/frontier_governance.md`다.
 
+Frontier open(전선 개방)은 `frontier_topic_rotation_check(전선 주제 회전 점검)`를 거친다. 최근 5개 정식 frontier closeout(전선 마감)과 직전 단계(stage, 단계)를 기준으로, 다음 단계가 continuation repair(연속 수리), near-duplicate hypothesis(근접 중복 가설), threshold/filter/session/routing/parameter-only tweak(임계값/필터/세션/라우팅/파라미터만 미세조정), 또는 repair disguised as a new hypothesis(새 가설로 위장한 수리)가 아닌지 기록한다.
+
+수리는 같은 frontier stage(전선 단계) 안에서 repair disposition(수리 처분)을 닫는다. repaired/negative/invalid/blocked/out_of_scope(수리됨/부정/무효/차단/주장 범위 밖) 중 무엇이든 같은 단계(stage, 단계) 안에서 근거와 함께 결론을 남긴 뒤에만 transition(전환)할 수 있다. blocked(차단)는 다음 단계가 같은 수리를 이어받아도 된다는 뜻이 아니다.
+
+같은 broad topic(넓은 주제)은 나중에 다시 등장할 수 있다. 금지되는 것은 topic(주제) 자체가 아니라 인접한 frontier open(전선 개방)을 같은 surface repair(동일 표면 수리)나 이름만 바꾼 가설로 계속 미는 것이다. 다시 등장하려면 source/data representation/label/runtime representation/validation philosophy/model family/objective/trade shape/risk logic/regime split(원천/데이터 표현/라벨/런타임 표현/검증 철학/모델 계열/목적함수/거래 형태/위험 로직/장세 분할) 중 material novelty delta(실질 신규성 차이)를 적는다.
+
+`frontier_topic_rotation_check(전선 주제 회전 점검)` 실패는 현재 proposed next-open shape(제안된 다음 개방 형태)만 막는다. 같은 topic(주제) 자체를 future stage(미래 단계)에서 금지하지 않는다.
+
 ## 전선 추가 단계 규칙(Frontier Extra Stage Rule, 전선 추가 단계 규칙)
 
 Frontier Extra Stage(전선 추가 단계)는 `stage_frontier_extra_EXX__specific_question(전선 추가 단계 번호와 구체 질문)` 형식으로 둔다. 새 최상위 `frontiers/` 또는 `extra_stages/` folder(폴더)는 만들지 않는다.
@@ -139,6 +171,18 @@ Trigger(트리거)는 closed canonical frontier stage(마감된 정식 전선 �
 Due(도래)이면 E01/E02/E03...(추가01/02/03...)을 먼저 open -> operate -> closeout(개방 -> 운영 -> 마감)한다. 그 뒤 resume frontier(재개 전선)로 돌아간다. E01(추가01)은 F01-F50(전선01-50)을 재료로 쓰고, E02(추가02)는 F51-F100(전선51-100)을 재료로 쓴다. backfill execution(소급 실행)이 필요한 경우에도 같은 numbering(번호)을 유지한다.
 
 Extra stage(추가 단계)는 retrospective(회고)가 아니다. 50개 frontier closeout(전선 마감)을 ingredient card(재료 카드)로 만들고, feature set/label/model family/trade shape/risk logic/regime split(피처 묶음/라벨/모델 계열/거래 형태/위험 로직/장세 분할)을 공격적으로 섞어 실제 MT5 runtime learning campaign(MT5 런타임 학습 캠페인)까지 밀어본다.
+
+E02(추가02)부터 모든 Frontier Extra Stage(전선 추가 단계)는 progressive mix depth(점증 혼합 깊이) 계약을 쓴다. 50!(팩토리얼) 전체 조합이나 exhaustive mix(전체 혼합 탐색)는 금지한다. 기본 순서는 2-mix -> 3-mix -> 4-mix(2개 혼합 -> 3개 혼합 -> 4개 혼합)이고, 다음 depth(깊이)는 이전 depth(깊이)의 diversity/risk/reproducibility/materialization(다양성/위험/재현성/물질화) gate(게이트)가 통과할 때만 연다.
+
+기본 cap(상한)은 2-mix queue 60/materialized 6/MT5 attempts 12(2개 혼합 대기열 60/물질화 6/MT5 시도 12), 3-mix queue 36/materialized 4/MT5 attempts 8(3개 혼합 대기열 36/물질화 4/MT5 시도 8), 4-mix queue 12/materialized 2/MT5 attempts 4(4개 혼합 대기열 12/물질화 2/MT5 시도 4)다. invalid/block recovery(무효/차단 복구)를 포함해 전체 hard cap(절대 상한)은 30 MT5 attempts(MT5 시도 30회)다.
+
+selection lane(선정 선로)은 PF(수익 팩터), DD resilience(손실폭 회복력), density/materiality(밀도/물질성), runtime materialization(런타임 물질화), negative-memory repair(부정 기억 수리)로 나눈다. `top_forward_pf(상위 전진 수익 팩터)`는 전체 MT5 후보의 25%를 넘을 수 없다. 효과(effect, 효과)는 “개쩌는 ONNX(온엑스) 만들어줘” 같은 broad goal(넓은 목표)이 들어와도 조합 폭발이나 PF-only selection(PF 단독 선정)으로 흐르지 않고, 깊이별 runtime learning record(런타임 학습 기록)를 남기게 하는 것이다.
+
+Ingredient card receipt(재료 카드 영수증)는 source frontier/run(원천 전선/실행), hypothesis(가설), axis tags(축 태그), artifact path/hash(산출물 경로/해시), salvage value/negative memory/do-not-repeat(회수 가치/부정 기억/반복 금지), tier scope(티어 범위), claim boundary(주장 경계), selection eligibility/lane candidates(선정 자격/선정 선로 후보)를 남긴다. Mix queue receipt(혼합 대기열 영수증)는 mix id/depth/source card ids(혼합 ID/깊이/원천 카드 ID), axis tags(축 태그), selection lanes(선정 선로), novelty delta(신규성 차이), near-duplicate cluster(근접 중복 군집), sample method(표본 방식), selected-for-runtime flag(런타임 선택 여부), selection reason/risk notes(선정 사유/위험 기록), claim boundary(주장 경계)를 남긴다.
+
+Depth receipt(깊이 영수증)는 selection lane counts/top_forward_pf share/runtime substrate count/single_substrate_warning/full_mix_materialized=false/claim_effect(선정 선로별 수/상위 전진 수익 팩터 비율/런타임 바탕 수/단일 바탕 경고/전체 혼합 물질화 아님/주장 효과)를 남긴다. Materialized attempt(물질화 시도)는 dataset/feature/label/split identity(데이터셋/피처/라벨/분할 정체성), parser/runtime contract version(파서/런타임 계약 버전), ONNX/EA/set/feature/tester/report/trade-list/telemetry hash(온엑스/EA/설정/피처/테스터/보고서/거래목록/텔레메트리 해시)를 남긴다. compile-only(컴파일 단독)와 proxy-only(프록시 단독)는 runtime evidence(런타임 근거)가 아니다.
+
+Extra stage closeout(추가 단계 마감) 전에는 `frontier_extra_mix_depth_lint(전선 추가 혼합 깊이 점검)`를 실행한다. cap 초과, PF-only selection(PF 단독 선정), compile-only runtime evidence(컴파일 단독 런타임 근거), single substrate warning missing(단일 바탕 경고 누락)은 blocked(차단) 또는 lowered claim boundary(낮춘 주장 경계)로 닫는다.
 
 MT5 failure(MT5 실패), zero-trade(무거래), mismatch(불일치), crash/block(충돌/차단), PF/DD collapse(수익 팩터/손실폭 붕괴), density death(밀도 사망)는 waste(낭비)가 아니라 negative evidence(부정 근거)다. compile(컴파일)만으로 runtime evidence(런타임 근거)를 대체하지 않는다.
 
@@ -233,6 +277,7 @@ Repo-scoped skill(저장소 전용 스킬)은 기본적으로 `.agents/skills/<s
 - 도구(tool, 도구), 스크립트(script, 스크립트), 설정(configuration, 설정), 실행 인계 파일(handoff file, 인계 파일)이 낡았거나 없으면 blocked(차단)로 닫기 전에 현재 프로젝트 기준으로 만들거나 고쳐서 실행을 먼저 시도한다.
 - MT5 검증(MT5 verification, MT5 검증)에서 MetaEditor compile(메타에디터 컴파일)은 좁은 외부 검증(narrow external check, 좁은 외부 검증)의 일부일 수 있지만, MT5 snapshot(MT5 스냅샷), strategy tester output(전략 테스터 출력), terminal file output(터미널 파일 출력)을 대체하지 않는다.
 - 외부 검증이 없으면 그 주장은 검토 완료(reviewed, 검토됨)나 긍정 판정(positive judgment, 긍정 판정)으로 닫지 않는다. 대신 범위를 낮춰 말하거나, 불충분(inconclusive, 불충분), 무효(invalid, 무효), 또는 차단(blocked, 차단)으로 적는다.
+- runtime probe(런타임 탐침)는 비싼 선택 점검(expensive optional checkpoint, 비싼 선택 점검)이 아니다. runtime/materialization/handoff/economics claim(런타임/물질화/인계/경제성 주장)을 같은 작업 묶음(work packet, 작업 묶음)에서 좁게 시험할 수 있으면 먼저 시도하고, 못 하면 비용(cost, 비용)이 아니라 도구/환경/산출물 조건(tool/environment/artifact condition, 도구/환경/산출물 조건)과 낮춘 claim boundary(주장 경계)를 남긴다.
 - 같은 빠진 외부 검증(missing external verification, 빠진 외부 검증)을 두 번 연속 next work(다음 작업)로만 남기지 않는다. 실행하거나, 현재 도구를 생성/수정해서 실행을 시도하거나, 사용자 행동(user action, 사용자 행동)이 필요한 정확한 terminal action(터미널 행동)을 요청하거나, 주장을 낮추거나, 차단 사유(blocker, 차단 사유)를 기록한다.
 - blocked(차단) 판정은 복구 시도(recovery attempt, 복구 시도), 실행 명령(execution command, 실행 명령), 실패 로그(failure log, 실패 로그), 또는 필요한 사용자 행동(user action, 사용자 행동)을 남긴 뒤에만 쓴다.
 

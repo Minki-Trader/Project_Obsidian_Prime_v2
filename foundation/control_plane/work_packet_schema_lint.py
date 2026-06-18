@@ -4,7 +4,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from typing import Any, Mapping
+from typing import Any, Mapping, Sequence
 
 import yaml
 
@@ -43,6 +43,23 @@ V2_REQUIRED = (
     "gates",
     "final_claim_policy",
 )
+V2_1_REQUIRED = (
+    "packet_id",
+    "created_at_utc",
+    "user_request",
+    "current_truth",
+    "work_classification",
+    "risk_vector_scan",
+    "decision_lock",
+    "interpreted_scope",
+    "verification_profile",
+    "acceptance_criteria",
+    "work_plan",
+    "skill_routing",
+    "evidence_contract",
+    "gates",
+    "final_claim_policy",
+)
 V2_SCOPE_REQUIRED = (
     "work_families",
     "target_surfaces",
@@ -63,8 +80,140 @@ V2_SKILL_ROUTING_REQUIRED = (
     "required_skill_receipts",
     "required_gates",
 )
+VERIFICATION_PROFILE_REQUIRED = (
+    "profile_id",
+    "claim_surface",
+    "trigger_sources",
+    "protected_claims",
+    "required_evidence",
+    "gates_not_run_with_reason",
+    "stop_conditions",
+)
+VERIFICATION_PROFILE_IDS = frozenset(
+    {
+        "read_only_minimal",
+        "design_only",
+        "static_contract",
+        "targeted_local_execution",
+        "proxy_scout",
+        "experiment_run",
+        "runtime_probe",
+        "stage_closeout",
+        "authority_candidate",
+        "blocked_pending_decision",
+    }
+)
+PROFILE_EXTRA_REQUIRED_GATES = {
+    "static_contract": frozenset({"work_packet_schema_lint"}),
+    "targeted_local_execution": frozenset({"test_gate"}),
+    "proxy_scout": frozenset({"kpi_contract_audit"}),
+    "experiment_run": frozenset({"kpi_contract_audit", "required_gate_coverage_audit"}),
+    "runtime_probe": frozenset({"runtime_evidence_gate", "kpi_contract_audit", "required_gate_coverage_audit", "final_claim_guard"}),
+    "stage_closeout": frozenset({"required_gate_coverage_audit", "final_claim_guard"}),
+    "authority_candidate": frozenset({"runtime_evidence_gate", "kpi_contract_audit", "required_gate_coverage_audit", "final_claim_guard"}),
+}
+GATE_NA_REQUIRED = ("gate", "reason_code", "reason", "claim_effect")
 RUN_ONLY_FIELDS = ("variants_requested", "verification_layers", "mt5_required", "top_k_reduction_allowed")
 RUN_FAMILIES = ("experiment_execution", "runtime_backtest")
+AUTHORITY_CLAIMS = frozenset({"runtime_authority", "operating_promotion", "live_readiness", "goal_achieve"})
+RUNTIME_CLAIMS = frozenset({"runtime_probe", "runtime_probe_completed", "mt5_verification_complete", "runtime_verified"})
+RUNTIME_ADJACENT_CLAIMS = frozenset(
+    {
+        "runtime_economics",
+        "runtime_economics_pass",
+        "economics_pass",
+        "materialization_ready",
+        "mt5_materialization_ready",
+        "runtime_materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "strategy_tester_verified",
+        "runtime_backtest_complete",
+    }
+)
+RUNTIME_PROBE_PROFILES = frozenset({"runtime_probe", "authority_candidate"})
+RUNTIME_PROBE_EVIDENCE_TERMS = (
+    "runtime_probe",
+    "runtime evidence",
+    "runtime_evidence",
+    "mt5",
+    "strategy tester",
+    "tester output",
+    "deal row",
+    "trade list",
+    "report hash",
+    "terminal output",
+    "backtest",
+)
+RUNTIME_PROOF_EVIDENCE_TERMS = (
+    "dataset_id",
+    "feature_set_id",
+    "label_id",
+    "split_id",
+    "onnx_hash",
+    "ea_source_hash",
+    "ea_binary_hash",
+    "set_ini_hash",
+    "feature_order_hash",
+    "tester_identity",
+    "report_hash",
+    "trade_list_hash",
+    "telemetry_hash",
+)
+COMPILE_ONLY_EVIDENCE_TERMS = ("compile_status", "metaeditor compile", "compile-only")
+TESTER_RUNTIME_EVIDENCE_TERMS = (
+    "tester_status",
+    "runtime_status",
+    "report_status",
+    "strategy tester",
+    "tester output",
+    "runtime output",
+    "terminal output",
+    "trade list",
+    "deal row",
+    "report hash",
+)
+DISALLOWED_RUNTIME_DEFERRAL_REASON_CODES = frozenset(
+    {
+        "cost_deferred",
+        "too_expensive",
+        "expensive",
+        "defer_to_next_work",
+        "deferred_to_next_work",
+        "next_work",
+        "later",
+        "budget_only",
+    }
+)
+STRONG_REVIEW_CLAIMS = frozenset({"completed", "reviewed", "verified", "verification_complete", "full_verification_complete"})
+BROAD_ONNX_TERMS = (
+    "onnx",
+    "온엑스",
+    "온닉스",
+    "open neural network exchange",
+)
+BROAD_FRONTIER_GOAL_TERMS = (
+    "broad goal",
+    "frontier continuation",
+    "continue frontier",
+    "next frontier",
+    "new frontier",
+    "frontier campaign",
+    "개쩌는",
+    "쩌는",
+    "onnx 만들어",
+    "온엑스 만들어",
+    "온닉스 만들어",
+)
+FRONTIER_EXTRA_CLOSEOUT_GATES = frozenset(
+    {
+        "frontier_extra_mix_depth_lint",
+        "runtime_evidence_gate",
+        "required_gate_coverage_audit",
+        "final_claim_guard",
+    }
+)
 
 
 def audit_work_packet_schema(packet: Mapping[str, Any]) -> AuditResult:
@@ -72,9 +221,19 @@ def audit_work_packet_schema(packet: Mapping[str, Any]) -> AuditResult:
     version = str(packet.get("version", "work_packet_schema_v1"))
     requested_action = str(_mapping(packet.get("user_request")).get("requested_action", ""))
     has_v2_fields = any(key in packet for key in ("work_classification", "risk_vector_scan", "decision_lock", "work_plan"))
+    is_v2_1 = "v2_1" in version
 
-    if version.endswith("_v2") or has_v2_fields:
+    if is_v2_1:
+        _require_top_level(packet, V2_1_REQUIRED, findings, version="v2_1")
+    elif version.endswith("_v2") or has_v2_fields:
         _require_top_level(packet, V2_REQUIRED, findings, version="v2")
+
+    if is_v2_1 or "verification_profile" in packet:
+        _check_verification_profile(packet, findings)
+
+    _check_frontier_extra_overlay_requirements(packet, findings)
+
+    if is_v2_1 or version.endswith("_v2") or has_v2_fields:
         interpreted = _mapping(packet.get("interpreted_scope"))
         _require_fields(interpreted, V2_SCOPE_REQUIRED, findings, prefix="interpreted_scope")
         _require_fields(_mapping(packet.get("skill_routing")), V2_SKILL_ROUTING_REQUIRED, findings, prefix="skill_routing")
@@ -141,8 +300,272 @@ def _require_fields(payload: Mapping[str, Any], required: tuple[str, ...], findi
             )
 
 
+def _check_verification_profile(packet: Mapping[str, Any], findings: list[AuditFinding]) -> None:
+    profile = _mapping(packet.get("verification_profile"))
+    _require_fields(profile, VERIFICATION_PROFILE_REQUIRED, findings, prefix="verification_profile")
+
+    profile_id = str(profile.get("profile_id", "")).strip()
+    if profile_id and profile_id not in VERIFICATION_PROFILE_IDS:
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::unknown_profile_id",
+                message="Verification profile id is not allowed.",
+                details={"profile_id": profile_id, "allowed": sorted(VERIFICATION_PROFILE_IDS)},
+            )
+        )
+
+    trigger_sources = _string_list(profile.get("trigger_sources"))
+    if profile_id != "blocked_pending_decision" and not trigger_sources:
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::missing_trigger_sources",
+                message="Verification profile must name at least one trigger source unless it is blocked before verification.",
+                details={"profile_id": profile_id},
+            )
+        )
+
+    _check_gate_na_reasons(profile.get("gates_not_run_with_reason"), findings)
+    _check_profile_claim_compatibility(packet, profile, findings)
+
+
+def _check_gate_na_reasons(value: Any, findings: list[AuditFinding]) -> None:
+    if _is_missing(value):
+        return
+    if not isinstance(value, Sequence) or isinstance(value, (str, bytes)):
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::gates_not_run_not_list",
+                message="gates_not_run_with_reason must be a list of structured gate reason records.",
+                details={"actual_type": type(value).__name__},
+            )
+        )
+        return
+    for index, raw_item in enumerate(value):
+        item = _mapping(raw_item)
+        if not item:
+            findings.append(
+                AuditFinding(
+                    check_id="work_packet_schema::verification_profile::gate_na_reason_not_mapping",
+                    message="Each gate N/A reason must be a mapping, not a bare string or list item.",
+                    details={"index": index, "value": raw_item},
+                )
+            )
+            continue
+        missing = [field for field in GATE_NA_REQUIRED if _is_missing(item.get(field))]
+        if missing:
+            findings.append(
+                AuditFinding(
+                    check_id="work_packet_schema::verification_profile::gate_na_reason_missing_fields",
+                    message="Each gate N/A reason must name the gate, reason code, reason, and claim effect.",
+                    details={"index": index, "missing": missing},
+                )
+            )
+
+
+def _check_profile_claim_compatibility(packet: Mapping[str, Any], profile: Mapping[str, Any], findings: list[AuditFinding]) -> None:
+    profile_id = str(profile.get("profile_id", "")).strip()
+    claims = _claims_from_packet(packet, profile)
+    required_gates = set(_string_list(_mapping(packet.get("skill_routing")).get("required_gates")))
+    execution_layers = set(_string_list(_mapping(packet.get("interpreted_scope")).get("execution_layers")))
+    runtime_claims = (RUNTIME_CLAIMS | RUNTIME_ADJACENT_CLAIMS | AUTHORITY_CLAIMS).intersection(claims)
+    missing_profile_gates = sorted(PROFILE_EXTRA_REQUIRED_GATES.get(profile_id, frozenset()) - required_gates)
+    if missing_profile_gates:
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::missing_profile_required_gates",
+                message="Verification profile extra_required_gates must be present in skill_routing.required_gates.",
+                details={"profile_id": profile_id, "missing_profile_gates": missing_profile_gates, "required_gates": sorted(required_gates)},
+            )
+        )
+
+    if AUTHORITY_CLAIMS.intersection(claims) and profile_id != "authority_candidate":
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::authority_claim_requires_authority_profile",
+                message="Authority, promotion, live-readiness, or Goal Achieve claims require the authority_candidate profile.",
+                details={"profile_id": profile_id, "claims": sorted(AUTHORITY_CLAIMS.intersection(claims))},
+            )
+        )
+    if RUNTIME_CLAIMS.intersection(claims) and profile_id not in {"runtime_probe", "authority_candidate"}:
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::runtime_claim_requires_runtime_profile",
+                message="Runtime verification claims require a runtime_probe or authority_candidate profile.",
+                details={"profile_id": profile_id, "claims": sorted(RUNTIME_CLAIMS.intersection(claims))},
+            )
+        )
+    if RUNTIME_ADJACENT_CLAIMS.intersection(claims) and profile_id not in RUNTIME_PROBE_PROFILES:
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::runtime_adjacent_claim_requires_runtime_profile",
+                message="Runtime materialization, handoff, or economics claims require a runtime_probe or authority_candidate profile.",
+                details={"profile_id": profile_id, "claims": sorted(RUNTIME_ADJACENT_CLAIMS.intersection(claims))},
+            )
+        )
+    if "mt5_execution" in execution_layers and profile_id not in {"runtime_probe", "authority_candidate"}:
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::mt5_execution_requires_runtime_profile",
+                message="MT5 execution requires a runtime_probe or authority_candidate verification profile.",
+                details={"profile_id": profile_id, "execution_layers": sorted(execution_layers)},
+            )
+        )
+    if (runtime_claims or "mt5_execution" in execution_layers) and profile_id in RUNTIME_PROBE_PROFILES:
+        _check_runtime_probe_evidence(
+            profile=profile,
+            profile_id=profile_id,
+            runtime_claims=runtime_claims or {"mt5_execution"},
+            required_gates=required_gates,
+            findings=findings,
+        )
+
+    strong_claim = bool(STRONG_REVIEW_CLAIMS.intersection(claims) or COMPLETION_CLAIMS.intersection(claims))
+    if strong_claim and "final_claim_guard" not in required_gates:
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::strong_claim_missing_final_claim_guard",
+                message="Strong completion/review/verification claims require final_claim_guard in required_gates.",
+                details={"claims": sorted(claims), "required_gates": sorted(required_gates)},
+            )
+        )
+    if (strong_claim or profile_id in {"stage_closeout", "authority_candidate"}) and "required_gate_coverage_audit" not in required_gates:
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::strong_claim_missing_gate_coverage",
+                message="Strong claims and closeout/authority profiles require required_gate_coverage_audit in required_gates.",
+                details={"profile_id": profile_id, "claims": sorted(claims), "required_gates": sorted(required_gates)},
+            )
+        )
+
+
+def _check_frontier_extra_overlay_requirements(packet: Mapping[str, Any], findings: list[AuditFinding]) -> None:
+    required_gates = set(_string_list(_mapping(packet.get("skill_routing")).get("required_gates")))
+    packet_text = _packet_text(packet)
+    if _looks_like_broad_onnx_frontier_goal(packet_text) and "frontier_extra_due_check" not in required_gates:
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::frontier_extra::broad_onnx_missing_due_check",
+                message="Broad ONNX or frontier continuation packets must include frontier_extra_due_check before opening or continuing a frontier campaign.",
+                details={"required_gates": sorted(required_gates)},
+            )
+        )
+
+    if _looks_like_frontier_extra_closeout(packet_text):
+        missing = sorted(FRONTIER_EXTRA_CLOSEOUT_GATES - required_gates)
+        if missing:
+            findings.append(
+                AuditFinding(
+                    check_id="work_packet_schema::frontier_extra::closeout_missing_required_gates",
+                    message="Frontier Extra closeout packets must include mix-depth lint, runtime evidence, gate coverage, and final claim guard.",
+                    details={"missing_gates": missing, "required_gates": sorted(required_gates)},
+                )
+            )
+
+
+def _check_runtime_probe_evidence(
+    *,
+    profile: Mapping[str, Any],
+    profile_id: str,
+    runtime_claims: set[str],
+    required_gates: set[str],
+    findings: list[AuditFinding],
+) -> None:
+    required_evidence = _string_list(profile.get("required_evidence"))
+    if "runtime_evidence_gate" not in required_gates:
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::runtime_claim_missing_runtime_evidence_gate",
+                message="Runtime probe, materialization, handoff, or economics claims require runtime_evidence_gate.",
+                details={"profile_id": profile_id, "claims": sorted(runtime_claims), "required_gates": sorted(required_gates)},
+            )
+        )
+    if not _strings_contain_any(required_evidence, RUNTIME_PROBE_EVIDENCE_TERMS):
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::runtime_claim_missing_probe_evidence",
+                message="Runtime-related claims must name narrow runtime probe evidence instead of relying on procedural review.",
+                details={"profile_id": profile_id, "claims": sorted(runtime_claims), "required_evidence": required_evidence},
+            )
+        )
+    missing_proof_terms = _missing_required_evidence_terms(required_evidence, RUNTIME_PROOF_EVIDENCE_TERMS)
+    if missing_proof_terms:
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::runtime_claim_missing_identity_proof_fields",
+                message="Runtime, ONNX, EA, or MT5 claims must predeclare identity and output proof fields.",
+                details={"profile_id": profile_id, "claims": sorted(runtime_claims), "missing_evidence_terms": missing_proof_terms},
+            )
+        )
+    if _strings_contain_any(required_evidence, COMPILE_ONLY_EVIDENCE_TERMS) and not _strings_contain_any(required_evidence, TESTER_RUNTIME_EVIDENCE_TERMS):
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::compile_only_not_runtime_evidence",
+                message="Compile evidence alone cannot satisfy runtime probe evidence.",
+                details={"profile_id": profile_id, "claims": sorted(runtime_claims), "required_evidence": required_evidence},
+            )
+        )
+    _check_runtime_probe_deferral_reasons(profile.get("gates_not_run_with_reason"), runtime_claims, findings)
+
+
+def _check_runtime_probe_deferral_reasons(value: Any, runtime_claims: set[str], findings: list[AuditFinding]) -> None:
+    if _is_missing(value) or not isinstance(value, Sequence) or isinstance(value, (str, bytes)):
+        return
+    for index, raw_item in enumerate(value):
+        item = _mapping(raw_item)
+        if not item:
+            continue
+        if str(item.get("gate", "")).strip() != "runtime_evidence_gate":
+            continue
+        reason_code = str(item.get("reason_code", "")).strip().lower()
+        if reason_code in DISALLOWED_RUNTIME_DEFERRAL_REASON_CODES:
+            findings.append(
+                AuditFinding(
+                    check_id="work_packet_schema::verification_profile::runtime_probe_cost_deferral_forbidden",
+                    message="Runtime probe evidence cannot be skipped as too expensive when runtime-related claims are protected.",
+                    details={"index": index, "reason_code": reason_code, "claims": sorted(runtime_claims)},
+                )
+            )
+
+
+def _claims_from_packet(packet: Mapping[str, Any], profile: Mapping[str, Any]) -> set[str]:
+    claims: set[str] = set()
+    claims.update(_string_list(profile.get("protected_claims")))
+    claim_surface = _mapping(profile.get("claim_surface"))
+    claims.update(_string_list(claim_surface.get("allowed_claims")))
+    claims.update(_string_list(_mapping(packet.get("final_claim_policy")).get("allowed_claims")))
+    claim_boundary = _mapping(_mapping(packet.get("interpreted_scope")).get("claim_boundary"))
+    claims.update(_string_list(claim_boundary.get("allowed_claims")))
+    return {claim.strip() for claim in claims if claim.strip()}
+
+
 def _mapping(value: Any) -> Mapping[str, Any]:
     return value if isinstance(value, Mapping) else {}
+
+
+def _string_list(value: Any) -> list[str]:
+    if isinstance(value, Sequence) and not isinstance(value, (str, bytes)):
+        return [str(item) for item in value if str(item).strip()]
+    return []
+
+
+def _strings_contain_any(items: Sequence[str], terms: Sequence[str]) -> bool:
+    lowered_items = [item.lower() for item in items]
+    return any(term in item for item in lowered_items for term in terms)
+
+
+def _missing_required_evidence_terms(items: Sequence[str], terms: Sequence[str]) -> list[str]:
+    lowered_blob = "\n".join(item.lower() for item in items)
+    return [term for term in terms if term not in lowered_blob]
+
+
+def _is_missing(value: Any) -> bool:
+    if value is None:
+        return True
+    if isinstance(value, str):
+        return not value.strip()
+    if isinstance(value, (list, tuple, dict, set)):
+        return len(value) == 0
+    return False
 
 
 def _looks_like_non_run_action(requested_action: str, work_families: tuple[str, ...]) -> bool:
@@ -150,6 +573,35 @@ def _looks_like_non_run_action(requested_action: str, work_families: tuple[str, 
         return not any(family in RUN_FAMILIES for family in work_families)
     lowered = requested_action.lower()
     return any(term in lowered for term in ("state", "sync", "policy", "code_refactor", "kpi", "report_only"))
+
+
+def _packet_text(packet: Mapping[str, Any]) -> str:
+    parts: list[str] = []
+
+    def visit(value: Any) -> None:
+        if isinstance(value, Mapping):
+            for nested in value.values():
+                visit(nested)
+        elif isinstance(value, Sequence) and not isinstance(value, (str, bytes)):
+            for nested in value:
+                visit(nested)
+        elif value is not None:
+            parts.append(str(value))
+
+    visit(packet)
+    return "\n".join(parts).lower()
+
+
+def _looks_like_broad_onnx_frontier_goal(packet_text: str) -> bool:
+    has_onnx = any(term in packet_text for term in BROAD_ONNX_TERMS)
+    has_broad_frontier_shape = any(term in packet_text for term in BROAD_FRONTIER_GOAL_TERMS)
+    return has_onnx and has_broad_frontier_shape
+
+
+def _looks_like_frontier_extra_closeout(packet_text: str) -> bool:
+    has_extra = "stage_frontier_extra" in packet_text or "frontier extra" in packet_text or "전선 추가" in packet_text
+    has_closeout = "closeout" in packet_text or "stage_closeout" in packet_text or "마감" in packet_text
+    return has_extra and has_closeout
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:

@@ -1,0 +1,1285 @@
+{
+  "cleanup_name": "kpi_interpretation_cleanup",
+  "source_audit_path": "docs/agent_control/packets/kpi_interpretation_governance_audit_v1/kpi_interpretation_audit.json",
+  "source_audit_sha256": "a0f9caba9108030c5d584f6d32ae3aeec31b7fde17a50b07ca93f4bbcd35e2ac",
+  "target_check_id": "kpi_interpretation::missing_or_out_of_scope_row_has_economic_metrics",
+  "dry_run": false,
+  "target_findings": 64,
+  "cleaned_files": [
+    {
+      "path": "docs/registers/alpha_run_ledger.csv",
+      "before_sha256": "1f6548c28478d9c8024e9352ccc0e6a3de40c8fe694e902aca1ee07ae1c3086a",
+      "after_sha256": "cc3f1e2149b5581a16646e945dc28ae08e8a7128f1b082aab0a962059a7d3ac3",
+      "had_utf8_bom": true,
+      "newline": "\\n",
+      "rows": [
+        {
+          "line": 12788,
+          "identity": {
+            "ledger_row_id": "run352B_repair_no_scaler_1d_mt5_report_identity_reuse_outputs_without_db_v1__Tier_B",
+            "run_id": "run352B_repair_no_scaler_1d_mt5_report_identity_reuse_outputs_without_db_v1",
+            "record_view": "Tier B fallback used(Tier B 대체 사용)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required"
+          },
+          "cleared_values": {
+            "long_trade_count": "700",
+            "max_drawdown_amount": "374.39",
+            "short_trade_count": "613"
+          }
+        },
+        {
+          "line": 12791,
+          "identity": {
+            "ledger_row_id": "run354A_branch_stage353_to_lightweight_proxy_trade_shape_scout_without_db_v1__Tier_B",
+            "run_id": "run354A_branch_stage353_to_lightweight_proxy_trade_shape_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required_until_proxy_scan(프록시 스캔 전까지 필수 누락)"
+          },
+          "cleared_values": {
+            "drawdown": "65.34",
+            "long_trade_count": "700",
+            "max_drawdown_amount": "374.39",
+            "net_profit": "41.48",
+            "profit_factor": "1.0079426019",
+            "recovery_factor": "0.1107935575",
+            "short_trade_count": "613",
+            "trade_count": "1313"
+          }
+        },
+        {
+          "line": 12794,
+          "identity": {
+            "ledger_row_id": "run354B_lightweight_proxy_trade_shape_scan_without_db_v1__Tier_B",
+            "run_id": "run354B_lightweight_proxy_trade_shape_scan_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required_no_tier_b_features(티어 B 피처 없음 필수 누락)"
+          },
+          "cleared_values": {
+            "long_trade_count": "96",
+            "short_trade_count": "91"
+          }
+        },
+        {
+          "line": 12797,
+          "identity": {
+            "ledger_row_id": "run354C_expand_proxy_filter_sweep_without_db_v1__Tier_B",
+            "run_id": "run354C_expand_proxy_filter_sweep_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required_no_tier_b_features(Tier B 피처 없음 필수 누락)"
+          },
+          "cleared_values": {
+            "long_trade_count": "261",
+            "short_trade_count": "176"
+          }
+        },
+        {
+          "line": 12828,
+          "identity": {
+            "ledger_row_id": "run359B_execute_high_density_label_pivot_mt5_probe_without_db_v1__Tier_B",
+            "run_id": "run359B_execute_high_density_label_pivot_mt5_probe_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required_no_partial_context_runtime_execution(Tier B 부분 문맥 런타임 실행 없음 필수 누락)"
+          },
+          "cleared_values": {
+            "drawdown": "285.94",
+            "long_trade_count": "472",
+            "max_drawdown_amount": "285.94",
+            "net_profit": "262.85",
+            "profit_factor": "1.09",
+            "recovery_factor": "0.92",
+            "short_trade_count": "464",
+            "trade_count": "936"
+          }
+        },
+        {
+          "line": 12831,
+          "identity": {
+            "ledger_row_id": "run359C_review_high_density_label_pivot_mt5_probe_without_db_v1__Tier_B",
+            "run_id": "run359C_review_high_density_label_pivot_mt5_probe_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required_no_partial_context_runtime_review(Tier B 부분 문맥 런타임 검토 없음 필수 누락)"
+          },
+          "cleared_values": {
+            "drawdown": "285.94",
+            "long_trade_count": "472",
+            "max_drawdown_amount": "285.94",
+            "net_profit": "262.85",
+            "profit_factor": "1.09",
+            "recovery_factor": "0.92",
+            "short_trade_count": "464",
+            "trade_count": "936"
+          }
+        },
+        {
+          "line": 12834,
+          "identity": {
+            "ledger_row_id": "run359D_branch_to_stage360_regime_stability_pivot_v1__Tier_B",
+            "run_id": "run359D_branch_to_stage360_regime_stability_pivot_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required(필수 누락)"
+          },
+          "cleared_values": {
+            "max_drawdown_amount": "285.94"
+          }
+        },
+        {
+          "line": 12835,
+          "identity": {
+            "ledger_row_id": "run359D_branch_to_stage360_regime_stability_pivot_v1__Tier_AplusB",
+            "run_id": "run359D_branch_to_stage360_regime_stability_pivot_v1",
+            "record_view": "Tier A+B combined(Tier A+B 합산)",
+            "tier_scope": "Tier A+B",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "drawdown": "285.94",
+            "long_trade_count": "472",
+            "max_drawdown_amount": "285.94",
+            "net_profit": "262.85",
+            "profit_factor": "1.09",
+            "recovery_factor": "0.92",
+            "short_trade_count": "464",
+            "trade_count": "936"
+          }
+        },
+        {
+          "line": 12837,
+          "identity": {
+            "ledger_row_id": "run360A_design_regime_stability_pivot_without_db_v1__Tier_B",
+            "run_id": "run360A_design_regime_stability_pivot_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required(필수 누락)"
+          },
+          "cleared_values": {
+            "long_trade_count": "472",
+            "max_drawdown_amount": "285.94",
+            "short_trade_count": "464"
+          }
+        },
+        {
+          "line": 12838,
+          "identity": {
+            "ledger_row_id": "run360A_design_regime_stability_pivot_without_db_v1__Tier_AplusB",
+            "run_id": "run360A_design_regime_stability_pivot_without_db_v1",
+            "record_view": "Tier A+B combined(Tier A+B 합산)",
+            "tier_scope": "Tier A+B",
+            "kpi_scope": "out_of_scope_by_claim_no_combined_execution(주장 범위 밖, 합산 실행 없음)"
+          },
+          "cleared_values": {
+            "long_trade_count": "472",
+            "max_drawdown_amount": "285.94",
+            "short_trade_count": "464"
+          }
+        },
+        {
+          "line": 12876,
+          "identity": {
+            "ledger_row_id": "run364F_prepare_timestamp_context_onnx_runtime_probe_without_db_v1__Tier_B",
+            "run_id": "run364F_prepare_timestamp_context_onnx_runtime_probe_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "net_profit": "78.86"
+          }
+        },
+        {
+          "line": 12930,
+          "identity": {
+            "ledger_row_id": "run364Z_materialize_density_side_balance_cost_session_stress_without_db_v1__Tier_B",
+            "run_id": "run364Z_materialize_density_side_balance_cost_session_stress_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "net_profit": "989.22",
+            "profit_factor": "1.3",
+            "trade_count": "1081"
+          }
+        },
+        {
+          "line": 12933,
+          "identity": {
+            "ledger_row_id": "run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1__Tier_B",
+            "run_id": "run364AA_train_density_side_balance_cost_session_stress_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "long_trade_count": "1125",
+            "max_drawdown_amount": "-168.999",
+            "net_profit": "771.423",
+            "profit_factor": "1.2175571938",
+            "short_trade_count": "139",
+            "trade_count": "1264"
+          }
+        },
+        {
+          "line": 12936,
+          "identity": {
+            "ledger_row_id": "run364AB_review_density_side_balance_cost_session_stress_scout_without_db_v1__Tier_B",
+            "run_id": "run364AB_review_density_side_balance_cost_session_stress_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "max_drawdown_amount": "-168.999",
+            "net_profit": "771.423",
+            "profit_factor": "1.2175571938",
+            "trade_count": "1264"
+          }
+        },
+        {
+          "line": 12942,
+          "identity": {
+            "ledger_row_id": "run364AD_train_pf_dd_near_miss_density_bridge_scout_without_db_v1__Tier_B",
+            "run_id": "run364AD_train_pf_dd_near_miss_density_bridge_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "long_trade_count": "882",
+            "max_drawdown_amount": "-142.323",
+            "net_profit": "840.055",
+            "profit_factor": "1.2739357721",
+            "short_trade_count": "119",
+            "trade_count": "1001"
+          }
+        },
+        {
+          "line": 12945,
+          "identity": {
+            "ledger_row_id": "run364AE_review_pf_dd_near_miss_density_bridge_scout_without_db_v1__Tier_B",
+            "run_id": "run364AE_review_pf_dd_near_miss_density_bridge_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "max_drawdown_amount": "-142.323",
+            "net_profit": "840.055",
+            "profit_factor": "1.2739357721",
+            "trade_count": "1001"
+          }
+        },
+        {
+          "line": 12951,
+          "identity": {
+            "ledger_row_id": "run364AG_train_pf_lift_density_safe_expansion_scout_without_db_v1__Tier_B",
+            "run_id": "run364AG_train_pf_lift_density_safe_expansion_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "long_trade_count": "882",
+            "max_drawdown_amount": "-142.323",
+            "net_profit": "840.055",
+            "profit_factor": "1.2739357721",
+            "short_trade_count": "119",
+            "trade_count": "1001"
+          }
+        },
+        {
+          "line": 12954,
+          "identity": {
+            "ledger_row_id": "run364AH_review_pf_lift_density_safe_expansion_scout_without_db_v1__Tier_B",
+            "run_id": "run364AH_review_pf_lift_density_safe_expansion_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "long_trade_count": "882",
+            "max_drawdown_amount": "-142.323",
+            "net_profit": "840.055",
+            "profit_factor": "1.2739357721",
+            "short_trade_count": "119",
+            "trade_count": "1001"
+          }
+        },
+        {
+          "line": 12960,
+          "identity": {
+            "ledger_row_id": "run364AJ_train_session_side_pf_lift_density_repair_scout_without_db_v1__Tier_B",
+            "run_id": "run364AJ_train_session_side_pf_lift_density_repair_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "long_trade_count": "882",
+            "max_drawdown_amount": "-142.323",
+            "net_profit": "840.055",
+            "profit_factor": "1.2739357721",
+            "short_trade_count": "119",
+            "trade_count": "1001"
+          }
+        },
+        {
+          "line": 12963,
+          "identity": {
+            "ledger_row_id": "run364AK_review_session_side_pf_lift_density_repair_scout_without_db_v1__Tier_B",
+            "run_id": "run364AK_review_session_side_pf_lift_density_repair_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required(필수 누락)"
+          },
+          "cleared_values": {
+            "drawdown": "-142.323",
+            "long_trade_count": "882",
+            "max_drawdown_amount": "-142.323",
+            "net_profit": "840.055",
+            "profit_factor": "1.2739357721",
+            "recovery_factor": "5.9024542765",
+            "short_trade_count": "119",
+            "trade_count": "1001"
+          }
+        },
+        {
+          "line": 12969,
+          "identity": {
+            "ledger_row_id": "run364AM_train_pf_pass_density_restore_offensive_scout_without_db_v1__Tier_B",
+            "run_id": "run364AM_train_pf_pass_density_restore_offensive_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required(필수 누락)"
+          },
+          "cleared_values": {
+            "long_trade_count": "1041",
+            "max_drawdown_amount": "-168.999",
+            "net_profit": "858.662",
+            "profit_factor": "1.2724135667",
+            "short_trade_count": "127",
+            "trade_count": "1168"
+          }
+        },
+        {
+          "line": 12972,
+          "identity": {
+            "ledger_row_id": "run364AN_review_pf_pass_density_restore_offensive_scout_without_db_v1__Tier_B",
+            "run_id": "run364AN_review_pf_pass_density_restore_offensive_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required(필수 누락)"
+          },
+          "cleared_values": {
+            "max_drawdown_amount": "-168.999",
+            "net_profit": "858.662",
+            "profit_factor": "1.2724135667",
+            "trade_count": "1168"
+          }
+        },
+        {
+          "line": 12996,
+          "identity": {
+            "ledger_row_id": "run364AV_execute_threshold_edge_floor001_mt5_runtime_probe_without_db_v1__Tier_B",
+            "run_id": "run364AV_execute_threshold_edge_floor001_mt5_runtime_probe_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim_no_tier_b_fallback(주장 범위 밖, Tier B 대체 없음)"
+          },
+          "cleared_values": {
+            "long_trade_count": "887",
+            "net_profit": "878.55",
+            "profit_factor": "1.36",
+            "short_trade_count": "84",
+            "trade_count": "971"
+          }
+        },
+        {
+          "line": 13005,
+          "identity": {
+            "ledger_row_id": "run364AY_train_threshold_edge_density_restore_cost_session_scout_without_db_v1__Tier_B",
+            "run_id": "run364AY_train_threshold_edge_density_restore_cost_session_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim_no_tier_b_fallback(주장 범위 밖, Tier B 대체 없음)"
+          },
+          "cleared_values": {
+            "drawdown": "-168.999",
+            "long_trade_count": "1041",
+            "net_profit": "858.662",
+            "profit_factor": "1.2724135667",
+            "recovery_factor": "5.080870301",
+            "short_trade_count": "127",
+            "trade_count": "1168"
+          }
+        },
+        {
+          "line": 13008,
+          "identity": {
+            "ledger_row_id": "run364AZ_review_threshold_edge_density_restore_cost_session_scout_without_db_v1__Tier_B",
+            "run_id": "run364AZ_review_threshold_edge_density_restore_cost_session_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim_no_tier_b_fallback(주장 범위 밖, Tier B 대체 없음)"
+          },
+          "cleared_values": {
+            "drawdown": "-132.758",
+            "net_profit": "874.129",
+            "profit_factor": "1.3019773488"
+          }
+        },
+        {
+          "line": 13014,
+          "identity": {
+            "ledger_row_id": "run364BB_train_density_restore_stress_to_candidate_scout_without_db_v1__Tier_B",
+            "run_id": "run364BB_train_density_restore_stress_to_candidate_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim_no_tier_b_fallback(주장 범위 밖, Tier B 대체 없음)"
+          },
+          "cleared_values": {
+            "drawdown": "-127.733",
+            "long_trade_count": "1009",
+            "net_profit": "919.75",
+            "profit_factor": "1.3178004168",
+            "recovery_factor": "7.2005668073",
+            "short_trade_count": "103",
+            "trade_count": "1112"
+          }
+        },
+        {
+          "line": 13017,
+          "identity": {
+            "ledger_row_id": "run364BC_review_density_restore_stress_to_candidate_scout_without_db_v1__Tier_B",
+            "run_id": "run364BC_review_density_restore_stress_to_candidate_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim_no_tier_b_fallback(주장 범위 밖, Tier B 대체 없음)"
+          },
+          "cleared_values": {
+            "drawdown": "-127.733",
+            "long_trade_count": "1009",
+            "net_profit": "919.75",
+            "profit_factor": "1.3178004168",
+            "recovery_factor": "7.2005668073",
+            "short_trade_count": "103",
+            "trade_count": "1112"
+          }
+        },
+        {
+          "line": 13020,
+          "identity": {
+            "ledger_row_id": "run364BD_package_density_restore_stress_candidate_runtime_probe_without_db_v1__Tier_B",
+            "run_id": "run364BD_package_density_restore_stress_candidate_runtime_probe_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim_no_tier_b_fallback(주장 범위 밖, Tier B 대체 없음)"
+          },
+          "cleared_values": {
+            "drawdown": "-127.733",
+            "long_trade_count": "1009",
+            "net_profit": "919.75",
+            "profit_factor": "1.3178004168",
+            "recovery_factor": "7.2005668073",
+            "short_trade_count": "103",
+            "trade_count": "1112"
+          }
+        },
+        {
+          "line": 13023,
+          "identity": {
+            "ledger_row_id": "run364BE_execute_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1__Tier_B",
+            "run_id": "run364BE_execute_density_restore_stress_candidate_mt5_runtime_probe_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "out_of_scope_by_claim_no_tier_b_fallback(주장 범위 밖, Tier B 대체 없음)"
+          },
+          "cleared_values": {
+            "long_trade_count": "917",
+            "net_profit": "900.36",
+            "profit_factor": "1.35",
+            "short_trade_count": "99",
+            "trade_count": "1016"
+          }
+        },
+        {
+          "line": 13035,
+          "identity": {
+            "ledger_row_id": "run364BI_review_density_restore_forward_regime_stress_scout_without_db_v1::tier_b_missing_required",
+            "run_id": "run364BI_review_density_restore_forward_regime_stress_scout_without_db_v1",
+            "record_view": "Tier B separate(Tier B 분리)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required"
+          },
+          "cleared_values": {
+            "long_trade_count": "904",
+            "max_drawdown_amount": "86.04",
+            "recovery_factor": "10.9087633659",
+            "short_trade_count": "99"
+          }
+        },
+        {
+          "line": 13036,
+          "identity": {
+            "ledger_row_id": "run364BI_review_density_restore_forward_regime_stress_scout_without_db_v1::tier_ab_combined_missing_required",
+            "run_id": "run364BI_review_density_restore_forward_regime_stress_scout_without_db_v1",
+            "record_view": "Tier A+B combined(Tier A+B 합산)",
+            "tier_scope": "Tier A+B",
+            "kpi_scope": "missing_required"
+          },
+          "cleared_values": {
+            "long_trade_count": "904",
+            "max_drawdown_amount": "86.04",
+            "recovery_factor": "10.9087633659",
+            "short_trade_count": "99"
+          }
+        },
+        {
+          "line": 13074,
+          "identity": {
+            "ledger_row_id": "run364BV_materialize_synthetic_short_source_runtime_repair_without_db_v1::Tier_B",
+            "run_id": "run364BV_materialize_synthetic_short_source_runtime_repair_without_db_v1",
+            "record_view": "Tier B fallback used(Tier B 대체 사용)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required"
+          },
+          "cleared_values": {
+            "long_trade_count": "904",
+            "short_trade_count": "114"
+          }
+        },
+        {
+          "line": 13077,
+          "identity": {
+            "ledger_row_id": "run364BW_review_synthetic_short_source_runtime_probe_without_db_v1::Tier_B",
+            "run_id": "run364BW_review_synthetic_short_source_runtime_probe_without_db_v1",
+            "record_view": "Tier B fallback used(Tier B 대체 사용)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required"
+          },
+          "cleared_values": {
+            "max_drawdown_amount": "130.11",
+            "recovery_factor": "7.43"
+          }
+        },
+        {
+          "line": 13080,
+          "identity": {
+            "ledger_row_id": "run364BX_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1::Tier_B",
+            "run_id": "run364BX_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1",
+            "record_view": "Tier B fallback used(Tier B 대체 사용)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required"
+          },
+          "cleared_values": {
+            "long_trade_count": "903",
+            "net_profit": "1008.18",
+            "profit_factor": "1.4",
+            "recovery_factor": "7.75",
+            "short_trade_count": "105",
+            "trade_count": "1008"
+          }
+        },
+        {
+          "line": 13083,
+          "identity": {
+            "ledger_row_id": "run364BY_review_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1::Tier_B",
+            "run_id": "run364BY_review_overlay_hour17_native_short_ablation_runtime_probe_without_db_v1",
+            "record_view": "Tier B fallback used(Tier B 대체 사용)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required"
+          },
+          "cleared_values": {
+            "drawdown": "130.11",
+            "net_profit": "1008.18",
+            "profit_factor": "1.4",
+            "recovery_factor": "7.75",
+            "trade_count": "1008"
+          }
+        },
+        {
+          "line": 13086,
+          "identity": {
+            "ledger_row_id": "run364BZ_materialize_bx03_december_late_session_guard_inputs_without_db_v1::Tier_B",
+            "run_id": "run364BZ_materialize_bx03_december_late_session_guard_inputs_without_db_v1",
+            "record_view": "Tier B fallback used(Tier B 대체 사용)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required"
+          },
+          "cleared_values": {
+            "max_drawdown_amount": "130.11",
+            "net_profit": "1008.18",
+            "profit_factor": "1.4",
+            "recovery_factor": "7.75",
+            "trade_count": "1008"
+          }
+        },
+        {
+          "line": 13089,
+          "identity": {
+            "ledger_row_id": "run364CA_execute_bx03_guard_stack_runtime_probe_without_db_v1::Tier_B",
+            "run_id": "run364CA_execute_bx03_guard_stack_runtime_probe_without_db_v1",
+            "record_view": "Tier B fallback used(Tier B 대체 사용)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required"
+          },
+          "cleared_values": {
+            "long_trade_count": "903",
+            "max_drawdown_amount": "130.11",
+            "net_profit": "997.49",
+            "profit_factor": "1.4",
+            "recovery_factor": "7.67",
+            "short_trade_count": "105",
+            "trade_count": "1008"
+          }
+        },
+        {
+          "line": 13092,
+          "identity": {
+            "ledger_row_id": "run364CB_review_bx03_guard_stack_runtime_probe_without_db_v1::Tier_B",
+            "run_id": "run364CB_review_bx03_guard_stack_runtime_probe_without_db_v1",
+            "record_view": "Tier B fallback used(Tier B 대체 사용)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required"
+          },
+          "cleared_values": {
+            "long_trade_count": "903",
+            "max_drawdown_amount": "130.11",
+            "net_profit": "997.49",
+            "profit_factor": "1.4",
+            "recovery_factor": "7.67",
+            "short_trade_count": "105",
+            "trade_count": "1008"
+          }
+        },
+        {
+          "line": 13095,
+          "identity": {
+            "ledger_row_id": "run364CC_materialize_swap_stable_reprobe_and_source_guard_inputs_without_db_v1::Tier_B",
+            "run_id": "run364CC_materialize_swap_stable_reprobe_and_source_guard_inputs_without_db_v1",
+            "record_view": "Tier B fallback used(Tier B 대체 사용)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required"
+          },
+          "cleared_values": {
+            "max_drawdown_amount": "130.11",
+            "net_profit": "997.49",
+            "profit_factor": "1.4",
+            "recovery_factor": "7.67",
+            "trade_count": "1008"
+          }
+        },
+        {
+          "line": 13098,
+          "identity": {
+            "ledger_row_id": "run364CD_execute_swap_stable_reprobe_and_source_guard_mt5_runtime_probe_without_db_v1::Tier_B",
+            "run_id": "run364CD_execute_swap_stable_reprobe_and_source_guard_mt5_runtime_probe_without_db_v1",
+            "record_view": "Tier B fallback used(Tier B 대체 사용)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required"
+          },
+          "cleared_values": {
+            "long_trade_count": "903",
+            "max_drawdown_amount": "130.11",
+            "net_profit": "997.49",
+            "profit_factor": "1.4",
+            "recovery_factor": "7.67",
+            "short_trade_count": "105",
+            "trade_count": "1008"
+          }
+        },
+        {
+          "line": 13101,
+          "identity": {
+            "ledger_row_id": "run364CE_review_swap_stable_reprobe_and_source_guard_mt5_runtime_probe_without_db_v1::Tier_B",
+            "run_id": "run364CE_review_swap_stable_reprobe_and_source_guard_mt5_runtime_probe_without_db_v1",
+            "record_view": "Tier B fallback used(Tier B 대체 사용)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required"
+          },
+          "cleared_values": {
+            "long_trade_count": "903",
+            "max_drawdown_amount": "130.11",
+            "net_profit": "997.49",
+            "profit_factor": "1.4",
+            "recovery_factor": "7.67",
+            "short_trade_count": "105",
+            "trade_count": "1008"
+          }
+        },
+        {
+          "line": 13104,
+          "identity": {
+            "ledger_row_id": "run364CF_materialize_cost_stable_h17_source_guard_offensive_inputs_without_db_v1::Tier_B",
+            "run_id": "run364CF_materialize_cost_stable_h17_source_guard_offensive_inputs_without_db_v1",
+            "record_view": "Tier B fallback used(Tier B 대체 사용)",
+            "tier_scope": "Tier B",
+            "kpi_scope": "missing_required"
+          },
+          "cleared_values": {
+            "long_trade_count": "903",
+            "max_drawdown_amount": "130.11",
+            "net_profit": "997.49",
+            "profit_factor": "1.4",
+            "recovery_factor": "7.67",
+            "short_trade_count": "105",
+            "trade_count": "1008"
+          }
+        },
+        {
+          "line": 14165,
+          "identity": {
+            "ledger_row_id": "frontier80B_broad_extreme_multi_axis_proxy_scout_v1__tier_b_missing_required",
+            "run_id": "frontier80B_broad_extreme_multi_axis_proxy_scout_v1",
+            "record_view": "Tier B separate(티어 B 분리)",
+            "tier_scope": "Tier B missing_required",
+            "kpi_scope": "missing_required(필수 누락)"
+          },
+          "cleared_values": {
+            "drawdown": "3.3248380473311503",
+            "drawdown_percent": "3.3248380473311503",
+            "expected_net_profit": "120.8358630248701",
+            "expected_profit_factor": "1.354611129189717",
+            "expected_trade_count": "565",
+            "expected_trade_density": "2.084870848708487",
+            "max_drawdown_percent": "3.3248380473311503",
+            "net_profit": "128.87029690818866",
+            "oos_drawdown_percent": "3.3248380473311503",
+            "oos_net_profit": "128.87029690818866",
+            "oos_profit_factor": "1.4006895505509505",
+            "oos_trade_count": "546",
+            "oos_trades_per_day": "2.814432989690722",
+            "profit_factor": "1.4006895505509505",
+            "trade_count": "546",
+            "trades_per_day": "2.084870848708487"
+          }
+        },
+        {
+          "line": 14166,
+          "identity": {
+            "ledger_row_id": "frontier80B_broad_extreme_multi_axis_proxy_scout_v1__tier_ab_combined_out_of_scope",
+            "run_id": "frontier80B_broad_extreme_multi_axis_proxy_scout_v1",
+            "record_view": "Tier A+B combined(티어 A+B 합산)",
+            "tier_scope": "Tier A+B out_of_scope_by_claim",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "drawdown": "3.3248380473311503",
+            "drawdown_percent": "3.3248380473311503",
+            "expected_net_profit": "120.8358630248701",
+            "expected_profit_factor": "1.354611129189717",
+            "expected_trade_count": "565",
+            "expected_trade_density": "2.084870848708487",
+            "max_drawdown_percent": "3.3248380473311503",
+            "net_profit": "128.87029690818866",
+            "oos_drawdown_percent": "3.3248380473311503",
+            "oos_net_profit": "128.87029690818866",
+            "oos_profit_factor": "1.4006895505509505",
+            "oos_trade_count": "546",
+            "oos_trades_per_day": "2.814432989690722",
+            "profit_factor": "1.4006895505509505",
+            "trade_count": "546",
+            "trades_per_day": "2.084870848708487"
+          }
+        },
+        {
+          "line": 14174,
+          "identity": {
+            "ledger_row_id": "frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1__tier_b_missing_required",
+            "run_id": "frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1",
+            "record_view": "Tier B separate(티어 B 분리)",
+            "tier_scope": "Tier B missing_required",
+            "kpi_scope": "missing_required(필수 누락)"
+          },
+          "cleared_values": {
+            "drawdown": "2.1716124706154005",
+            "drawdown_percent": "2.1716124706154005",
+            "expected_net_profit": "145.29843879680283",
+            "expected_profit_factor": "1.3885833720830922",
+            "expected_trade_count": "688",
+            "expected_trade_density": "2.5387453874538743",
+            "max_drawdown_percent": "2.1716124706154005",
+            "net_profit": "128.0461841691357",
+            "oos_drawdown_percent": "2.1716124706154005",
+            "oos_net_profit": "128.0461841691357",
+            "oos_profit_factor": "1.4582506579636618",
+            "oos_trade_count": "532",
+            "oos_trades_per_day": "2.7422680412371134",
+            "profit_factor": "1.4582506579636618",
+            "trade_count": "532",
+            "trades_per_day": "2.5387453874538743"
+          }
+        },
+        {
+          "line": 14175,
+          "identity": {
+            "ledger_row_id": "frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1__tier_ab_combined_out_of_scope",
+            "run_id": "frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1",
+            "record_view": "Tier A+B combined(티어 A+B 합산)",
+            "tier_scope": "Tier A+B out_of_scope_by_claim",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "drawdown": "2.1716124706154005",
+            "drawdown_percent": "2.1716124706154005",
+            "expected_net_profit": "145.29843879680283",
+            "expected_profit_factor": "1.3885833720830922",
+            "expected_trade_count": "688",
+            "expected_trade_density": "2.5387453874538743",
+            "max_drawdown_percent": "2.1716124706154005",
+            "net_profit": "128.0461841691357",
+            "oos_drawdown_percent": "2.1716124706154005",
+            "oos_net_profit": "128.0461841691357",
+            "oos_profit_factor": "1.4582506579636618",
+            "oos_trade_count": "532",
+            "oos_trades_per_day": "2.7422680412371134",
+            "profit_factor": "1.4582506579636618",
+            "trade_count": "532",
+            "trades_per_day": "2.5387453874538743"
+          }
+        },
+        {
+          "line": 14180,
+          "identity": {
+            "ledger_row_id": "frontier81F_deal_reconciled_runtime_label_preflight_v1__tier_b_missing_required",
+            "run_id": "frontier81F_deal_reconciled_runtime_label_preflight_v1",
+            "record_view": "Tier B separate(티어 B 분리)",
+            "tier_scope": "Tier B missing_required",
+            "kpi_scope": "missing_required(필수 누락)"
+          },
+          "cleared_values": {
+            "drawdown": "23.72",
+            "expected_net_profit": "120.89973397988815",
+            "expected_profit_factor": "1.396125563144892",
+            "expected_trade_count": "670",
+            "max_drawdown_percent": "23.72",
+            "net_profit": "-115.71",
+            "profit_factor": "0.7332887700534759",
+            "trade_count": "670",
+            "trades_per_day": "3.4358974358974357"
+          }
+        },
+        {
+          "line": 14181,
+          "identity": {
+            "ledger_row_id": "frontier81F_deal_reconciled_runtime_label_preflight_v1__tier_ab_combined_out_of_scope",
+            "run_id": "frontier81F_deal_reconciled_runtime_label_preflight_v1",
+            "record_view": "Tier A+B combined(티어 A+B 합산)",
+            "tier_scope": "Tier A+B out_of_scope_by_claim",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "drawdown": "23.72",
+            "expected_net_profit": "120.89973397988815",
+            "expected_profit_factor": "1.396125563144892",
+            "expected_trade_count": "670",
+            "max_drawdown_percent": "23.72",
+            "net_profit": "-115.71",
+            "profit_factor": "0.7332887700534759",
+            "trade_count": "670",
+            "trades_per_day": "3.4358974358974357"
+          }
+        },
+        {
+          "line": 14183,
+          "identity": {
+            "ledger_row_id": "frontier81G_mt5_realized_label_rebuild_v1__tier_b_missing_required",
+            "run_id": "frontier81G_mt5_realized_label_rebuild_v1",
+            "record_view": "Tier B separate(티어 B 분리)",
+            "tier_scope": "Tier B missing_required",
+            "kpi_scope": "missing_required(필수 누락)"
+          },
+          "cleared_values": {
+            "drawdown": "0.6830574201295305",
+            "max_drawdown_percent": "0.6830574201295305",
+            "net_profit": "8.91",
+            "profit_factor": "1.4312681510164567",
+            "trade_count": "40",
+            "trades_per_day": "0.20512820512820512"
+          }
+        },
+        {
+          "line": 14184,
+          "identity": {
+            "ledger_row_id": "frontier81G_mt5_realized_label_rebuild_v1__tier_ab_combined_out_of_scope",
+            "run_id": "frontier81G_mt5_realized_label_rebuild_v1",
+            "record_view": "Tier A+B combined(티어 A+B 합산)",
+            "tier_scope": "Tier A+B out_of_scope_by_claim",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "drawdown": "0.6830574201295305",
+            "max_drawdown_percent": "0.6830574201295305",
+            "net_profit": "8.91",
+            "profit_factor": "1.4312681510164567",
+            "trade_count": "40",
+            "trades_per_day": "0.20512820512820512"
+          }
+        },
+        {
+          "line": 14188,
+          "identity": {
+            "ledger_row_id": "frontier82B_density_first_runtime_economic_mechanism_proxy_scout_v1__tier_b_missing_required",
+            "run_id": "frontier82B_density_first_runtime_economic_mechanism_proxy_scout_v1",
+            "record_view": "Tier B separate(티어 B 분리)",
+            "tier_scope": "Tier B missing_required",
+            "kpi_scope": "missing_required(필수 누락)"
+          },
+          "cleared_values": {
+            "drawdown": "2.4483866090271933",
+            "drawdown_percent": "2.4483866090271933",
+            "expected_net_profit": "234.95374351707255",
+            "expected_profit_factor": "1.2528537782907594",
+            "expected_trade_count": "1978",
+            "expected_trade_density": "7.2988929889298895",
+            "max_drawdown_percent": "2.4483866090271933",
+            "net_profit": "190.97504260071986",
+            "oos_drawdown_percent": "2.4483866090271933",
+            "oos_net_profit": "190.97504260071986",
+            "oos_profit_factor": "1.312138066226088",
+            "oos_trade_count": "1340",
+            "oos_trades_per_day": "6.907216494845361",
+            "profit_factor": "1.312138066226088",
+            "trade_count": "1340",
+            "trades_per_day": "7.2988929889298895"
+          }
+        },
+        {
+          "line": 14189,
+          "identity": {
+            "ledger_row_id": "frontier82B_density_first_runtime_economic_mechanism_proxy_scout_v1__tier_ab_combined_out_of_scope",
+            "run_id": "frontier82B_density_first_runtime_economic_mechanism_proxy_scout_v1",
+            "record_view": "Tier A+B combined(티어 A+B 합산)",
+            "tier_scope": "Tier A+B out_of_scope_by_claim",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "drawdown": "2.4483866090271933",
+            "drawdown_percent": "2.4483866090271933",
+            "expected_net_profit": "234.95374351707255",
+            "expected_profit_factor": "1.2528537782907594",
+            "expected_trade_count": "1978",
+            "expected_trade_density": "7.2988929889298895",
+            "max_drawdown_percent": "2.4483866090271933",
+            "net_profit": "190.97504260071986",
+            "oos_drawdown_percent": "2.4483866090271933",
+            "oos_net_profit": "190.97504260071986",
+            "oos_profit_factor": "1.312138066226088",
+            "oos_trade_count": "1340",
+            "oos_trades_per_day": "6.907216494845361",
+            "profit_factor": "1.312138066226088",
+            "trade_count": "1340",
+            "trades_per_day": "7.2988929889298895"
+          }
+        },
+        {
+          "line": 14194,
+          "identity": {
+            "ledger_row_id": "frontier82F_deal_reconciled_runtime_label_preflight_v1__tier_b_missing_required",
+            "run_id": "frontier82F_deal_reconciled_runtime_label_preflight_v1",
+            "record_view": "Tier B separate(티어 B 분리)",
+            "tier_scope": "Tier B missing_required",
+            "kpi_scope": "missing_required(필수 누락)"
+          },
+          "cleared_values": {
+            "drawdown": "20.36",
+            "expected_net_profit": "190.97504260071986",
+            "expected_profit_factor": "1.312138066226088",
+            "expected_trade_count": "1340",
+            "max_drawdown_percent": "20.36",
+            "net_profit": "-55.209999999999994",
+            "profit_factor": "0.9332922526702432",
+            "trade_count": "1338",
+            "trades_per_day": "6.861538461538461"
+          }
+        },
+        {
+          "line": 14195,
+          "identity": {
+            "ledger_row_id": "frontier82F_deal_reconciled_runtime_label_preflight_v1__tier_ab_combined_out_of_scope",
+            "run_id": "frontier82F_deal_reconciled_runtime_label_preflight_v1",
+            "record_view": "Tier A+B combined(티어 A+B 합산)",
+            "tier_scope": "Tier A+B out_of_scope_by_claim",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "drawdown": "20.36",
+            "expected_net_profit": "190.97504260071986",
+            "expected_profit_factor": "1.312138066226088",
+            "expected_trade_count": "1340",
+            "max_drawdown_percent": "20.36",
+            "net_profit": "-55.209999999999994",
+            "profit_factor": "0.9332922526702432",
+            "trade_count": "1338",
+            "trades_per_day": "6.861538461538461"
+          }
+        },
+        {
+          "line": 14197,
+          "identity": {
+            "ledger_row_id": "frontier82G_mt5_realized_label_rebuild_v1__tier_b_missing_required",
+            "run_id": "frontier82G_mt5_realized_label_rebuild_v1",
+            "record_view": "Tier B separate(티어 B 분리)",
+            "tier_scope": "Tier B missing_required",
+            "kpi_scope": "missing_required(필수 누락)"
+          },
+          "cleared_values": {
+            "drawdown": "2.6656907875730034",
+            "max_drawdown_percent": "2.6656907875730034",
+            "net_profit": "25.24",
+            "oos_drawdown_percent": "2.6656907875730034",
+            "oos_net_profit": "25.24",
+            "oos_profit_factor": "1.2095475300954754",
+            "oos_trade_count": "215",
+            "oos_trades_per_day": "1.1025641025641026",
+            "profit_factor": "1.2095475300954754",
+            "trade_count": "215",
+            "trades_per_day": "1.1025641025641026"
+          }
+        },
+        {
+          "line": 14198,
+          "identity": {
+            "ledger_row_id": "frontier82G_mt5_realized_label_rebuild_v1__tier_ab_combined_out_of_scope",
+            "run_id": "frontier82G_mt5_realized_label_rebuild_v1",
+            "record_view": "Tier A+B combined(티어 A+B 합산)",
+            "tier_scope": "Tier A+B out_of_scope_by_claim",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "drawdown": "2.6656907875730034",
+            "max_drawdown_percent": "2.6656907875730034",
+            "net_profit": "25.24",
+            "oos_drawdown_percent": "2.6656907875730034",
+            "oos_net_profit": "25.24",
+            "oos_profit_factor": "1.2095475300954754",
+            "oos_trade_count": "215",
+            "oos_trades_per_day": "1.1025641025641026",
+            "profit_factor": "1.2095475300954754",
+            "trade_count": "215",
+            "trades_per_day": "1.1025641025641026"
+          }
+        },
+        {
+          "line": 14200,
+          "identity": {
+            "ledger_row_id": "frontier82H_capped_repair_closeout_or_f83_rotation_decision_v1__tier_b_missing_required",
+            "run_id": "frontier82H_capped_repair_closeout_or_f83_rotation_decision_v1",
+            "record_view": "Tier B separate(티어 B 분리)",
+            "tier_scope": "Tier B missing_required",
+            "kpi_scope": "missing_required(필수 누락)"
+          },
+          "cleared_values": {
+            "drawdown": "20.36",
+            "max_drawdown_percent": "20.36",
+            "net_profit": "-55.209999999999994",
+            "oos_drawdown_percent": "20.36",
+            "oos_net_profit": "-55.209999999999994",
+            "oos_profit_factor": "0.9332922526702432",
+            "oos_trade_count": "1338",
+            "oos_trades_per_day": "6.861538461538461",
+            "profit_factor": "0.9332922526702432",
+            "trade_count": "1338",
+            "trades_per_day": "6.861538461538461"
+          }
+        },
+        {
+          "line": 14201,
+          "identity": {
+            "ledger_row_id": "frontier82H_capped_repair_closeout_or_f83_rotation_decision_v1__tier_ab_combined_out_of_scope",
+            "run_id": "frontier82H_capped_repair_closeout_or_f83_rotation_decision_v1",
+            "record_view": "Tier A+B combined(티어 A+B 합산)",
+            "tier_scope": "Tier A+B out_of_scope_by_claim",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "drawdown": "20.36",
+            "max_drawdown_percent": "20.36",
+            "net_profit": "-55.209999999999994",
+            "oos_drawdown_percent": "20.36",
+            "oos_net_profit": "-55.209999999999994",
+            "oos_profit_factor": "0.9332922526702432",
+            "oos_trade_count": "1338",
+            "oos_trades_per_day": "6.861538461538461",
+            "profit_factor": "0.9332922526702432",
+            "trade_count": "1338",
+            "trades_per_day": "6.861538461538461"
+          }
+        },
+        {
+          "line": 14213,
+          "identity": {
+            "ledger_row_id": "frontier84B_runtime_realized_winrate_proxy_scout_v1__tier_b_missing_required",
+            "run_id": "frontier84B_runtime_realized_winrate_proxy_scout_v1",
+            "record_view": "Tier B separate(티어 B 분리)",
+            "tier_scope": "Tier B missing_required",
+            "kpi_scope": "missing_required(필수 누락)"
+          },
+          "cleared_values": {
+            "drawdown": "2.448386609027216",
+            "drawdown_percent": "2.448386609027216",
+            "expected_net_profit": "344.41614106573314",
+            "expected_profit_factor": "1.3956508579971207",
+            "expected_trade_count": "2267",
+            "expected_trade_density": "8.365313653136532",
+            "max_drawdown_percent": "2.448386609027216",
+            "net_profit": "291.809538642352",
+            "oos_drawdown_percent": "2.448386609027216",
+            "oos_net_profit": "291.809538642352",
+            "oos_profit_factor": "1.4198723594358282",
+            "oos_trade_count": "1845",
+            "oos_trades_per_day": "9.510309278350515",
+            "profit_factor": "1.4198723594358282",
+            "trade_count": "1845",
+            "trades_per_day": "8.365313653136532"
+          }
+        },
+        {
+          "line": 14214,
+          "identity": {
+            "ledger_row_id": "frontier84B_runtime_realized_winrate_proxy_scout_v1__tier_ab_combined_out_of_scope",
+            "run_id": "frontier84B_runtime_realized_winrate_proxy_scout_v1",
+            "record_view": "Tier A+B combined(티어 A+B 합산)",
+            "tier_scope": "Tier A+B out_of_scope_by_claim",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "drawdown": "2.448386609027216",
+            "drawdown_percent": "2.448386609027216",
+            "expected_net_profit": "344.41614106573314",
+            "expected_profit_factor": "1.3956508579971207",
+            "expected_trade_count": "2267",
+            "expected_trade_density": "8.365313653136532",
+            "max_drawdown_percent": "2.448386609027216",
+            "net_profit": "291.809538642352",
+            "oos_drawdown_percent": "2.448386609027216",
+            "oos_net_profit": "291.809538642352",
+            "oos_profit_factor": "1.4198723594358282",
+            "oos_trade_count": "1845",
+            "oos_trades_per_day": "9.510309278350515",
+            "profit_factor": "1.4198723594358282",
+            "trade_count": "1845",
+            "trades_per_day": "8.365313653136532"
+          }
+        }
+      ]
+    },
+    {
+      "path": "docs/registers/run_registry.csv",
+      "before_sha256": "ee05c6d77e11617c431596c992038313e45a8a51825f4cb60a43b9f4fb62f7cd",
+      "after_sha256": "70209deed75d4e135a656d04b2c82b329c48523e33fd4d18f52adc3c2aacbe31",
+      "had_utf8_bom": true,
+      "newline": "\\n",
+      "rows": [
+        {
+          "line": 1887,
+          "identity": {
+            "ledger_row_id": "run359D_branch_to_stage360_regime_stability_pivot_v1__Tier_AplusB",
+            "run_id": "run359D_branch_to_stage360_regime_stability_pivot_v1",
+            "record_view": "Tier A+B combined(Tier A+B 합산)",
+            "tier_scope": "Tier A+B",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "drawdown": "285.94",
+            "long_trade_count": "472",
+            "max_drawdown_amount": "285.94",
+            "net_profit": "262.85",
+            "profit_factor": "1.09",
+            "recovery_factor": "0.92",
+            "short_trade_count": "464",
+            "trade_count": "936"
+          }
+        },
+        {
+          "line": 1888,
+          "identity": {
+            "ledger_row_id": "run360A_design_regime_stability_pivot_without_db_v1__Tier_AplusB",
+            "run_id": "run360A_design_regime_stability_pivot_without_db_v1",
+            "record_view": "Tier A+B combined(Tier A+B 합산)",
+            "tier_scope": "Tier A+B",
+            "kpi_scope": "out_of_scope_by_claim_no_combined_execution(주장 범위 밖, 합산 실행 없음)"
+          },
+          "cleared_values": {
+            "long_trade_count": "472",
+            "max_drawdown_amount": "285.94",
+            "short_trade_count": "464"
+          }
+        }
+      ]
+    },
+    {
+      "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/stage_run_ledger.csv",
+      "before_sha256": "636358e1a780776b71c2353881e11b704e02102f5c6b561f28e5f63a721ccdb1",
+      "after_sha256": "931c3295281f086f5680907974f0f5825dec68f25fd8d1875828652a5490de21",
+      "had_utf8_bom": true,
+      "newline": "\\n",
+      "rows": [
+        {
+          "line": 4,
+          "identity": {
+            "ledger_row_id": "frontier84B_runtime_realized_winrate_proxy_scout_v1__tier_b_missing_required",
+            "run_id": "frontier84B_runtime_realized_winrate_proxy_scout_v1",
+            "record_view": "Tier B separate(티어 B 분리)",
+            "tier_scope": "Tier B missing_required",
+            "kpi_scope": "missing_required(필수 누락)"
+          },
+          "cleared_values": {
+            "drawdown": "2.448386609027216",
+            "drawdown_percent": "2.448386609027216",
+            "expected_net_profit": "344.41614106573314",
+            "expected_profit_factor": "1.3956508579971207",
+            "expected_trade_count": "2267",
+            "expected_trade_density": "8.365313653136532",
+            "max_drawdown_percent": "2.448386609027216",
+            "net_profit": "291.809538642352",
+            "oos_drawdown_percent": "2.448386609027216",
+            "oos_net_profit": "291.809538642352",
+            "oos_profit_factor": "1.4198723594358282",
+            "oos_trade_count": "1845",
+            "oos_trades_per_day": "9.510309278350515",
+            "profit_factor": "1.4198723594358282",
+            "trade_count": "1845",
+            "trades_per_day": "8.365313653136532"
+          }
+        },
+        {
+          "line": 5,
+          "identity": {
+            "ledger_row_id": "frontier84B_runtime_realized_winrate_proxy_scout_v1__tier_ab_combined_out_of_scope",
+            "run_id": "frontier84B_runtime_realized_winrate_proxy_scout_v1",
+            "record_view": "Tier A+B combined(티어 A+B 합산)",
+            "tier_scope": "Tier A+B out_of_scope_by_claim",
+            "kpi_scope": "out_of_scope_by_claim(주장 범위 밖)"
+          },
+          "cleared_values": {
+            "drawdown": "2.448386609027216",
+            "drawdown_percent": "2.448386609027216",
+            "expected_net_profit": "344.41614106573314",
+            "expected_profit_factor": "1.3956508579971207",
+            "expected_trade_count": "2267",
+            "expected_trade_density": "8.365313653136532",
+            "max_drawdown_percent": "2.448386609027216",
+            "net_profit": "291.809538642352",
+            "oos_drawdown_percent": "2.448386609027216",
+            "oos_net_profit": "291.809538642352",
+            "oos_profit_factor": "1.4198723594358282",
+            "oos_trade_count": "1845",
+            "oos_trades_per_day": "9.510309278350515",
+            "profit_factor": "1.4198723594358282",
+            "trade_count": "1845",
+            "trades_per_day": "8.365313653136532"
+          }
+        }
+      ]
+    }
+  ],
+  "cleaned_rows": 64,
+  "cleared_values": 478
+}

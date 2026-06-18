@@ -41,6 +41,10 @@ Tier A primary + Tier B fallback(Tier A 우선 + Tier B 대체) 방식의 MT5(`M
 
 효과(effect, 효과)는 수익 attribution(귀속)이 없는 구간별 성과를 만든 것처럼 보이지 않게 하는 것이다.
 
+`missing_required(필수 누락)` 또는 `out_of_scope_by_claim(주장 범위 밖)` row(행)는 net_profit/profit_factor/drawdown/trade_count(순수익/수익 팩터/손실/거래 수) 같은 economic KPI column(경제 KPI 열)을 채우지 않는다. 필요한 경우 `primary_kpi(주 KPI)`에는 missing/out-of-scope reason(누락/범위 밖 사유)만 적고, 실제 경제 숫자는 `actual_routed_total(실제 라우팅 전체)` 또는 verified runtime row(검증된 런타임 행)에 둔다.
+
+효과(effect, 효과)는 Tier B missing(티어 B 누락)이나 combined out-of-scope(합산 범위 밖) 행이 Tier A 또는 parent runtime(상위 런타임)의 수익 숫자를 빌려 와서 다차원 KPI(다차원 핵심 성과 지표)를 일차원 수익 주장으로 흐리게 하지 않는 것이다.
+
 Tier B fallback(Tier B 대체) 행은 partial-context subtype counts(부분 문맥 하위유형 수), no_tier labelable count(티어 없음 라벨 가능 수), routed labelable count(라우팅 라벨 가능 수)를 함께 적는다.
 
 효과(effect, 효과)는 Tier B(티어 B)가 실제로 어떤 빈 구간을 메웠는지와, 아직 all skip(전체 스킵)으로 남은 구간이 얼마나 되는지를 같은 KPI(핵심 성과 지표)에서 보게 하는 것이다.

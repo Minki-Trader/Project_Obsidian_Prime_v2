@@ -12,6 +12,50 @@ from foundation.control_plane.audit_result import COMPLETION_CLAIMS, AuditFindin
 from foundation.control_plane.ledger import io_path, path_exists
 
 
+TASK_FORCE_REVIEW_SKILL = "obsidian-task-force-review"
+TASK_FORCE_REQUIRED_MARKERS = {
+    "required",
+    "gate_required",
+    "packet_required",
+    "family_required",
+    "user_required",
+    "user_instruction_required",
+    "explicit_user_instruction_required",
+    "active_goal_required",
+    "goal_required",
+    "router_selected_required",
+    "router_selection_required",
+    "router_overlay_required",
+    "router_selected_task_force_overlay",
+    "closeout_required",
+    "codex_task_force_review_packet",
+}
+TASK_FORCE_BLOCKED_STATUSES = {
+    "tool_unavailable",
+    "not_called",
+    "not_applicable_with_reason",
+    "blocked_for_task_force_review",
+}
+TASK_FORCE_REVIEW_CLAIMS = {
+    "reviewed",
+    "verified",
+    "pass",
+    "stage_closeout_pass",
+    "internally_reviewed",
+    "rehearsed_control_plane",
+    "task_force_reviewed",
+}
+TASK_FORCE_CALL_REQUIRED_FIELDS = (
+    "roster_agent_id",
+    "spawned_agent_id",
+    "tool_name",
+    "result_status",
+    "opinion_classification",
+)
+TASK_FORCE_CALL_TOOL_NAME = "multi_agent_v1.spawn_agent"
+TASK_FORCE_OPINION_CLASSIFICATIONS = {"accepted", "rejected", "needs_local_verification"}
+
+
 def audit_skill_receipt_schemas(
     receipts: Sequence[Mapping[str, Any]],
     *,
@@ -28,7 +72,7 @@ def audit_skill_receipt_schemas(
     for index, receipt in enumerate(receipts):
         skill = str(receipt.get("skill", ""))
         receipt_status = str(receipt.get("status", ""))
-        receipt_path = str(receipt.get("receipt_path", ""))
+        receipt_path = str(receipt.get("receipt_path") or receipt.get("path") or "")
         if receipt_path and not path_exists(root / receipt_path):
             findings.append(
                 AuditFinding(
@@ -48,6 +92,8 @@ def audit_skill_receipt_schemas(
                         details={"missing": missing},
                     )
                 )
+        if skill == TASK_FORCE_REVIEW_SKILL:
+            findings.extend(_task_force_review_findings(receipt, requested_claims=requested_claims))
         forbidden = set(str(item) for item in receipt.get("forbidden_claims", ()) if item)
         requested = set(str(item) for item in requested_claims)
         conflict = sorted(forbidden.intersection(requested))
@@ -88,13 +134,20 @@ def _load_schema(path: Path) -> Mapping[str, Any]:
 
 def _required_fields_for_skill(schemas: Mapping[str, Any], skill: str, receipt: Mapping[str, Any]) -> tuple[str, ...]:
     payload = schemas.get(skill, {})
+    default_payload = schemas.get("default", {})
+    if not isinstance(default_payload, Mapping):
+        default_payload = {}
     if not isinstance(payload, Mapping):
-        payload = schemas.get("default", {})
+        payload = default_payload
     if not isinstance(payload, Mapping):
         return ("packet_id", "skill", "status")
     compact_fields = payload.get("compact_required_fields")
-    if _uses_compact_receipt(payload, receipt) and isinstance(compact_fields, Sequence) and not isinstance(compact_fields, (str, bytes)):
-        return tuple(str(field) for field in compact_fields)
+    if _uses_compact_receipt(payload, receipt):
+        if isinstance(compact_fields, Sequence) and not isinstance(compact_fields, (str, bytes)):
+            return tuple(str(field) for field in compact_fields)
+        default_compact_fields = default_payload.get("compact_required_fields")
+        if isinstance(default_compact_fields, Sequence) and not isinstance(default_compact_fields, (str, bytes)):
+            return tuple(str(field) for field in default_compact_fields)
     fields = payload.get("required_fields", ("packet_id", "skill", "status"))
     return tuple(str(field) for field in fields)
 
@@ -110,6 +163,110 @@ def _uses_compact_receipt(schema_payload: Mapping[str, Any], receipt: Mapping[st
         if str(actual).strip().lower() != str(expected).strip().lower():
             return False
     return bool(compact_when)
+
+
+def _task_force_review_findings(receipt: Mapping[str, Any], *, requested_claims: Sequence[str]) -> list[AuditFinding]:
+    findings: list[AuditFinding] = []
+    status = _normalized(receipt.get("status"))
+    requirement = _normalized(receipt.get("review_requirement") or receipt.get("task_force_review_requirement"))
+    is_required = requirement in TASK_FORCE_REQUIRED_MARKERS or bool(receipt.get("codex_task_force_review_packet_required"))
+    actual_calls = receipt.get("actual_subagent_calls")
+
+    if is_required:
+        if status in TASK_FORCE_BLOCKED_STATUSES:
+            findings.append(
+                AuditFinding(
+                    check_id="skill_receipt_schema::obsidian-task-force-review::required_review_not_called",
+                    message="Required Task Force review cannot pass when selected sub-agent calls are unavailable, absent, or marked not applicable.",
+                    details={"status": status, "review_requirement": requirement},
+                )
+            )
+        if _is_missing(actual_calls) or _looks_like_missing_task_force_calls(actual_calls):
+            findings.append(
+                AuditFinding(
+                    check_id="skill_receipt_schema::obsidian-task-force-review::missing_actual_subagent_calls",
+                    message="Required Task Force review needs actual selected-agent spawn_agent call evidence.",
+                    details={"actual_subagent_calls": actual_calls},
+                )
+            )
+        else:
+            findings.extend(_task_force_actual_call_structure_findings(actual_calls))
+
+    if status == "optional_not_called_no_task_force_claim":
+        requested = {_normalized(claim) for claim in requested_claims}
+        conflict = sorted(TASK_FORCE_REVIEW_CLAIMS.intersection(requested))
+        if conflict:
+            findings.append(
+                AuditFinding(
+                    check_id="skill_receipt_schema::obsidian-task-force-review::optional_not_called_claim_conflict",
+                    message="Optional not-called Task Force checkpoint cannot support Task Force review claims.",
+                    details={"conflicting_claims": conflict},
+                )
+            )
+    return findings
+
+
+def _task_force_actual_call_structure_findings(value: Any) -> list[AuditFinding]:
+    findings: list[AuditFinding] = []
+    if not isinstance(value, Sequence) or isinstance(value, (str, bytes)):
+        return [
+            AuditFinding(
+                check_id="skill_receipt_schema::obsidian-task-force-review::actual_subagent_calls_not_list",
+                message="Task Force actual_subagent_calls must be a list of real spawn_agent call records.",
+                details={"actual_type": type(value).__name__},
+            )
+        ]
+
+    for index, raw_call in enumerate(value):
+        if not isinstance(raw_call, Mapping):
+            findings.append(
+                AuditFinding(
+                    check_id="skill_receipt_schema::obsidian-task-force-review::actual_subagent_call_not_mapping",
+                    message="Each Task Force sub-agent call record must be a mapping.",
+                    details={"index": index, "actual_type": type(raw_call).__name__},
+                )
+            )
+            continue
+        missing = [field for field in TASK_FORCE_CALL_REQUIRED_FIELDS if _is_missing(raw_call.get(field))]
+        if missing:
+            findings.append(
+                AuditFinding(
+                    check_id="skill_receipt_schema::obsidian-task-force-review::actual_subagent_call_missing_fields",
+                    message="Each Task Force sub-agent call must include roster id, spawned id, tool name, result status, and opinion classification.",
+                    details={"index": index, "missing": missing},
+                )
+            )
+        tool_name = str(raw_call.get("tool_name", "")).strip()
+        if tool_name and tool_name != TASK_FORCE_CALL_TOOL_NAME:
+            findings.append(
+                AuditFinding(
+                    check_id="skill_receipt_schema::obsidian-task-force-review::actual_subagent_call_wrong_tool",
+                    message="Task Force sub-agent call evidence must identify the real spawn_agent tool.",
+                    details={"index": index, "tool_name": tool_name, "expected": TASK_FORCE_CALL_TOOL_NAME},
+                )
+            )
+        opinion = _normalized(raw_call.get("opinion_classification"))
+        if opinion and opinion not in TASK_FORCE_OPINION_CLASSIFICATIONS:
+            findings.append(
+                AuditFinding(
+                    check_id="skill_receipt_schema::obsidian-task-force-review::actual_subagent_call_bad_opinion_classification",
+                    message="Task Force opinion classification must be accepted, rejected, or needs_local_verification.",
+                    details={"index": index, "opinion_classification": opinion, "allowed": sorted(TASK_FORCE_OPINION_CLASSIFICATIONS)},
+                )
+            )
+    return findings
+
+
+def _looks_like_missing_task_force_calls(value: Any) -> bool:
+    text = _normalized(value)
+    if not text:
+        return True
+    missing_markers = ("not_called", "tool_unavailable", "0/0", "0 of 0", "none")
+    return any(marker in text for marker in missing_markers)
+
+
+def _normalized(value: Any) -> str:
+    return str(value or "").strip().lower()
 
 
 def _is_missing(value: Any) -> bool:
