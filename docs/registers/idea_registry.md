@@ -2312,3 +2312,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier83D_two_sided_density_expansion_or_rotation_decision_v1 -->
 - `frontier83D_two_sided_density_expansion_or_rotation_decision_v1` selected short-density materialization target(숏 밀도 물질화 대상) `f82b_10355` after F83C runtime parity/objective gap(F83C 런타임 동등성/목표 간극). Proxy OOS(프록시 표본외): net/PF/DD/tpd `401.02621043351246/1.4727443088117345/4.6767732618809985/8.350515463917526`. Boundary(경계): target selection only, no authority(대상 선택만, 권위 없음). Next(다음): `frontier83E_short_side_density_runtime_materialization_v1`.
+
+<!-- frontier83E_short_side_density_runtime_materialization_v1 -->
+- `frontier83E_short_side_density_runtime_materialization_v1` materialized F83D selected short density target(F83D 선택 숏 밀도 대상)을 MT5 Strategy Tester(MT5 전략 테스터)로 실행/시도했다. Target(대상): `f82b_10355`. Attempts(시도): `2`, completed(완료): `2`. Boundary(경계): runtime materialization only, no authority(런타임 물질화만, 권위 없음).
