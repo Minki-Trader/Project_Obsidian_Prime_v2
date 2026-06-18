@@ -1,0 +1,9 @@
+﻿packet_id: frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1
+skill: obsidian-model-validation
+status: exploratory_design_only
+target_and_label: "firewall label predicts proxy-win/runtime-loss reversal risk using pre-entry inputs(진입 전 입력으로 프록시 승리/런타임 손실 반전 위험 예측)"
+split_method: "time-ordered train/validation/OOS with WFO-aware selection planned(시간순 학습/검증/표본외 및 워크포워드 인식 선택 예정)"
+selection_metric: "reversal reduction + net/PF/DD + trade density + false veto of runtime winners + long/short balance(반전 감소 + 순손익/수익 팩터/손실폭 + 밀도 + 승자 오차단 + 롱/숏 균형)"
+threshold_policy: "predefined train/WFO grid/cap only; no OOS PF tuning(사전 정의 학습/워크포워드 격자/상한만, 표본외 수익 팩터 튜닝 금지)"
+validation_judgment: exploratory_design_only(탐색 설계 전용)
+claim_boundary: frontier85_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve

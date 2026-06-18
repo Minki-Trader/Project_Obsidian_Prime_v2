@@ -1,0 +1,512 @@
+﻿{
+  "run_id": "frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1",
+  "stage_id": "stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild",
+  "parent_run_id": "frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1",
+  "next_run_id": "frontier85B_leakage_safe_runtime_path_firewall_proxy_scout_v1",
+  "created_at_utc": "2026-06-18T12:11:46Z",
+  "primary_family": "experiment_design",
+  "primary_skill": "obsidian-experiment-design",
+  "support_skills": [
+    "obsidian-data-integrity",
+    "obsidian-model-validation",
+    "obsidian-artifact-lineage",
+    "obsidian-result-judgment",
+    "obsidian-runtime-parity",
+    "obsidian-task-force-review",
+    "obsidian-claim-discipline"
+  ],
+  "status": "opened_runtime_path_contradiction_firewall_label_rebuild_no_authority",
+  "judgment": "frontier85_opened_leakage_safe_runtime_path_label_axis_no_authority",
+  "claim_boundary": "frontier85_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "frontier_extra_due_status": "not_due_after_f84_closeout_next_boundary_f100_e01_closed_for_f050",
+  "five_stage_retrospective_status": "retired_archive_only_no_new_grok_call_no_next_open_block",
+  "frontier_thesis": "A leakage-safe runtime path contradiction firewall label(누수 안전 런타임 경로 모순 방화벽 라벨) can reduce proxy-win/runtime-loss reversals without killing US100 M5 trade density(거래 밀도).",
+  "hypothesis": "Entry-time observable surrogates(진입 시점 관측 가능 대체 신호) can predict a high-risk subset of F84 proxy wins that became runtime losses, while preserving enough valid trades for later MT5 materialization.",
+  "decision_use": "F85B will run a proxy scout(프록시 탐색) over leakage-safe firewall label families and decide whether any candidate deserves MT5/ONNX materialization in F85C.",
+  "comparison_baseline": [
+    "F84E OOS runtime net/PF/DD -133.51/0.8598276061188279/29.27",
+    "F84E OOS proxy win -> runtime loss 560/821",
+    "F84F decision rotate_to_f85_runtime_path_contradiction_firewall_label_rebuild"
+  ],
+  "control_variables": [
+    "symbol/timeframe(심볼/시간프레임): FPMarkets US100 M5(FPMarkets US100 5분봉)",
+    "F84 evidence is reference-only(전선84 근거는 참조 전용)",
+    "no inherited winner/baseline/runtime authority(승자/기준선/런타임 권위 상속 없음)",
+    "OOS selection stays locked until predefined train/WFO decision is made(사전 학습/워크포워드 결정 전 표본외 선택 잠금)"
+  ],
+  "changed_variables": [
+    "label target changes from realized winrate repair(실현 승률 수리) to runtime path contradiction firewall(런타임 경로 모순 방화벽)",
+    "candidate inputs are restricted to pre-entry observable surrogates(진입 전 관측 가능 대체 신호)",
+    "selection metric includes reversal reduction, density, false veto, net/PF/DD(반전 감소/밀도/오차단/순손익/수익 팩터/손실폭)",
+    "runtime materialization requirements are defined before MT5 execution(런타임 물질화 요구사항을 MT5 실행 전 정의)"
+  ],
+  "sample_scope": {
+    "symbol": "FPMarkets US100",
+    "timeframe": "M5",
+    "stage": "stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild",
+    "reference_source": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_rows.csv",
+    "row_count": 4145,
+    "validation_selected_matched": "2340/2326",
+    "oos_selected_matched": "1805/1801",
+    "tier_scope": "F85A design only; F85B must record Tier A, Tier B, and combined or explicit missing/out_of_scope(Tier A/B/합산은 F85B에서 기록)"
+  },
+  "success_criteria": [
+    "F85B defines at least one leakage-safe firewall candidate family(F85B 누수 안전 방화벽 후보군 1개 이상)",
+    "proxy-win/runtime-loss reversal rate is reduced inside train/WFO without OOS reselection(표본외 재선택 없이 학습/워크포워드 내 반전율 감소)",
+    "trade density remains close to final target exploration band(거래 밀도가 최종 목표 탐색 대역을 크게 벗어나지 않음)",
+    "false veto of runtime winners is explicitly measured(런타임 승자 오차단 측정)",
+    "meaningful candidates proceed to MT5/ONNX materialization with receipts(의미 후보는 영수증 포함 MT5/온엑스 물질화로 진행)"
+  ],
+  "failure_criteria": [
+    "candidate uses ex-post runtime labels as feature/filter(후보가 사후 런타임 라벨을 피처/필터로 사용)",
+    "threshold-only repair repeats F84 failure(임계값만 수리하며 F84 실패 반복)",
+    "density death or all-veto surface(밀도 사망 또는 전체 차단 표면)",
+    "OOS is used for threshold/model selection(표본외가 임계값/모델 선택에 사용)",
+    "runtime materialization requirements are skipped before MT5 claim(런타임 주장 전 물질화 요구사항 누락)"
+  ],
+  "invalid_conditions": [
+    "feature set includes runtime_exit_reason/runtime_win/runtime_net_profit/tp_expected_sl_actual(런타임 종료 사유/승패/순손익/익절예상-손절실제 포함)",
+    "time axis is treated as true UTC authority instead of broker-clock alignment key(브로커 시계 정렬 키가 아닌 진짜 UTC 권위로 취급)",
+    "F84 scaffold is treated as F85A evidence without F85A packet/receipt/ledger(F85A 묶음/영수증/장부 없이 F84 뼈대를 F85A 근거로 취급)",
+    "MT5 compile or ONNX parity is treated as runtime economics(컴파일/온엑스 동등성을 런타임 경제성으로 취급)"
+  ],
+  "stop_conditions": [
+    "If no non-leaky pre-entry signal separates reversal risk, rotate or close negative(누수 없는 진입 전 신호가 반전 위험을 분리하지 못하면 회전/부정 마감)",
+    "If F85B generates no meaningful signal, record zero-signal negative evidence(무신호 부정 근거 기록)",
+    "If MT5 materialization later mismatches proxy, run row-level reconciliation(향후 MT5 불일치 시 행 단위 조정 실행)"
+  ],
+  "evidence_plan": [
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_repair_or_rotation_decision_summary.json",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_rows.csv",
+    "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_split_summary.csv",
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_source_hash_refresh.json",
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_actual_subagent_calls.json",
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_experiment_design.json",
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_report.md",
+    "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_stage_open_manifest.json"
+  ],
+  "f84_reference_metrics": {
+    "validation": {
+      "split": "validation",
+      "selected_entry_count": "2340",
+      "telemetry_attempt_count": "2335",
+      "telemetry_fill_count": "2326",
+      "runtime_trade_count": "2326",
+      "ticket_matched_trade_count": "2326",
+      "selected_no_fill_count": "14",
+      "filled_without_trade_match_count": "0",
+      "runtime_without_selected_count": "0",
+      "open_time_second_drift_count": "2",
+      "proxy_win_count_matched": "1089",
+      "runtime_win_count_matched": "638",
+      "proxy_win_runtime_loss_count": "795",
+      "proxy_loss_runtime_win_count": "344",
+      "proxy_same_win_count": "294",
+      "proxy_same_loss_count": "893",
+      "proxy_win_to_runtime_loss_rate": "0.7300275482093664",
+      "runtime_net_profit_matched": "-378.76",
+      "proxy_pnl_contract_matched": "338.6402551195823",
+      "pnl_delta_sum": "-717.4002551195824",
+      "runtime_gross_profit_matched": "937.22",
+      "runtime_gross_loss_matched": "-1315.98",
+      "runtime_profit_factor_matched": "0.712184075745832",
+      "runtime_win_rate_matched_percent": "27.429062768701634",
+      "proxy_win_rate_matched_percent": "46.81857265692175",
+      "tp_expected_sl_actual_count": "318",
+      "sl_expected_tp_actual_count": "233",
+      "avg_runtime_holding_seconds": "30.884350816852965",
+      "receipt_runtime_net_profit": "-378.76",
+      "receipt_runtime_profit_factor": "0.71",
+      "receipt_runtime_drawdown_percent": "75.89",
+      "receipt_runtime_trade_count": "2326",
+      "receipt_proxy_net_profit": "341.63686742584827",
+      "receipt_proxy_profit_factor": "1.377898995489171"
+    },
+    "oos": {
+      "split": "oos",
+      "selected_entry_count": "1805",
+      "telemetry_attempt_count": "1802",
+      "telemetry_fill_count": "1801",
+      "runtime_trade_count": "1801",
+      "ticket_matched_trade_count": "1801",
+      "selected_no_fill_count": "4",
+      "filled_without_trade_match_count": "0",
+      "runtime_without_selected_count": "0",
+      "open_time_second_drift_count": "0",
+      "proxy_win_count_matched": "821",
+      "runtime_win_count_matched": "556",
+      "proxy_win_runtime_loss_count": "560",
+      "proxy_loss_runtime_win_count": "295",
+      "proxy_same_win_count": "261",
+      "proxy_same_loss_count": "685",
+      "proxy_win_to_runtime_loss_rate": "0.682095006090134",
+      "runtime_net_profit_matched": "-133.51",
+      "proxy_pnl_contract_matched": "283.39542741531466",
+      "pnl_delta_sum": "-416.90542741531465",
+      "runtime_gross_profit_matched": "818.96",
+      "runtime_gross_loss_matched": "-952.47",
+      "runtime_profit_factor_matched": "0.8598276061188279",
+      "runtime_win_rate_matched_percent": "30.871737923375903",
+      "proxy_win_rate_matched_percent": "45.58578567462521",
+      "tp_expected_sl_actual_count": "231",
+      "sl_expected_tp_actual_count": "189",
+      "avg_runtime_holding_seconds": "29.82620766240977",
+      "receipt_runtime_net_profit": "-133.51",
+      "receipt_runtime_profit_factor": "0.86",
+      "receipt_runtime_drawdown_percent": "29.27",
+      "receipt_runtime_trade_count": "1801",
+      "receipt_proxy_net_profit": "288.0970393819249",
+      "receipt_proxy_profit_factor": "1.4246374556585157"
+    },
+    "clues": {
+      "validation": {
+        "matched_trade_count": 2326,
+        "proxy_win_count": 1089,
+        "proxy_win_runtime_loss_count": 795,
+        "tp_expected_sl_actual_count": 318,
+        "tp_expected_sl_actual_net": -246.13,
+        "excluding_tp_expected_sl_actual_count": 2008,
+        "excluding_tp_expected_sl_actual_net": -132.63
+      },
+      "oos": {
+        "matched_trade_count": 1801,
+        "proxy_win_count": 821,
+        "proxy_win_runtime_loss_count": 560,
+        "tp_expected_sl_actual_count": 231,
+        "tp_expected_sl_actual_net": -176.89,
+        "excluding_tp_expected_sl_actual_count": 1570,
+        "excluding_tp_expected_sl_actual_net": 43.38
+      }
+    },
+    "f84f_decision": "rotate_to_f85_runtime_path_contradiction_firewall_label_rebuild",
+    "f84f_seed_axes": [
+      "pre-entry first-touch surrogate(진입 전 첫 터치 대체 신호)",
+      "both-hit ambiguity class(양방향 터치 모호 분류)",
+      "path-inversion meta-label(경로 반전 보조 라벨)",
+      "session/regime/streak risk route(세션/장세/연속손실 위험 라우팅)",
+      "WFO-aware selection and MT5 materialization(워크포워드 인식 선택 및 MT5 물질화)"
+    ],
+    "f84e_primary_readout": "proxy_win_to_runtime_loss_dominant"
+  },
+  "data_integrity": {
+    "data_source": [
+      "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_rows.csv",
+      "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_split_summary.csv",
+      "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_repair_or_rotation_decision_summary.json"
+    ],
+    "time_axis": "timestamp_utc/source_time_ts/bar_time_ts are broker-clock alignment keys(브로커 시계 정렬 키), not true UTC authority(진짜 UTC 권위 아님)",
+    "sample_scope": "F84E selected rows 4145; validation 2340; OOS 1805; ticket matched validation/OOS 2326/1801",
+    "feature_label_boundary": "F85 features must be observable at entry decision time(진입 결정 시점 관측 가능) only.",
+    "leakage_risk": "Direct use of tp_expected_sl_actual/runtime_exit_reason/runtime_win/runtime_net_profit is ex-post leakage(사후 누수).",
+    "integrity_judgment": "usable_with_boundary(경계부 사용 가능)"
+  },
+  "model_validation": {
+    "model_family": "not_selected_yet_proxy_scout_next(아직 미선택, 다음은 프록시 탐색)",
+    "target_and_label": "firewall label predicts proxy-win/runtime-loss reversal risk using pre-entry inputs(진입 전 입력으로 프록시 승리/런타임 손실 반전 위험 예측)",
+    "split_method": "time-ordered train/validation/OOS with WFO-aware selection planned(시간순 학습/검증/표본외 및 워크포워드 인식 선택 예정)",
+    "selection_metric": "reversal reduction + net/PF/DD + trade density + false veto of runtime winners + long/short balance(반전 감소 + 순손익/수익 팩터/손실폭 + 밀도 + 승자 오차단 + 롱/숏 균형)",
+    "threshold_policy": "predefined train/WFO grid/cap only; no OOS PF tuning(사전 정의 학습/워크포워드 격자/상한만, 표본외 수익 팩터 튜닝 금지)",
+    "validation_judgment": "exploratory_design_only(탐색 설계 전용)"
+  },
+  "runtime_materialization_requirements": {
+    "mt5_now": "rejected_not_yet_candidate(거절, 아직 후보 없음)",
+    "future_receipts": [
+      "MT5 tester report/log/snapshot/telemetry(테스터 보고서/로그/스냅샷/원격측정)",
+      "EA/module hash and .set hash(EA/모듈 해시 및 설정 해시)",
+      "ONNX model hash and feature schema/order(온엑스 모델 해시 및 피처 스키마/순서)",
+      "tester profile and broker symbol contract(테스터 프로필 및 브로커 심볼 계약)",
+      "order/deal/trade row reconciliation(주문/딜/거래 행 조정)"
+    ],
+    "parity_requirements": [
+      "Python vs ONNX score parity(파이썬 대 온엑스 점수 동등성)",
+      "feature readiness/count parity(피처 준비/건수 동등성)",
+      "signal count parity(신호 수 동등성)",
+      "order intent parity(주문 의도 동등성)",
+      "ticket-level runtime reconciliation(티켓 단위 런타임 조정)"
+    ],
+    "runtime_claim_boundary": "no_runtime_authority_no_live_readiness_no_completion(런타임 권위/실거래 준비/완성 없음)"
+  },
+  "actual_subagent_calls": [
+    {
+      "roster_id": "agent_01_system_governor",
+      "nickname": "Goodall",
+      "agent_id": "019eda8a-3d33-7661-b4f7-a212d49dcc13",
+      "status": "completed",
+      "phase": "f85a_goal_and_claim_boundary",
+      "classification": "accepted",
+      "accepted": "F85A opening is aligned with the active ONNX runtime goal(활성 온엑스 런타임 목표와 정렬).",
+      "rejected": "Inherited winner/baseline/authority(상속 승자/기준선/권위) and promotion/live readiness/Goal Achieve(승격/실거래 준비/목표 달성).",
+      "needs_local_verification": "Recheck leakage-safe label(누수 안전 라벨), WFO/MT5 materialization(워크포워드/MT5 물질화), and runtime claim boundary(런타임 주장 경계)."
+    },
+    {
+      "roster_id": "agent_02_platform_routing_architect",
+      "nickname": "Zeno",
+      "agent_id": "019eda8a-8366-7060-9329-3f49c52338d7",
+      "status": "completed",
+      "phase": "f85a_work_family_routing",
+      "classification": "accepted",
+      "accepted": "F85A should be experiment_design(실험 설계), primary_skill obsidian-experiment-design(주 스킬 실험 설계).",
+      "rejected": "Opening F85A as immediate runtime_backtest(즉시 런타임 백테스트).",
+      "needs_local_verification": "Create F85 stage-local selection_status(선택 상태) and stage_run_ledger(단계 실행 장부)."
+    },
+    {
+      "roster_id": "agent_03_philosophy_policy_skill_governance",
+      "nickname": "James",
+      "agent_id": "019eda8a-c604-7dd1-b061-fd37c13c13a6",
+      "status": "completed",
+      "phase": "f85a_policy_governance",
+      "classification": "accepted",
+      "accepted": "F85A open is allowed under exploration mandate(탐색 명령) with F84 as clue/seed/negative memory only(단서/씨앗/부정 기억 전용).",
+      "rejected": "Winner/baseline inheritance(승자/기준선 상속), threshold/filter-only repair(임계값/필터만 수리), and any Grok active call/authority(그록 활성 호출/권위).",
+      "needs_local_verification": "Keep claim boundary: no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음)."
+    },
+    {
+      "roster_id": "agent_04_evidence_control_plane",
+      "nickname": "Curie",
+      "agent_id": "019eda8b-1d8e-7be1-88a9-ca3405737786",
+      "status": "completed",
+      "phase": "f85a_evidence_control_plane",
+      "classification": "needs_local_verification",
+      "accepted": "F84F summary, F84E row/split evidence, F84C/F84E runtime materialization, and negative register are usable as F85A input with reference-only boundary.",
+      "rejected": "Treating F85 handoff scaffold(인계 뼈대) as F85A open evidence(개방 근거).",
+      "needs_local_verification": "Create packet, manifest, source hash refresh, receipts, gate audit, final claim guard, ledgers, and artifact registry rows."
+    },
+    {
+      "roster_id": "agent_05_data_feature_contract",
+      "nickname": "Lorentz",
+      "agent_id": "019eda8b-620c-7c22-af7b-b4f21a1e67d6",
+      "status": "completed",
+      "phase": "f85a_data_feature_boundary",
+      "classification": "needs_local_verification",
+      "accepted": "F84E row-level evidence is usable as F85A seed/negative memory(씨앗/부정 기억).",
+      "rejected": "Using tp_expected_sl_actual, runtime_exit_reason, runtime_win, or runtime_net_profit(익절예상-손절실제/런타임 종료 사유/승패/순손익) as feature/filter.",
+      "needs_local_verification": "Use only pre-entry observable inputs(진입 전 관측 가능 입력) and broker-clock alignment boundary(브로커 시계 정렬 경계)."
+    },
+    {
+      "roster_id": "agent_06_quant_research",
+      "nickname": "Feynman",
+      "agent_id": "019eda8c-7f6e-7ff2-be4f-21ee82daba76",
+      "status": "completed",
+      "phase": "f85a_quant_axis_design",
+      "classification": "accepted",
+      "accepted": "F85B should prioritize pre-entry first-touch surrogate(진입 전 첫 터치 대체 신호), then both-hit ambiguity class(양방향 터치 모호 분류), path-inversion meta-label(경로 반전 보조 라벨), and regime route(장세 라우팅).",
+      "rejected": "Threshold-only repair(임계값만 수리) because it repeats the F84 failure mode(F84 실패 반복).",
+      "needs_local_verification": "Session/regime/streak route(세션/장세/연속손실 라우팅)는 WFO stability(워크포워드 안정성) 확인 뒤 적용."
+    },
+    {
+      "roster_id": "agent_07_model_validation_risk",
+      "nickname": "Hubble",
+      "agent_id": "019eda8d-646c-77c2-8e75-1de942d7eeb4",
+      "status": "completed",
+      "phase": "f85a_model_validation_risk",
+      "classification": "accepted_with_local_verification",
+      "accepted": "F85A can open leakage-safe runtime path contradiction label(누수 안전 런타임 경로 모순 라벨) experiment design.",
+      "rejected": "Direct diagnostic-class feature/filter use, OOS threshold tuning(표본외 임계값 조정), and authority laundering(권위 세탁).",
+      "needs_local_verification": "Inputs must be pre-entry observable and labels must not leak outside split/WFO boundaries(분할/워크포워드 경계)."
+    },
+    {
+      "roster_id": "agent_08_mt5_onnx_runtime",
+      "nickname": "Kuhn",
+      "agent_id": "019eda8f-6348-7a82-a1f3-a7b755e8d4dd",
+      "status": "completed",
+      "phase": "f85a_runtime_materialization_boundary",
+      "classification": "accepted_with_local_verification",
+      "accepted": "F85A defines F85B/F85C runtime materialization requirements(런타임 물질화 요구사항) instead of running MT5 now.",
+      "rejected": "Immediate runtime probe(즉시 런타임 탐침) before leakage-safe label/proxy/candidate/ONNX/EA settings are materialized.",
+      "needs_local_verification": "Future MT5/ONNX receipts require report/log/snapshot/telemetry, hashes, feature schema, tester profile, and ticket-level reconciliation."
+    }
+  ],
+  "actual_subagent_roster_coverage": {
+    "required_count": 8,
+    "actual_call_count": 8,
+    "coverage_count": 8,
+    "completed_count": 8,
+    "all_required_covered": true,
+    "all_required_completed": true,
+    "incomplete_roster_ids": [],
+    "call_ids": [
+      "019eda8a-3d33-7661-b4f7-a212d49dcc13",
+      "019eda8a-8366-7060-9329-3f49c52338d7",
+      "019eda8a-c604-7dd1-b061-fd37c13c13a6",
+      "019eda8b-1d8e-7be1-88a9-ca3405737786",
+      "019eda8b-620c-7c22-af7b-b4f21a1e67d6",
+      "019eda8c-7f6e-7ff2-be4f-21ee82daba76",
+      "019eda8d-646c-77c2-8e75-1de942d7eeb4",
+      "019eda8f-6348-7a82-a1f3-a7b755e8d4dd"
+    ]
+  },
+  "source_hash_refresh": {
+    "run_id": "frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1",
+    "created_at_utc": "2026-06-18T12:11:46Z",
+    "purpose": "F85A source identity refresh(F85A 원천 정체성 갱신)",
+    "sources": [
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_repair_or_rotation_decision_summary.json",
+        "exists": true,
+        "data_row_count": "",
+        "sha256_lf_normalized": "0c6376e9999409155a7aa70d77ee1a0c86c9cce299516c83ac1db5018c02c5d2"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/stage_closeout_report.md",
+        "exists": true,
+        "data_row_count": "",
+        "sha256_lf_normalized": "c724c3fa7687b6391abd3181745a61979ecb789d76733e60e5ff0b4b15f43a9f"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_runtime_path_contradiction_pivot_rows.csv",
+        "exists": true,
+        "data_row_count": 18,
+        "sha256_lf_normalized": "2633f624f37a34991cc3e37490561c09c9a4766338773b530da914248884ae51"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_actual_subagent_calls.json",
+        "exists": true,
+        "data_row_count": "",
+        "sha256_lf_normalized": "50ae11ed8b92270b83f7222192f21a46f425f9dc00306c923e5124a9d508dc91"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_deal_reconciliation_summary.json",
+        "exists": true,
+        "data_row_count": "",
+        "sha256_lf_normalized": "8de409328daac8dd6c694fe8d431b8db1b65d13911c723ac2421498f17435b23"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_rows.csv",
+        "exists": true,
+        "data_row_count": 4145,
+        "sha256_lf_normalized": "17697eade8a09ed67c92d0e02c3fa848ae0169d1bbdda4595ca62b94875119c3"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_split_summary.csv",
+        "exists": true,
+        "data_row_count": 2,
+        "sha256_lf_normalized": "aab61ebb74c7487ebe1be643def335020161957e33ec0dd8808307b397ab428d"
+      },
+      {
+        "path": "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_mt5_runtime_realized_winrate_materialization_summary.json",
+        "exists": true,
+        "data_row_count": "",
+        "sha256_lf_normalized": "c190e3aba462aecd8d04f9fead92cdfaa7f6359e79ca21c5c0deda8b9324e3be"
+      },
+      {
+        "path": "docs/registers/negative_result_register.md",
+        "exists": true,
+        "data_row_count": "",
+        "sha256_lf_normalized": "bb13c4e2741c01bb0371ba5606e00165f41ec80ee2f1911117af476de0e48a61"
+      },
+      {
+        "path": "docs/registers/frontier_extra_stage_register.yaml",
+        "exists": true,
+        "data_row_count": "",
+        "sha256_lf_normalized": "cdc4deea661015e46c52c02d2fd1476c8e2b527b118635cdfb52f1900b644c6c"
+      }
+    ],
+    "claim_boundary": "frontier85_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  },
+  "producer": "stage_pipelines/stage_frontier_85/frontier85a_stage_open_runtime_path_contradiction_firewall_label_rebuild.py",
+  "producer_sha256": "5279c500b4784ca0273d557fbe3b08c483b14831a71a2d3e47cd62f5e7a28d6c",
+  "local_verification": {
+    "packet_id": "frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1",
+    "status": "pass",
+    "all_passed": true,
+    "checks": {
+      "f84f_summary_exists": true,
+      "f84e_rows_count_4145": true,
+      "stage_brief_exists": true,
+      "selection_status_exists": true,
+      "stage_run_ledger_exists": true,
+      "workspace_state_points_to_f85b": true,
+      "selection_status_points_to_f85b": true,
+      "task_force_completed_8": true,
+      "final_claim_guard_exists": true,
+      "no_runtime_authority_claimed": true
+    },
+    "claim_boundary": "frontier85_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  },
+  "artifact_lineage": {
+    "run_id": "frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1",
+    "stage_id": "stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild",
+    "created_at_utc": "2026-06-18T12:11:46Z",
+    "source_inputs": [
+      "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_repair_or_rotation_decision_summary.json",
+      "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/stage_closeout_report.md",
+      "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_rows.csv",
+      "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_split_summary.csv",
+      "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84c_mt5_runtime_realized_winrate_materialization_summary.json",
+      "docs/registers/negative_result_register.md"
+    ],
+    "producer": "stage_pipelines/stage_frontier_85/frontier85a_stage_open_runtime_path_contradiction_firewall_label_rebuild.py",
+    "producer_sha256": "5279c500b4784ca0273d557fbe3b08c483b14831a71a2d3e47cd62f5e7a28d6c",
+    "consumer": "frontier85B_leakage_safe_runtime_path_firewall_proxy_scout_v1",
+    "artifact_paths": [
+      "stage_pipelines/stage_frontier_85/frontier85a_stage_open_runtime_path_contradiction_firewall_label_rebuild.py",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/00_spec/stage_brief.md",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/01_inputs/input_refs.md",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_report.md",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_stage_open_manifest.json",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_experiment_design.json",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_source_hash_refresh.json",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_actual_subagent_calls.json",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_artifact_lineage.json",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_local_verification.json",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/required_gate_coverage_audit_f85a_open.md",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/04_selected/selection_status.md",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/context_anchor.md",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/review_index.md",
+      "docs/agent_control/packets/frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1/work_packet.yaml",
+      "docs/agent_control/packets/frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1/skill_receipts.json",
+      "docs/agent_control/packets/frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1/required_gate_coverage_audit.json",
+      "docs/agent_control/packets/frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1/final_claim_guard.json",
+      "docs/decisions/2026-06-18_stage_frontier_85_open.md"
+    ],
+    "artifact_hashes": {
+      "stage_pipelines/stage_frontier_85/frontier85a_stage_open_runtime_path_contradiction_firewall_label_rebuild.py": "5279c500b4784ca0273d557fbe3b08c483b14831a71a2d3e47cd62f5e7a28d6c",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/00_spec/stage_brief.md": "09ed11b78b6549c3aa498ef7452184125fc0bfb125f70612b204d1db4dc33f36",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/01_inputs/input_refs.md": "2b0e9790eeb4df0ee6bc81ea56c9dcf1be19d7374c4853b847033f145c21be1e",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_report.md": "4e1ee688dd1f5d45d6ab8226a40a2fd5b004ad878455316dd97860cec2df2b26",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_stage_open_manifest.json": "5f0c58ee920f46f93d38282e097a5a42919e021a6390cb4951980d96fadbb3b2",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_experiment_design.json": "e5eb8347925ff990b85fdeab880073acc7c20cc8188a0f82b0cd4211b3735e2d",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_source_hash_refresh.json": "a61bd66339da90c7d5f6f3ded424bb74c25d9753917ec268a7484c9e11ad3761",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_actual_subagent_calls.json": "991e6af3db3f343c8eb46c5c81e4601332d88c91478570391d3f735762c89be0",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_artifact_lineage.json": "f9fb8aaeb6f4f44871eae826c60281447fb006204e1c1ff5fe1bdb9a0138d581",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/f85a_local_verification.json": "3614f73ee3361d9cf583b85fba19dd038787914a324d96cfc6348e336596a0ab",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/required_gate_coverage_audit_f85a_open.md": "b7d2faaf3c91854287b1451c85f1e17dfa0c534ec9f17ee214afe495a03203ef",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/04_selected/selection_status.md": "af39c63594f8f98fdadbec6f939ad95e5eb76ebca3a15876fc5f9bf2a4fd85cf",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/context_anchor.md": "513984ad4cf5088fa42f59f993d4c4ffca7b09dbbe70a9fc1afafa36c0e21310",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/review_index.md": "35b6ed82172cf53819791d92b468b7a0722b69e636fe349d0b9c90d59e34c603",
+      "docs/agent_control/packets/frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1/work_packet.yaml": "55e0fbc2363db15d320ec4996b8b62ee7b778151a502ce884b8a09d9b9539929",
+      "docs/agent_control/packets/frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1/skill_receipts.json": "1d8a600220a11c542b3cad302e083aab4851a5bfacb51105475f36fc629b271d",
+      "docs/agent_control/packets/frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1/required_gate_coverage_audit.json": "f5dd14fec966b430968aeb57bab24728ad96c696203f213b908cf6fae0c54b49",
+      "docs/agent_control/packets/frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1/final_claim_guard.json": "26015cd3ddf2ddff5e854d2d302964fa4021df73e2270d6db7d0747887c64068",
+      "docs/decisions/2026-06-18_stage_frontier_85_open.md": "16d80ae880c7e6596c413fb3b69fd9a5c37982fa23befb22c94dc75f7bb407ca"
+    },
+    "registry_links": [
+      "docs/registers/run_registry.csv",
+      "docs/registers/alpha_run_ledger.csv",
+      "stages/stage_frontier_85__runtime_path_contradiction_firewall_label_rebuild/03_reviews/stage_run_ledger.csv",
+      "docs/registers/artifact_registry.csv",
+      "docs/registers/idea_registry.md"
+    ],
+    "availability": "tracked_reports_with_hashes(해시가 있는 추적 보고서)",
+    "lineage_judgment": "connected_with_boundary(경계 있는 연결)",
+    "local_verification": {
+      "packet_id": "frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1",
+      "status": "pass",
+      "all_passed": true,
+      "checks": {
+        "f84f_summary_exists": true,
+        "f84e_rows_count_4145": true,
+        "stage_brief_exists": true,
+        "selection_status_exists": true,
+        "stage_run_ledger_exists": true,
+        "workspace_state_points_to_f85b": true,
+        "selection_status_points_to_f85b": true,
+        "task_force_completed_8": true,
+        "final_claim_guard_exists": true,
+        "no_runtime_authority_claimed": true
+      },
+      "claim_boundary": "frontier85_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+    },
+    "claim_boundary": "frontier85_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  }
+}

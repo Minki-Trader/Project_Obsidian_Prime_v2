@@ -2339,3 +2339,6 @@ Register ideas when they become durable work, not for every passing thought.
 
 <!-- frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1 -->
 - `frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1` closed F84 as negative/no authority(부정/권위 없음). Preserved clue(보존 단서): runtime path contradiction(런타임 경로 모순), tp_expected_sl_actual(익절예상-손절실제), both-hit ambiguity(양방향 터치 모호성). Next(다음): `frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1`. Boundary(경계): `stage_closeout_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+<!-- frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1 -->
+- `frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1` opened F85 runtime path contradiction firewall label rebuild(F85 런타임 경로 모순 방화벽 라벨 재구축). Next(다음): `frontier85B_leakage_safe_runtime_path_firewall_proxy_scout_v1`. Boundary(경계): no authority(권위 없음).

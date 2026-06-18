@@ -1,0 +1,9 @@
+﻿packet_id: frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1
+skill: obsidian-data-integrity
+status: usable_with_boundary
+data_source: ["stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_rows.csv", "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84e_row_level_reconciliation_split_summary.csv", "stages/stage_frontier_84__runtime_realized_winrate_rebuild_after_signal_parity_gap/03_reviews/f84f_repair_or_rotation_decision_summary.json"]
+time_axis: "timestamp_utc/source_time_ts/bar_time_ts are broker-clock alignment keys(브로커 시계 정렬 키), not true UTC authority(진짜 UTC 권위 아님)"
+feature_label_boundary: "F85 features must be observable at entry decision time(진입 결정 시점 관측 가능) only."
+leakage_risk: "Direct use of tp_expected_sl_actual/runtime_exit_reason/runtime_win/runtime_net_profit is ex-post leakage(사후 누수)."
+integrity_judgment: usable_with_boundary(경계부 사용 가능)
+claim_boundary: frontier85_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve

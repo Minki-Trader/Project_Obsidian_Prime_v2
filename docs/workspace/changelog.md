@@ -1,4 +1,10 @@
-﻿# 2026-06-18 - F84F Closeout And F85 Rotation(F84F 마감 및 F85 회전)
+﻿# 2026-06-18 - F85A Stage Open(F85A 단계 개방)
+
+- Action(행동): `frontier85A_stage_open_runtime_path_contradiction_firewall_label_rebuild_v1`로 F85 leakage-safe runtime path firewall label(누수 안전 런타임 경로 방화벽 라벨) 설계를 열었다.
+- Effect(효과): F85B proxy scout(F85B 프록시 탐색)를 다음 실행으로 두고, F84 부정 기억은 참조 전용으로 고정했다.
+- Boundary(경계): `frontier85_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+# 2026-06-18 - F84F Closeout And F85 Rotation(F84F 마감 및 F85 회전)
 
 - Action(행동): `frontier84F_runtime_realized_winrate_repair_or_rotation_decision_v1`로 F84를 negative/no authority(부정/권위 없음) 마감했다.
 - Effect(효과): runtime path contradiction(런타임 경로 모순)을 F85 leakage-safe label rebuild(F85 누수 안전 라벨 재구축) 씨앗으로 넘겼다.
