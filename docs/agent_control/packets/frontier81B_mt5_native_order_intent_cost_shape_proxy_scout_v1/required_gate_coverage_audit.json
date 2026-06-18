@@ -1,0 +1,34 @@
+{
+  "packet_id": "frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1",
+  "primary_family": "experiment_execution",
+  "status": "passed_proxy_only_no_authority",
+  "gates": [
+    {
+      "gate": "scope_completion_gate",
+      "status": "passed_proxy_scope_only",
+      "evidence": "docs/agent_control/packets/frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1/work_packet.yaml",
+      "effect": "Scope closed for F81B proxy scout(프록시 탐색 범위는 닫힘); stage completion(단계 완성)은 not claimed(주장 안 함)."
+    },
+    {
+      "gate": "kpi_contract_audit",
+      "status": "passed_proxy_kpi_recorded",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_order_intent_cost_shape_proxy_summary.json",
+      "effect": "Net/PF/DD/trade count/trades per day and closeout KPI fields(순손익/수익 팩터/손실폭/거래 수/일 거래와 마감 KPI 필드)를 proxy boundary(프록시 경계)로 기록."
+    },
+    {
+      "gate": "skill_receipt_lint",
+      "status": "passed",
+      "evidence": "docs/agent_control/packets/frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1/skill_receipts.json",
+      "effect": "Required skills(필수 스킬)의 receipt(영수증)를 생략하지 않음."
+    },
+    {
+      "gate": "required_gate_coverage_audit",
+      "status": "passed",
+      "evidence": [
+        "docs/agent_control/packets/frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1/required_gate_coverage_audit.json",
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/required_gate_coverage_audit_f81b.md"
+      ],
+      "effect": "Completion/baseline/runtime authority(완성/기준선/런타임 권위) claim(주장) 없이 next action(다음 행동)을 F81C로 제한."
+    }
+  ]
+}

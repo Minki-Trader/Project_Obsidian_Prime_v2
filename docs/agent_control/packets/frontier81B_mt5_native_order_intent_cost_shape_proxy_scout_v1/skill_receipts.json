@@ -1,0 +1,43 @@
+{
+  "packet_id": "frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1",
+  "stage_id": "stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild",
+  "primary_skill": {
+    "name": "obsidian-run-evidence-system",
+    "status": "passed_proxy_execution",
+    "evidence": [
+      "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_run_evidence_receipt.yaml",
+      "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_order_intent_cost_shape_proxy_summary.json",
+      "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_order_intent_cost_shape_ranked_top200.csv"
+    ]
+  },
+  "support_skills": [
+    {
+      "name": "obsidian-experiment-design",
+      "status": "passed_bounded_hypothesis_lifecycle_scope",
+      "evidence": "docs/agent_control/packets/frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1/work_packet.yaml"
+    },
+    {
+      "name": "obsidian-data-integrity",
+      "status": "passed_proxy_preflight",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_data_integrity_receipt.yaml"
+    },
+    {
+      "name": "obsidian-model-validation",
+      "status": "passed_proxy_validation_recorded_no_selection",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_model_validation_receipt.yaml"
+    },
+    {
+      "name": "obsidian-artifact-lineage",
+      "status": "passed_artifacts_connected_no_authority",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_artifact_lineage_receipt.yaml"
+    }
+  ],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "Goal Achieve"
+  ]
+}

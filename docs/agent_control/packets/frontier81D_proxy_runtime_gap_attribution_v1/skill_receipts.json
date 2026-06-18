@@ -1,0 +1,26 @@
+{
+  "packet_id": "frontier81D_proxy_runtime_gap_attribution_v1",
+  "primary_skill": {
+    "name": "obsidian-run-evidence-system",
+    "status": "passed_gap_rows_and_ledgers",
+    "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81d_proxy_runtime_gap_rows.csv"
+  },
+  "support_skills": [
+    {
+      "name": "obsidian-artifact-lineage",
+      "status": "passed_run_manifest_producer_hash",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/02_runs/frontier81D_proxy_runtime_gap_attribution_v1/run_manifest.json"
+    },
+    {
+      "name": "obsidian-result-judgment",
+      "status": "passed_negative_runtime_materialization_evidence_no_authority",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81d_result_judgment_receipt.yaml"
+    },
+    {
+      "name": "obsidian-performance-attribution",
+      "status": "passed_gap_attributed_no_authority",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81d_performance_attribution_receipt.yaml"
+    }
+  ],
+  "forbidden_claims": ["completion", "selected_baseline", "operating_promotion", "runtime_authority", "live_readiness", "Goal Achieve"]
+}

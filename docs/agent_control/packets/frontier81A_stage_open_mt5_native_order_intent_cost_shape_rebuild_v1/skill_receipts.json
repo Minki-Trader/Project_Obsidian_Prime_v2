@@ -1,0 +1,136 @@
+{
+  "receipts": [
+    {
+      "packet_id": "frontier81A_stage_open_mt5_native_order_intent_cost_shape_rebuild_v1",
+      "skill": "obsidian-stage-transition",
+      "status": "executed",
+      "source_current_truth_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/stage_frontier_extra_E01__f001_f050_hypothesis_mixing_runtime_learning/04_selected/selection_status.md"
+      ],
+      "changed_or_checked_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/04_selected/selection_status.md",
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "docs/registers/idea_registry.md",
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/stage_run_ledger.csv",
+        "docs/workspace/changelog.md"
+      ],
+      "detected_conflicts": [
+        "none_detected(감지된 충돌 없음)"
+      ],
+      "canonical_state_after": {
+        "active_stage": "stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild",
+        "current_run": "frontier81A_stage_open_mt5_native_order_intent_cost_shape_rebuild_v1",
+        "next_run": "frontier81B_mt5_native_order_intent_cost_shape_proxy_design_v1"
+      },
+      "allowed_claims": [
+        "stage_opened(단계 개방)",
+        "no_authority_claimed(권위 주장 없음)",
+        "proxy_design_handoff_named(프록시 설계 인계 지명)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    },
+    {
+      "packet_id": "frontier81A_stage_open_mt5_native_order_intent_cost_shape_rebuild_v1",
+      "skill": "obsidian-reentry-read",
+      "status": "executed",
+      "source_current_truth_docs": [
+        "AGENTS.md",
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/stage_frontier_extra_E01__f001_f050_hypothesis_mixing_runtime_learning/04_selected/selection_status.md",
+        "stages/stage_frontier_extra_E01__f001_f050_hypothesis_mixing_runtime_learning/03_reviews/stage_closeout_report.md",
+        "stages/stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics/03_reviews/stage_closeout_report.md"
+      ],
+      "active_stage": "stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild",
+      "current_run": "frontier81A_stage_open_mt5_native_order_intent_cost_shape_rebuild_v1",
+      "detected_conflicts": [
+        "none_detected(감지된 충돌 없음)"
+      ],
+      "allowed_claims": [
+        "stage_opened(단계 개방)",
+        "design_only(설계만)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    },
+    {
+      "packet_id": "frontier81A_stage_open_mt5_native_order_intent_cost_shape_rebuild_v1",
+      "skill": "obsidian-artifact-lineage",
+      "status": "executed",
+      "source_inputs": [
+        "stages/stage_frontier_80__multi_axis_surface_rotation_for_runtime_economics/03_reviews/stage_closeout_report.md",
+        "stages/stage_frontier_extra_E01__f001_f050_hypothesis_mixing_runtime_learning/03_reviews/stage_closeout_report.md",
+        "docs/registers/frontier_extra_stage_register.yaml"
+      ],
+      "produced_artifacts": [
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/00_spec/stage_brief.md",
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/01_inputs/input_refs.md",
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/04_selected/selection_status.md",
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/stage_run_ledger.csv",
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/02_runs/active/f81a_open_v1/run_manifest.json",
+        "docs/decisions/2026-06-18_stage_frontier_81_open.md"
+      ],
+      "raw_evidence": [
+        "docs/registers/run_registry.csv",
+        "docs/registers/alpha_run_ledger.csv",
+        "docs/registers/idea_registry.md"
+      ],
+      "machine_readable": [
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/02_runs/active/f81a_open_v1/run_manifest.json",
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/stage_run_ledger.csv",
+        "docs/agent_control/packets/frontier81A_stage_open_mt5_native_order_intent_cost_shape_rebuild_v1/work_packet.yaml"
+      ],
+      "human_readable": [
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/00_spec/stage_brief.md",
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/01_inputs/input_refs.md",
+        "docs/decisions/2026-06-18_stage_frontier_81_open.md"
+      ],
+      "hashes_or_missing_reasons": {
+        "hashes": "not_computed_for_stage_open_compact_receipt(단계 개방 압축 영수증에서는 해시 미계산)",
+        "reason": "Artifacts are text state-sync records and will be rechecked before runtime/materialization claims(텍스트 상태 동기화 기록이며 런타임/물질화 주장 전 재확인)."
+      },
+      "lineage_boundary": "connected_with_boundary(경계 있는 연결): stage-open design only(단계 개방 설계 전용), no model/runtime artifact(모델/런타임 산출물 없음)."
+    },
+    {
+      "packet_id": "frontier81A_stage_open_mt5_native_order_intent_cost_shape_rebuild_v1",
+      "skill": "obsidian-claim-discipline",
+      "status": "executed",
+      "requested_claims": [
+        "stage_opened",
+        "proxy_design_handoff_named"
+      ],
+      "allowed_claims": [
+        "stage_opened(단계 개방)",
+        "no_authority_claimed(권위 주장 없음)",
+        "proxy_design_handoff_named(프록시 설계 인계 지명)"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ],
+      "final_status": "open_design_only_no_forbidden_authority_claim(개방 설계 전용, 금지 권위 주장 없음)"
+    }
+  ]
+}

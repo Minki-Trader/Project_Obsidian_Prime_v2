@@ -1,0 +1,11 @@
+﻿packet_id: frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1
+skill: obsidian-data-integrity
+status: passed_proxy_preflight
+data_sources_checked:
+  - stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_data_feature_contract_preflight.json
+time_axis_boundary: "closed-bar feature key(확정봉 피처 키) with post-entry label path(진입 이후 라벨 경로)."
+split_boundary: "train-only thresholds(훈련 전용 임계값); validation/OOS scoring(검증/표본외 채점)."
+leakage_checks:
+  - "regime filters(장세 필터)는 entry-known fields(진입 시점 필드)만 사용."
+  - "label outcome(라벨 결과)은 feature(피처)에 섞지 않음."
+missing_data_boundary: "Tier A separate(티어 A 분리); Tier B separate missing_required(티어 B 분리 필수 누락); Tier A+B combined out_of_scope_by_claim(합산은 주장 범위 밖)."

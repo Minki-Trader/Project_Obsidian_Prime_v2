@@ -1,0 +1,13 @@
+﻿packet_id: frontier81G_mt5_realized_label_rebuild_v1
+skill: obsidian-model-validation
+status: exploratory_low_density_seed_no_materialization_ready
+model_family: histgbm/extra_trees/logreg diagnostic filters(히스트지비엠/엑스트라트리/로지스틱 진단 필터)
+target_and_label: MT5 realized trade win label(MT5 실현 거래 승리 라벨)
+split_method: validation_as_train_oos_holdout_diagnostic_only(검증 훈련/표본외 보류 진단 전용)
+selection_metric: OOS net/PF with density/exportability boundary(표본외 순손익/수익 팩터와 밀도/내보내기 경계)
+secondary_metrics: DD, trades/day, win rate, avg win/loss, max consecutive loss(손실폭/일 거래/승률/평균 이익·손실/최대 연속 손실)
+threshold_policy: searched_on_validation_probability_quantiles(검증 확률 분위수 탐색)
+overfit_risk: high_validation_as_train_and_multiple_thresholds(높음, 검증 훈련 및 다중 임계값)
+calibration_risk: scores are rank signals only(점수는 순위 신호 전용)
+comparison_baseline: F81C unfiltered runtime trades(F81C 무필터 런타임 거래)
+validation_judgment: exploratory

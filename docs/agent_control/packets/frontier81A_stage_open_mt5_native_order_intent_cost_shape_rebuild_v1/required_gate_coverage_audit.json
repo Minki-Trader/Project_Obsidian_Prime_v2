@@ -1,0 +1,28 @@
+{
+  "audit_name": "required_gate_coverage_audit",
+  "status": "pass",
+  "packet_id": "frontier81A_stage_open_mt5_native_order_intent_cost_shape_rebuild_v1",
+  "primary_family": "state_sync",
+  "required_gates": [
+    "state_sync_audit",
+    "final_claim_guard"
+  ],
+  "covered_gates": [
+    "state_sync_audit",
+    "final_claim_guard"
+  ],
+  "not_applicable_with_reason": {
+    "kpi_contract_audit": "No trading KPI(거래 KPI 없음) in stage-open design packet(단계 개방 설계 묶음).",
+    "mt5_runtime_evidence_gate": "No MT5 execution(MT5 실행 없음).",
+    "model_training_gate": "No model training(모델 학습 없음)."
+  },
+  "claim_boundary": "frontier81_open_design_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve"
+  ]
+}

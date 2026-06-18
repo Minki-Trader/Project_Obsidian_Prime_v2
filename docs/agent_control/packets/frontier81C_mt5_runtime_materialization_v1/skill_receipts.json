@@ -1,0 +1,27 @@
+{
+  "packet_id": "frontier81C_mt5_runtime_materialization_v1",
+  "primary_skill": {
+    "name": "obsidian-runtime-parity",
+    "status": "passed_runtime_materialization_observation",
+    "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81c_runtime_parity_receipt.json"
+  },
+  "support_skills": [
+    {
+      "name": "obsidian-backtest-forensics",
+      "status": "passed_completed_tester_reports_with_boundary",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81c_backtest_forensics_receipt.json"
+    },
+    {
+      "name": "obsidian-run-evidence-system",
+      "status": "passed_runtime_receipt_and_ledger",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/02_runs/frontier81C_mt5_runtime_materialization_v1/f81c_runtime_receipt.csv"
+    },
+    {
+      "name": "obsidian-artifact-lineage",
+      "status": "passed_run_manifest_producer_hash",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/02_runs/frontier81C_mt5_runtime_materialization_v1/run_manifest.json"
+    }
+  ],
+  "required_skill_boundary": "obsidian-reference-scout is listed in registry but not available in this session skill roster; local MT5 tester evidence was sufficient for this runtime observation claim.",
+  "forbidden_claims": ["completion", "selected_baseline", "operating_promotion", "runtime_authority", "live_readiness", "Goal Achieve"]
+}

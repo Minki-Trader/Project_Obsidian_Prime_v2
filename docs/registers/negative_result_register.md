@@ -1397,3 +1397,15 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Reopen condition(재개 조건): feature set/label/model family/trade shape/risk logic/regime split(피처 묶음/라벨/모델 계열/거래 형태/위험 로직/장세 분할)을 함께 바꾸는 새 표면에서만 재개한다.
 - Evidence(근거): `stages/stage_frontier_79__runtime_native_trade_shape_labeling_from_fill_path/03_reviews/stage_closeout_report.md`.
 - Boundary(경계): no authority(권위 없음), no completion(완성 없음).
+
+<!-- NR-FR81-MT5-NATIVE-ORDER-INTENT-COST-SHAPE-REBUILD -->
+## NR-FR81-MT5-NATIVE-ORDER-INTENT-COST-SHAPE-REBUILD
+
+- Stage(단계): `stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild`
+- Hypothesis(가설): MT5-native order-intent cost-shape labels(MT5 원형 주문 의도 비용 형태 라벨)이 proxy/runtime economics gap(프록시/런타임 경제성 간극)을 줄이고 material ONNX candidate(물질적 온엑스 후보)를 만들 수 있다.
+- Why failed(실패 이유): F81C/F81F MT5 runtime OOS(런타임 표본외)는 net/PF/DD/trades-day(순손익/수익 팩터/손실폭/일 거래) `-115.71/0.7332887700534759/23.72/3.4358974358974357`로 부정이었다. F81G realized-label repair(실현 라벨 수리)는 positive low-density seed(저밀도 양수 씨앗)를 찾았지만 materialization-ready candidate(물질화 준비 후보)는 `0`개였다.
+- Salvage value(회수 가치): exact parity(정확 동등성), Strategy Tester report deal parser(전략 테스터 보고서 딜 파서), runtime realized-label dataset(런타임 실현 라벨 데이터셋), low-density seed reference(저밀도 씨앗 참조)를 보존한다.
+- Do-not-repeat(반복 금지): same F81 f81b_01107/F81G surface(같은 F81 표면)를 threshold/filter/parameter-only repair(임계값/필터/파라미터만 바꾸는 수리)로 반복하지 않는다.
+- Reopen condition(재개 조건): feature set/label/model family/trade shape/risk logic/regime split(피처 묶음/라벨/모델 계열/거래 형태/위험 로직/장세 분할) 중 하나 이상이 실제로 바뀌고 새 MT5 Runtime Probe(MT5 런타임 탐침)를 포함할 때만 재개한다.
+- Evidence(근거): `stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/stage_closeout_report.md`.
+- Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).

@@ -1,0 +1,35 @@
+{
+  "packet_id": "frontier81C_mt5_runtime_materialization_v1",
+  "primary_family": "runtime_backtest",
+  "status": "passed_no_authority",
+  "gates": [
+    {
+      "gate": "runtime_evidence_gate",
+      "status": "passed_completed_2_of_2",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/02_runs/frontier81C_mt5_runtime_materialization_v1/f81c_runtime_receipt.csv",
+      "effect": "MT5 Strategy Tester validation/OOS attempts completed(MT5 전략 테스터 검증/표본외 시도 완료)."
+    },
+    {
+      "gate": "scope_completion_gate",
+      "status": "passed_runtime_materialization_scope_only",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/frontier81C_mt5_runtime_materialization_report.md",
+      "effect": "F81C materialization scope closed(F81C 물질화 범위 종료); stage closeout not claimed(단계 마감 주장 없음)."
+    },
+    {
+      "gate": "kpi_contract_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81c_mt5_runtime_materialization_summary.json",
+      "effect": "Net/PF/DD/trade count/trades per day and parity KPI(순손익/수익 팩터/손실폭/거래 수/일 거래/동등성 KPI) recorded."
+    },
+    {
+      "gate": "required_gate_coverage_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/required_gate_coverage_audit_f81c.md"
+    },
+    {
+      "gate": "final_claim_guard",
+      "status": "passed",
+      "evidence": "docs/agent_control/packets/frontier81C_mt5_runtime_materialization_v1/final_claim_guard.json"
+    }
+  ]
+}

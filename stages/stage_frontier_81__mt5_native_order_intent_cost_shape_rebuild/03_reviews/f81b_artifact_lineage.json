@@ -1,0 +1,27 @@
+﻿{
+  "producer": "stage_pipelines/stage_frontier_81/frontier81b_mt5_native_order_intent_cost_shape_proxy_scout.py",
+  "producer_sha256": "85be9116018965b951f16252345209f771987e8ced656b3498f3253ce0c6d13d",
+  "source_inputs": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/00_spec/stage_brief.md",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/01_inputs/input_refs.md"
+  ],
+  "artifact_paths": [
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_order_intent_cost_shape_proxy_summary.json",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/02_runs/frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1/f81b_order_intent_cost_shape_candidates_all.csv",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_order_intent_cost_shape_ranked_top200.csv",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_order_intent_cost_shape_axis_summary.csv",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_surface_family_summary.csv",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_model_fit_summary.csv",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_label_audit.csv",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_tier_record_audit.csv",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_data_feature_contract_preflight.json",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_report.md",
+    "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/02_runs/frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1/run_manifest.json"
+  ],
+  "consumer": "frontier81C_mt5_runtime_materialization_v1",
+  "lineage_boundary": "proxy_scout_artifacts_connected_no_authority(프록시 탐색 산출물 연결, 권위 없음)",
+  "canonical_stage_id": "stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild"
+}

@@ -1,0 +1,14 @@
+﻿packet_id: frontier81E_capped_repair_or_rotation_decision_v1
+skill: obsidian-result-judgment
+status: decision_only_no_authority
+result_subject: F81E capped repair or rotation decision(F81E 상한 수리 또는 회전 결정)
+evidence_available:
+  - stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81d_proxy_runtime_gap_attribution.json
+  - stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/02_runs/frontier81C_mt5_runtime_materialization_v1/f81c_runtime_receipt.csv
+  - stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81c_backtest_forensics_receipt.json
+evidence_missing:
+  - deal-level entry/exit/PnL list(거래별 진입/청산/손익 목록)
+judgment_label: negative
+claim_boundary: decision_only_no_completion_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+next_condition: frontier81F_deal_reconciled_runtime_label_preflight_v1
+user_explanation_hook: "동등성은 맞았지만 거래별 손익 근거가 없어, 한 번만 그 축을 수리한다."

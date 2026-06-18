@@ -1,0 +1,33 @@
+﻿{
+  "packet_id": "frontier81G_mt5_realized_label_rebuild_v1",
+  "primary_family": "experiment_execution",
+  "status": "passed_diagnostic_only_no_authority",
+  "gates": [
+    {
+      "gate": "scope_completion_gate",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81g_mt5_realized_label_rebuild_summary.json"
+    },
+    {
+      "gate": "kpi_contract_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/02_runs/frontier81G_mt5_realized_label_rebuild_v1/f81g_realized_label_candidate_rows.csv"
+    },
+    {
+      "gate": "skill_receipt_lint",
+      "status": "passed",
+      "evidence": [
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81g_experiment_design_receipt.yaml",
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81g_data_integrity_receipt.yaml",
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81g_model_validation_receipt.yaml",
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81g_run_evidence_receipt.yaml",
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81g_artifact_lineage_receipt.yaml"
+      ]
+    },
+    {
+      "gate": "required_gate_coverage_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/required_gate_coverage_audit_f81g.md"
+    }
+  ]
+}

@@ -1,4 +1,37 @@
-﻿## 2026-06-16 Frontier64 Stage Open(전선64 단계 개방)
+﻿# 2026-06-18 - F81H Closeout And F82 Rotation(F81H 마감 및 F82 회전)
+
+- Action(행동): `frontier81H_capped_repair_closeout_or_f82_rotation_decision_v1`로 F81 lifecycle(전선81 생명주기)을 closeout(마감)했다.
+- Effect(효과): MT5 runtime OOS(런타임 표본외) `-115.71/0.7332887700534759/23.72/3.4358974358974357`와 F81G materialization-ready(물질화 준비) `0`을 근거로 negative memory(부정 기억)와 preserved clue(보존 단서)를 기록했다.
+- Next(다음): `frontier82A_stage_open_density_first_runtime_economic_mechanism_rotation_v1`.
+- Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+
+# 2026-06-18 - F81F Deal Reconciliation(F81F 거래 대조)
+
+- Action(행동): `frontier81F_deal_reconciled_runtime_label_preflight_v1`로 F81C Strategy Tester report(전략 테스터 보고서)의 deal/trade rows(딜/거래 행)를 파싱했다.
+- Effect(효과): deal rows `2734`, trade rows `1367`를 runtime receipt(런타임 영수증)와 대조해 MT5-realized label rebuild(MT5 실현 손익 라벨 재구축) 입력을 만들었다.
+- Next(다음): `frontier81G_mt5_realized_label_rebuild_v1`.
+- Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+
+# 2026-06-18 - F81D Proxy Runtime Gap Attribution(F81D 프록시/런타임 간극 귀속)
+
+- Action(행동): `frontier81D_proxy_runtime_gap_attribution_v1`로 F81C MT5 runtime materialization(MT5 런타임 물질화)을 F81B proxy(프록시)와 비교했다.
+- Effect(효과): OOS runtime net/PF/DD(표본외 런타임 순손익/수익 팩터/손실폭) `-115.71/0.73/23.72`가 proxy(프록시) `120.89973397988815/1.396125563144892/2.050967333359029`에서 붕괴한 것을 negative evidence(부정 근거)로 기록했다.
+- Next(다음): `frontier81E_capped_repair_or_rotation_decision_v1`.
+- Boundary(경계): no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+
+# 2026-06-18 - F81B MT5 Native Order Intent Cost Shape Proxy Scout(F81B MT5 원형 주문 의도 비용 형태 프록시 탐색)
+
+- Action(행동): `frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1` bounded proxy scout(상한 프록시 탐색)를 실행했다.
+- Effect(효과): materialization candidate(물질화 후보) `1013`, meaningful signal(의미 신호) `162`, final-like reference(최종 유사 참고) `0`을 기록했다.
+- Best candidate(최선 후보): `f81b_04147`, validation/OOS net/PF/DD/tpd/trades(검증/표본외 순손익/수익 팩터/손실폭/일 거래/거래) `145.2984/1.3886/3.3316/2.5387/688` / `128.0462/1.4583/2.1716/2.7423/532`.
+- Next(다음): `frontier81C_mt5_runtime_materialization_v1`.
+- Boundary(경계): proxy scout only(프록시 탐색 전용); no completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성 없음).
+## 2026-06-18 Frontier81 Stage Open(F81 단계 개방)
+
+- action(행동): `stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild`를 MT5-native order intent/cost/exit shape(MT5 네이티브 주문 의도/비용/청산 형태) hypothesis lifecycle(가설 생명주기)로 열었다.
+- effect(효과): E01(추가01) closeout(마감) 뒤 F81(전선81)이 active stage(활성 단계)가 되었고, next run(다음 실행)은 `frontier81B_mt5_native_order_intent_cost_shape_proxy_design_v1`다.
+- boundary(경계): open/design only(개방/설계만). completion/baseline/promotion/runtime authority/live readiness/Goal Achieve(완성/기준선/승격/런타임 권위/실거래 준비/목표 달성)는 주장하지 않는다.
+## 2026-06-16 Frontier64 Stage Open(전선64 단계 개방)
 
 - action(행동): `stage_frontier_64__independent_pf_source_after_inverse_signal_memory`를 loss-cluster hazard admission source(손실 군집 위험 진입 허용 원천) 가설로 열었다.
 - effect(효과): F61~F63 side allocation(방향 배분) 수리 반복을 멈추고, independent PF source(독립 수익 팩터 원천)를 proxy(프록시)부터 다시 검증하게 했다.

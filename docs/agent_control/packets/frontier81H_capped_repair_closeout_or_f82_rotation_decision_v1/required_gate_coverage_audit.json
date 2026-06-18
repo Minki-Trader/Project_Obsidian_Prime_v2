@@ -1,0 +1,28 @@
+﻿{
+  "packet_id": "frontier81H_capped_repair_closeout_or_f82_rotation_decision_v1",
+  "primary_family": "publish_handoff",
+  "status": "passed_stage_closeout_no_authority",
+  "gates": [
+    {
+      "gate": "state_sync_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81h_state_sync_audit.json"
+    },
+    {
+      "gate": "closeout_gate",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81h_closeout_gate.json"
+    },
+    {
+      "gate": "required_gate_coverage_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/required_gate_coverage_audit_f81h.md"
+    },
+    {
+      "gate": "final_claim_guard",
+      "status": "passed",
+      "evidence": "docs/agent_control/packets/frontier81H_capped_repair_closeout_or_f82_rotation_decision_v1/final_claim_guard.json"
+    }
+  ],
+  "frontier_extra_due_status": "not_due_after_f81_closeout_next_boundary_f100_e01_closed_for_f050"
+}

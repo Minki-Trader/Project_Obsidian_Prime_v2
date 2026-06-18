@@ -1,0 +1,38 @@
+﻿{
+  "packet_id": "frontier81E_capped_repair_or_rotation_decision_v1",
+  "primary_skill": {
+    "name": "obsidian-run-evidence-system",
+    "status": "passed_decision_rows_and_ledgers",
+    "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81e_capped_repair_or_rotation_decision_rows.csv"
+  },
+  "support_skills": [
+    {
+      "name": "obsidian-artifact-lineage",
+      "status": "passed_manifest_and_hash_links",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81e_artifact_lineage_receipt.yaml"
+    },
+    {
+      "name": "obsidian-result-judgment",
+      "status": "passed_decision_only_no_authority",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81e_result_judgment_receipt.yaml"
+    },
+    {
+      "name": "obsidian-performance-attribution",
+      "status": "passed_repair_axis_selected",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81e_performance_attribution_receipt.yaml"
+    }
+  ],
+  "companion_skill": {
+    "name": "obsidian-claim-discipline",
+    "status": "passed_decision_only_no_authority",
+    "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81e_claim_discipline_receipt.yaml"
+  },
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "Goal Achieve"
+  ]
+}

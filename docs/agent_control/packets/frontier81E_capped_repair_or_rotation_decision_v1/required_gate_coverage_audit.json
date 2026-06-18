@@ -1,0 +1,34 @@
+﻿{
+  "packet_id": "frontier81E_capped_repair_or_rotation_decision_v1",
+  "primary_family": "kpi_evidence",
+  "status": "passed_decision_only_no_authority",
+  "gates": [
+    {
+      "gate": "kpi_contract_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81e_capped_repair_or_rotation_decision.json",
+      "effect": "Decision links proxy/runtime KPI and next action(결정이 프록시/런타임 KPI와 다음 행동을 연결)."
+    },
+    {
+      "gate": "row_grain_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81e_capped_repair_or_rotation_decision_rows.csv",
+      "effect": "Rows are validation/OOS plus one decision record(행은 검증/표본외와 결정 기록)."
+    },
+    {
+      "gate": "source_authority_audit",
+      "status": "passed_with_boundary",
+      "evidence": [
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/02_runs/frontier81C_mt5_runtime_materialization_v1/f81c_runtime_receipt.csv",
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81c_backtest_forensics_receipt.json",
+        "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81d_proxy_runtime_gap_attribution.json"
+      ],
+      "effect": "Authority is observation and decision only(권위는 관찰과 결정 한정)."
+    },
+    {
+      "gate": "required_gate_coverage_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/required_gate_coverage_audit_f81e.md"
+    }
+  ]
+}

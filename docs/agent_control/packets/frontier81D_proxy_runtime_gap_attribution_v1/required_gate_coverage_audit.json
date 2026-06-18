@@ -1,0 +1,30 @@
+{
+  "packet_id": "frontier81D_proxy_runtime_gap_attribution_v1",
+  "primary_family": "kpi_evidence",
+  "status": "passed_gap_attribution_only_no_authority",
+  "gates": [
+    {
+      "gate": "kpi_contract_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81d_proxy_runtime_gap_attribution.json",
+      "effect": "Proxy/runtime KPI gap recorded by split(프록시/런타임 KPI 간극을 구간별 기록)."
+    },
+    {
+      "gate": "row_grain_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81d_proxy_runtime_gap_rows.csv",
+      "effect": "Rows are split-level validation/OOS gap records(행은 검증/표본외 구간별 간극 기록)."
+    },
+    {
+      "gate": "source_authority_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/02_runs/frontier81C_mt5_runtime_materialization_v1/f81c_runtime_receipt.csv",
+      "effect": "Source authority is MT5 runtime materialization observation only(원천 권위는 MT5 런타임 물질화 관찰 한정)."
+    },
+    {
+      "gate": "required_gate_coverage_audit",
+      "status": "passed",
+      "evidence": "stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/required_gate_coverage_audit_f81d.md"
+    }
+  ]
+}

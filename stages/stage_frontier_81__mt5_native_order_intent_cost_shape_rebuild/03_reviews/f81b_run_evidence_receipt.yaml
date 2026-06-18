@@ -1,0 +1,25 @@
+﻿packet_id: frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1
+skill: obsidian-run-evidence-system
+status: f81b_proxy_material_signal_mt5_materialization_required_no_authority
+source_inputs:
+  - data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet
+  - data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt
+  - data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv
+produced_artifacts:
+  - stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_order_intent_cost_shape_proxy_summary.json
+  - stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/f81b_order_intent_cost_shape_ranked_top200.csv
+  - stages/stage_frontier_81__mt5_native_order_intent_cost_shape_rebuild/03_reviews/frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_report.md
+ledger_rows:
+  - frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1__tier_a_proxy_scout
+  - frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1__tier_b_missing_required
+  - frontier81B_mt5_native_order_intent_cost_shape_proxy_scout_v1__tier_ab_combined_out_of_scope
+missing_evidence:
+  - "MT5 runtime probe(MT5 런타임 탐침) not run yet(아직 미실행)."
+allowed_claims:
+  - proxy_scout_executed
+  - material_candidate_count_recorded
+forbidden_claims:
+  - completion
+  - selected_baseline
+  - runtime_authority
+  - goal_achieve
