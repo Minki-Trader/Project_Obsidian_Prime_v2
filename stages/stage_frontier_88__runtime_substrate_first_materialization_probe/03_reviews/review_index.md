@@ -17,3 +17,12 @@
 - `f88b_kpi_contract_audit.json`: KPI contract audit(KPI 계약 감사)
 - `f88b_result_judgment_audit.json`: result judgment audit(결과 판정 감사)
 - `f88b_final_claim_guard.json`: final claim guard(최종 주장 보호)
+<!-- frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1 -->
+
+## frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1
+
+- `f88c_runtime_evidence_gate.json`: runtime evidence gate(런타임 근거 게이트)
+- `f88c_backtest_forensics_audit.json`: backtest forensics audit(백테스트 포렌식 감사)
+- `f88c_kpi_contract_audit.json`: KPI contract audit(KPI 계약 감사)
+- `f88c_result_judgment_audit.json`: result judgment audit(결과 판정 감사)
+- `f88c_final_claim_guard.json`: final claim guard(최종 주장 보호)

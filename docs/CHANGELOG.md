@@ -22,3 +22,9 @@
 
 - Action(행동): F88B ran one narrow MT5 runtime probe(F88B 좁은 MT5 런타임 탐침 1회 실행).
 - Effect(효과): report/telemetry evidence(보고서/기록 근거)는 생성됐지만 economics(경제성)는 negative(부정)이고 runtime authority(런타임 권위)는 not_claimed(미주장).
+<!-- frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1 -->
+
+## 2026-06-18 - frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1
+
+- Action(행동): F88C ran MT5 runtime timestamp coverage/trade-list repair probe(F88C가 MT5 런타임 타임스탬프 커버리지/거래목록 수리 탐침을 실행).
+- Effect(효과): report/telemetry/trade-list hashes(보고서/기록/거래목록 해시)를 남겼고 authority/live readiness/Goal Achieve(권위/실거래 준비/목표 달성)는 주장하지 않았다.

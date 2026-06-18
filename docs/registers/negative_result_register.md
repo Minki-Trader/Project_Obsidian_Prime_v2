@@ -1509,3 +1509,14 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - Negative memory(부정 기억): F87 trade-shape/risk proxy surface(거래 형태/위험 프록시 표면)는 meaningful runtime candidate(의미 있는 런타임 후보)를 만들지 못했다.
 - Salvage value(회수 가치): bad-risk concentration(나쁜 위험 집중), density gap(밀도 간극), and no runtime trigger(런타임 트리거 없음)는 다음 축의 반례 근거다.
 - Reopen condition(재개 조건): new axis/new evidence/material novelty delta(새 축/새 근거/실질 신규성 차이), especially runtime representation(런타임 표현)이 있을 때만 재실험한다.
+<!-- frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1 -->
+
+## frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1
+
+- Stage(단계): `stage_frontier_88__runtime_substrate_first_materialization_probe`
+- Run(실행): `frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1`
+- Evidence(근거): `stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/reports/result_summary.md`, `stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_trades.csv`.
+- Negative/inconclusive memory(부정/불충분 기억): runtime substrate repair(런타임 바탕 수리)는 observation(관찰)을 만들었지만 authority/promotion/baseline(권위/승격/기준선)을 만들지 않는다.
+- Do-not-repeat(반복 금지): same F04D reference ONNX(동일 F04D 참고 온엑스)를 threshold/filter/parameter-only repair(임계값/필터/파라미터만 수리)로 반복하지 않는다.
+- Reopen condition(재개 조건): new source/data representation/label/runtime representation/risk logic/regime split(새 원천/데이터 표현/라벨/런타임 표현/위험 로직/장세 분할) 중 하나 이상이 있어야 한다.
+- Boundary(경계): `runtime_probe_observation_only_no_completion_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

@@ -1,0 +1,588 @@
+{
+  "allowed_claims": [
+    "runtime_probe_attempt_recorded",
+    "actual_output_identity_recorded",
+    "separate_trade_list_attempt_recorded",
+    "economics_recorded_no_authority",
+    "blocked_or_inconclusive_runtime_recorded"
+  ],
+  "claim_boundary": "runtime_probe_observation_only_no_completion_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "control_plane_gates": {
+    "required_gate_coverage_audit": {
+      "command": [
+        "C:\\Users\\awdse\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-m",
+        "foundation.control_plane.required_gate_coverage_audit",
+        "--work-packet",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\docs\\agent_control\\packets\\frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1\\work_packet.yaml",
+        "--closeout-gate",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\docs\\agent_control\\packets\\frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1\\closeout_gate.json",
+        "--output-json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\docs\\agent_control\\packets\\frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1\\required_gate_coverage_audit.json",
+        "--allow-blocked-exit-zero"
+      ],
+      "output_path": "docs/agent_control/packets/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/required_gate_coverage_audit.json",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\n  \"audit_name\": \"required_gate_coverage_audit\",\n  \"status\": \"pass\",\n  \"passed\": true,\n  \"completed_forbidden\": false,\n  \"findings\": [],\n  \"counts\": {\n    \"required_gates\": [\n      \"artifact_lineage_audit\",\n      \"backtest_forensics_audit\",\n      \"final_claim_guard\",\n      \"kpi_contract_audit\",\n      \"required_gate_coverage_audit\",\n      \"result_judgment_audit\",\n      \"runtime_evidence_gate\",\n      \"scope_completion_gate\",\n      \"skill_receipt_schema_lint\",\n      \"state_sync_audit\",\n      \"work_packet_schema_lint\"\n    ],\n    \"executed_audits\": [\n      \"artifact_lineage_audit\",\n      \"backtest_forensics_audit\",\n      \"final_claim_guard\",\n      \"kpi_contract_audit\",\n      \"required_gate_coverage_audit\",\n      \"result_judgment_audit\",\n      \"runtime_evidence_gate\",\n      \"scope_completion_gate\",\n      \"skill_receipt_schema_lint\",\n      \"state_sync_audit\",\n      \"work_packet_schema_lint\"\n    ],\n    \"not_applicable_with_reason\": {},\n    \"declared_not_implemented\": {}\n  },\n  \"allowed_claims\": [\n    \"gate_coverage_complete\"\n  ],\n  \"forbidden_claims\": []\n}\n"
+    },
+    "skill_receipt_schema_lint": {
+      "command": [
+        "C:\\Users\\awdse\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-m",
+        "foundation.control_plane.skill_receipt_schema_lint",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\docs\\agent_control\\packets\\frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1\\skill_receipts.json",
+        "--output-json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\docs\\agent_control\\packets\\frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1\\skill_receipt_schema_lint.json",
+        "--allow-blocked-exit-zero"
+      ],
+      "output_path": "docs/agent_control/packets/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/skill_receipt_schema_lint.json",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\n  \"audit_name\": \"skill_receipt_schema_lint\",\n  \"status\": \"pass\",\n  \"passed\": true,\n  \"completed_forbidden\": false,\n  \"findings\": [],\n  \"counts\": {\n    \"receipt_count\": 8,\n    \"schema_path\": \"docs/agent_control/skill_receipt_schema.yaml\"\n  },\n  \"allowed_claims\": [\n    \"completed\"\n  ],\n  \"forbidden_claims\": []\n}\n"
+    },
+    "state_sync_audit": {
+      "command": [
+        "C:\\Users\\awdse\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-m",
+        "foundation.control_plane.state_sync_audit",
+        "--root",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2",
+        "--active-stage",
+        "stage_frontier_88__runtime_substrate_first_materialization_probe",
+        "--current-branch",
+        "main",
+        "--output-json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\docs\\agent_control\\packets\\frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1\\state_sync_audit.json",
+        "--allow-blocked-exit-zero"
+      ],
+      "output_path": "docs/agent_control/packets/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/state_sync_audit.json",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "ime_substrate_first_materialization_probe\",\n    \"workspace_active_branch\": \"\",\n    \"actual_git_branch\": \"main\",\n    \"current_run_values\": {\n      \"workspace_state\": \"frontier89_pending_frontier_extra_due_and_topic_rotation_check_v1\",\n      \"current_working_state\": \"frontier89_pending_frontier_extra_due_and_topic_rotation_check_v1\",\n      \"selection_status\": \"frontier89_pending_frontier_extra_due_and_topic_rotation_check_v1\"\n    },\n    \"stage_brief_boundary\": \"\",\n    \"registry_has_current_run\": true,\n    \"stage_ledger_has_current_run\": true,\n    \"source_paths\": {\n      \"workspace_state\": \"C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/workspace/workspace_state.yaml\",\n      \"current_working_state\": \"C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/context/current_working_state.md\",\n      \"selection_status\": \"C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/04_selected/selection_status.md\",\n      \"stage_brief\": \"C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/00_spec/stage_brief.md\",\n      \"run_registry\": \"C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/docs/registers/run_registry.csv\",\n      \"stage_ledger\": \"C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/03_reviews/stage_run_ledger.csv\"\n    }\n  },\n  \"allowed_claims\": [\n    \"current_truth_synced\",\n    \"state_sync_completed\"\n  ],\n  \"forbidden_claims\": []\n}\n"
+    },
+    "work_packet_schema_lint": {
+      "command": [
+        "C:\\Users\\awdse\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-m",
+        "foundation.control_plane.work_packet_schema_lint",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\docs\\agent_control\\packets\\frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1\\work_packet.yaml",
+        "--output-json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\docs\\agent_control\\packets\\frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1\\work_packet_schema_lint.json",
+        "--allow-blocked-exit-zero"
+      ],
+      "output_path": "docs/agent_control/packets/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/work_packet_schema_lint.json",
+      "returncode": 0,
+      "stderr_tail": "",
+      "stdout_tail": "{\n  \"audit_name\": \"work_packet_schema_lint\",\n  \"status\": \"blocked\",\n  \"passed\": false,\n  \"completed_forbidden\": true,\n  \"findings\": [\n    {\n      \"check_id\": \"work_packet_schema::verification_profile::runtime_claim_missing_identity_proof_fields\",\n      \"message\": \"Runtime, ONNX, EA, or MT5 claims must predeclare identity and output proof fields.\",\n      \"severity\": \"blocking\",\n      \"details\": {\n        \"profile_id\": \"runtime_probe\",\n        \"claims\": [\n          \"mt5_execution\"\n        ],\n        \"missing_evidence_terms\": [\n          \"feature_set_id\",\n          \"label_id\",\n          \"split_id\",\n          \"ea_source_hash\",\n          \"feature_order_hash\",\n          \"tester_identity\",\n          \"report_hash\",\n          \"telemetry_hash\"\n        ]\n      }\n    }\n  ],\n  \"counts\": {\n    \"version\": \"work_packet_schema_v2_1\",\n    \"has_v2_fields\": true,\n    \"packet_lifecycle\": \"new_packet\"\n  },\n  \"allowed_claims\": [\n    \"blocked\"\n  ],\n  \"forbidden_claims\": [\n    \"complete\",\n    \"completed\",\n    \"full_verification_complete\",\n    \"goal_achieve\",\n    \"live_readiness\",\n    \"mt5_verification_complete\",\n    \"operating_promotion\",\n    \"reviewed\",\n    \"runtime_authority\",\n    \"runtime_probe_completed\",\n    \"selected_baseline\",\n    \"verification_complete\",\n    \"verified\"\n  ]\n}\n"
+    }
+  },
+  "created_at_utc": "2026-06-18T23:11:09Z",
+  "economics": {
+    "avg_loss": null,
+    "avg_win": null,
+    "equity_drawdown_maximal_percent": 0.0,
+    "expectancy": 0.0,
+    "gross_loss": 0.0,
+    "gross_profit": 0.0,
+    "judgment": "negative_or_inconclusive_for_final_entry_gate",
+    "long_short_breakdown": {
+      "report": {
+        "long_trade_count": 0,
+        "long_win_rate_percent": 0.0,
+        "short_trade_count": 0,
+        "short_win_rate_percent": 0.0
+      },
+      "trade_list_net": {
+        "long": {
+          "net_profit": 0.0,
+          "trade_count": 0
+        },
+        "short": {
+          "net_profit": 0.0,
+          "trade_count": 0
+        }
+      }
+    },
+    "max_consecutive_loss": 0,
+    "max_drawdown_percent": 0.0,
+    "net_profit": 0.0,
+    "payoff_ratio": null,
+    "profit_factor": 0.0,
+    "recovery_factor": 0.0,
+    "time_under_water": "not_parsed_from_mt5_html_report",
+    "trade_count": 0,
+    "trades_per_calendar_day": 0.0,
+    "trades_per_feature_day": 0.0,
+    "win_rate_percent": 0.0
+  },
+  "execution": {
+    "attempt_name": "f88c_tier_a_validation_is",
+    "candidate_id": "rf_depth5_leaf80_balanced_argmax",
+    "command": [
+      "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\terminal64.exe",
+      "/portable",
+      "/config:C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\MQL5\\Profiles\\Tester\\opv2_frontier88C_ta_v.ini"
+    ],
+    "common_feature_matrix_path": "Project_Obsidian_Prime_v2/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/features/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_validation_is_features.csv",
+    "common_model_path": "Project_Obsidian_Prime_v2/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/models/rf_depth5_leaf80_balanced_argmax.onnx",
+    "date_range_repair": "tester_to_date_aligned_to_day_after_feature_last_timestamp",
+    "ini_path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/f88c_tier_a_validation_is.ini",
+    "model_id": "rf_depth5_leaf80_balanced_argmax",
+    "returncode": 0,
+    "runtime_outputs": {
+      "last_summary": {
+        "bars_seen": 1379,
+        "deinit_reason": "remove",
+        "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+        "feature_ready_count": 0,
+        "feature_skip_count": 1379,
+        "flat_count": 1379,
+        "last_skip_reason": "feature_csv_open_failed:5003",
+        "long_count": 0,
+        "max_actual_risk_pct_after_floor": 0.0,
+        "max_model_risk_pct": 0.0,
+        "min_lot_floor_applied_count": 0,
+        "model_fail_count": 1379,
+        "model_id": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_f88c_tier_a",
+        "model_ok_count": 0,
+        "no_tier_count": 1379,
+        "order_attempt_count": 0,
+        "order_fill_count": 0,
+        "run_id": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1",
+        "short_count": 0,
+        "ticks_seen": 1899288,
+        "tier_a_flat_count": 0,
+        "tier_a_long_count": 0,
+        "tier_a_order_attempt_count": 0,
+        "tier_a_order_fill_count": 0,
+        "tier_a_short_count": 0,
+        "tier_a_used_count": 0,
+        "tier_b_fallback_flat_count": 0,
+        "tier_b_fallback_long_count": 0,
+        "tier_b_fallback_order_attempt_count": 0,
+        "tier_b_fallback_order_fill_count": 0,
+        "tier_b_fallback_short_count": 0,
+        "tier_b_fallback_used_count": 0,
+        "written_at": "2025.01.08 23:59:57"
+      },
+      "status": "blocked",
+      "summary_exists": true,
+      "summary_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/telemetry/f88c_tier_a_validation_is_summary.csv",
+      "summary_sha256": "70274c64ed30ce5f0220f2c251e61e41b67c61b1b4b379abee32598060989d5d",
+      "telemetry_exists": true,
+      "telemetry_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/telemetry/f88c_tier_a_validation_is_telemetry.csv",
+      "telemetry_sha256": "8b7c36f8fffccf9f65bb4dd798446cca9526bb8ce8801eb0140e1bd75e3c59a5",
+      "wait_status": "timeout",
+      "wait_timeout_seconds": 120
+    },
+    "set_path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/f88c_tier_a_validation_is.set",
+    "status": "completed",
+    "stderr": "",
+    "stdout": "",
+    "strategy_tester_report": {
+      "attempt_name": "f88c_tier_a_validation_is",
+      "chart": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_f88c_tier_a_validation_is.png",
+        "sha256": "0ca839eb37c70daaa8a03b533d74050b361da574d0ec613ede6cffa5f0f796c7",
+        "source_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Project_Obsidian_Prime_v2_frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_f88c_tier_a_validation_is.png"
+      },
+      "html_report": {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_f88c_tier_a_validation_is.htm",
+        "sha256": "f4e2c4b26eda721827c5b2a6c1fce25e97df81a2049020e62e40a6f2aba3b3aa",
+        "source_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Project_Obsidian_Prime_v2_frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_f88c_tier_a_validation_is.htm"
+      },
+      "metrics": {
+        "balance_drawdown_maximal_amount": 0.0,
+        "balance_drawdown_maximal_percent": 0.0,
+        "deal_count": 0,
+        "equity_drawdown_maximal_amount": 0.0,
+        "equity_drawdown_maximal_percent": 0.0,
+        "expectancy": 0.0,
+        "gross_loss": 0.0,
+        "gross_profit": 0.0,
+        "long_trade_count": 0,
+        "long_win_rate_percent": 0.0,
+        "losing_trade_count": 0,
+        "loss_rate_percent": 0.0,
+        "max_drawdown_amount": 0.0,
+        "max_drawdown_percent": 0.0,
+        "missing_required_metrics": [],
+        "net_profit": 0.0,
+        "parsed_row_count": 184,
+        "profit_factor": 0.0,
+        "recovery_factor": 0.0,
+        "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_f88c_tier_a_validation_is.htm",
+        "sharpe_ratio": 0.0,
+        "short_trade_count": 0,
+        "short_win_rate_percent": 0.0,
+        "source_encoding": "utf-16",
+        "status": "completed",
+        "trade_count": 0,
+        "win_rate_percent": 0.0,
+        "winning_trade_count": 0
+      },
+      "report_name": "Project_Obsidian_Prime_v2_frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_f88c_tier_a_validation_is",
+      "split": "validation_is",
+      "status": "completed",
+      "tier": "Tier A"
+    },
+    "tester_profile_ini_copy": {
+      "destination": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Profiles/Tester/opv2_frontier88C_ta_v.ini",
+      "encoding_policy": "utf-8-no-bom",
+      "sha256": "6af0fb85f8ad725f4b0ffe1158e2a326e28707bc9d8596221796641ee62d7b50",
+      "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/f88c_tier_a_validation_is.ini"
+    },
+    "tester_profile_set_copy": {
+      "destination": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+      "sha256": "b9e3c72afcaffd8380eb36b4bb1c8dc5a19b99ca3de8ab3992249a299f536d02",
+      "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/f88c_tier_a_validation_is.set"
+    }
+  },
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "runtime_parity_closed",
+    "strategy_tester_economics_pass",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "task_force_reviewed",
+    "stage_closeout_pass"
+  ],
+  "judgment": "runtime_probe_blocked_or_inconclusive_no_authority",
+  "materialized": {
+    "attempt": {
+      "attempt_name": "f88c_tier_a_validation_is",
+      "candidate_id": "rf_depth5_leaf80_balanced_argmax",
+      "common_feature_matrix_path": "Project_Obsidian_Prime_v2/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/features/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_validation_is_features.csv",
+      "common_model_path": "Project_Obsidian_Prime_v2/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/models/rf_depth5_leaf80_balanced_argmax.onnx",
+      "common_summary_path": "Project_Obsidian_Prime_v2/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/telemetry/f88c_tier_a_validation_is_summary.csv",
+      "common_telemetry_path": "Project_Obsidian_Prime_v2/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/telemetry/f88c_tier_a_validation_is_telemetry.csv",
+      "date_range_repair": "tester_to_date_aligned_to_day_after_feature_last_timestamp",
+      "ini": {
+        "format": "mt5_tester_ini",
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/f88c_tier_a_validation_is.ini",
+        "sha256": "6af0fb85f8ad725f4b0ffe1158e2a326e28707bc9d8596221796641ee62d7b50",
+        "tester": {
+          "Deposit": 500.0,
+          "ExecutionMode": 0,
+          "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+          "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+          "ForwardMode": 0,
+          "FromDate": "2025.01.02",
+          "Leverage": "1:100",
+          "Model": 4,
+          "Optimization": 0,
+          "Period": "M5",
+          "ReplaceReport": 1,
+          "Report": "Project_Obsidian_Prime_v2_frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_f88c_tier_a_validation_is",
+          "ShutdownTerminal": 1,
+          "Symbol": "US100",
+          "ToDate": "2025.01.09",
+          "UseCloud": 0,
+          "UseLocal": 1,
+          "UseRemote": 0
+        }
+      },
+      "set": {
+        "format": "mt5_set",
+        "parameter_count": 49,
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/f88c_tier_a_validation_is.set",
+        "sha256": "b9e3c72afcaffd8380eb36b4bb1c8dc5a19b99ca3de8ab3992249a299f536d02"
+      },
+      "split": "validation_is",
+      "tier": "Tier A"
+    },
+    "common_feature": {
+      "exists": true,
+      "path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/features/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_validation_is_features.csv",
+      "role": "common_files_feature_matrix",
+      "sha256": "afd45fa573f60a723fc63c1b9589d85795c84dc557bd8491bc6e553108d639d9",
+      "size_bytes": 247692
+    },
+    "common_model": {
+      "exists": true,
+      "path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/models/rf_depth5_leaf80_balanced_argmax.onnx",
+      "role": "common_files_onnx",
+      "sha256": "4fcc9d835709994190fa782b0610f6997a1a5439be88d3247d3270dc663162ad",
+      "size_bytes": 193711
+    },
+    "ini_artifact": {
+      "format": "mt5_tester_ini",
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/f88c_tier_a_validation_is.ini",
+      "sha256": "6af0fb85f8ad725f4b0ffe1158e2a326e28707bc9d8596221796641ee62d7b50",
+      "tester": {
+        "Deposit": 500.0,
+        "ExecutionMode": 0,
+        "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+        "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+        "ForwardMode": 0,
+        "FromDate": "2025.01.02",
+        "Leverage": "1:100",
+        "Model": 4,
+        "Optimization": 0,
+        "Period": "M5",
+        "ReplaceReport": 1,
+        "Report": "Project_Obsidian_Prime_v2_frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_f88c_tier_a_validation_is",
+        "ShutdownTerminal": 1,
+        "Symbol": "US100",
+        "ToDate": "2025.01.09",
+        "UseCloud": 0,
+        "UseLocal": 1,
+        "UseRemote": 0
+      }
+    },
+    "set_artifact": {
+      "format": "mt5_set",
+      "parameter_count": 49,
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/f88c_tier_a_validation_is.set",
+      "sha256": "b9e3c72afcaffd8380eb36b4bb1c8dc5a19b99ca3de8ab3992249a299f536d02"
+    }
+  },
+  "metrics": {
+    "balance_drawdown_maximal_amount": 0.0,
+    "balance_drawdown_maximal_percent": 0.0,
+    "deal_count": 0,
+    "equity_drawdown_maximal_amount": 0.0,
+    "equity_drawdown_maximal_percent": 0.0,
+    "expectancy": 0.0,
+    "gross_loss": 0.0,
+    "gross_profit": 0.0,
+    "long_trade_count": 0,
+    "long_win_rate_percent": 0.0,
+    "losing_trade_count": 0,
+    "loss_rate_percent": 0.0,
+    "max_drawdown_amount": 0.0,
+    "max_drawdown_percent": 0.0,
+    "missing_required_metrics": [],
+    "net_profit": 0.0,
+    "parsed_row_count": 184,
+    "profit_factor": 0.0,
+    "recovery_factor": 0.0,
+    "report_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_f88c_tier_a_validation_is.htm",
+    "sharpe_ratio": 0.0,
+    "short_trade_count": 0,
+    "short_win_rate_percent": 0.0,
+    "source_encoding": "utf-16",
+    "status": "completed",
+    "trade_count": 0,
+    "win_rate_percent": 0.0,
+    "winning_trade_count": 0
+  },
+  "next_condition": "F89 can only open after frontier_extra_due_check and frontier_topic_rotation_check; F88C adds timestamp coverage/trade-list evidence but no authority.",
+  "next_run_id": "frontier89_pending_frontier_extra_due_and_topic_rotation_check_v1",
+  "operation_proof": {
+    "boundary": "runtime probe observation only; not runtime authority",
+    "ea_loaded": false,
+    "feature_span": {
+      "first_bar_time_server": "2025.01.02 16:35:00",
+      "last_bar_time_server": "2025.01.08 22:00:00",
+      "row_count": 316,
+      "unique_server_dates": [
+        "2025.01.02",
+        "2025.01.03",
+        "2025.01.06",
+        "2025.01.07",
+        "2025.01.08"
+      ]
+    },
+    "onnx_inference_called": false,
+    "report_generated": true,
+    "runtime_completed": false,
+    "telemetry_updated": true,
+    "timestamp_coverage_gap": {
+      "current_feature_ready_count": 0,
+      "current_feature_skip_count": 1379,
+      "last_skip_reason": "feature_csv_open_failed:5003",
+      "parent_feature_ready_count": 316,
+      "parent_feature_skip_count": 1250,
+      "ready_delta": -316,
+      "skip_delta": 129,
+      "skip_reduced": false
+    },
+    "trade_list_separated": false
+  },
+  "parent_run_id": "frontier88B_minimal_runtime_substrate_preflight_v1",
+  "parent_summary_row": {
+    "bars_seen": 1566,
+    "deinit_reason": "remove",
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_ready_count": 316,
+    "feature_skip_count": 1250,
+    "flat_count": 1368,
+    "last_skip_reason": "feature_csv_timestamp_not_found:2025.01.09 16:30:00",
+    "long_count": 145,
+    "max_actual_risk_pct_after_floor": 0.0,
+    "max_model_risk_pct": 0.0,
+    "min_lot_floor_applied_count": 0,
+    "model_fail_count": 1250,
+    "model_id": "frontier88B_minimal_runtime_substrate_preflight_v1_f88b_tier_a",
+    "model_ok_count": 316,
+    "no_tier_count": 1250,
+    "order_attempt_count": 40,
+    "order_fill_count": 40,
+    "run_id": "frontier88B_minimal_runtime_substrate_preflight_v1",
+    "short_count": 53,
+    "ticks_seen": 2017746,
+    "tier_a_flat_count": 118,
+    "tier_a_long_count": 145,
+    "tier_a_order_attempt_count": 40,
+    "tier_a_order_fill_count": 40,
+    "tier_a_short_count": 53,
+    "tier_a_used_count": 316,
+    "tier_b_fallback_flat_count": 0,
+    "tier_b_fallback_long_count": 0,
+    "tier_b_fallback_order_attempt_count": 0,
+    "tier_b_fallback_order_fill_count": 0,
+    "tier_b_fallback_short_count": 0,
+    "tier_b_fallback_used_count": 0,
+    "written_at": "2025.01.09 16:30:00"
+  },
+  "run_id": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1",
+  "runtime_identity": {
+    "compile_status": "existing_binary_reused_no_compile_only_claim",
+    "dataset_id": "f88c_runtime_validation_short_probe_2025_01_02_to_2025_01_09",
+    "deal_list_hash": "42c63c4ee6b3c14fda6f84df335056f4eb15281159654b447f5313b24b3bcfd0",
+    "ea_binary_hash": "516f43ce017cae48cdcb5c3f23fd98e9a7b2a4281b4849f8270a515c2b00d781",
+    "ea_source_hash": "322772eb36777c9570f3fe7a6f0c808b3c929a62d2cae96c44e7d2c08b8a9180",
+    "feature_matrix_hash": "afd45fa573f60a723fc63c1b9589d85795c84dc557bd8491bc6e553108d639d9",
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_set_id": "frontier04d_f04d_read_feature_order_58",
+    "label_id": "frontier04d_path_label_argmax_reference_only",
+    "onnx_hash": "4fcc9d835709994190fa782b0610f6997a1a5439be88d3247d3270dc663162ad",
+    "parser_contract_version": "docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md",
+    "parser_status": {
+      "strategy_report": "utf-16",
+      "summary_csv": "parsed_utf_8_sig",
+      "trade_report": "empty"
+    },
+    "report_hash": "f4e2c4b26eda721827c5b2a6c1fce25e97df81a2049020e62e40a6f2aba3b3aa",
+    "report_status": "completed",
+    "runtime_contract_version": "ObsidianPrimeV2_RuntimeProbeEA_f88c",
+    "runtime_status": "blocked",
+    "set_ini_hash": {
+      "ini": "6af0fb85f8ad725f4b0ffe1158e2a326e28707bc9d8596221796641ee62d7b50",
+      "set": "b9e3c72afcaffd8380eb36b4bb1c8dc5a19b99ca3de8ab3992249a299f536d02"
+    },
+    "source_candidate": {
+      "candidate_id": "rf_depth5_leaf80_balanced_argmax",
+      "claim_effect": "reference runtime substrate candidate only; no inherited baseline or authority",
+      "source_run_id": "frontier04D_trainable_path_label_onnx_probe_v1",
+      "source_stage_id": "stage_frontier_04__path_aware_cost_dd_event_labeling"
+    },
+    "split_id": "validation_is_short_probe_2025_01_02_to_2025_01_09",
+    "summary_hash": "70274c64ed30ce5f0220f2c251e61e41b67c61b1b4b379abee32598060989d5d",
+    "telemetry_hash": "8b7c36f8fffccf9f65bb4dd798446cca9526bb8ce8801eb0140e1bd75e3c59a5",
+    "tester_identity": {
+      "broker": "FPMarkets",
+      "commission": "broker_native_or_report_not_parsed",
+      "date_range": "2025.01.02..2025.01.09",
+      "deposit": 500,
+      "leverage": "1:100",
+      "modeling_mode": "4_Every_tick_based_on_real_ticks",
+      "slippage": "not_explicit_in_ini",
+      "spread": "broker_native_or_report_not_parsed",
+      "swap": "broker_native_or_report_not_parsed",
+      "symbol": "US100",
+      "terminal_command": [
+        "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\terminal64.exe",
+        "/portable",
+        "/config:C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\MQL5\\Profiles\\Tester\\opv2_frontier88C_ta_v.ini"
+      ],
+      "tester_profile_ini": {
+        "destination": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Profiles/Tester/opv2_frontier88C_ta_v.ini",
+        "encoding_policy": "utf-8-no-bom",
+        "sha256": "6af0fb85f8ad725f4b0ffe1158e2a326e28707bc9d8596221796641ee62d7b50",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/f88c_tier_a_validation_is.ini"
+      },
+      "tester_profile_set": {
+        "destination": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/MQL5/Profiles/Tester/ObsidianPrimeV2_RuntimeProbeEA.set",
+        "sha256": "b9e3c72afcaffd8380eb36b4bb1c8dc5a19b99ca3de8ab3992249a299f536d02",
+        "source": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/mt5/f88c_tier_a_validation_is.set"
+      },
+      "timeframe": "M5"
+    },
+    "tester_status": "completed",
+    "trade_list_hash": "59c6d9c18ed05399307578a4aabfe4af7dad6e8cbc50faf2a90078274583b6a9",
+    "trade_list_identity": "trade_list_separation_attempted_but_empty_or_missing"
+  },
+  "stage_id": "stage_frontier_88__runtime_substrate_first_materialization_probe",
+  "status": "f88c_runtime_probe_blocked_or_inconclusive_no_authority",
+  "summary_row": {
+    "bars_seen": 1379,
+    "deinit_reason": "remove",
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_ready_count": 0,
+    "feature_skip_count": 1379,
+    "flat_count": 1379,
+    "last_skip_reason": "feature_csv_open_failed:5003",
+    "long_count": 0,
+    "max_actual_risk_pct_after_floor": 0.0,
+    "max_model_risk_pct": 0.0,
+    "min_lot_floor_applied_count": 0,
+    "model_fail_count": 1379,
+    "model_id": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_f88c_tier_a",
+    "model_ok_count": 0,
+    "no_tier_count": 1379,
+    "order_attempt_count": 0,
+    "order_fill_count": 0,
+    "run_id": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1",
+    "short_count": 0,
+    "ticks_seen": 1899288,
+    "tier_a_flat_count": 0,
+    "tier_a_long_count": 0,
+    "tier_a_order_attempt_count": 0,
+    "tier_a_order_fill_count": 0,
+    "tier_a_short_count": 0,
+    "tier_a_used_count": 0,
+    "tier_b_fallback_flat_count": 0,
+    "tier_b_fallback_long_count": 0,
+    "tier_b_fallback_order_attempt_count": 0,
+    "tier_b_fallback_order_fill_count": 0,
+    "tier_b_fallback_short_count": 0,
+    "tier_b_fallback_used_count": 0,
+    "written_at": "2025.01.08 23:59:57"
+  },
+  "trade_lists": {
+    "deal_count": 0,
+    "deals_csv": {
+      "exists": true,
+      "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_deals.csv",
+      "role": "mt5_deals_csv",
+      "sha256": "42c63c4ee6b3c14fda6f84df335056f4eb15281159654b447f5313b24b3bcfd0",
+      "size_bytes": 101
+    },
+    "long_short_trade_net": {
+      "long": {
+        "net_profit": 0.0,
+        "trade_count": 0
+      },
+      "short": {
+        "net_profit": 0.0,
+        "trade_count": 0
+      }
+    },
+    "max_consecutive_loss": 0,
+    "report_trade_summary": {
+      "average_position_holding_bars": 0.0,
+      "average_position_holding_time": "0:00:00",
+      "correlation_mfe_mae": 0.0,
+      "correlation_profit_mae": 0.0,
+      "correlation_profit_mfe": 0.0
+    },
+    "status": "empty",
+    "trade_count": 0,
+    "trades_csv": {
+      "exists": true,
+      "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_trades.csv",
+      "role": "mt5_trades_csv",
+      "sha256": "59c6d9c18ed05399307578a4aabfe4af7dad6e8cbc50faf2a90078274583b6a9",
+      "size_bytes": 110
+    }
+  }
+}

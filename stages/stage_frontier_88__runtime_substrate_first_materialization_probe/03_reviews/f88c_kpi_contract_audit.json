@@ -1,0 +1,110 @@
+{
+  "allowed_claims": [
+    "economics_recorded_no_authority"
+  ],
+  "audit_name": "kpi_contract_audit",
+  "counts": {
+    "execution_kpi_layer": {
+      "bars_seen": 1379,
+      "feature_ready_count": 316,
+      "feature_skip_count": 1063,
+      "model_ok_count": 316,
+      "order_attempt_count": 40,
+      "order_fill_count": 40,
+      "ticks_seen": 1899288
+    },
+    "runtime_kpi_layer": {
+      "avg_loss": -11.097,
+      "avg_win": 5.7515,
+      "equity_drawdown_maximal_percent": 17.16,
+      "expectancy": -1.57,
+      "gross_loss": -110.97,
+      "gross_profit": 74.77,
+      "judgment": "negative_or_inconclusive_for_final_entry_gate",
+      "long_short_breakdown": {
+        "report": {
+          "long_trade_count": 14,
+          "long_win_rate_percent": 57.14,
+          "short_trade_count": 9,
+          "short_win_rate_percent": 55.56
+        },
+        "trade_list_net": {
+          "long": {
+            "net_profit": -39.54,
+            "trade_count": 14
+          },
+          "short": {
+            "net_profit": 3.34,
+            "trade_count": 9
+          }
+        }
+      },
+      "max_consecutive_loss": 3,
+      "max_drawdown_percent": 17.16,
+      "net_profit": -36.2,
+      "payoff_ratio": 0.5183,
+      "profit_factor": 0.67,
+      "recovery_factor": -0.39,
+      "time_under_water": "not_parsed_from_mt5_html_report",
+      "trade_count": 23,
+      "trades_per_calendar_day": 3.2857,
+      "trades_per_feature_day": 4.6,
+      "win_rate_percent": 56.52
+    },
+    "trade_list_kpi_layer": {
+      "deal_count": 46,
+      "deals_csv": {
+        "exists": true,
+        "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_deals.csv",
+        "role": "mt5_deals_csv",
+        "sha256": "64e12ce186cbe3df3ddbe990d3cde656142b0ac11e90a0e616431828c5ab2690",
+        "size_bytes": 4757
+      },
+      "long_short_trade_net": {
+        "long": {
+          "net_profit": -39.54,
+          "trade_count": 14
+        },
+        "short": {
+          "net_profit": 3.34,
+          "trade_count": 9
+        }
+      },
+      "max_consecutive_loss": 3,
+      "report_trade_summary": {
+        "average_position_holding_bars": 10.129999999999999,
+        "average_position_holding_time": "0:50:39",
+        "correlation_mfe_mae": 0.5348,
+        "correlation_profit_mae": 0.88,
+        "correlation_profit_mfe": 0.64
+      },
+      "status": "separated",
+      "trade_count": 23,
+      "trades_csv": {
+        "exists": true,
+        "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_trades.csv",
+        "role": "mt5_trades_csv",
+        "sha256": "df58f19a9e9116f979c68c9f9dcb73d9668e5985a249ebc0619bcdd3ca21cc5d",
+        "size_bytes": 2137
+      }
+    }
+  },
+  "findings": [],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_verified",
+    "runtime_parity_closed",
+    "strategy_tester_economics_pass",
+    "materialization_ready",
+    "ea_onnx_runtime_bundle_ready",
+    "task_force_reviewed",
+    "stage_closeout_pass"
+  ],
+  "passed": true,
+  "status": "pass"
+}
