@@ -1,0 +1,41 @@
+{
+  "allowed_claims": [
+    "f90c_ordering_proxy_scout_executed",
+    "ordering_proxy_negative_memory_recorded",
+    "f90d_repair_or_rotation_planned"
+  ],
+  "claim_boundary": "f90c_ordering_proxy_scout_only_no_candidate_no_calibration_no_threshold_selection_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "model_training_superiority",
+    "calibration",
+    "threshold_selection",
+    "candidate",
+    "promotion_candidate",
+    "task_force_reviewed_pass"
+  ],
+  "model_or_threshold_surface": "Three predeclared linear ordering variants with train-only q90 absolute score threshold.",
+  "overfit_checks": [
+    "no OOS tuning",
+    "variant count recorded",
+    "candidate gate predeclared"
+  ],
+  "packet_id": "frontier90C_time_to_barrier_ordering_proxy_scout_v1",
+  "selection_metric_boundary": "diagnostic best only; no candidate or model superiority claim.",
+  "skill": "obsidian-model-validation",
+  "status": "executed",
+  "validation_split": "train/validation/oos split inherited from frozen model input."
+}

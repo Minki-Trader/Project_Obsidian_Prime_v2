@@ -2422,3 +2422,10 @@ Register ideas when they become durable work, not for every passing thought.
 - novelty_delta(신규성 차이): label representation(라벨 표현), data representation(데이터 표현), validation philosophy(검증 철학).
 - next_action(다음 행동): `frontier90B_time_to_barrier_label_feasibility_scout_v1`.
 - claim_boundary(주장 경계): `design_only_stage_open_for_time_to_barrier_competing_risk_label_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+## F90C ordering proxy negative memory(F90C 순서 프록시 부정 기억)
+
+- run_id: `frontier90C_time_to_barrier_ordering_proxy_scout_v1`
+- hypothesis(가설): F90B time-to-barrier labels(F90B 장벽 도달 시간 라벨)이 upper/lower ordering(상방/하방 순서) 프록시를 만들 수 있는지 본다.
+- result(결과): best diagnostic variant(진단상 최선 변형) `ridge_signed_speed_alpha10` failed candidate gate(후보 게이트 실패).
+- next_action(다음 행동): `frontier90D_time_to_barrier_repair_or_rotation_decision_v1`.
+- claim_boundary(주장 경계): `f90c_ordering_proxy_scout_only_no_candidate_no_calibration_no_threshold_selection_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

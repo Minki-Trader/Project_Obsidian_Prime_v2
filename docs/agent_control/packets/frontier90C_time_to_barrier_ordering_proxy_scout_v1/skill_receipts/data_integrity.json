@@ -1,0 +1,41 @@
+{
+  "claim_boundary": "f90c_ordering_proxy_scout_only_no_candidate_no_calibration_no_threshold_selection_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "data_sources_checked": [
+    "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90B/labels/frontier90b_barrier_labels.csv",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "model_training_superiority",
+    "calibration",
+    "threshold_selection",
+    "candidate",
+    "promotion_candidate",
+    "task_force_reviewed_pass"
+  ],
+  "leakage_checks": [
+    "feature list excludes label-derived columns",
+    "validation/oos not used for threshold",
+    "ambiguous/censored/invalid excluded and counted"
+  ],
+  "missing_data_boundary": "Tier B missing_required; combined blocked_by_missing_tier_b.",
+  "packet_id": "frontier90C_time_to_barrier_ordering_proxy_scout_v1",
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "train-only fit and threshold; validation/oos evaluation only.",
+  "status": "executed",
+  "time_axis_boundary": "timestamp is bar-close alignment key; train/validation/oos split is inherited from model input and F90B labels."
+}

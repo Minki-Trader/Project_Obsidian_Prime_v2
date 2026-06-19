@@ -1540,3 +1540,10 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - run_id: `frontier90B_time_to_barrier_label_feasibility_scout_v1`
 - boundary(경계): Tier B separate(티어 B 분리) is `missing_required(필수 누락)` and Tier A+B combined(티어 A+B 합산) is `blocked_by_missing_tier_b(티어 B 누락으로 차단)`.
 - effect(효과): Tier A-only labelability(티어 A 단독 라벨 가능성)를 whole-alpha read(전체 알파 판독)로 과장하지 않는다.
+## F90C ordering proxy OOS failure(F90C 순서 프록시 표본외 실패)
+
+- run_id: `frontier90C_time_to_barrier_ordering_proxy_scout_v1`
+- failed_boundary(실패 경계): validation/OOS signal hit and AUC(검증/표본외 신호 적중률과 AUC) did not meet predeclared candidate gate(사전 선언 후보 게이트).
+- salvage_value(회수 가치): F90B labelability(라벨 가능성)는 보존하되, linear ordering proxy(선형 순서 프록시)는 반복하지 않는다.
+- do_not_repeat(반복 금지): 같은 threshold/filter/parameter-only tweak(임계값/필터/파라미터만 조정)로 F90C를 재시도하지 않는다.
+- reopen_condition(재개 조건): new target representation/source/model family/runtime representation(새 목표 표현/원천/모델 계열/런타임 표현)이 있을 때만 재개한다.
