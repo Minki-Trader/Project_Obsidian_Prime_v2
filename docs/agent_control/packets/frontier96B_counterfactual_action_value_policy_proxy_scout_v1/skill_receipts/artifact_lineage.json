@@ -1,0 +1,386 @@
+{
+  "packet_id": "frontier96B_counterfactual_action_value_policy_proxy_scout_v1",
+  "status": "executed",
+  "claim_boundary": "f96b_proxy_scout_only_counterfactual_action_value_policy_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim",
+  "forbidden_claims": [
+    "completion",
+    "complete",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_probe_completed",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "skill": "obsidian-artifact-lineage",
+  "source_inputs": [
+    "docs/workspace/workspace_state.yaml",
+    "docs/context/current_working_state.md",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/00_spec/stage_brief.md",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/01_inputs/input_refs.md",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/04_selected/selection_status.md",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96A/d/f96b_proxy_scout_brief.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96A/d/action_value_policy_contract.json",
+    "docs/agent_control/packets/frontier96A_stage_open_counterfactual_action_value_policy_axis_v1/work_packet.yaml",
+    "docs/agent_control/packets/frontier96A_stage_open_counterfactual_action_value_policy_axis_v1/closeout_gate.json",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95B/proxy_scout/split_metrics.csv",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95B/proxy_scout/candidate_gate.json",
+    "docs/agent_control/work_family_registry.yaml",
+    "docs/agent_control/codex_task_force_registry.yaml"
+  ],
+  "produced_artifacts": [
+    "stage_pipelines/stage_frontier_96/frontier96b_action_value_proxy_scout.py",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/run_manifest.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/summary.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/execution_summary.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/data_feature_split_lock.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/action_value_config.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/action_value_label_summary.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/model_fit_manifest.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/variant_metrics.csv",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/split_metrics.csv",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/negative_control_metrics.csv",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/score_sample.csv",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/tier_route_summary.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/tier_b_summary.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/data_integrity_local_checks.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/runtime_trigger_check.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/reports/result_summary.md",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_task_force_review_receipt.json",
+    "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/codex_task_force_review_packet.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_frontier_extra_due_check.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_frontier_five_stage_direction_synthesis.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_frontier_topic_rotation_check.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_scope_completion_gate.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_data_integrity_audit.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_model_validation_audit.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_kpi_contract_audit.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_artifact_lineage_audit.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_result_judgment_audit.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_final_claim_guard.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_state_sync_audit.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_required_gate_coverage_audit.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/frontier96B_counterfactual_action_value_proxy_scout_report.md",
+    "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/work_packet.yaml",
+    "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/skill_receipts.json",
+    "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/closeout_gate.json",
+    "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/final_claim_guard.json",
+    "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/work_packet_schema_lint.json",
+    "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/skill_receipt_schema_lint.json",
+    "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/state_sync_audit.json",
+    "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/required_gate_coverage_audit.json",
+    "docs/decisions/2026-06-19_frontier96b_counterfactual_action_value_proxy_scout.md"
+  ],
+  "raw_evidence": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96A/d/f96b_proxy_scout_brief.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96A/d/action_value_policy_contract.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95B/proxy_scout/split_metrics.csv"
+  ],
+  "machine_readable": [
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/run_manifest.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/summary.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/data_feature_split_lock.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/action_value_config.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/model_fit_manifest.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/split_metrics.csv",
+    "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/skill_receipts.json"
+  ],
+  "human_readable": [
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/reports/result_summary.md",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/frontier96B_counterfactual_action_value_proxy_scout_report.md",
+    "docs/decisions/2026-06-19_frontier96b_counterfactual_action_value_proxy_scout.md"
+  ],
+  "hashes_or_missing_reasons": [
+    {
+      "path": "stage_pipelines/stage_frontier_96/frontier96b_action_value_proxy_scout.py",
+      "exists": true,
+      "sha256": "81051ce3c2786ed690f16e39ccf552f0f83db23c1968201bcbd237074b73c443",
+      "size_bytes": 103568
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/run_manifest.json",
+      "exists": true,
+      "sha256": "a37cb9a55215f0bce3642921296e0d9bce26b31d75b2944a4e00e2a2a33a22a6",
+      "size_bytes": 5964
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/summary.json",
+      "exists": true,
+      "sha256": "983ddcc4886cdc934e07ae282f9a3b0500aaf2ba2911a1279f62a413eb54679d",
+      "size_bytes": 1680
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json",
+      "exists": true,
+      "sha256": "16be6ca8b6e0dea265ab8f0f1db322a4eaba15d57dd34cd90ccd386f9eab8492",
+      "size_bytes": 9495
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/execution_summary.json",
+      "exists": true,
+      "sha256": "d9567921d0f84aa7c9712bf3687c02c0513010170c819f45c045b37a0a41bd18",
+      "size_bytes": 34967
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/data_feature_split_lock.json",
+      "exists": true,
+      "sha256": "bcb8a5df7d786dc8bc3f1081e2a61c22d170a17beee346db0500900dc86af80d",
+      "size_bytes": 6109
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/action_value_config.json",
+      "exists": true,
+      "sha256": "7385a883e00e4817248340beab7d22c28b28e89c6061495ae470b76209e0b64d",
+      "size_bytes": 554
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/action_value_label_summary.json",
+      "exists": true,
+      "sha256": "869bd80972f344ce68b2e7cfee29bc8455bb5676b3db1715a2eb5ebd64459088",
+      "size_bytes": 2301
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/model_fit_manifest.json",
+      "exists": true,
+      "sha256": "dc7fa8387f8b451a3998ac578d118f2bb3b65fd7a04b3188e6429da95479efc9",
+      "size_bytes": 1863
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/variant_metrics.csv",
+      "exists": true,
+      "sha256": "d8f267982fc0f5a46ed22241887e5abdd6a854b40eb888d19d3d4c9959dc16b0",
+      "size_bytes": 13012
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/split_metrics.csv",
+      "exists": true,
+      "sha256": "d8f267982fc0f5a46ed22241887e5abdd6a854b40eb888d19d3d4c9959dc16b0",
+      "size_bytes": 13012
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/negative_control_metrics.csv",
+      "exists": true,
+      "sha256": "0cfe827557828fbdf3a2cc33bc7caa7332437cc86bf5c93701efd07bd2884fcd",
+      "size_bytes": 45573
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/score_sample.csv",
+      "exists": true,
+      "sha256": "dff0c57b59494ba5a8528611b498d757f267d806edecb4d3b5a02dab17129825",
+      "size_bytes": 311260
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json",
+      "exists": true,
+      "sha256": "34fbd69efe9e101ac3cbfc5d025b8cf8919592928660147c9bcc07fe0d3e395a",
+      "size_bytes": 13989
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/tier_route_summary.json",
+      "exists": true,
+      "sha256": "66821118adf62886dea388f9146ba62482f2e3109514676b59cfafecac70fb51",
+      "size_bytes": 549
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/tier_b_summary.json",
+      "exists": true,
+      "sha256": "5709c2202eae55a520f3bd6b05319bfc5c91527e40a5768ab71048a57956e184",
+      "size_bytes": 2151
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/data_integrity_local_checks.json",
+      "exists": true,
+      "sha256": "28e73f415eead9f74cadc99981541db3067d4fd3a6f9cf966c8eee97d63cafe5",
+      "size_bytes": 7985
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/runtime_trigger_check.json",
+      "exists": true,
+      "sha256": "ba38a01fe81865981c9e13e5a59c3aa246c8d621941c3f951c394ee5bb330aa5",
+      "size_bytes": 451
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/reports/result_summary.md",
+      "exists": true,
+      "sha256": "830b5e4df2a0f0652c5b3deda3f058b2181b80a5db3fad9099e8d65b2defbf25",
+      "size_bytes": 4213
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_task_force_review_receipt.json",
+      "exists": true,
+      "sha256": "0228897f929398ef4cc74fdb162740155321ea83d2b2a004554f0dc4fd7f6933",
+      "size_bytes": 5924
+    },
+    {
+      "path": "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/codex_task_force_review_packet.json",
+      "exists": true,
+      "sha256": "0228897f929398ef4cc74fdb162740155321ea83d2b2a004554f0dc4fd7f6933",
+      "size_bytes": 5924
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_frontier_extra_due_check.json",
+      "exists": true,
+      "sha256": "1407701113e9a01f013fc0abb5f8e4227e68e20ed2c479f571b399ac6bc65504",
+      "size_bytes": 390
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_frontier_five_stage_direction_synthesis.json",
+      "exists": true,
+      "sha256": "42e440581da429252ba469536cebdd3cd8c187fe8f2ccbb3127eaa667de1dd76",
+      "size_bytes": 416
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_frontier_topic_rotation_check.json",
+      "exists": true,
+      "sha256": "8503198d0239a173301f86a6e81ba1f4fa591d93e7cbec9aa61c160086027ff7",
+      "size_bytes": 514
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_scope_completion_gate.json",
+      "exists": true,
+      "sha256": "87bb91f4000db05a35cc64211bccf46be6ad5b0fa409b3302f35c5c21367034d",
+      "size_bytes": 1312
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_data_integrity_audit.json",
+      "exists": true,
+      "sha256": "aa7141a8ce84f24992f3f0f04af3d4e9df8e36c60b1fdd520d0e627ca1f42cd0",
+      "size_bytes": 8030
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_model_validation_audit.json",
+      "exists": true,
+      "sha256": "3945a025824b1a2fc4aa921bef8248d2e370639d1ff86401983cc5b80c046edf",
+      "size_bytes": 659
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_kpi_contract_audit.json",
+      "exists": true,
+      "sha256": "5155a36615974feeb0d98a50104ac9a0956f9fa9c7ed86fc33e7ab0196ca0f14",
+      "size_bytes": 1086
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_artifact_lineage_audit.json",
+      "exists": true,
+      "sha256": "47735313ee77d570e858abce10021dec796df30891bba253d0a1156532c54523",
+      "size_bytes": 16729
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_result_judgment_audit.json",
+      "exists": true,
+      "sha256": "fb97136f2732cd8e0469d5cf5766ee6442ed5a5614e19b9d37a326861138c692",
+      "size_bytes": 1602
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_final_claim_guard.json",
+      "exists": true,
+      "sha256": "5d0f60376b28fb49b0a30ff6d03361ef743d3a2638c0e98496f8ab1a4838f11d",
+      "size_bytes": 2802
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_state_sync_audit.json",
+      "exists": true,
+      "sha256": "b434c927ee7d8294c2e8c2c2a265fcb16fe00abdc916a7007526ef6e91032b3e",
+      "size_bytes": 3212
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96b_required_gate_coverage_audit.json",
+      "exists": true,
+      "sha256": "bc8abce62335d50595f96acddc88ae0a3dc142a1590d264576ee4ce82e46e2c8",
+      "size_bytes": 3077
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/frontier96B_counterfactual_action_value_proxy_scout_report.md",
+      "exists": true,
+      "sha256": "830b5e4df2a0f0652c5b3deda3f058b2181b80a5db3fad9099e8d65b2defbf25",
+      "size_bytes": 4213
+    },
+    {
+      "path": "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/work_packet.yaml",
+      "exists": true,
+      "sha256": "a183a254173589c6c7f641dd928355b9a70ba5faab5e22dd755217dea53f94a0",
+      "size_bytes": 19816
+    },
+    {
+      "path": "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/skill_receipts.json",
+      "exists": true,
+      "sha256": "75ceeeb4932d17937d0a4ad5137e481b5d2f33a6155bbd7221f2fc3a1bb6488a",
+      "size_bytes": 54569
+    },
+    {
+      "path": "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/closeout_gate.json",
+      "exists": true,
+      "sha256": "26f2523925ba0cca6b36a1359b7277c09657b2ba7a1a0391e0af50cf03807d0e",
+      "size_bytes": 4997
+    },
+    {
+      "path": "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/final_claim_guard.json",
+      "exists": true,
+      "sha256": "5d0f60376b28fb49b0a30ff6d03361ef743d3a2638c0e98496f8ab1a4838f11d",
+      "size_bytes": 2802
+    },
+    {
+      "path": "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/work_packet_schema_lint.json",
+      "exists": true,
+      "sha256": "6d99d12ef2e32554adfab127ba60d16267a87295d25a7394671c5896d8cc2744",
+      "size_bytes": 359
+    },
+    {
+      "path": "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/skill_receipt_schema_lint.json",
+      "exists": true,
+      "sha256": "6065119f288cff8b18c56d4d4dad49f192f9ddee737fb3d07ac7386010a644db",
+      "size_bytes": 329
+    },
+    {
+      "path": "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/state_sync_audit.json",
+      "exists": true,
+      "sha256": "465a9c0961ce242a6aee12d157d280fdab89835d561a36c36342f1f2e0c96a8a",
+      "size_bytes": 2125
+    },
+    {
+      "path": "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/required_gate_coverage_audit.json",
+      "exists": true,
+      "sha256": "0165190bf2c5d24ee85ec6bd2400ecd889bc39c4c5e460f48fd4a1ca5de18e4a",
+      "size_bytes": 1591
+    },
+    {
+      "path": "docs/decisions/2026-06-19_frontier96b_counterfactual_action_value_proxy_scout.md",
+      "exists": true,
+      "sha256": "108321e08e9863c62243756bf3e8693697881e65eb9b4939eeb6eb6228108cfb",
+      "size_bytes": 762
+    }
+  ],
+  "lineage_boundary": "proxy_scout_evidence_only_no_runtime_authority",
+  "receipt_path": "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/skill_receipts/artifact_lineage.json"
+}

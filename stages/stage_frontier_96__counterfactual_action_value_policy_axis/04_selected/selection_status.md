@@ -1,15 +1,11 @@
-﻿# F96 Selection Status(선택 상태)
+# F96 Selection Status
 
-- current run(현재 실행): `frontier96B_counterfactual_action_value_policy_proxy_scout_v1`
-- latest completed run(최근 완료 실행): `frontier96A_stage_open_counterfactual_action_value_policy_axis_v1`
-- status(상태): F96A design-only formal open recorded(설계 전용 정식 개방 기록); F96B proxy scout planned(F96B 프록시 정찰 계획)
-- selected baseline(선택 기준선): not_claimed(주장 없음)
-- promotion candidate(승격 후보): not_claimed(주장 없음)
-- operating promotion(운영 승격): not_claimed(주장 없음)
-- runtime authority(런타임 권위): not_claimed(주장 없음)
-- live readiness(실거래 준비): not_claimed(주장 없음)
-- Goal Achieve(목표 달성): not_claimed(주장 없음)
-- task force actual calls(태스크포스 실제 호출): 6 selected agents recorded(선택 요원 6명 기록)
-- runtime probe(런타임 탐침): not run(미실행) because no runnable candidate or runtime claim exists(실행 후보/런타임 주장 없음)
-- source closeout(원천 마감): `frontier95C_closed_bar_state_transition_repair_or_rotation_decision_v1`
-- claim boundary(주장 경계): `f96a_design_only_stage_open_counterfactual_action_value_policy_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`
+- selected_baseline: not_claimed
+- runtime_authority: not_claimed
+- live_readiness: not_claimed
+- Goal Achieve: not_claimed
+- latest_completed_run: `frontier96B_counterfactual_action_value_policy_proxy_scout_v1`
+- current_run: `frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1`
+- candidate_gate_count: `0`
+
+Effect: F96B can be used as scout clue/negative memory only.

@@ -25,6 +25,12 @@ line_count_policy:
     stage_pipelines/stage_frontier_69/frontier69b_event_first_first_hit_proxy_sweep.py:
       max_lines: 1705
       reason: "F69B stage-local proxy sweep materializer(F69B 단계 로컬 프록시 탐색 생성기); do not reuse as shared logic(공유 로직으로 재사용 금지), extract reusable feature/label/report helpers(재사용 피처/라벨/보고 도구 추출) before future growth(향후 확장 전)"
+    stage_pipelines/stage_frontier_96/frontier96a_stage_open_counterfactual_action_value_policy.py:
+      max_lines: 1725
+      reason: "F96A stage-local stage-open materializer(F96A 단계 로컬 단계 개방 산출물 생성기); do not reuse as shared logic(공유 로직으로 재사용 금지), extract packet/gate/receipt helpers(묶음/게이트/영수증 헬퍼 추출) before future growth(향후 확장 전)"
+    stage_pipelines/stage_frontier_96/frontier96b_action_value_proxy_scout.py:
+      max_lines: 2100
+      reason: "F96B stage-local proxy scout materializer(F96B 단계 로컬 프록시 탐색 산출물 생성기); one-shot evidence packet(일회성 근거 묶음), extract reusable data/evidence/ledger helpers(재사용 데이터/근거/원장 헬퍼 추출) before reuse or growth(재사용 또는 확장 전)"
 ownership_policy:
   blocked_direct_imports:
     - importer_owner: foundation/control_plane

@@ -1,4 +1,4 @@
-﻿# F96 Selection Status(선택 상태)
+# F96 Selection Status(선택 상태)
 
 - current run(현재 실행): `frontier96A_stage_open_counterfactual_action_value_policy_axis_v1`
 - latest completed run(최근 완료 실행): `frontier95C_closed_bar_state_transition_repair_or_rotation_decision_v1`
@@ -22,3 +22,15 @@ Effect(효과): F96A(전선96A)는 formal open(정식 개방) 대기 상태이�
 - Goal Achieve(목표 달성): not_claimed(주장 없음)
 - effect(효과): F96A records(기록) a design-only action-value axis(설계 전용 행동가치 축) and hands off(인계) to F96B proxy scout(프록시 정찰).
 <!-- frontier96a_selection_status:end -->
+
+<!-- frontier96B_counterfactual_action_value_policy_proxy_scout_v1 -->
+## F96B Counterfactual Action-Value Proxy Scout
+
+- run_id: `frontier96B_counterfactual_action_value_policy_proxy_scout_v1`
+- status: `f96b_counterfactual_action_value_policy_proxy_scout_negative_no_runnable_candidate_no_authority`
+- judgment: `negative_proxy_scout_action_value_gate_failed_no_runtime_trigger`
+- candidate_gate_count: `0`
+- runtime_probe_status: `not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip`
+- next_action: `frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1`
+
+Effect: this records scout clue/negative memory only; no selected baseline, runtime authority, live readiness, or Goal Achieve is claimed.

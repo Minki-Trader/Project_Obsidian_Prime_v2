@@ -1,0 +1,65 @@
+{
+  "packet_id": "frontier96B_counterfactual_action_value_policy_proxy_scout_v1",
+  "status": "executed",
+  "claim_boundary": "f96b_proxy_scout_only_counterfactual_action_value_policy_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim",
+  "forbidden_claims": [
+    "completion",
+    "complete",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_probe_completed",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "skill": "obsidian-experiment-design",
+  "hypothesis": "A train-only counterfactual long/short/abstain action-value policy can find side-balanced US100 M5 scout clues after F95 state-cluster failure.",
+  "baseline": {
+    "source_run_id": "frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1",
+    "use": "negative_memory_only_not_inherited_baseline"
+  },
+  "changed_variables": [
+    "counterfactual action-value target",
+    "long/short/abstain policy",
+    "utility/regret candidate gate",
+    "negative controls including cost-blind/no-adverse/F95 replay"
+  ],
+  "invalid_conditions": [
+    "future_path_as_feature",
+    "random_split",
+    "oos_tuning",
+    "PF_only_selection",
+    "runtime_claim_without_MT5_tester_identity"
+  ],
+  "evidence_plan": {
+    "tier_records": [
+      "Tier A separate",
+      "Tier B separate",
+      "Tier A+B actual routed total"
+    ],
+    "candidate_gate": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json"
+  },
+  "receipt_path": "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/skill_receipts/experiment_design.json"
+}

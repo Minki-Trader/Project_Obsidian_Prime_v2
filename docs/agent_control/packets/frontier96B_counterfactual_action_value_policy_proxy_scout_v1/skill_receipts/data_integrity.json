@@ -1,0 +1,71 @@
+{
+  "packet_id": "frontier96B_counterfactual_action_value_policy_proxy_scout_v1",
+  "status": "executed",
+  "claim_boundary": "f96b_proxy_scout_only_counterfactual_action_value_policy_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim",
+  "forbidden_claims": [
+    "completion",
+    "complete",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_probe_completed",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "skill": "obsidian-data-integrity",
+  "data_sources_checked": [
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "exists": true,
+      "sha256": "5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43",
+      "size_bytes": 14278154
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+      "exists": true,
+      "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+      "size_bytes": 2691
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "exists": true,
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "size_bytes": 1053
+    }
+  ],
+  "time_axis_boundary": "Closed M5 row t features and rolling history only; decision point is after bar close.",
+  "split_boundary": "Train fit only; validation candidate gate; OOS final-read-only.",
+  "leakage_checks": {
+    "model_features_use_future_return": false,
+    "model_features_use_label_or_label_class": false,
+    "feature_max_source_time_boundary": "contractual_closed_bar_row_t_or_prior_bars_checked_by_feature_contract_and_denylist",
+    "action_value_labels_used_as_targets_only": true,
+    "fit_scope": "train_tier_ab_combined_only",
+    "validation_oos_transform_only": true,
+    "oos_selection": "forbidden_and_not_used"
+  },
+  "missing_data_boundary": "Tier B or Tier A+B combined rows cannot be omitted; if unavailable they must be recorded as blocked or missing_required.",
+  "receipt_path": "docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/skill_receipts/data_integrity.json"
+}

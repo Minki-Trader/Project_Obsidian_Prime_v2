@@ -1,0 +1,454 @@
+version: work_packet_schema_v2_1
+packet_lifecycle: new_packet
+packet_id: frontier96B_counterfactual_action_value_policy_proxy_scout_v1
+created_at_utc: '2026-06-19T09:06:52Z'
+user_request:
+  user_quote: /goal active continuation plus explicit reminder that relevant Task Force agents must be actually called when required
+  requested_action: run F96B counterfactual action-value policy proxy scout
+  requested_count:
+    value: 1
+    n_a_reason: ''
+  ambiguous_terms:
+  - No final completion, selected baseline, operating promotion, runtime authority, live readiness, or Goal Achieve is claimed.
+current_truth:
+  active_stage: stage_frontier_96__counterfactual_action_value_policy_axis
+  current_run: frontier96B_counterfactual_action_value_policy_proxy_scout_v1
+  latest_completed_run: frontier96A_stage_open_counterfactual_action_value_policy_axis_v1
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/04_selected/selection_status.md
+  claim_boundary: f96b_proxy_scout_only_counterfactual_action_value_policy_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim
+work_classification:
+  primary_family: experiment_execution
+  detected_families:
+  - experiment_execution
+  - artifact_lineage
+  - state_sync
+  touched_surfaces:
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews
+  - docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1
+  - docs/workspace/workspace_state.yaml
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    future_label_leakage: high
+    tier_ab_timestamp_order: high
+    pf_only_selection: high
+    task_force_review_claim_without_actual_calls: high
+    runtime_probe_absence_misread_as_cost_skip: high
+  hard_stop_risks:
+  - Do not put future_log_return_12, label, action_value, or regret fields into model features.
+  - Do not tune by OOS.
+  - Do not claim runtime/economics/materialization without MT5 Strategy Tester identity.
+  required_gates:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - kpi_contract_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - completion
+  - complete
+  - completed
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - promotion_candidate
+  - runtime_probe
+  - runtime_probe_completed
+  - runtime_verified
+  - strategy_tester_runtime_economics
+  - runtime_economics
+  - runtime_economics_pass
+  - economics_pass
+  - materialization_ready
+  - mt5_handoff_ready
+  - onnx_handoff_ready
+  - ea_handoff_ready
+  - task_force_reviewed
+  - task_force_reviewed_pass
+  - internally_reviewed
+  - reviewed
+  - verified
+  - pass
+  - model_quality
+  - model_readiness
+  - calibrated_probability
+  - data_contract_pass
+decision_lock:
+  mode: assume_safe_default
+  assumptions:
+    verification_profile: proxy_scout
+    strategy_tester_required_now: false
+    runtime_probe_status: not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip
+    reason: No ONNX/EA/set/runtime claim is made when candidate_count is zero; if proxy gate signal appears, packet is blocked pending same-packet
+      MT5 probe.
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+  - experiment_execution
+  target_surfaces:
+  - F96B proxy scout
+  - counterfactual action-value policy
+  - Task Force actual calls
+  - state sync
+  scope_units:
+  - proxy_scout_run
+  - candidate_gate_record
+  - receipt
+  - state_sync
+  execution_layers:
+  - local_python_execution
+  mutation_policy:
+    allowed: true
+    user_quote: /goal active continuation
+  evidence_layers:
+  - data lock
+  - action-value labels
+  - proxy metrics
+  - negative controls
+  - candidate gate
+  - Task Force actual calls
+  - control-plane gates
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: false
+    rationale: F96B is the active proxy-scout packet and runtime trigger rules cannot be reduced.
+  claim_boundary:
+    allowed_claims:
+    - f96b_proxy_scout_executed
+    - counterfactual_action_value_negative_memory_recorded
+    - task_force_actual_calls_recorded_for_f96b
+    - candidate_gate_count_recorded
+    - runtime_trigger_boundary_recorded_no_probe_without_candidate
+    forbidden_claims:
+    - completion
+    - complete
+    - completed
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - promotion_candidate
+    - runtime_probe
+    - runtime_probe_completed
+    - runtime_verified
+    - strategy_tester_runtime_economics
+    - runtime_economics
+    - runtime_economics_pass
+    - economics_pass
+    - materialization_ready
+    - mt5_handoff_ready
+    - onnx_handoff_ready
+    - ea_handoff_ready
+    - task_force_reviewed
+    - task_force_reviewed_pass
+    - internally_reviewed
+    - reviewed
+    - verified
+    - pass
+    - model_quality
+    - model_readiness
+    - calibrated_probability
+    - data_contract_pass
+    claim_boundary: f96b_proxy_scout_only_counterfactual_action_value_policy_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim
+verification_profile:
+  profile_id: proxy_scout
+  claim_surface:
+    allowed_claims:
+    - f96b_proxy_scout_executed
+    - counterfactual_action_value_negative_memory_recorded
+    - task_force_actual_calls_recorded_for_f96b
+    - candidate_gate_count_recorded
+    - runtime_trigger_boundary_recorded_no_probe_without_candidate
+    forbidden_claims:
+    - completion
+    - complete
+    - completed
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - promotion_candidate
+    - runtime_probe
+    - runtime_probe_completed
+    - runtime_verified
+    - strategy_tester_runtime_economics
+    - runtime_economics
+    - runtime_economics_pass
+    - economics_pass
+    - materialization_ready
+    - mt5_handoff_ready
+    - onnx_handoff_ready
+    - ea_handoff_ready
+    - task_force_reviewed
+    - task_force_reviewed_pass
+    - internally_reviewed
+    - reviewed
+    - verified
+    - pass
+    - model_quality
+    - model_readiness
+    - calibrated_probability
+    - data_contract_pass
+    claim_boundary: f96b_proxy_scout_only_counterfactual_action_value_policy_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim
+  trigger_sources:
+  - active_goal_frontier_continuation
+  - F96A planned F96B proxy scout
+  - explicit user instruction requiring relevant Task Force actual calls when triggered
+  protected_claims:
+  - f96b_proxy_scout_executed
+  - counterfactual_action_value_negative_memory_recorded
+  - task_force_actual_calls_recorded_for_f96b
+  - candidate_gate_count_recorded
+  - runtime_trigger_boundary_recorded_no_probe_without_candidate
+  required_evidence:
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/run_manifest.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/data_feature_split_lock.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/action_value_config.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/model_fit_manifest.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/split_metrics.csv
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/negative_control_metrics.csv
+  - docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/codex_task_force_review_packet.json
+  - docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/work_packet.yaml
+  - docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/skill_receipts.json
+  - docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/closeout_gate.json
+  gates_not_run_with_reason:
+  - gate: runtime_evidence_gate
+    reason_code: proxy_scout_no_runnable_candidate_no_runtime_claim
+    reason: F96B makes no runtime, materialization, handoff, or economics claim when the validation candidate gate count is zero.
+    claim_effect: No runtime_probe, runtime_verified, materialization_ready, handoff_complete, economics_pass, runtime_authority, live_readiness,
+      selected_baseline, or Goal Achieve claim is allowed.
+  stop_conditions:
+  - Stop at proxy scout evidence if no runnable candidate or runtime/materialization/economics/handoff claim appears.
+  - If a meaningful runnable candidate or runtime claim appears, do not make the claim without same-packet MT5 Strategy Tester probe.
+  - Do not repair by threshold/filter/session/routing/parameter-only changes.
+acceptance_criteria:
+- id: AC-001
+  text: F96B proxy metrics exist.
+  expected_artifact: stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/split_metrics.csv
+  verification_method: scope_completion_gate
+  required: true
+- id: AC-002
+  text: Tier A, Tier B, and Tier A+B actual routed total are recorded.
+  expected_artifact: stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/tier_route_summary.json
+  verification_method: kpi_contract_audit
+  required: true
+- id: AC-003
+  text: Task Force actual calls are recorded.
+  expected_artifact: docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/codex_task_force_review_packet.json
+  verification_method: codex_task_force_review_packet
+  required: true
+- id: AC-004
+  text: Runtime evidence absence is bounded and not a cost/proxy-bad skip.
+  expected_artifact: stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/runtime_trigger_check.json
+  verification_method: final_claim_guard
+  required: true
+work_plan:
+- Lock data, feature, split, and action-value formula identities.
+- Fit train-only action-value proxy variants.
+- Score validation and OOS final read with negative controls.
+- Record Task Force calls, audits, receipts, state sync, and final claim guard.
+skill_routing:
+  primary_family: experiment_execution
+  primary_skill: obsidian-run-evidence-system
+  support_skills:
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-task-force-review
+  - obsidian-result-judgment
+  - obsidian-exploration-mandate
+  - obsidian-claim-discipline
+  skills_considered:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-task-force-review
+  - obsidian-result-judgment
+  - obsidian-exploration-mandate
+  - obsidian-claim-discipline
+  - obsidian-backtest-forensics
+  - obsidian-runtime-parity
+  skills_selected:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-task-force-review
+  - obsidian-result-judgment
+  - obsidian-exploration-mandate
+  - obsidian-claim-discipline
+  skills_not_used:
+  - skill: obsidian-backtest-forensics
+    reason: No new MT5 Strategy Tester report or trade list exists.
+  - skill: obsidian-runtime-parity
+    reason: No ONNX/EA parity or handoff claim is made.
+  required_skill_receipts:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-task-force-review
+  - obsidian-result-judgment
+  - obsidian-exploration-mandate
+  - obsidian-claim-discipline
+  required_gates:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - kpi_contract_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  source_inputs:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/00_spec/stage_brief.md
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/01_inputs/input_refs.md
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/04_selected/selection_status.md
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96A/d/f96b_proxy_scout_brief.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96A/d/action_value_policy_contract.json
+  - docs/agent_control/packets/frontier96A_stage_open_counterfactual_action_value_policy_axis_v1/work_packet.yaml
+  - docs/agent_control/packets/frontier96A_stage_open_counterfactual_action_value_policy_axis_v1/closeout_gate.json
+  - data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet
+  - data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json
+  - data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt
+  - stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95B/proxy_scout/split_metrics.csv
+  - stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95B/proxy_scout/candidate_gate.json
+  - docs/agent_control/work_family_registry.yaml
+  - docs/agent_control/codex_task_force_registry.yaml
+  machine_readable:
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/run_manifest.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/summary.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/data_feature_split_lock.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/action_value_config.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/model_fit_manifest.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/split_metrics.csv
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/negative_control_metrics.csv
+  - docs/agent_control/packets/frontier96B_counterfactual_action_value_policy_proxy_scout_v1/skill_receipts.json
+  human_readable:
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/reports/result_summary.md
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/frontier96B_counterfactual_action_value_proxy_scout_report.md
+  - docs/decisions/2026-06-19_frontier96b_counterfactual_action_value_proxy_scout.md
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/context_anchor.md
+  raw_evidence:
+  - data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96A/d/f96b_proxy_scout_brief.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96A/d/action_value_policy_contract.json
+  - stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95B/proxy_scout/split_metrics.csv
+  missing_evidence:
+  - evidence: MT5 Strategy Tester runtime output
+    reason: outside proxy_scout claim surface unless candidate_count is positive or a runtime claim appears
+  - evidence: ONNX/EA/set handoff
+    reason: not created in F96B
+gates:
+  required:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - kpi_contract_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  actual_status_source:
+    work_packet_schema_lint: pass
+    skill_receipt_schema_lint: pass
+    codex_task_force_review_packet: pending
+    frontier_extra_due_check: pending
+    frontier_five_stage_direction_synthesis: pending
+    frontier_topic_rotation_check: pending
+    scope_completion_gate: pending
+    data_integrity_audit: pending
+    model_validation_audit: pending
+    kpi_contract_audit: pending
+    artifact_lineage_audit: pending
+    result_judgment_audit: pending
+    state_sync_audit: pass
+    required_gate_coverage_audit: pass
+    final_claim_guard: pass
+  not_applicable_with_reason:
+    runtime_evidence_gate: F96B makes no runtime, materialization, handoff, or economics claim when the validation candidate gate count is zero.
+final_claim_policy:
+  allowed_claims:
+  - f96b_proxy_scout_executed
+  - counterfactual_action_value_negative_memory_recorded
+  - task_force_actual_calls_recorded_for_f96b
+  - candidate_gate_count_recorded
+  - runtime_trigger_boundary_recorded_no_probe_without_candidate
+  forbidden_claims:
+  - completion
+  - complete
+  - completed
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - promotion_candidate
+  - runtime_probe
+  - runtime_probe_completed
+  - runtime_verified
+  - strategy_tester_runtime_economics
+  - runtime_economics
+  - runtime_economics_pass
+  - economics_pass
+  - materialization_ready
+  - mt5_handoff_ready
+  - onnx_handoff_ready
+  - ea_handoff_ready
+  - task_force_reviewed
+  - task_force_reviewed_pass
+  - internally_reviewed
+  - reviewed
+  - verified
+  - pass
+  - model_quality
+  - model_readiness
+  - calibrated_probability
+  - data_contract_pass
+  claim_boundary: f96b_proxy_scout_only_counterfactual_action_value_policy_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim

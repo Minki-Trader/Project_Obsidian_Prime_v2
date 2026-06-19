@@ -1,4 +1,4 @@
-﻿# Negative Result Register
+# Negative Result Register
 
 | result_id | idea_id | hypothesis | why_failed | salvage_value | reopen_condition |
 |---|---|---|---|---|---|
@@ -1629,3 +1629,15 @@ Decision use: proxy scout clue/negative memory only. No selected baseline, opera
 - failed_boundary(실패 경계): candidate_count=0, long-only(롱 전용), state collapse(상태 붕괴), high-cost exposure(고비용 노출), DD cap fail(손실폭 상한 실패), Tier B weakness(티어B 약점).
 - do_not_repeat(반복 금지): KMeans/PCA/threshold/filter/session/routing/parameter-only repair(K평균/PCA/임계값/필터/세션/라우팅/파라미터만 수리).
 - reopen_condition(재개 조건): new representation/objective/trade-shape/risk-logic novelty(새 표현/목적함수/거래형태/위험로직 신규성).
+
+<!-- frontier96B_counterfactual_action_value_policy_proxy_scout_v1 -->
+## F96B Counterfactual Action-Value Proxy Scout
+
+- run_id: `frontier96B_counterfactual_action_value_policy_proxy_scout_v1`
+- status: `f96b_counterfactual_action_value_policy_proxy_scout_negative_no_runnable_candidate_no_authority`
+- judgment: `negative_proxy_scout_action_value_gate_failed_no_runtime_trigger`
+- candidate_gate_count: `0`
+- runtime_probe_status: `not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip`
+- next_action: `frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1`
+
+Effect: this records scout clue/negative memory only; no selected baseline, runtime authority, live readiness, or Goal Achieve is claimed.
