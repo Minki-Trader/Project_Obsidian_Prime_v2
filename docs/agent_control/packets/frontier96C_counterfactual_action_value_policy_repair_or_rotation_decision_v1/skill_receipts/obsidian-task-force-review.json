@@ -1,0 +1,123 @@
+{
+  "packet_id": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1",
+  "skill": "obsidian-task-force-review",
+  "status": "executed",
+  "trigger_reason": "explicit_user_instruction_required plus F96C closeout/rotation claim surface",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "agents_used": [
+    "agent_01_system_governor",
+    "agent_03_philosophy_policy_skill_governance",
+    "agent_04_evidence_control_plane",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "actual_subagent_calls": [
+    {
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019edf33-3d7d-72d1-b12c-d2ca7468cf85",
+      "nickname": "Confucius the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "local_resolution": "F96C artifacts, gates, and F97 pending-open scaffold are generated in this packet.",
+      "summary": "F96B direction is coherent, but F96C needed local packet evidence before any closeout or handoff claim."
+    },
+    {
+      "roster_agent_id": "agent_03_philosophy_policy_skill_governance",
+      "spawned_agent_id": "019edf33-69ac-7e13-8f3d-49f5f15f2e15",
+      "nickname": "Bacon the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "local_resolution": "Accepted as policy boundary for same-axis repair rejection.",
+      "summary": "Treat F96B as valid negative memory; do not rescue by q-threshold, abstain share, penalty weight, session, filter, or routing changes."
+    },
+    {
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019edf33-96aa-7080-af1e-11677beba6a4",
+      "nickname": "Bernoulli the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "local_resolution": "Required work_packet, receipts, closeout gate, audits, decision artifact, and stage summary are generated here.",
+      "summary": "F96C was only planned before this packet; local evidence must exist before rotation can be recorded."
+    },
+    {
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019edf33-c468-7091-8476-8253039582c5",
+      "nickname": "Russell the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "local_resolution": "Accepted as quantitative mechanism; next axis uses first-hit survival/hazard with cost/adverse veto as supporting logic.",
+      "summary": "F96B shows train-positive to validation-negative temporal instability; rotate rather than tune thresholds."
+    },
+    {
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019edf33-fdca-74e0-9f77-757492123213",
+      "nickname": "Chandrasekhar the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "local_resolution": "Accepted as model-risk stop condition for same-axis repair.",
+      "summary": "F96B is valid negative evidence, not invalid; OOS final read cannot rescue validation failure."
+    },
+    {
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019edf34-2a3c-7f51-83bc-2f2aa7baf2c4",
+      "nickname": "Lovelace the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "local_resolution": "Accepted as runtime trigger boundary; no MT5 probe is required unless a runnable or runtime claim appears.",
+      "summary": "candidate_count=0 with no runtime/materialization/handoff/economics claim makes MT5 Strategy Tester probe not applicable, not cost-deferred."
+    }
+  ],
+  "review_requirement": "explicit_user_instruction_required",
+  "model_policy": "inherited parent model; no lower model override",
+  "bounded_evidence": [
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/summary.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json"
+  ],
+  "advice_classification": "accepted_with_local_verification_boundaries",
+  "local_verification": "F96C local artifacts and gates resolve needs_local_verification opinions.",
+  "final_codex_direction": "Close F96 as negative memory/reference surface and rotate to F97 pending-open scaffold.",
+  "forbidden_claim_check": [
+    "completion",
+    "complete",
+    "completed",
+    "selected_baseline",
+    "promotion_candidate",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "runtime_probe",
+    "runtime_probe_completed",
+    "runtime_verified",
+    "mt5_verification_complete",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "f97_stage_open_completed",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "stage_closeout_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "receipt_path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/skill_receipts/obsidian-task-force-review.json"
+}

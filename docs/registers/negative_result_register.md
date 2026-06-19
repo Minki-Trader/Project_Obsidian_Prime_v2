@@ -1641,3 +1641,16 @@ Decision use: proxy scout clue/negative memory only. No selected baseline, opera
 - next_action: `frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1`
 
 Effect: this records scout clue/negative memory only; no selected baseline, runtime authority, live readiness, or Goal Achieve is claimed.
+<!-- frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1 -->
+## F96C Closeout(마감) Rotate(회전) F97
+
+- run_id(실행 ID): `frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1`
+- status(상태): `f96c_closed_negative_action_value_policy_axis_rotate_to_f97_pending_open_no_authority`
+- judgment(판정): `negative_valid_then_rotation_action_value_policy_no_candidate_no_runtime_trigger`
+- decision(결정): `close_f96_negative_rotate_to_first_hit_survival_hazard_event_sparse_axis`
+- Task Force actual calls(태스크포스 실제 호출): `6`
+- candidate_gate_count(후보 게이트 수): `0`
+- runtime_probe_status(런타임 탐침 상태): `not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip`
+- next_action(다음 행동): `frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1`
+
+Effect(효과): F96(전선96)은 negative memory/reference surface(부정 기억/참고 표면)로만 남기고 F97(전선97) pending-open scaffold(개방 대기 골격)를 기록한다. No selected baseline(선택 기준선 없음), runtime authority(런타임 권위 없음), live readiness(실거래 준비 없음), Goal Achieve(목표 달성 없음).

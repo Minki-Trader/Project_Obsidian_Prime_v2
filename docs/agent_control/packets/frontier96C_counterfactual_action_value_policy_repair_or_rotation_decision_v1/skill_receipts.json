@@ -1,0 +1,857 @@
+{
+  "packet_id": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1",
+  "created_at_utc": "2026-06-19T09:43:50Z",
+  "receipts": [
+    {
+      "packet_id": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1",
+      "skill": "obsidian-stage-transition",
+      "status": "executed",
+      "source_current_truth_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md"
+      ],
+      "changed_or_checked_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/00_spec/stage_brief.md"
+      ],
+      "detected_conflicts": [
+        "none"
+      ],
+      "canonical_state_after": {
+        "active_stage": "stage_frontier_97__first_hit_survival_hazard_event_sparse_axis",
+        "current_run": "frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1",
+        "latest_completed_run": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1"
+      },
+      "allowed_claims": [
+        "f96c_negative_memory_recorded",
+        "f96c_repair_disposition_closed",
+        "f96c_rotation_decision_recorded",
+        "task_force_actual_calls_recorded_for_f96c",
+        "frontier_extra_due_check_recorded_for_f97_preopen",
+        "frontier_topic_rotation_check_recorded_for_f97_preopen",
+        "f97_pending_open_scaffold_recorded",
+        "runtime_probe_not_applicable_no_runnable_candidate_when_candidate_count_zero"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "complete",
+        "completed",
+        "selected_baseline",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "candidate",
+        "runtime_probe",
+        "runtime_probe_completed",
+        "runtime_verified",
+        "mt5_verification_complete",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "f97_stage_open_completed",
+        "task_force_reviewed",
+        "task_force_reviewed_pass",
+        "stage_closeout_pass",
+        "internally_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "model_quality",
+        "model_readiness",
+        "calibrated_probability",
+        "data_contract_pass"
+      ],
+      "receipt_path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/skill_receipts/obsidian-stage-transition.json"
+    },
+    {
+      "packet_id": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1",
+      "skill": "obsidian-run-evidence-system",
+      "status": "executed",
+      "source_inputs": [
+        {
+          "path": "docs/workspace/workspace_state.yaml",
+          "exists": true,
+          "sha256": "d36aaac6e836badec74568b272b4702ad29e5c2c5d5e43fbfb2db371ca4dd18b",
+          "size_bytes": 1776
+        },
+        {
+          "path": "docs/context/current_working_state.md",
+          "exists": true,
+          "sha256": "c1105ae9a3ce2fb1b082973f43dc829254053e5b4fe7c8c38331e288454bc5f7",
+          "size_bytes": 1172
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/04_selected/selection_status.md",
+          "exists": true,
+          "sha256": "e18d5e663ca71315ec180a929364714667948c749c32c2ed5cb013e9ff11f210",
+          "size_bytes": 856
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/summary.json",
+          "exists": true,
+          "sha256": "3ace3ddd95bc2a7da5b5115499ca9485d185b3748734902a69b2201d49c022e0",
+          "size_bytes": 1680
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json",
+          "exists": true,
+          "sha256": "db112efcf8ef4c1046c070c938f2f1087e07016685787ae070999990dec1970a",
+          "size_bytes": 9495
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json",
+          "exists": true,
+          "sha256": "469a3bf73bf727abb7738aa3dc9f8dedfb63867223af439793af218d96d22a10",
+          "size_bytes": 13989
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/run_manifest.json",
+          "exists": true,
+          "sha256": "2e4e9900966c68ff4b6e597d871e42248154acb0d30c9a68f8700e5cb08e723d",
+          "size_bytes": 5964
+        },
+        {
+          "path": "docs/agent_control/work_family_registry.yaml",
+          "exists": true,
+          "sha256": "3d7fae7071ce2e5d3e845a4cdc64a98ef5ccd90d5856c4640c579c87b77b76ee",
+          "size_bytes": 36064
+        },
+        {
+          "path": "docs/agent_control/codex_task_force_registry.yaml",
+          "exists": true,
+          "sha256": "c675b11d6ed418c199f0199fbbe1a8a0e0d7f4d07ed4c624a33006e7e1ee175b",
+          "size_bytes": 4783
+        },
+        {
+          "path": "docs/registers/frontier_extra_stage_register.yaml",
+          "exists": true,
+          "sha256": "68a7c937fccc462c613187866112034de5011e301735fda0f10589778cc5597a",
+          "size_bytes": 2237
+        }
+      ],
+      "produced_artifacts": [
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/run_manifest.json",
+          "exists": true,
+          "sha256": "7a76cd9b2d00192309459b8d837d15d841054a54c8040b73861b89d40d6967c2",
+          "size_bytes": 3710
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/summary.json",
+          "exists": true,
+          "sha256": "18084ad6425edbfa05926fb2c3471325fc886782cbd8722f614e51d04d0174ef",
+          "size_bytes": 1719
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/kpi_record.json",
+          "exists": true,
+          "sha256": "6e912b366fa7474b7deeb7df6fa9958f259e4f5e5fe7d50f75ca531cc0e224e8",
+          "size_bytes": 9032
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/d/decision.json",
+          "exists": true,
+          "sha256": "85cdc9a56c86ac8b47caa8602ed8d040fec4b1ffa5c83f45cf94b08398170442",
+          "size_bytes": 4972
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/r/summary.md",
+          "exists": true,
+          "sha256": "0a02d6b21c133be5ee92ab9d5bd50e4cba681e29663c6fa6ff7302437d3dfdb9",
+          "size_bytes": 1043
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/frontier96C_counterfactual_action_value_repair_or_rotation_decision_report.md",
+          "exists": true,
+          "sha256": "39a217c114e3699d84fc67f047ad48546d6826d2c21a43e3f6f53a82ae89b13a",
+          "size_bytes": 1827
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/stage_closeout_report.md",
+          "exists": true,
+          "sha256": "39a217c114e3699d84fc67f047ad48546d6826d2c21a43e3f6f53a82ae89b13a",
+          "size_bytes": 1827
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96c_stage_closeout_summary.json",
+          "exists": true,
+          "sha256": "18084ad6425edbfa05926fb2c3471325fc886782cbd8722f614e51d04d0174ef",
+          "size_bytes": 1719
+        },
+        {
+          "path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/work_packet.yaml",
+          "exists": true,
+          "sha256": "63a06fcfa8cbb9251ab83a00e0f195d1d4aa5cff785d9fcf280547a1981423ce",
+          "size_bytes": 15315
+        },
+        {
+          "path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/skill_receipts.json",
+          "exists": true,
+          "sha256": "37c4bbaf8e703f4f60e6ccf523309d04ab8d012ab3aa9bb0d2b1495cffa893b7",
+          "size_bytes": 39382
+        },
+        {
+          "path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/codex_task_force_review_packet.json",
+          "exists": true,
+          "sha256": "cbba22e1786cdcb8f6abfe9b663fab0d2fd828588f3d9de821247fb119f07c4b",
+          "size_bytes": 5990
+        },
+        {
+          "path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/closeout_gate.json",
+          "exists": true,
+          "sha256": "9a1949137ee4d1bfa1ea8b9f4a34ba413901d4accb97c613f7ad1702f6e0ab2c",
+          "size_bytes": 30018
+        },
+        {
+          "path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/required_gate_coverage_audit.json",
+          "exists": true,
+          "sha256": "db63784521cfa707e67f8dbd4ff33b086ca390dbbe9387e11ecd301284cc720f",
+          "size_bytes": 1875
+        },
+        {
+          "path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/final_claim_guard.json",
+          "exists": true,
+          "sha256": "bf67f90a7e627265f6e16ee771ddbe0e203d2844c31e403ae52066fec0f38088",
+          "size_bytes": 3340
+        },
+        {
+          "path": "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/00_spec/stage_brief.md",
+          "exists": true,
+          "sha256": "c3f2c3c55073d1aa27e6137a06bc294b5e3cd5b463cf76940e93e2634d62948d",
+          "size_bytes": 1916
+        },
+        {
+          "path": "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/04_selected/selection_status.md",
+          "exists": true,
+          "sha256": "25e40a7e1a7051676ae88a753227f7e80a0dc7e6d109950bd69bee4aaa214c95",
+          "size_bytes": 663
+        },
+        {
+          "path": "docs/decisions/2026-06-19_frontier96c_closeout_rotate_f97.md",
+          "exists": true,
+          "sha256": "19c708967609cf730b0889336b6b5243e926baab51ed3c4102c579535758d507",
+          "size_bytes": 1983
+        }
+      ],
+      "ledger_rows": [
+        "F96C closeout row",
+        "F97A planned current run row"
+      ],
+      "missing_evidence": [
+        "MT5 Strategy Tester runtime output: not applicable by claim boundary"
+      ],
+      "allowed_claims": [
+        "f96c_negative_memory_recorded",
+        "f96c_repair_disposition_closed",
+        "f96c_rotation_decision_recorded",
+        "task_force_actual_calls_recorded_for_f96c",
+        "frontier_extra_due_check_recorded_for_f97_preopen",
+        "frontier_topic_rotation_check_recorded_for_f97_preopen",
+        "f97_pending_open_scaffold_recorded",
+        "runtime_probe_not_applicable_no_runnable_candidate_when_candidate_count_zero"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "complete",
+        "completed",
+        "selected_baseline",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "candidate",
+        "runtime_probe",
+        "runtime_probe_completed",
+        "runtime_verified",
+        "mt5_verification_complete",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "f97_stage_open_completed",
+        "task_force_reviewed",
+        "task_force_reviewed_pass",
+        "stage_closeout_pass",
+        "internally_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "model_quality",
+        "model_readiness",
+        "calibrated_probability",
+        "data_contract_pass"
+      ],
+      "receipt_path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/skill_receipts/obsidian-run-evidence-system.json"
+    },
+    {
+      "packet_id": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1",
+      "skill": "obsidian-data-integrity",
+      "status": "executed",
+      "data_sources_checked": [
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/summary.json",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json"
+      ],
+      "time_axis_boundary": "F96C does not mutate F96B train/validation/OOS split.",
+      "split_boundary": "train_2022-09-01_to_2024-12-31_validation_2025-01-02_to_2025-09-30_oos_2025-10-01_to_2026-04-13",
+      "leakage_checks": "No new model fit or threshold selection is performed in F96C.",
+      "missing_data_boundary": "No new data rows are introduced.",
+      "receipt_path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/skill_receipts/obsidian-data-integrity.json"
+    },
+    {
+      "packet_id": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1",
+      "skill": "obsidian-model-validation",
+      "status": "executed",
+      "model_or_threshold_surface": "F96B counterfactual action-value policy variants",
+      "validation_split": "F96B validation actual routed Tier A/B/A+B",
+      "overfit_checks": "Train-positive edge reversed in validation; OOS final read cannot rescue.",
+      "selection_metric_boundary": "candidate_gate_count=0; no model quality, calibration, or candidate claim.",
+      "allowed_claims": [
+        "negative_model_risk_boundary_recorded"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "complete",
+        "completed",
+        "selected_baseline",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "candidate",
+        "runtime_probe",
+        "runtime_probe_completed",
+        "runtime_verified",
+        "mt5_verification_complete",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "f97_stage_open_completed",
+        "task_force_reviewed",
+        "task_force_reviewed_pass",
+        "stage_closeout_pass",
+        "internally_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "model_quality",
+        "model_readiness",
+        "calibrated_probability",
+        "data_contract_pass"
+      ],
+      "receipt_path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/skill_receipts/obsidian-model-validation.json"
+    },
+    {
+      "packet_id": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1",
+      "skill": "obsidian-artifact-lineage",
+      "status": "executed",
+      "source_inputs": [
+        {
+          "path": "docs/workspace/workspace_state.yaml",
+          "exists": true,
+          "sha256": "d36aaac6e836badec74568b272b4702ad29e5c2c5d5e43fbfb2db371ca4dd18b",
+          "size_bytes": 1776
+        },
+        {
+          "path": "docs/context/current_working_state.md",
+          "exists": true,
+          "sha256": "c1105ae9a3ce2fb1b082973f43dc829254053e5b4fe7c8c38331e288454bc5f7",
+          "size_bytes": 1172
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/04_selected/selection_status.md",
+          "exists": true,
+          "sha256": "e18d5e663ca71315ec180a929364714667948c749c32c2ed5cb013e9ff11f210",
+          "size_bytes": 856
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/summary.json",
+          "exists": true,
+          "sha256": "3ace3ddd95bc2a7da5b5115499ca9485d185b3748734902a69b2201d49c022e0",
+          "size_bytes": 1680
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json",
+          "exists": true,
+          "sha256": "db112efcf8ef4c1046c070c938f2f1087e07016685787ae070999990dec1970a",
+          "size_bytes": 9495
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json",
+          "exists": true,
+          "sha256": "469a3bf73bf727abb7738aa3dc9f8dedfb63867223af439793af218d96d22a10",
+          "size_bytes": 13989
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/run_manifest.json",
+          "exists": true,
+          "sha256": "2e4e9900966c68ff4b6e597d871e42248154acb0d30c9a68f8700e5cb08e723d",
+          "size_bytes": 5964
+        },
+        {
+          "path": "docs/agent_control/work_family_registry.yaml",
+          "exists": true,
+          "sha256": "3d7fae7071ce2e5d3e845a4cdc64a98ef5ccd90d5856c4640c579c87b77b76ee",
+          "size_bytes": 36064
+        },
+        {
+          "path": "docs/agent_control/codex_task_force_registry.yaml",
+          "exists": true,
+          "sha256": "c675b11d6ed418c199f0199fbbe1a8a0e0d7f4d07ed4c624a33006e7e1ee175b",
+          "size_bytes": 4783
+        },
+        {
+          "path": "docs/registers/frontier_extra_stage_register.yaml",
+          "exists": true,
+          "sha256": "68a7c937fccc462c613187866112034de5011e301735fda0f10589778cc5597a",
+          "size_bytes": 2237
+        }
+      ],
+      "produced_artifacts": [
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/run_manifest.json",
+          "exists": true,
+          "sha256": "7a76cd9b2d00192309459b8d837d15d841054a54c8040b73861b89d40d6967c2",
+          "size_bytes": 3710
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/summary.json",
+          "exists": true,
+          "sha256": "18084ad6425edbfa05926fb2c3471325fc886782cbd8722f614e51d04d0174ef",
+          "size_bytes": 1719
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/kpi_record.json",
+          "exists": true,
+          "sha256": "6e912b366fa7474b7deeb7df6fa9958f259e4f5e5fe7d50f75ca531cc0e224e8",
+          "size_bytes": 9032
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/d/decision.json",
+          "exists": true,
+          "sha256": "85cdc9a56c86ac8b47caa8602ed8d040fec4b1ffa5c83f45cf94b08398170442",
+          "size_bytes": 4972
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/r/summary.md",
+          "exists": true,
+          "sha256": "0a02d6b21c133be5ee92ab9d5bd50e4cba681e29663c6fa6ff7302437d3dfdb9",
+          "size_bytes": 1043
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/frontier96C_counterfactual_action_value_repair_or_rotation_decision_report.md",
+          "exists": true,
+          "sha256": "39a217c114e3699d84fc67f047ad48546d6826d2c21a43e3f6f53a82ae89b13a",
+          "size_bytes": 1827
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/stage_closeout_report.md",
+          "exists": true,
+          "sha256": "39a217c114e3699d84fc67f047ad48546d6826d2c21a43e3f6f53a82ae89b13a",
+          "size_bytes": 1827
+        },
+        {
+          "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96c_stage_closeout_summary.json",
+          "exists": true,
+          "sha256": "18084ad6425edbfa05926fb2c3471325fc886782cbd8722f614e51d04d0174ef",
+          "size_bytes": 1719
+        },
+        {
+          "path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/work_packet.yaml",
+          "exists": true,
+          "sha256": "63a06fcfa8cbb9251ab83a00e0f195d1d4aa5cff785d9fcf280547a1981423ce",
+          "size_bytes": 15315
+        },
+        {
+          "path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/skill_receipts.json",
+          "exists": true,
+          "sha256": "37c4bbaf8e703f4f60e6ccf523309d04ab8d012ab3aa9bb0d2b1495cffa893b7",
+          "size_bytes": 39382
+        },
+        {
+          "path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/codex_task_force_review_packet.json",
+          "exists": true,
+          "sha256": "cbba22e1786cdcb8f6abfe9b663fab0d2fd828588f3d9de821247fb119f07c4b",
+          "size_bytes": 5990
+        },
+        {
+          "path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/closeout_gate.json",
+          "exists": true,
+          "sha256": "9a1949137ee4d1bfa1ea8b9f4a34ba413901d4accb97c613f7ad1702f6e0ab2c",
+          "size_bytes": 30018
+        },
+        {
+          "path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/required_gate_coverage_audit.json",
+          "exists": true,
+          "sha256": "db63784521cfa707e67f8dbd4ff33b086ca390dbbe9387e11ecd301284cc720f",
+          "size_bytes": 1875
+        },
+        {
+          "path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/final_claim_guard.json",
+          "exists": true,
+          "sha256": "bf67f90a7e627265f6e16ee771ddbe0e203d2844c31e403ae52066fec0f38088",
+          "size_bytes": 3340
+        },
+        {
+          "path": "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/00_spec/stage_brief.md",
+          "exists": true,
+          "sha256": "c3f2c3c55073d1aa27e6137a06bc294b5e3cd5b463cf76940e93e2634d62948d",
+          "size_bytes": 1916
+        },
+        {
+          "path": "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/04_selected/selection_status.md",
+          "exists": true,
+          "sha256": "25e40a7e1a7051676ae88a753227f7e80a0dc7e6d109950bd69bee4aaa214c95",
+          "size_bytes": 663
+        },
+        {
+          "path": "docs/decisions/2026-06-19_frontier96c_closeout_rotate_f97.md",
+          "exists": true,
+          "sha256": "19c708967609cf730b0889336b6b5243e926baab51ed3c4102c579535758d507",
+          "size_bytes": 1983
+        }
+      ],
+      "raw_evidence": [
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/summary.json",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json"
+      ],
+      "machine_readable": [
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/summary.json",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/kpi_record.json",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/d/decision.json"
+      ],
+      "human_readable": [
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/r/summary.md",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/frontier96C_counterfactual_action_value_repair_or_rotation_decision_report.md"
+      ],
+      "hashes_or_missing_reasons": "Hashes are recorded in run_manifest and artifact_registry after materialization.",
+      "lineage_boundary": "F96B proxy evidence supports negative memory and F97 proposal only.",
+      "receipt_path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/skill_receipts/obsidian-artifact-lineage.json"
+    },
+    {
+      "packet_id": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1",
+      "skill": "obsidian-task-force-review",
+      "status": "executed",
+      "trigger_reason": "explicit_user_instruction_required plus F96C closeout/rotation claim surface",
+      "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+      "agents_used": [
+        "agent_01_system_governor",
+        "agent_03_philosophy_policy_skill_governance",
+        "agent_04_evidence_control_plane",
+        "agent_06_quant_research",
+        "agent_07_model_validation_risk",
+        "agent_08_mt5_onnx_runtime"
+      ],
+      "actual_subagent_calls": [
+        {
+          "roster_agent_id": "agent_01_system_governor",
+          "spawned_agent_id": "019edf33-3d7d-72d1-b12c-d2ca7468cf85",
+          "nickname": "Confucius the 2nd",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification",
+          "local_resolution": "F96C artifacts, gates, and F97 pending-open scaffold are generated in this packet.",
+          "summary": "F96B direction is coherent, but F96C needed local packet evidence before any closeout or handoff claim."
+        },
+        {
+          "roster_agent_id": "agent_03_philosophy_policy_skill_governance",
+          "spawned_agent_id": "019edf33-69ac-7e13-8f3d-49f5f15f2e15",
+          "nickname": "Bacon the 2nd",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted",
+          "local_resolution": "Accepted as policy boundary for same-axis repair rejection.",
+          "summary": "Treat F96B as valid negative memory; do not rescue by q-threshold, abstain share, penalty weight, session, filter, or routing changes."
+        },
+        {
+          "roster_agent_id": "agent_04_evidence_control_plane",
+          "spawned_agent_id": "019edf33-96aa-7080-af1e-11677beba6a4",
+          "nickname": "Bernoulli the 2nd",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification",
+          "local_resolution": "Required work_packet, receipts, closeout gate, audits, decision artifact, and stage summary are generated here.",
+          "summary": "F96C was only planned before this packet; local evidence must exist before rotation can be recorded."
+        },
+        {
+          "roster_agent_id": "agent_06_quant_research",
+          "spawned_agent_id": "019edf33-c468-7091-8476-8253039582c5",
+          "nickname": "Russell the 2nd",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted",
+          "local_resolution": "Accepted as quantitative mechanism; next axis uses first-hit survival/hazard with cost/adverse veto as supporting logic.",
+          "summary": "F96B shows train-positive to validation-negative temporal instability; rotate rather than tune thresholds."
+        },
+        {
+          "roster_agent_id": "agent_07_model_validation_risk",
+          "spawned_agent_id": "019edf33-fdca-74e0-9f77-757492123213",
+          "nickname": "Chandrasekhar the 2nd",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted",
+          "local_resolution": "Accepted as model-risk stop condition for same-axis repair.",
+          "summary": "F96B is valid negative evidence, not invalid; OOS final read cannot rescue validation failure."
+        },
+        {
+          "roster_agent_id": "agent_08_mt5_onnx_runtime",
+          "spawned_agent_id": "019edf34-2a3c-7f51-83bc-2f2aa7baf2c4",
+          "nickname": "Lovelace the 2nd",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted",
+          "local_resolution": "Accepted as runtime trigger boundary; no MT5 probe is required unless a runnable or runtime claim appears.",
+          "summary": "candidate_count=0 with no runtime/materialization/handoff/economics claim makes MT5 Strategy Tester probe not applicable, not cost-deferred."
+        }
+      ],
+      "review_requirement": "explicit_user_instruction_required",
+      "model_policy": "inherited parent model; no lower model override",
+      "bounded_evidence": [
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/summary.json",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json"
+      ],
+      "advice_classification": "accepted_with_local_verification_boundaries",
+      "local_verification": "F96C local artifacts and gates resolve needs_local_verification opinions.",
+      "final_codex_direction": "Close F96 as negative memory/reference surface and rotate to F97 pending-open scaffold.",
+      "forbidden_claim_check": [
+        "completion",
+        "complete",
+        "completed",
+        "selected_baseline",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "candidate",
+        "runtime_probe",
+        "runtime_probe_completed",
+        "runtime_verified",
+        "mt5_verification_complete",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "f97_stage_open_completed",
+        "task_force_reviewed",
+        "task_force_reviewed_pass",
+        "stage_closeout_pass",
+        "internally_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "model_quality",
+        "model_readiness",
+        "calibrated_probability",
+        "data_contract_pass"
+      ],
+      "receipt_path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/skill_receipts/obsidian-task-force-review.json"
+    },
+    {
+      "packet_id": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1",
+      "skill": "obsidian-result-judgment",
+      "status": "executed",
+      "judgment_boundary": "negative_valid_then_rotation_action_value_policy_no_candidate_no_runtime_trigger",
+      "allowed_claims": [
+        "f96c_negative_memory_recorded",
+        "f96c_repair_disposition_closed",
+        "f96c_rotation_decision_recorded",
+        "task_force_actual_calls_recorded_for_f96c",
+        "frontier_extra_due_check_recorded_for_f97_preopen",
+        "frontier_topic_rotation_check_recorded_for_f97_preopen",
+        "f97_pending_open_scaffold_recorded",
+        "runtime_probe_not_applicable_no_runnable_candidate_when_candidate_count_zero"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "complete",
+        "completed",
+        "selected_baseline",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "candidate",
+        "runtime_probe",
+        "runtime_probe_completed",
+        "runtime_verified",
+        "mt5_verification_complete",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "f97_stage_open_completed",
+        "task_force_reviewed",
+        "task_force_reviewed_pass",
+        "stage_closeout_pass",
+        "internally_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "model_quality",
+        "model_readiness",
+        "calibrated_probability",
+        "data_contract_pass"
+      ],
+      "evidence_used": [
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/summary.json",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json",
+        "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/codex_task_force_review_packet.json"
+      ],
+      "receipt_path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/skill_receipts/obsidian-result-judgment.json"
+    },
+    {
+      "packet_id": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1",
+      "skill": "obsidian-exploration-mandate",
+      "status": "executed",
+      "exploration_lane": "frontier_stage_negative_memory_rotation",
+      "idea_boundary": "F96 action-value surface is not dead, but same-axis repair is stopped without new evidence.",
+      "negative_memory_effect": "Prevents threshold/filter/parameter-only repetition and OOS rescue.",
+      "operating_claim_boundary": "f96c_stage_closeout_rotation_only_negative_memory_reference_surface_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_promotion_candidate_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+      "receipt_path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/skill_receipts/obsidian-exploration-mandate.json"
+    },
+    {
+      "packet_id": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1",
+      "skill": "obsidian-claim-discipline",
+      "status": "executed",
+      "requested_claims": [
+        "f96c_negative_memory_recorded",
+        "f96c_repair_disposition_closed",
+        "f96c_rotation_decision_recorded",
+        "task_force_actual_calls_recorded_for_f96c",
+        "frontier_extra_due_check_recorded_for_f97_preopen",
+        "frontier_topic_rotation_check_recorded_for_f97_preopen",
+        "f97_pending_open_scaffold_recorded",
+        "runtime_probe_not_applicable_no_runnable_candidate_when_candidate_count_zero"
+      ],
+      "allowed_claims": [
+        "f96c_negative_memory_recorded",
+        "f96c_repair_disposition_closed",
+        "f96c_rotation_decision_recorded",
+        "task_force_actual_calls_recorded_for_f96c",
+        "frontier_extra_due_check_recorded_for_f97_preopen",
+        "frontier_topic_rotation_check_recorded_for_f97_preopen",
+        "f97_pending_open_scaffold_recorded",
+        "runtime_probe_not_applicable_no_runnable_candidate_when_candidate_count_zero"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "complete",
+        "completed",
+        "selected_baseline",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "candidate",
+        "runtime_probe",
+        "runtime_probe_completed",
+        "runtime_verified",
+        "mt5_verification_complete",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "f97_stage_open_completed",
+        "task_force_reviewed",
+        "task_force_reviewed_pass",
+        "stage_closeout_pass",
+        "internally_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "model_quality",
+        "model_readiness",
+        "calibrated_probability",
+        "data_contract_pass"
+      ],
+      "final_status": "negative_memory_rotation_only_no_authority",
+      "receipt_path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/skill_receipts/obsidian-claim-discipline.json"
+    },
+    {
+      "packet_id": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1",
+      "skill": "obsidian-answer-clarity",
+      "status": "executed",
+      "plain_conclusion": "F96 closes as negative memory and F97 is only a pending-open scaffold.",
+      "confirmed": [
+        "F96B candidate_gate_count=0",
+        "Task Force actual calls recorded",
+        "Runtime probe not applicable by claim boundary"
+      ],
+      "not_yet_confirmed": [
+        "F97A formal open",
+        "runtime economics",
+        "selected baseline",
+        "runtime authority"
+      ],
+      "why_it_matters": "Keeps exploration moving without laundering proxy evidence into runtime authority.",
+      "next_action": "frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1",
+      "forbidden_claims_avoided": [
+        "completion",
+        "complete",
+        "completed",
+        "selected_baseline",
+        "promotion_candidate",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "candidate",
+        "runtime_probe",
+        "runtime_probe_completed",
+        "runtime_verified",
+        "mt5_verification_complete",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "f97_stage_open_completed",
+        "task_force_reviewed",
+        "task_force_reviewed_pass",
+        "stage_closeout_pass",
+        "internally_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "model_quality",
+        "model_readiness",
+        "calibrated_probability",
+        "data_contract_pass"
+      ],
+      "receipt_path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/skill_receipts/obsidian-answer-clarity.json"
+    }
+  ]
+}

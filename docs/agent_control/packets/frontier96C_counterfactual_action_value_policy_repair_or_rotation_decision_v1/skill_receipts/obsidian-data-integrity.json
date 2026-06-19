@@ -1,0 +1,15 @@
+{
+  "packet_id": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1",
+  "skill": "obsidian-data-integrity",
+  "status": "executed",
+  "data_sources_checked": [
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/summary.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json"
+  ],
+  "time_axis_boundary": "F96C does not mutate F96B train/validation/OOS split.",
+  "split_boundary": "train_2022-09-01_to_2024-12-31_validation_2025-01-02_to_2025-09-30_oos_2025-10-01_to_2026-04-13",
+  "leakage_checks": "No new model fit or threshold selection is performed in F96C.",
+  "missing_data_boundary": "No new data rows are introduced.",
+  "receipt_path": "docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/skill_receipts/obsidian-data-integrity.json"
+}
