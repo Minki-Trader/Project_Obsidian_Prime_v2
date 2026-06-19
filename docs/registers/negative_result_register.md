@@ -1568,3 +1568,10 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - salvage_value: routed Tier B fallback method, high-cost concentration diagnostic, and OOS positive final read as clue only.
 - do_not_repeat: threshold/filter/session/routing/parameter-only tweak, OOS rescue, score probability claim, Tier A-only overclaim, compile/proxy-only runtime evidence.
 - reopen_condition: new label utility, cost representation, runtime representation, or negative-control cause.
+## F92B path-label proxy joint gate failure
+
+- run_id: `frontier92B_path_conditioned_trade_shape_label_proxy_scout_v1`
+- failed_boundary: Tier A, Tier B, and actual routed candidate gate did not produce a runnable candidate.
+- salvage_value: path label summary, exit-shape mix, and negative-control metrics remain useful for F92C repair-or-rotation.
+- do_not_repeat: F91-style threshold/filter-only repair without new label geometry, runtime representation, validation philosophy, or risk logic.
+- runtime: no MT5 probe because no runnable candidate/runtime claim exists; this is not a cost/proxy-bad skip.

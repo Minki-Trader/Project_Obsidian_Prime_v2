@@ -1,0 +1,46 @@
+{
+  "packet_id": "frontier92B_path_conditioned_trade_shape_label_proxy_scout_v1",
+  "status": "executed",
+  "claim_boundary": "f92b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "data_contract_pass"
+  ],
+  "skill": "obsidian-data-integrity",
+  "data_sources_checked": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv"
+  ],
+  "time_axis_boundary": "Feature timestamp is closed M5 bar; entry proxy is the next raw bar open at the same timestamp.",
+  "split_boundary": "Train fit and thresholds only; validation diagnostics; OOS final read only; split-edge horizons censored.",
+  "leakage_checks": [
+    "path OHLC/MFE/MAE excluded from features",
+    "same-bar both-hit conservative loss",
+    "OOS not used for threshold or label selection"
+  ],
+  "missing_data_boundary": "Tier B fallback uses core42 partial context; missing full58 fields are imputed from train only."
+}

@@ -1,0 +1,147 @@
+{
+  "packet_id": "frontier92B_path_conditioned_trade_shape_label_proxy_scout_v1",
+  "skill": "obsidian-task-force-review",
+  "status": "executed",
+  "trigger_reason": "active_goal_and_explicit_user_instruction_required_selected_task_force_review",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "agents_used": [
+    "agent_01_system_governor",
+    "agent_04_evidence_control_plane",
+    "agent_05_data_feature_contract",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "actual_subagent_calls": [
+    {
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019eddfe-b340-71e3-a7be-2d4301f13627",
+      "nickname": "Descartes",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "bounded_evidence": [
+        "docs\\workspace\\workspace_state.yaml",
+        "stages\\stage_frontier_92__path_conditioned_trade_shape_labeling_axis\\00_spec\\stage_brief.md"
+      ],
+      "local_verification": "F92B may proceed as proxy_scout_only; forbidden final/runtime claims remain blocked."
+    },
+    {
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019eddfe-c75c-7aa2-a559-8899cb32a48c",
+      "nickname": "Peirce",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "bounded_evidence": [
+        "docs\\workspace\\workspace_state.yaml",
+        "stages\\stage_frontier_92__path_conditioned_trade_shape_labeling_axis\\02_runs\\frontier92A\\d\\f92b_proxy_scout_brief.json"
+      ],
+      "local_verification": "F92B needs fresh packet, receipts, gates, actual_subagent_calls, hashes, ledgers, and state sync."
+    },
+    {
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019eddfe-dbb4-7f90-9ea9-67cdc3895bfa",
+      "nickname": "Dewey",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "bounded_evidence": [
+        "stages\\stage_frontier_92__path_conditioned_trade_shape_labeling_axis\\02_runs\\frontier92A\\d\\data_integrity_plan.json",
+        "data\\raw\\mt5_bars\\m5\\US100\\bars_us100_m5_mt5api_raw.csv"
+      ],
+      "local_verification": "Path label hash, row count, split censor count, ambiguity count, and Tier A/B/routed records must be re-locked."
+    },
+    {
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019eddfe-f5a8-7232-8c52-b69b57075e03",
+      "nickname": "Anscombe",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "bounded_evidence": [
+        "stages\\stage_frontier_92__path_conditioned_trade_shape_labeling_axis\\00_spec\\stage_brief.md",
+        "stages\\stage_frontier_92__path_conditioned_trade_shape_labeling_axis\\02_runs\\frontier92A\\d\\f92b_proxy_scout_brief.json"
+      ],
+      "local_verification": "Path-conditioned MFE/MAE/holding/exit-shape axis is novel versus F91 abstention filter repair."
+    },
+    {
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019eddff-0a45-79a2-99ff-9847d6889bce",
+      "nickname": "Banach",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "bounded_evidence": [
+        "stages\\stage_frontier_92__path_conditioned_trade_shape_labeling_axis\\00_spec\\stage_brief.md",
+        "stages\\stage_frontier_92__path_conditioned_trade_shape_labeling_axis\\02_runs\\frontier92A\\d\\data_integrity_plan.json"
+      ],
+      "local_verification": "Train/validation/OOS separation, OOS final-read-only, negative controls, and candidate gate lock must be checked locally."
+    },
+    {
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019eddff-1ed8-7710-a307-3dfe16b580c0",
+      "nickname": "Sartre",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "bounded_evidence": [
+        "stages\\stage_frontier_92__path_conditioned_trade_shape_labeling_axis\\02_runs\\frontier92A\\d\\runtime_contract.json",
+        "stages\\stage_frontier_92__path_conditioned_trade_shape_labeling_axis\\00_spec\\stage_brief.md"
+      ],
+      "local_verification": "MT5 probe is not required without candidate/runtime claim, but same-packet probe is required if trigger appears."
+    }
+  ],
+  "review_requirement": "active_goal_required",
+  "model_policy": "inherited_parent_model_highest_available_xhigh_when_available",
+  "bounded_evidence": [
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92A/d/f92b_proxy_scout_brief.json",
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92A/d/data_integrity_plan.json",
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92B/proxy_scout/candidate_gate.json",
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92B/kpi_record.json"
+  ],
+  "advice_classification": {
+    "agent_01_system_governor": "accepted",
+    "agent_04_evidence_control_plane": "needs_local_verification",
+    "agent_05_data_feature_contract": "needs_local_verification",
+    "agent_06_quant_research": "accepted",
+    "agent_07_model_validation_risk": "needs_local_verification",
+    "agent_08_mt5_onnx_runtime": "accepted"
+  },
+  "local_verification": [
+    "Fresh F92B packet and receipts are materialized.",
+    "Path labels use raw OHLC after the feature timestamp; path fields are not model features.",
+    "Tier A separate, Tier B separate, and actual routed total are recorded.",
+    "OOS is final-read-only and not used for thresholds.",
+    "Runtime probe is not run only when no runnable candidate and no runtime claim exist."
+  ],
+  "claim_boundary": "f92b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "final_codex_direction": "f92b_path_conditioned_trade_shape_proxy_scout_negative_no_candidate_no_authority",
+  "forbidden_claim_check": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "data_contract_pass"
+  ]
+}
