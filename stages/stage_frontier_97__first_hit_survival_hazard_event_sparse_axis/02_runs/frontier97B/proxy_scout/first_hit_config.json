@@ -1,0 +1,20 @@
+{
+  "bracket_points": "clip(atr_14 * 0.55, entry_price * 0.0008, entry_price * 0.0035)",
+  "entry_price_rule": "raw open of label_start_bar",
+  "feature_cutoff_column": "timestamp",
+  "fit_scope": "train_tier_ab_combined_eligible_rows_only",
+  "label_start_rule": "first raw bar with time_close greater than feature timestamp; this is the next tradable bar after closed-bar feature cutoff",
+  "long_adverse_hit": "low <= entry_price - bracket_points",
+  "long_favorable_hit": "high >= entry_price + bracket_points",
+  "max_hold_bars": 12,
+  "oos_policy": "final_read_only_no_tuning",
+  "proxy_cost_return": 0.00012,
+  "raw_label_source": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+  "runtime_trigger": "candidate_count > 0 requires same-packet MT5 Strategy Tester probe before any candidate/runtime/handoff/economics claim",
+  "short_adverse_hit": "high >= entry_price + bracket_points",
+  "short_favorable_hit": "low <= entry_price - bracket_points",
+  "slippage_proxy": 3e-05,
+  "tie_rule": "same-side favorable/adverse same-bar or long/short favorable same-bar is ambiguous and mapped to abstain target 0",
+  "timeframe_minutes": 5,
+  "validation_policy": "candidate_gate_only"
+}

@@ -1,0 +1,70 @@
+{
+  "calibration_boundary": "Brier/AUC/bin records are diagnostics only; no calibrated probability claim is made.",
+  "fit_scope": "train_tier_ab_combined_eligible_rows_only",
+  "leakage_boundary": "first_hit_target and first_hit outcome fields are targets/evaluation only; model features are closed-bar feature columns.",
+  "seed": 9702,
+  "transform_only_splits": [
+    "validation",
+    "oos"
+  ],
+  "variant_fit_rows": [
+    {
+      "feature_count": 58,
+      "feature_mode": "full58",
+      "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "model_family": "logistic_hazard",
+      "selection_threshold": 0.2982574579267853,
+      "train_classes": [
+        -1,
+        0,
+        1
+      ],
+      "train_fit_input_hash": "49f819e014302e18bda9e78fad56a87a2a0b656708802342ffb32260c126468b",
+      "train_fit_rows": 38180,
+      "variant_id": "logreg_first_hit_full58_q88"
+    },
+    {
+      "feature_count": 58,
+      "feature_mode": "full58",
+      "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "model_family": "logistic_hazard",
+      "selection_threshold": 0.31510602208225524,
+      "train_classes": [
+        -1,
+        0,
+        1
+      ],
+      "train_fit_input_hash": "49f819e014302e18bda9e78fad56a87a2a0b656708802342ffb32260c126468b",
+      "train_fit_rows": 38180,
+      "variant_id": "logreg_first_hit_full58_q92"
+    },
+    {
+      "feature_count": 21,
+      "feature_mode": "regime_dense",
+      "feature_order_hash": "d8f723f475d69f4b2008315ec30260525d38a98727ed1bc7e65006972b83a0e9",
+      "model_family": "extra_trees_hazard",
+      "selection_threshold": 0.1772576449875697,
+      "train_classes": [
+        -1,
+        0,
+        1
+      ],
+      "train_fit_input_hash": "af7c532a23a795b09ef1b701c5c31fb9eaf2a40a8fcca83ed3e598f912a0dcbb",
+      "train_fit_rows": 38180,
+      "variant_id": "extra_trees_first_hit_regime_q90"
+    },
+    {
+      "feature_count": 58,
+      "feature_mode": "full58",
+      "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "model_family": "ridge_signed_hit_edge",
+      "selection_threshold": 9.45594511294931e-05,
+      "train_classes": [
+        "signed_first_hit_edge"
+      ],
+      "train_fit_input_hash": "49f819e014302e18bda9e78fad56a87a2a0b656708802342ffb32260c126468b",
+      "train_fit_rows": 38180,
+      "variant_id": "ridge_signed_hit_edge_full58_q90"
+    }
+  ]
+}

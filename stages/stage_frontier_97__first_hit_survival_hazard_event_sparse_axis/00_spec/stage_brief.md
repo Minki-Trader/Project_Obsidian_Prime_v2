@@ -25,3 +25,18 @@ Closed-bar features can rank first favorable versus adverse bracket-hit survival
 ## Boundary(경계)
 
 F97A is design-only formal open(설계 전용 정식 개방) evidence(근거) only. No selected baseline(선택 기준선), promotion candidate(승격 후보), operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), or Goal Achieve(목표 달성) is claimed(주장됨).
+
+<!-- frontier97b_result:start -->
+## F97B Result(전선97B 결과)
+
+- current run(현재 실행): `frontier97C_first_hit_survival_hazard_event_sparse_repair_or_rotation_decision_v1`
+- latest completed run(최근 완료 실행): `frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1`
+- status(상태): `f97b_first_hit_survival_hazard_proxy_scout_negative_no_runnable_candidate_no_authority`
+- judgment(판정): `negative_proxy_scout_first_hit_survival_hazard_candidate_gate_failed_no_runtime_trigger`
+- candidate gate count(후보 게이트 수): `0`
+- runtime probe status(런타임 탐침 상태): `not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip`
+
+Action(행동): F97B tested(시험) train-only first-hit survival/hazard proxy variants(학습 구간 전용 첫 도달 생존/위험 프록시 변형)을 실행했다.
+
+Effect(효과): F97B becomes(된다) negative memory(부정 기억) and F97C becomes(된다) the current repair/rotation decision(현재 수리/회전 결정). No selected baseline(선택 기준선), runtime authority(런타임 권위), live readiness(실거래 준비), or Goal Achieve(목표 달성) is claimed(주장 없음).
+<!-- frontier97b_result:end -->

@@ -13,3 +13,12 @@
 - f97a_required_gate_coverage_audit: `stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/f97a_required_gate_coverage_audit.json`
 - f97a_final_claim_guard: `stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/f97a_final_claim_guard.json`
 - current run(현재 실행): `frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1`
+
+<!-- frontier97b_review_index:start -->
+## F97B Review Index(전선97B 검토 색인)
+
+- report(보고서): `stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/frontier97B_first_hit_survival_hazard_proxy_scout_report.md`
+- packet(작업 묶음): `docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/work_packet.yaml`
+- candidate gate(후보 게이트): `stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/candidate_gate.json`
+- KPI record(KPI 기록): `stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/kpi_record.json`
+<!-- frontier97b_review_index:end -->

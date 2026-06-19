@@ -7618,3 +7618,10 @@ Action(행동): recorded(기록) F97A design-only formal open(설계 전용 정�
 
 Effect(효과): current run(현재 실행) is `frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1`; runtime probe(런타임 탐침)는 no runnable candidate/no runtime claim(실행 가능한 후보 없음/런타임 주장 없음) 때문에 not_applicable_with_reason(사유 있는 해당 없음)이다.
 <!-- frontier97a_changelog:end -->
+
+<!-- frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1 -->
+## 2026-06-19T10:48:07Z - F97B first-hit survival/hazard proxy scout
+
+Action: Materialized F97B proxy scout artifacts and packet receipts.
+
+Effect: workspace_state now points to `frontier97C_first_hit_survival_hazard_event_sparse_repair_or_rotation_decision_v1` after `f97b_first_hit_survival_hazard_proxy_scout_negative_no_runnable_candidate_no_authority`; no runtime authority or Goal Achieve claim is made.

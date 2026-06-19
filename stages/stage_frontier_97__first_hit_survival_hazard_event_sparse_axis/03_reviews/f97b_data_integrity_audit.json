@@ -1,0 +1,295 @@
+{
+  "audit_name": "data_integrity_audit",
+  "claim_boundary": "f97b_proxy_scout_only_first_hit_survival_hazard_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim",
+  "created_at_utc": "2026-06-19T10:57:34Z",
+  "data_sources_checked": [
+    {
+      "exists": true,
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "sha256": "5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43",
+      "size_bytes": 14278154
+    },
+    {
+      "exists": true,
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+      "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+      "size_bytes": 2691
+    },
+    {
+      "exists": true,
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "size_bytes": 1053
+    },
+    {
+      "exists": true,
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "sha256": "2ee5e97d06d914b9fdeb826708c4613860a2458138dd51de39f3e60819d2995f",
+      "size_bytes": 38125907
+    },
+    {
+      "exists": false,
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw_manifest.json",
+      "sha256": null,
+      "size_bytes": null
+    }
+  ],
+  "denylist_feature_violations": [],
+  "duplicate_timestamps": {
+    "tier_a_separate": 0,
+    "tier_ab_combined": 0,
+    "tier_b_separate": 0
+  },
+  "f91_route_integrity": {
+    "dataset_rows": 46650,
+    "feature_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "first_hit_label_summaries": {
+      "tier_a_separate": {
+        "eligible_rows": 46628,
+        "excluded_by_reason": {
+          "split_horizon_embargo": 22
+        },
+        "excluded_rows": 22,
+        "label_end_after_split_boundary_excluded": 22,
+        "label_start_nonpositive_count": 0,
+        "rows": 46650
+      },
+      "tier_ab_combined": {
+        "eligible_rows": 59012,
+        "excluded_by_reason": {
+          "split_horizon_embargo": 36
+        },
+        "excluded_rows": 36,
+        "label_end_after_split_boundary_excluded": 36,
+        "label_start_nonpositive_count": 0,
+        "rows": 59048
+      },
+      "tier_b_separate": {
+        "eligible_rows": 12382,
+        "excluded_by_reason": {
+          "split_horizon_embargo": 16
+        },
+        "excluded_rows": 16,
+        "label_end_after_split_boundary_excluded": 16,
+        "label_start_nonpositive_count": 0,
+        "rows": 12398
+      }
+    },
+    "routed_duplicate_timestamps": 0,
+    "routed_sorted": true,
+    "source_identity_status": "matched_model_input_summary",
+    "tier_a_duplicate_timestamps": 0,
+    "tier_a_sorted": true,
+    "tier_b_duplicate_timestamps": 0,
+    "tier_b_sorted": true,
+    "top3_weight_status": "mt5_price_proxy_top3_weights_v1"
+  },
+  "feature_count": 58,
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "gap_summary": {
+    "tier_a_separate": {
+      "gap_count_gt_5m": 6027,
+      "max_gap_minutes": 8315.0,
+      "median_gap_minutes": 5.0
+    },
+    "tier_ab_combined": {
+      "gap_count_gt_5m": 902,
+      "max_gap_minutes": 6875.0,
+      "median_gap_minutes": 5.0
+    },
+    "tier_b_separate": {
+      "gap_count_gt_5m": 5707,
+      "max_gap_minutes": 32925.0,
+      "median_gap_minutes": 5.0
+    }
+  },
+  "label_boundary_check": {
+    "label_start_nonpositive_count": {
+      "tier_a_separate": 0,
+      "tier_ab_combined": 0,
+      "tier_b_separate": 0
+    },
+    "split_horizon_embargo_policy": "Rows whose first-hit horizon crosses split max timestamp are excluded from fit/evaluation.",
+    "timestamp_interpretation": "model timestamp is closed-bar feature cutoff; first-hit label starts on the first raw bar closing after that cutoff.",
+    "timezone_boundary": "raw manifest timezone_status remains unresolved; UTC epoch ordering is used only as broker-export axis, not civil-time authority."
+  },
+  "leakage_tests": {
+    "first_hit_labels_used_as_targets_only": true,
+    "fit_scope": "train_tier_ab_combined_eligible_rows_only",
+    "model_features_use_first_hit_label_columns": false,
+    "model_features_use_future_return": false,
+    "model_features_use_label_or_label_class": false,
+    "oos_selection": "forbidden_and_not_used",
+    "validation_oos_transform_only": true
+  },
+  "packet_id": "frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1",
+  "split_summary": {
+    "tier_a_separate": {
+      "oos": {
+        "eligible_rows": 7575,
+        "end": "2026-04-13 22:00:00+00:00",
+        "rows": 7584,
+        "start": "2025-10-01 16:35:00+00:00",
+        "unique_dates": 131
+      },
+      "train": {
+        "eligible_rows": 29217,
+        "end": "2024-12-31 22:00:00+00:00",
+        "rows": 29222,
+        "start": "2022-09-01 16:40:00+00:00",
+        "unique_dates": 573
+      },
+      "validation": {
+        "eligible_rows": 9836,
+        "end": "2025-09-30 22:00:00+00:00",
+        "rows": 9844,
+        "start": "2025-01-02 16:35:00+00:00",
+        "unique_dates": 183
+      }
+    },
+    "tier_ab_combined": {
+      "oos": {
+        "eligible_rows": 8634,
+        "end": "2026-04-13 22:00:00+00:00",
+        "rows": 8646,
+        "start": "2025-10-01 16:35:00+00:00",
+        "unique_dates": 131
+      },
+      "train": {
+        "eligible_rows": 38180,
+        "end": "2024-12-31 22:00:00+00:00",
+        "rows": 38192,
+        "start": "2022-09-01 16:35:00+00:00",
+        "unique_dates": 579
+      },
+      "validation": {
+        "eligible_rows": 12198,
+        "end": "2025-09-30 22:00:00+00:00",
+        "rows": 12210,
+        "start": "2025-01-02 16:35:00+00:00",
+        "unique_dates": 185
+      }
+    },
+    "tier_b_separate": {
+      "oos": {
+        "eligible_rows": 1058,
+        "end": "2026-04-13 21:45:00+00:00",
+        "rows": 1062,
+        "start": "2025-10-01 17:30:00+00:00",
+        "unique_dates": 121
+      },
+      "train": {
+        "eligible_rows": 8963,
+        "end": "2024-12-31 21:55:00+00:00",
+        "rows": 8970,
+        "start": "2022-09-01 16:35:00+00:00",
+        "unique_dates": 555
+      },
+      "validation": {
+        "eligible_rows": 2361,
+        "end": "2025-09-30 21:55:00+00:00",
+        "rows": 2366,
+        "start": "2025-01-02 17:50:00+00:00",
+        "unique_dates": 148
+      }
+    }
+  },
+  "status": "pass_with_boundary",
+  "tier_b_summary": {
+    "by_split": {
+      "oos": {
+        "no_tier_labelable_rows": 159,
+        "routed_labelable_rows": 8646,
+        "tier_a_primary_rows": 7584,
+        "tier_b_fallback_rows": 1062
+      },
+      "train": {
+        "no_tier_labelable_rows": 691,
+        "routed_labelable_rows": 38192,
+        "tier_a_primary_rows": 29222,
+        "tier_b_fallback_rows": 8970
+      },
+      "validation": {
+        "no_tier_labelable_rows": 203,
+        "routed_labelable_rows": 12210,
+        "tier_a_primary_rows": 9844,
+        "tier_b_fallback_rows": 2366
+      }
+    },
+    "dataset_id": "stage10_tier_b_partial_context_core42_v1",
+    "feature_count": 42,
+    "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+    "feature_set_id": "feature_set_stage10_tier_b_core42_us100_session_v1",
+    "label_threshold_log_return": 0.001277833051854688,
+    "labelable_rows": 60101,
+    "no_tier_by_split": {
+      "oos": 159,
+      "train": 691,
+      "validation": 203
+    },
+    "no_tier_labelable_rows": 1053,
+    "note": "Tier B fallback is built from partial-context rows outside the strict Tier A clean sample that still have finite US100/session core42 features.",
+    "policy_id": "tier_b_partial_context_core42_fallback_v1",
+    "source_raw_rows": 261344,
+    "source_valid_rows": 56939,
+    "tier_a_primary_rows": 46650,
+    "tier_b_fallback_by_split_subtype": {
+      "oos": {
+        "B_core_only": 24,
+        "B_full_context_outside_tier_a_scope": 1,
+        "B_macro_missing": 809,
+        "B_mixed_partial_context": 228
+      },
+      "train": {
+        "B_constituent_missing": 1,
+        "B_core_only": 151,
+        "B_full_context_outside_tier_a_scope": 216,
+        "B_macro_missing": 7805,
+        "B_mixed_partial_context": 797
+      },
+      "validation": {
+        "B_core_only": 25,
+        "B_macro_missing": 2126,
+        "B_mixed_partial_context": 215
+      }
+    },
+    "tier_b_fallback_by_subtype": {
+      "B_constituent_missing": 1,
+      "B_core_only": 200,
+      "B_full_context_outside_tier_a_scope": 217,
+      "B_macro_missing": 10740,
+      "B_mixed_partial_context": 1240
+    },
+    "tier_b_fallback_rows": 12398,
+    "tier_b_training_rows": 59048
+  },
+  "tier_route_summary": {
+    "actual_routed_rows": 59048,
+    "by_view_split": {
+      "tier_a_separate": {
+        "oos": 7584,
+        "train": 29222,
+        "validation": 9844
+      },
+      "tier_ab_combined": {
+        "oos": 8646,
+        "train": 38192,
+        "validation": 12210
+      },
+      "tier_b_separate": {
+        "oos": 1062,
+        "train": 8970,
+        "validation": 2366
+      }
+    },
+    "combined_boundary": "actual routed total is Tier A primary plus Tier B fallback rows, not a synthetic KPI sum",
+    "tier_a_rows": 46650,
+    "tier_b_fallback_rows": 12398
+  },
+  "timestamp_sorted": {
+    "tier_a_separate": true,
+    "tier_ab_combined": true,
+    "tier_b_separate": true
+  }
+}

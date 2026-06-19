@@ -1,15 +1,13 @@
 ﻿# Current Working State(현재 작업 상태)
 
 - active stage(활성 단계): `stage_frontier_97__first_hit_survival_hazard_event_sparse_axis`
-- current run(현재 실행): `frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1`
-- latest completed run(최근 완료 실행): `frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1`
-- current status(현재 상태): `f97a_stage_open_design_prepared_no_candidate_no_authority`
-- current judgment(현재 판정): `design_only_stage_open_first_hit_survival_hazard_event_sparse_axis`
-- frontier extra due status(전선 추가 도래 상태): `not_due_after_f96_closeout_next_boundary_f100_e02_pending_e01_closed_for_f050`
-- frontier topic rotation status(전선 주제 회전 상태): `passed_f97_first_hit_survival_hazard_not_f96_action_value_parameter_repair`
-- runtime probe status(런타임 탐침 상태): `not_applicable_design_only_no_runnable_candidate_no_runtime_materialization_economics_handoff_claim_not_cost_or_proxy_bad_skip`
-- claim boundary(주장 경계): `f97a_design_only_stage_open_first_hit_survival_hazard_event_sparse_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`
+- current run(현재 실행): `frontier97C_first_hit_survival_hazard_event_sparse_repair_or_rotation_decision_v1`
+- latest completed run(최근 완료 실행): `frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1`
+- current status(현재 상태): `f97b_first_hit_survival_hazard_proxy_scout_negative_no_runnable_candidate_no_authority`
+- current judgment(현재 판정): `negative_proxy_scout_first_hit_survival_hazard_candidate_gate_failed_no_runtime_trigger`
+- runtime probe status(런타임 탐침 상태): `not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip`
+- Task Force actual calls(태스크포스 실제 호출): `6 calls / 5 roster agents(6회 호출 / 5명 명단 요원)`
 
-Action(행동): F97A materializes(물질화) a design-only formal-open packet(설계 전용 정식 개방 묶음) with actual Task Force calls(실제 태스크포스 호출).
+Action(행동): F97B first-hit survival/hazard proxy scout(전선97B 첫 도달 생존/위험 프록시 탐색)를 실행하고 산출물, 영수증, 게이트를 기록했다.
 
-Effect(효과): F97B is the current run(현재 실행) for first-hit survival/hazard event-sparse proxy scout(첫 도달 생존/위험 이벤트 희소 프록시 탐색), with no runtime authority(런타임 권위 없음), no selected baseline(선택 기준선 없음), and no Goal Achieve(목표 달성 없음).
+Effect(효과): F97C repair/rotation decision(전선97C 수리/회전 결정)이 현재 실행이 되었고, selected baseline(선택 기준선), operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), Goal Achieve(목표 달성)는 주장하지 않는다.

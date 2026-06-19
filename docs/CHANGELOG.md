@@ -206,3 +206,8 @@ Action(행동): recorded(기록) F97A design-only formal open(설계 전용 정�
 
 Effect(효과): current run(현재 실행) is `frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1`; runtime probe(런타임 탐침)는 no runnable candidate/no runtime claim(실행 가능한 후보 없음/런타임 주장 없음) 때문에 not_applicable_with_reason(사유 있는 해당 없음)이다.
 <!-- frontier97a_changelog:end -->
+
+<!-- frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1 -->
+## 2026-06-19T10:48:07Z - F97B proxy scout record
+
+Recorded first-hit survival/hazard proxy evidence and F97B state sync boundary.

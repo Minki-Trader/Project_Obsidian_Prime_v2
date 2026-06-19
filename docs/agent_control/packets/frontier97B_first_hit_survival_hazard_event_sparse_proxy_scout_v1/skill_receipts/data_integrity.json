@@ -1,0 +1,83 @@
+{
+  "claim_boundary": "f97b_proxy_scout_only_first_hit_survival_hazard_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim",
+  "data_sources_checked": [
+    {
+      "exists": true,
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "sha256": "5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43",
+      "size_bytes": 14278154
+    },
+    {
+      "exists": true,
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+      "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+      "size_bytes": 2691
+    },
+    {
+      "exists": true,
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "size_bytes": 1053
+    },
+    {
+      "exists": true,
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "sha256": "2ee5e97d06d914b9fdeb826708c4613860a2458138dd51de39f3e60819d2995f",
+      "size_bytes": 38125907
+    },
+    {
+      "exists": false,
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw_manifest.json",
+      "sha256": null,
+      "size_bytes": null
+    }
+  ],
+  "forbidden_claims": [
+    "completion",
+    "complete",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_probe_completed",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "leakage_checks": {
+    "first_hit_labels_used_as_targets_only": true,
+    "fit_scope": "train_tier_ab_combined_eligible_rows_only",
+    "model_features_use_first_hit_label_columns": false,
+    "model_features_use_future_return": false,
+    "model_features_use_label_or_label_class": false,
+    "oos_selection": "forbidden_and_not_used",
+    "validation_oos_transform_only": true
+  },
+  "missing_data_boundary": "Tier B or Tier A+B combined rows cannot be omitted; if unavailable they must be recorded as blocked or missing_required.",
+  "packet_id": "frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1",
+  "receipt_path": "docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/skill_receipts/data_integrity.json",
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "Train fit only; validation candidate gate; OOS final-read-only; split-horizon breach rows are excluded.",
+  "status": "executed",
+  "time_axis_boundary": "Closed M5 row t features and rolling history only; first-hit label starts on first raw bar closing after feature cutoff."
+}

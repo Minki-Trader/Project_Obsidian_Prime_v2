@@ -13,3 +13,11 @@
 Action(행동): F97A materializes(물질화) a design-only formal-open packet(설계 전용 정식 개방 묶음) with actual Task Force calls(실제 태스크포스 호출).
 
 Effect(효과): F97B is the current run(현재 실행) for first-hit survival/hazard event-sparse proxy scout(첫 도달 생존/위험 이벤트 희소 프록시 탐색), with no runtime authority(런타임 권위 없음), no selected baseline(선택 기준선 없음), and no Goal Achieve(목표 달성 없음).
+
+<!-- frontier97b_context_anchor:start -->
+## F97B Context Anchor(전선97B 맥락 앵커)
+
+Current truth(현재 진실): latest completed run(최근 완료 실행)은 `frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1`이고 current run(현재 실행)은 `frontier97C_first_hit_survival_hazard_event_sparse_repair_or_rotation_decision_v1`이다.
+
+Runtime boundary(런타임 경계): `not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip`. Candidate count(후보 수)는 `0`이므로 MT5 Strategy Tester runtime probe(MT5 전략 테스터 런타임 탐침)는 cost skip(비용 생략)이 아니라 no runnable candidate/no runtime claim(실행 후보 없음/런타임 주장 없음)으로 not applicable(해당 없음)이다.
+<!-- frontier97b_context_anchor:end -->

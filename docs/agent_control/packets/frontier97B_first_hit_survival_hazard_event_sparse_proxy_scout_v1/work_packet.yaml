@@ -1,0 +1,880 @@
+version: work_packet_schema_v2_1
+packet_lifecycle: new_packet
+packet_id: frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1
+created_at_utc: '2026-06-19T10:57:34Z'
+user_request:
+  user_quote: /goal active continuation plus explicit reminder that relevant Task Force agents must be actually called when required
+  requested_action: run F97B first-hit survival/hazard proxy scout
+  requested_count:
+    value: 1
+    n_a_reason: ''
+  ambiguous_terms:
+  - No final completion, selected baseline, operating promotion, runtime authority, live readiness, or Goal Achieve is claimed.
+current_truth:
+  active_stage: stage_frontier_97__first_hit_survival_hazard_event_sparse_axis
+  current_run: frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1
+  latest_completed_run: frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/04_selected/selection_status.md
+  claim_boundary: f97b_proxy_scout_only_first_hit_survival_hazard_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim
+work_classification:
+  primary_family: experiment_execution
+  detected_families:
+  - experiment_execution
+  - artifact_lineage
+  - state_sync
+  touched_surfaces:
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews
+  - docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1
+  - docs/workspace/workspace_state.yaml
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    future_label_leakage: high
+    tier_ab_timestamp_order: high
+    pf_only_selection: high
+    task_force_review_claim_without_actual_calls: high
+    runtime_probe_absence_misread_as_cost_skip: high
+  hard_stop_risks:
+  - Do not put future, label, or first-hit outcome fields into model features.
+  - Do not tune by OOS.
+  - Do not claim runtime/economics/materialization without MT5 Strategy Tester identity.
+  required_gates:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - kpi_contract_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - completion
+  - complete
+  - completed
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - promotion_candidate
+  - runtime_probe
+  - runtime_probe_completed
+  - runtime_verified
+  - strategy_tester_runtime_economics
+  - runtime_economics
+  - runtime_economics_pass
+  - economics_pass
+  - materialization_ready
+  - mt5_handoff_ready
+  - onnx_handoff_ready
+  - ea_handoff_ready
+  - task_force_reviewed
+  - task_force_reviewed_pass
+  - internally_reviewed
+  - reviewed
+  - verified
+  - pass
+  - model_quality
+  - model_readiness
+  - calibrated_probability
+  - data_contract_pass
+decision_lock:
+  mode: assume_safe_default
+  assumptions:
+    verification_profile: proxy_scout
+    strategy_tester_required_now: false
+    runtime_probe_status: not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip
+    reason: No ONNX/EA/set/runtime claim is made when candidate_count is zero; if proxy gate signal appears, packet is blocked pending same-packet
+      MT5 probe.
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+  - experiment_execution
+  target_surfaces:
+  - F97B proxy scout
+  - first-hit survival/hazard target
+  - Task Force actual calls
+  - state sync
+  scope_units:
+  - proxy_scout_run
+  - candidate_gate_record
+  - receipt
+  - state_sync
+  execution_layers:
+  - local_python_execution
+  mutation_policy:
+    allowed: true
+    user_quote: /goal active continuation
+  evidence_layers:
+  - data lock
+  - first-hit labels
+  - proxy metrics
+  - calibration diagnostics
+  - negative controls
+  - candidate gate
+  - Task Force actual calls
+  - control-plane gates
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: false
+    rationale: F97B is the active proxy-scout packet and runtime trigger rules cannot be reduced.
+  claim_boundary:
+    allowed_claims:
+    - f97b_proxy_scout_executed
+    - first_hit_survival_hazard_negative_memory_recorded
+    - task_force_actual_calls_recorded_for_f97b
+    - candidate_gate_count_recorded
+    - runtime_trigger_boundary_recorded_no_probe_without_candidate
+    forbidden_claims:
+    - completion
+    - complete
+    - completed
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - promotion_candidate
+    - runtime_probe
+    - runtime_probe_completed
+    - runtime_verified
+    - strategy_tester_runtime_economics
+    - runtime_economics
+    - runtime_economics_pass
+    - economics_pass
+    - materialization_ready
+    - mt5_handoff_ready
+    - onnx_handoff_ready
+    - ea_handoff_ready
+    - task_force_reviewed
+    - task_force_reviewed_pass
+    - internally_reviewed
+    - reviewed
+    - verified
+    - pass
+    - model_quality
+    - model_readiness
+    - calibrated_probability
+    - data_contract_pass
+    claim_boundary: f97b_proxy_scout_only_first_hit_survival_hazard_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim
+verification_profile:
+  profile_id: proxy_scout
+  claim_surface:
+    allowed_claims:
+    - f97b_proxy_scout_executed
+    - first_hit_survival_hazard_negative_memory_recorded
+    - task_force_actual_calls_recorded_for_f97b
+    - candidate_gate_count_recorded
+    - runtime_trigger_boundary_recorded_no_probe_without_candidate
+    forbidden_claims:
+    - completion
+    - complete
+    - completed
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - promotion_candidate
+    - runtime_probe
+    - runtime_probe_completed
+    - runtime_verified
+    - strategy_tester_runtime_economics
+    - runtime_economics
+    - runtime_economics_pass
+    - economics_pass
+    - materialization_ready
+    - mt5_handoff_ready
+    - onnx_handoff_ready
+    - ea_handoff_ready
+    - task_force_reviewed
+    - task_force_reviewed_pass
+    - internally_reviewed
+    - reviewed
+    - verified
+    - pass
+    - model_quality
+    - model_readiness
+    - calibrated_probability
+    - data_contract_pass
+    claim_boundary: f97b_proxy_scout_only_first_hit_survival_hazard_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim
+  trigger_sources:
+  - active_goal_frontier_continuation
+  - F97A planned F97B proxy scout
+  - explicit user instruction requiring relevant Task Force actual calls when triggered
+  protected_claims:
+  - f97b_proxy_scout_executed
+  - first_hit_survival_hazard_negative_memory_recorded
+  - task_force_actual_calls_recorded_for_f97b
+  - candidate_gate_count_recorded
+  - runtime_trigger_boundary_recorded_no_probe_without_candidate
+  required_evidence:
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/run_manifest.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/kpi_record.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/data_feature_split_lock.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/first_hit_config.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/model_fit_manifest.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/candidate_gate.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/split_metrics.csv
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/negative_control_metrics.csv
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/calibration_metrics.csv
+  - docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/codex_task_force_review_packet.json
+  - docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/work_packet.yaml
+  - docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/skill_receipts.json
+  - docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/closeout_gate.json
+  gates_not_run_with_reason:
+  - gate: runtime_evidence_gate
+    reason_code: proxy_scout_no_runnable_candidate_no_runtime_claim
+    reason: F97B makes no runtime, materialization, handoff, or economics claim when candidate_count is zero.
+    claim_effect: No runtime_probe, runtime_verified, materialization_ready, handoff_complete, economics_pass, runtime_authority, live_readiness,
+      selected_baseline, or Goal Achieve claim is allowed.
+  stop_conditions:
+  - Stop at proxy scout evidence if no runnable candidate or runtime/materialization/economics/handoff claim appears.
+  - If a meaningful runnable candidate or runtime claim appears, do not make the claim without same-packet MT5 Strategy Tester probe.
+  - Do not repair by threshold/filter/session/routing/parameter-only changes.
+acceptance_criteria:
+- id: AC-001
+  text: F97B proxy metrics exist.
+  expected_artifact: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/split_metrics.csv
+  verification_method: scope_completion_gate
+  required: true
+- id: AC-002
+  text: Tier A, Tier B, and Tier A+B actual routed total are recorded.
+  expected_artifact: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/tier_route_summary.json
+  verification_method: kpi_contract_audit
+  required: true
+- id: AC-003
+  text: Task Force actual calls are recorded.
+  expected_artifact: docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/codex_task_force_review_packet.json
+  verification_method: codex_task_force_review_packet
+  required: true
+- id: AC-004
+  text: Runtime evidence absence is bounded and not a cost/proxy-bad skip.
+  expected_artifact: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/runtime_trigger_check.json
+  verification_method: final_claim_guard
+  required: true
+work_plan:
+- Lock data, raw bars, feature, split, and first-hit label identities.
+- Fit train-only first-hit hazard proxy variants.
+- Score validation and OOS final read with negative controls and calibration diagnostics.
+- Record Task Force calls, audits, receipts, state sync, and final claim guard.
+skill_routing:
+  registry_source: docs/agent_control/work_family_registry.yaml
+  primary_family: experiment_execution
+  primary_skill: obsidian-run-evidence-system
+  support_skills:
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-task-force-review
+  - obsidian-result-judgment
+  - obsidian-exploration-mandate
+  - obsidian-claim-discipline
+  skills_considered:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-task-force-review
+  - obsidian-result-judgment
+  - obsidian-exploration-mandate
+  - obsidian-claim-discipline
+  - obsidian-backtest-forensics
+  - obsidian-runtime-parity
+  skills_selected:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-task-force-review
+  - obsidian-result-judgment
+  - obsidian-exploration-mandate
+  - obsidian-claim-discipline
+  skills_not_used:
+  - skill: obsidian-backtest-forensics
+    reason: No new MT5 Strategy Tester report or trade list exists.
+  - skill: obsidian-runtime-parity
+    reason: No ONNX/EA parity or handoff claim is made.
+  verification_profile: proxy_scout
+  required_gates:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - kpi_contract_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  required_skill_receipts:
+  - obsidian-run-evidence-system
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-task-force-review
+  - obsidian-result-judgment
+  - obsidian-exploration-mandate
+  - obsidian-claim-discipline
+evidence_contract:
+  source_inputs:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/00_spec/stage_brief.md
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/01_inputs/input_refs.md
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/04_selected/selection_status.md
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/f97b_proxy_scout_brief.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/first_hit_survival_hazard_contract.json
+  - docs/agent_control/packets/frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1/work_packet.yaml
+  - docs/agent_control/packets/frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1/closeout_gate.json
+  - data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet
+  - data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json
+  - data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt
+  - data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv
+  - data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw_manifest.json
+  - docs/agent_control/work_family_registry.yaml
+  - docs/agent_control/codex_task_force_registry.yaml
+  machine_readable:
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/run_manifest.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/summary.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/kpi_record.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/data_feature_split_lock.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/first_hit_config.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/model_fit_manifest.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/candidate_gate.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/split_metrics.csv
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/negative_control_metrics.csv
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/calibration_metrics.csv
+  - docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/skill_receipts.json
+  human_readable:
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/reports/result_summary.md
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/frontier97B_first_hit_survival_hazard_proxy_scout_report.md
+  - docs/decisions/2026-06-19_frontier97b_first_hit_survival_hazard_proxy_scout.md
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/context_anchor.md
+  raw_evidence:
+  - data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet
+  - data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/f97b_proxy_scout_brief.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/first_hit_survival_hazard_contract.json
+  missing_evidence:
+  - evidence: MT5 Strategy Tester runtime output
+    reason: outside proxy_scout claim surface unless candidate_count is positive or a runtime claim appears
+  - evidence: ONNX/EA/set handoff
+    reason: not created in F97B
+gates:
+  required:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - kpi_contract_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  actual_status_source:
+    work_packet_schema_lint: pass
+    skill_receipt_schema_lint: pass
+    codex_task_force_review_packet: pass
+    frontier_extra_due_check: pass_not_due
+    frontier_five_stage_direction_synthesis: pass
+    frontier_topic_rotation_check: pass
+    scope_completion_gate: pass
+    data_integrity_audit: pass_with_boundary
+    model_validation_audit: pass_with_boundary
+    kpi_contract_audit: pass
+    artifact_lineage_audit: pass
+    result_judgment_audit: negative
+    state_sync_audit: pass
+    required_gate_coverage_audit: pass
+    final_claim_guard: pass
+  not_applicable_with_reason:
+    runtime_evidence_gate: F97B makes no runtime, materialization, handoff, or economics claim when candidate_count is zero.
+final_claim_policy:
+  allowed_claims:
+  - f97b_proxy_scout_executed
+  - first_hit_survival_hazard_negative_memory_recorded
+  - task_force_actual_calls_recorded_for_f97b
+  - candidate_gate_count_recorded
+  - runtime_trigger_boundary_recorded_no_probe_without_candidate
+  forbidden_claims:
+  - completion
+  - complete
+  - completed
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - promotion_candidate
+  - runtime_probe
+  - runtime_probe_completed
+  - runtime_verified
+  - strategy_tester_runtime_economics
+  - runtime_economics
+  - runtime_economics_pass
+  - economics_pass
+  - materialization_ready
+  - mt5_handoff_ready
+  - onnx_handoff_ready
+  - ea_handoff_ready
+  - task_force_reviewed
+  - task_force_reviewed_pass
+  - internally_reviewed
+  - reviewed
+  - verified
+  - pass
+  - model_quality
+  - model_readiness
+  - calibrated_probability
+  - data_contract_pass
+  claim_boundary: f97b_proxy_scout_only_first_hit_survival_hazard_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim
+verification_contract:
+  verification_profile: proxy_scout
+  trigger_source: frontier97B_proxy_scout_execution_and_explicit_task_force_instruction
+  protected_claim: first_hit_survival_hazard_proxy_scout_negative_or_blocked_learning_record_only
+  required_evidence:
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/run_manifest.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/kpi_record.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/data_feature_split_lock.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/first_hit_config.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/model_fit_manifest.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/candidate_gate.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/split_metrics.csv
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/negative_control_metrics.csv
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/calibration_metrics.csv
+  - docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/codex_task_force_review_packet.json
+  - docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/work_packet.yaml
+  - docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/skill_receipts.json
+  - docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/closeout_gate.json
+  stop_condition: candidate_count_zero_negative_closeout_or_candidate_count_positive_blocked_until_same_packet_MT5_probe
+  not_applicable_with_reason:
+  - gate: runtime_evidence_gate
+    reason_code: proxy_scout_no_runnable_candidate_no_runtime_claim
+    reason: F97B makes no runtime, materialization, handoff, or economics claim when candidate_count is zero.
+    claim_effect: No runtime_probe, runtime_verified, materialization_ready, handoff_complete, economics_pass, runtime_authority, live_readiness,
+      selected_baseline, or Goal Achieve claim is allowed.
+task_force:
+  packet_id: frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1
+  skill: obsidian-task-force-review
+  status: executed_with_completed_replacement_quant_boundary
+  created_at_utc: '2026-06-19T10:57:34Z'
+  review_requirement: explicit_user_instruction_required_and_active_goal_claim_surface
+  trigger_reason: F97B non-trivial proxy_scout packet plus explicit user instruction to call relevant Task Force agents when triggered
+  trigger_source: active_goal_frontier_continuation_and_user_required_task_force_review
+  roster_registry: docs/agent_control/codex_task_force_registry.yaml
+  selected_roster_agent_count: 5
+  actual_subagent_call_count: 6
+  full_roster_call_reason: null
+  agents_used:
+  - agent_04_evidence_control_plane
+  - agent_05_data_feature_contract
+  - agent_06_quant_research
+  - agent_07_model_validation_risk
+  - agent_08_mt5_onnx_runtime
+  actual_subagent_calls:
+  - roster_agent_id: agent_04_evidence_control_plane
+    spawned_agent_id: 019edf69-e387-7d81-95ae-82a43126857a
+    nickname: Pascal
+    tool_name: multi_agent_v1.spawn_agent
+    result_status: completed
+    opinion_classification: needs_local_verification
+    classification_detail: F97B needs local work_packet, gate, receipt, artifact hash, candidate/runtime trigger evidence, and no Task Force reviewed/pass
+      wording.
+    stale_self_report_handling: Rejected any stale prior call id in the subagent text; parent tool return is the actual call identity for this
+      packet.
+  - roster_agent_id: agent_05_data_feature_contract
+    spawned_agent_id: 019edf6a-0f77-74e2-872d-096ce29a993c
+    nickname: Herschel
+    tool_name: multi_agent_v1.spawn_agent
+    result_status: completed
+    opinion_classification: needs_local_verification
+    classification_detail: Closed-bar feature cutoff, raw-bar first-hit label boundary, split embargo, feature denylist, Tier A/B/A+B records,
+      hashes, duplicates, and timezone boundary must be local evidence.
+  - roster_agent_id: agent_06_quant_research
+    spawned_agent_id: 019edf6a-3c93-7c71-935f-1d3d8e744f26
+    nickname: Epicurus
+    tool_name: multi_agent_v1.spawn_agent
+    result_status: superseded_by_completed_replacement_after_wait_timeout
+    opinion_classification: needs_local_verification
+    classification_detail: Actual initial call was made, but no final response arrived after repeated waits; a replacement call was made to avoid
+      leaving the quant remit unhandled.
+  - roster_agent_id: agent_06_quant_research
+    spawned_agent_id: 019edf7e-6529-72f2-85d7-26f03f985ac7
+    nickname: Euclid
+    tool_name: multi_agent_v1.spawn_agent
+    result_status: completed
+    opinion_classification: needs_local_verification
+    classification_detail: Accepted first-hit classifier, signed-edge regression, hazard/density score, multi-KPI candidate gate, and negative
+      controls; rejected threshold-only repetition, proxy-only runtime evidence, and bad proxy/cost as MT5 skip reasons.
+  - roster_agent_id: agent_07_model_validation_risk
+    spawned_agent_id: 019edf6a-7467-76e0-bfa1-ff42aadb63b8
+    nickname: Galileo
+    tool_name: multi_agent_v1.spawn_agent
+    result_status: completed
+    opinion_classification: needs_local_verification
+    classification_detail: Calibration, split discipline, density, drawdown, adverse-first clustering, OOS final-read boundary, and no calibrated
+      probability claim must be local evidence.
+    stale_self_report_handling: Rejected the subagent's stale statement that a new call could not be made; parent tool return proves this actual
+      call.
+  - roster_agent_id: agent_08_mt5_onnx_runtime
+    spawned_agent_id: 019edf6a-a6bf-75b2-8952-b2c58d2bbf1c
+    nickname: Anscombe
+    tool_name: multi_agent_v1.spawn_agent
+    result_status: completed
+    opinion_classification: accepted
+    classification_detail: MT5 Strategy Tester is required in the same packet if a runnable candidate, deterministic trade rule, ONNX/EA handoff,
+      or runtime/economics claim appears; cost or bad proxy is rejected as a skip reason.
+    stale_self_report_handling: Rejected the subagent's stale statement that a new call could not be made; parent tool return proves this actual
+      call.
+  opinion_summary:
+    accepted:
+    - agent_08_mt5_onnx_runtime
+    needs_local_verification:
+    - agent_04_evidence_control_plane
+    - agent_05_data_feature_contract
+    - agent_06_quant_research
+    - agent_06_quant_research
+    - agent_07_model_validation_risk
+    rejected:
+    - stale subagent self-reports claiming the parent spawn call did not happen
+  model_policy: inherited_current_codex_model_no_gate_relaxation
+  bounded_evidence:
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/f97b_proxy_scout_brief.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/first_hit_survival_hazard_contract.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/kpi_record.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/candidate_gate.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/data_integrity_local_checks.json
+  advice_classification: mixed_accepted_and_needs_local_verification
+  local_verification:
+  - F97B materializes a new work_packet_schema_v2_1 packet.
+  - Tier A, Tier B, and Tier A+B actual routed total are recorded.
+  - Timestamp sortedness, duplicate counts, split horizon embargo, first-hit label boundary, and denylist features are checked.
+  - Candidate gate is validation-only; OOS is final read only.
+  - Runtime probe is required only if a runnable candidate or runtime/handoff/economics claim appears.
+  final_codex_direction: Use F97B as proxy scout evidence only; no Task Force reviewed/pass, runtime, promotion, baseline, readiness, or Goal
+    Achieve claim.
+  forbidden_claim_check:
+  - completion
+  - complete
+  - completed
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - promotion_candidate
+  - runtime_probe
+  - runtime_probe_completed
+  - runtime_verified
+  - strategy_tester_runtime_economics
+  - runtime_economics
+  - runtime_economics_pass
+  - economics_pass
+  - materialization_ready
+  - mt5_handoff_ready
+  - onnx_handoff_ready
+  - ea_handoff_ready
+  - task_force_reviewed
+  - task_force_reviewed_pass
+  - internally_reviewed
+  - reviewed
+  - verified
+  - pass
+  - model_quality
+  - model_readiness
+  - calibrated_probability
+  - data_contract_pass
+  claim_boundary: f97b_proxy_scout_only_first_hit_survival_hazard_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim
+artifacts:
+  source_inputs:
+  - path: docs/workspace/workspace_state.yaml
+    exists: true
+    sha256: 41a63e47e1d3d3aa4a61f1975b7d94708c9b225ba1a046bce8439ffe6108d1a0
+    size_bytes: 2050
+  - path: docs/context/current_working_state.md
+    exists: true
+    sha256: 9fa02a3bfb185dd067660d5e849e9a3ee8efc0ff84de9efb5736c94d8c60c36a
+    size_bytes: 1009
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/00_spec/stage_brief.md
+    exists: true
+    sha256: a217032a6342450254a64427224cb568559241847821c2f2e53b973ded9af76c
+    size_bytes: 745
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/01_inputs/input_refs.md
+    exists: true
+    sha256: 419e9833a7ec564ce838158edfee5d160acbed3ff04a26613557a9558112a775
+    size_bytes: 2276
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/04_selected/selection_status.md
+    exists: true
+    sha256: dae4e0c6deaf452a17d1db72606187e7a788e02b86491133d990c6df8a178d81
+    size_bytes: 342
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/f97b_proxy_scout_brief.json
+    exists: true
+    sha256: 5d195421b4d42645182433fce237493c734d50e5eb1aba673cffc7e1ce4c5094
+    size_bytes: 1287
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/first_hit_survival_hazard_contract.json
+    exists: true
+    sha256: 887332789604965f20631a500ab4e2567615112e016b18f128292ee9aa3c5f14
+    size_bytes: 2040
+  - path: docs/agent_control/packets/frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1/work_packet.yaml
+    exists: true
+    sha256: 2e7bc00a0f343c8b08da4e4cdd738da560933fd339cd713fdd60dd6e485ce00f
+    size_bytes: 21362
+  - path: docs/agent_control/packets/frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1/closeout_gate.json
+    exists: true
+    sha256: e817cac9200679acf0fc5ddba3a56155a109d9b245b8e1f26d5b473dadf74856
+    size_bytes: 6732
+  - path: data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet
+    exists: true
+    sha256: 5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43
+    size_bytes: 14278154
+  - path: data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json
+    exists: true
+    sha256: 71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef
+    size_bytes: 2691
+  - path: data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt
+    exists: true
+    sha256: fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2
+    size_bytes: 1053
+  - path: data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv
+    exists: true
+    sha256: 2ee5e97d06d914b9fdeb826708c4613860a2458138dd51de39f3e60819d2995f
+    size_bytes: 38125907
+  - path: data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw_manifest.json
+    exists: false
+    sha256: null
+    size_bytes: null
+  - path: docs/agent_control/work_family_registry.yaml
+    exists: true
+    sha256: bcabf5f0f06fee21d7242dbda4f48bc0d9c3956fdbf64d52cabcbddfb574d7e3
+    size_bytes: 36064
+  - path: docs/agent_control/codex_task_force_registry.yaml
+    exists: true
+    sha256: baccbfdde9b2c4f4e65556fea8a1356ab83aa7b3de1d63a65275f30be4c139a6
+    size_bytes: 4783
+  produced_artifacts:
+  - path: stage_pipelines/stage_frontier_97/frontier97b_first_hit_survival_hazard_proxy_scout.py
+    exists: true
+    sha256: 1ae27e5cf9d0394555554f13cee19dfdbc4bbdf9ddf94790d54693cce95d6db0
+    size_bytes: 115457
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/run_manifest.json
+    exists: true
+    sha256: b7500d99b1a0258998078094bf6a0d9f13e357e4b56f6f370a9508d5c3355455
+    size_bytes: 5737
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/summary.json
+    exists: true
+    sha256: 49492b1611dd5177d8760b32099c0818fb633b0c8ad0afd310a1b4f6ecbc7dd3
+    size_bytes: 1585
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/kpi_record.json
+    exists: true
+    sha256: c9b5e755d9f67c568d3c28efcf4ce3e9435dc3ea0b553c0aa5665026f55ae27d
+    size_bytes: 6847
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/execution_summary.json
+    exists: true
+    sha256: 2a09f81043b86638d266b9b88b5a0c007342161add7e9e54fa540589cf580aed
+    size_bytes: 28389
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/data_feature_split_lock.json
+    exists: true
+    sha256: 11644935453eb228ec5249c02a31db0a641ada26a8f009bce120e8c6e3a2234e
+    size_bytes: 6841
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/first_hit_config.json
+    exists: true
+    sha256: cdfa3cab7a1046ebd1dfb42a565b7af1d298931064f70f72e468739ca7c0b592
+    size_bytes: 1219
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/first_hit_label_summary.json
+    exists: true
+    sha256: 1946cd3086d770b7f841ec1b0a9518eac8150b6f95b91f22dd33338ad933458a
+    size_bytes: 3719
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/first_hit_label_sample.csv
+    exists: true
+    sha256: 5c768e917ca0beed92abca04dba3926ed4a17748144d0ef1d460036ef6bbfae8
+    size_bytes: 37536
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/model_fit_manifest.json
+    exists: true
+    sha256: b0b1c3df3477867582d1a9de7f5cb337d56dd72880740c57872946f194d18b18
+    size_bytes: 2543
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/variant_metrics.csv
+    exists: true
+    sha256: 390e2f74ec2cbb75bd67ddc1178a0dedb481f636038c3fa084153592f21fb996
+    size_bytes: 13468
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/split_metrics.csv
+    exists: true
+    sha256: 390e2f74ec2cbb75bd67ddc1178a0dedb481f636038c3fa084153592f21fb996
+    size_bytes: 13468
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/negative_control_metrics.csv
+    exists: true
+    sha256: 29aeaaedf20249688f6cd1d9e1f29ae1776a7225bfb6dd63f175518004792274
+    size_bytes: 43920
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/score_sample.csv
+    exists: true
+    sha256: b7fbfa0f4f12882b6e7bf42b0fc3689e019f448ec8d6993dc21b3c6a084084bc
+    size_bytes: 439274
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/calibration_metrics.csv
+    exists: true
+    sha256: 0f79865102595befb7deb9f0795b0847fb98337906bc9bdb039c6573a40d2a1f
+    size_bytes: 18237
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/candidate_gate.json
+    exists: true
+    sha256: 0a81ec8c789a5a3861aef8bf186bf8292aca362726923d5b97f4f038b10c807d
+    size_bytes: 8289
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/tier_route_summary.json
+    exists: true
+    sha256: eeb4f48e7bda80af17692e822f5a5f5125f4ae49828ce60667e3d3308de14881
+    size_bytes: 549
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/tier_b_summary.json
+    exists: true
+    sha256: 07151f853d18234789c92bfd14ca7507de00008ab703464b97a7b4c3ca9bfe97
+    size_bytes: 2151
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/data_integrity_local_checks.json
+    exists: true
+    sha256: 8e95c8cafee7849913f311bd98a45c2d3de29edc37ae5cbe6e0a301a780c408d
+    size_bytes: 9847
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/runtime_trigger_check.json
+    exists: true
+    sha256: 1b8bc9a43f78077a1133822a710d7cd59e53e097ce5e15c41c9a5f55c8eea115
+    size_bytes: 577
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/reports/result_summary.md
+    exists: true
+    sha256: 63c3046d2774a5527a8601861def6fc9611c00c4d4ad345994146c8d1d31e0a6
+    size_bytes: 2300
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/f97b_task_force_review_receipt.json
+    exists: true
+    sha256: 77ff93b4c6ce9b45b502be68a98ed0c9d12fd4378020a4f8338704adcf0a0ac0
+    size_bytes: 7566
+  - path: docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/codex_task_force_review_packet.json
+    exists: true
+    sha256: 77ff93b4c6ce9b45b502be68a98ed0c9d12fd4378020a4f8338704adcf0a0ac0
+    size_bytes: 7566
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/f97b_frontier_extra_due_check.json
+    exists: true
+    sha256: a489d87f148e1714a838cf5007925488d7b048ffdebf04b8b6ded95d25c263a1
+    size_bytes: 394
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/f97b_frontier_five_stage_direction_synthesis.json
+    exists: true
+    sha256: 549ab497f3c2641eced071b569210987befcb5d4b3840bb2a366123aa17045ea
+    size_bytes: 420
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/f97b_frontier_topic_rotation_check.json
+    exists: true
+    sha256: ad4de9c3f2753153ae871b2ecbcea22d68a45066aa814cad68730b00c4a603be
+    size_bytes: 524
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/f97b_scope_completion_gate.json
+    exists: true
+    sha256: 2f1383044e0321eaa77113cd52a42761b80f8705d24e301a29469753e2787139
+    size_bytes: 1331
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/f97b_data_integrity_audit.json
+    exists: true
+    sha256: fbaf4fab9ff2c9dc7b94c2211bf536e38ee37eb888fa3bc6b07dbb88f32abfda
+    size_bytes: 9892
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/f97b_model_validation_audit.json
+    exists: true
+    sha256: b01bd0ae691cb8f06467e0085e71847d2651f437e2425348631ecb132fc335ea
+    size_bytes: 840
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/f97b_kpi_contract_audit.json
+    exists: true
+    sha256: 0f7e49d052e22bff3a3fea42bf8a3b2da436c1655aab6b6160e9bb2180105c20
+    size_bytes: 1093
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/f97b_artifact_lineage_audit.json
+    exists: true
+    sha256: 9d3fc00f287aa926590c57b15cb33f7dface9cce691a3e72181617f08cad1706
+    size_bytes: 17338
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/f97b_result_judgment_audit.json
+    exists: true
+    sha256: 5062f56ff5a6f845e05175b3c678c2d6282387eaa3c9ac770ac82bd3da7049d5
+    size_bytes: 1615
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/f97b_final_claim_guard.json
+    exists: true
+    sha256: 4ca626b77a6695254d6cd30135ba11b7000025d4dea1463ac4f745e3dcef725c
+    size_bytes: 1277
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/f97b_state_sync_audit.json
+    exists: true
+    sha256: 3f32bacbe6e168cb917318979f5f0f7251277fd9b00687901b7984788a18461e
+    size_bytes: 5565
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/f97b_required_gate_coverage_audit.json
+    exists: true
+    sha256: a798706afe9dbcfa5a761a1f0b4ec56a5d499a5ff4b3c92808a87400c23d82c2
+    size_bytes: 4503
+  - path: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/frontier97B_first_hit_survival_hazard_proxy_scout_report.md
+    exists: true
+    sha256: 63c3046d2774a5527a8601861def6fc9611c00c4d4ad345994146c8d1d31e0a6
+    size_bytes: 2300
+  - path: docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/work_packet.yaml
+    exists: true
+    sha256: c49404db1c8d903cb4c26112ccac276d5e8f36540e328b5ac62174c47f7c953d
+    size_bytes: 44867
+  - path: docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/skill_receipts.json
+    exists: true
+    sha256: 3eb0019e0fb4d2ac73ae3a12efbbe5b21d06b5a816a901a63b46a7504e7dde02
+    size_bytes: 59013
+  - path: docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/closeout_gate.json
+    exists: true
+    sha256: 5542764a153898a2bbb550acfaa35451244d69faeb4ecccf2000ee5655948ff6
+    size_bytes: 5594
+  - path: docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/final_claim_guard.json
+    exists: true
+    sha256: 4ca626b77a6695254d6cd30135ba11b7000025d4dea1463ac4f745e3dcef725c
+    size_bytes: 1277
+  - path: docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/work_packet_schema_lint.json
+    exists: true
+    sha256: 6d99d12ef2e32554adfab127ba60d16267a87295d25a7394671c5896d8cc2744
+    size_bytes: 359
+  - path: docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/skill_receipt_schema_lint.json
+    exists: true
+    sha256: 6065119f288cff8b18c56d4d4dad49f192f9ddee737fb3d07ac7386010a644db
+    size_bytes: 329
+  - path: docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/state_sync_audit.json
+    exists: true
+    sha256: 4fdd6d27bade8ca7434192a64265331b0ced1119813b1c8cbc8fe964547843b0
+    size_bytes: 2261
+  - path: docs/agent_control/packets/frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1/required_gate_coverage_audit.json
+    exists: true
+    sha256: 162ad725ed633ff6b6a7d864fa17f8a614e751089beb0b71e76f4f69f651d2f2
+    size_bytes: 1571
+  - path: docs/decisions/2026-06-19_frontier97b_first_hit_survival_hazard_proxy_scout.md
+    exists: true
+    sha256: cb29c87d54c6716f4cf8bbb1422d4f98bb5315f8e8f822472612e04a0d776255
+    size_bytes: 1023
+gate_status:
+  work_packet_schema_lint: pass
+  skill_receipt_schema_lint: pass
+  codex_task_force_review_packet: pass
+  frontier_extra_due_check: pass_not_due
+  frontier_five_stage_direction_synthesis: pass
+  frontier_topic_rotation_check: pass
+  scope_completion_gate: pass
+  data_integrity_audit: pass_with_boundary
+  model_validation_audit: pass_with_boundary
+  kpi_contract_audit: pass
+  artifact_lineage_audit: pass
+  result_judgment_audit: negative
+  state_sync_audit: pass
+  required_gate_coverage_audit: pass
+  final_claim_guard: pass
+claim_boundary: f97b_proxy_scout_only_first_hit_survival_hazard_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim

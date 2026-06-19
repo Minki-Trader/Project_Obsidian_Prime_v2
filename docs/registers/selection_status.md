@@ -46,3 +46,17 @@ Effect: this records scout clue/negative memory only; no selected baseline, runt
 - Goal Achieve(목표 달성): not_claimed(주장 없음)
 - effect(효과): F97A records(기록) a design-only first-hit survival/hazard axis(설계 전용 첫 도달 생존/위험 축) and hands off(인계) to F97B proxy scout(프록시 탐색).
 <!-- frontier97a_selection_status:end -->
+
+<!-- frontier97b_selection_status:start -->
+## F97B Proxy Scout(전선97B 프록시 탐색)
+
+- active stage(활성 단계): `stage_frontier_97__first_hit_survival_hazard_event_sparse_axis`
+- current run(현재 실행): `frontier97C_first_hit_survival_hazard_event_sparse_repair_or_rotation_decision_v1`
+- latest completed run(최근 완료 실행): `frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1`
+- candidate gate count(후보 게이트 수): `0`
+- runtime probe status(런타임 탐침 상태): `not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip`
+- selected baseline(선택 기준선): not_claimed(주장 없음)
+- runtime authority(런타임 권위): not_claimed(주장 없음)
+- Goal Achieve(목표 달성): not_claimed(주장 없음)
+- effect(효과): F97B records(기록) negative proxy-scout memory(부정 프록시 탐색 기억) and hands off(인계) to F97C repair/rotation decision(전선97C 수리/회전 결정).
+<!-- frontier97b_selection_status:end -->

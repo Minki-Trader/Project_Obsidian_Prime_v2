@@ -2595,3 +2595,10 @@ Effect(효과): F96(전선96)은 negative memory/reference surface(부정 기억
 - next action(다음 행동): `frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1`
 - boundary(경계): no selected baseline(선택 기준선 없음), no runtime authority(런타임 권위 없음), no Goal Achieve(목표 달성 없음)
 <!-- frontier97_first_hit_survival_hazard:end -->
+
+<!-- frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1 -->
+## F97B first-hit survival/hazard clue record
+
+Hypothesis: A first favorable/adverse bracket-hit survival/hazard target can reveal side-balanced US100 M5 scout clues without inheriting any prior baseline or authority.
+
+Next action: `frontier97C_first_hit_survival_hazard_event_sparse_repair_or_rotation_decision_v1`.
