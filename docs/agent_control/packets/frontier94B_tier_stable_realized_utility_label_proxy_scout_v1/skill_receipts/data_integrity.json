@@ -1,0 +1,115 @@
+{
+  "packet_id": "frontier94B_tier_stable_realized_utility_label_proxy_scout_v1",
+  "status": "executed",
+  "claim_boundary": "f94b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "skill": "obsidian-data-integrity",
+  "data_sources_checked": [
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "exists": true,
+      "sha256": "5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43",
+      "size_bytes": 14278154,
+      "raw_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "hash_note": "sha256 is ledger LF-normalized identity; raw_sha256 is byte identity for binary/data files."
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "exists": true,
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "size_bytes": 1053
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+      "exists": true,
+      "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+      "size_bytes": 2691
+    },
+    {
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+      "exists": true,
+      "sha256": "2ee5e97d06d914b9fdeb826708c4613860a2458138dd51de39f3e60819d2995f",
+      "size_bytes": 38125907,
+      "raw_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+      "hash_note": "sha256 is ledger LF-normalized identity; raw_sha256 is byte identity for binary/data files."
+    },
+    {
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+      "exists": true,
+      "sha256": "107eba70ec1f3d96e2d30cb3f0f39d48c4ef7e46eb089fb14b576934cc0c6e8f",
+      "size_bytes": 1338
+    }
+  ],
+  "time_axis_boundary": "Closed M5 timestamp key aligned to raw bar close timestamp; future path labels are diagnostics/targets only.",
+  "split_boundary": "Train fit and threshold only; validation gate; OOS final-read-only; split-edge future labels censored.",
+  "leakage_checks": {
+    "column_denylist": "pass",
+    "future_path_perturbation_feature_hash_before": "886c675fae077c3589722e806912ab38016edb5fecb4c35bbbc9de5adbf618b1",
+    "future_path_perturbation_feature_hash_after": "886c675fae077c3589722e806912ab38016edb5fecb4c35bbbc9de5adbf618b1",
+    "future_path_perturbation_does_not_change_features": true,
+    "split_edge_censoring": {
+      "tier_a_separate": {
+        "rows": 46650,
+        "path_label_available_rows": 46628,
+        "raw_timestamp_missing_rows": 0,
+        "horizon_out_of_raw_range_rows": 0,
+        "split_edge_censored_rows": 22,
+        "horizon_bars": 12,
+        "rows_after_label_censor": 46628
+      },
+      "tier_b_separate": {
+        "rows": 12398,
+        "path_label_available_rows": 12382,
+        "raw_timestamp_missing_rows": 0,
+        "horizon_out_of_raw_range_rows": 0,
+        "split_edge_censored_rows": 16,
+        "horizon_bars": 12,
+        "rows_after_label_censor": 12382
+      },
+      "tier_ab_combined": {
+        "rows": 59048,
+        "path_label_available_rows": 59012,
+        "raw_timestamp_missing_rows": 0,
+        "horizon_out_of_raw_range_rows": 0,
+        "split_edge_censored_rows": 36,
+        "horizon_bars": 12,
+        "rows_after_label_censor": 59012
+      }
+    },
+    "train_only_fit": "enforced_by_evaluate_variants",
+    "oos_tuning": "forbidden_final_read_only"
+  },
+  "missing_data_boundary": "Tier B or actual routed total cannot be omitted; missing rows must be recorded as blocked or missing_required.",
+  "data_integrity_audit": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/label_integrity_audit.json",
+  "dataset_lock": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/data_feature_split_lock.json",
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "receipt_path": "docs/agent_control/packets/frontier94B_tier_stable_realized_utility_label_proxy_scout_v1/skill_receipts/data_integrity.json"
+}

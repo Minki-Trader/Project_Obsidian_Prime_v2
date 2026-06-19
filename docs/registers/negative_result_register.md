@@ -1601,3 +1601,14 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - do_not_repeat(반복 금지): threshold/side-share/cost-cap/cost-weight/filter/session/routing/parameter-only tweak(임계값/방향 비중/비용 상한/비용 가중치/필터/세션/라우팅/파라미터만 조정), OOS rescue(표본외 구조 구제), proxy PF as runtime PF(프록시 수익 팩터를 런타임 수익 팩터로 주장), Tier B negative/thin fallback candidate claim(티어 B 부정/얇은 대체 후보 주장), compile/proxy-only runtime evidence(컴파일/프록시 단독 런타임 근거).
 - reopen_condition(재개 조건): new source/label/runtime representation/model family/objective/trade shape/risk logic/regime split/negative-control cause(새 원천/라벨/런타임 표현/모델 계열/목적함수/거래 형태/위험 로직/장세 분할/부정 대조 원인)가 있을 때만 재개한다.
 - runtime(런타임): no MT5 Strategy Tester probe(MT5 전략 테스터 탐침 없음). 이유는 no runnable candidate/runtime claim(실행 가능한 후보/런타임 주장 없음)이며, cost/proxy-bad skip(비용 또는 프록시 부진을 이유로 한 생략)이 아니다.
+
+<!-- frontier94B_tier_stable_realized_utility_label_proxy_scout_v1 -->
+## F94B tier-stable realized-utility proxy scout
+
+Status: `f94b_tier_stable_realized_utility_proxy_scout_negative_no_runnable_surface_no_authority`
+
+Judgment: `negative_proxy_scout_tier_utility_gate_failed_no_runtime_trigger`
+
+Runtime: `not_run_no_meaningful_runnable_candidate_no_onnx_ea_set_behavior_no_runtime_materialization_economics_or_handoff_claim_not_cost_or_proxy_bad_skip`
+
+Decision use: proxy scout clue/negative memory only. No selected baseline, operating promotion, runtime authority, live readiness, or Goal Achieve.

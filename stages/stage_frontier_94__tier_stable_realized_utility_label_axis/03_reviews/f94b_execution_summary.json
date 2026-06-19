@@ -1,0 +1,747 @@
+{
+  "run_id": "frontier94B_tier_stable_realized_utility_label_proxy_scout_v1",
+  "stage_id": "stage_frontier_94__tier_stable_realized_utility_label_axis",
+  "parent_run_id": "frontier94A_stage_open_tier_stable_realized_utility_label_axis_v1",
+  "next_run_id": "frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1",
+  "created_at_utc": "2026-06-19T06:46:30Z",
+  "status": "f94b_tier_stable_realized_utility_proxy_scout_negative_no_runnable_surface_no_authority",
+  "judgment": "negative_proxy_scout_tier_utility_gate_failed_no_runtime_trigger",
+  "verification_profile": "proxy_scout",
+  "hypothesis": "Predeclared tier-stable realized-utility labels can turn F93's short-heavy/high-cost failure shape into a runtime-compatible proxy surface without repeating the F93 side/cost budget repair axis.",
+  "candidate_gate_count": 0,
+  "best_diagnostic_variant": "v05_density_preserving_utility",
+  "best_diagnostic_score": -2.49139426,
+  "validation_actual_routed_net": -0.43223042,
+  "validation_actual_routed_pf": 0.827478,
+  "validation_actual_routed_drawdown": 0.51917679,
+  "validation_actual_routed_trade_count": 1316,
+  "validation_actual_routed_trades_per_day": 7.113514,
+  "runtime_probe_status": "not_run_no_meaningful_runnable_candidate_no_onnx_ea_set_behavior_no_runtime_materialization_economics_or_handoff_claim_not_cost_or_proxy_bad_skip",
+  "task_force_actual_subagent_call_count": 6,
+  "claim_boundary": "f94b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "kpi_record": {
+    "packet_id": "frontier94B_tier_stable_realized_utility_label_proxy_scout_v1",
+    "test_period": "train_2022-09-01_to_2024-12-31_validation_2025-01-02_to_2025-09-30_oos_2025-10-01_to_2026-04-13",
+    "hypothesis": "Predeclared tier-stable realized-utility labels can turn F93's short-heavy/high-cost failure shape into a runtime-compatible proxy surface without repeating the F93 side/cost budget repair axis.",
+    "proxy_kpi": {
+      "variant_id": "v05_density_preserving_utility",
+      "objective_id": "density_preserving_utility",
+      "model_family": "ridge_utility",
+      "feature_count": 58,
+      "threshold_source": "train_target_trades_per_day",
+      "strength_quantile": null,
+      "target_trades_per_day": 7.0,
+      "strength_threshold": 0.0783589295,
+      "tier_gap_penalty": 0.5,
+      "mfe_weight": 0.35,
+      "mae_weight": 0.75,
+      "both_touch_weight": 0.25,
+      "density_score_weight": 0.1,
+      "view": "tier_ab_combined",
+      "split": "validation",
+      "selected_strength_mean": 0.09279605,
+      "selected_margin_mean": 0.00171198,
+      "realized_utility_sum": -2.54252427,
+      "realized_utility_mean": -0.00193201,
+      "realized_utility_min": -0.0737547,
+      "rows": 12198,
+      "days": 185,
+      "trade_count": 1316,
+      "trades_per_day": 7.113514,
+      "net_proxy": -0.43223042,
+      "gross_profit": 2.07313105,
+      "gross_loss": 2.50536147,
+      "proxy_pf": 0.827478,
+      "win_rate": 0.43465,
+      "avg_win": 0.00362435,
+      "avg_loss": -0.00336742,
+      "payoff_ratio": 1.0763,
+      "expectancy": -0.00032844,
+      "max_drawdown": 0.51917679,
+      "recovery_factor": -0.83253,
+      "time_under_water_bars": 1306,
+      "max_consecutive_loss": 12,
+      "long_count": 435,
+      "short_count": 881,
+      "side_min_share": 0.330547,
+      "avg_cost_penalty": 0.0003813,
+      "regime_coverage_count": 38,
+      "cost_high_trade_share": 0.705167,
+      "random_net_proxy_mean": -0.5692525,
+      "random_proxy_pf_mean": 0.725932,
+      "random_max_drawdown_mean": 0.59123845
+    },
+    "runtime_kpi": "not_applicable_no_runnable_candidate_no_runtime_claim",
+    "net_profit": -0.43223042,
+    "profit_factor": 0.827478,
+    "drawdown": 0.51917679,
+    "trade_count": 1316,
+    "trades_per_day": 7.113514,
+    "parity": "not_applicable_no_onnx_or_ea",
+    "gap_cause": "proxy/runtime gap not measured because no runtime materialization claim is made",
+    "next_action": "frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1",
+    "candidate_gate": {
+      "candidate_count": 0,
+      "best_gate": {
+        "variant_id": "v05_density_preserving_utility",
+        "status": "not_candidate",
+        "selection_failures": [
+          "tier_a_separate_validation_net_nonpositive",
+          "tier_a_separate_validation_pf_below_min",
+          "tier_a_separate_validation_realized_utility_nonpositive",
+          "tier_a_separate_validation_drawdown_above_predeclared_cap",
+          "tier_b_separate_validation_trades_per_day_outside_tier_b_range",
+          "tier_b_separate_validation_realized_utility_nonpositive",
+          "tier_ab_combined_validation_net_nonpositive",
+          "tier_ab_combined_validation_pf_below_min",
+          "tier_ab_combined_validation_realized_utility_nonpositive",
+          "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+          "tier_ab_combined_validation_recovery_factor_nonpositive",
+          "validation_worst_tier_utility_nonpositive"
+        ],
+        "tier_gap_metrics": {
+          "validation_tier_a_utility_mean": -0.00206501,
+          "validation_tier_b_utility_mean": -0.00064835,
+          "validation_worst_tier_utility_mean": -0.00206501,
+          "validation_tier_gap_ratio": 0.68603058
+        },
+        "oos_final_read_notes": [
+          "tier_b_separate_oos_net_nonpositive_final_read",
+          "tier_b_separate_oos_pf_below_1_final_read",
+          "tier_ab_combined_oos_net_nonpositive_final_read",
+          "tier_ab_combined_oos_pf_below_1_final_read"
+        ],
+        "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+      }
+    },
+    "tier_records_required": [
+      "tier_a_separate",
+      "tier_b_separate",
+      "actual_routed_total"
+    ],
+    "closeout_kpi": {
+      "gross_profit": 2.07313105,
+      "gross_loss": 2.50536147,
+      "win_rate": 0.43465,
+      "avg_win": 0.00362435,
+      "avg_loss": -0.00336742,
+      "payoff_ratio": 1.0763,
+      "expectancy": -0.00032844,
+      "recovery_factor": -0.83253,
+      "time_under_water": 1306,
+      "max_consecutive_loss": 12,
+      "long_short_breakdown": {
+        "long_count": 435,
+        "short_count": 881
+      }
+    },
+    "claim_boundary": "f94b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  },
+  "candidate_gate": {
+    "candidate_count": 0,
+    "gates": [
+      {
+        "variant_id": "v01_worst_tier_path_utility",
+        "status": "not_candidate",
+        "selection_failures": [
+          "tier_a_separate_validation_net_nonpositive",
+          "tier_a_separate_validation_pf_below_min",
+          "tier_a_separate_validation_trades_per_day_outside_range",
+          "tier_a_separate_validation_realized_utility_nonpositive",
+          "tier_a_separate_validation_drawdown_above_predeclared_cap",
+          "tier_b_separate_validation_net_negative",
+          "tier_b_separate_validation_pf_below_tier_b_min",
+          "tier_b_separate_validation_realized_utility_nonpositive",
+          "tier_b_separate_validation_not_above_random_control",
+          "tier_ab_combined_validation_net_nonpositive",
+          "tier_ab_combined_validation_pf_below_min",
+          "tier_ab_combined_validation_trades_per_day_outside_range",
+          "tier_ab_combined_validation_realized_utility_nonpositive",
+          "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+          "tier_ab_combined_validation_recovery_factor_nonpositive",
+          "validation_worst_tier_utility_nonpositive"
+        ],
+        "tier_gap_metrics": {
+          "validation_tier_a_utility_mean": -0.00113146,
+          "validation_tier_b_utility_mean": -0.00114412,
+          "validation_worst_tier_utility_mean": -0.00114412,
+          "validation_tier_gap_ratio": 0.01106527
+        },
+        "oos_final_read_notes": [
+          "tier_a_separate_oos_net_nonpositive_final_read",
+          "tier_a_separate_oos_pf_below_1_final_read",
+          "tier_ab_combined_oos_net_nonpositive_final_read",
+          "tier_ab_combined_oos_pf_below_1_final_read"
+        ],
+        "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+      },
+      {
+        "variant_id": "v02_hard_tier_gap_minimax",
+        "status": "not_candidate",
+        "selection_failures": [
+          "tier_a_separate_validation_net_nonpositive",
+          "tier_a_separate_validation_pf_below_min",
+          "tier_a_separate_validation_realized_utility_nonpositive",
+          "tier_a_separate_validation_drawdown_above_predeclared_cap",
+          "tier_a_separate_validation_not_above_random_control",
+          "tier_b_separate_validation_net_negative",
+          "tier_b_separate_validation_pf_below_tier_b_min",
+          "tier_b_separate_validation_realized_utility_nonpositive",
+          "tier_ab_combined_validation_net_nonpositive",
+          "tier_ab_combined_validation_pf_below_min",
+          "tier_ab_combined_validation_realized_utility_nonpositive",
+          "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+          "tier_ab_combined_validation_not_above_random_control",
+          "tier_ab_combined_validation_recovery_factor_nonpositive",
+          "validation_worst_tier_utility_nonpositive"
+        ],
+        "tier_gap_metrics": {
+          "validation_tier_a_utility_mean": -0.00286995,
+          "validation_tier_b_utility_mean": -0.00104441,
+          "validation_worst_tier_utility_mean": -0.00286995,
+          "validation_tier_gap_ratio": 0.63608774
+        },
+        "oos_final_read_notes": [
+          "tier_a_separate_oos_net_nonpositive_final_read",
+          "tier_a_separate_oos_pf_below_1_final_read",
+          "tier_b_separate_oos_net_nonpositive_final_read",
+          "tier_b_separate_oos_pf_below_1_final_read",
+          "tier_ab_combined_oos_net_nonpositive_final_read",
+          "tier_ab_combined_oos_pf_below_1_final_read"
+        ],
+        "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+      },
+      {
+        "variant_id": "v03_downside_ambiguity_stress",
+        "status": "not_candidate",
+        "selection_failures": [
+          "tier_a_separate_validation_net_nonpositive",
+          "tier_a_separate_validation_pf_below_min",
+          "tier_a_separate_validation_trades_per_day_outside_range",
+          "tier_a_separate_validation_realized_utility_nonpositive",
+          "tier_a_separate_validation_drawdown_above_predeclared_cap",
+          "tier_b_separate_validation_net_negative",
+          "tier_b_separate_validation_pf_below_tier_b_min",
+          "tier_b_separate_validation_realized_utility_nonpositive",
+          "tier_b_separate_validation_not_above_random_control",
+          "tier_ab_combined_validation_net_nonpositive",
+          "tier_ab_combined_validation_pf_below_min",
+          "tier_ab_combined_validation_trades_per_day_outside_range",
+          "tier_ab_combined_validation_realized_utility_nonpositive",
+          "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+          "tier_ab_combined_validation_recovery_factor_nonpositive",
+          "validation_worst_tier_utility_nonpositive"
+        ],
+        "tier_gap_metrics": {
+          "validation_tier_a_utility_mean": -0.00192239,
+          "validation_tier_b_utility_mean": -0.0015623,
+          "validation_worst_tier_utility_mean": -0.00192239,
+          "validation_tier_gap_ratio": 0.18731371
+        },
+        "oos_final_read_notes": [
+          "tier_a_separate_oos_net_nonpositive_final_read",
+          "tier_a_separate_oos_pf_below_1_final_read",
+          "tier_ab_combined_oos_net_nonpositive_final_read",
+          "tier_ab_combined_oos_pf_below_1_final_read"
+        ],
+        "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+      },
+      {
+        "variant_id": "v04_side_regime_utility_readout",
+        "status": "not_candidate",
+        "selection_failures": [
+          "tier_a_separate_validation_net_nonpositive",
+          "tier_a_separate_validation_pf_below_min",
+          "tier_a_separate_validation_realized_utility_nonpositive",
+          "tier_a_separate_validation_drawdown_above_predeclared_cap",
+          "tier_a_separate_validation_side_concentration",
+          "tier_b_separate_validation_net_negative",
+          "tier_b_separate_validation_pf_below_tier_b_min",
+          "tier_b_separate_validation_realized_utility_nonpositive",
+          "tier_ab_combined_validation_net_nonpositive",
+          "tier_ab_combined_validation_pf_below_min",
+          "tier_ab_combined_validation_trades_per_day_outside_range",
+          "tier_ab_combined_validation_realized_utility_nonpositive",
+          "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+          "tier_ab_combined_validation_recovery_factor_nonpositive",
+          "validation_worst_tier_utility_nonpositive"
+        ],
+        "tier_gap_metrics": {
+          "validation_tier_a_utility_mean": -0.00102884,
+          "validation_tier_b_utility_mean": -0.00095156,
+          "validation_worst_tier_utility_mean": -0.00102884,
+          "validation_tier_gap_ratio": 0.07511372
+        },
+        "oos_final_read_notes": [],
+        "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+      },
+      {
+        "variant_id": "v05_density_preserving_utility",
+        "status": "not_candidate",
+        "selection_failures": [
+          "tier_a_separate_validation_net_nonpositive",
+          "tier_a_separate_validation_pf_below_min",
+          "tier_a_separate_validation_realized_utility_nonpositive",
+          "tier_a_separate_validation_drawdown_above_predeclared_cap",
+          "tier_b_separate_validation_trades_per_day_outside_tier_b_range",
+          "tier_b_separate_validation_realized_utility_nonpositive",
+          "tier_ab_combined_validation_net_nonpositive",
+          "tier_ab_combined_validation_pf_below_min",
+          "tier_ab_combined_validation_realized_utility_nonpositive",
+          "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+          "tier_ab_combined_validation_recovery_factor_nonpositive",
+          "validation_worst_tier_utility_nonpositive"
+        ],
+        "tier_gap_metrics": {
+          "validation_tier_a_utility_mean": -0.00206501,
+          "validation_tier_b_utility_mean": -0.00064835,
+          "validation_worst_tier_utility_mean": -0.00206501,
+          "validation_tier_gap_ratio": 0.68603058
+        },
+        "oos_final_read_notes": [
+          "tier_b_separate_oos_net_nonpositive_final_read",
+          "tier_b_separate_oos_pf_below_1_final_read",
+          "tier_ab_combined_oos_net_nonpositive_final_read",
+          "tier_ab_combined_oos_pf_below_1_final_read"
+        ],
+        "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+      }
+    ]
+  },
+  "data_feature_split_lock": {
+    "run_id": "frontier94B_tier_stable_realized_utility_label_proxy_scout_v1",
+    "dataset": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "exists": true,
+      "sha256": "5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43",
+      "size_bytes": 14278154,
+      "raw_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "hash_note": "sha256 is ledger LF-normalized identity; raw_sha256 is byte identity for binary/data files."
+    },
+    "model_input_summary": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+      "exists": true,
+      "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+      "size_bytes": 2691
+    },
+    "feature_order": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "exists": true,
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "size_bytes": 1053
+    },
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_count": 58,
+    "split_policy": "train fit and train threshold only; validation gate; OOS final-read-only",
+    "tier_records": {
+      "tier_a_separate": {
+        "oos": 7575,
+        "train": 29217,
+        "validation": 9836
+      },
+      "tier_b_separate": {
+        "oos": 1058,
+        "train": 8963,
+        "validation": 2361
+      },
+      "tier_ab_combined": {
+        "oos": 8634,
+        "train": 38180,
+        "validation": 12198
+      }
+    },
+    "route_summary_before_label_censor": {
+      "tier_a_rows": 46650,
+      "tier_b_fallback_rows": 12398,
+      "actual_routed_rows": 59048,
+      "by_view_split": {
+        "tier_a_separate": {
+          "oos": 7584,
+          "train": 29222,
+          "validation": 9844
+        },
+        "tier_b_separate": {
+          "oos": 1062,
+          "train": 8970,
+          "validation": 2366
+        },
+        "tier_ab_combined": {
+          "oos": 8646,
+          "train": 38192,
+          "validation": 12210
+        }
+      },
+      "combined_boundary": "actual routed total is Tier A primary plus Tier B fallback rows, not a synthetic KPI sum"
+    },
+    "tier_b_summary": {
+      "policy_id": "tier_b_partial_context_core42_fallback_v1",
+      "dataset_id": "stage10_tier_b_partial_context_core42_v1",
+      "feature_set_id": "feature_set_stage10_tier_b_core42_us100_session_v1",
+      "feature_count": 42,
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_threshold_log_return": 0.001277833051854688,
+      "source_raw_rows": 261344,
+      "source_valid_rows": 56939,
+      "labelable_rows": 60101,
+      "tier_a_primary_rows": 46650,
+      "tier_b_training_rows": 59048,
+      "tier_b_fallback_rows": 12398,
+      "no_tier_labelable_rows": 1053,
+      "by_split": {
+        "train": {
+          "tier_a_primary_rows": 29222,
+          "tier_b_fallback_rows": 8970,
+          "no_tier_labelable_rows": 691,
+          "routed_labelable_rows": 38192
+        },
+        "validation": {
+          "tier_a_primary_rows": 9844,
+          "tier_b_fallback_rows": 2366,
+          "no_tier_labelable_rows": 203,
+          "routed_labelable_rows": 12210
+        },
+        "oos": {
+          "tier_a_primary_rows": 7584,
+          "tier_b_fallback_rows": 1062,
+          "no_tier_labelable_rows": 159,
+          "routed_labelable_rows": 8646
+        }
+      },
+      "tier_b_fallback_by_subtype": {
+        "B_constituent_missing": 1,
+        "B_core_only": 200,
+        "B_full_context_outside_tier_a_scope": 217,
+        "B_macro_missing": 10740,
+        "B_mixed_partial_context": 1240
+      },
+      "tier_b_fallback_by_split_subtype": {
+        "oos": {
+          "B_core_only": 24,
+          "B_full_context_outside_tier_a_scope": 1,
+          "B_macro_missing": 809,
+          "B_mixed_partial_context": 228
+        },
+        "train": {
+          "B_constituent_missing": 1,
+          "B_core_only": 151,
+          "B_full_context_outside_tier_a_scope": 216,
+          "B_macro_missing": 7805,
+          "B_mixed_partial_context": 797
+        },
+        "validation": {
+          "B_core_only": 25,
+          "B_macro_missing": 2126,
+          "B_mixed_partial_context": 215
+        }
+      },
+      "no_tier_by_split": {
+        "oos": 159,
+        "train": 691,
+        "validation": 203
+      },
+      "note": "Tier B fallback is built from partial-context rows outside the strict Tier A clean sample that still have finite US100/session core42 features."
+    },
+    "runtime_trigger_rule": "same-packet MT5 Strategy Tester probe if runnable candidate or runtime/materialization/economics/handoff claim appears",
+    "claim_boundary": "f94b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  },
+  "label_integrity_audit": {
+    "audit_name": "f94b_data_integrity_audit",
+    "status": "pass_with_boundary",
+    "dataset_identity": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "exists": true,
+      "sha256": "5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43",
+      "size_bytes": 14278154,
+      "raw_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+      "hash_note": "sha256 is ledger LF-normalized identity; raw_sha256 is byte identity for binary/data files."
+    },
+    "model_input_summary_identity": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+      "exists": true,
+      "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+      "size_bytes": 2691
+    },
+    "feature_order_identity": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "exists": true,
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "size_bytes": 1053
+    },
+    "current_dataset_hash_note": "Current parquet hash is locked here; earlier F93/F94A lineage references may differ and are treated as prior-record mismatch, not current truth.",
+    "feature_count": 58,
+    "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "feature_denylist_hits": [],
+    "split_policy": "fit train only; validation candidate gate; OOS final-read-only",
+    "split_counts_after_label_censor": {
+      "tier_a_separate": {
+        "oos": 7575,
+        "train": 29217,
+        "validation": 9836
+      },
+      "tier_b_separate": {
+        "oos": 1058,
+        "train": 8963,
+        "validation": 2361
+      },
+      "tier_ab_combined": {
+        "oos": 8634,
+        "train": 38180,
+        "validation": 12198
+      }
+    },
+    "route_summary_before_label_censor": {
+      "tier_a_rows": 46650,
+      "tier_b_fallback_rows": 12398,
+      "actual_routed_rows": 59048,
+      "by_view_split": {
+        "tier_a_separate": {
+          "oos": 7584,
+          "train": 29222,
+          "validation": 9844
+        },
+        "tier_b_separate": {
+          "oos": 1062,
+          "train": 8970,
+          "validation": 2366
+        },
+        "tier_ab_combined": {
+          "oos": 8646,
+          "train": 38192,
+          "validation": 12210
+        }
+      },
+      "combined_boundary": "actual routed total is Tier A primary plus Tier B fallback rows, not a synthetic KPI sum"
+    },
+    "tier_b_summary": {
+      "policy_id": "tier_b_partial_context_core42_fallback_v1",
+      "dataset_id": "stage10_tier_b_partial_context_core42_v1",
+      "feature_set_id": "feature_set_stage10_tier_b_core42_us100_session_v1",
+      "feature_count": 42,
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_threshold_log_return": 0.001277833051854688,
+      "source_raw_rows": 261344,
+      "source_valid_rows": 56939,
+      "labelable_rows": 60101,
+      "tier_a_primary_rows": 46650,
+      "tier_b_training_rows": 59048,
+      "tier_b_fallback_rows": 12398,
+      "no_tier_labelable_rows": 1053,
+      "by_split": {
+        "train": {
+          "tier_a_primary_rows": 29222,
+          "tier_b_fallback_rows": 8970,
+          "no_tier_labelable_rows": 691,
+          "routed_labelable_rows": 38192
+        },
+        "validation": {
+          "tier_a_primary_rows": 9844,
+          "tier_b_fallback_rows": 2366,
+          "no_tier_labelable_rows": 203,
+          "routed_labelable_rows": 12210
+        },
+        "oos": {
+          "tier_a_primary_rows": 7584,
+          "tier_b_fallback_rows": 1062,
+          "no_tier_labelable_rows": 159,
+          "routed_labelable_rows": 8646
+        }
+      },
+      "tier_b_fallback_by_subtype": {
+        "B_constituent_missing": 1,
+        "B_core_only": 200,
+        "B_full_context_outside_tier_a_scope": 217,
+        "B_macro_missing": 10740,
+        "B_mixed_partial_context": 1240
+      },
+      "tier_b_fallback_by_split_subtype": {
+        "oos": {
+          "B_core_only": 24,
+          "B_full_context_outside_tier_a_scope": 1,
+          "B_macro_missing": 809,
+          "B_mixed_partial_context": 228
+        },
+        "train": {
+          "B_constituent_missing": 1,
+          "B_core_only": 151,
+          "B_full_context_outside_tier_a_scope": 216,
+          "B_macro_missing": 7805,
+          "B_mixed_partial_context": 797
+        },
+        "validation": {
+          "B_core_only": 25,
+          "B_macro_missing": 2126,
+          "B_mixed_partial_context": 215
+        }
+      },
+      "no_tier_by_split": {
+        "oos": 159,
+        "train": 691,
+        "validation": 203
+      },
+      "note": "Tier B fallback is built from partial-context rows outside the strict Tier A clean sample that still have finite US100/session core42 features."
+    },
+    "duplicate_timestamp_counts_after_label_censor": {
+      "tier_a_separate": 0,
+      "tier_b_separate": 0,
+      "tier_ab_combined": 0
+    },
+    "path_label_integrity": {
+      "f91_route_integrity": {
+        "tier_a_duplicate_timestamps": 0,
+        "tier_b_duplicate_timestamps": 0,
+        "routed_duplicate_timestamps": 0,
+        "tier_a_sorted": true,
+        "tier_b_sorted": true,
+        "routed_sorted": true,
+        "feature_count": 58,
+        "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+        "dataset_rows": 46650,
+        "top3_weight_status": "mt5_price_proxy_top3_weights_v1",
+        "source_identity_status": "matched_model_input_summary"
+      },
+      "path_label_summary": {
+        "tier_a_separate": {
+          "rows": 46650,
+          "path_label_available_rows": 46628,
+          "raw_timestamp_missing_rows": 0,
+          "horizon_out_of_raw_range_rows": 0,
+          "split_edge_censored_rows": 22,
+          "horizon_bars": 12,
+          "rows_after_label_censor": 46628
+        },
+        "tier_b_separate": {
+          "rows": 12398,
+          "path_label_available_rows": 12382,
+          "raw_timestamp_missing_rows": 0,
+          "horizon_out_of_raw_range_rows": 0,
+          "split_edge_censored_rows": 16,
+          "horizon_bars": 12,
+          "rows_after_label_censor": 12382
+        },
+        "tier_ab_combined": {
+          "rows": 59048,
+          "path_label_available_rows": 59012,
+          "raw_timestamp_missing_rows": 0,
+          "horizon_out_of_raw_range_rows": 0,
+          "split_edge_censored_rows": 36,
+          "horizon_bars": 12,
+          "rows_after_label_censor": 59012
+        }
+      },
+      "raw_bar_identity": {
+        "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+        "exists": true,
+        "sha256": "2ee5e97d06d914b9fdeb826708c4613860a2458138dd51de39f3e60819d2995f",
+        "size_bytes": 38125907,
+        "raw_sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784",
+        "hash_note": "sha256 is ledger LF-normalized identity; raw_sha256 is byte identity for binary/data files."
+      },
+      "raw_manifest_identity": {
+        "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+        "exists": true,
+        "sha256": "107eba70ec1f3d96e2d30cb3f0f39d48c4ef7e46eb089fb14b576934cc0c6e8f",
+        "size_bytes": 1338
+      }
+    },
+    "leakage_tests": {
+      "column_denylist": "pass",
+      "future_path_perturbation_feature_hash_before": "886c675fae077c3589722e806912ab38016edb5fecb4c35bbbc9de5adbf618b1",
+      "future_path_perturbation_feature_hash_after": "886c675fae077c3589722e806912ab38016edb5fecb4c35bbbc9de5adbf618b1",
+      "future_path_perturbation_does_not_change_features": true,
+      "split_edge_censoring": {
+        "tier_a_separate": {
+          "rows": 46650,
+          "path_label_available_rows": 46628,
+          "raw_timestamp_missing_rows": 0,
+          "horizon_out_of_raw_range_rows": 0,
+          "split_edge_censored_rows": 22,
+          "horizon_bars": 12,
+          "rows_after_label_censor": 46628
+        },
+        "tier_b_separate": {
+          "rows": 12398,
+          "path_label_available_rows": 12382,
+          "raw_timestamp_missing_rows": 0,
+          "horizon_out_of_raw_range_rows": 0,
+          "split_edge_censored_rows": 16,
+          "horizon_bars": 12,
+          "rows_after_label_censor": 12382
+        },
+        "tier_ab_combined": {
+          "rows": 59048,
+          "path_label_available_rows": 59012,
+          "raw_timestamp_missing_rows": 0,
+          "horizon_out_of_raw_range_rows": 0,
+          "split_edge_censored_rows": 36,
+          "horizon_bars": 12,
+          "rows_after_label_censor": 59012
+        }
+      },
+      "train_only_fit": "enforced_by_evaluate_variants",
+      "oos_tuning": "forbidden_final_read_only"
+    },
+    "claim_boundary": "f94b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  },
+  "task_force_actual_subagent_calls": [
+    {
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019ede86-1dfa-7f90-972b-e46423070afa",
+      "nickname": "Linnaeus",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "disposition": "accepted",
+      "summary": "Proceed as bounded proxy_scout only; no completion, selected baseline, runtime authority, live readiness, or Goal Achieve claim."
+    },
+    {
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019ede86-33d0-7d30-8881-0b2a5d8ebedd",
+      "nickname": "Hooke",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Record work packet, receipts, Task Force call packet, pre-run locks, proxy outputs, ledgers, state sync, and final claim guard."
+    },
+    {
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019ede86-4c7d-72c2-ae74-a370b099bb4d",
+      "nickname": "Heisenberg",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Lock current dataset hash, explain prior hash mismatch, keep MFE/MAE/utility out of model features, censor split-edge labels, and run leakage checks."
+    },
+    {
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019ede86-671c-7d10-a250-03a70873393b",
+      "nickname": "Socrates",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Use worst-tier path utility, hard tier gap minimax, downside ambiguity stress, side-regime readout, and density-preserving utility variants."
+    },
+    {
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019ede86-7ba1-7d11-9068-b245411f0cc0",
+      "nickname": "Dalton",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Train-only thresholds, validation gate, OOS final-read-only, no PF-only selection, no calibrated probability claim."
+    },
+    {
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019ede86-8fd9-71b3-8454-8705c949ec71",
+      "nickname": "Darwin",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "disposition": "accepted",
+      "summary": "Same-packet MT5 Strategy Tester probe is required only if F94B creates a meaningful runnable candidate, ONNX/EA/set behavior, or runtime/materialization/economics/handoff claim."
+    }
+  ]
+}

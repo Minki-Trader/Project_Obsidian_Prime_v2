@@ -2495,3 +2495,15 @@ Register ideas when they become durable work, not for every passing thought.
 - runtime(런타임): no Strategy Tester evidence(전략 테스터 근거 없음); no runtime authority(런타임 권위 없음).
 - next_action(다음 행동): `frontier94B_tier_stable_realized_utility_label_proxy_scout_v1`.
 - claim_boundary(주장 경계): `f94a_design_only_stage_open_tier_stable_realized_utility_label_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+<!-- frontier94B_tier_stable_realized_utility_label_proxy_scout_v1 -->
+## F94B tier-stable realized-utility proxy scout
+
+- run_id: `frontier94B_tier_stable_realized_utility_label_proxy_scout_v1`
+- hypothesis: Predeclared tier-stable realized-utility labels can turn F93's short-heavy/high-cost failure shape into a runtime-compatible proxy surface without repeating the F93 side/cost budget repair axis.
+- status: `f94b_tier_stable_realized_utility_proxy_scout_negative_no_runnable_surface_no_authority`
+- judgment: `negative_proxy_scout_tier_utility_gate_failed_no_runtime_trigger`
+- task_force_actual_calls: 6 selected agents recorded.
+- runtime: `not_run_no_meaningful_runnable_candidate_no_onnx_ea_set_behavior_no_runtime_materialization_economics_or_handoff_claim_not_cost_or_proxy_bad_skip`
+- next_action: `frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1`
+- claim_boundary: `f94b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`

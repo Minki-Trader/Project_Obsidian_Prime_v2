@@ -1,0 +1,82 @@
+{
+  "packet_id": "frontier94B_tier_stable_realized_utility_label_proxy_scout_v1",
+  "status": "executed",
+  "claim_boundary": "f94b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "skill": "obsidian-experiment-design",
+  "hypothesis": "Predeclared tier-stable realized-utility labels can turn F93's short-heavy/high-cost failure shape into a runtime-compatible proxy surface without repeating the F93 side/cost budget repair axis.",
+  "baseline": {
+    "source_run_id": "frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1",
+    "use": "negative_memory_only_not_inherited_baseline",
+    "reference_artifacts": [
+      "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_execution_summary.json",
+      "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/proxy_scout/candidate_gate.json"
+    ]
+  },
+  "changed_variables": [
+    "label/objective changes to realized path utility",
+    "candidate gate adds worst-tier utility and tier-gap checks",
+    "selection avoids F93 side/cost budget overlays"
+  ],
+  "invalid_conditions": [
+    "MFE/MAE/realized/utility columns entering model features",
+    "validation or OOS threshold tuning",
+    "Tier A-only result presented as whole alpha read",
+    "PF-only selection",
+    "runtime/materialization/economics claim without MT5 Strategy Tester evidence"
+  ],
+  "evidence_plan": {
+    "tier_records": [
+      "Tier A separate",
+      "Tier B separate",
+      "actual routed total"
+    ],
+    "candidate_gate": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json",
+    "split_metrics": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/split_metrics.csv",
+    "runtime_boundary": [
+      {
+        "gate": "runtime_evidence_gate",
+        "reason_code": "no_runnable_candidate_no_runtime_claim",
+        "reason": "F94B produced Python proxy evidence only and no ONNX, EA, set, tester output, materialization, economics, handoff, promotion, or authority claim.",
+        "claim_effect": "No runtime verified, economics pass, materialization ready, handoff complete, promotion, or authority claim is allowed."
+      },
+      {
+        "gate": "wfo_stress_gate",
+        "reason_code": "outside_claim_surface_proxy_scout_no_runnable_surface",
+        "reason": "F94B is a proxy scout. WFO/stress is not claimed unless a runnable surface appears and runtime materialization begins.",
+        "claim_effect": "No WFO pass, stress pass, selected baseline, or runtime authority claim is allowed."
+      }
+    ]
+  },
+  "variant_count": 5,
+  "selection_policy": "train-only labels and thresholds; validation gate; OOS final read only; scores are rank/utility not calibrated probabilities",
+  "receipt_path": "docs/agent_control/packets/frontier94B_tier_stable_realized_utility_label_proxy_scout_v1/skill_receipts/experiment_design.json"
+}

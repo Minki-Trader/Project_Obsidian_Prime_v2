@@ -1,0 +1,51 @@
+{
+  "packet_id": "frontier94B_tier_stable_realized_utility_label_proxy_scout_v1",
+  "audit_name": "final_claim_guard",
+  "status": "pass",
+  "requested_claims": [
+    "f94b_proxy_scout_executed",
+    "f94b_proxy_metrics_recorded",
+    "f94b_task_force_actual_calls_recorded",
+    "f94b_gate_result_recorded_no_runtime_authority",
+    "f94c_repair_or_rotation_planned"
+  ],
+  "allowed_claims": [
+    "f94b_proxy_scout_executed",
+    "f94b_proxy_metrics_recorded",
+    "f94b_task_force_actual_calls_recorded",
+    "f94b_gate_result_recorded_no_runtime_authority",
+    "f94c_repair_or_rotation_planned"
+  ],
+  "forbidden_claims": [],
+  "guard_result": {
+    "audit_name": "final_claim_guard",
+    "status": "pass",
+    "passed": true,
+    "completed_forbidden": false,
+    "findings": [],
+    "counts": {
+      "requested_claims": [
+        "f94b_proxy_scout_executed",
+        "f94b_proxy_metrics_recorded",
+        "f94b_task_force_actual_calls_recorded",
+        "f94b_gate_result_recorded_no_runtime_authority",
+        "f94c_repair_or_rotation_planned"
+      ],
+      "source_audits": [
+        "work_packet_schema_lint",
+        "skill_receipt_schema_lint",
+        "state_sync_audit",
+        "required_gate_coverage_audit"
+      ]
+    },
+    "allowed_claims": [
+      "f94b_proxy_scout_executed",
+      "f94b_proxy_metrics_recorded",
+      "f94b_task_force_actual_calls_recorded",
+      "f94b_gate_result_recorded_no_runtime_authority",
+      "f94c_repair_or_rotation_planned"
+    ],
+    "forbidden_claims": []
+  },
+  "claim_boundary": "f94b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

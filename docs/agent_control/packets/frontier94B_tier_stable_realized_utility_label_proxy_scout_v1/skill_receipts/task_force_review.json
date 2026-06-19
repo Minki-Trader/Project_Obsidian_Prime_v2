@@ -1,0 +1,161 @@
+{
+  "packet_id": "frontier94B_tier_stable_realized_utility_label_proxy_scout_v1",
+  "status": "executed",
+  "claim_boundary": "f94b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "skill": "obsidian-task-force-review",
+  "trigger_reason": "explicit user instruction plus active goal packet requiring relevant Task Force agents when triggered",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "review_requirement": "explicit_user_instruction_required",
+  "codex_task_force_review_packet_required": true,
+  "model_policy": "inherited parent model; no model-strength relaxation of gates",
+  "bounded_evidence": [
+    "docs/agent_control/packets/frontier94B_tier_stable_realized_utility_label_proxy_scout_v1/codex_task_force_review_packet.json",
+    "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/03_reviews/f94b_task_force_review_receipt.json",
+    "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/kpi_record.json",
+    "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json"
+  ],
+  "advice_classification": {
+    "accepted": [
+      "agent_01_system_governor",
+      "agent_08_mt5_onnx_runtime"
+    ],
+    "needs_local_verification": [
+      "agent_04_evidence_control_plane",
+      "agent_05_data_feature_contract",
+      "agent_06_quant_research",
+      "agent_07_model_validation_risk"
+    ],
+    "rejected": []
+  },
+  "local_verification": "dataset/hash, feature denylist, split censoring, train-only threshold, candidate gate, and runtime boundary were checked locally.",
+  "final_codex_direction": "record F94B as proxy scout evidence and route F94C repair-or-rotation; no Task Force reviewed/pass claim",
+  "forbidden_claim_check": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "agents_used": [
+    "agent_01_system_governor",
+    "agent_04_evidence_control_plane",
+    "agent_05_data_feature_contract",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "actual_subagent_calls": [
+    {
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019ede86-1dfa-7f90-972b-e46423070afa",
+      "nickname": "Linnaeus",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "disposition": "accepted",
+      "summary": "Proceed as bounded proxy_scout only; no completion, selected baseline, runtime authority, live readiness, or Goal Achieve claim."
+    },
+    {
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019ede86-33d0-7d30-8881-0b2a5d8ebedd",
+      "nickname": "Hooke",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Record work packet, receipts, Task Force call packet, pre-run locks, proxy outputs, ledgers, state sync, and final claim guard."
+    },
+    {
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019ede86-4c7d-72c2-ae74-a370b099bb4d",
+      "nickname": "Heisenberg",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Lock current dataset hash, explain prior hash mismatch, keep MFE/MAE/utility out of model features, censor split-edge labels, and run leakage checks."
+    },
+    {
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019ede86-671c-7d10-a250-03a70873393b",
+      "nickname": "Socrates",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Use worst-tier path utility, hard tier gap minimax, downside ambiguity stress, side-regime readout, and density-preserving utility variants."
+    },
+    {
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019ede86-7ba1-7d11-9068-b245411f0cc0",
+      "nickname": "Dalton",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Train-only thresholds, validation gate, OOS final-read-only, no PF-only selection, no calibrated probability claim."
+    },
+    {
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019ede86-8fd9-71b3-8454-8705c949ec71",
+      "nickname": "Darwin",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "disposition": "accepted",
+      "summary": "Same-packet MT5 Strategy Tester probe is required only if F94B creates a meaningful runnable candidate, ONNX/EA/set behavior, or runtime/materialization/economics/handoff claim."
+    }
+  ],
+  "receipt_path": "docs/agent_control/packets/frontier94B_tier_stable_realized_utility_label_proxy_scout_v1/skill_receipts/task_force_review.json"
+}

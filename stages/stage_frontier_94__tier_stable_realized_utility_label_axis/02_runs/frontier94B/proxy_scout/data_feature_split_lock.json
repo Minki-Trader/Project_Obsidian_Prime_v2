@@ -1,0 +1,136 @@
+{
+  "run_id": "frontier94B_tier_stable_realized_utility_label_proxy_scout_v1",
+  "dataset": {
+    "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "exists": true,
+    "sha256": "5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43",
+    "size_bytes": 14278154,
+    "raw_sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f",
+    "hash_note": "sha256 is ledger LF-normalized identity; raw_sha256 is byte identity for binary/data files."
+  },
+  "model_input_summary": {
+    "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+    "exists": true,
+    "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+    "size_bytes": 2691
+  },
+  "feature_order": {
+    "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "exists": true,
+    "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+    "size_bytes": 1053
+  },
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "feature_count": 58,
+  "split_policy": "train fit and train threshold only; validation gate; OOS final-read-only",
+  "tier_records": {
+    "tier_a_separate": {
+      "oos": 7575,
+      "train": 29217,
+      "validation": 9836
+    },
+    "tier_b_separate": {
+      "oos": 1058,
+      "train": 8963,
+      "validation": 2361
+    },
+    "tier_ab_combined": {
+      "oos": 8634,
+      "train": 38180,
+      "validation": 12198
+    }
+  },
+  "route_summary_before_label_censor": {
+    "tier_a_rows": 46650,
+    "tier_b_fallback_rows": 12398,
+    "actual_routed_rows": 59048,
+    "by_view_split": {
+      "tier_a_separate": {
+        "oos": 7584,
+        "train": 29222,
+        "validation": 9844
+      },
+      "tier_b_separate": {
+        "oos": 1062,
+        "train": 8970,
+        "validation": 2366
+      },
+      "tier_ab_combined": {
+        "oos": 8646,
+        "train": 38192,
+        "validation": 12210
+      }
+    },
+    "combined_boundary": "actual routed total is Tier A primary plus Tier B fallback rows, not a synthetic KPI sum"
+  },
+  "tier_b_summary": {
+    "policy_id": "tier_b_partial_context_core42_fallback_v1",
+    "dataset_id": "stage10_tier_b_partial_context_core42_v1",
+    "feature_set_id": "feature_set_stage10_tier_b_core42_us100_session_v1",
+    "feature_count": 42,
+    "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+    "label_threshold_log_return": 0.001277833051854688,
+    "source_raw_rows": 261344,
+    "source_valid_rows": 56939,
+    "labelable_rows": 60101,
+    "tier_a_primary_rows": 46650,
+    "tier_b_training_rows": 59048,
+    "tier_b_fallback_rows": 12398,
+    "no_tier_labelable_rows": 1053,
+    "by_split": {
+      "train": {
+        "tier_a_primary_rows": 29222,
+        "tier_b_fallback_rows": 8970,
+        "no_tier_labelable_rows": 691,
+        "routed_labelable_rows": 38192
+      },
+      "validation": {
+        "tier_a_primary_rows": 9844,
+        "tier_b_fallback_rows": 2366,
+        "no_tier_labelable_rows": 203,
+        "routed_labelable_rows": 12210
+      },
+      "oos": {
+        "tier_a_primary_rows": 7584,
+        "tier_b_fallback_rows": 1062,
+        "no_tier_labelable_rows": 159,
+        "routed_labelable_rows": 8646
+      }
+    },
+    "tier_b_fallback_by_subtype": {
+      "B_constituent_missing": 1,
+      "B_core_only": 200,
+      "B_full_context_outside_tier_a_scope": 217,
+      "B_macro_missing": 10740,
+      "B_mixed_partial_context": 1240
+    },
+    "tier_b_fallback_by_split_subtype": {
+      "oos": {
+        "B_core_only": 24,
+        "B_full_context_outside_tier_a_scope": 1,
+        "B_macro_missing": 809,
+        "B_mixed_partial_context": 228
+      },
+      "train": {
+        "B_constituent_missing": 1,
+        "B_core_only": 151,
+        "B_full_context_outside_tier_a_scope": 216,
+        "B_macro_missing": 7805,
+        "B_mixed_partial_context": 797
+      },
+      "validation": {
+        "B_core_only": 25,
+        "B_macro_missing": 2126,
+        "B_mixed_partial_context": 215
+      }
+    },
+    "no_tier_by_split": {
+      "oos": 159,
+      "train": 691,
+      "validation": 203
+    },
+    "note": "Tier B fallback is built from partial-context rows outside the strict Tier A clean sample that still have finite US100/session core42 features."
+  },
+  "runtime_trigger_rule": "same-packet MT5 Strategy Tester probe if runnable candidate or runtime/materialization/economics/handoff claim appears",
+  "claim_boundary": "f94b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

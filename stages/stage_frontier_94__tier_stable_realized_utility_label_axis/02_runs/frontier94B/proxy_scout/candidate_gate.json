@@ -1,0 +1,171 @@
+{
+  "candidate_count": 0,
+  "gates": [
+    {
+      "variant_id": "v01_worst_tier_path_utility",
+      "status": "not_candidate",
+      "selection_failures": [
+        "tier_a_separate_validation_net_nonpositive",
+        "tier_a_separate_validation_pf_below_min",
+        "tier_a_separate_validation_trades_per_day_outside_range",
+        "tier_a_separate_validation_realized_utility_nonpositive",
+        "tier_a_separate_validation_drawdown_above_predeclared_cap",
+        "tier_b_separate_validation_net_negative",
+        "tier_b_separate_validation_pf_below_tier_b_min",
+        "tier_b_separate_validation_realized_utility_nonpositive",
+        "tier_b_separate_validation_not_above_random_control",
+        "tier_ab_combined_validation_net_nonpositive",
+        "tier_ab_combined_validation_pf_below_min",
+        "tier_ab_combined_validation_trades_per_day_outside_range",
+        "tier_ab_combined_validation_realized_utility_nonpositive",
+        "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+        "tier_ab_combined_validation_recovery_factor_nonpositive",
+        "validation_worst_tier_utility_nonpositive"
+      ],
+      "tier_gap_metrics": {
+        "validation_tier_a_utility_mean": -0.00113146,
+        "validation_tier_b_utility_mean": -0.00114412,
+        "validation_worst_tier_utility_mean": -0.00114412,
+        "validation_tier_gap_ratio": 0.01106527
+      },
+      "oos_final_read_notes": [
+        "tier_a_separate_oos_net_nonpositive_final_read",
+        "tier_a_separate_oos_pf_below_1_final_read",
+        "tier_ab_combined_oos_net_nonpositive_final_read",
+        "tier_ab_combined_oos_pf_below_1_final_read"
+      ],
+      "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+    },
+    {
+      "variant_id": "v02_hard_tier_gap_minimax",
+      "status": "not_candidate",
+      "selection_failures": [
+        "tier_a_separate_validation_net_nonpositive",
+        "tier_a_separate_validation_pf_below_min",
+        "tier_a_separate_validation_realized_utility_nonpositive",
+        "tier_a_separate_validation_drawdown_above_predeclared_cap",
+        "tier_a_separate_validation_not_above_random_control",
+        "tier_b_separate_validation_net_negative",
+        "tier_b_separate_validation_pf_below_tier_b_min",
+        "tier_b_separate_validation_realized_utility_nonpositive",
+        "tier_ab_combined_validation_net_nonpositive",
+        "tier_ab_combined_validation_pf_below_min",
+        "tier_ab_combined_validation_realized_utility_nonpositive",
+        "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+        "tier_ab_combined_validation_not_above_random_control",
+        "tier_ab_combined_validation_recovery_factor_nonpositive",
+        "validation_worst_tier_utility_nonpositive"
+      ],
+      "tier_gap_metrics": {
+        "validation_tier_a_utility_mean": -0.00286995,
+        "validation_tier_b_utility_mean": -0.00104441,
+        "validation_worst_tier_utility_mean": -0.00286995,
+        "validation_tier_gap_ratio": 0.63608774
+      },
+      "oos_final_read_notes": [
+        "tier_a_separate_oos_net_nonpositive_final_read",
+        "tier_a_separate_oos_pf_below_1_final_read",
+        "tier_b_separate_oos_net_nonpositive_final_read",
+        "tier_b_separate_oos_pf_below_1_final_read",
+        "tier_ab_combined_oos_net_nonpositive_final_read",
+        "tier_ab_combined_oos_pf_below_1_final_read"
+      ],
+      "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+    },
+    {
+      "variant_id": "v03_downside_ambiguity_stress",
+      "status": "not_candidate",
+      "selection_failures": [
+        "tier_a_separate_validation_net_nonpositive",
+        "tier_a_separate_validation_pf_below_min",
+        "tier_a_separate_validation_trades_per_day_outside_range",
+        "tier_a_separate_validation_realized_utility_nonpositive",
+        "tier_a_separate_validation_drawdown_above_predeclared_cap",
+        "tier_b_separate_validation_net_negative",
+        "tier_b_separate_validation_pf_below_tier_b_min",
+        "tier_b_separate_validation_realized_utility_nonpositive",
+        "tier_b_separate_validation_not_above_random_control",
+        "tier_ab_combined_validation_net_nonpositive",
+        "tier_ab_combined_validation_pf_below_min",
+        "tier_ab_combined_validation_trades_per_day_outside_range",
+        "tier_ab_combined_validation_realized_utility_nonpositive",
+        "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+        "tier_ab_combined_validation_recovery_factor_nonpositive",
+        "validation_worst_tier_utility_nonpositive"
+      ],
+      "tier_gap_metrics": {
+        "validation_tier_a_utility_mean": -0.00192239,
+        "validation_tier_b_utility_mean": -0.0015623,
+        "validation_worst_tier_utility_mean": -0.00192239,
+        "validation_tier_gap_ratio": 0.18731371
+      },
+      "oos_final_read_notes": [
+        "tier_a_separate_oos_net_nonpositive_final_read",
+        "tier_a_separate_oos_pf_below_1_final_read",
+        "tier_ab_combined_oos_net_nonpositive_final_read",
+        "tier_ab_combined_oos_pf_below_1_final_read"
+      ],
+      "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+    },
+    {
+      "variant_id": "v04_side_regime_utility_readout",
+      "status": "not_candidate",
+      "selection_failures": [
+        "tier_a_separate_validation_net_nonpositive",
+        "tier_a_separate_validation_pf_below_min",
+        "tier_a_separate_validation_realized_utility_nonpositive",
+        "tier_a_separate_validation_drawdown_above_predeclared_cap",
+        "tier_a_separate_validation_side_concentration",
+        "tier_b_separate_validation_net_negative",
+        "tier_b_separate_validation_pf_below_tier_b_min",
+        "tier_b_separate_validation_realized_utility_nonpositive",
+        "tier_ab_combined_validation_net_nonpositive",
+        "tier_ab_combined_validation_pf_below_min",
+        "tier_ab_combined_validation_trades_per_day_outside_range",
+        "tier_ab_combined_validation_realized_utility_nonpositive",
+        "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+        "tier_ab_combined_validation_recovery_factor_nonpositive",
+        "validation_worst_tier_utility_nonpositive"
+      ],
+      "tier_gap_metrics": {
+        "validation_tier_a_utility_mean": -0.00102884,
+        "validation_tier_b_utility_mean": -0.00095156,
+        "validation_worst_tier_utility_mean": -0.00102884,
+        "validation_tier_gap_ratio": 0.07511372
+      },
+      "oos_final_read_notes": [],
+      "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+    },
+    {
+      "variant_id": "v05_density_preserving_utility",
+      "status": "not_candidate",
+      "selection_failures": [
+        "tier_a_separate_validation_net_nonpositive",
+        "tier_a_separate_validation_pf_below_min",
+        "tier_a_separate_validation_realized_utility_nonpositive",
+        "tier_a_separate_validation_drawdown_above_predeclared_cap",
+        "tier_b_separate_validation_trades_per_day_outside_tier_b_range",
+        "tier_b_separate_validation_realized_utility_nonpositive",
+        "tier_ab_combined_validation_net_nonpositive",
+        "tier_ab_combined_validation_pf_below_min",
+        "tier_ab_combined_validation_realized_utility_nonpositive",
+        "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+        "tier_ab_combined_validation_recovery_factor_nonpositive",
+        "validation_worst_tier_utility_nonpositive"
+      ],
+      "tier_gap_metrics": {
+        "validation_tier_a_utility_mean": -0.00206501,
+        "validation_tier_b_utility_mean": -0.00064835,
+        "validation_worst_tier_utility_mean": -0.00206501,
+        "validation_tier_gap_ratio": 0.68603058
+      },
+      "oos_final_read_notes": [
+        "tier_b_separate_oos_net_nonpositive_final_read",
+        "tier_b_separate_oos_pf_below_1_final_read",
+        "tier_ab_combined_oos_net_nonpositive_final_read",
+        "tier_ab_combined_oos_pf_below_1_final_read"
+      ],
+      "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+    }
+  ]
+}

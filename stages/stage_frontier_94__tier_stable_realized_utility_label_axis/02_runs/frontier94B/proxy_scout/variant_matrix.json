@@ -1,0 +1,79 @@
+{
+  "variants": [
+    {
+      "variant_id": "v01_worst_tier_path_utility",
+      "objective_id": "worst_tier_path_utility",
+      "family": "ridge_utility",
+      "threshold_mode": "train_quantile",
+      "quantile": 0.85,
+      "mfe_weight": 0.35,
+      "mae_weight": 0.75,
+      "cost_weight": 1.0,
+      "both_touch_weight": 0.25,
+      "tier_gap_penalty": 0.5,
+      "density_score_weight": 0.0,
+      "feature_count": 58,
+      "feature_hash": "931ba7a51feb131ece5e80de5037bf1e281814273051dba3a7fbe56f3ebfc18e"
+    },
+    {
+      "variant_id": "v02_hard_tier_gap_minimax",
+      "objective_id": "hard_tier_gap_minimax",
+      "family": "extra_trees_utility",
+      "threshold_mode": "train_quantile",
+      "quantile": 0.85,
+      "mfe_weight": 0.35,
+      "mae_weight": 0.75,
+      "cost_weight": 1.0,
+      "both_touch_weight": 0.25,
+      "tier_gap_penalty": 1.0,
+      "density_score_weight": 0.0,
+      "feature_count": 58,
+      "feature_hash": "931ba7a51feb131ece5e80de5037bf1e281814273051dba3a7fbe56f3ebfc18e"
+    },
+    {
+      "variant_id": "v03_downside_ambiguity_stress",
+      "objective_id": "downside_ambiguity_stress",
+      "family": "ridge_utility",
+      "threshold_mode": "train_quantile",
+      "quantile": 0.85,
+      "mfe_weight": 0.25,
+      "mae_weight": 1.15,
+      "cost_weight": 1.0,
+      "both_touch_weight": 0.5,
+      "tier_gap_penalty": 0.5,
+      "density_score_weight": 0.0,
+      "feature_count": 58,
+      "feature_hash": "931ba7a51feb131ece5e80de5037bf1e281814273051dba3a7fbe56f3ebfc18e"
+    },
+    {
+      "variant_id": "v04_side_regime_utility_readout",
+      "objective_id": "side_regime_utility_readout",
+      "family": "ridge_utility",
+      "threshold_mode": "train_quantile",
+      "quantile": 0.85,
+      "mfe_weight": 0.35,
+      "mae_weight": 0.85,
+      "cost_weight": 1.0,
+      "both_touch_weight": 0.25,
+      "tier_gap_penalty": 0.5,
+      "density_score_weight": 0.0,
+      "feature_count": 25,
+      "feature_hash": "ea46394c3c88cae189f7990adc71ea5a360670c0bfbeb3a428427f280c0a82e2"
+    },
+    {
+      "variant_id": "v05_density_preserving_utility",
+      "objective_id": "density_preserving_utility",
+      "family": "ridge_utility",
+      "threshold_mode": "train_target_trades_per_day",
+      "target_trades_per_day": 7.0,
+      "mfe_weight": 0.35,
+      "mae_weight": 0.75,
+      "cost_weight": 1.0,
+      "both_touch_weight": 0.25,
+      "tier_gap_penalty": 0.5,
+      "density_score_weight": 0.1,
+      "feature_count": 58,
+      "feature_hash": "931ba7a51feb131ece5e80de5037bf1e281814273051dba3a7fbe56f3ebfc18e"
+    }
+  ]
+}

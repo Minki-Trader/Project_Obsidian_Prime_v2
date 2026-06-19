@@ -1,0 +1,85 @@
+{
+  "packet_id": "frontier94B_tier_stable_realized_utility_label_proxy_scout_v1",
+  "created_at_utc": "2026-06-19T06:46:30Z",
+  "review_requirement": "explicit_user_instruction_required",
+  "trigger_source": "active_goal_packet_and_user_instruction_requiring_relevant_agents_when_triggered",
+  "selected_agent_count": 6,
+  "full_roster_call_reason": null,
+  "actual_subagent_calls": [
+    {
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019ede86-1dfa-7f90-972b-e46423070afa",
+      "nickname": "Linnaeus",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "disposition": "accepted",
+      "summary": "Proceed as bounded proxy_scout only; no completion, selected baseline, runtime authority, live readiness, or Goal Achieve claim."
+    },
+    {
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019ede86-33d0-7d30-8881-0b2a5d8ebedd",
+      "nickname": "Hooke",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Record work packet, receipts, Task Force call packet, pre-run locks, proxy outputs, ledgers, state sync, and final claim guard."
+    },
+    {
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019ede86-4c7d-72c2-ae74-a370b099bb4d",
+      "nickname": "Heisenberg",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Lock current dataset hash, explain prior hash mismatch, keep MFE/MAE/utility out of model features, censor split-edge labels, and run leakage checks."
+    },
+    {
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019ede86-671c-7d10-a250-03a70873393b",
+      "nickname": "Socrates",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Use worst-tier path utility, hard tier gap minimax, downside ambiguity stress, side-regime readout, and density-preserving utility variants."
+    },
+    {
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019ede86-7ba1-7d11-9068-b245411f0cc0",
+      "nickname": "Dalton",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Train-only thresholds, validation gate, OOS final-read-only, no PF-only selection, no calibrated probability claim."
+    },
+    {
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019ede86-8fd9-71b3-8454-8705c949ec71",
+      "nickname": "Darwin",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "disposition": "accepted",
+      "summary": "Same-packet MT5 Strategy Tester probe is required only if F94B creates a meaningful runnable candidate, ONNX/EA/set behavior, or runtime/materialization/economics/handoff claim."
+    }
+  ],
+  "opinion_summary": {
+    "accepted": [
+      "agent_01_system_governor",
+      "agent_08_mt5_onnx_runtime"
+    ],
+    "needs_local_verification": [
+      "agent_04_evidence_control_plane",
+      "agent_05_data_feature_contract",
+      "agent_06_quant_research",
+      "agent_07_model_validation_risk"
+    ],
+    "rejected": []
+  },
+  "codex_local_disposition": "local_verification_executed_no_task_force_reviewed_pass_claim",
+  "claim_effect": "actual calls are recorded; no Task Force reviewed, pass, verified, completion, baseline, authority, or readiness claim is made."
+}
