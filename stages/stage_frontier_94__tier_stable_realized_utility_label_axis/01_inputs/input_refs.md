@@ -1,7 +1,20 @@
-﻿# Input References
+﻿# F94 Input References
 
-- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93C/summary.json` sha256 `a3873e1c3ab4b2ae1f4c1b148012ec39040c07a5965a5a8d50d507693bb09993`
-- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93C/d/decision.json` sha256 `30f20c622a4ee223154a05de1e9e9047de0af27146189a12dade1842c4d20c04`
-- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/proxy_scout/candidate_gate.json` sha256 `fb43e9fc6916154a22fe2c92660c6c0a00cf107e1cb384600230f54b762ef760`
-- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/kpi_record.json` sha256 `edf749e2bb9f357056b34ef9e3473498971ed550e05b4913e89f1dfa03fd0166`
-- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/proxy_scout/tier_route_summary.json` sha256 `66821118adf62886dea388f9146ba62482f2e3109514676b59cfafecac70fb51`
+- `docs/workspace/workspace_state.yaml`
+- `docs/context/current_working_state.md`
+- `stages/stage_frontier_94__tier_stable_realized_utility_label_axis/00_spec/stage_brief.md`
+- `stages/stage_frontier_94__tier_stable_realized_utility_label_axis/01_inputs/input_refs.md`
+- `stages/stage_frontier_94__tier_stable_realized_utility_label_axis/04_selected/selection_status.md`
+- `docs/agent_control/work_family_registry.yaml`
+- `docs/agent_control/codex_task_force_registry.yaml`
+- `docs/registers/frontier_extra_stage_register.yaml`
+- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json`
+- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt`
+- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet`
+- `data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json`
+- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_execution_summary.json`
+- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/proxy_scout/candidate_gate.json`
+- `docs/agent_control/packets/frontier93C_side_balance_cost_exposure_risk_budget_repair_or_rotation_decision_v1/closeout_gate.json`
+- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93C/d/decision.json`
+
+Boundary: F93B/F93C are reference and negative memory only, not inherited authority.

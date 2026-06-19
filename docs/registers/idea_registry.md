@@ -2484,3 +2484,14 @@ Register ideas when they become durable work, not for every passing thought.
 - result: negative_memory, no candidate, no runtime trigger.
 - next_action: `frontier94A_stage_open_tier_stable_realized_utility_label_axis_v1` pending-open scaffold.
 - claim_boundary: `f93c_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+<!-- frontier94A_stage_open_tier_stable_realized_utility_label_axis_v1 -->
+## F94A tier-stable realized-utility label open(F94A 티어 안정 실현 효용 라벨 개방)
+
+- run_id(실행 ID): `frontier94A_stage_open_tier_stable_realized_utility_label_axis_v1`
+- hypothesis(가설): Predeclared tier-stable realized-utility labels(사전 선언 티어 안정 실현 효용 라벨)이 F93 short-heavy/high-cost failure shape(F93 숏 과다/고비용 실패 형태)를 F93 side/cost budget repair axis(F93 방향/비용 예산 수리 축) 반복 없이 runtime-compatible proxy surface(런타임 호환 프록시 표면)로 바꿀 수 있는지 시험한다.
+- decision_use(판정 용도): design-only stage open(설계 전용 단계 개방) and F94B proxy scout plan(F94B 프록시 탐색 계획).
+- task_force_actual_calls(태스크포스 실제 호출): 6 selected agents recorded(선택 요원 6명 기록).
+- runtime(런타임): no Strategy Tester evidence(전략 테스터 근거 없음); no runtime authority(런타임 권위 없음).
+- next_action(다음 행동): `frontier94B_tier_stable_realized_utility_label_proxy_scout_v1`.
+- claim_boundary(주장 경계): `f94a_design_only_stage_open_tier_stable_realized_utility_label_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

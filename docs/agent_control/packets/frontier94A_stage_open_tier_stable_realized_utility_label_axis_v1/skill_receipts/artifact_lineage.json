@@ -1,0 +1,63 @@
+{
+  "packet_id": "frontier94A_stage_open_tier_stable_realized_utility_label_axis_v1",
+  "status": "executed",
+  "receipt_mode": "compact",
+  "source_current_truth_docs": [
+    "docs/workspace/workspace_state.yaml",
+    "docs/context/current_working_state.md",
+    "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/04_selected/selection_status.md"
+  ],
+  "evidence_used": [
+    "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94A/d/experiment_design.json",
+    "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94A/d/runtime_contract.json",
+    "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94A/d/f94b_proxy_scout_brief.json",
+    "docs/agent_control/packets/frontier94A_stage_open_tier_stable_realized_utility_label_axis_v1/codex_task_force_review_packet.json"
+  ],
+  "claim_boundary": "f94a_design_only_stage_open_tier_stable_realized_utility_label_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "gates_not_run_with_reason": [
+    {
+      "gate": "runtime_evidence_gate",
+      "reason_code": "outside_claim_surface_design_only_no_runtime_claim",
+      "reason": "F94A creates design artifacts only and no runnable candidate, ONNX/EA/set behavior, or runtime/materialization/economics claim.",
+      "claim_effect": "No runtime, materialization, handoff, economics, or authority claim is allowed."
+    },
+    {
+      "gate": "wfo_stress_gate",
+      "reason_code": "outside_claim_surface_no_model_candidate",
+      "reason": "F94A does not train/select a model and only prepares F94B proxy scout design.",
+      "claim_effect": "No WFO pass, stress pass, model quality, or candidate claim is allowed."
+    }
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "skill": "obsidian-artifact-lineage",
+  "receipt_path": "docs/agent_control/packets/frontier94A_stage_open_tier_stable_realized_utility_label_axis_v1/skill_receipts/artifact_lineage.json"
+}

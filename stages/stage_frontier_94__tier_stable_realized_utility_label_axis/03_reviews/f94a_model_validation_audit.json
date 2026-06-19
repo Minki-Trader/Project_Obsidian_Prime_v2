@@ -1,0 +1,16 @@
+{
+  "audit_name": "model_validation_audit",
+  "packet_id": "frontier94A_stage_open_tier_stable_realized_utility_label_axis_v1",
+  "status": "pass_with_boundary",
+  "created_at_utc": "2026-06-19T06:10:33Z",
+  "validation_policy": "train-only label fitting; validation candidate gate; OOS final-read-only.",
+  "invalid_conditions": [
+    "post-entry fields in runtime features",
+    "OOS tuning or label relaxation after validation",
+    "Tier A-only result presented as whole alpha read",
+    "PF-only selection",
+    "runtime/materialization/economics claim without same-packet MT5 Strategy Tester probe"
+  ],
+  "selection_boundary": "joint gate across net/PF/density/DD/recovery/side_min_share/high_cost_share/Tier B; PF-only forbidden.",
+  "claim_effect": "F94A sets validation rules only; no model quality or candidate claim."
+}
