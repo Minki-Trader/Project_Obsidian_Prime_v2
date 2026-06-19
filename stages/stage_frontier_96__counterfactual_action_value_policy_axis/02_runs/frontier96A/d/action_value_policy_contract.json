@@ -1,0 +1,40 @@
+{
+  "run_id": "frontier96A_stage_open_counterfactual_action_value_policy_axis_v1",
+  "contract_status": "design_locked_for_f96b_planning_only",
+  "actions": [
+    "long",
+    "short",
+    "abstain"
+  ],
+  "label_surface": {
+    "long_value": "future path utility for entering long after closed bar t, net of cost and adverse-excursion penalty",
+    "short_value": "future path utility for entering short after closed bar t, net of cost and adverse-excursion penalty",
+    "abstain_value": "opportunity-cost-aware no-entry baseline, not merely missing trade",
+    "regret_gap": "best_action_value minus selected_action_value"
+  },
+  "feature_surface": {
+    "allowed": [
+      "row t and prior closed M5 bars",
+      "train-only transforms",
+      "predeclared rolling windows ending at t"
+    ],
+    "forbidden": [
+      "open/current incomplete bar",
+      "future return",
+      "future MFE/MAE as feature",
+      "label-derived post-entry diagnostics as feature"
+    ]
+  },
+  "fit_scope": "train-only for scaler, imputer, encoders, model fit, and any threshold seed; validation chooses; OOS is final read only.",
+  "negative_controls": [
+    "shuffled future path",
+    "cost-blind utility",
+    "no-adverse-penalty utility",
+    "PF-only ranking",
+    "F95 PCA/KMeans replay",
+    "abstain-all",
+    "trade-all"
+  ],
+  "candidate_language_boundary": "F96B can create scout clues only unless a separate runtime packet/probe supports stronger claims.",
+  "claim_boundary": "f96a_design_only_stage_open_counterfactual_action_value_policy_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

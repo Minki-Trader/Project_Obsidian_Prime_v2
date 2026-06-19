@@ -1,5 +1,15 @@
 ﻿# F96 Review Index(검토 색인)
 
-- pending open run(개방 대기 실행): `frontier96A_stage_open_counterfactual_action_value_policy_axis_v1`
-- source closeout(원천 마감): `stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95C/d/decision.json`
-- input refs(입력 참조): `stages/stage_frontier_96__counterfactual_action_value_policy_axis/01_inputs/input_refs.md`
+- f96a_task_force_review_receipt: `stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_task_force_review_receipt.json`
+- f96a_frontier_extra_due_check: `stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_frontier_extra_due_check.json`
+- f96a_frontier_five_stage_direction_synthesis: `stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_frontier_five_stage_direction_synthesis.json`
+- f96a_frontier_topic_rotation_check: `stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_frontier_topic_rotation_check.json`
+- f96a_scope_completion_gate: `stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_scope_completion_gate.json`
+- f96a_data_integrity_audit: `stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_data_integrity_audit.json`
+- f96a_model_validation_audit: `stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_model_validation_audit.json`
+- f96a_artifact_lineage_audit: `stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_artifact_lineage_audit.json`
+- f96a_result_judgment_audit: `stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_result_judgment_audit.json`
+- f96a_state_sync_audit: `stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_state_sync_audit.json`
+- f96a_required_gate_coverage_audit: `stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_required_gate_coverage_audit.json`
+- f96a_final_claim_guard: `stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_final_claim_guard.json`
+- current run(현재 실행): `frontier96B_counterfactual_action_value_policy_proxy_scout_v1`

@@ -2552,3 +2552,12 @@ Effect(효과): this records clue/negative memory(단서/부정 기억) only; no
 - next_action(다음 행동): `frontier96A_stage_open_counterfactual_action_value_policy_axis_v1`
 
 Effect(효과): F95(전선95)는 negative memory/reference surface(부정 기억/참고 표면)로 닫고 F96(전선96)은 pending-open scaffold(개방 대기 골격)만 가진다. No selected baseline(선택 기준선 없음), runtime authority(런타임 권위 없음), live readiness(실거래 준비 없음), or Goal Achieve(목표 달성 없음).
+
+<!-- frontier96_action_value_policy:start -->
+## F96 Counterfactual Action Value Policy(반사실 행동가치 정책)
+
+- source(원천): `frontier95C_closed_bar_state_transition_repair_or_rotation_decision_v1` as negative memory/reference surface(부정 기억/참고 표면)
+- hypothesis(가설): Closed-bar features can learn long/short/abstain counterfactual action value with adverse-excursion and cost penalties, producing a risk-first trade surface that avoids the F95 state-cluster long-only collapse.
+- next action(다음 행동): `frontier96B_counterfactual_action_value_policy_proxy_scout_v1`
+- boundary(경계): no selected baseline(선택 기준선 없음), no runtime authority(런타임 권위 없음), no Goal Achieve(목표 달성 없음)
+<!-- frontier96_action_value_policy:end -->

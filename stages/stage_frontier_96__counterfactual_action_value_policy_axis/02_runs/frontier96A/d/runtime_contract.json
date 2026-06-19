@@ -1,0 +1,44 @@
+{
+  "run_id": "frontier96A_stage_open_counterfactual_action_value_policy_axis_v1",
+  "runtime_probe_status": "not_applicable_design_only_no_runnable_candidate_no_runtime_materialization_economics_handoff_claim_not_cost_or_proxy_bad_skip",
+  "runtime_claim_surface": "none",
+  "meaningful_runnable_candidate_status": "absent",
+  "onnx_bundle_status": "absent",
+  "ea_set_bundle_status": "absent",
+  "strategy_tester_output_status": "absent",
+  "materialization_claim_status": "not_claimed",
+  "economics_claim_status": "not_claimed",
+  "handoff_claim_status": "not_claimed",
+  "runtime_evidence_gate": {
+    "gate": "runtime_evidence_gate",
+    "reason_code": "design_only_no_runtime_claim",
+    "reason": "F96A is formal design/open only; it has no runnable ONNX/EA/set bundle, no Strategy Tester output, and no materialization/economics/handoff claim.",
+    "claim_effect": "No runtime_probe, runtime_verified, materialization_ready, handoff_ready, runtime_authority, live_readiness, selected_baseline, or Goal Achieve claim is allowed."
+  },
+  "later_trigger_conditions": [
+    "runnable candidate selected for actual trading behavior",
+    "ONNX/EA/set bundle or handoff claim",
+    "materialization_ready, handoff_ready, economics pass, runtime parity, or tester-observed behavior claim",
+    ".mq5/.mqh/.set behavior affects result meaning",
+    "any operating/runtime/live/baseline claim stronger than runtime observation"
+  ],
+  "required_runtime_identity_if_triggered": [
+    "dataset_id",
+    "feature_set_id",
+    "label_id",
+    "split_id",
+    "source_identities",
+    "parser_contract_version",
+    "runtime_contract_version",
+    "onnx_hash",
+    "ea_source_hash",
+    "ea_binary_hash",
+    "set_ini_hash",
+    "feature_order_hash",
+    "tester_identity",
+    "report_hash",
+    "trade_list_hash",
+    "telemetry_hash"
+  ],
+  "claim_effect": "F96A cannot support runtime verified, economics pass, materialization ready, handoff complete, promotion, authority, readiness, or Goal Achieve."
+}

@@ -1,0 +1,26 @@
+{
+  "audit_name": "model_validation_audit",
+  "packet_id": "frontier96A_stage_open_counterfactual_action_value_policy_axis_v1",
+  "status": "pass_with_boundary",
+  "created_at_utc": "2026-06-19T08:45:50Z",
+  "validation_policy": "time-ordered train/validation/OOS; validation gates candidate/clue; OOS is final read only",
+  "invalid_conditions": [
+    "future path enters feature columns",
+    "label horizon overlaps feature calculation window",
+    "scaler, threshold, label penalty, density target, or selection rule is fit using validation+OOS together or OOS",
+    "Tier A+B combined remains timestamp_sorted=false but is used as representative performance",
+    "F95 KMeans/PCA replay is treated as F96 novelty",
+    "proxy-only score is described as runtime or economics evidence"
+  ],
+  "selection_boundary": [
+    "net utility",
+    "profit factor as supporting metric only",
+    "drawdown and recovery factor",
+    "trades/day 5-10",
+    "side balance",
+    "adverse excursion",
+    "Tier robustness",
+    "random/no-trade/trade-all/control superiority"
+  ],
+  "claim_effect": "F96A sets validation rules only; no model quality, calibrated probability, or candidate claim."
+}

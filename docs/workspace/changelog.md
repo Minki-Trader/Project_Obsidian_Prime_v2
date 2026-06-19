@@ -7577,3 +7577,11 @@ Effect(효과): this records clue/negative memory(단서/부정 기억) only; no
 - next_action(다음 행동): `frontier96A_stage_open_counterfactual_action_value_policy_axis_v1`
 
 Effect(효과): F95(전선95)는 negative memory/reference surface(부정 기억/참고 표면)로 닫고 F96(전선96)은 pending-open scaffold(개방 대기 골격)만 가진다. No selected baseline(선택 기준선 없음), runtime authority(런타임 권위 없음), live readiness(실거래 준비 없음), or Goal Achieve(목표 달성 없음).
+
+<!-- frontier96a_changelog:start -->
+## 2026-06-19 F96A
+
+Action(행동): recorded(기록) F96A design-only formal open(설계 전용 정식 개방) with six actual Task Force calls(실제 태스크포스 호출 6개).
+
+Effect(효과): current run(현재 실행) is `frontier96B_counterfactual_action_value_policy_proxy_scout_v1`; runtime probe(런타임 탐침)는 no runnable candidate/no runtime claim(실행 후보 없음/런타임 주장 없음) 때문에 not_applicable_with_reason(사유 있는 해당 없음)이다.
+<!-- frontier96a_changelog:end -->

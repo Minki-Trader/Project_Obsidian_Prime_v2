@@ -1,0 +1,171 @@
+{
+  "audit_name": "closeout_gate",
+  "packet_id": "frontier96A_stage_open_counterfactual_action_value_policy_axis_v1",
+  "status": "pass",
+  "audits": [
+    {
+      "audit_name": "work_packet_schema_lint",
+      "path": "docs/agent_control/packets/frontier96A_stage_open_counterfactual_action_value_policy_axis_v1/work_packet_schema_lint.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "path": "docs/agent_control/packets/frontier96A_stage_open_counterfactual_action_value_policy_axis_v1/skill_receipt_schema_lint.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "codex_task_force_review_packet",
+      "path": "docs/agent_control/packets/frontier96A_stage_open_counterfactual_action_value_policy_axis_v1/codex_task_force_review_packet.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "frontier_extra_due_check",
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_frontier_extra_due_check.json",
+      "status": "pass_not_due"
+    },
+    {
+      "audit_name": "frontier_five_stage_direction_synthesis",
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_frontier_five_stage_direction_synthesis.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "frontier_topic_rotation_check",
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_frontier_topic_rotation_check.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "scope_completion_gate",
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_scope_completion_gate.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "data_integrity_audit",
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_data_integrity_audit.json",
+      "status": "pass_with_boundary"
+    },
+    {
+      "audit_name": "model_validation_audit",
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_model_validation_audit.json",
+      "status": "pass_with_boundary"
+    },
+    {
+      "audit_name": "artifact_lineage_audit",
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_artifact_lineage_audit.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "result_judgment_audit",
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96a_result_judgment_audit.json",
+      "status": "pass_with_boundary"
+    },
+    {
+      "audit_name": "state_sync_audit",
+      "path": "docs/agent_control/packets/frontier96A_stage_open_counterfactual_action_value_policy_axis_v1/state_sync_audit.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "path": "docs/agent_control/packets/frontier96A_stage_open_counterfactual_action_value_policy_axis_v1/required_gate_coverage_audit.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "final_claim_guard",
+      "path": "docs/agent_control/packets/frontier96A_stage_open_counterfactual_action_value_policy_axis_v1/final_claim_guard.json",
+      "status": "pass"
+    }
+  ],
+  "allowed_claims": [
+    "f96a_design_open_packet_recorded",
+    "f96_counterfactual_action_value_policy_axis_opened",
+    "f96b_proxy_scout_planned",
+    "task_force_actual_calls_recorded_for_f96a",
+    "f95c_negative_memory_linked",
+    "frontier_extra_due_check_not_due_after_f95",
+    "frontier_five_stage_direction_synthesis_recorded_for_f91_to_f95",
+    "frontier_topic_rotation_check_recorded_for_f96",
+    "runtime_gate_not_applicable_with_reason"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "complete",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "f96_stage_open_completed",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass",
+    "runtime_compatible_proven",
+    "baseline",
+    "promotion"
+  ],
+  "claim_boundary": "f96a_design_only_stage_open_counterfactual_action_value_policy_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "status": "pass",
+    "passed": true,
+    "completed_forbidden": false,
+    "findings": [],
+    "counts": {
+      "requested_claims": [
+        "f96a_design_open_packet_recorded",
+        "f96_counterfactual_action_value_policy_axis_opened",
+        "f96b_proxy_scout_planned",
+        "task_force_actual_calls_recorded_for_f96a",
+        "f95c_negative_memory_linked",
+        "frontier_extra_due_check_not_due_after_f95",
+        "frontier_five_stage_direction_synthesis_recorded_for_f91_to_f95",
+        "frontier_topic_rotation_check_recorded_for_f96",
+        "runtime_gate_not_applicable_with_reason"
+      ],
+      "source_audits": [
+        "codex_task_force_review_packet",
+        "frontier_extra_due_check",
+        "frontier_five_stage_direction_synthesis",
+        "frontier_topic_rotation_check",
+        "scope_completion_gate",
+        "data_integrity_audit",
+        "model_validation_audit",
+        "artifact_lineage_audit",
+        "result_judgment_audit",
+        "work_packet_schema_lint",
+        "skill_receipt_schema_lint",
+        "state_sync_audit",
+        "required_gate_coverage_audit"
+      ]
+    },
+    "allowed_claims": [
+      "f96a_design_open_packet_recorded",
+      "f96_counterfactual_action_value_policy_axis_opened",
+      "f96b_proxy_scout_planned",
+      "task_force_actual_calls_recorded_for_f96a",
+      "f95c_negative_memory_linked",
+      "frontier_extra_due_check_not_due_after_f95",
+      "frontier_five_stage_direction_synthesis_recorded_for_f91_to_f95",
+      "frontier_topic_rotation_check_recorded_for_f96",
+      "runtime_gate_not_applicable_with_reason"
+    ],
+    "forbidden_claims": []
+  }
+}

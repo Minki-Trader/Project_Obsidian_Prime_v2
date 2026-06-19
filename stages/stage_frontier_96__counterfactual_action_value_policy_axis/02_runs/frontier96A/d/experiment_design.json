@@ -1,0 +1,71 @@
+{
+  "run_id": "frontier96A_stage_open_counterfactual_action_value_policy_axis_v1",
+  "stage_id": "stage_frontier_96__counterfactual_action_value_policy_axis",
+  "hypothesis": "Closed-bar features can learn long/short/abstain counterfactual action value with adverse-excursion and cost penalties, producing a risk-first trade surface that avoids the F95 state-cluster long-only collapse.",
+  "proxy": "F96B will build leakage-safe long/short/abstain utility labels and inspect validation-only action-value policy score surfaces before any runtime claim.",
+  "decision_use": "design-only formal stage open and F96B proxy scout handoff",
+  "comparison_baseline": {
+    "source_run": "frontier95C_closed_bar_state_transition_repair_or_rotation_decision_v1",
+    "role": "negative memory/reference surface only",
+    "not_inherited": [
+      "winner",
+      "selected_baseline",
+      "promotion_history",
+      "runtime_authority"
+    ]
+  },
+  "control_variables": [
+    "FPMarkets US100 M5",
+    "closed-bar features only",
+    "Tier A separate, Tier B separate, and Tier A+B actual routed total records",
+    "time-ordered train/validation/OOS split",
+    "validation-only candidate gate and OOS final read only",
+    "cost/slippage/adverse-excursion penalty declared before scoring",
+    "no PCA/KMeans state-cluster input as the main axis"
+  ],
+  "changed_variables": [
+    "label: direction hit -> counterfactual long/short/abstain path utility",
+    "objective: state-first clustering -> action-value/regret-first utility ranking",
+    "trade shape: risk-first action eligibility before direction",
+    "score surface: utility edge, regret gap, DD/recovery, adverse excursion, trades/day, side mix, and Tier robustness before PF-only ranking"
+  ],
+  "sample_scope": {
+    "instrument": "US100",
+    "timeframe": "M5",
+    "period_policy": "F96B must record exact train/validation/OOS dates, row counts, hashes, and Tier A/B/A+B source identities before execution.",
+    "tier_requirement": [
+      "Tier A separate",
+      "Tier B separate",
+      "Tier A+B combined actual routed total"
+    ]
+  },
+  "success_criteria_for_f96b_proxy_scout": [
+    "Tier A, Tier B, and A+B records all exist with the same KPI names.",
+    "Validation trade density is 5-10 trades/day without all-abstain or trade-all collapse.",
+    "Long and short sides each have material minimum share.",
+    "Validation net utility is positive and beats random, no-trade, trade-all, cost-blind, no-adverse-penalty, and F95 replay controls.",
+    "PF is supporting evidence only and never more than a minority selection lane.",
+    "A+B combined is sorted and recorded as actual routed total, not synthetic sum."
+  ],
+  "failure_conditions": [
+    "zero candidate/clue after validation-only scoring",
+    "long-only, short-only, all-abstain, or trade-all collapse",
+    "DD/recovery/adverse-excursion collapse",
+    "random/no-trade controls not beaten",
+    "Tier B or A+B record missing"
+  ],
+  "invalid_conditions": [
+    "future path enters feature columns",
+    "label horizon overlaps feature calculation window",
+    "scaler, threshold, label penalty, density target, or selection rule is fit using validation+OOS together or OOS",
+    "Tier A+B combined remains timestamp_sorted=false but is used as representative performance",
+    "F95 KMeans/PCA replay is treated as F96 novelty",
+    "proxy-only score is described as runtime or economics evidence"
+  ],
+  "stop_conditions": [
+    "Stop if counterfactual label is not leakage-free.",
+    "Stop if abstain is not measured beyond no-trade convenience.",
+    "Stop if F96B degenerates into threshold/filter/session/routing/parameter-only repair.",
+    "If a runnable bundle or runtime claim appears, same-packet MT5 Strategy Tester probe is required or the runtime claim is lowered."
+  ]
+}
