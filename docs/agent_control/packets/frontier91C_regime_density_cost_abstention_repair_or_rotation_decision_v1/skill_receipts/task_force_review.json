@@ -1,0 +1,90 @@
+{
+  "actual_subagent_calls": [
+    {
+      "bounded_evidence": "F91B no-candidate closeout can rotate if no runtime claim is made.",
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019eddd1-8655-7611-b70b-15d5182ec182",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "bounded_evidence": "F91C needs fresh packet, receipts, gate coverage, and final claim guard.",
+      "opinion_classification": "needs_local_verification",
+      "result_status": "completed",
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019eddd1-9a66-7ef1-a274-9a47abeb0e16",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "bounded_evidence": "Tier A, Tier B fallback, and routed total records reconcile and remain negative memory only.",
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019eddd1-b395-76b0-a283-8b4cb400dd3d",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "bounded_evidence": "Rotate to path-conditioned trade-shape labeling instead of tightening F91 filters.",
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019eddd1-cd90-7630-967a-301d4d0ccf8d",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "bounded_evidence": "Scores are rank/utility only; OOS final read cannot rescue selection.",
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019eddd1-e1df-7660-bb5d-b724451cca85",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "bounded_evidence": "MT5 probe is not required without candidate, ONNX/EA/set behavior, or runtime claim.",
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019eddd1-f645-70f3-b569-016a8689ef33",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    }
+  ],
+  "advice_classification": {
+    "agent_01_system_governor": "accepted",
+    "agent_04_evidence_control_plane": "needs_local_verification",
+    "agent_05_data_feature_contract": "accepted",
+    "agent_06_quant_research": "accepted",
+    "agent_07_model_validation_risk": "accepted",
+    "agent_08_mt5_onnx_runtime": "accepted"
+  },
+  "agents_used": [
+    "agent_01_system_governor",
+    "agent_04_evidence_control_plane",
+    "agent_05_data_feature_contract",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "bounded_evidence": [
+    "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91B/proxy_scout/candidate_gate.json",
+    "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91B/kpi_record.json",
+    "docs/agent_control/packets/frontier91B_regime_density_cost_abstention_proxy_scout_v1/work_packet.yaml"
+  ],
+  "claim_boundary": "f91c_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "decision": "negative_memory_with_next_frontier_proposal",
+  "final_codex_direction": "Close F91 as negative/no-authority and rotate to F92 pending-open scaffold.",
+  "forbidden_claim_check": "No candidate, selected baseline, operating promotion, runtime authority, live readiness, Goal Achieve, runtime verified, or materialization-ready claim.",
+  "local_verification": [
+    "F91B candidate_count=0 and runtime_probe_triggered=false were verified from the candidate gate.",
+    "F91B validation joint gate failed; OOS positive final read is clue only.",
+    "F91C records fresh Task Force calls and does not reuse F91B calls.",
+    "No runtime/materialization/economics claim is made in F91C."
+  ],
+  "model_policy": "inherited_parent_model_highest_available_xhigh_when_available",
+  "packet_id": "frontier91C_regime_density_cost_abstention_repair_or_rotation_decision_v1",
+  "review_requirement": "codex_task_force_review_packet",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "skill": "obsidian-task-force-review",
+  "status": "executed",
+  "trigger_reason": "stage_closeout_rotation_required_and_explicit_user_instruction_required"
+}

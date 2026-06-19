@@ -2438,3 +2438,10 @@ Register ideas when they become durable work, not for every passing thought.
 - tier_scope(티어 범위): Tier A separate/Tier B separate/Tier A+B combined required in F91B.
 - evidence_boundary(근거 경계): design_only stage open(설계 전용 단계 개방), no candidate/runtime authority(후보/런타임 권위 없음).
 - next_action(다음 행동): `frontier91B_regime_density_cost_abstention_proxy_scout_v1`.
+## F91C regime-density-cost abstention closeout
+
+- run_id: `frontier91C_regime_density_cost_abstention_repair_or_rotation_decision_v1`
+- hypothesis: F91 entry abstention should rotate unless a non-threshold structural repair exists.
+- result: negative_memory, no candidate, no runtime trigger.
+- next_action: `frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1` pending-open scaffold.
+- claim_boundary: `f91c_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

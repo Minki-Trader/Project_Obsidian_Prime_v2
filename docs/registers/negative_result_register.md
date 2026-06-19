@@ -1561,3 +1561,10 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - salvage_value: route and negative-control metrics remain useful for F91C repair-or-rotation.
 - do_not_repeat: threshold-only repair without new label utility, regime partition, cost representation, or negative-control cause.
 - runtime: no MT5 probe because no runnable candidate/runtime claim exists; this is not a cost/proxy-bad skip.
+## F91C entry abstention negative closeout
+
+- run_id: `frontier91C_regime_density_cost_abstention_repair_or_rotation_decision_v1`
+- failed_boundary: F91B validation net/PF/trades-per-day/high-cost share failed the joint candidate gate.
+- salvage_value: routed Tier B fallback method, high-cost concentration diagnostic, and OOS positive final read as clue only.
+- do_not_repeat: threshold/filter/session/routing/parameter-only tweak, OOS rescue, score probability claim, Tier A-only overclaim, compile/proxy-only runtime evidence.
+- reopen_condition: new label utility, cost representation, runtime representation, or negative-control cause.
