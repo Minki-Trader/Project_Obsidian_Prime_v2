@@ -1,0 +1,130 @@
+{
+  "actual_subagent_calls": [
+    {
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019edd42-84cb-76b3-bf70-2bcf93dba8fb",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019edd42-98df-76c2-b95b-f7018c8f81e7",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "opinion_classification": "needs_local_verification",
+      "result_status": "completed",
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019edd42-b73f-7ca0-a421-06eaccf6285d",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019edd42-cba2-7cb2-8e7c-b5387acd620a",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019edd42-dfc0-7412-839c-43479f7c5bcd",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019edd42-f472-7c62-aaf3-da6e0517fa1a",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    }
+  ],
+  "advice_classification": {
+    "agent_01_system_governor": "accepted",
+    "agent_04_evidence_control_plane": "accepted",
+    "agent_05_data_feature_contract": "needs_local_verification",
+    "agent_06_quant_research": "accepted",
+    "agent_07_model_validation_risk": "accepted",
+    "agent_08_mt5_onnx_runtime": "accepted"
+  },
+  "agents_used": [
+    "agent_01_system_governor",
+    "agent_04_evidence_control_plane",
+    "agent_05_data_feature_contract",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "audit_name": "codex_task_force_review_packet",
+  "bounded_evidence": [
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/summary.json",
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/kpi_record.json",
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/proxy_scout/proxy_metrics.json",
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89_task_force_correction_review_receipt.json",
+    "docs/workspace/workspace_state.yaml"
+  ],
+  "claim_boundary": "f89c_stage_closeout_rotation_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "created_at_utc": "2026-06-19T00:37:44Z",
+  "final_codex_direction": [
+    "Close F89 as negative_for_materialization_candidate and inconclusive_for_teacher_axis.",
+    "Do not run MT5 in F89C because no meaningful materialization candidate or runtime claim exists; this is not cost/expense or proxy-bad deferral.",
+    "Rotate to F90 pending-open scaffold on time-to-barrier competing-risk label axis; formal F90A open still needs its own packet and gates."
+  ],
+  "forbidden_claim_check": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents",
+    "f90_stage_open_completed"
+  ],
+  "local_verification": {
+    "actual_call_count": 6,
+    "agent_05_runtime_probe_wording": "lowered_to_f88c_runtime_output_reference_not_f89b_runtime_probe",
+    "f89c_closeout_direction": "accepted_with_boundary_close_rotate_no_authority",
+    "feature_time_uniqueness": {
+      "duplicate_time_count": 0,
+      "feature_rows": 316,
+      "locally_checked": true,
+      "time_key": "bar_time_server",
+      "unique_time_count": 316
+    },
+    "long_windows_path": "io_path and extended path reading confirmed F89B artifacts",
+    "not_all_roster_agents": true,
+    "selected_agent_count": 6,
+    "task_force_review_claim": "actual_calls_recorded_only_no_reviewed_verified_pass_claim"
+  },
+  "model_policy": {
+    "non_authority_rule": "Model strength(모델 강도)는 evidence(근거)가 아니며 gate(게이트)나 claim boundary(주장 경계)를 완화하지 않는다.",
+    "registry_floor": "gpt-5.5 xhigh",
+    "session_execution": "inherited parent model through multi_agent_v1.spawn_agent"
+  },
+  "packet_id": "frontier89C_deal_path_teacher_repair_or_rotation_decision_v1",
+  "passed": true,
+  "receipt_path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89c_task_force_review_receipt.json",
+  "review_requirement": "closeout_required",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "skill": "obsidian-task-force-review",
+  "status": "executed",
+  "trigger_reason": [
+    "closeout_required: F89C makes a stage closeout and rotation claim",
+    "explicit_user_instruction_required: user required real Task Force calls when triggered",
+    "prior_correction_required: F89A/F89B missing calls were corrected append-only"
+  ]
+}

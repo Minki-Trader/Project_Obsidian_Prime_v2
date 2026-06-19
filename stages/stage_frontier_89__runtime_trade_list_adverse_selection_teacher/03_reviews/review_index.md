@@ -1,21 +1,5 @@
 ﻿# F89 Review Index(F89 검토 색인)
 
-Updated(갱신): 2026-06-18T23:41:47Z
-
-- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_execution_summary.json`
-- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_data_integrity_audit.json`
-- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_model_validation_audit.json`
-- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_kpi_contract_audit.json`
-- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_artifact_lineage_audit.json`
-- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_result_judgment_audit.json`
-- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_task_force_trigger_check.json`
-- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_final_claim_guard.json`
-- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_state_sync_audit.json`
-- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_required_gate_coverage_audit.json`
-
-## Task Force Correction(태스크포스 정정) - 2026-06-19T00:13:15Z
-
-- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89_task_force_correction_review_receipt.json`
-- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89_task_force_correction_summary.md`
-- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89_task_force_correction_gate.json`
-- `docs/agent_control/packets/frontier89_task_force_correction_review_v1/work_packet.yaml`
+- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/stage_closeout_report.md`
+- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89c_task_force_review_receipt.json`
+- `stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89c_final_claim_guard.json`

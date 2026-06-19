@@ -1,0 +1,32 @@
+{
+  "data_sources_checked": [
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/episodes/deal_episodes.csv",
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/proxy_scout/deal_path_teacher_surface.csv",
+    "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/feature_matrices/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_validation_is_features.csv"
+  ],
+  "leakage_checks": {
+    "claim_effect": "Supports entry feature join record only; does not prove runtime authority.",
+    "episode_rows": 23,
+    "feature_rows": 316,
+    "feature_time_uniqueness": {
+      "duplicate_time_count": 0,
+      "feature_rows": 316,
+      "locally_checked": true,
+      "time_key": "bar_time_server",
+      "unique_time_count": 316
+    },
+    "future_leakage_boundary": "entry rows join only to same closed bar feature record already used by F88C runtime probe",
+    "join_key": "entry_time_server_to_bar_time_server_exact",
+    "joined_rows": 23,
+    "unmatched_episode_ids": [
+      "none_detected"
+    ]
+  },
+  "missing_data_boundary": "Tier B fallback deal surface is missing_required.",
+  "packet_id": "frontier89C_deal_path_teacher_repair_or_rotation_decision_v1",
+  "receipt_path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89c_data_integrity_receipt.json",
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "F89B inner_train/readout split is exploratory only and not selection authority.",
+  "status": "executed",
+  "time_axis_boundary": "F89B entry_time_server joined to bar_time_server; local feature time uniqueness recorded."
+}

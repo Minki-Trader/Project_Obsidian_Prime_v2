@@ -1,0 +1,42 @@
+{
+  "allowed_claims": [
+    "f89_closed_inconclusive_negative_memory_recorded",
+    "f89_preserved_clue_recorded",
+    "f89_same_axis_repair_capped_by_evidence",
+    "f90_pending_open_scaffold_recorded",
+    "task_force_actual_calls_recorded",
+    "frontier_extra_due_check_not_due_after_f89",
+    "frontier_topic_rotation_check_recorded"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents",
+    "f90_stage_open_completed"
+  ],
+  "model_or_threshold_surface": "F89B logistic adverse-selection teacher proxy",
+  "overfit_checks": [
+    "inner_train_perfect_metrics_on_14_rows",
+    "total_episodes_below_50"
+  ],
+  "packet_id": "frontier89C_deal_path_teacher_repair_or_rotation_decision_v1",
+  "receipt_path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89c_model_validation_receipt.json",
+  "selection_metric_boundary": "AUC/AP/Brier are observations only; no model validated or candidate selected.",
+  "skill": "obsidian-model-validation",
+  "status": "executed",
+  "validation_split": "14 inner-train rows and 9 locked-forward readout rows; exploratory only."
+}

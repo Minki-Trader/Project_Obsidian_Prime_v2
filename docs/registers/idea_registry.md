@@ -2409,3 +2409,8 @@ Register ideas when they become durable work, not for every passing thought.
 - negative_memory(부정 기억): F88C runtime economics(런타임 경제성) net -36.2, PF 0.67, DD 17.16%, trades 23; no authority(권위 없음).
 - next_action(다음 행동): `frontier89B_deal_path_adverse_selection_proxy_scout_v1`.
 - claim_boundary(주장 경계): `stage_open_design_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+## F90 pending idea(F90 개방 대기 아이디어): time-to-barrier competing-risk label axis(장벽 도달 시간 경쟁위험 라벨 축)
+
+- source(원천): `frontier89C_deal_path_teacher_repair_or_rotation_decision_v1`
+- idea_boundary(아이디어 경계): pending-open scaffold only(개방 대기 골격 전용)
+- effect(효과): binary adverse-selection label(이진 역선택 라벨)을 MFE/MAE barrier arrival ordering(MFE/MAE 장벽 도달 순서)으로 바꿔 실험한다.
