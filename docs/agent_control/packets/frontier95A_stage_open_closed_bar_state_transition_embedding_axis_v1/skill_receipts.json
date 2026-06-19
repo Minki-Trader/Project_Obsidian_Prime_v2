@@ -1,0 +1,863 @@
+{
+  "packet_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+  "primary_skill": "obsidian-experiment-design",
+  "receipts": [
+    {
+      "packet_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+      "skill": "obsidian-experiment-design",
+      "status": "executed",
+      "hypothesis": "US100 M5 closed-bar sequences contain state-transition structure that can separate continuation, reversal-trap, and chop-cost-drag states before long/short/abstain mapping.",
+      "baseline": {
+        "source_run": "frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1",
+        "use": "negative memory/reference surface only",
+        "no_inheritance": [
+          "winner",
+          "selected_baseline",
+          "promotion_history",
+          "runtime_authority"
+        ]
+      },
+      "changed_variables": [
+        "data_representation: recent closed-bar sequence and transition vector",
+        "objective: continuation/reversal-trap/chop-cost-drag state before direction mapping",
+        "trade_shape: long/short/abstain mapped after state class",
+        "validation_philosophy: state stability, density, DD resilience, and cost-drag separation before PF"
+      ],
+      "invalid_conditions": [
+        "open/current bar or future path enters feature surface",
+        "embedding scaler/codebook/model is fit on validation or OOS",
+        "F94 utility labels are reused as hidden target",
+        "OOS results are used to choose feature window, cluster count, threshold, or abstain rule",
+        "Tier B thin positive is used as rescue evidence",
+        "proxy-only score is described as runtime evidence"
+      ],
+      "evidence_plan": [
+        "state classes do not collapse to one dominant class",
+        "chop-cost-drag abstention does not kill all density",
+        "validation mapping improves cost-adjusted expectancy without PF-only selection",
+        "Tier A, Tier B, and A+B combined are separately readable"
+      ],
+      "receipt_path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts/experiment_design.json"
+    },
+    {
+      "packet_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+      "skill": "obsidian-data-integrity",
+      "status": "executed",
+      "data_sources_checked": [
+        {
+          "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+          "exists": true,
+          "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+          "size_bytes": 2691
+        },
+        {
+          "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+          "exists": true,
+          "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "size_bytes": 1053
+        },
+        {
+          "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+          "exists": true,
+          "sha256": "107eba70ec1f3d96e2d30cb3f0f39d48c4ef7e46eb089fb14b576934cc0c6e8f",
+          "size_bytes": 1338
+        }
+      ],
+      "time_axis_boundary": "F95B must record whether M5 timestamp is bar open or bar close, broker timezone, session timezone, and DST policy.",
+      "split_boundary": "Lookback window and label horizon may not cross train/validation/OOS split boundaries.",
+      "leakage_checks": [
+        "Features end at closed sequence time t; labels/evaluation start at t+1 and later.",
+        "future path perturbation required in F95B"
+      ],
+      "missing_data_boundary": "F95B must check M5 gaps, duplicate bars, holiday/session breaks, and fake transition risk.",
+      "receipt_path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts/data_integrity.json"
+    },
+    {
+      "packet_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+      "skill": "obsidian-model-validation",
+      "status": "executed",
+      "model_or_threshold_surface": "closed-bar state-transition embedding proxy scout, no trained candidate yet",
+      "validation_split": "time-ordered train/validation/OOS; OOS locked read only",
+      "overfit_checks": [
+        "train-only scaler/embedding fit",
+        "no OOS feature-window or cluster-count selection",
+        "no calibration probability claim before validation bin stability"
+      ],
+      "selection_metric_boundary": [
+        "state stability",
+        "trade density",
+        "DD resilience",
+        "cost-drag separation",
+        "expectancy",
+        "PF only as one supporting metric, never alone"
+      ],
+      "allowed_claims": [
+        "f95a_stage_open_design_prepared",
+        "f95_closed_bar_state_transition_embedding_axis_opened",
+        "f95b_proxy_scout_planned",
+        "task_force_actual_calls_recorded_for_f95a",
+        "frontier_extra_due_check_not_due_after_f94",
+        "frontier_five_stage_direction_synthesis_recorded_for_f90_to_f94",
+        "frontier_topic_rotation_check_recorded_for_f95"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "completed",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "candidate",
+        "promotion_candidate",
+        "runtime_probe",
+        "runtime_verified",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "f95_stage_open_completed",
+        "task_force_reviewed",
+        "task_force_reviewed_pass",
+        "internally_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "model_quality",
+        "model_readiness",
+        "calibrated_probability",
+        "data_contract_pass",
+        "runtime_compatible_proven"
+      ],
+      "receipt_path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts/model_validation.json"
+    },
+    {
+      "packet_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+      "skill": "obsidian-artifact-lineage",
+      "status": "executed",
+      "source_inputs": [
+        {
+          "path": "docs/workspace/workspace_state.yaml",
+          "exists": true,
+          "sha256": "547b1b5931c5602ca5a4fab3c9c7ddef3a43e539c149ccdfd0b8fec04de5922e",
+          "size_bytes": 1833
+        },
+        {
+          "path": "docs/context/current_working_state.md",
+          "exists": true,
+          "sha256": "ee5cfa989a5b9bc8afa90269901964e85f3e490e3e66e0ea4298186251e58a33",
+          "size_bytes": 1669
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/00_spec/stage_brief.md",
+          "exists": true,
+          "sha256": "879410545e9689da8c3b59cd8532b3beeeff9f045a0f795afee0e00126e97f92",
+          "size_bytes": 1686
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/01_inputs/input_refs.md",
+          "exists": true,
+          "sha256": "2e44c1a3e132984e33c3d95207f9697b97969ec44a1c8e5d8d7e56ab9b8fd7c5",
+          "size_bytes": 1681
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/04_selected/selection_status.md",
+          "exists": true,
+          "sha256": "ea871cc9a96485f12c189cc2e83ad8d12991947eccfe420e04a5a8256836099f",
+          "size_bytes": 1329
+        },
+        {
+          "path": "docs/agent_control/work_family_registry.yaml",
+          "exists": true,
+          "sha256": "bcabf5f0f06fee21d7242dbda4f48bc0d9c3956fdbf64d52cabcbddfb574d7e3",
+          "size_bytes": 36064
+        },
+        {
+          "path": "docs/agent_control/codex_task_force_registry.yaml",
+          "exists": true,
+          "sha256": "baccbfdde9b2c4f4e65556fea8a1356ab83aa7b3de1d63a65275f30be4c139a6",
+          "size_bytes": 4783
+        },
+        {
+          "path": "docs/registers/frontier_extra_stage_register.yaml",
+          "exists": true,
+          "sha256": "cdc4deea661015e46c52c02d2fd1476c8e2b527b118635cdfb52f1900b644c6c",
+          "size_bytes": 2237
+        },
+        {
+          "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+          "exists": true,
+          "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+          "size_bytes": 2691
+        },
+        {
+          "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+          "exists": true,
+          "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "size_bytes": 1053
+        },
+        {
+          "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+          "exists": true,
+          "sha256": "107eba70ec1f3d96e2d30cb3f0f39d48c4ef7e46eb089fb14b576934cc0c6e8f",
+          "size_bytes": 1338
+        },
+        {
+          "path": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/kpi_record.json",
+          "exists": true,
+          "sha256": "6a4635161f4a1c3629e5c19495a83b348f5df18f99d84a611e7ccff64370ae8f",
+          "size_bytes": 4778
+        },
+        {
+          "path": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json",
+          "exists": true,
+          "sha256": "23e19184b6989e520b39b21bd27185c650ec4c599f35259c22f56657a62d6c13",
+          "size_bytes": 8330
+        },
+        {
+          "path": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/03_reviews/f94c_stage_closeout_summary.json",
+          "exists": true,
+          "sha256": "3b90027ba77d1762b4183cbbc9130020bee24b35b94ba4d06187628d75604fbe",
+          "size_bytes": 13863
+        },
+        {
+          "path": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94C/d/decision.json",
+          "exists": true,
+          "sha256": "8844f72678f2aeca2f7cef7d94ddcd1b05cd6c385632272f08dbd60338205427",
+          "size_bytes": 11895
+        },
+        {
+          "path": "docs/agent_control/packets/frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1/work_packet.yaml",
+          "exists": true,
+          "sha256": "3eff0393f313240d94d6e89a1d577b51df900cd52a06d1d7f0aaf6f7db316043",
+          "size_bytes": 17563
+        },
+        {
+          "path": "docs/agent_control/packets/frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1/closeout_gate.json",
+          "exists": true,
+          "sha256": "c510f14657562644ada3fc35930b1794db3026260fb10165ba844fe445392b78",
+          "size_bytes": 5353
+        }
+      ],
+      "produced_artifacts": [
+        "stage_pipelines/stage_frontier_95/frontier95a_stage_open_closed_bar_state_transition_embedding.py",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/run_manifest.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/summary.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/kpi_record.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/experiment_design.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/runtime_contract.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/f95b_proxy_scout_brief.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/data_integrity_plan.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/model_validation_plan.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/state_transition_embedding_contract.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/r/summary.md",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_stage_open_summary.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_task_force_review_receipt.json",
+        "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/codex_task_force_review_packet.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_frontier_extra_due_check.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_frontier_five_stage_direction_synthesis.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_frontier_topic_rotation_check.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_scope_completion_gate.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_data_integrity_audit.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_model_validation_audit.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_artifact_lineage_audit.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_result_judgment_audit.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_final_claim_guard.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_state_sync_audit.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_required_gate_coverage_audit.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/frontier95A_stage_open_closed_bar_state_transition_embedding_report.md",
+        "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/work_packet.yaml",
+        "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts.json",
+        "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/closeout_gate.json",
+        "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/final_claim_guard.json",
+        "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/state_sync_audit.json",
+        "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/required_gate_coverage_audit.json",
+        "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/work_packet_schema_lint.json",
+        "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipt_schema_lint.json"
+      ],
+      "raw_evidence": [
+        "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/kpi_record.json",
+        "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json",
+        "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/03_reviews/f94c_stage_closeout_summary.json"
+      ],
+      "machine_readable": [
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/run_manifest.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/summary.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/kpi_record.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/experiment_design.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/runtime_contract.json",
+        "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts.json"
+      ],
+      "human_readable": [
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/r/summary.md",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/frontier95A_stage_open_closed_bar_state_transition_embedding_report.md",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/04_selected/selection_status.md",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/context_anchor.md"
+      ],
+      "hashes_or_missing_reasons": [
+        {
+          "path": "stage_pipelines/stage_frontier_95/frontier95a_stage_open_closed_bar_state_transition_embedding.py",
+          "exists": true,
+          "sha256": "ed29b4e35b27b43a51f3a360d27aa9e356ba4734f2f0d907a6e2e18343d01384",
+          "size_bytes": 78447
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/run_manifest.json",
+          "exists": true,
+          "sha256": "fd95c7051cf7e6023c62dfcef6e6500f7e1349bd5d871900574d3b4252379803",
+          "size_bytes": 7074
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/summary.json",
+          "exists": true,
+          "sha256": "ed3cedaaa9ddc246a889d869362e7a4b1431ecd878fefb6e2a5cd784246073ca",
+          "size_bytes": 2628
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/kpi_record.json",
+          "exists": true,
+          "sha256": "68ef5bcf3fa355859abdc6bec537e4e94a063d5d76a67e849fd7594facd71895",
+          "size_bytes": 1092
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/experiment_design.json",
+          "exists": true,
+          "sha256": "fade957b9ee6e64b3fefc127ac71a0520c6f39428a46d79121675e51d03ab4b7",
+          "size_bytes": 2505
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/runtime_contract.json",
+          "exists": true,
+          "sha256": "4e81b88c577c811ae58f052cd0d1fe8cad053ed6f0e4a35d4fbd72c8262682f7",
+          "size_bytes": 1480
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/f95b_proxy_scout_brief.json",
+          "exists": true,
+          "sha256": "ec41e1f4dfb7f762a99649d8162fd36d619f2856865d0b6b88a73c74caa91a91",
+          "size_bytes": 920
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/data_integrity_plan.json",
+          "exists": true,
+          "sha256": "7ba92e2c4419d02d99b07f9b0ddca51c967bc7ffba5e4eacd74c5f37cf146520",
+          "size_bytes": 1802
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/model_validation_plan.json",
+          "exists": true,
+          "sha256": "8b4896cae3db0ff3228c14aa63b762ca6f7bbe76121782eeb43d5f5bd25a2dc1",
+          "size_bytes": 2157
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/state_transition_embedding_contract.json",
+          "exists": true,
+          "sha256": "c0cc890751f1b641c1993b406ab95c80ed38b65d0988f764b7f0e94b021f4cab",
+          "size_bytes": 1229
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/r/summary.md",
+          "exists": true,
+          "sha256": "954c00163bb0334ecdf0312a1f50127b2f9e46b7a7d5e673d6c380492a19826c",
+          "size_bytes": 1568
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_stage_open_summary.json",
+          "exists": true,
+          "sha256": "ed3cedaaa9ddc246a889d869362e7a4b1431ecd878fefb6e2a5cd784246073ca",
+          "size_bytes": 2628
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_task_force_review_receipt.json",
+          "exists": true,
+          "sha256": "09dd1ad78163989792b57a2c12da846bb0d535910483ba227b36fde44cc0b772",
+          "size_bytes": 10015
+        },
+        {
+          "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/codex_task_force_review_packet.json",
+          "exists": true,
+          "sha256": "09dd1ad78163989792b57a2c12da846bb0d535910483ba227b36fde44cc0b772",
+          "size_bytes": 10015
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_frontier_extra_due_check.json",
+          "exists": true,
+          "sha256": "06d38b04af253cad5880c3739ea556891b61a6787d075a09f034508e3e8503dc",
+          "size_bytes": 482
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_frontier_five_stage_direction_synthesis.json",
+          "exists": true,
+          "sha256": "e00c50da2b9bb375f3a36015743e933b8c44b2a7c25a122cfae55aec7f4a5da9",
+          "size_bytes": 1112
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_frontier_topic_rotation_check.json",
+          "exists": true,
+          "sha256": "85877529d2e046a9eff27a1f71632bc29541b52ab010c0ccb49a4e2d96d045d1",
+          "size_bytes": 979
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_scope_completion_gate.json",
+          "exists": true,
+          "sha256": "2918097c0f3cb250d3e9064c7f853a85564182cfd01f9378a652bc49518e3b53",
+          "size_bytes": 1004
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_data_integrity_audit.json",
+          "exists": true,
+          "sha256": "3d02a04f8669caf07b5a3f55bda48d76f847a0271fbb685e554841fdbe49f45b",
+          "size_bytes": 1628
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_model_validation_audit.json",
+          "exists": true,
+          "sha256": "00429ff449e0a577f0acaa4c2d46e6641730d9c4b250ef82e5b31304b0a402b8",
+          "size_bytes": 1047
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_artifact_lineage_audit.json",
+          "exists": true,
+          "sha256": "67a4ffded899e313fb35e0b8226ffc64b26b847c138c3919491a5dee5a6cda6b",
+          "size_bytes": 14467
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_result_judgment_audit.json",
+          "exists": true,
+          "sha256": "929d8fd7850a40e3718094f3e67415e7950d7a4cff6003d3c1adde96bd0e58ba",
+          "size_bytes": 2011
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_final_claim_guard.json",
+          "exists": true,
+          "sha256": "8854f50df283deb61e979e196e0eb3e3c4f2f7b3b09b887c9334314e94c91119",
+          "size_bytes": 1707
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_state_sync_audit.json",
+          "exists": true,
+          "sha256": "c51e6a1d39af0ca9c0dd49fab1b8b0a0b4f0a0b5d1a005407ea41b87b3f580ab",
+          "size_bytes": 2206
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_required_gate_coverage_audit.json",
+          "exists": true,
+          "sha256": "0d71bc262ac8d7398569bba5b977837761692cee703822c3f5af5d40d6fbcb45",
+          "size_bytes": 1658
+        },
+        {
+          "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/frontier95A_stage_open_closed_bar_state_transition_embedding_report.md",
+          "exists": true,
+          "sha256": "954c00163bb0334ecdf0312a1f50127b2f9e46b7a7d5e673d6c380492a19826c",
+          "size_bytes": 1568
+        },
+        {
+          "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/work_packet.yaml",
+          "exists": true,
+          "sha256": "a9ca8ec3da14a8ebcf785ad25acb2ce6941070b87c3e68539d8dde86a1cfdc29",
+          "size_bytes": 20270
+        },
+        {
+          "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts.json",
+          "exists": true,
+          "sha256": "6ea35c08087a335343da580392b7b692d4939f0a7a003c58ca35c168571fc12a",
+          "size_bytes": 45851
+        },
+        {
+          "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/closeout_gate.json",
+          "exists": true,
+          "sha256": "e60b3bc2183c25c5fb7b86d6421dc4fac177c134d712496fca5182f2f0aabf68",
+          "size_bytes": 5062
+        },
+        {
+          "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/final_claim_guard.json",
+          "exists": true,
+          "sha256": "8854f50df283deb61e979e196e0eb3e3c4f2f7b3b09b887c9334314e94c91119",
+          "size_bytes": 1707
+        },
+        {
+          "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/state_sync_audit.json",
+          "exists": true,
+          "sha256": "c51e6a1d39af0ca9c0dd49fab1b8b0a0b4f0a0b5d1a005407ea41b87b3f580ab",
+          "size_bytes": 2206
+        },
+        {
+          "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/required_gate_coverage_audit.json",
+          "exists": true,
+          "sha256": "0d71bc262ac8d7398569bba5b977837761692cee703822c3f5af5d40d6fbcb45",
+          "size_bytes": 1658
+        },
+        {
+          "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/work_packet_schema_lint.json",
+          "exists": true,
+          "sha256": "6d99d12ef2e32554adfab127ba60d16267a87295d25a7394671c5896d8cc2744",
+          "size_bytes": 359
+        },
+        {
+          "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipt_schema_lint.json",
+          "exists": true,
+          "sha256": "a68c0136127cec458cb7ff46b16e2f797b03e6408092dc1c297b1d93d00a0b99",
+          "size_bytes": 329
+        }
+      ],
+      "lineage_boundary": "F94C negative memory/reference surface only; F95A design-open only; no runtime authority.",
+      "receipt_path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts/artifact_lineage.json"
+    },
+    {
+      "packet_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+      "skill": "obsidian-result-judgment",
+      "status": "executed",
+      "judgment_boundary": "design_only_stage_open_closed_bar_state_transition_embedding_axis",
+      "allowed_claims": [
+        "f95a_stage_open_design_prepared",
+        "f95_closed_bar_state_transition_embedding_axis_opened",
+        "f95b_proxy_scout_planned",
+        "task_force_actual_calls_recorded_for_f95a",
+        "frontier_extra_due_check_not_due_after_f94",
+        "frontier_five_stage_direction_synthesis_recorded_for_f90_to_f94",
+        "frontier_topic_rotation_check_recorded_for_f95"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "completed",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "candidate",
+        "promotion_candidate",
+        "runtime_probe",
+        "runtime_verified",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "f95_stage_open_completed",
+        "task_force_reviewed",
+        "task_force_reviewed_pass",
+        "internally_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "model_quality",
+        "model_readiness",
+        "calibrated_probability",
+        "data_contract_pass",
+        "runtime_compatible_proven"
+      ],
+      "evidence_used": [
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/experiment_design.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/runtime_contract.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/f95b_proxy_scout_brief.json",
+        "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/codex_task_force_review_packet.json"
+      ],
+      "receipt_path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts/result_judgment.json"
+    },
+    {
+      "packet_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+      "skill": "obsidian-task-force-review",
+      "status": "executed",
+      "created_at_utc": "2026-06-19T07:27:28Z",
+      "trigger_reason": "F95A formal stage-open packet, active goal frontier continuation, and explicit user correction requiring real relevant Task Force agent calls.",
+      "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+      "agents_used": [
+        "agent_01_system_governor",
+        "agent_04_evidence_control_plane",
+        "agent_05_data_feature_contract",
+        "agent_06_quant_research",
+        "agent_07_model_validation_risk",
+        "agent_08_mt5_onnx_runtime"
+      ],
+      "actual_subagent_calls": [
+        {
+          "roster_agent_id": "agent_01_system_governor",
+          "spawned_agent_id": "019edeb9-add3-78b1-9610-4a8d49ff3a45",
+          "nickname": "Singer",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted",
+          "bounded_evidence": [
+            "docs/workspace/workspace_state.yaml",
+            "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/00_spec/stage_brief.md",
+            "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/04_selected/selection_status.md"
+          ],
+          "local_verification": "F95A is design-only stage open. Minimum allowed claims exclude KPI, candidate, ONNX/EA, MT5 runtime, economics, promotion, authority, readiness, and Goal Achieve.",
+          "accepted_summary": "Proceed only as F95A design-open and keep F94C as negative memory/reference surface."
+        },
+        {
+          "roster_agent_id": "agent_04_evidence_control_plane",
+          "spawned_agent_id": "019edeb9-db4d-7bf2-acec-b86073933881",
+          "nickname": "Erdos",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification",
+          "bounded_evidence": [
+            "docs/workspace/workspace_state.yaml",
+            "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/00_spec/stage_brief.md",
+            "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/work_packet.yaml"
+          ],
+          "local_verification": "This script materializes the missing F95A work_packet, skill receipts, gate audits, final_claim_guard, state sync, and actual_subagent_calls.",
+          "accepted_summary": "F95A scaffold alone was blocked; local packet/gate/receipt evidence is required before low-boundary stage-open claims."
+        },
+        {
+          "roster_agent_id": "agent_05_data_feature_contract",
+          "spawned_agent_id": "019edeba-1a54-7200-9307-fcd1649b57ba",
+          "nickname": "Feynman",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification",
+          "bounded_evidence": [
+            "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+            "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+            "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json"
+          ],
+          "local_verification": "F95B must prove closed-bar-only features, time-axis meaning, split-window isolation, missing/duplicate checks, Tier A/B paired records, and future-path perturbation.",
+          "accepted_summary": "Closed M5 bar sequence/state-transition embedding is a new data representation, but data_contract_pass is not claimed."
+        },
+        {
+          "roster_agent_id": "agent_06_quant_research",
+          "spawned_agent_id": "019edeba-42bf-79d1-9909-1a1d3b204eda",
+          "nickname": "Leibniz",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification",
+          "bounded_evidence": [
+            "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/kpi_record.json",
+            "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json",
+            "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/03_reviews/f94c_stage_closeout_summary.json"
+          ],
+          "local_verification": "F95B must compare raw OHLC-derived features and F94 utility-label reference without reusing F94 labels as hidden target or threshold repair.",
+          "accepted_summary": "The hypothesis is valid only if it learns continuation, reversal-trap, and chop-cost-drag states before long/short/abstain mapping."
+        },
+        {
+          "roster_agent_id": "agent_07_model_validation_risk",
+          "spawned_agent_id": "019edeba-728f-7543-986a-1642a16a7130",
+          "nickname": "Carver",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification",
+          "bounded_evidence": [
+            "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/kpi_record.json",
+            "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json",
+            "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json"
+          ],
+          "local_verification": "F95B must lock time-ordered split, train-only scaler/embedding fit scope, validation selection, OOS locked-read protocol, and non-PF-only metric boundary.",
+          "accepted_summary": "Design direction is accepted; OOS selection, calibration laundering, threshold-only repair, and Tier B rescue are rejected."
+        },
+        {
+          "roster_agent_id": "agent_08_mt5_onnx_runtime",
+          "spawned_agent_id": "019edeba-9d15-7223-baec-5c6501963b7b",
+          "nickname": "Sagan",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted",
+          "bounded_evidence": [
+            "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/00_spec/stage_brief.md",
+            "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/runtime_contract.json",
+            "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/04_selected/selection_status.md"
+          ],
+          "local_verification": "Runtime gate is N/A only because F95A has no runnable candidate and no runtime/materialization/economics/handoff claim. Cost/proxy-bad skip is not used.",
+          "accepted_summary": "Any future ONNX/EA/set behavior, runtime economics, materialization, or handoff claim triggers same-packet MT5 Strategy Tester probe."
+        }
+      ],
+      "review_requirement": "codex_task_force_review_packet",
+      "model_policy": {
+        "model": "inherited_current_codex_model",
+        "reasoning_effort": "inherited",
+        "service_tier": "inherited"
+      },
+      "bounded_evidence": [
+        "docs/workspace/workspace_state.yaml",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/04_selected/selection_status.md",
+        "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/03_reviews/f94c_stage_closeout_summary.json",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json"
+      ],
+      "advice_classification": {
+        "accepted": [
+          "agent_01_system_governor",
+          "agent_08_mt5_onnx_runtime"
+        ],
+        "needs_local_verification": [
+          "agent_04_evidence_control_plane",
+          "agent_05_data_feature_contract",
+          "agent_06_quant_research",
+          "agent_07_model_validation_risk"
+        ],
+        "rejected": []
+      },
+      "local_verification": [
+        "F95A packet, receipts, audits, and state sync are generated locally.",
+        "Runtime evidence gate is outside claim surface only because no runnable candidate or runtime claim exists.",
+        "F95B must verify F94 novelty delta, time-axis contract, Tier A/B paired records, train-only embedding fit, and non-PF-only selection."
+      ],
+      "claim_boundary": "f95a_design_only_stage_open_closed_bar_state_transition_embedding_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+      "final_codex_direction": "Proceed with F95A design-only stage open and plan F95B closed-bar state-transition embedding proxy scout.",
+      "forbidden_claim_check": {
+        "completion": "not_claimed",
+        "completed": "not_claimed",
+        "selected_baseline": "not_claimed",
+        "operating_promotion": "not_claimed",
+        "runtime_authority": "not_claimed",
+        "live_readiness": "not_claimed",
+        "goal_achieve": "not_claimed",
+        "candidate": "not_claimed",
+        "promotion_candidate": "not_claimed",
+        "runtime_probe": "not_claimed",
+        "runtime_verified": "not_claimed",
+        "strategy_tester_runtime_economics": "not_claimed",
+        "runtime_economics": "not_claimed",
+        "runtime_economics_pass": "not_claimed",
+        "materialization_ready": "not_claimed",
+        "mt5_handoff_ready": "not_claimed",
+        "onnx_handoff_ready": "not_claimed",
+        "ea_handoff_ready": "not_claimed",
+        "f95_stage_open_completed": "not_claimed",
+        "task_force_reviewed": "not_claimed",
+        "task_force_reviewed_pass": "not_claimed",
+        "internally_reviewed": "not_claimed",
+        "reviewed": "not_claimed",
+        "verified": "not_claimed",
+        "pass": "not_claimed",
+        "model_quality": "not_claimed",
+        "model_readiness": "not_claimed",
+        "calibrated_probability": "not_claimed",
+        "data_contract_pass": "not_claimed",
+        "runtime_compatible_proven": "not_claimed"
+      },
+      "receipt_path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts/task_force_review.json"
+    },
+    {
+      "packet_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+      "skill": "obsidian-stage-transition",
+      "status": "executed",
+      "source_current_truth_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/04_selected/selection_status.md"
+      ],
+      "changed_or_checked_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/04_selected/selection_status.md",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/context_anchor.md"
+      ],
+      "detected_conflicts": [
+        "none_detected"
+      ],
+      "canonical_state_after": {
+        "active_stage": "stage_frontier_95__closed_bar_state_transition_embedding_axis",
+        "current_run_id": "frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1",
+        "latest_completed_run_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1"
+      },
+      "allowed_claims": [
+        "f95a_stage_open_design_prepared",
+        "f95_closed_bar_state_transition_embedding_axis_opened",
+        "f95b_proxy_scout_planned",
+        "task_force_actual_calls_recorded_for_f95a",
+        "frontier_extra_due_check_not_due_after_f94",
+        "frontier_five_stage_direction_synthesis_recorded_for_f90_to_f94",
+        "frontier_topic_rotation_check_recorded_for_f95"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "completed",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "candidate",
+        "promotion_candidate",
+        "runtime_probe",
+        "runtime_verified",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "f95_stage_open_completed",
+        "task_force_reviewed",
+        "task_force_reviewed_pass",
+        "internally_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "model_quality",
+        "model_readiness",
+        "calibrated_probability",
+        "data_contract_pass",
+        "runtime_compatible_proven"
+      ],
+      "receipt_path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts/stage_transition.json"
+    },
+    {
+      "packet_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+      "skill": "obsidian-claim-discipline",
+      "status": "executed",
+      "requested_claims": [
+        "f95a_stage_open_design_prepared",
+        "f95_closed_bar_state_transition_embedding_axis_opened",
+        "f95b_proxy_scout_planned",
+        "task_force_actual_calls_recorded_for_f95a",
+        "frontier_extra_due_check_not_due_after_f94",
+        "frontier_five_stage_direction_synthesis_recorded_for_f90_to_f94",
+        "frontier_topic_rotation_check_recorded_for_f95"
+      ],
+      "allowed_claims": [
+        "f95a_stage_open_design_prepared",
+        "f95_closed_bar_state_transition_embedding_axis_opened",
+        "f95b_proxy_scout_planned",
+        "task_force_actual_calls_recorded_for_f95a",
+        "frontier_extra_due_check_not_due_after_f94",
+        "frontier_five_stage_direction_synthesis_recorded_for_f90_to_f94",
+        "frontier_topic_rotation_check_recorded_for_f95"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "completed",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "candidate",
+        "promotion_candidate",
+        "runtime_probe",
+        "runtime_verified",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "f95_stage_open_completed",
+        "task_force_reviewed",
+        "task_force_reviewed_pass",
+        "internally_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "model_quality",
+        "model_readiness",
+        "calibrated_probability",
+        "data_contract_pass",
+        "runtime_compatible_proven"
+      ],
+      "final_status": "f95a_stage_open_design_prepared_no_candidate_no_authority",
+      "receipt_path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts/claim_discipline.json"
+    }
+  ]
+}

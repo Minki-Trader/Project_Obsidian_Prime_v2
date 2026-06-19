@@ -1,0 +1,44 @@
+{
+  "run_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+  "stage_id": "stage_frontier_95__closed_bar_state_transition_embedding_axis",
+  "hypothesis": "US100 M5 closed-bar sequences contain state-transition structure that can separate continuation, reversal-trap, and chop-cost-drag states before long/short/abstain mapping.",
+  "proxy": "F95B will build closed-bar sequence/state-transition features and inspect class distribution, stability, and cost-drag separation before any runtime claim.",
+  "decision_use": "design-only stage open and F95B proxy scout handoff",
+  "comparison_baseline": [
+    "raw OHLC-derived feature reference",
+    "F94 utility-label negative/reference surface, not inherited baseline"
+  ],
+  "changed_variables": [
+    "data_representation: recent closed-bar sequence and transition vector",
+    "objective: continuation/reversal-trap/chop-cost-drag state before direction mapping",
+    "trade_shape: long/short/abstain mapped after state class",
+    "validation_philosophy: state stability, density, DD resilience, and cost-drag separation before PF"
+  ],
+  "controlled_variables": [
+    "US100 symbol",
+    "M5 timeframe",
+    "closed bars only",
+    "time-ordered train/validation/OOS protocol",
+    "cost/spread assumptions must be carried from local contract before proxy economics",
+    "Tier A separate, Tier B separate, and Tier A+B combined records"
+  ],
+  "success_criteria_for_f95b_proxy_scout": [
+    "state classes do not collapse to one dominant class",
+    "chop-cost-drag abstention does not kill all density",
+    "validation mapping improves cost-adjusted expectancy without PF-only selection",
+    "Tier A, Tier B, and A+B combined are separately readable"
+  ],
+  "invalid_conditions": [
+    "open/current bar or future path enters feature surface",
+    "embedding scaler/codebook/model is fit on validation or OOS",
+    "F94 utility labels are reused as hidden target",
+    "OOS results are used to choose feature window, cluster count, threshold, or abstain rule",
+    "Tier B thin positive is used as rescue evidence",
+    "proxy-only score is described as runtime evidence"
+  ],
+  "stop_conditions": [
+    "Stop if F95 novelty delta versus F94 utility-label repair is not locally supported.",
+    "Stop if feature-label boundary or split-window isolation fails.",
+    "Stop if first proxy scout collapses into always-abstain, always-one-direction, or one-class dominance."
+  ]
+}

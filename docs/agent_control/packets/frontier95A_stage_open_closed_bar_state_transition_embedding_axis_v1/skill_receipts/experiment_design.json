@@ -1,0 +1,37 @@
+{
+  "packet_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+  "skill": "obsidian-experiment-design",
+  "status": "executed",
+  "hypothesis": "US100 M5 closed-bar sequences contain state-transition structure that can separate continuation, reversal-trap, and chop-cost-drag states before long/short/abstain mapping.",
+  "baseline": {
+    "source_run": "frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1",
+    "use": "negative memory/reference surface only",
+    "no_inheritance": [
+      "winner",
+      "selected_baseline",
+      "promotion_history",
+      "runtime_authority"
+    ]
+  },
+  "changed_variables": [
+    "data_representation: recent closed-bar sequence and transition vector",
+    "objective: continuation/reversal-trap/chop-cost-drag state before direction mapping",
+    "trade_shape: long/short/abstain mapped after state class",
+    "validation_philosophy: state stability, density, DD resilience, and cost-drag separation before PF"
+  ],
+  "invalid_conditions": [
+    "open/current bar or future path enters feature surface",
+    "embedding scaler/codebook/model is fit on validation or OOS",
+    "F94 utility labels are reused as hidden target",
+    "OOS results are used to choose feature window, cluster count, threshold, or abstain rule",
+    "Tier B thin positive is used as rescue evidence",
+    "proxy-only score is described as runtime evidence"
+  ],
+  "evidence_plan": [
+    "state classes do not collapse to one dominant class",
+    "chop-cost-drag abstention does not kill all density",
+    "validation mapping improves cost-adjusted expectancy without PF-only selection",
+    "Tier A, Tier B, and A+B combined are separately readable"
+  ],
+  "receipt_path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts/experiment_design.json"
+}

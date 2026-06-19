@@ -1,0 +1,373 @@
+{
+  "packet_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+  "skill": "obsidian-artifact-lineage",
+  "status": "executed",
+  "source_inputs": [
+    {
+      "path": "docs/workspace/workspace_state.yaml",
+      "exists": true,
+      "sha256": "547b1b5931c5602ca5a4fab3c9c7ddef3a43e539c149ccdfd0b8fec04de5922e",
+      "size_bytes": 1833
+    },
+    {
+      "path": "docs/context/current_working_state.md",
+      "exists": true,
+      "sha256": "ee5cfa989a5b9bc8afa90269901964e85f3e490e3e66e0ea4298186251e58a33",
+      "size_bytes": 1669
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/00_spec/stage_brief.md",
+      "exists": true,
+      "sha256": "879410545e9689da8c3b59cd8532b3beeeff9f045a0f795afee0e00126e97f92",
+      "size_bytes": 1686
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/01_inputs/input_refs.md",
+      "exists": true,
+      "sha256": "2e44c1a3e132984e33c3d95207f9697b97969ec44a1c8e5d8d7e56ab9b8fd7c5",
+      "size_bytes": 1681
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/04_selected/selection_status.md",
+      "exists": true,
+      "sha256": "ea871cc9a96485f12c189cc2e83ad8d12991947eccfe420e04a5a8256836099f",
+      "size_bytes": 1329
+    },
+    {
+      "path": "docs/agent_control/work_family_registry.yaml",
+      "exists": true,
+      "sha256": "bcabf5f0f06fee21d7242dbda4f48bc0d9c3956fdbf64d52cabcbddfb574d7e3",
+      "size_bytes": 36064
+    },
+    {
+      "path": "docs/agent_control/codex_task_force_registry.yaml",
+      "exists": true,
+      "sha256": "baccbfdde9b2c4f4e65556fea8a1356ab83aa7b3de1d63a65275f30be4c139a6",
+      "size_bytes": 4783
+    },
+    {
+      "path": "docs/registers/frontier_extra_stage_register.yaml",
+      "exists": true,
+      "sha256": "cdc4deea661015e46c52c02d2fd1476c8e2b527b118635cdfb52f1900b644c6c",
+      "size_bytes": 2237
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+      "exists": true,
+      "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+      "size_bytes": 2691
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "exists": true,
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "size_bytes": 1053
+    },
+    {
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+      "exists": true,
+      "sha256": "107eba70ec1f3d96e2d30cb3f0f39d48c4ef7e46eb089fb14b576934cc0c6e8f",
+      "size_bytes": 1338
+    },
+    {
+      "path": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/kpi_record.json",
+      "exists": true,
+      "sha256": "6a4635161f4a1c3629e5c19495a83b348f5df18f99d84a611e7ccff64370ae8f",
+      "size_bytes": 4778
+    },
+    {
+      "path": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json",
+      "exists": true,
+      "sha256": "23e19184b6989e520b39b21bd27185c650ec4c599f35259c22f56657a62d6c13",
+      "size_bytes": 8330
+    },
+    {
+      "path": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/03_reviews/f94c_stage_closeout_summary.json",
+      "exists": true,
+      "sha256": "3b90027ba77d1762b4183cbbc9130020bee24b35b94ba4d06187628d75604fbe",
+      "size_bytes": 13863
+    },
+    {
+      "path": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94C/d/decision.json",
+      "exists": true,
+      "sha256": "8844f72678f2aeca2f7cef7d94ddcd1b05cd6c385632272f08dbd60338205427",
+      "size_bytes": 11895
+    },
+    {
+      "path": "docs/agent_control/packets/frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1/work_packet.yaml",
+      "exists": true,
+      "sha256": "3eff0393f313240d94d6e89a1d577b51df900cd52a06d1d7f0aaf6f7db316043",
+      "size_bytes": 17563
+    },
+    {
+      "path": "docs/agent_control/packets/frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1/closeout_gate.json",
+      "exists": true,
+      "sha256": "c510f14657562644ada3fc35930b1794db3026260fb10165ba844fe445392b78",
+      "size_bytes": 5353
+    }
+  ],
+  "produced_artifacts": [
+    "stage_pipelines/stage_frontier_95/frontier95a_stage_open_closed_bar_state_transition_embedding.py",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/run_manifest.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/summary.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/kpi_record.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/experiment_design.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/runtime_contract.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/f95b_proxy_scout_brief.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/data_integrity_plan.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/model_validation_plan.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/state_transition_embedding_contract.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/r/summary.md",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_stage_open_summary.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_task_force_review_receipt.json",
+    "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/codex_task_force_review_packet.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_frontier_extra_due_check.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_frontier_five_stage_direction_synthesis.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_frontier_topic_rotation_check.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_scope_completion_gate.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_data_integrity_audit.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_model_validation_audit.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_artifact_lineage_audit.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_result_judgment_audit.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_final_claim_guard.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_state_sync_audit.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_required_gate_coverage_audit.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/frontier95A_stage_open_closed_bar_state_transition_embedding_report.md",
+    "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/work_packet.yaml",
+    "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts.json",
+    "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/closeout_gate.json",
+    "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/final_claim_guard.json",
+    "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/state_sync_audit.json",
+    "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/required_gate_coverage_audit.json",
+    "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/work_packet_schema_lint.json",
+    "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipt_schema_lint.json"
+  ],
+  "raw_evidence": [
+    "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/kpi_record.json",
+    "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json",
+    "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/03_reviews/f94c_stage_closeout_summary.json"
+  ],
+  "machine_readable": [
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/run_manifest.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/summary.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/kpi_record.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/experiment_design.json",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/runtime_contract.json",
+    "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts.json"
+  ],
+  "human_readable": [
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/r/summary.md",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/frontier95A_stage_open_closed_bar_state_transition_embedding_report.md",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/00_spec/stage_brief.md",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/04_selected/selection_status.md",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/context_anchor.md"
+  ],
+  "hashes_or_missing_reasons": [
+    {
+      "path": "stage_pipelines/stage_frontier_95/frontier95a_stage_open_closed_bar_state_transition_embedding.py",
+      "exists": true,
+      "sha256": "ed29b4e35b27b43a51f3a360d27aa9e356ba4734f2f0d907a6e2e18343d01384",
+      "size_bytes": 78447
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/run_manifest.json",
+      "exists": true,
+      "sha256": "fd95c7051cf7e6023c62dfcef6e6500f7e1349bd5d871900574d3b4252379803",
+      "size_bytes": 7074
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/summary.json",
+      "exists": true,
+      "sha256": "ed3cedaaa9ddc246a889d869362e7a4b1431ecd878fefb6e2a5cd784246073ca",
+      "size_bytes": 2628
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/kpi_record.json",
+      "exists": true,
+      "sha256": "68ef5bcf3fa355859abdc6bec537e4e94a063d5d76a67e849fd7594facd71895",
+      "size_bytes": 1092
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/experiment_design.json",
+      "exists": true,
+      "sha256": "fade957b9ee6e64b3fefc127ac71a0520c6f39428a46d79121675e51d03ab4b7",
+      "size_bytes": 2505
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/runtime_contract.json",
+      "exists": true,
+      "sha256": "4e81b88c577c811ae58f052cd0d1fe8cad053ed6f0e4a35d4fbd72c8262682f7",
+      "size_bytes": 1480
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/f95b_proxy_scout_brief.json",
+      "exists": true,
+      "sha256": "ec41e1f4dfb7f762a99649d8162fd36d619f2856865d0b6b88a73c74caa91a91",
+      "size_bytes": 920
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/data_integrity_plan.json",
+      "exists": true,
+      "sha256": "7ba92e2c4419d02d99b07f9b0ddca51c967bc7ffba5e4eacd74c5f37cf146520",
+      "size_bytes": 1802
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/model_validation_plan.json",
+      "exists": true,
+      "sha256": "8b4896cae3db0ff3228c14aa63b762ca6f7bbe76121782eeb43d5f5bd25a2dc1",
+      "size_bytes": 2157
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/state_transition_embedding_contract.json",
+      "exists": true,
+      "sha256": "c0cc890751f1b641c1993b406ab95c80ed38b65d0988f764b7f0e94b021f4cab",
+      "size_bytes": 1229
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/r/summary.md",
+      "exists": true,
+      "sha256": "954c00163bb0334ecdf0312a1f50127b2f9e46b7a7d5e673d6c380492a19826c",
+      "size_bytes": 1568
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_stage_open_summary.json",
+      "exists": true,
+      "sha256": "ed3cedaaa9ddc246a889d869362e7a4b1431ecd878fefb6e2a5cd784246073ca",
+      "size_bytes": 2628
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_task_force_review_receipt.json",
+      "exists": true,
+      "sha256": "09dd1ad78163989792b57a2c12da846bb0d535910483ba227b36fde44cc0b772",
+      "size_bytes": 10015
+    },
+    {
+      "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/codex_task_force_review_packet.json",
+      "exists": true,
+      "sha256": "09dd1ad78163989792b57a2c12da846bb0d535910483ba227b36fde44cc0b772",
+      "size_bytes": 10015
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_frontier_extra_due_check.json",
+      "exists": true,
+      "sha256": "06d38b04af253cad5880c3739ea556891b61a6787d075a09f034508e3e8503dc",
+      "size_bytes": 482
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_frontier_five_stage_direction_synthesis.json",
+      "exists": true,
+      "sha256": "e00c50da2b9bb375f3a36015743e933b8c44b2a7c25a122cfae55aec7f4a5da9",
+      "size_bytes": 1112
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_frontier_topic_rotation_check.json",
+      "exists": true,
+      "sha256": "85877529d2e046a9eff27a1f71632bc29541b52ab010c0ccb49a4e2d96d045d1",
+      "size_bytes": 979
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_scope_completion_gate.json",
+      "exists": true,
+      "sha256": "2918097c0f3cb250d3e9064c7f853a85564182cfd01f9378a652bc49518e3b53",
+      "size_bytes": 1004
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_data_integrity_audit.json",
+      "exists": true,
+      "sha256": "3d02a04f8669caf07b5a3f55bda48d76f847a0271fbb685e554841fdbe49f45b",
+      "size_bytes": 1628
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_model_validation_audit.json",
+      "exists": true,
+      "sha256": "00429ff449e0a577f0acaa4c2d46e6641730d9c4b250ef82e5b31304b0a402b8",
+      "size_bytes": 1047
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_artifact_lineage_audit.json",
+      "exists": true,
+      "sha256": "67a4ffded899e313fb35e0b8226ffc64b26b847c138c3919491a5dee5a6cda6b",
+      "size_bytes": 14467
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_result_judgment_audit.json",
+      "exists": true,
+      "sha256": "929d8fd7850a40e3718094f3e67415e7950d7a4cff6003d3c1adde96bd0e58ba",
+      "size_bytes": 2011
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_final_claim_guard.json",
+      "exists": true,
+      "sha256": "8854f50df283deb61e979e196e0eb3e3c4f2f7b3b09b887c9334314e94c91119",
+      "size_bytes": 1707
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_state_sync_audit.json",
+      "exists": true,
+      "sha256": "c51e6a1d39af0ca9c0dd49fab1b8b0a0b4f0a0b5d1a005407ea41b87b3f580ab",
+      "size_bytes": 2206
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/f95a_required_gate_coverage_audit.json",
+      "exists": true,
+      "sha256": "0d71bc262ac8d7398569bba5b977837761692cee703822c3f5af5d40d6fbcb45",
+      "size_bytes": 1658
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/03_reviews/frontier95A_stage_open_closed_bar_state_transition_embedding_report.md",
+      "exists": true,
+      "sha256": "954c00163bb0334ecdf0312a1f50127b2f9e46b7a7d5e673d6c380492a19826c",
+      "size_bytes": 1568
+    },
+    {
+      "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/work_packet.yaml",
+      "exists": true,
+      "sha256": "a9ca8ec3da14a8ebcf785ad25acb2ce6941070b87c3e68539d8dde86a1cfdc29",
+      "size_bytes": 20270
+    },
+    {
+      "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts.json",
+      "exists": true,
+      "sha256": "6ea35c08087a335343da580392b7b692d4939f0a7a003c58ca35c168571fc12a",
+      "size_bytes": 45851
+    },
+    {
+      "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/closeout_gate.json",
+      "exists": true,
+      "sha256": "e60b3bc2183c25c5fb7b86d6421dc4fac177c134d712496fca5182f2f0aabf68",
+      "size_bytes": 5062
+    },
+    {
+      "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/final_claim_guard.json",
+      "exists": true,
+      "sha256": "8854f50df283deb61e979e196e0eb3e3c4f2f7b3b09b887c9334314e94c91119",
+      "size_bytes": 1707
+    },
+    {
+      "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/state_sync_audit.json",
+      "exists": true,
+      "sha256": "c51e6a1d39af0ca9c0dd49fab1b8b0a0b4f0a0b5d1a005407ea41b87b3f580ab",
+      "size_bytes": 2206
+    },
+    {
+      "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/required_gate_coverage_audit.json",
+      "exists": true,
+      "sha256": "0d71bc262ac8d7398569bba5b977837761692cee703822c3f5af5d40d6fbcb45",
+      "size_bytes": 1658
+    },
+    {
+      "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/work_packet_schema_lint.json",
+      "exists": true,
+      "sha256": "6d99d12ef2e32554adfab127ba60d16267a87295d25a7394671c5896d8cc2744",
+      "size_bytes": 359
+    },
+    {
+      "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipt_schema_lint.json",
+      "exists": true,
+      "sha256": "a68c0136127cec458cb7ff46b16e2f797b03e6408092dc1c297b1d93d00a0b99",
+      "size_bytes": 329
+    }
+  ],
+  "lineage_boundary": "F94C negative memory/reference surface only; F95A design-open only; no runtime authority.",
+  "receipt_path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts/artifact_lineage.json"
+}

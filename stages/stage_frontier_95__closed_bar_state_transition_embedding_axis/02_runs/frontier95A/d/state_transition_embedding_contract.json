@@ -1,0 +1,30 @@
+{
+  "run_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+  "contract_status": "design_locked_for_f95b_planning_only",
+  "feature_window": {
+    "source": "closed M5 bars only",
+    "candidate_inputs": [
+      "recent returns",
+      "range expansion/contraction",
+      "close location in bar",
+      "wick ratio",
+      "volatility-normalized movement",
+      "delta from previous state"
+    ],
+    "forbidden_inputs": [
+      "current open bar",
+      "future path",
+      "future return",
+      "MFE/MAE diagnostic columns"
+    ]
+  },
+  "state_classes": [
+    "continuation",
+    "reversal_trap",
+    "chop_cost_drag"
+  ],
+  "mapping_later": "long/short/abstain can be mapped only after state class distribution and cost-drag checks.",
+  "fit_scope": "train-only for scaler, codebook, cluster center, embedding model, and calibration.",
+  "split_policy": "validation selects; OOS is locked read only.",
+  "claim_boundary": "f95a_design_only_stage_open_closed_bar_state_transition_embedding_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

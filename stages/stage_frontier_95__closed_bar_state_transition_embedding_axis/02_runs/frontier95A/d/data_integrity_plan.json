@@ -1,0 +1,33 @@
+{
+  "run_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+  "data_sources_checked": [
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+      "exists": true,
+      "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+      "size_bytes": 2691
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "exists": true,
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "size_bytes": 1053
+    },
+    {
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+      "exists": true,
+      "sha256": "107eba70ec1f3d96e2d30cb3f0f39d48c4ef7e46eb089fb14b576934cc0c6e8f",
+      "size_bytes": 1338
+    }
+  ],
+  "time_axis_boundary": "F95B must record whether M5 timestamp is bar open or bar close, broker timezone, session timezone, and DST policy.",
+  "feature_label_boundary": "Features end at closed sequence time t; labels/evaluation start at t+1 and later.",
+  "split_boundary": "Lookback window and label horizon may not cross train/validation/OOS split boundaries.",
+  "missing_data_boundary": "F95B must check M5 gaps, duplicate bars, holiday/session breaks, and fake transition risk.",
+  "tier_boundary": "Tier A separate, Tier B separate, and Tier A+B combined records are mandatory; missing Tier B is blocked or out_of_scope_by_claim.",
+  "open_issues_from_f94c": [
+    "timezone binding unresolved for authority claims",
+    "Tier B train-label footnote must close before stronger claims",
+    "full routed/Tier B perturbation check required before stronger claims"
+  ]
+}

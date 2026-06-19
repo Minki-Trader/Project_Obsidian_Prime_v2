@@ -2516,3 +2516,14 @@ Register ideas when they become durable work, not for every passing thought.
 - result: negative_memory/reference_surface, no candidate, no runtime trigger.
 - next_action: `frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1` pending-open scaffold.
 - claim_boundary: `f94c_stage_closeout_rotation_only_negative_memory_reference_surface_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_promotion_candidate_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+<!-- frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1 -->
+## F95A closed-bar state-transition embedding open(F95A 확정봉 상태 전이 임베딩 개방)
+
+- run_id(실행 ID): `frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1`
+- hypothesis(가설): US100 M5 closed-bar sequences contain state-transition structure that can separate continuation, reversal-trap, and chop-cost-drag states before long/short/abstain mapping.
+- decision_use(판정 용도): design-only stage open(설계 전용 단계 개방) and F95B proxy scout plan(F95B 프록시 정찰 계획).
+- task_force_actual_calls(태스크포스 실제 호출): 6 selected agents recorded(선택 요원 6명 기록).
+- runtime(런타임): no Strategy Tester evidence(전략 테스터 근거 없음); no runtime authority(런타임 권위 없음).
+- next_action(다음 행동): `frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1`.
+- claim_boundary(주장 경계): `f95a_design_only_stage_open_closed_bar_state_transition_embedding_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

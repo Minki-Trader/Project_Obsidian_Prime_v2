@@ -1,0 +1,174 @@
+{
+  "packet_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+  "skill": "obsidian-task-force-review",
+  "status": "executed",
+  "created_at_utc": "2026-06-19T07:27:28Z",
+  "trigger_reason": "F95A formal stage-open packet, active goal frontier continuation, and explicit user correction requiring real relevant Task Force agent calls.",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "agents_used": [
+    "agent_01_system_governor",
+    "agent_04_evidence_control_plane",
+    "agent_05_data_feature_contract",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "actual_subagent_calls": [
+    {
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019edeb9-add3-78b1-9610-4a8d49ff3a45",
+      "nickname": "Singer",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "bounded_evidence": [
+        "docs/workspace/workspace_state.yaml",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/04_selected/selection_status.md"
+      ],
+      "local_verification": "F95A is design-only stage open. Minimum allowed claims exclude KPI, candidate, ONNX/EA, MT5 runtime, economics, promotion, authority, readiness, and Goal Achieve.",
+      "accepted_summary": "Proceed only as F95A design-open and keep F94C as negative memory/reference surface."
+    },
+    {
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019edeb9-db4d-7bf2-acec-b86073933881",
+      "nickname": "Erdos",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "bounded_evidence": [
+        "docs/workspace/workspace_state.yaml",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/00_spec/stage_brief.md",
+        "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/work_packet.yaml"
+      ],
+      "local_verification": "This script materializes the missing F95A work_packet, skill receipts, gate audits, final_claim_guard, state sync, and actual_subagent_calls.",
+      "accepted_summary": "F95A scaffold alone was blocked; local packet/gate/receipt evidence is required before low-boundary stage-open claims."
+    },
+    {
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019edeba-1a54-7200-9307-fcd1649b57ba",
+      "nickname": "Feynman",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "bounded_evidence": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+        "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json"
+      ],
+      "local_verification": "F95B must prove closed-bar-only features, time-axis meaning, split-window isolation, missing/duplicate checks, Tier A/B paired records, and future-path perturbation.",
+      "accepted_summary": "Closed M5 bar sequence/state-transition embedding is a new data representation, but data_contract_pass is not claimed."
+    },
+    {
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019edeba-42bf-79d1-9909-1a1d3b204eda",
+      "nickname": "Leibniz",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "bounded_evidence": [
+        "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/kpi_record.json",
+        "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json",
+        "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/03_reviews/f94c_stage_closeout_summary.json"
+      ],
+      "local_verification": "F95B must compare raw OHLC-derived features and F94 utility-label reference without reusing F94 labels as hidden target or threshold repair.",
+      "accepted_summary": "The hypothesis is valid only if it learns continuation, reversal-trap, and chop-cost-drag states before long/short/abstain mapping."
+    },
+    {
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019edeba-728f-7543-986a-1642a16a7130",
+      "nickname": "Carver",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "bounded_evidence": [
+        "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/kpi_record.json",
+        "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json"
+      ],
+      "local_verification": "F95B must lock time-ordered split, train-only scaler/embedding fit scope, validation selection, OOS locked-read protocol, and non-PF-only metric boundary.",
+      "accepted_summary": "Design direction is accepted; OOS selection, calibration laundering, threshold-only repair, and Tier B rescue are rejected."
+    },
+    {
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019edeba-9d15-7223-baec-5c6501963b7b",
+      "nickname": "Sagan",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "bounded_evidence": [
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/runtime_contract.json",
+        "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/04_selected/selection_status.md"
+      ],
+      "local_verification": "Runtime gate is N/A only because F95A has no runnable candidate and no runtime/materialization/economics/handoff claim. Cost/proxy-bad skip is not used.",
+      "accepted_summary": "Any future ONNX/EA/set behavior, runtime economics, materialization, or handoff claim triggers same-packet MT5 Strategy Tester probe."
+    }
+  ],
+  "review_requirement": "codex_task_force_review_packet",
+  "model_policy": {
+    "model": "inherited_current_codex_model",
+    "reasoning_effort": "inherited",
+    "service_tier": "inherited"
+  },
+  "bounded_evidence": [
+    "docs/workspace/workspace_state.yaml",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/00_spec/stage_brief.md",
+    "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/04_selected/selection_status.md",
+    "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/03_reviews/f94c_stage_closeout_summary.json",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json"
+  ],
+  "advice_classification": {
+    "accepted": [
+      "agent_01_system_governor",
+      "agent_08_mt5_onnx_runtime"
+    ],
+    "needs_local_verification": [
+      "agent_04_evidence_control_plane",
+      "agent_05_data_feature_contract",
+      "agent_06_quant_research",
+      "agent_07_model_validation_risk"
+    ],
+    "rejected": []
+  },
+  "local_verification": [
+    "F95A packet, receipts, audits, and state sync are generated locally.",
+    "Runtime evidence gate is outside claim surface only because no runnable candidate or runtime claim exists.",
+    "F95B must verify F94 novelty delta, time-axis contract, Tier A/B paired records, train-only embedding fit, and non-PF-only selection."
+  ],
+  "claim_boundary": "f95a_design_only_stage_open_closed_bar_state_transition_embedding_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "final_codex_direction": "Proceed with F95A design-only stage open and plan F95B closed-bar state-transition embedding proxy scout.",
+  "forbidden_claim_check": {
+    "completion": "not_claimed",
+    "completed": "not_claimed",
+    "selected_baseline": "not_claimed",
+    "operating_promotion": "not_claimed",
+    "runtime_authority": "not_claimed",
+    "live_readiness": "not_claimed",
+    "goal_achieve": "not_claimed",
+    "candidate": "not_claimed",
+    "promotion_candidate": "not_claimed",
+    "runtime_probe": "not_claimed",
+    "runtime_verified": "not_claimed",
+    "strategy_tester_runtime_economics": "not_claimed",
+    "runtime_economics": "not_claimed",
+    "runtime_economics_pass": "not_claimed",
+    "materialization_ready": "not_claimed",
+    "mt5_handoff_ready": "not_claimed",
+    "onnx_handoff_ready": "not_claimed",
+    "ea_handoff_ready": "not_claimed",
+    "f95_stage_open_completed": "not_claimed",
+    "task_force_reviewed": "not_claimed",
+    "task_force_reviewed_pass": "not_claimed",
+    "internally_reviewed": "not_claimed",
+    "reviewed": "not_claimed",
+    "verified": "not_claimed",
+    "pass": "not_claimed",
+    "model_quality": "not_claimed",
+    "model_readiness": "not_claimed",
+    "calibrated_probability": "not_claimed",
+    "data_contract_pass": "not_claimed",
+    "runtime_compatible_proven": "not_claimed"
+  },
+  "receipt_path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/skill_receipts/task_force_review.json"
+}
