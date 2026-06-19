@@ -1,19 +1,21 @@
 ﻿# Current Working State(현재 작업 상태)
 
-Updated(갱신): 2026-06-19T00:37:44Z
+Updated(갱신): 2026-06-19T01:00:04Z
 
 Active stage(활성 단계): `stage_frontier_90__time_to_barrier_competing_risk_label_axis`
 
-Current run(현재 실행): `frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1`
+Current run(현재 실행): `frontier90B_time_to_barrier_label_feasibility_scout_v1`
 
-Latest completed run(최근 완료 실행): `frontier89C_deal_path_teacher_repair_or_rotation_decision_v1`
+Latest completed run(최근 완료 실행): `frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1`
 
-Action(행동): F89C closed F89(F89C가 F89를 마감) and wrote an F90 pending-open scaffold(F90 개방 대기 골격을 기록).
+Status(상태): `f90a_stage_open_design_prepared_f90b_barrier_label_feasibility_scout_planned_no_authority`
 
-Effect(효과): 같은 deal-path adverse-selection teacher proxy(딜 경로 역선택 교사 프록시)를 threshold/filter/parameter-only repair(임계값/필터/파라미터만 수리)로 반복하지 않고, 다음 축을 time-to-barrier competing-risk label(장벽 도달 시간 경쟁위험 라벨)로 돌린다.
+Judgment(판정): `design_only_time_to_barrier_competing_risk_label_axis_no_runtime_evidence`
 
-Task Force status(태스크포스 상태): `f89c_actual_subagent_calls_recorded_no_reviewed_verified_pass_claim`.
+Task Force(태스크포스): F90A selected agents(선택 요원) `6`, actual_subagent_calls(실제 하위요원 호출) `6`; no reviewed/pass claim(검토됨/통과 주장 없음).
 
-Runtime probe(런타임 탐침): `not_run_no_meaningful_materialization_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip`.
+Runtime(런타임): `not_run_design_only_no_materialization_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip`.
 
-Claim boundary(주장 경계): `f89c_stage_closeout_rotation_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+Next action(다음 행동): F90B feasibility scout(가능성 탐색) must measure label contract feasibility(라벨 계약 가능성), not runtime authority(런타임 권위).
+
+Claim boundary(주장 경계): `design_only_stage_open_for_time_to_barrier_competing_risk_label_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

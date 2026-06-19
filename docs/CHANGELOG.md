@@ -49,3 +49,9 @@
 - Effect(효과): Task Force actual_subagent_calls(태스크포스 실제 하위요원 호출) 6건을 기록하고, F90 pending-open scaffold(F90 개방 대기 골격)를 `time_to_barrier_competing_risk_label_axis(장벽 도달 시간 경쟁위험 라벨 축)`로 남겼다.
 - Runtime(런타임): no new Strategy Tester runtime evidence(새 전략 테스터 런타임 근거 없음); no runtime authority(런타임 권위 없음); no Goal Achieve(목표 달성 없음).
 - Boundary(경계): `f89c_stage_closeout_rotation_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+## 2026-06-19T00:57:19Z - F90A Stage Open(F90A 단계 개방)
+
+- Action(행동): opened `stage_frontier_90__time_to_barrier_competing_risk_label_axis` as time-to-barrier competing-risk label axis(장벽 도달 시간 경쟁위험 라벨 축).
+- Effect(효과): recorded F90A-specific Task Force actual_subagent_calls(F90A 전용 태스크포스 실제 하위요원 호출) 6건 and planned `frontier90B_time_to_barrier_label_feasibility_scout_v1`.
+- Runtime(런타임): no new Strategy Tester evidence(새 전략 테스터 근거 없음); no runtime authority(런타임 권위 없음); no Goal Achieve(목표 달성 없음).
+- Packet(묶음): `docs/agent_control/packets/frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1/work_packet.yaml`.

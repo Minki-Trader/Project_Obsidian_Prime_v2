@@ -1,0 +1,51 @@
+{
+  "allowed_claims": [
+    "f90a_stage_open_design_prepared",
+    "f90_time_to_barrier_competing_risk_label_axis_opened",
+    "f90b_feasibility_scout_planned",
+    "task_force_actual_calls_recorded_for_f90a",
+    "frontier_extra_due_check_not_due_after_f89",
+    "frontier_five_stage_direction_synthesis_recorded_for_f85_to_f89",
+    "frontier_topic_rotation_check_passed_for_f90"
+  ],
+  "audit_name": "data_integrity_audit",
+  "claim_boundary": "design_only_stage_open_for_time_to_barrier_competing_risk_label_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "counts": {
+    "data_judgment": "usable_with_boundary_for_stage_open_design_but_inconclusive_until_f90b_materialization",
+    "invalid_conditions": [
+      "F89B/F88C small-n results are inherited as F90 performance.",
+      "Tier A only is described as the whole alpha read.",
+      "Censoring, class imbalance, or same-bar ambiguity is omitted.",
+      "Rank score is described as calibrated probability without calibration evidence.",
+      "Future validation/OOS information tunes barrier thresholds, scalers, or filters.",
+      "Design-only or proxy-only evidence is treated as runtime/economics evidence."
+    ],
+    "required_f90b_contracts": {
+      "anchor_price": "anchor bar close unless F90B explicitly records another predeclared anchor",
+      "barrier_units": "upper/lower units predeclared in F90B before measurement",
+      "event_types": [
+        "upper_first",
+        "lower_first",
+        "censored",
+        "ambiguous",
+        "invalid"
+      ],
+      "feature_boundary": "features use closed bars through anchor t only",
+      "horizon_bars": "predeclare in F90B before measurement",
+      "label_boundary": "labels use future bars t+1 through t+H only",
+      "label_family": "time_to_barrier_competing_risk_v1",
+      "same_bar_dual_hit_rule": "ambiguous unless tick/lower-timeframe evidence or a predeclared conservative rule is present",
+      "tier_records_required": [
+        "Tier A separate",
+        "Tier B separate",
+        "Tier A+B combined",
+        "missing_required if unavailable"
+      ],
+      "time_axis_rule": "timestamp/bar_close_key is broker-clock alignment key; no direct UTC assumption"
+    }
+  },
+  "findings": [],
+  "forbidden_claims": [],
+  "passed": true,
+  "status": "pass_with_local_verification_boundary"
+}

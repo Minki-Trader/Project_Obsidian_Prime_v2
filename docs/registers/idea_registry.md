@@ -2414,3 +2414,11 @@ Register ideas when they become durable work, not for every passing thought.
 - source(원천): `frontier89C_deal_path_teacher_repair_or_rotation_decision_v1`
 - idea_boundary(아이디어 경계): pending-open scaffold only(개방 대기 골격 전용)
 - effect(효과): binary adverse-selection label(이진 역선택 라벨)을 MFE/MAE barrier arrival ordering(MFE/MAE 장벽 도달 순서)으로 바꿔 실험한다.
+## F90A time-to-barrier competing-risk label axis(F90A 장벽 도달 시간 경쟁위험 라벨 축)
+
+- run_id: `frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1`
+- source(원천): `frontier89C_deal_path_teacher_repair_or_rotation_decision_v1` reference-only(참조 전용)
+- hypothesis(가설): event type plus bars-to-event(사건 유형 + 도달 봉 수)가 binary adverse-selection label(이진 불리선택 라벨)보다 rank/survival clue(순위/생존 단서)를 줄 수 있는지 본다.
+- novelty_delta(신규성 차이): label representation(라벨 표현), data representation(데이터 표현), validation philosophy(검증 철학).
+- next_action(다음 행동): `frontier90B_time_to_barrier_label_feasibility_scout_v1`.
+- claim_boundary(주장 경계): `design_only_stage_open_for_time_to_barrier_competing_risk_label_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

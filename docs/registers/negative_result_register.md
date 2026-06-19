@@ -1530,3 +1530,8 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - do_not_repeat(반복 금지): do not promote this small-sample teacher proxy by threshold/filter retune only(이 소표본 교사 프록시를 임계값/필터 조정만으로 승격하지 않기).
 - next_action(다음 행동): `frontier89C_deal_path_teacher_repair_or_rotation_decision_v1`.
 - claim_boundary(주장 경계): `proxy_scout_only_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+## F90A inherited negative memory boundary(F90A 상속 금지 부정 기억 경계)
+
+- run_id: `frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1`
+- source_negative_memory(원천 부정 기억): F89B 23 episodes(23개 에피소드), Tier B missing_required(Tier B 필수 누락), no materialization candidate(물질화 후보 없음).
+- effect(효과): F90B may use this as do-not-repeat(반복 금지) but cannot use it as performance evidence(성능 근거) or baseline(기준선).

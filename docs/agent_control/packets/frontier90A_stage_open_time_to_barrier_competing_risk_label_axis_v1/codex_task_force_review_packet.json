@@ -1,0 +1,128 @@
+{
+  "actual_subagent_calls": [
+    {
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019edd55-6665-7203-9944-1bcc064ef2e4",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "opinion_classification": "needs_local_verification",
+      "result_status": "completed",
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019edd55-aca3-73f2-992b-e52d71744ead",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "opinion_classification": "needs_local_verification",
+      "result_status": "completed",
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019edd55-f3c5-7b70-848e-c5a381ca8f65",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019edd56-3bf0-7db0-968e-a0124d6b1de4",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019edd56-821f-7b02-b9d0-13d779165917",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019edd57-0364-7ae1-b027-9f8fc36269b0",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    }
+  ],
+  "advice_classification": {
+    "agent_01_system_governor": "accepted",
+    "agent_04_evidence_control_plane": "needs_local_verification",
+    "agent_05_data_feature_contract": "needs_local_verification",
+    "agent_06_quant_research": "accepted",
+    "agent_07_model_validation_risk": "accepted",
+    "agent_08_mt5_onnx_runtime": "accepted"
+  },
+  "agents_used": [
+    "agent_01_system_governor",
+    "agent_04_evidence_control_plane",
+    "agent_05_data_feature_contract",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "bounded_evidence": [
+    "docs/workspace/workspace_state.yaml",
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/stage_closeout_report.md",
+    "docs/agent_control/packets/frontier89C_deal_path_teacher_repair_or_rotation_decision_v1/work_packet.yaml",
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/summary.json",
+    "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01/dataset_summary.json",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json"
+  ],
+  "claim_boundary": "design_only_stage_open_for_time_to_barrier_competing_risk_label_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "created_at_utc": "2026-06-19T01:00:04Z",
+  "final_codex_direction": [
+    "Open F90A as design-only stage-open.",
+    "Use F89/F88 artifacts as reference only, not inherited baseline or runtime authority.",
+    "Plan F90B feasibility scout before any proxy/runtime materialization claim.",
+    "Do not run MT5 in F90A because no runtime/materialization/economics claim exists."
+  ],
+  "forbidden_claim_check": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents",
+    "model_quality",
+    "model_readiness",
+    "data_contract_pass"
+  ],
+  "local_verification": {
+    "actual_call_count": 6,
+    "agent_04_needs_local_verification": "F90A artifacts and gates must be created in this packet; F89C calls are not reused.",
+    "agent_05_needs_local_verification": "Time-to-barrier labels are not materialized yet; F90B must measure data contract feasibility.",
+    "codex_direction": "Accept F90A design-only stage open, lower all runtime/data-pass/model-readiness claims.",
+    "not_all_roster_agents": true,
+    "selected_agent_count": 6
+  },
+  "model_policy": {
+    "non_authority_rule": "Model strength(모델 강도)는 evidence(근거), gate(게이트), claim boundary(주장 경계)를 완화하지 않는다.",
+    "registry_floor": "gpt-5.5 xhigh",
+    "session_execution": "inherited parent model through multi_agent_v1.spawn_agent"
+  },
+  "packet_id": "frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1",
+  "receipt_path": "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_task_force_review_receipt.json",
+  "review_requirement": "stage_open_required",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "skill": "obsidian-task-force-review",
+  "status": "executed",
+  "trigger_reason": [
+    "stage_open_required: agent_01_system_governor is required for stage_open",
+    "explicit_user_instruction_required: user required actual Task Force calls when triggered",
+    "claim_surface: F90A formal stage-open with design-only boundary"
+  ]
+}

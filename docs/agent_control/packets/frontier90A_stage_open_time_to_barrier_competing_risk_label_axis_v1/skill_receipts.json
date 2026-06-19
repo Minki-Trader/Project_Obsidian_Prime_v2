@@ -1,0 +1,576 @@
+{
+  "packet_id": "frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1",
+  "primary_skill": "obsidian-experiment-design",
+  "receipts": [
+    {
+      "baseline": {
+        "boundary": "F89B/F88C are negative/inconclusive reference surfaces only; no selected baseline or authority is inherited.",
+        "f89_reference_only": "frontier89C_deal_path_teacher_repair_or_rotation_decision_v1",
+        "f89b_episode_count": null
+      },
+      "changed_variables": [
+        "target label(목표 라벨)",
+        "event ordering(사건 순서)",
+        "censoring rule(검열 규칙)",
+        "barrier geometry(장벽 구조)",
+        "ranking/survival objective(순위/생존 목적함수)",
+        "data source from deal episodes to bar-level frozen surface(딜 에피소드에서 봉 단위 동결 표면으로 데이터 원천 변경)"
+      ],
+      "evidence_plan": [
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/design/f90a_experiment_design.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/design/time_to_barrier_competing_risk_label_contract.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/design/f90b_time_to_barrier_label_feasibility_scout_brief.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_task_force_review_receipt.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_frontier_extra_due_check.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_frontier_topic_rotation_check.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_data_integrity_audit.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_model_validation_audit.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_artifact_lineage_audit.json",
+        "docs/agent_control/packets/frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1/closeout_gate.json"
+      ],
+      "hypothesis": "Time-to-barrier competing-risk labels(장벽 도달 시간 경쟁위험 라벨)이 binary adverse-selection teacher(이진 불리선택 교사)보다 rank/survival ordering clue(순위/생존 순서 단서)를 더 안정적으로 줄 수 있는지 확인한다.",
+      "invalid_conditions": [
+        "F89B/F88C small-n results are inherited as F90 performance.",
+        "Tier A only is described as the whole alpha read.",
+        "Censoring, class imbalance, or same-bar ambiguity is omitted.",
+        "Rank score is described as calibrated probability without calibration evidence.",
+        "Future validation/OOS information tunes barrier thresholds, scalers, or filters.",
+        "Design-only or proxy-only evidence is treated as runtime/economics evidence."
+      ],
+      "packet_id": "frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1",
+      "receipt_path": "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_experiment_design_receipt.json",
+      "skill": "obsidian-experiment-design",
+      "status": "executed"
+    },
+    {
+      "data_sources_checked": [
+        "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01/dataset_summary.json",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/episodes/deal_episodes.csv"
+      ],
+      "leakage_checks": [
+        "F89B/F88C small-n results are inherited as F90 performance.",
+        "Tier A only is described as the whole alpha read.",
+        "Censoring, class imbalance, or same-bar ambiguity is omitted.",
+        "Rank score is described as calibrated probability without calibration evidence.",
+        "Future validation/OOS information tunes barrier thresholds, scalers, or filters.",
+        "Design-only or proxy-only evidence is treated as runtime/economics evidence."
+      ],
+      "missing_data_boundary": "Tier B or combined missing must be recorded as missing_required, blocked, or out_of_scope_by_claim.",
+      "packet_id": "frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1",
+      "receipt_path": "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_data_integrity_receipt.json",
+      "skill": "obsidian-data-integrity",
+      "split_boundary": "F90B must report train/validation/OOS event counts before any model or candidate claim.",
+      "status": "executed",
+      "time_axis_boundary": "timestamp/bar_close_key is broker-clock alignment key; no direct UTC assumption"
+    },
+    {
+      "allowed_claims": [
+        "f90a_stage_open_design_prepared",
+        "f90_time_to_barrier_competing_risk_label_axis_opened",
+        "f90b_feasibility_scout_planned",
+        "task_force_actual_calls_recorded_for_f90a",
+        "frontier_extra_due_check_not_due_after_f89",
+        "frontier_five_stage_direction_synthesis_recorded_for_f85_to_f89",
+        "frontier_topic_rotation_check_passed_for_f90"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "completed",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "runtime_probe",
+        "runtime_verified",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "task_force_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "reviewed_by_unspawned_agents",
+        "model_quality",
+        "model_readiness",
+        "data_contract_pass"
+      ],
+      "model_or_threshold_surface": "none_in_f90a_design_only",
+      "overfit_checks": [
+        "F89B small-n cannot be inherited",
+        "no threshold search in F90A",
+        "rank score is not calibrated probability"
+      ],
+      "packet_id": "frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1",
+      "receipt_path": "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_model_validation_receipt.json",
+      "selection_metric_boundary": "rank/survival ordering clue only until calibration evidence exists",
+      "skill": "obsidian-model-validation",
+      "status": "executed",
+      "validation_split": "not_run_in_f90a; F90B must measure split feasibility first"
+    },
+    {
+      "hashes_or_missing_reasons": [
+        {
+          "exists": true,
+          "path": "docs/workspace/workspace_state.yaml",
+          "sha256_lf_normalized": "88bf8049be947ddd74277e870037bf3f638cb47c081a43f1c8a205966d1ae013",
+          "size_bytes": 2020
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89C_deal_path_teacher_repair_or_rotation_decision_v1/summary.json",
+          "sha256_lf_normalized": "98d3f116cb0ef1d7b4b1b8204829de4399956a3e3a79f307b6b75ea8315c2dbc",
+          "size_bytes": 15465
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89C_deal_path_teacher_repair_or_rotation_decision_v1/kpi_record.json",
+          "sha256_lf_normalized": "49d3c7a8a54737730bb9ee9621911818dcf64fb5b0608efbe32b7148e8399e43",
+          "size_bytes": 2947
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/stage_closeout_report.md",
+          "sha256_lf_normalized": "6cf64a120b4c68c86e04a2cdb9c55a1bd59a094bf054ede6a2124f6a4f51d6be",
+          "size_bytes": 3731
+        },
+        {
+          "exists": true,
+          "path": "docs/agent_control/packets/frontier89C_deal_path_teacher_repair_or_rotation_decision_v1/work_packet.yaml",
+          "sha256_lf_normalized": "7f34283435342f928b4e3c493e52e8fd2ae6f5d6b0920892bb48b92ef16a1790",
+          "size_bytes": 29332
+        },
+        {
+          "exists": true,
+          "path": "docs/agent_control/packets/frontier89C_deal_path_teacher_repair_or_rotation_decision_v1/codex_task_force_review_packet.json",
+          "sha256_lf_normalized": "c88eca0f2cf945ced8bb94364038ce1a096c5d8ae52ae45255425eabcb6e02c1",
+          "size_bytes": 5897
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/summary.json",
+          "sha256_lf_normalized": "dc8e91acc8c5603591298baa904b461aa4ec9f0fc3f799ec7603bae07e530cef",
+          "size_bytes": 16994
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/kpi_record.json",
+          "sha256_lf_normalized": "070b52751e4dc437e8aff90aa4779d3c690468bd002b80273874d941da3b2a71",
+          "size_bytes": 2923
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/proxy_scout/proxy_metrics.json",
+          "sha256_lf_normalized": "a8df696ca30f911fc6770c553fc18a01fc84932c58d4ca41a267e1164a6f9af1",
+          "size_bytes": 7832
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/episodes/deal_episodes.csv",
+          "sha256_lf_normalized": "f6222b014b6afa16534af26b2fba5b68ceef98911ce109ab1a2b2b9bb9d12703",
+          "size_bytes": 2919
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/runtime_evidence_identity.json",
+          "sha256_lf_normalized": "4b1ba4f824f28228d8a3007f7363bc8e0ad12445eda3759bb4387bb3bbe04f95",
+          "size_bytes": 4211
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_deals.csv",
+          "sha256_lf_normalized": "64e12ce186cbe3df3ddbe990d3cde656142b0ac11e90a0e616431828c5ab2690",
+          "size_bytes": 4757
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/feature_matrices/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_validation_is_features.csv",
+          "sha256_lf_normalized": "a9c41c4191954bd151e1f2832cb7c4c3b762f8a89c080b18508915e9679f4a86",
+          "size_bytes": 247692
+        },
+        {
+          "exists": true,
+          "path": "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01/dataset_summary.json",
+          "sha256_lf_normalized": "64b55b76ad6e41669a7c351dd199bd6abbcfbd8596671f9c17fd8f2ecad69278",
+          "size_bytes": 10038
+        },
+        {
+          "exists": true,
+          "path": "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01/features.parquet",
+          "sha256_lf_normalized": "2f57a53fb9114094beaea0a6f16fd9f914af1712817a17a0f17f0a58c9f058b3",
+          "size_bytes": 15739898
+        },
+        {
+          "exists": true,
+          "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+          "sha256_lf_normalized": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+          "size_bytes": 2691
+        },
+        {
+          "exists": true,
+          "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+          "sha256_lf_normalized": "5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43",
+          "size_bytes": 14278154
+        },
+        {
+          "exists": true,
+          "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+          "sha256_lf_normalized": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+          "size_bytes": 1053
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/00_spec/stage_brief.md",
+          "sha256_lf_normalized": "3c8011cedb53fdc2f7e1999b6ea68a83f705fd2fcf7a6d679b3dbe026c78b7c8",
+          "size_bytes": 1371
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/01_inputs/input_refs.md",
+          "sha256_lf_normalized": "8082db4f404f4de2f1aa0aba479eae6882ef82d3b307692efcdba02a8a09da34",
+          "size_bytes": 1746
+        },
+        {
+          "exists": true,
+          "path": "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/04_selected/selection_status.md",
+          "sha256_lf_normalized": "64375c3808332b9f5b2aa333dcd64e9eb70ad5466033b06663cad1f07fc489f1",
+          "size_bytes": 942
+        }
+      ],
+      "human_readable": [
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/reports/result_summary.md",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/00_spec/stage_brief.md",
+        "docs/context/current_working_state.md"
+      ],
+      "lineage_boundary": "Reference artifacts support F90A design only and do not import runtime authority.",
+      "machine_readable": [
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/design/f90a_experiment_design.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/design/time_to_barrier_competing_risk_label_contract.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/design/f90b_time_to_barrier_label_feasibility_scout_brief.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/run_manifest.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/summary.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/kpi_record.json"
+      ],
+      "packet_id": "frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1",
+      "produced_artifacts": [
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/run_manifest.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/summary.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/kpi_record.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/reports/result_summary.md",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/design/f90a_experiment_design.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/design/time_to_barrier_competing_risk_label_contract.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90A/design/f90b_time_to_barrier_label_feasibility_scout_brief.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_stage_open_summary.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_task_force_review_receipt.json",
+        "docs/agent_control/packets/frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1/codex_task_force_review_packet.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_frontier_extra_due_check.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_frontier_five_stage_direction_synthesis.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_frontier_topic_rotation_check.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_scope_completion_gate.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_data_integrity_audit.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_model_validation_audit.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_artifact_lineage_audit.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_experiment_design_receipt.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_data_integrity_receipt.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_model_validation_receipt.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_artifact_lineage_receipt.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_stage_transition_receipt.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_claim_discipline_receipt.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_final_claim_guard.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_state_sync_audit.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_required_gate_coverage_audit.json",
+        "docs/agent_control/packets/frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1/work_packet.yaml",
+        "docs/agent_control/packets/frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1/skill_receipts.json",
+        "docs/agent_control/packets/frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1/final_claim_guard.json",
+        "docs/agent_control/packets/frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1/closeout_gate.json",
+        "docs/agent_control/packets/frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1/state_sync_audit.json",
+        "docs/agent_control/packets/frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1/required_gate_coverage_audit.json",
+        "docs/agent_control/packets/frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1/work_packet_schema_lint.json",
+        "docs/agent_control/packets/frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1/skill_receipt_schema_lint.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/01_inputs/input_refs.md",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/04_selected/selection_status.md",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/context_anchor.md",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/review_index.md",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/stage_run_ledger.csv",
+        "docs/context/current_working_state.md",
+        "docs/workspace/workspace_state.yaml",
+        "docs/registers/selection_status.md",
+        "docs/decisions/2026-06-19_frontier90a_stage_open_time_to_barrier_label_axis.md"
+      ],
+      "raw_evidence": [
+        "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01/features.parquet",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/episodes/deal_episodes.csv",
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_deals.csv"
+      ],
+      "receipt_path": "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_artifact_lineage_receipt.json",
+      "skill": "obsidian-artifact-lineage",
+      "source_inputs": [
+        "docs/workspace/workspace_state.yaml",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89C_deal_path_teacher_repair_or_rotation_decision_v1/summary.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89C_deal_path_teacher_repair_or_rotation_decision_v1/kpi_record.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/stage_closeout_report.md",
+        "docs/agent_control/packets/frontier89C_deal_path_teacher_repair_or_rotation_decision_v1/work_packet.yaml",
+        "docs/agent_control/packets/frontier89C_deal_path_teacher_repair_or_rotation_decision_v1/codex_task_force_review_packet.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/summary.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/kpi_record.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/proxy_scout/proxy_metrics.json",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/episodes/deal_episodes.csv",
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/runtime_evidence_identity.json",
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/trade_lists/f88c_tier_a_validation_is_deals.csv",
+        "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1/feature_matrices/frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1_validation_is_features.csv",
+        "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01/dataset_summary.json",
+        "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01/features.parquet",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/01_inputs/input_refs.md",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/04_selected/selection_status.md"
+      ],
+      "status": "executed"
+    },
+    {
+      "actual_subagent_calls": [
+        {
+          "opinion_classification": "accepted",
+          "result_status": "completed",
+          "roster_agent_id": "agent_01_system_governor",
+          "spawned_agent_id": "019edd55-6665-7203-9944-1bcc064ef2e4",
+          "tool_name": "multi_agent_v1.spawn_agent"
+        },
+        {
+          "opinion_classification": "needs_local_verification",
+          "result_status": "completed",
+          "roster_agent_id": "agent_04_evidence_control_plane",
+          "spawned_agent_id": "019edd55-aca3-73f2-992b-e52d71744ead",
+          "tool_name": "multi_agent_v1.spawn_agent"
+        },
+        {
+          "opinion_classification": "needs_local_verification",
+          "result_status": "completed",
+          "roster_agent_id": "agent_05_data_feature_contract",
+          "spawned_agent_id": "019edd55-f3c5-7b70-848e-c5a381ca8f65",
+          "tool_name": "multi_agent_v1.spawn_agent"
+        },
+        {
+          "opinion_classification": "accepted",
+          "result_status": "completed",
+          "roster_agent_id": "agent_06_quant_research",
+          "spawned_agent_id": "019edd56-3bf0-7db0-968e-a0124d6b1de4",
+          "tool_name": "multi_agent_v1.spawn_agent"
+        },
+        {
+          "opinion_classification": "accepted",
+          "result_status": "completed",
+          "roster_agent_id": "agent_07_model_validation_risk",
+          "spawned_agent_id": "019edd56-821f-7b02-b9d0-13d779165917",
+          "tool_name": "multi_agent_v1.spawn_agent"
+        },
+        {
+          "opinion_classification": "accepted",
+          "result_status": "completed",
+          "roster_agent_id": "agent_08_mt5_onnx_runtime",
+          "spawned_agent_id": "019edd57-0364-7ae1-b027-9f8fc36269b0",
+          "tool_name": "multi_agent_v1.spawn_agent"
+        }
+      ],
+      "advice_classification": {
+        "agent_01_system_governor": "accepted",
+        "agent_04_evidence_control_plane": "needs_local_verification",
+        "agent_05_data_feature_contract": "needs_local_verification",
+        "agent_06_quant_research": "accepted",
+        "agent_07_model_validation_risk": "accepted",
+        "agent_08_mt5_onnx_runtime": "accepted"
+      },
+      "agents_used": [
+        "agent_01_system_governor",
+        "agent_04_evidence_control_plane",
+        "agent_05_data_feature_contract",
+        "agent_06_quant_research",
+        "agent_07_model_validation_risk",
+        "agent_08_mt5_onnx_runtime"
+      ],
+      "bounded_evidence": [
+        "docs/workspace/workspace_state.yaml",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/stage_closeout_report.md",
+        "docs/agent_control/packets/frontier89C_deal_path_teacher_repair_or_rotation_decision_v1/work_packet.yaml",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/summary.json",
+        "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01/dataset_summary.json",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json"
+      ],
+      "claim_boundary": "design_only_stage_open_for_time_to_barrier_competing_risk_label_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+      "created_at_utc": "2026-06-19T01:00:04Z",
+      "final_codex_direction": [
+        "Open F90A as design-only stage-open.",
+        "Use F89/F88 artifacts as reference only, not inherited baseline or runtime authority.",
+        "Plan F90B feasibility scout before any proxy/runtime materialization claim.",
+        "Do not run MT5 in F90A because no runtime/materialization/economics claim exists."
+      ],
+      "forbidden_claim_check": [
+        "completion",
+        "completed",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "runtime_probe",
+        "runtime_verified",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "task_force_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "reviewed_by_unspawned_agents",
+        "model_quality",
+        "model_readiness",
+        "data_contract_pass"
+      ],
+      "local_verification": {
+        "actual_call_count": 6,
+        "agent_04_needs_local_verification": "F90A artifacts and gates must be created in this packet; F89C calls are not reused.",
+        "agent_05_needs_local_verification": "Time-to-barrier labels are not materialized yet; F90B must measure data contract feasibility.",
+        "codex_direction": "Accept F90A design-only stage open, lower all runtime/data-pass/model-readiness claims.",
+        "not_all_roster_agents": true,
+        "selected_agent_count": 6
+      },
+      "model_policy": {
+        "non_authority_rule": "Model strength(모델 강도)는 evidence(근거), gate(게이트), claim boundary(주장 경계)를 완화하지 않는다.",
+        "registry_floor": "gpt-5.5 xhigh",
+        "session_execution": "inherited parent model through multi_agent_v1.spawn_agent"
+      },
+      "packet_id": "frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1",
+      "receipt_path": "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_task_force_review_receipt.json",
+      "review_requirement": "stage_open_required",
+      "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+      "skill": "obsidian-task-force-review",
+      "status": "executed",
+      "trigger_reason": [
+        "stage_open_required: agent_01_system_governor is required for stage_open",
+        "explicit_user_instruction_required: user required actual Task Force calls when triggered",
+        "claim_surface: F90A formal stage-open with design-only boundary"
+      ]
+    },
+    {
+      "allowed_claims": [
+        "current_truth_synced"
+      ],
+      "canonical_state_after": {
+        "active_stage": "stage_frontier_90__time_to_barrier_competing_risk_label_axis",
+        "current_run_id": "frontier90B_time_to_barrier_label_feasibility_scout_v1",
+        "latest_completed_run_id": "frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1",
+        "runtime_authority": "not_claimed"
+      },
+      "changed_or_checked_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/04_selected/selection_status.md",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/stage_run_ledger.csv",
+        "docs/registers/run_registry.csv"
+      ],
+      "detected_conflicts": [
+        "none_detected_after_f90a_state_sync"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "completed",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "runtime_probe",
+        "runtime_verified",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "task_force_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "reviewed_by_unspawned_agents",
+        "model_quality",
+        "model_readiness",
+        "data_contract_pass"
+      ],
+      "packet_id": "frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1",
+      "receipt_path": "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_stage_transition_receipt.json",
+      "skill": "obsidian-stage-transition",
+      "source_current_truth_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/stage_closeout_report.md",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/00_spec/stage_brief.md"
+      ],
+      "status": "executed"
+    },
+    {
+      "allowed_claims": [
+        "f90a_stage_open_design_prepared",
+        "f90_time_to_barrier_competing_risk_label_axis_opened",
+        "f90b_feasibility_scout_planned",
+        "task_force_actual_calls_recorded_for_f90a",
+        "frontier_extra_due_check_not_due_after_f89",
+        "frontier_five_stage_direction_synthesis_recorded_for_f85_to_f89",
+        "frontier_topic_rotation_check_passed_for_f90"
+      ],
+      "final_status": "bounded_design_only_stage_open_no_authority",
+      "forbidden_claims": [
+        "completion",
+        "completed",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "runtime_probe",
+        "runtime_verified",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "task_force_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "reviewed_by_unspawned_agents",
+        "model_quality",
+        "model_readiness",
+        "data_contract_pass"
+      ],
+      "packet_id": "frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1",
+      "receipt_path": "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_claim_discipline_receipt.json",
+      "requested_claims": [
+        "f90a_stage_open_design_prepared",
+        "f90_time_to_barrier_competing_risk_label_axis_opened",
+        "f90b_feasibility_scout_planned",
+        "task_force_actual_calls_recorded_for_f90a",
+        "frontier_extra_due_check_not_due_after_f89",
+        "frontier_five_stage_direction_synthesis_recorded_for_f85_to_f89",
+        "frontier_topic_rotation_check_passed_for_f90"
+      ],
+      "skill": "obsidian-claim-discipline",
+      "status": "executed"
+    }
+  ]
+}

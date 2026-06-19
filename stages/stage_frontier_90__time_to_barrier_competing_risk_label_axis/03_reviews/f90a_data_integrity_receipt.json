@@ -1,0 +1,22 @@
+{
+  "data_sources_checked": [
+    "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01/dataset_summary.json",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89B_deal_path_adverse_selection_proxy_scout_v1/episodes/deal_episodes.csv"
+  ],
+  "leakage_checks": [
+    "F89B/F88C small-n results are inherited as F90 performance.",
+    "Tier A only is described as the whole alpha read.",
+    "Censoring, class imbalance, or same-bar ambiguity is omitted.",
+    "Rank score is described as calibrated probability without calibration evidence.",
+    "Future validation/OOS information tunes barrier thresholds, scalers, or filters.",
+    "Design-only or proxy-only evidence is treated as runtime/economics evidence."
+  ],
+  "missing_data_boundary": "Tier B or combined missing must be recorded as missing_required, blocked, or out_of_scope_by_claim.",
+  "packet_id": "frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1",
+  "receipt_path": "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90a_data_integrity_receipt.json",
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "F90B must report train/validation/OOS event counts before any model or candidate claim.",
+  "status": "executed",
+  "time_axis_boundary": "timestamp/bar_close_key is broker-clock alignment key; no direct UTC assumption"
+}
