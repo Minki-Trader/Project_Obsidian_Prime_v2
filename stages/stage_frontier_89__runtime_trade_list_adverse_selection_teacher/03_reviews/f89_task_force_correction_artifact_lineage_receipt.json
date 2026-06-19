@@ -1,0 +1,43 @@
+{
+  "packet_id": "frontier89_task_force_correction_review_v1",
+  "skill": "obsidian-artifact-lineage",
+  "status": "executed",
+  "source_inputs": [
+    "docs/agent_control/codex_task_force_registry.yaml",
+    "docs/agent_control/work_family_registry.yaml",
+    "docs/policies/agent_trigger_policy.md",
+    "docs/agent_control/packets/frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1/work_packet.yaml",
+    "docs/agent_control/packets/frontier89B_deal_path_adverse_selection_proxy_scout_v1/work_packet.yaml"
+  ],
+  "produced_artifacts": [
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89_task_force_correction_review_receipt.json",
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89_task_force_correction_summary.md",
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89_task_force_correction_gate.json",
+    "docs/agent_control/packets/frontier89_task_force_correction_review_v1/work_packet.yaml",
+    "docs/agent_control/packets/frontier89_task_force_correction_review_v1/skill_receipts.json",
+    "docs/agent_control/packets/frontier89_task_force_correction_review_v1/closeout_gate.json"
+  ],
+  "raw_evidence": [
+    "actual_subagent_calls from multi_agent_v1.spawn_agent notifications"
+  ],
+  "machine_readable": [
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89_task_force_correction_review_receipt.json",
+    "docs/agent_control/packets/frontier89_task_force_correction_review_v1/skill_receipts.json"
+  ],
+  "human_readable": [
+    "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89_task_force_correction_summary.md",
+    "docs/context/current_working_state.md"
+  ],
+  "hashes_or_missing_reasons": [
+    {
+      "path": "docs/agent_control/codex_task_force_registry.yaml",
+      "status": "source_read"
+    },
+    {
+      "path": "docs/agent_control/work_family_registry.yaml",
+      "status": "source_read"
+    }
+  ],
+  "lineage_boundary": "Task Force correction evidence only; no runtime/economics or authority evidence.",
+  "receipt_path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89_task_force_correction_artifact_lineage_receipt.json"
+}

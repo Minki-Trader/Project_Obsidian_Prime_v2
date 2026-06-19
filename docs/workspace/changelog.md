@@ -1,4 +1,12 @@
-﻿# 2026-06-19 - F87A Stage Open(F87A 단계 개방)
+﻿<!-- frontier89_task_force_correction_review_v1 -->
+
+## 2026-06-19T00:13:15Z - F89 Task Force Correction(F89 태스크포스 정정)
+
+- Action(행동): F89A/F89B missed Task Force actual calls(누락된 태스크포스 실제 호출)을 append-only correction receipt(추가 전용 정정 영수증)로 기록했다.
+- Effect(효과): selected agents 5/5 actual_subagent_calls(선택 요원 5/5 실제 하위요원 호출)를 남겼지만 retroactive reviewed/verified/pass(소급 검토됨/검증됨/통과)는 주장하지 않는다.
+- Boundary(경계): `task_force_correction_record_only_no_retroactive_reviewed_verified_pass_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+# 2026-06-19 - F87A Stage Open(F87A 단계 개방)
 
 <!-- frontier87A_stage_open_runtime_native_trade_shape_risk_logic_rotation_v1 -->
 

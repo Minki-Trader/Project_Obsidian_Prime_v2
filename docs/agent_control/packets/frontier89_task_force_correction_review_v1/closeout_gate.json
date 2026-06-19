@@ -1,0 +1,78 @@
+{
+  "packet_id": "frontier89_task_force_correction_review_v1",
+  "status": "recorded_with_lowered_claim_boundary",
+  "claim_boundary": "task_force_correction_record_only_no_retroactive_reviewed_verified_pass_no_strategy_tester_runtime_economics_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "allowed_claims": [
+    "task_force_actual_calls_recorded",
+    "incorrect_not_triggered_correction_recorded",
+    "current_truth_task_force_boundary_synced",
+    "f89c_task_force_trigger_rule_recorded"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents",
+    "retroactive_task_force_pass"
+  ],
+  "audits": [
+    {
+      "audit_name": "work_packet_schema_lint",
+      "status": "pass",
+      "path": "docs/agent_control/packets/frontier89_task_force_correction_review_v1/work_packet_schema_lint.json"
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "status": "pass",
+      "path": "docs/agent_control/packets/frontier89_task_force_correction_review_v1/skill_receipt_schema_lint.json"
+    },
+    {
+      "audit_name": "codex_task_force_review_packet",
+      "status": "actual_calls_recorded_no_retroactive_review_claim",
+      "path": "docs/agent_control/packets/frontier89_task_force_correction_review_v1/codex_task_force_review_packet.json"
+    },
+    {
+      "audit_name": "frontier_extra_due_check",
+      "status": "pass_not_due_existing_f89",
+      "path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_frontier_extra_due_check.json"
+    },
+    {
+      "audit_name": "frontier_five_stage_direction_synthesis",
+      "status": "pass_existing_f89",
+      "path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_frontier_five_stage_direction_synthesis.json"
+    },
+    {
+      "audit_name": "frontier_topic_rotation_check",
+      "status": "pass_existing_f89",
+      "path": "stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/03_reviews/f89b_frontier_topic_rotation_check.json"
+    },
+    {
+      "audit_name": "state_sync_audit",
+      "status": "pass",
+      "path": "docs/agent_control/packets/frontier89_task_force_correction_review_v1/state_sync_audit.json"
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "status": "pass",
+      "path": "docs/agent_control/packets/frontier89_task_force_correction_review_v1/required_gate_coverage_audit.json"
+    }
+  ],
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "status": "pass",
+    "path": "docs/agent_control/packets/frontier89_task_force_correction_review_v1/final_claim_guard.json"
+  }
+}
