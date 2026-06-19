@@ -1,0 +1,9 @@
+﻿# F93A Stage Open Decision
+
+Action: materialize `frontier93A_stage_open_side_balance_cost_exposure_risk_budget_axis_v1` as a design-only stage-open packet.
+
+Effect: `frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1` becomes current run and must lock side/cost budgets before proxy execution.
+
+Task Force: actual selected-agent calls are recorded at `docs/agent_control/packets/frontier93A_stage_open_side_balance_cost_exposure_risk_budget_axis_v1/codex_task_force_review_packet.json`.
+
+Boundary: `f93a_design_only_stage_open_side_balance_cost_exposure_risk_budget_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

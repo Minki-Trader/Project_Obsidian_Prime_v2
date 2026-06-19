@@ -1,8 +1,9 @@
-﻿# Review Index
+﻿# F93 Review Index
 
-F93 pending-open scaffold was written by `frontier92C_path_trade_shape_repair_or_rotation_decision_v1`. Formal F93A open is not claimed here.
-
-- stage brief: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/00_spec/stage_brief.md`
-- input refs: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/01_inputs/input_refs.md`
-- selection status: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/04_selected/selection_status.md`
-- source decision: `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92C/d/decision.json`
+- f93a_report: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/frontier93A_stage_open_side_balance_cost_exposure_risk_budget_report.md`
+- f93a_task_force_receipt: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93a_task_force_review_receipt.json`
+- f93a_frontier_extra_due_check: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93a_frontier_extra_due_check.json`
+- f93a_frontier_five_stage_direction_synthesis: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93a_frontier_five_stage_direction_synthesis.json`
+- f93a_frontier_topic_rotation_check: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93a_frontier_topic_rotation_check.json`
+- packet: `docs/agent_control/packets/frontier93A_stage_open_side_balance_cost_exposure_risk_budget_axis_v1/work_packet.yaml`
+- current_run: `frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1`

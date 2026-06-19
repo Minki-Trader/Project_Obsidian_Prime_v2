@@ -1,4 +1,4 @@
-﻿# Idea Registry
+# Idea Registry
 
 | idea_id | stage_id | hypothesis | tier_scope | status | notes |
 |---|---|---|---|---|---|
@@ -2458,3 +2458,14 @@ Register ideas when they become durable work, not for every passing thought.
 - result: candidate_count `0`; no selected baseline or runtime authority.
 - next_action: `frontier92C_path_trade_shape_repair_or_rotation_decision_v1`.
 - claim_boundary: `f92b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+<!-- frontier93A_stage_open_side_balance_cost_exposure_risk_budget_axis_v1 -->
+## F93A side-balance cost-exposure risk-budget open
+
+- run_id: `frontier93A_stage_open_side_balance_cost_exposure_risk_budget_axis_v1`
+- hypothesis: Predeclared side-balance and cost-exposure risk budgets can turn F92's short-heavy/high-cost failure shape into a runtime-compatible proxy surface without repeating the F92 path-label threshold axis.
+- decision_use: design-only stage open and F93B proxy scout plan.
+- task_force_actual_calls: 6 selected agents recorded.
+- runtime: no Strategy Tester evidence; no runtime authority.
+- next_action: `frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1`.
+- claim_boundary: `f93a_design_only_stage_open_side_balance_cost_exposure_risk_budget_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

@@ -1,0 +1,48 @@
+{
+  "audit_name": "required_gate_coverage_audit",
+  "status": "pass",
+  "passed": true,
+  "completed_forbidden": false,
+  "findings": [],
+  "counts": {
+    "required_gates": [
+      "artifact_lineage_audit",
+      "codex_task_force_review_packet",
+      "data_integrity_audit",
+      "final_claim_guard",
+      "frontier_extra_due_check",
+      "frontier_five_stage_direction_synthesis",
+      "frontier_topic_rotation_check",
+      "model_validation_audit",
+      "required_gate_coverage_audit",
+      "scope_completion_gate",
+      "skill_receipt_schema_lint",
+      "state_sync_audit",
+      "work_packet_schema_lint"
+    ],
+    "executed_audits": [
+      "artifact_lineage_audit",
+      "codex_task_force_review_packet",
+      "data_integrity_audit",
+      "final_claim_guard",
+      "frontier_extra_due_check",
+      "frontier_five_stage_direction_synthesis",
+      "frontier_topic_rotation_check",
+      "model_validation_audit",
+      "required_gate_coverage_audit",
+      "scope_completion_gate",
+      "skill_receipt_schema_lint",
+      "state_sync_audit",
+      "work_packet_schema_lint"
+    ],
+    "not_applicable_with_reason": {
+      "runtime_evidence_gate": "F93A creates design artifacts only and no runnable candidate, ONNX/EA/set behavior, or runtime/materialization/economics claim.",
+      "wfo_stress_gate": "F93A does not train/select a model and only prepares F93B proxy scout design."
+    },
+    "declared_not_implemented": {}
+  },
+  "allowed_claims": [
+    "gate_coverage_complete"
+  ],
+  "forbidden_claims": []
+}

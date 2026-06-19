@@ -1,0 +1,29 @@
+{
+  "audit_name": "data_integrity_audit",
+  "packet_id": "frontier93A_stage_open_side_balance_cost_exposure_risk_budget_axis_v1",
+  "status": "pass_with_boundary",
+  "created_at_utc": "2026-06-19T04:55:11Z",
+  "data_sources_checked": [
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+      "exists": true,
+      "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+      "size_bytes": 2691
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "exists": true,
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "size_bytes": 1053
+    },
+    {
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+      "exists": true,
+      "sha256": "107eba70ec1f3d96e2d30cb3f0f39d48c4ef7e46eb089fb14b576934cc0c6e8f",
+      "size_bytes": 1338
+    }
+  ],
+  "split_boundary": "F93A design-only; F93B must lock train/validation/OOS policy before proxy execution.",
+  "leakage_boundary": "closed-bar features only; post-entry fields are labels/diagnostics only.",
+  "claim_effect": "Data contract is predeclared for F93B but not claimed as a model/runtime pass."
+}

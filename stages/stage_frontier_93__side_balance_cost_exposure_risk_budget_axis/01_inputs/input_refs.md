@@ -1,10 +1,20 @@
-﻿# Input References
+﻿# F93 Input References
 
-- `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92C/summary.json` sha256 `26320a20c9a9aaccf749ff66fffc380d74d8f00ec8aaf465417df83ec67158b5`
-- `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92C/d/decision.json` sha256 `1e12cb7bc748270c308e813a6c7436bf04229ffd0ce5d62e8f4e6a0798a5f0b2`
-- `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92b_execution_summary.json` sha256 `9bbcdbb5a8d402b859f383d2c0e6fdfde7d05f9143a16c7cadd706b7ac79b545`
-- `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92B/proxy_scout/candidate_gate.json` sha256 `8ed8da1917164a8365b6892154d0e320aa12bd055f3d9d37122b2d4ad12943fa`
-- `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92B/proxy_scout/split_metrics.csv` sha256 `ad5e5f2852375e766ed38054bff7ffc43f4616a82cbeddeac340892340a328fc`
-- `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92b_data_integrity_audit.json` sha256 `50be0f13bdd8702753b2f1fc1ca05f7aab2efa2a83019078fb3b32d777fe265d`
+- `docs/workspace/workspace_state.yaml`
+- `docs/context/current_working_state.md`
+- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/00_spec/stage_brief.md`
+- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/01_inputs/input_refs.md`
+- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/04_selected/selection_status.md`
+- `docs/agent_control/work_family_registry.yaml`
+- `docs/agent_control/codex_task_force_registry.yaml`
+- `docs/registers/frontier_extra_stage_register.yaml`
+- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json`
+- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt`
+- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet`
+- `data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json`
+- `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92b_execution_summary.json`
+- `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92B/proxy_scout/candidate_gate.json`
+- `docs/agent_control/packets/frontier92C_path_trade_shape_repair_or_rotation_decision_v1/closeout_gate.json`
+- `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92C/d/decision.json`
 
-Boundary: F93 pending scaffold uses F92C/F92B as reference and negative memory only, not inherited winner or authority.
+Boundary: F92B/F92C are reference and negative memory only, not inherited authority.
