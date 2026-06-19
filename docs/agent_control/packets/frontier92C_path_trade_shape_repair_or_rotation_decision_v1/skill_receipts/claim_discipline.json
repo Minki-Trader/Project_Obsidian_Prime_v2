@@ -1,0 +1,66 @@
+{
+  "packet_id": "frontier92C_path_trade_shape_repair_or_rotation_decision_v1",
+  "skill": "obsidian-claim-discipline",
+  "status": "executed",
+  "receipt_mode": "compact",
+  "source_current_truth_docs": [
+    "docs/workspace/workspace_state.yaml",
+    "docs/context/current_working_state.md",
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/04_selected/selection_status.md"
+  ],
+  "evidence_used": [
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92b_execution_summary.json",
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92B/proxy_scout/candidate_gate.json",
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92C/d/decision.json"
+  ],
+  "claim_boundary": "f92c_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "gates_not_run_with_reason": [
+    {
+      "gate": "runtime_evidence_gate",
+      "reason_code": "outside_claim_surface_no_runtime_claim",
+      "reason": "No runnable candidate, ONNX/EA/set behavior, or runtime/materialization/economics claim exists.",
+      "claim_effect": "Runtime evidence and authority claims are forbidden."
+    }
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "f93_stage_open_completed",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "stage_closeout_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "allowed_claims": [
+    "f92_closed_negative_memory_recorded",
+    "f92_repair_disposition_closed",
+    "f93_pending_open_scaffold_recorded",
+    "task_force_actual_calls_recorded_for_f92c",
+    "frontier_extra_due_check_not_due_after_f92",
+    "frontier_topic_rotation_check_recorded"
+  ],
+  "final_status": "f92c_closed_negative_path_trade_shape_label_axis_rotate_to_f93_no_authority"
+}

@@ -1,0 +1,96 @@
+{
+  "packet_id": "frontier92C_path_trade_shape_repair_or_rotation_decision_v1",
+  "skill": "obsidian-task-force-review",
+  "status": "executed",
+  "trigger_reason": "stage_closeout_rotation_required_and_explicit_user_instruction_required",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "agents_used": [
+    "agent_01_system_governor",
+    "agent_04_evidence_control_plane",
+    "agent_05_data_feature_contract",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "actual_subagent_calls": [
+    {
+      "roster_agent_id": "agent_01_system_governor",
+      "agent_nickname": "Copernicus",
+      "spawned_agent_id": "019ede18-24c1-7441-942b-42c8c0597e87",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "accepted_summary": "F92 negative closeout is inside boundary; F93 requires material novelty delta and topic rotation check."
+    },
+    {
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "agent_nickname": "Gibbs",
+      "spawned_agent_id": "019ede18-521c-7431-b03a-b5d52c079301",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "accepted_summary": "Fresh F92C packet, stage_closeout profile, gate coverage, ledgers, and state sync are required."
+    },
+    {
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "agent_nickname": "Schrodinger",
+      "spawned_agent_id": "019ede18-79dc-7111-92a5-f48bf0f3a9b3",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "accepted_summary": "F92B data/label evidence is sufficient for negative proxy closeout but not runtime negative or authority."
+    },
+    {
+      "roster_agent_id": "agent_06_quant_research",
+      "agent_nickname": "Bacon",
+      "spawned_agent_id": "019ede18-a3bc-71e2-9856-a6a07a5ee20f",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "accepted_summary": "Structural novelty for capped repair is insufficient; rotate to a new F93 axis."
+    },
+    {
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "agent_nickname": "Lorentz",
+      "spawned_agent_id": "019ede18-cc66-77f3-8b44-3a79bf0885f4",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "accepted_summary": "OOS-positive final read is clue only because validation PF is below gate and threshold policy is train-only."
+    },
+    {
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "agent_nickname": "Volta",
+      "spawned_agent_id": "019ede18-f4a1-7f52-9b5b-d68adfa09b4a",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "accepted_summary": "MT5 trigger is not triggered/out_of_scope_by_claim because no runnable candidate or runtime claim exists."
+    }
+  ],
+  "review_requirement": "codex_task_force_review_packet",
+  "model_policy": "inherited_parent_model_highest_available_xhigh_when_available",
+  "bounded_evidence": [
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92B/proxy_scout/candidate_gate.json",
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92b_execution_summary.json",
+    "docs/agent_control/packets/frontier92B_path_conditioned_trade_shape_label_proxy_scout_v1/work_packet.yaml"
+  ],
+  "advice_classification": {
+    "agent_01_system_governor": "accepted",
+    "agent_04_evidence_control_plane": "accepted",
+    "agent_05_data_feature_contract": "accepted",
+    "agent_06_quant_research": "accepted",
+    "agent_07_model_validation_risk": "accepted",
+    "agent_08_mt5_onnx_runtime": "accepted"
+  },
+  "local_verification": [
+    "F92B candidate_count=0 verified from candidate_gate.json.",
+    "F92B validation gate failure verified from split_metrics.csv and execution summary.",
+    "F92C records fresh Task Force calls; F92B calls are not reused as F92C evidence.",
+    "No runtime/materialization/economics claim is made in F92C."
+  ],
+  "final_codex_direction": "Close F92 as negative/no-authority and rotate to F93 pending-open scaffold.",
+  "forbidden_claim_check": "No candidate, selected baseline, operating promotion, runtime authority, live readiness, Goal Achieve, runtime verified, or materialization-ready claim.",
+  "claim_boundary": "f92c_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "decision": "accepted_rotate_to_f93"
+}

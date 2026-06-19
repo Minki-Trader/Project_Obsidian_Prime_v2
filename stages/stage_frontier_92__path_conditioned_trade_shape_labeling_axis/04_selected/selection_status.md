@@ -1,7 +1,5 @@
 ﻿# Selection Status
 
-Current run: `frontier92C_path_trade_shape_repair_or_rotation_decision_v1`
+F92 is closed as negative/no-authority. No candidate, no selected baseline, no operating promotion, no runtime authority, no live readiness, no Goal Achieve.
 
-No candidate, no selected baseline, no operating promotion, no runtime authority, no live readiness, no Goal Achieve.
-
-F92B is proxy-scout evidence only. Runtime probe status: `not_run_no_meaningful_runnable_candidate_no_runtime_materialization_economics_claim_not_cost_or_proxy_bad_skip`.
+F92B positive OOS final read is a clue only because validation joint gate failed and Tier B/side/cost concentration failed.

@@ -1,11 +1,10 @@
 ﻿# Current Working State
 
-- active_stage: `stage_frontier_92__path_conditioned_trade_shape_labeling_axis`
-- latest_completed_run: `frontier92B_path_conditioned_trade_shape_label_proxy_scout_v1`
-- current run: `frontier92C_path_trade_shape_repair_or_rotation_decision_v1`
-- status: `f92b_path_conditioned_trade_shape_proxy_scout_negative_no_candidate_no_authority`
-- judgment: `negative_proxy_scout_path_trade_shape_joint_gate_failed_no_runtime_trigger`
-- best_proxy: `path_first_touch_atr_m15_h48_cost2__extratrees_full58_q90` validation_net `1612.419057` validation_pf `1.028736` OOS_net `2686.554681` OOS_pf `1.05933`
-- Task Force: 6 selected agents actual calls recorded; no Task Force reviewed/pass claim.
-- Runtime: `not_run_no_meaningful_runnable_candidate_no_runtime_materialization_economics_claim_not_cost_or_proxy_bad_skip`
-- Boundary: `f92b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`
+- active stage: `stage_frontier_93__side_balance_cost_exposure_risk_budget_axis`
+- latest completed run: `frontier92C_path_trade_shape_repair_or_rotation_decision_v1`
+- current run: `frontier93A_stage_open_side_balance_cost_exposure_risk_budget_axis_v1`
+- status: `f92c_closed_negative_path_trade_shape_label_axis_rotate_to_f93_no_authority`
+- judgment: `negative_path_trade_shape_proxy_no_candidate_no_runtime_trigger`
+- Task Force: 6 fresh selected agents called for F92C; no Task Force reviewed/pass claim.
+- Runtime: `not_run_no_candidate_no_runnable_decision_surface_no_onnx_ea_set_behavior_no_runtime_materialization_economics_claim_not_cost_or_proxy_bad_skip`
+- Boundary: `f92c_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`

@@ -1575,3 +1575,11 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - salvage_value: path label summary, exit-shape mix, and negative-control metrics remain useful for F92C repair-or-rotation.
 - do_not_repeat: F91-style threshold/filter-only repair without new label geometry, runtime representation, validation philosophy, or risk logic.
 - runtime: no MT5 probe because no runnable candidate/runtime claim exists; this is not a cost/proxy-bad skip.
+
+## F92C path trade-shape label negative closeout
+
+- run_id: `frontier92C_path_trade_shape_repair_or_rotation_decision_v1`
+- failed_boundary: F92B validation PF, Tier B, side concentration, and high-cost concentration failed the joint candidate gate.
+- salvage_value: path-label feature boundary, best diagnostic failure shape, and F92B OOS positive final read as clue only.
+- do_not_repeat: q90/full58/path-first-touch threshold or filter tweak, OOS rescue, proxy PF as runtime PF, Tier A-only overclaim, compile/proxy-only runtime evidence.
+- reopen_condition: new source, label geometry, runtime representation, validation philosophy, objective, trade shape, risk logic, or regime split.
