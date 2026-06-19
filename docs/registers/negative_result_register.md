@@ -1535,3 +1535,8 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - run_id: `frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1`
 - source_negative_memory(원천 부정 기억): F89B 23 episodes(23개 에피소드), Tier B missing_required(Tier B 필수 누락), no materialization candidate(물질화 후보 없음).
 - effect(효과): F90B may use this as do-not-repeat(반복 금지) but cannot use it as performance evidence(성능 근거) or baseline(기준선).
+## F90B Tier B missing boundary(F90B 티어 B 누락 경계)
+
+- run_id: `frontier90B_time_to_barrier_label_feasibility_scout_v1`
+- boundary(경계): Tier B separate(티어 B 분리) is `missing_required(필수 누락)` and Tier A+B combined(티어 A+B 합산) is `blocked_by_missing_tier_b(티어 B 누락으로 차단)`.
+- effect(효과): Tier A-only labelability(티어 A 단독 라벨 가능성)를 whole-alpha read(전체 알파 판독)로 과장하지 않는다.

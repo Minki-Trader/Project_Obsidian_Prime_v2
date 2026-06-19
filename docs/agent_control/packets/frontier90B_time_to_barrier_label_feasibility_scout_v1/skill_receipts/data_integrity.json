@@ -1,0 +1,39 @@
+{
+  "claim_boundary": "f90b_label_feasibility_scout_only_no_model_training_superiority_no_calibration_no_threshold_selection_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "data_sources_checked": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "data/processed/datasets/dataset_fpmarkets_v2_us100_m5_20220901_20260413_cashopen_fullcash_valid_freeze01/dataset_summary.json"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "model_training_superiority",
+    "calibration",
+    "threshold_selection",
+    "task_force_reviewed_pass"
+  ],
+  "leakage_checks": [
+    "anchor uses closed bar t",
+    "future OHLC only after t",
+    "barrier geometry predeclared"
+  ],
+  "missing_data_boundary": "Tier B missing_required; combined blocked_by_missing_tier_b.",
+  "packet_id": "frontier90B_time_to_barrier_label_feasibility_scout_v1",
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "future window crossing split is invalid.",
+  "status": "executed",
+  "time_axis_boundary": "timestamp is bar-close alignment key from materializer; future labels use t+1 through t+12 selected rows."
+}

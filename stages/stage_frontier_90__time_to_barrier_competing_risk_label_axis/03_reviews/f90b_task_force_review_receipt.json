@@ -1,0 +1,85 @@
+{
+  "actual_subagent_calls": [
+    {
+      "context_update_submission_id": "019edd6a-50cd-73b0-8606-d64619be5eb7",
+      "context_update_tool_name": "multi_agent_v1.send_input",
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019edd55-aca3-73f2-992b-e52d71744ead",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "context_update_submission_id": "019edd6a-7607-7101-a2b3-b596f4b961d7",
+      "context_update_tool_name": "multi_agent_v1.send_input",
+      "opinion_classification": "needs_local_verification",
+      "result_status": "completed",
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019edd55-f3c5-7b70-848e-c5a381ca8f65",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "context_update_submission_id": "019edd6a-922f-7c51-845e-07baf7a291ad",
+      "context_update_tool_name": "multi_agent_v1.send_input",
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019edd56-3bf0-7db0-968e-a0124d6b1de4",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "context_update_submission_id": "019edd6a-b205-7a32-9673-7c01376e172e",
+      "context_update_tool_name": "multi_agent_v1.send_input",
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019edd56-821f-7b02-b9d0-13d779165917",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "context_update_submission_id": "019edd6a-d153-7171-874e-584c91364054",
+      "context_update_tool_name": "multi_agent_v1.send_input",
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019edd57-0364-7ae1-b027-9f8fc36269b0",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    }
+  ],
+  "advice_classification": {
+    "agent_04_evidence_control_plane": "accepted",
+    "agent_05_data_feature_contract": "needs_local_verification",
+    "agent_06_quant_research": "accepted",
+    "agent_07_model_validation_risk": "accepted",
+    "agent_08_mt5_onnx_runtime": "accepted"
+  },
+  "agents_used": [
+    "agent_04_evidence_control_plane",
+    "agent_05_data_feature_contract",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "bounded_evidence": [
+    "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90B/labels/label_feasibility_stats.json",
+    "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90B/kpi_record.json",
+    "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90B/labels/tier_records.json",
+    "docs/agent_control/packets/frontier90B_time_to_barrier_label_feasibility_scout_v1/work_packet.yaml"
+  ],
+  "claim_boundary": "f90b_label_feasibility_scout_only_no_model_training_superiority_no_calibration_no_threshold_selection_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "final_codex_direction": "Record F90B as label feasibility clue with Tier B missing boundary and no runtime claim.",
+  "forbidden_claim_check": "No completion, selected baseline, operating promotion, runtime authority, live readiness, or Goal Achieve claim.",
+  "local_verification": [
+    "F90B predeclared a single ATR barrier geometry before measurement.",
+    "Same-bar both-hit rows are ambiguous, not hidden.",
+    "Tier B and combined views are structured missing/blocked, not omitted.",
+    "No runtime/economics/materialization claim is made."
+  ],
+  "model_policy": "gpt-5.5_xhigh_floor_with_existing_spawned_roster_context_refresh",
+  "packet_id": "frontier90B_time_to_barrier_label_feasibility_scout_v1",
+  "review_requirement": "codex_task_force_review_packet",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "skill": "obsidian-task-force-review",
+  "status": "executed",
+  "trigger_reason": "active_goal_required_and_explicit_user_instruction_required"
+}

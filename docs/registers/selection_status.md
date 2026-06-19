@@ -1,23 +1,5 @@
-﻿# F90 Selection Status(F90 선택 상태)
+﻿# Selection Status(선택 상태)
 
-Updated(갱신): 2026-06-19T01:00:04Z
+No selected baseline(선택 기준선 없음), no operating promotion(운영 승격 없음), no runtime authority(런타임 권위 없음), no live readiness(실거래 준비 없음), no Goal Achieve(목표 달성 없음).
 
-Current run(현재 실행): `frontier90B_time_to_barrier_label_feasibility_scout_v1`
-
-Latest completed run(최근 완료 실행): `frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1`
-
-Status(상태): `f90a_stage_open_design_prepared_f90b_barrier_label_feasibility_scout_planned_no_authority`
-
-Judgment(판정): `design_only_time_to_barrier_competing_risk_label_axis_no_runtime_evidence`
-
-Selected baseline(선택 기준선): not_claimed(주장하지 않음)
-
-Operating promotion(운영 승격): not_claimed(주장하지 않음)
-
-Runtime authority(런타임 권위): not_claimed(주장하지 않음)
-
-Live readiness(실거래 준비): not_claimed(주장하지 않음)
-
-Goal Achieve(목표 달성): not_claimed(주장하지 않음)
-
-Next action(다음 행동): `frontier90B_time_to_barrier_label_feasibility_scout_v1`.
+F90B(전선90B) is a label feasibility clue(라벨 가능성 단서) only. Tier B(티어 B) remains `missing_required(필수 누락)`, so Tier A+B combined(티어 A+B 합산) is blocked(차단).
