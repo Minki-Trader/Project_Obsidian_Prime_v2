@@ -1,0 +1,52 @@
+{
+  "run_id": "frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1",
+  "embedding_surface": "closed_bar_state_transition_embedding",
+  "feature_window_bars": 24,
+  "feature_order_hash": "b542f96b72187ed8e0f1a30ac841b6de230c18f1ac2d4f05999c6e7e076cb8ec",
+  "feature_count": 56,
+  "variants": [
+    {
+      "variant_id": "k5_pca3_seed9502",
+      "n_clusters": 5,
+      "embedding_dim": 3
+    },
+    {
+      "variant_id": "k5_pca5_seed9502",
+      "n_clusters": 5,
+      "embedding_dim": 5
+    },
+    {
+      "variant_id": "k7_pca3_seed9502",
+      "n_clusters": 7,
+      "embedding_dim": 3
+    },
+    {
+      "variant_id": "k7_pca5_seed9502",
+      "n_clusters": 7,
+      "embedding_dim": 5
+    },
+    {
+      "variant_id": "k9_pca3_seed9502",
+      "n_clusters": 9,
+      "embedding_dim": 3
+    },
+    {
+      "variant_id": "k9_pca5_seed9502",
+      "n_clusters": 9,
+      "embedding_dim": 5
+    }
+  ],
+  "candidate_gate_thresholds": {
+    "validation_actual_routed_net": ">0",
+    "validation_pf_min": 1.0,
+    "validation_trades_per_day_range": [
+      5.0,
+      10.0
+    ],
+    "validation_drawdown_cap": 0.3,
+    "validation_side_min_share": 0.2,
+    "state_class_max_share": 0.85,
+    "control_gate": "net_proxy must exceed random_abstain_rate_match mean on validation"
+  },
+  "runtime_trigger_rule": "If a meaningful runnable candidate, ONNX/EA/set behavior, or runtime/materialization/economics/handoff claim is created, same-packet MT5 Strategy Tester probe is required."
+}

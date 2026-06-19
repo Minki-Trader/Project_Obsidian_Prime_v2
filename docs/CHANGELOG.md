@@ -140,3 +140,15 @@
 - Task Force(태스크포스): six selected agents(선택 요원 6명) were actually called(실제 호출) and recorded(기록) in `docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/codex_task_force_review_packet.json`.
 - Runtime(런타임): no new Strategy Tester runtime evidence(새 전략 테스터 런타임 근거 없음); no runtime authority(런타임 권위 없음); no Goal Achieve(목표 달성 없음).
 - Boundary(경계): `f95a_design_only_stage_open_closed_bar_state_transition_embedding_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+
+<!-- frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1 -->
+## F95B Closed-Bar State Transition Proxy Scout
+
+- run_id(실행 ID): `frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1`
+- status(상태): `f95b_closed_bar_state_transition_proxy_scout_negative_no_runnable_candidate_no_authority`
+- judgment(판정): `negative_proxy_scout_state_transition_gate_failed_no_runtime_trigger`
+- candidate_gate_count(후보 게이트 수): `0`
+- runtime_probe_status(런타임 탐침 상태): `not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip`
+- next_action(다음 행동): `frontier95C_closed_bar_state_transition_repair_or_rotation_decision_v1`
+
+Effect(효과): this records clue/negative memory(단서/부정 기억) only; no selected baseline(선택 기준선), runtime authority(런타임 권위), live readiness(실거래 준비), or Goal Achieve(목표 달성) is claimed.

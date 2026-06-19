@@ -1,0 +1,585 @@
+{
+  "run_id": "frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1",
+  "stage_id": "stage_frontier_95__closed_bar_state_transition_embedding_axis",
+  "parent_run_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+  "next_run_id": "frontier95C_closed_bar_state_transition_repair_or_rotation_decision_v1",
+  "created_at_utc": "2026-06-19T07:54:27Z",
+  "status": "f95b_closed_bar_state_transition_proxy_scout_negative_no_runnable_candidate_no_authority",
+  "judgment": "negative_proxy_scout_state_transition_gate_failed_no_runtime_trigger",
+  "verification_profile": "proxy_scout",
+  "hypothesis": "Train-only closed-bar state-transition embeddings can identify durable tradeable US100 M5 states without reusing F94 utility-label threshold repair.",
+  "candidate_gate_count": 0,
+  "best_diagnostic_variant": "k9_pca5_seed9502",
+  "best_diagnostic_score": 38.39023486,
+  "validation_actual_routed_net": 0.33572856,
+  "validation_actual_routed_pf": 1.17023,
+  "validation_actual_routed_drawdown": 0.68550792,
+  "validation_actual_routed_trade_count": 586,
+  "validation_actual_routed_trades_per_day": 3.167568,
+  "runtime_probe_status": "not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip",
+  "task_force_actual_subagent_call_count": 5,
+  "claim_boundary": "f95b_proxy_scout_only_closed_bar_state_transition_embedding_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim",
+  "kpi_record": {
+    "packet_id": "frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1",
+    "test_period": "train_2022-09-01_to_2024-12-31_validation_2025-01-02_to_2025-09-30_oos_2025-10-01_to_2026-04-13",
+    "hypothesis": "Train-only closed-bar state-transition embeddings can identify durable tradeable US100 M5 states without reusing F94 utility-label threshold repair.",
+    "proxy_kpi": {
+      "variant_id": "k9_pca5_seed9502",
+      "model_family": "pca_kmeans_transition_state",
+      "embedding_dim": 5,
+      "n_clusters": 9,
+      "view": "tier_ab_combined",
+      "split": "validation",
+      "state_class_count": 2,
+      "max_state_class_share": 0.952007,
+      "high_cost_trade_share": 0.981229,
+      "rows": 12210,
+      "days": 185,
+      "trade_count": 586,
+      "trades_per_day": 3.167568,
+      "net_proxy": 0.33572856,
+      "gross_profit": 2.30792864,
+      "gross_loss": 1.97220007,
+      "proxy_pf": 1.17023,
+      "win_rate": 0.505119,
+      "avg_win": 0.00779706,
+      "avg_loss": -0.00680069,
+      "payoff_ratio": 1.14651,
+      "expectancy": 0.00057292,
+      "max_drawdown": 0.68550792,
+      "recovery_factor": 0.489752,
+      "time_under_water_bars": 537,
+      "max_consecutive_loss": 26,
+      "long_count": 586,
+      "short_count": 0,
+      "side_min_share": 0.0,
+      "avg_cost_penalty": 0.00049017,
+      "regime_coverage_count": 15,
+      "cost_high_trade_share": 0.981229,
+      "random_net_proxy_mean": -0.1293786,
+      "random_proxy_pf_mean": 0.470948,
+      "random_max_drawdown_mean": 0.15087254
+    },
+    "runtime_kpi": "not_applicable_no_runnable_candidate_no_runtime_claim",
+    "net_profit": 0.33572856,
+    "profit_factor": 1.17023,
+    "drawdown": 0.68550792,
+    "trade_count": 586,
+    "trades_per_day": 3.167568,
+    "parity": "not_applicable_no_onnx_or_ea",
+    "gap_cause": "proxy/runtime gap not measured because no runtime materialization or handoff claim is made",
+    "next_action": "frontier95C_closed_bar_state_transition_repair_or_rotation_decision_v1",
+    "candidate_gate": {
+      "candidate_count": 0,
+      "best_gate": {
+        "variant_id": "k9_pca5_seed9502",
+        "status": "not_candidate",
+        "selection_failures": [
+          "tier_a_separate_validation_trades_per_day_outside_5_to_10",
+          "tier_a_separate_validation_drawdown_above_predeclared_cap",
+          "tier_a_separate_validation_side_concentration",
+          "tier_a_separate_validation_state_class_share_collapsed",
+          "tier_b_separate_validation_trades_per_day_too_thin",
+          "tier_b_separate_validation_side_concentration",
+          "tier_b_separate_validation_recovery_factor_nonpositive",
+          "tier_b_separate_validation_state_class_share_collapsed",
+          "tier_ab_combined_validation_trades_per_day_outside_5_to_10",
+          "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+          "tier_ab_combined_validation_side_concentration",
+          "tier_ab_combined_validation_state_class_share_collapsed"
+        ],
+        "oos_final_read_notes": [
+          "tier_b_separate_oos_net_nonpositive_final_read",
+          "tier_b_separate_oos_pf_below_1_final_read"
+        ],
+        "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+      }
+    },
+    "tier_records_required": [
+      "Tier A separate",
+      "Tier B separate",
+      "Tier A+B combined"
+    ],
+    "closeout_kpi": {
+      "gross_profit": 2.30792864,
+      "gross_loss": 1.97220007,
+      "win_rate": 0.505119,
+      "avg_win": 0.00779706,
+      "avg_loss": -0.00680069,
+      "payoff_ratio": 1.14651,
+      "expectancy": 0.00057292,
+      "recovery_factor": 0.489752,
+      "time_under_water": 537,
+      "max_consecutive_loss": 26,
+      "long_short_breakdown": {
+        "long_count": 586,
+        "short_count": 0
+      }
+    },
+    "runtime_probe_trigger_rule": "If candidate_count > 0 or a runnable ONNX/EA/set/materialization/economics/handoff claim appears, same-packet MT5 Strategy Tester probe is required.",
+    "runtime_skip_reason_rejected": [
+      "cost_or_expense",
+      "proxy_result_bad"
+    ],
+    "claim_boundary": "f95b_proxy_scout_only_closed_bar_state_transition_embedding_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim"
+  },
+  "candidate_gate": {
+    "candidate_count": 0,
+    "gates": [
+      {
+        "variant_id": "k5_pca3_seed9502",
+        "status": "not_candidate",
+        "selection_failures": [
+          "tier_a_separate_validation_net_nonpositive",
+          "tier_a_separate_validation_pf_below_1",
+          "tier_a_separate_validation_trades_per_day_outside_5_to_10",
+          "tier_a_separate_validation_side_concentration",
+          "tier_a_separate_validation_recovery_factor_nonpositive",
+          "tier_a_separate_validation_not_above_random_control",
+          "tier_a_separate_validation_state_class_coverage_collapsed",
+          "tier_a_separate_validation_state_class_share_collapsed",
+          "tier_b_separate_validation_net_nonpositive",
+          "tier_b_separate_validation_pf_below_1",
+          "tier_b_separate_validation_trades_per_day_too_thin",
+          "tier_b_separate_validation_side_concentration",
+          "tier_b_separate_validation_recovery_factor_nonpositive",
+          "tier_b_separate_validation_not_above_random_control",
+          "tier_b_separate_validation_state_class_coverage_collapsed",
+          "tier_b_separate_validation_state_class_share_collapsed",
+          "tier_ab_combined_validation_net_nonpositive",
+          "tier_ab_combined_validation_pf_below_1",
+          "tier_ab_combined_validation_trades_per_day_outside_5_to_10",
+          "tier_ab_combined_validation_side_concentration",
+          "tier_ab_combined_validation_recovery_factor_nonpositive",
+          "tier_ab_combined_validation_not_above_random_control",
+          "tier_ab_combined_validation_state_class_coverage_collapsed",
+          "tier_ab_combined_validation_state_class_share_collapsed"
+        ],
+        "oos_final_read_notes": [
+          "tier_a_separate_oos_net_nonpositive_final_read",
+          "tier_a_separate_oos_pf_below_1_final_read",
+          "tier_b_separate_oos_net_nonpositive_final_read",
+          "tier_b_separate_oos_pf_below_1_final_read",
+          "tier_ab_combined_oos_net_nonpositive_final_read",
+          "tier_ab_combined_oos_pf_below_1_final_read"
+        ],
+        "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+      },
+      {
+        "variant_id": "k5_pca5_seed9502",
+        "status": "not_candidate",
+        "selection_failures": [
+          "tier_a_separate_validation_drawdown_above_predeclared_cap",
+          "tier_a_separate_validation_side_concentration",
+          "tier_a_separate_validation_state_class_share_collapsed",
+          "tier_b_separate_validation_net_nonpositive",
+          "tier_b_separate_validation_pf_below_1",
+          "tier_b_separate_validation_trades_per_day_too_thin",
+          "tier_b_separate_validation_side_concentration",
+          "tier_b_separate_validation_recovery_factor_nonpositive",
+          "tier_b_separate_validation_not_above_random_control",
+          "tier_b_separate_validation_state_class_share_collapsed",
+          "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+          "tier_ab_combined_validation_side_concentration",
+          "tier_ab_combined_validation_state_class_share_collapsed"
+        ],
+        "oos_final_read_notes": [
+          "tier_a_separate_oos_net_nonpositive_final_read",
+          "tier_a_separate_oos_pf_below_1_final_read",
+          "tier_b_separate_oos_net_nonpositive_final_read",
+          "tier_b_separate_oos_pf_below_1_final_read",
+          "tier_ab_combined_oos_net_nonpositive_final_read",
+          "tier_ab_combined_oos_pf_below_1_final_read"
+        ],
+        "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+      },
+      {
+        "variant_id": "k7_pca3_seed9502",
+        "status": "not_candidate",
+        "selection_failures": [
+          "tier_a_separate_validation_net_nonpositive",
+          "tier_a_separate_validation_pf_below_1",
+          "tier_a_separate_validation_trades_per_day_outside_5_to_10",
+          "tier_a_separate_validation_side_concentration",
+          "tier_a_separate_validation_recovery_factor_nonpositive",
+          "tier_a_separate_validation_not_above_random_control",
+          "tier_a_separate_validation_state_class_coverage_collapsed",
+          "tier_a_separate_validation_state_class_share_collapsed",
+          "tier_b_separate_validation_net_nonpositive",
+          "tier_b_separate_validation_pf_below_1",
+          "tier_b_separate_validation_trades_per_day_too_thin",
+          "tier_b_separate_validation_side_concentration",
+          "tier_b_separate_validation_recovery_factor_nonpositive",
+          "tier_b_separate_validation_not_above_random_control",
+          "tier_b_separate_validation_state_class_coverage_collapsed",
+          "tier_b_separate_validation_state_class_share_collapsed",
+          "tier_ab_combined_validation_net_nonpositive",
+          "tier_ab_combined_validation_pf_below_1",
+          "tier_ab_combined_validation_trades_per_day_outside_5_to_10",
+          "tier_ab_combined_validation_side_concentration",
+          "tier_ab_combined_validation_recovery_factor_nonpositive",
+          "tier_ab_combined_validation_not_above_random_control",
+          "tier_ab_combined_validation_state_class_coverage_collapsed",
+          "tier_ab_combined_validation_state_class_share_collapsed"
+        ],
+        "oos_final_read_notes": [
+          "tier_a_separate_oos_net_nonpositive_final_read",
+          "tier_a_separate_oos_pf_below_1_final_read",
+          "tier_b_separate_oos_net_nonpositive_final_read",
+          "tier_b_separate_oos_pf_below_1_final_read",
+          "tier_ab_combined_oos_net_nonpositive_final_read",
+          "tier_ab_combined_oos_pf_below_1_final_read"
+        ],
+        "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+      },
+      {
+        "variant_id": "k7_pca5_seed9502",
+        "status": "not_candidate",
+        "selection_failures": [
+          "tier_a_separate_validation_net_nonpositive",
+          "tier_a_separate_validation_pf_below_1",
+          "tier_a_separate_validation_trades_per_day_outside_5_to_10",
+          "tier_a_separate_validation_side_concentration",
+          "tier_a_separate_validation_recovery_factor_nonpositive",
+          "tier_a_separate_validation_not_above_random_control",
+          "tier_a_separate_validation_state_class_coverage_collapsed",
+          "tier_a_separate_validation_state_class_share_collapsed",
+          "tier_b_separate_validation_net_nonpositive",
+          "tier_b_separate_validation_pf_below_1",
+          "tier_b_separate_validation_trades_per_day_too_thin",
+          "tier_b_separate_validation_side_concentration",
+          "tier_b_separate_validation_recovery_factor_nonpositive",
+          "tier_b_separate_validation_not_above_random_control",
+          "tier_b_separate_validation_state_class_coverage_collapsed",
+          "tier_b_separate_validation_state_class_share_collapsed",
+          "tier_ab_combined_validation_net_nonpositive",
+          "tier_ab_combined_validation_pf_below_1",
+          "tier_ab_combined_validation_trades_per_day_outside_5_to_10",
+          "tier_ab_combined_validation_side_concentration",
+          "tier_ab_combined_validation_recovery_factor_nonpositive",
+          "tier_ab_combined_validation_not_above_random_control",
+          "tier_ab_combined_validation_state_class_coverage_collapsed",
+          "tier_ab_combined_validation_state_class_share_collapsed"
+        ],
+        "oos_final_read_notes": [
+          "tier_a_separate_oos_net_nonpositive_final_read",
+          "tier_a_separate_oos_pf_below_1_final_read",
+          "tier_b_separate_oos_net_nonpositive_final_read",
+          "tier_b_separate_oos_pf_below_1_final_read",
+          "tier_ab_combined_oos_net_nonpositive_final_read",
+          "tier_ab_combined_oos_pf_below_1_final_read"
+        ],
+        "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+      },
+      {
+        "variant_id": "k9_pca3_seed9502",
+        "status": "not_candidate",
+        "selection_failures": [
+          "tier_a_separate_validation_trades_per_day_outside_5_to_10",
+          "tier_a_separate_validation_drawdown_above_predeclared_cap",
+          "tier_a_separate_validation_side_concentration",
+          "tier_a_separate_validation_state_class_share_collapsed",
+          "tier_b_separate_validation_trades_per_day_too_thin",
+          "tier_b_separate_validation_side_concentration",
+          "tier_b_separate_validation_state_class_share_collapsed",
+          "tier_ab_combined_validation_trades_per_day_outside_5_to_10",
+          "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+          "tier_ab_combined_validation_side_concentration",
+          "tier_ab_combined_validation_state_class_share_collapsed"
+        ],
+        "oos_final_read_notes": [
+          "tier_b_separate_oos_net_nonpositive_final_read",
+          "tier_b_separate_oos_pf_below_1_final_read"
+        ],
+        "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+      },
+      {
+        "variant_id": "k9_pca5_seed9502",
+        "status": "not_candidate",
+        "selection_failures": [
+          "tier_a_separate_validation_trades_per_day_outside_5_to_10",
+          "tier_a_separate_validation_drawdown_above_predeclared_cap",
+          "tier_a_separate_validation_side_concentration",
+          "tier_a_separate_validation_state_class_share_collapsed",
+          "tier_b_separate_validation_trades_per_day_too_thin",
+          "tier_b_separate_validation_side_concentration",
+          "tier_b_separate_validation_recovery_factor_nonpositive",
+          "tier_b_separate_validation_state_class_share_collapsed",
+          "tier_ab_combined_validation_trades_per_day_outside_5_to_10",
+          "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+          "tier_ab_combined_validation_side_concentration",
+          "tier_ab_combined_validation_state_class_share_collapsed"
+        ],
+        "oos_final_read_notes": [
+          "tier_b_separate_oos_net_nonpositive_final_read",
+          "tier_b_separate_oos_pf_below_1_final_read"
+        ],
+        "claim_effect": "runtime_evidence_gate_not_triggered_no_runnable_candidate_claim"
+      }
+    ]
+  },
+  "data_feature_split_lock": {
+    "run_id": "frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1",
+    "created_at_utc": "2026-06-19T07:54:27Z",
+    "model_input_dataset": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "exists": true,
+      "sha256": "5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43",
+      "size_bytes": 14278154,
+      "artifact_kind": "file"
+    },
+    "model_input_summary": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+      "exists": true,
+      "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+      "size_bytes": 2691,
+      "artifact_kind": "file"
+    },
+    "feature_order": {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "exists": true,
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "size_bytes": 1053,
+      "artifact_kind": "file"
+    },
+    "embedding_feature_count": 56,
+    "embedding_feature_order_hash": "b542f96b72187ed8e0f1a30ac841b6de230c18f1ac2d4f05999c6e7e076cb8ec",
+    "embedding_fit_hash_train_tier_ab_combined": "0a6670521c84eb0d726c0435ca2f95dfebd3123a8fca221452f649e2931c8094",
+    "split_summary": {
+      "tier_a_separate": {
+        "oos": {
+          "rows": 7584,
+          "start": "2025-10-01 16:35:00+00:00",
+          "end": "2026-04-13 22:00:00+00:00",
+          "unique_dates": 131
+        },
+        "train": {
+          "rows": 29222,
+          "start": "2022-09-01 16:40:00+00:00",
+          "end": "2024-12-31 22:00:00+00:00",
+          "unique_dates": 573
+        },
+        "validation": {
+          "rows": 9844,
+          "start": "2025-01-02 16:35:00+00:00",
+          "end": "2025-09-30 22:00:00+00:00",
+          "unique_dates": 183
+        }
+      },
+      "tier_b_separate": {
+        "oos": {
+          "rows": 1062,
+          "start": "2025-10-01 17:30:00+00:00",
+          "end": "2026-04-13 21:45:00+00:00",
+          "unique_dates": 121
+        },
+        "train": {
+          "rows": 8970,
+          "start": "2022-09-01 16:35:00+00:00",
+          "end": "2024-12-31 21:55:00+00:00",
+          "unique_dates": 555
+        },
+        "validation": {
+          "rows": 2366,
+          "start": "2025-01-02 17:50:00+00:00",
+          "end": "2025-09-30 21:55:00+00:00",
+          "unique_dates": 148
+        }
+      },
+      "tier_ab_combined": {
+        "oos": {
+          "rows": 8646,
+          "start": "2025-10-01 16:35:00+00:00",
+          "end": "2026-04-13 22:00:00+00:00",
+          "unique_dates": 131
+        },
+        "train": {
+          "rows": 38192,
+          "start": "2022-09-01 16:35:00+00:00",
+          "end": "2024-12-31 22:00:00+00:00",
+          "unique_dates": 579
+        },
+        "validation": {
+          "rows": 12210,
+          "start": "2025-01-02 16:35:00+00:00",
+          "end": "2025-09-30 22:00:00+00:00",
+          "unique_dates": 185
+        }
+      }
+    },
+    "tier_route_summary": {
+      "tier_a_rows": 46650,
+      "tier_b_fallback_rows": 12398,
+      "actual_routed_rows": 59048,
+      "by_view_split": {
+        "tier_a_separate": {
+          "oos": 7584,
+          "train": 29222,
+          "validation": 9844
+        },
+        "tier_b_separate": {
+          "oos": 1062,
+          "train": 8970,
+          "validation": 2366
+        },
+        "tier_ab_combined": {
+          "oos": 8646,
+          "train": 38192,
+          "validation": 12210
+        }
+      },
+      "combined_boundary": "actual routed total is Tier A primary plus Tier B fallback rows, not a synthetic KPI sum"
+    },
+    "tier_b_summary": {
+      "policy_id": "tier_b_partial_context_core42_fallback_v1",
+      "dataset_id": "stage10_tier_b_partial_context_core42_v1",
+      "feature_set_id": "feature_set_stage10_tier_b_core42_us100_session_v1",
+      "feature_count": 42,
+      "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+      "label_threshold_log_return": 0.001277833051854688,
+      "source_raw_rows": 261344,
+      "source_valid_rows": 56939,
+      "labelable_rows": 60101,
+      "tier_a_primary_rows": 46650,
+      "tier_b_training_rows": 59048,
+      "tier_b_fallback_rows": 12398,
+      "no_tier_labelable_rows": 1053,
+      "by_split": {
+        "train": {
+          "tier_a_primary_rows": 29222,
+          "tier_b_fallback_rows": 8970,
+          "no_tier_labelable_rows": 691,
+          "routed_labelable_rows": 38192
+        },
+        "validation": {
+          "tier_a_primary_rows": 9844,
+          "tier_b_fallback_rows": 2366,
+          "no_tier_labelable_rows": 203,
+          "routed_labelable_rows": 12210
+        },
+        "oos": {
+          "tier_a_primary_rows": 7584,
+          "tier_b_fallback_rows": 1062,
+          "no_tier_labelable_rows": 159,
+          "routed_labelable_rows": 8646
+        }
+      },
+      "tier_b_fallback_by_subtype": {
+        "B_constituent_missing": 1,
+        "B_core_only": 200,
+        "B_full_context_outside_tier_a_scope": 217,
+        "B_macro_missing": 10740,
+        "B_mixed_partial_context": 1240
+      },
+      "tier_b_fallback_by_split_subtype": {
+        "oos": {
+          "B_core_only": 24,
+          "B_full_context_outside_tier_a_scope": 1,
+          "B_macro_missing": 809,
+          "B_mixed_partial_context": 228
+        },
+        "train": {
+          "B_constituent_missing": 1,
+          "B_core_only": 151,
+          "B_full_context_outside_tier_a_scope": 216,
+          "B_macro_missing": 7805,
+          "B_mixed_partial_context": 797
+        },
+        "validation": {
+          "B_core_only": 25,
+          "B_macro_missing": 2126,
+          "B_mixed_partial_context": 215
+        }
+      },
+      "no_tier_by_split": {
+        "oos": 159,
+        "train": 691,
+        "validation": 203
+      },
+      "note": "Tier B fallback is built from partial-context rows outside the strict Tier A clean sample that still have finite US100/session core42 features."
+    },
+    "closed_bar_boundary": "features use row t closed M5 bars and rolling history only; decisions are after bar close."
+  },
+  "task_force_actual_subagent_calls": [
+    {
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019edecc-5659-7ef3-9528-63eae1807fe8",
+      "nickname": "Lagrange",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Use experiment_execution plus proxy_scout, require work packet, manifests, split metrics, candidate gate, KPI record, artifact hashes, ledgers, state sync, and no Task Force reviewed/pass claim.",
+      "bounded_evidence": [
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\candidate_gate.json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\kpi_record.json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\docs\\agent_control\\packets\\frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1\\work_packet.yaml"
+      ],
+      "local_verification": "Implemented through candidate gate, KPI contract audit, artifact lineage audit, state sync audit, and final claim guard."
+    },
+    {
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019edecc-6c17-7f63-a022-cde2dfdef846",
+      "nickname": "Cicero the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Closed M5 bar inputs only, train-only fit for scaler/embedding/cluster, no future return or label-derived state in embedding, Tier A/B/A+B records required.",
+      "bounded_evidence": [
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\data_feature_split_lock.json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\state_transition_fit_manifest.json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\data_integrity_local_checks.json"
+      ],
+      "local_verification": "Embedding features are denylist-checked and fitted on train A+B only; split/time/tier records are written."
+    },
+    {
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019edecc-8078-7933-bc3c-28ff8de2c56b",
+      "nickname": "Zeno the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "disposition": "accepted",
+      "summary": "Use 24 closed M5 bars, transition entropy, dwell, volatility expansion, cost proxy, four state classes, and non-PF-only candidate gate.",
+      "bounded_evidence": [
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\embedding_config.json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\state_class_distribution.csv",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\candidate_gate.json"
+      ],
+      "local_verification": "Implemented 24-bar transition features and four-class cluster readout with validation candidate gate."
+    },
+    {
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019edecc-9bc9-7cb2-b2dc-60057ec311e0",
+      "nickname": "Leibniz the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "F95B is structural/proxy scout only; validation selects, OOS locked read, no calibration, no PF-only selection, no combined-only success.",
+      "bounded_evidence": [
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\split_metrics.csv",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\negative_control_metrics.csv",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\03_reviews\\f95b_model_validation_audit.json"
+      ],
+      "local_verification": "Validation-only candidate gate and OOS final-read-only are recorded; no calibrated probability claim."
+    },
+    {
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019edecc-b56c-7663-944c-129614791e2a",
+      "nickname": "Dirac the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "disposition": "accepted",
+      "summary": "MT5 Strategy Tester is not applicable when no runnable candidate or runtime/materialization/economics/handoff claim exists; same-packet MT5 is required if one appears.",
+      "bounded_evidence": [
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\kpi_record.json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\candidate_gate.json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\03_reviews\\f95b_final_claim_guard.json"
+      ],
+      "local_verification": "Runtime status is derived from candidate_count and claim surface, not from cost or poor proxy results."
+    }
+  ]
+}

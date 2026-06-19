@@ -1,0 +1,65 @@
+{
+  "packet_id": "frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1",
+  "status": "executed",
+  "claim_boundary": "f95b_proxy_scout_only_closed_bar_state_transition_embedding_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim",
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "promotion_candidate",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "skill": "obsidian-experiment-design",
+  "hypothesis": "Train-only closed-bar state-transition embeddings can identify durable tradeable US100 M5 states without reusing F94 utility-label threshold repair.",
+  "baseline": {
+    "source_run_id": "frontier94B_tier_stable_realized_utility_label_proxy_scout_v1",
+    "use": "negative_memory_only_not_inherited_baseline",
+    "reference_artifacts": [
+      "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/kpi_record.json",
+      "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json"
+    ]
+  },
+  "changed_variables": [
+    "closed-bar state-transition embedding instead of F94 realized-utility label repair",
+    "24-bar transition entropy/dwell/volatility expansion/cost proxy microstate",
+    "validation-only non-PF-only candidate gate"
+  ],
+  "invalid_conditions": [
+    "future_return_or_label_used_as_embedding_feature",
+    "validation_or_oos_fit_or_threshold_tuning",
+    "Tier A-only result presented as whole alpha read",
+    "runtime/materialization/economics claim without MT5 Strategy Tester evidence"
+  ],
+  "evidence_plan": {
+    "tier_records": [
+      "Tier A separate",
+      "Tier B separate",
+      "Tier A+B combined"
+    ],
+    "candidate_gate": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95B/proxy_scout/candidate_gate.json"
+  },
+  "variant_count": 6,
+  "selection_policy": "train-only scaler/PCA/KMeans fit; train-only cluster action read; validation candidate gate; OOS final read only; no calibrated probability claim",
+  "receipt_path": "docs/agent_control/packets/frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1/skill_receipts/experiment_design.json"
+}

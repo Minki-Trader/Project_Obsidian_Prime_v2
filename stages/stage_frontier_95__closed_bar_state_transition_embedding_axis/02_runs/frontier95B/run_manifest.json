@@ -1,0 +1,81 @@
+{
+  "script": "stage_pipelines/stage_frontier_95/frontier95b_state_transition_proxy_scout.py",
+  "run_id": "frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1",
+  "stage_id": "stage_frontier_95__closed_bar_state_transition_embedding_axis",
+  "parent_run_id": "frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1",
+  "next_run_id": "frontier95C_closed_bar_state_transition_repair_or_rotation_decision_v1",
+  "created_at_utc": "2026-06-19T07:54:27Z",
+  "status": "f95b_closed_bar_state_transition_proxy_scout_negative_no_runnable_candidate_no_authority",
+  "judgment": "negative_proxy_scout_state_transition_gate_failed_no_runtime_trigger",
+  "verification_profile": "proxy_scout",
+  "hypothesis": "Train-only closed-bar state-transition embeddings can identify durable tradeable US100 M5 states without reusing F94 utility-label threshold repair.",
+  "candidate_gate_count": 0,
+  "best_diagnostic_variant": "k9_pca5_seed9502",
+  "best_diagnostic_score": 38.39023486,
+  "validation_actual_routed_net": 0.33572856,
+  "validation_actual_routed_pf": 1.17023,
+  "validation_actual_routed_drawdown": 0.68550792,
+  "validation_actual_routed_trade_count": 586,
+  "validation_actual_routed_trades_per_day": 3.167568,
+  "runtime_probe_status": "not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip",
+  "task_force_actual_subagent_call_count": 5,
+  "claim_boundary": "f95b_proxy_scout_only_closed_bar_state_transition_embedding_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve_no_runtime_economics_claim",
+  "source_inputs": [
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+      "exists": true,
+      "sha256": "5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43",
+      "size_bytes": 14278154,
+      "artifact_kind": "file"
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+      "exists": true,
+      "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+      "size_bytes": 2691,
+      "artifact_kind": "file"
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "exists": true,
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "size_bytes": 1053,
+      "artifact_kind": "file"
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/f95b_proxy_scout_brief.json",
+      "exists": true,
+      "sha256": "ec41e1f4dfb7f762a99649d8162fd36d619f2856865d0b6b88a73c74caa91a91",
+      "size_bytes": 920,
+      "artifact_kind": "file"
+    },
+    {
+      "path": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95A/d/state_transition_embedding_contract.json",
+      "exists": true,
+      "sha256": "c0cc890751f1b641c1993b406ab95c80ed38b65d0988f764b7f0e94b021f4cab",
+      "size_bytes": 1229,
+      "artifact_kind": "file"
+    },
+    {
+      "path": "docs/agent_control/packets/frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1/work_packet.yaml",
+      "exists": true,
+      "sha256": "a9ca8ec3da14a8ebcf785ad25acb2ce6941070b87c3e68539d8dde86a1cfdc29",
+      "size_bytes": 20270,
+      "artifact_kind": "file"
+    },
+    {
+      "path": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/kpi_record.json",
+      "exists": true,
+      "sha256": "6a4635161f4a1c3629e5c19495a83b348f5df18f99d84a611e7ccff64370ae8f",
+      "size_bytes": 4778,
+      "artifact_kind": "file"
+    },
+    {
+      "path": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json",
+      "exists": true,
+      "sha256": "23e19184b6989e520b39b21bd27185c650ec4c599f35259c22f56657a62d6c13",
+      "size_bytes": 8330,
+      "artifact_kind": "file"
+    }
+  ]
+}

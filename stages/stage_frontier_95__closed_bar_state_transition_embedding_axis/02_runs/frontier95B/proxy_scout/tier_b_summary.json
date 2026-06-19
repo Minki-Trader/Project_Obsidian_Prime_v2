@@ -1,0 +1,68 @@
+{
+  "policy_id": "tier_b_partial_context_core42_fallback_v1",
+  "dataset_id": "stage10_tier_b_partial_context_core42_v1",
+  "feature_set_id": "feature_set_stage10_tier_b_core42_us100_session_v1",
+  "feature_count": 42,
+  "feature_order_hash": "d5291c35db3fe7045106a498fcb882ddbfa4c27f48b8cbf6201257af0346a306",
+  "label_threshold_log_return": 0.001277833051854688,
+  "source_raw_rows": 261344,
+  "source_valid_rows": 56939,
+  "labelable_rows": 60101,
+  "tier_a_primary_rows": 46650,
+  "tier_b_training_rows": 59048,
+  "tier_b_fallback_rows": 12398,
+  "no_tier_labelable_rows": 1053,
+  "by_split": {
+    "train": {
+      "tier_a_primary_rows": 29222,
+      "tier_b_fallback_rows": 8970,
+      "no_tier_labelable_rows": 691,
+      "routed_labelable_rows": 38192
+    },
+    "validation": {
+      "tier_a_primary_rows": 9844,
+      "tier_b_fallback_rows": 2366,
+      "no_tier_labelable_rows": 203,
+      "routed_labelable_rows": 12210
+    },
+    "oos": {
+      "tier_a_primary_rows": 7584,
+      "tier_b_fallback_rows": 1062,
+      "no_tier_labelable_rows": 159,
+      "routed_labelable_rows": 8646
+    }
+  },
+  "tier_b_fallback_by_subtype": {
+    "B_constituent_missing": 1,
+    "B_core_only": 200,
+    "B_full_context_outside_tier_a_scope": 217,
+    "B_macro_missing": 10740,
+    "B_mixed_partial_context": 1240
+  },
+  "tier_b_fallback_by_split_subtype": {
+    "oos": {
+      "B_core_only": 24,
+      "B_full_context_outside_tier_a_scope": 1,
+      "B_macro_missing": 809,
+      "B_mixed_partial_context": 228
+    },
+    "train": {
+      "B_constituent_missing": 1,
+      "B_core_only": 151,
+      "B_full_context_outside_tier_a_scope": 216,
+      "B_macro_missing": 7805,
+      "B_mixed_partial_context": 797
+    },
+    "validation": {
+      "B_core_only": 25,
+      "B_macro_missing": 2126,
+      "B_mixed_partial_context": 215
+    }
+  },
+  "no_tier_by_split": {
+    "oos": 159,
+    "train": 691,
+    "validation": 203
+  },
+  "note": "Tier B fallback is built from partial-context rows outside the strict Tier A clean sample that still have finite US100/session core42 features."
+}

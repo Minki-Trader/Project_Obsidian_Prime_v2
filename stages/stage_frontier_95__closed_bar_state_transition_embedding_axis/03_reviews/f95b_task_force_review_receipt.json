@@ -1,0 +1,104 @@
+{
+  "packet_id": "frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1",
+  "created_at_utc": "2026-06-19T07:54:27Z",
+  "review_requirement": "explicit_user_instruction_required_and_active_goal_claim_surface",
+  "trigger_source": "F95B non-trivial proxy_scout packet plus user instruction requiring relevant Task Force agents when triggered",
+  "selected_agent_count": 5,
+  "full_roster_call_reason": null,
+  "actual_subagent_calls": [
+    {
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019edecc-5659-7ef3-9528-63eae1807fe8",
+      "nickname": "Lagrange",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Use experiment_execution plus proxy_scout, require work packet, manifests, split metrics, candidate gate, KPI record, artifact hashes, ledgers, state sync, and no Task Force reviewed/pass claim.",
+      "bounded_evidence": [
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\candidate_gate.json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\kpi_record.json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\docs\\agent_control\\packets\\frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1\\work_packet.yaml"
+      ],
+      "local_verification": "Implemented through candidate gate, KPI contract audit, artifact lineage audit, state sync audit, and final claim guard."
+    },
+    {
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019edecc-6c17-7f63-a022-cde2dfdef846",
+      "nickname": "Cicero the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "Closed M5 bar inputs only, train-only fit for scaler/embedding/cluster, no future return or label-derived state in embedding, Tier A/B/A+B records required.",
+      "bounded_evidence": [
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\data_feature_split_lock.json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\state_transition_fit_manifest.json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\data_integrity_local_checks.json"
+      ],
+      "local_verification": "Embedding features are denylist-checked and fitted on train A+B only; split/time/tier records are written."
+    },
+    {
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019edecc-8078-7933-bc3c-28ff8de2c56b",
+      "nickname": "Zeno the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "disposition": "accepted",
+      "summary": "Use 24 closed M5 bars, transition entropy, dwell, volatility expansion, cost proxy, four state classes, and non-PF-only candidate gate.",
+      "bounded_evidence": [
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\embedding_config.json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\state_class_distribution.csv",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\candidate_gate.json"
+      ],
+      "local_verification": "Implemented 24-bar transition features and four-class cluster readout with validation candidate gate."
+    },
+    {
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019edecc-9bc9-7cb2-b2dc-60057ec311e0",
+      "nickname": "Leibniz the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "disposition": "accepted_with_local_verification",
+      "summary": "F95B is structural/proxy scout only; validation selects, OOS locked read, no calibration, no PF-only selection, no combined-only success.",
+      "bounded_evidence": [
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\split_metrics.csv",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\negative_control_metrics.csv",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\03_reviews\\f95b_model_validation_audit.json"
+      ],
+      "local_verification": "Validation-only candidate gate and OOS final-read-only are recorded; no calibrated probability claim."
+    },
+    {
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019edecc-b56c-7663-944c-129614791e2a",
+      "nickname": "Dirac the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "disposition": "accepted",
+      "summary": "MT5 Strategy Tester is not applicable when no runnable candidate or runtime/materialization/economics/handoff claim exists; same-packet MT5 is required if one appears.",
+      "bounded_evidence": [
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\kpi_record.json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\02_runs\\frontier95B\\proxy_scout\\candidate_gate.json",
+        "C:\\Users\\awdse\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075\\MQL5\\Experts\\Project_Obsidian_Prime_v2\\stages\\stage_frontier_95__closed_bar_state_transition_embedding_axis\\03_reviews\\f95b_final_claim_guard.json"
+      ],
+      "local_verification": "Runtime status is derived from candidate_count and claim surface, not from cost or poor proxy results."
+    }
+  ],
+  "opinion_summary": {
+    "accepted": [
+      "agent_06_quant_research",
+      "agent_08_mt5_onnx_runtime"
+    ],
+    "needs_local_verification": [
+      "agent_04_evidence_control_plane",
+      "agent_05_data_feature_contract",
+      "agent_07_model_validation_risk"
+    ],
+    "rejected": []
+  },
+  "codex_local_disposition": "local_verification_executed_no_task_force_reviewed_pass_claim",
+  "claim_effect": "Actual calls are recorded; no Task Force reviewed, pass, verified, completion, baseline, authority, or readiness claim is made."
+}
