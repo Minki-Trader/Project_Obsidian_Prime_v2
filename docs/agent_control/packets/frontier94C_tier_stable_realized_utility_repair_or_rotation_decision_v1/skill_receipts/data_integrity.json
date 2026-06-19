@@ -1,0 +1,33 @@
+{
+  "data_sources_checked": [
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/data_feature_split_lock.json",
+      "sha256": "50eb57a0b35b1ac5f76c40c0f44f8e3d8c16228f5946ba1bed645e1fdf3eec43",
+      "size_bytes": 4971
+    },
+    {
+      "exists": true,
+      "path": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/label_integrity_audit.json",
+      "sha256": "a3b198cdb27b1688a6c47ec0bf9d51e9868d03f13d034ce7f4329eceb65dcb8a",
+      "size_bytes": 8870
+    }
+  ],
+  "leakage_checks": {
+    "feature_denylist_hits": [],
+    "future_path_perturbation_does_not_change_features": true,
+    "stronger_claim_prerequisites": [
+      "F94B is usable_with_boundary for negative evidence, not invalid.",
+      "Raw manifest timezone_status remains UNRESOLVED_REQUIRES_MANUAL_BINDING and forbids runtime authority.",
+      "Tier B train-only future_log_return_12 versus recomputed future_path_return had a 44-row footnote; validation/OOS mismatch was not reported.",
+      "Leakage perturbation evidence is sufficient for F94 negative boundary but full routed/Tier B perturbation is required before stronger claims."
+    ]
+  },
+  "missing_data_boundary": "Tier A separate, Tier B separate, and actual routed total are recorded; missing runtime data is out_of_scope_by_claim.",
+  "packet_id": "frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1",
+  "receipt_path": "docs/agent_control/packets/frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1/skill_receipts/data_integrity.json",
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "Train-only fit/threshold; validation gate; OOS final-read-only; F94C performs no new fitting.",
+  "status": "executed",
+  "time_axis_boundary": "F94B is usable for negative proxy evidence; raw manifest timezone binding remains unresolved before runtime authority."
+}

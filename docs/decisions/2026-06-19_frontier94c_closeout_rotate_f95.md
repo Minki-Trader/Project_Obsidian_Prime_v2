@@ -1,0 +1,8 @@
+﻿# F94C Closeout Decision
+
+- run_id: `frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1`
+- parent_run_id: `frontier94B_tier_stable_realized_utility_label_proxy_scout_v1`
+- result: negative memory/reference surface with no runtime authority.
+- Task Force actual calls: 6 selected agents recorded.
+- next_run_id: `frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1`
+- claim_boundary: `f94c_stage_closeout_rotation_only_negative_memory_reference_surface_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_promotion_candidate_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`

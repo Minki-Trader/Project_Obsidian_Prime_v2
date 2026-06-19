@@ -1,0 +1,447 @@
+version: work_packet_schema_v2_1
+packet_lifecycle: new_packet
+packet_id: frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1
+created_at_utc: '2026-06-19T07:09:00Z'
+user_request:
+  user_quote: /goal active continuation plus explicit user reminder to actually call relevant Task Force agents when required
+  requested_action: stage closeout repair-or-rotation decision
+  requested_count:
+    value: 1
+    n_a_reason: ''
+  ambiguous_terms:
+  - No final completion, selected baseline, promotion candidate, operating promotion, runtime authority, live readiness, or
+    Goal Achieve is claimed.
+current_truth:
+  active_stage: stage_frontier_94__tier_stable_realized_utility_label_axis
+  current_run: frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1
+  latest_completed_run: frontier94B_tier_stable_realized_utility_label_proxy_scout_v1
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/04_selected/selection_status.md
+  claim_boundary: f94c_stage_closeout_rotation_only_negative_memory_reference_surface_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_promotion_candidate_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+work_classification:
+  primary_family: publish_handoff
+  detected_families:
+  - publish_handoff
+  - state_sync
+  - kpi_evidence
+  - artifact_lineage
+  touched_surfaces:
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94C
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/03_reviews
+  - docs/agent_control/packets/frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1
+  - docs/workspace/workspace_state.yaml
+  - stages/stage_frontier_95__closed_bar_state_transition_embedding_axis
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    task_force_review_claim_without_actual_calls: high
+    proxy_negative_overclaim_as_runtime: high
+    threshold_only_repair_disguised_as_rotation: high
+    tier_b_thin_positive_rescue: medium
+  hard_stop_risks:
+  - Do not claim runtime/materialization/economics/handoff without MT5 Strategy Tester evidence.
+  - Do not repair by threshold/filter/session/routing/parameter-only changes.
+  - Do not call Task Force review without actual selected-agent spawn_agent records.
+  required_gates:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - kpi_contract_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - closeout_gate
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - completion
+  - completed
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - candidate
+  - promotion_candidate
+  - runtime_probe
+  - runtime_verified
+  - strategy_tester_runtime_economics
+  - runtime_economics
+  - runtime_economics_pass
+  - materialization_ready
+  - mt5_handoff_ready
+  - onnx_handoff_ready
+  - ea_handoff_ready
+  - f95_stage_open_completed
+  - task_force_reviewed
+  - task_force_reviewed_pass
+  - stage_closeout_pass
+  - internally_reviewed
+  - reviewed
+  - verified
+  - pass
+  - model_quality
+  - model_readiness
+  - calibrated_probability
+  - data_contract_pass
+decision_lock:
+  mode: assume_safe_default
+  assumptions:
+    verification_profile: stage_closeout
+    strategy_tester_required_now: false
+    runtime_probe_status: not_run_no_meaningful_runnable_candidate_no_onnx_ea_set_behavior_no_runtime_materialization_economics_or_handoff_claim_not_cost_or_proxy_bad_skip
+    reason: No runnable candidate or runtime/materialization/economics/handoff claim exists in F94C.
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+  - publish_handoff
+  target_surfaces:
+  - F94C closeout
+  - F95 pending-open scaffold
+  - Task Force actual calls
+  - state sync
+  scope_units:
+  - repair_rotation_decision
+  - negative_memory
+  - receipt
+  - state_sync
+  execution_layers:
+  - local_python_execution
+  mutation_policy:
+    allowed: true
+    user_quote: /goal active continuation
+  evidence_layers:
+  - F94B proxy metrics
+  - candidate gate
+  - Task Force actual calls
+  - control-plane gates
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: false
+  claim_boundary:
+    allowed_claims:
+    - f94_closed_negative_memory_recorded
+    - f94_reference_surface_recorded
+    - f94_repair_disposition_closed
+    - f95_pending_open_scaffold_recorded
+    - task_force_actual_calls_recorded_for_f94c
+    - frontier_extra_due_check_not_due_after_f94
+    - frontier_topic_rotation_check_recorded_for_f95_proposal
+    forbidden_claims:
+    - completion
+    - completed
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - candidate
+    - promotion_candidate
+    - runtime_probe
+    - runtime_verified
+    - strategy_tester_runtime_economics
+    - runtime_economics
+    - runtime_economics_pass
+    - materialization_ready
+    - mt5_handoff_ready
+    - onnx_handoff_ready
+    - ea_handoff_ready
+    - f95_stage_open_completed
+    - task_force_reviewed
+    - task_force_reviewed_pass
+    - stage_closeout_pass
+    - internally_reviewed
+    - reviewed
+    - verified
+    - pass
+    - model_quality
+    - model_readiness
+    - calibrated_probability
+    - data_contract_pass
+    claim_boundary: f94c_stage_closeout_rotation_only_negative_memory_reference_surface_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_promotion_candidate_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+verification_profile:
+  profile_id: stage_closeout
+  claim_surface:
+    allowed_claims:
+    - f94_closed_negative_memory_recorded
+    - f94_reference_surface_recorded
+    - f94_repair_disposition_closed
+    - f95_pending_open_scaffold_recorded
+    - task_force_actual_calls_recorded_for_f94c
+    - frontier_extra_due_check_not_due_after_f94
+    - frontier_topic_rotation_check_recorded_for_f95_proposal
+    forbidden_claims:
+    - completion
+    - completed
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - candidate
+    - promotion_candidate
+    - runtime_probe
+    - runtime_verified
+    - strategy_tester_runtime_economics
+    - runtime_economics
+    - runtime_economics_pass
+    - materialization_ready
+    - mt5_handoff_ready
+    - onnx_handoff_ready
+    - ea_handoff_ready
+    - f95_stage_open_completed
+    - task_force_reviewed
+    - task_force_reviewed_pass
+    - stage_closeout_pass
+    - internally_reviewed
+    - reviewed
+    - verified
+    - pass
+    - model_quality
+    - model_readiness
+    - calibrated_probability
+    - data_contract_pass
+    claim_boundary: f94c_stage_closeout_rotation_only_negative_memory_reference_surface_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_promotion_candidate_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+  trigger_sources:
+  - active_goal_frontier_continuation
+  - F94B planned F94C repair-or-rotation
+  - closeout claim surface
+  - explicit user instruction requiring relevant Task Force actual calls
+  protected_claims:
+  - f94_closed_negative_memory_recorded
+  - f94_reference_surface_recorded
+  - f94_repair_disposition_closed
+  - f95_pending_open_scaffold_recorded
+  - task_force_actual_calls_recorded_for_f94c
+  - frontier_extra_due_check_not_due_after_f94
+  - frontier_topic_rotation_check_recorded_for_f95_proposal
+  required_evidence:
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/03_reviews/f94b_execution_summary.json
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/kpi_record.json
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94C/d/decision.json
+  - docs/agent_control/packets/frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1/codex_task_force_review_packet.json
+  - docs/agent_control/packets/frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1/work_packet.yaml
+  - docs/agent_control/packets/frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1/skill_receipts.json
+  - docs/agent_control/packets/frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1/closeout_gate.json
+  gates_not_run_with_reason:
+  - gate: runtime_evidence_gate
+    reason_code: no_runnable_candidate_no_runtime_claim
+    reason: F94C makes no ONNX, EA, set, tester output, materialization, economics, handoff, promotion, authority, or readiness
+      claim.
+    claim_effect: No runtime verified, economics pass, materialization ready, handoff complete, promotion, or authority claim
+      is allowed.
+  - gate: wfo_stress_gate
+    reason_code: outside_claim_surface_closeout_no_runnable_surface
+    reason: F94C closes a failed proxy surface and does not select or materialize a runnable strategy.
+    claim_effect: No WFO pass, stress pass, selected baseline, or runtime authority claim is allowed.
+  stop_conditions:
+  - Stop at negative memory/reference surface because candidate_gate_count is zero.
+  - If a meaningful runnable candidate or runtime claim appears, do not make the claim without same-packet MT5 Strategy Tester
+    probe.
+  - Do not repair by threshold/filter/session/routing/parameter-only changes.
+acceptance_criteria:
+- id: AC-001
+  text: F94B candidate gate failure is consumed.
+  expected_artifact: stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json
+  verification_method: result_judgment_audit
+  required: true
+- id: AC-002
+  text: Task Force actual calls are recorded for F94C.
+  expected_artifact: docs/agent_control/packets/frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1/codex_task_force_review_packet.json
+  verification_method: codex_task_force_review_packet
+  required: true
+- id: AC-003
+  text: F95 pending-open novelty delta is recorded.
+  expected_artifact: stages/stage_frontier_94__tier_stable_realized_utility_label_axis/03_reviews/f94c_frontier_topic_rotation_check.json
+  verification_method: frontier_topic_rotation_check
+  required: true
+- id: AC-004
+  text: Runtime evidence absence is bounded and not cost/proxy-bad skip.
+  expected_artifact: stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94C/kpi_record.json
+  verification_method: final_claim_guard
+  required: true
+work_plan:
+- Consume F94B proxy, KPI, data, and candidate gate evidence.
+- Classify actual Task Force advice and record local verification.
+- Write negative memory, no-runtime boundary, F95 pending-open scaffold, ledgers, and state sync.
+- Run packet, receipt, state sync, and required gate coverage audits.
+skill_routing:
+  primary_family: publish_handoff
+  primary_skill: obsidian-stage-transition
+  support_skills:
+  - obsidian-run-evidence-system
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-exploration-mandate
+  - obsidian-task-force-review
+  - obsidian-claim-discipline
+  - obsidian-answer-clarity
+  skills_considered:
+  - obsidian-stage-transition
+  - obsidian-run-evidence-system
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-exploration-mandate
+  - obsidian-task-force-review
+  - obsidian-claim-discipline
+  - obsidian-answer-clarity
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-performance-attribution
+  skills_selected:
+  - obsidian-stage-transition
+  - obsidian-run-evidence-system
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-exploration-mandate
+  - obsidian-task-force-review
+  - obsidian-claim-discipline
+  - obsidian-answer-clarity
+  skills_not_used:
+  - skill: obsidian-runtime-parity
+    reason: No ONNX/EA/runtime parity or handoff claim is made.
+  - skill: obsidian-backtest-forensics
+    reason: No new Strategy Tester report or trade list exists in F94C.
+  required_skill_receipts:
+  - obsidian-stage-transition
+  - obsidian-run-evidence-system
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-exploration-mandate
+  - obsidian-task-force-review
+  - obsidian-claim-discipline
+  - obsidian-answer-clarity
+  required_gates:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - kpi_contract_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - closeout_gate
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  raw_evidence:
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/split_metrics.csv
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/data_feature_split_lock.json
+  machine_readable:
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94C/run_manifest.json
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94C/summary.json
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94C/kpi_record.json
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94C/d/decision.json
+  - docs/agent_control/packets/frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1/skill_receipts.json
+  human_readable:
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94C/r/summary.md
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/03_reviews/stage_closeout_report.md
+  - docs/decisions/2026-06-19_frontier94c_closeout_rotate_f95.md
+  missing_evidence:
+  - evidence: MT5 Strategy Tester runtime output
+    reason: out_of_scope_by_claim_no_runnable_candidate
+  - evidence: ONNX/EA/set handoff
+    reason: not created in F94C
+gates:
+  required:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - kpi_contract_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - closeout_gate
+  - required_gate_coverage_audit
+  - final_claim_guard
+  work_packet_schema_lint: pass
+  skill_receipt_schema_lint: pass
+  codex_task_force_review_packet: pass
+  frontier_extra_due_check: pass
+  frontier_five_stage_direction_synthesis: pass
+  frontier_topic_rotation_check: pass
+  scope_completion_gate: pass
+  data_integrity_audit: pass
+  model_validation_audit: pass
+  kpi_contract_audit: pass
+  artifact_lineage_audit: pass
+  result_judgment_audit: pass
+  state_sync_audit: pass
+  closeout_gate: pass
+  required_gate_coverage_audit: pass
+  final_claim_guard: pass
+  not_applicable_with_reason:
+    runtime_evidence_gate: outside_claim_surface_no_runtime_claim_no_runnable_candidate_not_cost_or_proxy_bad_skip
+    wfo_stress_gate: outside_claim_surface_no_runnable_candidate
+    f95_stage_open_gate: pending_open_scaffold_only_formal_f95a_required
+final_claim_policy:
+  allowed_claims:
+  - f94_closed_negative_memory_recorded
+  - f94_reference_surface_recorded
+  - f94_repair_disposition_closed
+  - f95_pending_open_scaffold_recorded
+  - task_force_actual_calls_recorded_for_f94c
+  - frontier_extra_due_check_not_due_after_f94
+  - frontier_topic_rotation_check_recorded_for_f95_proposal
+  forbidden_claims:
+  - completion
+  - completed
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - candidate
+  - promotion_candidate
+  - runtime_probe
+  - runtime_verified
+  - strategy_tester_runtime_economics
+  - runtime_economics
+  - runtime_economics_pass
+  - materialization_ready
+  - mt5_handoff_ready
+  - onnx_handoff_ready
+  - ea_handoff_ready
+  - f95_stage_open_completed
+  - task_force_reviewed
+  - task_force_reviewed_pass
+  - stage_closeout_pass
+  - internally_reviewed
+  - reviewed
+  - verified
+  - pass
+  - model_quality
+  - model_readiness
+  - calibrated_probability
+  - data_contract_pass

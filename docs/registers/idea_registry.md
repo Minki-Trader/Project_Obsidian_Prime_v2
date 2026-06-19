@@ -2507,3 +2507,12 @@ Register ideas when they become durable work, not for every passing thought.
 - runtime: `not_run_no_meaningful_runnable_candidate_no_onnx_ea_set_behavior_no_runtime_materialization_economics_or_handoff_claim_not_cost_or_proxy_bad_skip`
 - next_action: `frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1`
 - claim_boundary: `f94b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`
+<!-- frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1__closeout_record -->
+
+## F94C tier-stable realized-utility label closeout
+
+- run_id: `frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1`
+- hypothesis: F94 tier utility labels should rotate unless a non-threshold structural repair exists.
+- result: negative_memory/reference_surface, no candidate, no runtime trigger.
+- next_action: `frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1` pending-open scaffold.
+- claim_boundary: `f94c_stage_closeout_rotation_only_negative_memory_reference_surface_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_promotion_candidate_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

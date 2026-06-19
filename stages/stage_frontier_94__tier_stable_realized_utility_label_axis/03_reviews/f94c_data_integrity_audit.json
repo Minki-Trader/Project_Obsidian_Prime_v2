@@ -1,0 +1,63 @@
+{
+  "allowed_claims": [
+    "f94_closed_negative_memory_recorded",
+    "f94_reference_surface_recorded",
+    "f94_repair_disposition_closed",
+    "f95_pending_open_scaffold_recorded",
+    "task_force_actual_calls_recorded_for_f94c",
+    "frontier_extra_due_check_not_due_after_f94",
+    "frontier_topic_rotation_check_recorded_for_f95_proposal"
+  ],
+  "audit_name": "data_integrity_audit",
+  "claim_boundary": "f94c_stage_closeout_rotation_only_negative_memory_reference_surface_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_promotion_candidate_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "created_at_utc": null,
+  "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+  "findings": [],
+  "footnotes": [
+    "F94B is usable_with_boundary for negative evidence, not invalid.",
+    "Raw manifest timezone_status remains UNRESOLVED_REQUIRES_MANUAL_BINDING and forbids runtime authority.",
+    "Tier B train-only future_log_return_12 versus recomputed future_path_return had a 44-row footnote; validation/OOS mismatch was not reported.",
+    "Leakage perturbation evidence is sufficient for F94 negative boundary but full routed/Tier B perturbation is required before stronger claims."
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "f95_stage_open_completed",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "stage_closeout_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "integrity_judgment": "usable_with_boundary_not_invalid",
+  "packet_id": "frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1",
+  "run_id": "frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1",
+  "status": "pass",
+  "stronger_claim_prerequisites": [
+    "timezone_binding",
+    "Tier B train-label identity footnote closure",
+    "full routed/Tier B perturbation check"
+  ]
+}

@@ -123,3 +123,11 @@
 - Task Force(태스크포스): six selected agents(선택 요원 6명) were actually called(실제 호출됨) and recorded(기록됨) in `docs/agent_control/packets/frontier94A_stage_open_tier_stable_realized_utility_label_axis_v1/codex_task_force_review_packet.json`.
 - Runtime(런타임): no new Strategy Tester runtime evidence(새 전략 테스터 런타임 근거 없음); no runtime authority(런타임 권위 없음); no Goal Achieve(목표 달성 없음).
 - Boundary(경계): `f94a_design_only_stage_open_tier_stable_realized_utility_label_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+<!-- frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1__closeout_record -->
+
+## 2026-06-19T07:08:39Z - F94C Closeout Rotate F95
+
+- Action: `frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1` closed F94 as negative/no-authority.
+- Effect: adjacent tier-utility threshold/filter/parameter repair is blocked and F95 pending-open scaffold was written at `stage_frontier_95__closed_bar_state_transition_embedding_axis`.
+- Runtime: no new Strategy Tester runtime evidence; no runtime authority; no Goal Achieve.
+- Boundary: `f94c_stage_closeout_rotation_only_negative_memory_reference_surface_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_promotion_candidate_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.

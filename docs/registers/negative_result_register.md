@@ -1612,3 +1612,12 @@ Judgment: `negative_proxy_scout_tier_utility_gate_failed_no_runtime_trigger`
 Runtime: `not_run_no_meaningful_runnable_candidate_no_onnx_ea_set_behavior_no_runtime_materialization_economics_or_handoff_claim_not_cost_or_proxy_bad_skip`
 
 Decision use: proxy scout clue/negative memory only. No selected baseline, operating promotion, runtime authority, live readiness, or Goal Achieve.
+<!-- frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1__closeout_record -->
+
+## F94C tier utility label negative closeout
+
+- run_id: `frontier94C_tier_stable_realized_utility_repair_or_rotation_decision_v1`
+- failed_boundary: F94B candidate_gate_count=0; best diagnostic validation actual routed net=-0.43223042, PF=0.827478, DD=0.51917679.
+- salvage_value: density-preserving diagnostic, worst-tier utility checks, Tier B thin positive warning, and state-transition next-axis proposal.
+- do_not_repeat: utility weight/threshold/density/side/cost/session/routing/parameter-only repair, Tier B rescue, score probability claim, compile/proxy-only runtime evidence.
+- reopen_condition: new source/data representation/label/runtime representation/model family/objective/trade shape/risk logic/regime split.
