@@ -1,0 +1,42 @@
+{
+  "allowed_claims": [
+    "f90_closed_negative_memory_recorded",
+    "f90_repair_disposition_closed",
+    "f91_pending_open_scaffold_recorded",
+    "task_force_actual_calls_recorded",
+    "frontier_extra_due_check_not_due_after_f90",
+    "frontier_topic_rotation_check_recorded"
+  ],
+  "claim_boundary": "f90d_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "evidence_used": [
+    "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90C/proxy_scout/proxy_metrics.json",
+    "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90C/kpi_record.json",
+    "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90D/d/decision.json",
+    "docs/agent_control/packets/frontier90D_time_to_barrier_repair_or_rotation_decision_v1/codex_task_force_review_packet.json"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "f91_stage_open_completed",
+    "task_force_reviewed_pass"
+  ],
+  "judgment_boundary": "negative_time_to_barrier_ordering_proxy_no_candidate_no_runtime_trigger",
+  "packet_id": "frontier90D_time_to_barrier_repair_or_rotation_decision_v1",
+  "skill": "obsidian-result-judgment",
+  "status": "executed"
+}

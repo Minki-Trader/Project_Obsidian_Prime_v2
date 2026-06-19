@@ -1,0 +1,86 @@
+{
+  "actual_subagent_calls": [
+    {
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019edd8f-e0fc-7d61-9521-bab68449fc50",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "opinion_classification": "needs_local_verification",
+      "result_status": "completed",
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019edd8f-f695-7042-9486-6c7640a04c48",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019edd90-0b73-78a2-b606-13dfb535ab20",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019edd90-205d-7060-a0aa-4756c5599c80",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019edd90-34ce-7150-8b01-efdac11fa82a",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019edd90-495b-7e10-9a23-e1ca67c07eb2",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    }
+  ],
+  "advice_classification": {
+    "agent_01_system_governor": "accepted",
+    "agent_04_evidence_control_plane": "needs_local_verification",
+    "agent_05_data_feature_contract": "accepted",
+    "agent_06_quant_research": "accepted",
+    "agent_07_model_validation_risk": "accepted",
+    "agent_08_mt5_onnx_runtime": "accepted"
+  },
+  "agents_used": [
+    "agent_01_system_governor",
+    "agent_04_evidence_control_plane",
+    "agent_05_data_feature_contract",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "audit_name": "codex_task_force_review_packet",
+  "bounded_evidence": [
+    "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90C/proxy_scout/proxy_metrics.json",
+    "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90C/kpi_record.json",
+    "docs/agent_control/packets/frontier90C_time_to_barrier_ordering_proxy_scout_v1/work_packet.yaml"
+  ],
+  "claim_boundary": "f90d_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "decision": "negative_memory",
+  "final_codex_direction": "Close F90 as negative/no-authority and rotate to F91 pending-open scaffold.",
+  "forbidden_claim_check": "No candidate, selected baseline, operating promotion, runtime authority, live readiness, Goal Achieve, runtime verified, or materialization-ready claim.",
+  "local_verification": [
+    "F90C candidate_count=0, meaningful_signal_count=0, runtime_attempt_rows=0 verified from proxy metrics.",
+    "F90D records negative memory, salvage value, do-not-repeat, and reopen condition.",
+    "F91 is pending-open scaffold only with new regime/objective/risk axis.",
+    "No runtime/materialization/economics claim is made in F90D."
+  ],
+  "model_policy": "gpt-5.5_xhigh_floor_fresh_selected_agent_spawn_calls",
+  "packet_id": "frontier90D_time_to_barrier_repair_or_rotation_decision_v1",
+  "passed": true,
+  "review_requirement": "codex_task_force_review_packet",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "skill": "obsidian-task-force-review",
+  "status": "executed",
+  "trigger_reason": "stage_closeout_rotation_required_and_explicit_user_instruction_required"
+}

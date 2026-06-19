@@ -1,0 +1,40 @@
+{
+  "claim_boundary": "f90d_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "data_sources_checked": [
+    "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90B/labels/frontier90b_barrier_labels.csv",
+    "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90C/proxy_scout/proxy_metrics.json",
+    "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90C/kpi_record.json"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "f91_stage_open_completed",
+    "task_force_reviewed_pass"
+  ],
+  "leakage_checks": [
+    "No new threshold tuning",
+    "No validation/OOS rescue",
+    "Tier B missing_required retained"
+  ],
+  "missing_data_boundary": "Tier B missing_required; Tier A+B combined blocked.",
+  "packet_id": "frontier90D_time_to_barrier_repair_or_rotation_decision_v1",
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "F90D is a decision closeout; F90C train/validation/OOS read is consumed as frozen evidence.",
+  "status": "executed",
+  "time_axis_boundary": "F90B/F90C timestamp joins are inherited and no new row-level model fit is performed in F90D."
+}

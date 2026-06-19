@@ -1,0 +1,7 @@
+﻿# Input References(입력 참조)
+
+- `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90D/summary.json` sha256 `81a41b4f4e8175395918fa7e6be8a8cd8312799339b521401153f122d523eeba`
+- `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90D/d/decision.json` sha256 `c11ee23204654f046a1f8f5fff3d199b6c828010732896f562962f267affbcff`
+- `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90C/proxy_scout/proxy_metrics.json` sha256 `7201bc1e0f6861e878a386bb04c50eb2735aa38a27ff9819478242bd7a56e0c8`
+- `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90C/kpi_record.json` sha256 `86d3599547cc76b4ed6acd20c9302131f7aa03f1ca93b863e9189baf5c2f00ea`
+- `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90B/labels/label_feasibility_stats.json` sha256 `0b80977a0a9680d71ef4caa9f46553760f2334fc4016095e4d17405b500c51e6`

@@ -1547,3 +1547,10 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - salvage_value(회수 가치): F90B labelability(라벨 가능성)는 보존하되, linear ordering proxy(선형 순서 프록시)는 반복하지 않는다.
 - do_not_repeat(반복 금지): 같은 threshold/filter/parameter-only tweak(임계값/필터/파라미터만 조정)로 F90C를 재시도하지 않는다.
 - reopen_condition(재개 조건): new target representation/source/model family/runtime representation(새 목표 표현/원천/모델 계열/런타임 표현)이 있을 때만 재개한다.
+## F90D ordering proxy negative closeout(F90D 순서 프록시 부정 마감)
+
+- run_id: `frontier90D_time_to_barrier_repair_or_rotation_decision_v1`
+- failed_boundary(실패 경계): F90C OOS signal hit rate(표본외 신호 적중률) and AUC(AUC)가 후보 기준을 넘지 못했다.
+- salvage_value(회수 가치): F90B label feasibility(라벨 가능성) and event timing structure(이벤트 시간 구조)는 future non-ordering labels(미래 비순서 라벨)에 참고 가능.
+- do_not_repeat(반복 금지): threshold/filter/parameter-only tweak(임계값/필터/파라미터만 조정), validation-only rescue(검증 단독 구조), calibration claim(보정 주장).
+- reopen_condition(재개 조건): survival/hazard/listwise objective(생존/위험률/목록 순위 목적함수) or new runtime/trade-shape representation(새 런타임/거래 형태 표현).

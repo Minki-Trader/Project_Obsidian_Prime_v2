@@ -1,0 +1,80 @@
+{
+  "allowed_claims": [
+    "f90_closed_negative_memory_recorded",
+    "f90_repair_disposition_closed",
+    "f91_pending_open_scaffold_recorded",
+    "task_force_actual_calls_recorded",
+    "frontier_extra_due_check_not_due_after_f90",
+    "frontier_topic_rotation_check_recorded"
+  ],
+  "audit_name": "kpi_contract_audit",
+  "claim_boundary": "f90d_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "counts": {
+    "claim_boundary": "f90d_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+    "closeout_kpi": {
+      "avg_loss": null,
+      "avg_win": null,
+      "drawdown": null,
+      "expectancy": null,
+      "gross_loss": null,
+      "gross_profit": null,
+      "long_short_breakdown": "not_applicable_no_runtime_trades",
+      "max_consecutive_loss": null,
+      "n_a_reason": "F90D is a decision closeout with no Strategy Tester economics.",
+      "net_profit": null,
+      "payoff_ratio": null,
+      "profit_factor": null,
+      "recovery_factor": null,
+      "time_under_water": null,
+      "trade_count": null,
+      "trades_per_day": null,
+      "win_rate": null
+    },
+    "gap_cause": "OOS ordering lift failed before materialization.",
+    "hypothesis": "F90 time-to-barrier ordering proxy should be repaired only if non-threshold evidence exists; otherwise rotate.",
+    "judgment": "negative_time_to_barrier_ordering_proxy_no_candidate_no_runtime_trigger",
+    "next_action": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+    "parity": "not_applicable_no_onnx_ea_runtime_claim",
+    "proxy_kpi": {
+      "best_variant": "ridge_signed_speed_alpha10",
+      "candidate_count": 0,
+      "meaningful_signal_count": 0,
+      "oos_auc": 0.505861,
+      "oos_signal_hit_rate": 0.498144,
+      "validation_signal_hit_rate": 0.519969
+    },
+    "run_id": "frontier90D_time_to_barrier_repair_or_rotation_decision_v1",
+    "runtime_kpi": {
+      "reason": "No candidate, no runnable decision surface, no ONNX/EA/set behavior claim, and no runtime/materialization/economics claim.",
+      "status": "not_applicable"
+    },
+    "stage_id": "stage_frontier_90__time_to_barrier_competing_risk_label_axis",
+    "status": "f90d_closed_negative_time_to_barrier_ordering_axis_rotate_to_f91_no_authority",
+    "test_period": "F90C inherited train/validation/OOS split from model input; F90D is a decision closeout."
+  },
+  "created_at_utc": "2026-06-19T02:05:22Z",
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "f91_stage_open_completed",
+    "task_force_reviewed_pass"
+  ],
+  "packet_id": "frontier90D_time_to_barrier_repair_or_rotation_decision_v1",
+  "passed": true,
+  "status": "pass"
+}

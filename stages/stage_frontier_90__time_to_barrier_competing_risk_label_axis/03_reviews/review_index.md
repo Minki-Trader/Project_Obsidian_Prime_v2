@@ -1,9 +1,7 @@
 ﻿# Review Index(검토 색인)
 
-- `f90c_task_force_review_receipt`: `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90c_task_force_review_receipt.json`
-- `f90c_data_integrity_audit`: `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90c_data_integrity_audit.json`
-- `f90c_model_validation_audit`: `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90c_model_validation_audit.json`
-- `f90c_kpi_contract_audit`: `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90c_kpi_contract_audit.json`
-- `f90c_artifact_lineage_audit`: `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90c_artifact_lineage_audit.json`
-- `f90c_result_judgment_audit`: `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90c_result_judgment_audit.json`
-- `f90c_required_gate_coverage_audit`: `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90c_required_gate_coverage_audit.json`
+- `f90d_task_force_review_receipt`: `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90d_task_force_review_receipt.json`
+- `f90d_frontier_extra_due_check`: `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90d_frontier_extra_due_check.json`
+- `f90d_frontier_topic_rotation_check`: `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90d_frontier_topic_rotation_check.json`
+- `f90d_required_gate_coverage_audit`: `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90d_required_gate_coverage_audit.json`
+- `f90d_final_claim_guard`: `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90d_final_claim_guard.json`

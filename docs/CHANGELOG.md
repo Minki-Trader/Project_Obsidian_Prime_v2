@@ -61,3 +61,11 @@
 - Effect(효과): candidate gate(후보 게이트) failed, so no MT5 runtime trigger(MT5 런타임 트리거 없음).
 - Runtime(런타임): no Strategy Tester evidence(전략 테스터 근거 없음); no runtime authority(런타임 권위 없음); no Goal Achieve(목표 달성 없음).
 - Packet(묶음): `docs/agent_control/packets/frontier90C_time_to_barrier_ordering_proxy_scout_v1/work_packet.yaml`.
+<!-- frontier90D_time_to_barrier_repair_or_rotation_decision_v1 -->
+
+## 2026-06-19T01:58:44Z - F90D Closeout Rotate F91(F90D 마감 및 F91 회전)
+
+- Action(행동): `frontier90D_time_to_barrier_repair_or_rotation_decision_v1`로 F90을 negative/no-authority(부정/권위 없음) 마감했다.
+- Effect(효과): threshold/filter/parameter-only repair(임계값/필터/파라미터만 수리)를 막고 F91 pending-open scaffold(F91 개방 대기 뼈대)를 `stage_frontier_91__regime_conditioned_density_cost_abstention_axis`로 남겼다.
+- Runtime(런타임): no new Strategy Tester runtime evidence(새 전략 테스터 런타임 근거 없음); no runtime authority(런타임 권위 없음); no Goal Achieve(목표 달성 없음).
+- Boundary(경계): `f90d_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
