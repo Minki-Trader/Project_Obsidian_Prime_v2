@@ -1,3 +1,7 @@
-﻿# Selection Status(선택 상태)
+﻿# Selection Status
 
-F91A is design-only stage open(설계 전용 단계 개방). No candidate(후보 없음), no selected baseline(선택 기준선 없음), no operating promotion(운영 승격 없음), no runtime authority(런타임 권위 없음), no live readiness(실거래 준비 없음), no Goal Achieve(목표 달성 없음).
+Current run: `frontier91C_regime_density_cost_abstention_repair_or_rotation_decision_v1`
+
+No candidate, no selected baseline, no operating promotion, no runtime authority, no live readiness, no Goal Achieve.
+
+F91B is proxy-scout evidence only. Runtime probe status: `not_run_no_meaningful_runnable_candidate_no_runtime_materialization_economics_claim_not_cost_or_proxy_bad_skip`.

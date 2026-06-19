@@ -1,9 +1,8 @@
-﻿# F91 Input References(입력 참고)
+﻿# Input References
 
-- parent_closeout(상위 마감): `frontier90D_time_to_barrier_repair_or_rotation_decision_v1`
-- experiment_design(실험 설계): `stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/experiment_design.json`
-- runtime_contract(런타임 계약): `stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/runtime_contract.json`
-- f91b_brief(F91B 개요): `stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/f91b_proxy_scout_brief.json`
-- task_force_receipt(태스크포스 영수증): `docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/codex_task_force_review_packet.json`
-
-Effect(효과): these files are design references(설계 참고) only and do not create runtime evidence(런타임 근거).
+- `stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/f91b_proxy_scout_brief.json` sha256 `9fac49787f42fa6a609db8f6ab649b81f98b45c4bbde2c588a13ea83f2a806d9`
+- `docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/work_packet.yaml` sha256 `255ed8f643a15816565016840a262dbd80aa0c5b245111b389b8932904f776f1`
+- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json` sha256 `71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef`
+- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet` sha256 `5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43`
+- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt` sha256 `fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2`
+- `data/raw/mt5_bars/m5` sha256 `None`

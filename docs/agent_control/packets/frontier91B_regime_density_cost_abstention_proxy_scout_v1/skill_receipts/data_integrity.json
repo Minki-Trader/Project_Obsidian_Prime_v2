@@ -1,0 +1,47 @@
+{
+  "claim_boundary": "f91b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "data_sources_checked": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "data/raw/mt5_bars/m5"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "leakage_checks": [
+    "no OOS tuning",
+    "feature fit pipelines trained on train split",
+    "top3 weights remain MT5 price proxy status"
+  ],
+  "missing_data_boundary": "Tier B fallback uses core42 partial context; missing full58 fields are imputed from train only.",
+  "packet_id": "frontier91B_regime_density_cost_abstention_proxy_scout_v1",
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "train fit and train threshold only; validation selection diagnostics; OOS final read only.",
+  "status": "executed",
+  "time_axis_boundary": "UTC closed M5 bar timestamps; train/validation/OOS time order retained."
+}

@@ -7487,3 +7487,9 @@ Effect(효과): `run364N_execute_density_lift_trade_shape_onnx_mt5_runtime_probe
 - Action(행동): F91A formal open(정식 개방)을 design-only(설계 전용)로 기록했다.
 - Effect(효과): F91B proxy scout(프록시 탐색)가 regime/density/cost/risk(장세/밀도/비용/위험) 축을 시험하게 한다.
 - Boundary(경계): no candidate(후보 없음), no runtime authority(런타임 권위 없음), no Goal Achieve(목표 달성 없음).
+## 2026-06-19T02:54:32Z - F91B proxy scout
+
+- Action: ran regime/density/cost abstention proxy scout with Task Force actual calls.
+- Effect: recorded negative/inconclusive proxy memory and planned `frontier91C_regime_density_cost_abstention_repair_or_rotation_decision_v1`.
+- Runtime: no Strategy Tester evidence; no runtime authority; no Goal Achieve.
+- Packet: `docs/agent_control/packets/frontier91B_regime_density_cost_abstention_proxy_scout_v1/work_packet.yaml`.
