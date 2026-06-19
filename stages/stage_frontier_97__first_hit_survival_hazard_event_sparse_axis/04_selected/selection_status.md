@@ -1,14 +1,12 @@
-﻿# F97 Selection Status(전선97 선택 상태)
+# F97 Selection Status(선정 상태)
 
-- current run(현재 실행): `frontier97C_first_hit_survival_hazard_event_sparse_repair_or_rotation_decision_v1`
-- latest completed run(최근 완료 실행): `frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1`
-- selected baseline(선택 기준선): not_claimed(주장 없음)
-- promotion candidate(승격 후보): not_claimed(주장 없음)
-- operating promotion(운영 승격): not_claimed(주장 없음)
-- runtime authority(런타임 권위): not_claimed(주장 없음)
-- live readiness(실거래 준비): not_claimed(주장 없음)
-- Goal Achieve(목표 달성): not_claimed(주장 없음)
-- candidate gate count(후보 게이트 수): `0`
-- runtime probe status(런타임 탐침 상태): `not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip`
+- selected_baseline(선택 기준선): not_claimed
+- runtime_authority(런타임 권위): not_claimed
+- live_readiness(실거래 준비): not_claimed
+- Goal Achieve(목표 달성): not_claimed
+- latest_completed_run(최근 완료 실행): `frontier97C_first_hit_survival_hazard_event_sparse_repair_or_rotation_decision_v1`
+- status(상태): `f97c_closed_negative_first_hit_survival_hazard_rotate_to_f98_pending_open_no_authority`
+- judgment(판정): `negative_valid_then_rotation_first_hit_survival_hazard_no_candidate_no_runtime_trigger`
+- next_action(다음 행동): `frontier98A_stage_open_excursion_tail_veto_payoff_asymmetry_axis_v1`
 
-Effect(효과): F97B는 negative proxy-scout memory(부정 프록시 탐색 기억)로만 쓰며, F97C repair/rotation decision(전선97C 수리/회전 결정)으로 넘어간다.
+Effect(효과): F97(전선97)은 negative memory/reference surface(부정 기억/참고 표면) only. No candidate(후보 없음), no runtime claim(런타임 주장 없음).

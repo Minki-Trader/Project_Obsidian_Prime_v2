@@ -1,0 +1,21 @@
+{
+  "audit_name": "data_integrity_audit",
+  "status": "pass",
+  "passed": true,
+  "completed_forbidden": false,
+  "findings": [],
+  "counts": {
+    "source_boundary": "F97C consumes F97B split/KPI/candidate-gate records without changing data.",
+    "test_period": "train_2022-09-01_to_2024-12-31_validation_2025-01-02_to_2025-09-30_oos_2025-10-01_to_2026-04-13",
+    "new_data_mutation": false,
+    "tier_records": [
+      "Tier A separate",
+      "Tier B separate",
+      "Tier A+B actual routed total"
+    ]
+  },
+  "allowed_claims": [
+    "data_integrity_boundary_recorded"
+  ],
+  "forbidden_claims": []
+}

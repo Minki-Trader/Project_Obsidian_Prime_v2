@@ -1,4 +1,4 @@
-﻿# Negative Result Register
+# Negative Result Register
 
 | result_id | idea_id | hypothesis | why_failed | salvage_value | reopen_condition |
 |---|---|---|---|---|---|
@@ -1661,3 +1661,16 @@ Effect(효과): F96(전선96)은 negative memory/reference surface(부정 기억
 Action: F97B ran first-hit survival/hazard proxy scout and recorded candidate gate count `0`.
 
 Effect: result is `negative_proxy_scout_first_hit_survival_hazard_candidate_gate_failed_no_runtime_trigger` with runtime status `not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip`; no baseline, authority, live readiness, or Goal Achieve claim is made.
+<!-- frontier97C_first_hit_survival_hazard_event_sparse_repair_or_rotation_decision_v1 -->
+## F97C Closeout(마감) Rotate(회전) F98
+
+- run_id(실행 ID): `frontier97C_first_hit_survival_hazard_event_sparse_repair_or_rotation_decision_v1`
+- status(상태): `f97c_closed_negative_first_hit_survival_hazard_rotate_to_f98_pending_open_no_authority`
+- judgment(판정): `negative_valid_then_rotation_first_hit_survival_hazard_no_candidate_no_runtime_trigger`
+- decision(결정): `close_f97_negative_rotate_to_excursion_tail_veto_payoff_asymmetry_axis`
+- Task Force actual calls(태스크포스 실제 호출): `6`
+- candidate_gate_count(후보 게이트 수): `0`
+- runtime_probe_status(런타임 탐침 상태): `not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip`
+- next_action(다음 행동): `frontier98A_stage_open_excursion_tail_veto_payoff_asymmetry_axis_v1`
+
+Effect(효과): F97(전선97)은 negative memory/reference surface(부정 기억/참고 표면)로만 남기고 F98(전선98) pending-open scaffold(개방 대기 골격)를 기록한다. No selected baseline(선택 기준선 없음), runtime authority(런타임 권위 없음), live readiness(실거래 준비 없음), Goal Achieve(목표 달성 없음).

@@ -1,0 +1,19 @@
+{
+  "packet_id": "frontier97C_first_hit_survival_hazard_event_sparse_repair_or_rotation_decision_v1",
+  "skill": "obsidian-data-integrity",
+  "status": "executed",
+  "data_sources_checked": [
+    "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/kpi_record.json",
+    "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/candidate_gate.json",
+    "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/runtime_trigger_check.json"
+  ],
+  "time_axis_boundary": "F97C does not create or mutate rows; it consumes F97B split outputs.",
+  "split_boundary": "train/validation/OOS boundary inherited as negative memory input only.",
+  "leakage_checks": [
+    "no new model features",
+    "no new label computation",
+    "no OOS tuning"
+  ],
+  "missing_data_boundary": "No new data coverage claim.",
+  "receipt_path": "docs/agent_control/packets/frontier97C_first_hit_survival_hazard_event_sparse_repair_or_rotation_decision_v1/skill_receipts/obsidian-data-integrity.json"
+}

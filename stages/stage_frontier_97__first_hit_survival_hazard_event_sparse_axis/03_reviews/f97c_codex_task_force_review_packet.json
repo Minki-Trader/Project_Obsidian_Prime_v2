@@ -1,0 +1,150 @@
+{
+  "audit_name": "codex_task_force_review_packet",
+  "packet_id": "frontier97C_first_hit_survival_hazard_event_sparse_repair_or_rotation_decision_v1",
+  "created_at_utc": "2026-06-19T11:32:02Z",
+  "status": "pass",
+  "passed": true,
+  "completed_forbidden": false,
+  "review_requirement": "explicit_user_instruction_required",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "model_policy": "highest_available_xhigh_inherited_no_gate_relaxation",
+  "agents_used": [
+    "agent_01_system_governor",
+    "agent_03_philosophy_policy_skill_governance",
+    "agent_04_evidence_control_plane",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "actual_subagent_calls": [
+    {
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019edf99-f781-7f13-b6cd-7531f56f6bc2",
+      "nickname": "Avicenna",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "local_resolution": "F97C closes F97 as negative memory and records F98 material-novelty rotation without runtime claim.",
+      "summary": "candidate_gate_count=0 and validation/PF/DD failure make same-axis repair risky; rotate unless a new source/label/objective/trade-shape/risk axis appears."
+    },
+    {
+      "roster_agent_id": "agent_03_philosophy_policy_skill_governance",
+      "spawned_agent_id": "019edf9a-233f-7b13-bb25-efb9156d969b",
+      "nickname": "Godel",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "local_resolution": "F98 novelty delta is fixed to excursion tail veto/payoff asymmetry: label, objective, risk logic, and trade shape change from F97.",
+      "summary": "F97C is acceptable as repair/rotation only if it does not repeat q-thresholds, adverse-first cuts, density gates, or same model/feature family."
+    },
+    {
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019edf9a-5cce-74b2-851b-d52ead0c94a6",
+      "nickname": "Tesla",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "local_resolution": "This packet writes F97C work_packet, receipts, closeout gates, source hashes, and F98 scaffold as local evidence.",
+      "summary": "F97C needs its own actual subagent call record; F97B Task Force calls cannot be reused for F97C closeout."
+    },
+    {
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019edf9a-847d-7451-9719-d010c00263f8",
+      "nickname": "Boyle",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "local_resolution": "Accepted as salvage mechanism; F98 separates event occurrence from tradable payoff asymmetry and loss severity.",
+      "summary": "F97B event rank is not total noise, but payoff ratio below 1 and adverse-first share show event occurrence is not tradable direction."
+    },
+    {
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019edf9a-aeba-7b42-9a3e-6e0e5e51ca44",
+      "nickname": "Gauss",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "local_resolution": "Accepted as model-risk stop: no OOS rescue, no calibration claim, no threshold-only F97 continuation.",
+      "summary": "Best diagnostic validation and OOS remain negative; trade density is in range but expectancy and PF are broken."
+    },
+    {
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019edf9a-d953-7122-ac06-f6fa65e3f7ac",
+      "nickname": "Meitner",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "local_resolution": "Runtime gate is not applicable only because no runnable candidate or runtime/economics/materialization/handoff claim exists.",
+      "summary": "If F97C creates a runnable candidate or ONNX/EA/set handoff claim, same-packet MT5 Strategy Tester probe becomes mandatory."
+    }
+  ],
+  "advice_classification": {
+    "accepted": [
+      "agent_01_system_governor",
+      "agent_06_quant_research",
+      "agent_07_model_validation_risk",
+      "agent_08_mt5_onnx_runtime"
+    ],
+    "needs_local_verification": [
+      "agent_03_philosophy_policy_skill_governance",
+      "agent_04_evidence_control_plane"
+    ],
+    "rejected": []
+  },
+  "local_verification": [
+    "F98 material novelty delta changes label/objective/trade_shape/risk_logic/validation_philosophy.",
+    "F97C packet artifacts, state sync, source hashes, and gate receipts are generated locally.",
+    "Runtime probe is not applicable only by no runnable candidate/no runtime claim boundary."
+  ],
+  "final_codex_direction": "close_f97_negative_rotate_to_f98_pending_open_no_runtime_claim",
+  "forbidden_claim_check": {
+    "completion": "not_claimed",
+    "complete": "not_claimed",
+    "completed": "not_claimed",
+    "selected_baseline": "not_claimed",
+    "promotion_candidate": "not_claimed",
+    "operating_promotion": "not_claimed",
+    "runtime_authority": "not_claimed",
+    "live_readiness": "not_claimed",
+    "goal_achieve": "not_claimed",
+    "candidate": "not_claimed",
+    "runtime_probe": "not_claimed",
+    "runtime_probe_completed": "not_claimed",
+    "runtime_verified": "not_claimed",
+    "mt5_verification_complete": "not_claimed",
+    "strategy_tester_runtime_economics": "not_claimed",
+    "runtime_economics": "not_claimed",
+    "runtime_economics_pass": "not_claimed",
+    "materialization_ready": "not_claimed",
+    "mt5_handoff_ready": "not_claimed",
+    "onnx_handoff_ready": "not_claimed",
+    "ea_handoff_ready": "not_claimed",
+    "f98_stage_open_completed": "not_claimed",
+    "task_force_reviewed": "not_claimed",
+    "task_force_reviewed_pass": "not_claimed",
+    "stage_closeout_pass": "not_claimed",
+    "internally_reviewed": "not_claimed",
+    "reviewed": "not_claimed",
+    "verified": "not_claimed",
+    "pass": "not_claimed",
+    "model_quality": "not_claimed",
+    "model_readiness": "not_claimed",
+    "calibrated_probability": "not_claimed",
+    "data_contract_pass": "not_claimed"
+  },
+  "counts": {
+    "actual_subagent_calls": 6,
+    "agents_used": [
+      "agent_01_system_governor",
+      "agent_03_philosophy_policy_skill_governance",
+      "agent_04_evidence_control_plane",
+      "agent_06_quant_research",
+      "agent_07_model_validation_risk",
+      "agent_08_mt5_onnx_runtime"
+    ]
+  },
+  "allowed_claims": [
+    "task_force_actual_calls_recorded_for_f97c"
+  ],
+  "forbidden_claims": []
+}
