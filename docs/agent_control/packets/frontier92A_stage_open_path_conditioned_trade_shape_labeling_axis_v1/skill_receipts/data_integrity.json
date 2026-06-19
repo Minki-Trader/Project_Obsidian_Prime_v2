@@ -1,0 +1,36 @@
+{
+  "packet_id": "frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1",
+  "status": "executed",
+  "skill": "obsidian-data-integrity",
+  "data_sources_checked": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+    "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91b_execution_summary.json"
+  ],
+  "time_axis_boundary": "Feature timestamp is the closed M5 bar; raw time_open_unix/time_close_unix are broker-clock alignment keys.",
+  "split_boundary": {
+    "train": "2022-09-01 to 2024-12-31",
+    "validation": "2025-01-01 to 2025-09-30",
+    "oos": "2025-10-01 to 2026-04-13",
+    "selection_rule": "barrier thresholds, bucket edges, scaler, and model fit must be train-only or inner-validation-only"
+  },
+  "leakage_checks": [
+    {
+      "features": "entry-known closed-bar features only",
+      "label_only_future_fields": [
+        "post_entry_ohlc_path",
+        "MFE",
+        "MAE",
+        "spread_cost",
+        "exit_outcome"
+      ],
+      "runtime_feature_rule": "EA runtime may use closed-bar inputs and model output only, never label-only future path fields."
+    },
+    "ambiguous_both_hit unless M1/tick/MT5 evidence can order the touches; no favorable assumption.",
+    "Rows whose label horizon crosses a split boundary must be censored or marked unlabeled in F92B."
+  ],
+  "missing_data_boundary": "Tier B and actual routed total are required records; absence must be missing_required/blocked, not omitted.",
+  "receipt_path": "docs/agent_control/packets/frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1/skill_receipts/data_integrity.json"
+}

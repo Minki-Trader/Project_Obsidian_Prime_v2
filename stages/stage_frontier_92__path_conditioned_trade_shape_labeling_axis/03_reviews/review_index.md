@@ -1,4 +1,8 @@
-﻿# Review Index
+﻿# Review Index(검토 색인)
 
-- source_closeout: `stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/stage_closeout_report.md`
-- pending_open_status: `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/00_spec/stage_brief.md`
+- `f92a_task_force_review_receipt`: `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92a_task_force_review_receipt.json`
+- `f92a_frontier_extra_due_check`: `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92a_frontier_extra_due_check.json`
+- `f92a_frontier_five_stage_direction_synthesis`: `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92a_frontier_five_stage_direction_synthesis.json`
+- `f92a_frontier_topic_rotation_check`: `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92a_frontier_topic_rotation_check.json`
+- `f92a_stage_open_summary`: `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92a_stage_open_summary.json`
+- `frontier92A_stage_open_report`: `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/frontier92A_stage_open_path_trade_shape_labeling_report.md`

@@ -1,0 +1,70 @@
+{
+  "audit_name": "model_validation_audit",
+  "status": "pass_with_boundary",
+  "passed": true,
+  "packet_id": "frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1",
+  "allowed_claims": [
+    "f92a_stage_open_design_prepared",
+    "f92_path_conditioned_trade_shape_labeling_axis_opened",
+    "f92b_proxy_scout_planned",
+    "task_force_actual_calls_recorded_for_f92a",
+    "frontier_extra_due_check_not_due_after_f91",
+    "frontier_five_stage_direction_synthesis_recorded_for_f87_to_f91",
+    "frontier_topic_rotation_check_passed_for_f92"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents",
+    "model_quality",
+    "model_readiness",
+    "data_contract_pass"
+  ],
+  "claim_boundary": "design_only_stage_open_for_path_conditioned_trade_shape_labeling_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "invalid_conditions": [
+    "future path values leak into runtime features",
+    "OOS chooses label thresholds, bucket edges, or candidates",
+    "same-bar TP/SL both-hit is assumed favorable from M5 OHLC only",
+    "score is called calibrated probability without reliability/Brier/ECE evidence",
+    "runtime/economics/materialization claim appears without MT5 Strategy Tester identity evidence"
+  ],
+  "f92b_candidate_gate": {
+    "validation_net": "> 0 before OOS final read",
+    "validation_pf": ">= 1.05 scout minimum",
+    "density": "not zero/dead and not overtrading",
+    "required_records": [
+      "Tier A separate",
+      "Tier B separate",
+      "actual routed total"
+    ],
+    "risk_checks": [
+      "DD",
+      "trades_per_day",
+      "side_share",
+      "regime_coverage",
+      "high_cost_share",
+      "negative_control_separation"
+    ],
+    "oos_use": "final_read_only_not_selection"
+  }
+}

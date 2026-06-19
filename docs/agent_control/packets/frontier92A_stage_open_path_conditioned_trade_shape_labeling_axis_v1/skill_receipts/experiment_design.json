@@ -1,0 +1,44 @@
+{
+  "packet_id": "frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1",
+  "status": "executed",
+  "skill": "obsidian-experiment-design",
+  "hypothesis": "Cost-adjusted path-conditioned trade-shape labels using MFE/MAE barriers, holding-time buckets, and exit-shape classes can expose a runtime-compatible US100 M5 strategy surface without repeating F91 entry-abstention density/cost filter repair.",
+  "baseline": {
+    "reference_only": "frontier91C_regime_density_cost_abstention_repair_or_rotation_decision_v1",
+    "negative_memory": "F91B/F91C closed with candidate_count=0 and no runnable decision surface.",
+    "no_path_controls_planned": [
+      "fixed_horizon_fwd12",
+      "fixed_horizon_fwd18"
+    ],
+    "not_inherited": [
+      "winner",
+      "selected_baseline",
+      "promotion_history",
+      "runtime_authority",
+      "live_readiness"
+    ]
+  },
+  "changed_variables": [
+    "primary axis changes from entry abstention to post-entry path trade-shape labeling",
+    "label/objective uses MFE/MAE barrier, holding-time bucket, and exit-shape class",
+    "cost stress is folded into label utility and candidate gate, not used as a threshold-only repair"
+  ],
+  "invalid_conditions": [
+    "future path values leak into runtime features",
+    "OOS chooses label thresholds, bucket edges, or candidates",
+    "same-bar TP/SL both-hit is assumed favorable from M5 OHLC only",
+    "score is called calibrated probability without reliability/Brier/ECE evidence",
+    "runtime/economics/materialization claim appears without MT5 Strategy Tester identity evidence"
+  ],
+  "evidence_plan": [
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92A/d/experiment_design.json",
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92A/d/runtime_contract.json",
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92A/d/f92b_proxy_scout_brief.json",
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92A/d/data_integrity_plan.json",
+    "docs/agent_control/packets/frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1/codex_task_force_review_packet.json",
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92a_frontier_topic_rotation_check.json",
+    "docs/agent_control/packets/frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1/work_packet.yaml",
+    "docs/agent_control/packets/frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1/skill_receipts.json"
+  ],
+  "receipt_path": "docs/agent_control/packets/frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1/skill_receipts/experiment_design.json"
+}

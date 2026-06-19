@@ -1,0 +1,115 @@
+{
+  "audit_name": "closeout_gate",
+  "status": "pass",
+  "packet_id": "frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1",
+  "audits": [
+    {
+      "audit_name": "work_packet_schema_lint",
+      "path": "docs/agent_control/packets/frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1/work_packet_schema_lint.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "path": "docs/agent_control/packets/frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1/skill_receipt_schema_lint.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "codex_task_force_review_packet",
+      "path": "docs/agent_control/packets/frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1/codex_task_force_review_packet.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "frontier_extra_due_check",
+      "path": "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92a_frontier_extra_due_check.json",
+      "status": "pass_not_due"
+    },
+    {
+      "audit_name": "frontier_five_stage_direction_synthesis",
+      "path": "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92a_frontier_five_stage_direction_synthesis.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "frontier_topic_rotation_check",
+      "path": "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92a_frontier_topic_rotation_check.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "scope_completion_gate",
+      "path": "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92a_scope_completion_gate.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "data_integrity_audit",
+      "path": "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92a_data_integrity_audit.json",
+      "status": "pass_with_boundary"
+    },
+    {
+      "audit_name": "model_validation_audit",
+      "path": "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92a_model_validation_audit.json",
+      "status": "pass_with_boundary"
+    },
+    {
+      "audit_name": "artifact_lineage_audit",
+      "path": "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92a_artifact_lineage_audit.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "state_sync_audit",
+      "path": "docs/agent_control/packets/frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1/state_sync_audit.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "path": "docs/agent_control/packets/frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1/required_gate_coverage_audit.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "final_claim_guard",
+      "path": "docs/agent_control/packets/frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1/final_claim_guard.json",
+      "status": "pass"
+    }
+  ],
+  "allowed_claims": [
+    "f92a_stage_open_design_prepared",
+    "f92_path_conditioned_trade_shape_labeling_axis_opened",
+    "f92b_proxy_scout_planned",
+    "task_force_actual_calls_recorded_for_f92a",
+    "frontier_extra_due_check_not_due_after_f91",
+    "frontier_five_stage_direction_synthesis_recorded_for_f87_to_f91",
+    "frontier_topic_rotation_check_passed_for_f92"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents",
+    "model_quality",
+    "model_readiness",
+    "data_contract_pass"
+  ],
+  "claim_boundary": "design_only_stage_open_for_path_conditioned_trade_shape_labeling_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "path": "docs/agent_control/packets/frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1/final_claim_guard.json",
+    "status": "pass"
+  }
+}

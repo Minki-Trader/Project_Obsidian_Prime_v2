@@ -1,0 +1,404 @@
+{
+  "run_id": "frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1",
+  "stage_id": "stage_frontier_92__path_conditioned_trade_shape_labeling_axis",
+  "parent_run_id": "frontier91C_regime_density_cost_abstention_repair_or_rotation_decision_v1",
+  "next_run_id": "frontier92B_path_conditioned_trade_shape_label_proxy_scout_v1",
+  "created_at_utc": "2026-06-19T03:43:46Z",
+  "status": "f92a_stage_open_design_prepared_no_candidate_no_authority",
+  "judgment": "design_only_stage_open_path_conditioned_trade_shape_labeling_axis",
+  "claim_boundary": "design_only_stage_open_for_path_conditioned_trade_shape_labeling_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "allowed_claims": [
+    "f92a_stage_open_design_prepared",
+    "f92_path_conditioned_trade_shape_labeling_axis_opened",
+    "f92b_proxy_scout_planned",
+    "task_force_actual_calls_recorded_for_f92a",
+    "frontier_extra_due_check_not_due_after_f91",
+    "frontier_five_stage_direction_synthesis_recorded_for_f87_to_f91",
+    "frontier_topic_rotation_check_passed_for_f92"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents",
+    "model_quality",
+    "model_readiness",
+    "data_contract_pass"
+  ],
+  "verification_profile": "design_only",
+  "experiment_design": {
+    "run_id": "frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1",
+    "stage_id": "stage_frontier_92__path_conditioned_trade_shape_labeling_axis",
+    "created_at_utc": "2026-06-19T03:43:46Z",
+    "hypothesis": "Cost-adjusted path-conditioned trade-shape labels using MFE/MAE barriers, holding-time buckets, and exit-shape classes can expose a runtime-compatible US100 M5 strategy surface without repeating F91 entry-abstention density/cost filter repair.",
+    "decision_use": "Prepare F92B proxy scout only; no candidate, selected baseline, runtime authority, or live readiness.",
+    "comparison_baseline": {
+      "reference_only": "frontier91C_regime_density_cost_abstention_repair_or_rotation_decision_v1",
+      "negative_memory": "F91B/F91C closed with candidate_count=0 and no runnable decision surface.",
+      "no_path_controls_planned": [
+        "fixed_horizon_fwd12",
+        "fixed_horizon_fwd18"
+      ],
+      "not_inherited": [
+        "winner",
+        "selected_baseline",
+        "promotion_history",
+        "runtime_authority",
+        "live_readiness"
+      ]
+    },
+    "control_variables": [
+      "FPMarkets US100 M5 closed-bar decision time",
+      "Tier A separate, Tier B separate, and actual routed total records",
+      "train/validation/OOS ordering with OOS final read only",
+      "feature-label boundary keeps future path data label-only",
+      "M5 OHLC first-touch ambiguity handled conservatively"
+    ],
+    "changed_variables": [
+      "primary axis changes from entry abstention to post-entry path trade-shape labeling",
+      "label/objective uses MFE/MAE barrier, holding-time bucket, and exit-shape class",
+      "cost stress is folded into label utility and candidate gate, not used as a threshold-only repair"
+    ],
+    "sample_scope": {
+      "symbol": "FPMarkets US100",
+      "timeframe": "M5",
+      "tier_a_rows_reference": 46650,
+      "tier_b_fallback_rows_reference": 12398,
+      "actual_routed_rows_reference": 59048,
+      "runtime_scope": "not_materialized_in_f92a"
+    },
+    "success_criteria_for_f92b": [
+      "validation net is positive and PF is at least near 1.05 before any OOS final read",
+      "trade density is not dead and not excessive versus the day 5-10 trade final-review target",
+      "high-cost share, side share, regime coverage, and negative-control separation are recorded",
+      "Tier A, Tier B, and actual routed total explain the result jointly"
+    ],
+    "failure_criteria_for_f92b": [
+      "candidate_count remains 0",
+      "path label fails to beat cost-only, density-only, side-random, shuffled-label, or barrier-blind controls",
+      "validation joint gate fails and OOS-only rescue is attempted",
+      "surface collapses into threshold/filter/parameter-only repair of F91"
+    ],
+    "invalid_conditions": [
+      "future path values leak into runtime features",
+      "OOS chooses label thresholds, bucket edges, or candidates",
+      "same-bar TP/SL both-hit is assumed favorable from M5 OHLC only",
+      "score is called calibrated probability without reliability/Brier/ECE evidence",
+      "runtime/economics/materialization claim appears without MT5 Strategy Tester identity evidence"
+    ],
+    "stop_conditions": [
+      "Stop F92A after design artifacts, receipts, gates, and state sync.",
+      "Do not train/select a model or create a candidate in F92A.",
+      "If a runnable candidate or ONNX/EA/set behavior appears in later packet work, reroute to runtime_probe in the same packet."
+    ]
+  },
+  "runtime_contract": {
+    "run_id": "frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1",
+    "created_at_utc": "2026-06-19T03:43:46Z",
+    "claim_boundary": "design_only_stage_open_for_path_conditioned_trade_shape_labeling_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+    "profile_id": "design_only",
+    "runtime_status": "not_materialized_no_candidate_no_runtime_claim",
+    "runtime_compatible_design_fields": {
+      "stage_id": "stage_frontier_92__path_conditioned_trade_shape_labeling_axis",
+      "run_id": "frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1",
+      "label_id": "path_conditioned_trade_shape_label_v1_design",
+      "mfe_mae_barrier": "ATR-normalized symmetric/asymmetric TP/SL grids planned for F92B",
+      "holding_time_bucket": "3/6/12/18/24/36/48 closed M5 bars planned for F92B",
+      "exit_shape_class": [
+        "first_touch",
+        "timeout",
+        "smooth_win",
+        "bleed",
+        "reversal",
+        "chop"
+      ],
+      "cost_model": "raw, spread+commission, 2x cost, 3x cost planned; F92B must lock values before selection",
+      "split_id": "train_2022-09-01_to_2024-12-31__validation_2025-01-01_to_2025-09-30__oos_2025-10-01_to_2026-04-13",
+      "feature_set_id": "feature_set_v2_mt5_price_proxy_top3_weights_58_features_reference",
+      "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "parser_version": "path_label_parser_v1_planned",
+      "output_contract_version": "runtime_score_rank_or_utility_not_calibrated_probability",
+      "tier_scope": "Tier A separate, Tier B separate, actual routed total"
+    },
+    "future_handoff_placeholders": {
+      "onnx_hash": "not_materialized",
+      "ea_source_hash": "not_materialized",
+      "ea_binary_hash": "not_materialized",
+      "set_ini_hash": "not_materialized",
+      "tester_identity": "not_materialized",
+      "report_hash": "not_materialized",
+      "trade_list_hash": "not_materialized",
+      "telemetry_hash": "not_materialized"
+    },
+    "mt5_handoff_trigger_conditions": [
+      "actual ONNX artifact is created",
+      "EA module behavior or .set parameter is created or changed",
+      "runtime package or manifest is created",
+      "materialization, handoff, economics, Strategy Tester, operating promotion, runtime authority, or live readiness claim appears"
+    ],
+    "rejected_runtime_misuse": [
+      "future MFE/MAE path fields used in EA decision features",
+      "partial-bar input",
+      "feature order change without a new contract",
+      "compile-only or proxy-only evidence called runtime evidence"
+    ],
+    "required_action_if_triggered": "Attempt the narrow sufficient MT5 Strategy Tester probe in the same packet, or after recovery attempt lower the claim to blocked/inconclusive/out_of_scope_by_claim."
+  },
+  "f92b_brief": {
+    "run_id": "frontier92B_path_conditioned_trade_shape_label_proxy_scout_v1",
+    "parent_run_id": "frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1",
+    "created_at_utc": "2026-06-19T03:43:46Z",
+    "status": "planned_after_f92a_formal_open",
+    "sweep_axes": {
+      "label_shapes": [
+        "first_touch",
+        "mfe_mae_ratio",
+        "timeout_outcome",
+        "smooth_win",
+        "bleed",
+        "reversal",
+        "chop"
+      ],
+      "barrier_geometry_atr": [
+        "0.5",
+        "1.0",
+        "1.5",
+        "2.0",
+        "3.0",
+        "symmetric",
+        "asymmetric"
+      ],
+      "holding_horizons_bars": [
+        3,
+        6,
+        12,
+        18,
+        24,
+        36,
+        48
+      ],
+      "cost_stress": [
+        "raw",
+        "spread_plus_commission",
+        "2x_cost_penalty",
+        "3x_cost_penalty"
+      ],
+      "tier_views": [
+        "tier_a_separate",
+        "tier_b_separate",
+        "actual_routed_total"
+      ]
+    },
+    "controls": [
+      "fixed_horizon_fwd12_no_path",
+      "fixed_horizon_fwd18_no_path",
+      "shuffled_label",
+      "side_random",
+      "cost_only",
+      "density_only",
+      "barrier_blind"
+    ],
+    "candidate_gate_predeclared": {
+      "validation_net": "> 0 before OOS final read",
+      "validation_pf": ">= 1.05 scout minimum",
+      "density": "not zero/dead and not overtrading",
+      "required_records": [
+        "Tier A separate",
+        "Tier B separate",
+        "actual routed total"
+      ],
+      "risk_checks": [
+        "DD",
+        "trades_per_day",
+        "side_share",
+        "regime_coverage",
+        "high_cost_share",
+        "negative_control_separation"
+      ],
+      "oos_use": "final_read_only_not_selection"
+    },
+    "invalid_conditions": [
+      "OOS threshold, label bucket, or candidate selection",
+      "favorable same-bar both-hit assumption from M5 OHLC",
+      "missing Tier B or routed-total record",
+      "candidate gate edited after result inspection"
+    ],
+    "runtime_trigger": "If F92B creates a meaningful runnable candidate or runtime claim, same-packet MT5 Strategy Tester probe is required.",
+    "claim_boundary": "planned_proxy_scout_only_no_candidate_no_runtime_authority"
+  },
+  "data_integrity_plan": {
+    "run_id": "frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1",
+    "created_at_utc": "2026-06-19T03:43:46Z",
+    "source_identity": {
+      "source_files": {
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet": {
+          "exists": true,
+          "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
+        },
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json": {
+          "exists": true,
+          "sha256": "af3745cbf1f6d62dc85a489bcda55899d882c910d62021b935e1cea8ab4d4a40"
+        },
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt": {
+          "exists": true,
+          "sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb"
+        },
+        "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv": {
+          "exists": true,
+          "sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784"
+        },
+        "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json": {
+          "exists": true,
+          "sha256": "86a772a2b73dc2d7684f37ba41243596bad54749ef1461db17c6957600787cde"
+        },
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91b_execution_summary.json": {
+          "exists": true,
+          "sha256": "f93568cdb1a4ad37bec802708673bc9efcbefd00b208f99e434a11867b91306a"
+        }
+      },
+      "model_input_summary": {
+        "dataset_id": "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2",
+        "feature_set_id": "feature_set_v2_mt5_price_proxy_top3_weights_58_features",
+        "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+        "rows": 46650,
+        "split_summary": {
+          "train": {
+            "rows": 29222,
+            "first_timestamp": "2022-09-01T16:40:00+00:00",
+            "last_timestamp": "2024-12-31T22:00:00+00:00",
+            "class_distribution": {
+              "short": 9064,
+              "flat": 9643,
+              "long": 10515
+            }
+          },
+          "validation": {
+            "rows": 9844,
+            "first_timestamp": "2025-01-02T16:35:00+00:00",
+            "last_timestamp": "2025-09-30T22:00:00+00:00",
+            "class_distribution": {
+              "short": 2920,
+              "flat": 3631,
+              "long": 3293
+            }
+          },
+          "oos": {
+            "rows": 7584,
+            "first_timestamp": "2025-10-01T16:35:00+00:00",
+            "last_timestamp": "2026-04-13T22:00:00+00:00",
+            "class_distribution": {
+              "short": 2259,
+              "flat": 2968,
+              "long": 2357
+            }
+          }
+        }
+      },
+      "raw_us100_summary": {
+        "broker_symbol": "US100",
+        "timeframe": "M5",
+        "row_count": 261345,
+        "time_basis": "MT5_PY_API_UNIX_SECONDS",
+        "timezone_status": "UNRESOLVED_REQUIRES_MANUAL_BINDING",
+        "price_basis": "Bid"
+      },
+      "tier_records_from_f91b_reference": {
+        "tier_a_rows": 46650,
+        "tier_b_fallback_rows": 12398,
+        "actual_routed_rows": 59048,
+        "combined_boundary": "actual routed total is Tier A primary plus Tier B fallback, not a synthetic KPI sum",
+        "tier_record_summary_present": false
+      }
+    },
+    "time_axis_boundary": "Feature timestamp is the closed M5 bar; raw time_open_unix/time_close_unix are broker-clock alignment keys.",
+    "feature_label_boundary": {
+      "features": "entry-known closed-bar features only",
+      "label_only_future_fields": [
+        "post_entry_ohlc_path",
+        "MFE",
+        "MAE",
+        "spread_cost",
+        "exit_outcome"
+      ],
+      "runtime_feature_rule": "EA runtime may use closed-bar inputs and model output only, never label-only future path fields."
+    },
+    "split_boundary": {
+      "train": "2022-09-01 to 2024-12-31",
+      "validation": "2025-01-01 to 2025-09-30",
+      "oos": "2025-10-01 to 2026-04-13",
+      "selection_rule": "barrier thresholds, bucket edges, scaler, and model fit must be train-only or inner-validation-only"
+    },
+    "same_bar_both_hit_policy": "ambiguous_both_hit unless M1/tick/MT5 evidence can order the touches; no favorable assumption.",
+    "split_edge_censoring": "Rows whose label horizon crosses a split boundary must be censored or marked unlabeled in F92B.",
+    "tier_record_requirement": [
+      "Tier A separate",
+      "Tier B separate",
+      "actual routed total"
+    ],
+    "claim_boundary": "data_integrity_plan_only_no_data_contract_pass"
+  },
+  "frontier_extra_due_check": {
+    "audit_name": "frontier_extra_due_check",
+    "status": "pass_not_due",
+    "due_status": "not_due",
+    "last_closed_canonical_frontier": "F91",
+    "latest_extra_stage_closed": "E01",
+    "next_due_boundary": "F100",
+    "claim_effect": "Allows F92 formal open only; does not create completion or authority."
+  },
+  "frontier_five_stage_direction_synthesis": {
+    "audit_name": "frontier_five_stage_direction_synthesis",
+    "status": "pass",
+    "covered_frontier_ids": [
+      "F87",
+      "F88",
+      "F89",
+      "F90",
+      "F91"
+    ],
+    "dominant_direction": "recent frontiers explored runtime lifecycle, materialization, adverse selection, time-to-barrier, and entry abstention; all remain no-authority.",
+    "repeated_mechanism": "candidate quality collapsed before runtime authority; F91 ended candidate_count=0.",
+    "overused_axis_warning": "Do not continue entry-abstention cost/density filters as a renamed repair.",
+    "next_axis_options": [
+      "path-conditioned trade-shape label",
+      "barrier path label",
+      "holding-time bucket",
+      "exit-shape class"
+    ],
+    "claim_boundary": "design_only_stage_open_for_path_conditioned_trade_shape_labeling_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  },
+  "frontier_topic_rotation_check": {
+    "audit_name": "frontier_topic_rotation_check",
+    "status": "pass",
+    "prior_frontier": "F91",
+    "proposed_frontier": "F92",
+    "near_duplicate_hypothesis": false,
+    "threshold_filter_parameter_only_tweak": false,
+    "repair_disposition_closed_in_prior_stage": true,
+    "novelty_delta": [
+      "label/objective changes from entry abstention to post-entry path trade-shape",
+      "trade shape uses MFE/MAE barriers, holding buckets, and exit-shape classes",
+      "validation philosophy adds path-label controls and same-bar ambiguity policy"
+    ],
+    "claim_effect": "Supports F92A formal stage-open discipline only."
+  }
+}

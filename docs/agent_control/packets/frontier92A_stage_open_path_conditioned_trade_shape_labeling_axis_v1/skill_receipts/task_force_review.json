@@ -1,0 +1,160 @@
+{
+  "packet_id": "frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1",
+  "skill": "obsidian-task-force-review",
+  "status": "executed",
+  "created_at_utc": "2026-06-19T03:43:46Z",
+  "trigger_reason": "F92A stage_open, active goal frontier continuation, and explicit user instruction requiring relevant Task Force agents when triggered.",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "agents_used": [
+    "agent_01_system_governor",
+    "agent_04_evidence_control_plane",
+    "agent_05_data_feature_contract",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "actual_subagent_calls": [
+    {
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019edde4-96e6-7673-8a76-09233d3ed6b8",
+      "nickname": "Rawls",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "bounded_evidence": [
+        "docs/workspace/workspace_state.yaml",
+        "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/04_selected/selection_status.md"
+      ],
+      "local_verification": "F92A may open only as design-only stage open with no candidate or authority claim."
+    },
+    {
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019edde4-aae2-72f0-aad1-2ab8c93f8e2e",
+      "nickname": "Helmholtz",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "bounded_evidence": [
+        "docs/workspace/workspace_state.yaml",
+        "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/00_spec/stage_brief.md",
+        "docs/agent_control/packets/frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1/work_packet.yaml"
+      ],
+      "local_verification": "Packet, receipts, gates, actual_subagent_calls, hashes, and state sync must be materialized locally."
+    },
+    {
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019edde4-bf0d-7a63-b816-a438c3daa3f2",
+      "nickname": "Franklin",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "bounded_evidence": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+        "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91b_execution_summary.json"
+      ],
+      "local_verification": "F92B must re-lock data hashes, time axis, split boundary, Tier A/B/routed records, and label leakage controls."
+    },
+    {
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019edde4-d35f-74b1-b10c-d520b7f4449d",
+      "nickname": "McClintock",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "bounded_evidence": [
+        "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91b_execution_summary.json"
+      ],
+      "local_verification": "F92B should test path-label axes and controls, not revive F91 as a threshold-only repair."
+    },
+    {
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019edde4-e7df-7bc1-8009-60e7632f26c9",
+      "nickname": "Nietzsche",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "bounded_evidence": [
+        "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91b_execution_summary.json"
+      ],
+      "local_verification": "F92B must predeclare label horizon, tie rule, purge/embargo, threshold policy, and candidate gate before results."
+    },
+    {
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019edde4-fc24-7162-8802-700d6cb6ee97",
+      "nickname": "Mendel",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "bounded_evidence": [
+        "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92A/d/runtime_contract.json"
+      ],
+      "local_verification": "MT5 probe is not triggered for F92A, but runtime-compatible fields and future handoff triggers must be recorded."
+    }
+  ],
+  "review_requirement": "codex_task_force_review_packet",
+  "model_policy": {
+    "model": "inherited_current_codex_model",
+    "reasoning_effort": "inherited",
+    "service_tier": "inherited"
+  },
+  "bounded_evidence": [
+    "docs/workspace/workspace_state.yaml",
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/00_spec/stage_brief.md",
+    "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/04_selected/selection_status.md",
+    "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91b_execution_summary.json"
+  ],
+  "advice_classification": {
+    "accepted": [
+      "agent_01_system_governor",
+      "agent_06_quant_research",
+      "agent_07_model_validation_risk",
+      "agent_08_mt5_onnx_runtime"
+    ],
+    "needs_local_verification": [
+      "agent_04_evidence_control_plane",
+      "agent_05_data_feature_contract"
+    ],
+    "rejected": []
+  },
+  "local_verification": [
+    "F92A packet and gate artifacts are generated locally.",
+    "F92B source hashes and label-boundary controls are predeclared as required verification.",
+    "Runtime evidence gate is not applicable only because F92A has no candidate, ONNX/EA/set behavior, or runtime/economics claim."
+  ],
+  "claim_boundary": "design_only_stage_open_for_path_conditioned_trade_shape_labeling_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "final_codex_direction": "Proceed with F92A formal design-only stage open and plan F92B path-label proxy scout.",
+  "forbidden_claim_check": {
+    "completion": "not_claimed",
+    "completed": "not_claimed",
+    "selected_baseline": "not_claimed",
+    "operating_promotion": "not_claimed",
+    "runtime_authority": "not_claimed",
+    "live_readiness": "not_claimed",
+    "goal_achieve": "not_claimed",
+    "candidate": "not_claimed",
+    "promotion_candidate": "not_claimed",
+    "runtime_probe": "not_claimed",
+    "runtime_verified": "not_claimed",
+    "strategy_tester_runtime_economics": "not_claimed",
+    "runtime_economics": "not_claimed",
+    "runtime_economics_pass": "not_claimed",
+    "materialization_ready": "not_claimed",
+    "mt5_handoff_ready": "not_claimed",
+    "onnx_handoff_ready": "not_claimed",
+    "ea_handoff_ready": "not_claimed",
+    "task_force_reviewed": "not_claimed",
+    "reviewed": "not_claimed",
+    "verified": "not_claimed",
+    "pass": "not_claimed",
+    "reviewed_by_unspawned_agents": "not_claimed",
+    "model_quality": "not_claimed",
+    "model_readiness": "not_claimed",
+    "data_contract_pass": "not_claimed"
+  },
+  "receipt_path": "docs/agent_control/packets/frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1/skill_receipts/task_force_review.json"
+}

@@ -1,0 +1,236 @@
+{
+  "audit_name": "data_integrity_audit",
+  "status": "pass_with_boundary",
+  "passed": true,
+  "packet_id": "frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1",
+  "allowed_claims": [
+    "f92a_stage_open_design_prepared",
+    "f92_path_conditioned_trade_shape_labeling_axis_opened",
+    "f92b_proxy_scout_planned",
+    "task_force_actual_calls_recorded_for_f92a",
+    "frontier_extra_due_check_not_due_after_f91",
+    "frontier_five_stage_direction_synthesis_recorded_for_f87_to_f91",
+    "frontier_topic_rotation_check_passed_for_f92"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents",
+    "model_quality",
+    "model_readiness",
+    "data_contract_pass"
+  ],
+  "claim_boundary": "design_only_stage_open_for_path_conditioned_trade_shape_labeling_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "source_identity": {
+    "source_files": {
+      "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet": {
+        "exists": true,
+        "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
+      },
+      "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json": {
+        "exists": true,
+        "sha256": "af3745cbf1f6d62dc85a489bcda55899d882c910d62021b935e1cea8ab4d4a40"
+      },
+      "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt": {
+        "exists": true,
+        "sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb"
+      },
+      "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv": {
+        "exists": true,
+        "sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784"
+      },
+      "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json": {
+        "exists": true,
+        "sha256": "86a772a2b73dc2d7684f37ba41243596bad54749ef1461db17c6957600787cde"
+      },
+      "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91b_execution_summary.json": {
+        "exists": true,
+        "sha256": "f93568cdb1a4ad37bec802708673bc9efcbefd00b208f99e434a11867b91306a"
+      }
+    },
+    "model_input_summary": {
+      "dataset_id": "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2",
+      "feature_set_id": "feature_set_v2_mt5_price_proxy_top3_weights_58_features",
+      "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "rows": 46650,
+      "split_summary": {
+        "train": {
+          "rows": 29222,
+          "first_timestamp": "2022-09-01T16:40:00+00:00",
+          "last_timestamp": "2024-12-31T22:00:00+00:00",
+          "class_distribution": {
+            "short": 9064,
+            "flat": 9643,
+            "long": 10515
+          }
+        },
+        "validation": {
+          "rows": 9844,
+          "first_timestamp": "2025-01-02T16:35:00+00:00",
+          "last_timestamp": "2025-09-30T22:00:00+00:00",
+          "class_distribution": {
+            "short": 2920,
+            "flat": 3631,
+            "long": 3293
+          }
+        },
+        "oos": {
+          "rows": 7584,
+          "first_timestamp": "2025-10-01T16:35:00+00:00",
+          "last_timestamp": "2026-04-13T22:00:00+00:00",
+          "class_distribution": {
+            "short": 2259,
+            "flat": 2968,
+            "long": 2357
+          }
+        }
+      }
+    },
+    "raw_us100_summary": {
+      "broker_symbol": "US100",
+      "timeframe": "M5",
+      "row_count": 261345,
+      "time_basis": "MT5_PY_API_UNIX_SECONDS",
+      "timezone_status": "UNRESOLVED_REQUIRES_MANUAL_BINDING",
+      "price_basis": "Bid"
+    },
+    "tier_records_from_f91b_reference": {
+      "tier_a_rows": 46650,
+      "tier_b_fallback_rows": 12398,
+      "actual_routed_rows": 59048,
+      "combined_boundary": "actual routed total is Tier A primary plus Tier B fallback, not a synthetic KPI sum",
+      "tier_record_summary_present": false
+    }
+  },
+  "remaining_local_verification": {
+    "run_id": "frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1",
+    "created_at_utc": "2026-06-19T03:43:46Z",
+    "source_identity": {
+      "source_files": {
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet": {
+          "exists": true,
+          "sha256": "c30eb033f104f0b1682964b546593e8b18125760c37ce2b945f7ab0f447ae38f"
+        },
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json": {
+          "exists": true,
+          "sha256": "af3745cbf1f6d62dc85a489bcda55899d882c910d62021b935e1cea8ab4d4a40"
+        },
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt": {
+          "exists": true,
+          "sha256": "18c83876fe3c3a9f74d2a207cd236b1d746447af43108a5b554f2d54eea264cb"
+        },
+        "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.csv": {
+          "exists": true,
+          "sha256": "2ab1cb8214182ff9063a64c10ce4ac6a142a8bf660e2476a60842d3452c6d784"
+        },
+        "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json": {
+          "exists": true,
+          "sha256": "86a772a2b73dc2d7684f37ba41243596bad54749ef1461db17c6957600787cde"
+        },
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91b_execution_summary.json": {
+          "exists": true,
+          "sha256": "f93568cdb1a4ad37bec802708673bc9efcbefd00b208f99e434a11867b91306a"
+        }
+      },
+      "model_input_summary": {
+        "dataset_id": "model_input_fpmarkets_v2_us100_m5_label_v1_fwd12_split_v1_proxyw58_feature_set_v2",
+        "feature_set_id": "feature_set_v2_mt5_price_proxy_top3_weights_58_features",
+        "feature_order_hash": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+        "rows": 46650,
+        "split_summary": {
+          "train": {
+            "rows": 29222,
+            "first_timestamp": "2022-09-01T16:40:00+00:00",
+            "last_timestamp": "2024-12-31T22:00:00+00:00",
+            "class_distribution": {
+              "short": 9064,
+              "flat": 9643,
+              "long": 10515
+            }
+          },
+          "validation": {
+            "rows": 9844,
+            "first_timestamp": "2025-01-02T16:35:00+00:00",
+            "last_timestamp": "2025-09-30T22:00:00+00:00",
+            "class_distribution": {
+              "short": 2920,
+              "flat": 3631,
+              "long": 3293
+            }
+          },
+          "oos": {
+            "rows": 7584,
+            "first_timestamp": "2025-10-01T16:35:00+00:00",
+            "last_timestamp": "2026-04-13T22:00:00+00:00",
+            "class_distribution": {
+              "short": 2259,
+              "flat": 2968,
+              "long": 2357
+            }
+          }
+        }
+      },
+      "raw_us100_summary": {
+        "broker_symbol": "US100",
+        "timeframe": "M5",
+        "row_count": 261345,
+        "time_basis": "MT5_PY_API_UNIX_SECONDS",
+        "timezone_status": "UNRESOLVED_REQUIRES_MANUAL_BINDING",
+        "price_basis": "Bid"
+      },
+      "tier_records_from_f91b_reference": {
+        "tier_a_rows": 46650,
+        "tier_b_fallback_rows": 12398,
+        "actual_routed_rows": 59048,
+        "combined_boundary": "actual routed total is Tier A primary plus Tier B fallback, not a synthetic KPI sum",
+        "tier_record_summary_present": false
+      }
+    },
+    "time_axis_boundary": "Feature timestamp is the closed M5 bar; raw time_open_unix/time_close_unix are broker-clock alignment keys.",
+    "feature_label_boundary": {
+      "features": "entry-known closed-bar features only",
+      "label_only_future_fields": [
+        "post_entry_ohlc_path",
+        "MFE",
+        "MAE",
+        "spread_cost",
+        "exit_outcome"
+      ],
+      "runtime_feature_rule": "EA runtime may use closed-bar inputs and model output only, never label-only future path fields."
+    },
+    "split_boundary": {
+      "train": "2022-09-01 to 2024-12-31",
+      "validation": "2025-01-01 to 2025-09-30",
+      "oos": "2025-10-01 to 2026-04-13",
+      "selection_rule": "barrier thresholds, bucket edges, scaler, and model fit must be train-only or inner-validation-only"
+    },
+    "same_bar_both_hit_policy": "ambiguous_both_hit unless M1/tick/MT5 evidence can order the touches; no favorable assumption.",
+    "split_edge_censoring": "Rows whose label horizon crosses a split boundary must be censored or marked unlabeled in F92B.",
+    "tier_record_requirement": [
+      "Tier A separate",
+      "Tier B separate",
+      "actual routed total"
+    ],
+    "claim_boundary": "data_integrity_plan_only_no_data_contract_pass"
+  }
+}

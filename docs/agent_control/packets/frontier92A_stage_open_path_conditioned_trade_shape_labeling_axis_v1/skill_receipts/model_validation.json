@@ -1,0 +1,52 @@
+{
+  "packet_id": "frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1",
+  "status": "executed",
+  "skill": "obsidian-model-validation",
+  "model_or_threshold_surface": "path-conditioned trade-shape label design only; no trained model, threshold selection, or candidate in F92A",
+  "validation_split": "F92B must keep train-only or inner-validation-only selection and OOS final read only.",
+  "overfit_checks": [
+    "predeclare label horizon, barrier window, and tie rule",
+    "do not select label buckets or candidates on OOS",
+    "score is rank/utility unless calibrated with reliability/Brier/ECE evidence",
+    "negative controls must include shuffled label, side-random, cost-only, density-only, and barrier-blind"
+  ],
+  "selection_metric_boundary": "F92A defines candidate gates only; no model quality or readiness claim.",
+  "allowed_claims": [
+    "f92a_stage_open_design_prepared",
+    "f92_path_conditioned_trade_shape_labeling_axis_opened",
+    "f92b_proxy_scout_planned",
+    "task_force_actual_calls_recorded_for_f92a",
+    "frontier_extra_due_check_not_due_after_f91",
+    "frontier_five_stage_direction_synthesis_recorded_for_f87_to_f91",
+    "frontier_topic_rotation_check_passed_for_f92"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents",
+    "model_quality",
+    "model_readiness",
+    "data_contract_pass"
+  ],
+  "receipt_path": "docs/agent_control/packets/frontier92A_stage_open_path_conditioned_trade_shape_labeling_axis_v1/skill_receipts/model_validation.json"
+}
