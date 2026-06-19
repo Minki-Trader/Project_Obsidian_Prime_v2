@@ -1,0 +1,63 @@
+{
+  "run_id": "frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1",
+  "stage_id": "stage_frontier_97__first_hit_survival_hazard_event_sparse_axis",
+  "hypothesis": "Closed-bar features can rank first favorable versus adverse bracket-hit survival/hazard and abstain when event density or adverse-first risk is poor, creating a new clue surface before side selection.",
+  "proxy": "F97B will build leakage-safe first-hit survival/hazard labels and inspect validation-only event-sparse abstention surfaces before any runtime claim.",
+  "decision_use": "design-only formal stage open and F97B proxy scout handoff",
+  "comparison_baseline": {
+    "source_run": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1",
+    "role": "negative memory/reference surface only",
+    "not_inherited": [
+      "winner",
+      "selected_baseline",
+      "promotion_history",
+      "runtime_authority"
+    ]
+  },
+  "changed_variables": [
+    "label: action-value path utility -> first favorable/adverse bracket-hit survival/hazard",
+    "objective: utility/regret ranking -> calibrated hit-risk ranking and abstention",
+    "trade shape: side action eligibility -> bracket lifecycle and hold-risk budgeting before side selection",
+    "validation: PF support metric -> density, adverse-first risk, calibration, segment stability, DD/recovery before PF"
+  ],
+  "control_variables": [
+    "FPMarkets US100 M5",
+    "closed-bar features only",
+    "Tier A separate, Tier B separate, and Tier A+B actual routed total records",
+    "time-ordered train/validation/OOS split",
+    "validation-only scout gate and OOS final read only",
+    "cost/spread/slippage and bracket distance declared before scoring"
+  ],
+  "sample_scope": {
+    "instrument": "US100",
+    "timeframe": "M5",
+    "period_policy": "F97B must record exact train/validation/OOS dates, row counts, hashes, and Tier A/B/A+B source identities before execution.",
+    "tier_requirement": [
+      "Tier A separate",
+      "Tier B separate",
+      "Tier A+B combined actual routed total"
+    ]
+  },
+  "success_criteria_for_f97b_proxy_scout": [
+    "Tier A, Tier B, and A+B records all exist with the same KPI names.",
+    "First-hit label fields, tie rule, censoring rule, and split embargo are recorded.",
+    "Event density can plausibly support 5-10 trades/day without all-abstain or trade-all collapse.",
+    "Adverse-first rate is controlled before PF-only ranking.",
+    "Calibration diagnostics exist before probability language.",
+    "A+B combined is sorted and recorded as actual routed total, not synthetic sum."
+  ],
+  "invalid_conditions": [
+    "label window high/low or first-hit outcome enters feature columns",
+    "feature cutoff is after inference bar close",
+    "first-hit tie rule is missing",
+    "label horizon crosses split boundary without embargo",
+    "Tier B or A+B record is silently omitted",
+    "proxy-only score is described as runtime or economics evidence"
+  ],
+  "stop_conditions": [
+    "Stop if first-hit label is not leakage-free.",
+    "Stop if event density is structurally zero or near-zero.",
+    "Stop if F97B degenerates into threshold/filter/session/routing/parameter-only repair.",
+    "If a runnable bundle or runtime claim appears, same-packet MT5 Strategy Tester probe is required or the runtime claim is lowered."
+  ]
+}

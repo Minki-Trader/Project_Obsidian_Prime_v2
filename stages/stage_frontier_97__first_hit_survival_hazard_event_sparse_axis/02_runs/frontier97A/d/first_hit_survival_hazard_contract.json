@@ -1,0 +1,56 @@
+{
+  "run_id": "frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1",
+  "contract_status": "design_locked_for_f97b_planning_only",
+  "required_fields": [
+    "dataset_id",
+    "symbol",
+    "timeframe",
+    "timezone",
+    "bar_timestamp_meaning",
+    "inference_bar_close",
+    "label_start_time",
+    "label_end_time",
+    "favorable_bracket",
+    "adverse_bracket",
+    "first_hit_side",
+    "first_hit_time",
+    "tie_rule",
+    "censor_reason",
+    "max_hold_bars",
+    "event_sparse_abstain_rule",
+    "tier_scope",
+    "split_id",
+    "feature_cutoff_time",
+    "feature_order_version",
+    "data_hash_or_identity"
+  ],
+  "feature_surface": {
+    "allowed": [
+      "row t and prior closed M5 bars",
+      "train-only transforms",
+      "predeclared rolling windows ending at t"
+    ],
+    "forbidden": [
+      "open/current incomplete bar",
+      "future high/low after entry",
+      "first-hit outcome as feature",
+      "post-entry diagnostics as feature"
+    ]
+  },
+  "label_surface": {
+    "favorable_first": "first favorable bracket hit before adverse bracket inside max_hold_bars",
+    "adverse_first": "first adverse bracket hit before favorable bracket inside max_hold_bars",
+    "censored": "neither bracket hit before max_hold_bars or invalid/holiday/session boundary",
+    "tie_rule": "must be explicit before F97B scoring; missing tie rule blocks label use"
+  },
+  "negative_controls": [
+    "shuffled first-hit labels",
+    "cost-blind bracket utility",
+    "no-adverse-risk filter",
+    "PF-only ranking",
+    "all-abstain",
+    "trade-all"
+  ],
+  "candidate_language_boundary": "F97B can create scout clues only unless a separate runtime packet/probe supports stronger claims.",
+  "claim_boundary": "f97a_design_only_stage_open_first_hit_survival_hazard_event_sparse_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+}

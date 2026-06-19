@@ -1,0 +1,40 @@
+{
+  "packet_id": "frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1",
+  "skill": "obsidian-experiment-design",
+  "status": "executed",
+  "hypothesis": "Closed-bar features can rank first favorable versus adverse bracket-hit survival/hazard and abstain when event density or adverse-first risk is poor, creating a new clue surface before side selection.",
+  "baseline": {
+    "source_run": "frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1",
+    "use": "negative memory/reference surface only",
+    "no_inheritance": [
+      "winner",
+      "selected_baseline",
+      "promotion_history",
+      "runtime_authority",
+      "live_readiness"
+    ]
+  },
+  "changed_variables": [
+    "label: action-value path utility -> first favorable/adverse bracket-hit survival/hazard",
+    "objective: utility/regret ranking -> calibrated hit-risk ranking and abstention",
+    "trade shape: side action eligibility -> bracket lifecycle and hold-risk budgeting before side selection",
+    "validation: PF support metric -> density, adverse-first risk, calibration, segment stability, DD/recovery before PF"
+  ],
+  "invalid_conditions": [
+    "label window high/low or first-hit outcome enters feature columns",
+    "feature cutoff is after inference bar close",
+    "first-hit tie rule is missing",
+    "label horizon crosses split boundary without embargo",
+    "Tier B or A+B record is silently omitted",
+    "proxy-only score is described as runtime or economics evidence"
+  ],
+  "evidence_plan": [
+    "Tier A, Tier B, and A+B records all exist with the same KPI names.",
+    "First-hit label fields, tie rule, censoring rule, and split embargo are recorded.",
+    "Event density can plausibly support 5-10 trades/day without all-abstain or trade-all collapse.",
+    "Adverse-first rate is controlled before PF-only ranking.",
+    "Calibration diagnostics exist before probability language.",
+    "A+B combined is sorted and recorded as actual routed total, not synthetic sum."
+  ],
+  "receipt_path": "docs/agent_control/packets/frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1/skill_receipts/experiment_design.json"
+}

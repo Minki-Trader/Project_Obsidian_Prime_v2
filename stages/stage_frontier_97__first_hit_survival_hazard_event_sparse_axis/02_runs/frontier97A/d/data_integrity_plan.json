@@ -1,0 +1,49 @@
+{
+  "run_id": "frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1",
+  "data_sources_checked": [
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+      "exists": true,
+      "sha256": "71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef",
+      "size_bytes": 2691
+    },
+    {
+      "path": "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+      "exists": true,
+      "sha256": "fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2",
+      "size_bytes": 1053
+    },
+    {
+      "path": "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+      "exists": true,
+      "sha256": "107eba70ec1f3d96e2d30cb3f0f39d48c4ef7e46eb089fb14b576934cc0c6e8f",
+      "size_bytes": 1338
+    },
+    {
+      "path": "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/tier_route_summary.json",
+      "exists": true,
+      "sha256": "66821118adf62886dea388f9146ba62482f2e3109514676b59cfafecac70fb51",
+      "size_bytes": 549
+    }
+  ],
+  "time_axis_boundary": "F97B must record whether each M5 timestamp is bar open or bar close, broker timezone, session timezone, DST policy, and M5 sort key.",
+  "feature_label_boundary": "Features use only decision-time row t and earlier closed bars; first-hit path after label_start_time is label target only.",
+  "split_boundary": "Train/validation/OOS split is chronological. Label horizon cannot cross validation/OOS boundary without embargo.",
+  "tier_boundary": "Tier A separate, Tier B separate, and A+B actual routed total are mandatory. Missing Tier B or combined is missing_required, blocked, or out_of_scope_by_claim.",
+  "leakage_checks": [
+    "rolling/window calculations end at t",
+    "normalizer/scaler fit train-only",
+    "joins/resamples preserve closed-bar order",
+    "first-hit window never appears in features",
+    "row counts/date ranges/hashes recorded per Tier A, Tier B, and A+B"
+  ],
+  "stop_conditions": [
+    "unknown time-axis meaning",
+    "duplicate or reverse timestamps",
+    "feature cutoff after inference bar close",
+    "first-hit tie rule missing",
+    "Tier A/B/A+B missing",
+    "split leakage or missing embargo",
+    "missing hash or row-count identity"
+  ]
+}

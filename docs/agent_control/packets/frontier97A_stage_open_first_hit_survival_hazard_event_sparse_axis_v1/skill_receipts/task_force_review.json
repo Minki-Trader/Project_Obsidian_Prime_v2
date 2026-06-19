@@ -1,0 +1,203 @@
+{
+  "packet_id": "frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1",
+  "skill": "obsidian-task-force-review",
+  "status": "executed_with_boundaries_no_task_force_reviewed_pass_claim",
+  "created_at_utc": "2026-06-19T10:06:15Z",
+  "trigger_reason": "F97A formal stage-open packet, active goal frontier continuation, and explicit user correction requiring real relevant Task Force agent calls.",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "agents_used": [
+    "agent_01_system_governor",
+    "agent_03_philosophy_policy_skill_governance",
+    "agent_04_evidence_control_plane",
+    "agent_05_data_feature_contract",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "agents_not_called": [
+    {
+      "roster_agent_id": "agent_02_platform_routing_architect",
+      "reason": "No platform/routing architecture change is protected by F97A design-only claim."
+    }
+  ],
+  "actual_subagent_calls": [
+    {
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019edf49-155a-7423-9648-f470d8f47d5c",
+      "nickname": "Hypatia the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "timed_out_no_final_opinion_after_two_waits",
+      "opinion_classification": "needs_local_verification",
+      "bounded_evidence": [
+        "docs/workspace/workspace_state.yaml",
+        "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/04_selected/selection_status.md"
+      ],
+      "local_verification": "Actual call was made, but no final opinion was available before F97A local evidence writing. No Task Force reviewed/pass claim is made.",
+      "accepted_summary": "No opinion accepted; governance checks are kept local and claim boundary remains design-only."
+    },
+    {
+      "roster_agent_id": "agent_03_philosophy_policy_skill_governance",
+      "spawned_agent_id": "019edf49-66d0-7692-af9b-4502cbd6040b",
+      "nickname": "Darwin the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "rejected",
+      "bounded_evidence": [
+        "docs/workspace/workspace_state.yaml",
+        "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/d/decision.json"
+      ],
+      "local_verification": "The agent self-diagnosed tool unavailability even though it had a spawned id. That portion is rejected and not used as review evidence.",
+      "accepted_summary": "No policy novelty opinion accepted from this call; F97 novelty is verified locally from F96C rotation material."
+    },
+    {
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019edf49-c07d-7a40-bbcb-c9decaf6bb99",
+      "nickname": "Aquinas the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "bounded_evidence": [
+        "docs/workspace/workspace_state.yaml",
+        "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/00_spec/stage_brief.md",
+        "docs/agent_control/packets/frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1/work_packet.yaml"
+      ],
+      "local_verification": "The tool-unavailable preface is rejected, but the artifact/gate checklist is used as a local checklist and materialized in this packet.",
+      "accepted_summary": "Record work packet, Task Force receipt, frontier overlay checks, design artifacts, state sync, ledgers, and final claim guard."
+    },
+    {
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019edf4a-132a-7483-8e72-87d5f7edba19",
+      "nickname": "Ramanujan the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "bounded_evidence": [
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+        "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/tier_route_summary.json"
+      ],
+      "local_verification": "The tool-unavailable preface is rejected; data/label contract fields and stop conditions are accepted as F97B local verification requirements.",
+      "accepted_summary": "Require first-hit label fields, closed-bar feature cutoff, tie rule, split embargo, Tier A/B/A+B records, and data identity hashes."
+    },
+    {
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019edf4a-e1b4-7703-98eb-dd3da0ef7978",
+      "nickname": "Lorentz the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "bounded_evidence": [
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96c_stage_closeout_summary.json"
+      ],
+      "local_verification": "Proxy tests and KPI fields are encoded in the F97B brief and model validation plan.",
+      "accepted_summary": "F97 changes label/objective to first-hit competing risk; test hit rates, time-to-hit, censoring, calibration, density, and segment stability."
+    },
+    {
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019edf4b-0dd8-7e41-8260-ab4bc6f69638",
+      "nickname": "Maxwell the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "bounded_evidence": [
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json",
+        "stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json",
+        "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json"
+      ],
+      "local_verification": "Validation fields, stop conditions, WFO/stress boundary, and anti-probability-laundering rules are recorded.",
+      "accepted_summary": "F97A is design-only; WFO/stress/runtime becomes required only when F97B creates a runnable candidate or stronger claim."
+    },
+    {
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019edf4b-d955-7130-86da-ba80483db03b",
+      "nickname": "Ptolemy the 2nd",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "bounded_evidence": [
+        "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/runtime_contract.json",
+        "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/04_selected/selection_status.md"
+      ],
+      "local_verification": "Runtime gate is N/A only because F97A has no runnable candidate and no runtime/materialization/economics/handoff claim. This is not cost or proxy-bad deferral.",
+      "accepted_summary": "A later ONNX/EA/set or trade-producing runtime claim triggers MT5 Strategy Tester identity, report, trade-list, and telemetry hashes in the same packet."
+    }
+  ],
+  "review_requirement": "codex_task_force_review_packet",
+  "model_policy": {
+    "model": "inherited_current_codex_model",
+    "reasoning_effort": "inherited",
+    "service_tier": "inherited"
+  },
+  "bounded_evidence": [
+    "docs/workspace/workspace_state.yaml",
+    "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/00_spec/stage_brief.md",
+    "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/04_selected/selection_status.md",
+    "stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96c_stage_closeout_summary.json",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json"
+  ],
+  "advice_classification": {
+    "accepted": [
+      "agent_06_quant_research",
+      "agent_07_model_validation_risk",
+      "agent_08_mt5_onnx_runtime"
+    ],
+    "needs_local_verification": [
+      "agent_01_system_governor",
+      "agent_04_evidence_control_plane",
+      "agent_05_data_feature_contract"
+    ],
+    "rejected": [
+      "agent_03_philosophy_policy_skill_governance"
+    ]
+  },
+  "local_verification": [
+    "F97A packet, receipts, gate audits, ledgers, and state sync are generated locally.",
+    "F96C is linked as negative memory/reference surface only, not winner, baseline, or promotion history.",
+    "Runtime evidence gate is outside claim surface only because no runnable candidate or runtime claim exists.",
+    "F97B must verify first-hit label leakage, intrabar ambiguity/tie rule, split embargo, Tier A/B/A+B records, density, adverse-first rate, calibration, and same-packet MT5 trigger."
+  ],
+  "claim_boundary": "f97a_design_only_stage_open_first_hit_survival_hazard_event_sparse_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "final_codex_direction": "Proceed with F97A design-only formal open and plan F97B first-hit survival/hazard proxy scout.",
+  "forbidden_claim_check": {
+    "completion": "not_claimed",
+    "complete": "not_claimed",
+    "completed": "not_claimed",
+    "selected_baseline": "not_claimed",
+    "operating_promotion": "not_claimed",
+    "runtime_authority": "not_claimed",
+    "live_readiness": "not_claimed",
+    "goal_achieve": "not_claimed",
+    "candidate": "not_claimed",
+    "promotion_candidate": "not_claimed",
+    "runtime_probe": "not_claimed",
+    "runtime_verified": "not_claimed",
+    "strategy_tester_runtime_economics": "not_claimed",
+    "runtime_economics": "not_claimed",
+    "runtime_economics_pass": "not_claimed",
+    "materialization_ready": "not_claimed",
+    "mt5_handoff_ready": "not_claimed",
+    "onnx_handoff_ready": "not_claimed",
+    "ea_handoff_ready": "not_claimed",
+    "f97_stage_open_completed": "not_claimed",
+    "task_force_reviewed": "not_claimed",
+    "task_force_reviewed_pass": "not_claimed",
+    "internally_reviewed": "not_claimed",
+    "reviewed": "not_claimed",
+    "verified": "not_claimed",
+    "pass": "not_claimed",
+    "model_quality": "not_claimed",
+    "model_readiness": "not_claimed",
+    "calibrated_probability": "not_claimed",
+    "data_contract_pass": "not_claimed",
+    "runtime_compatible_proven": "not_claimed",
+    "baseline": "not_claimed",
+    "promotion": "not_claimed"
+  },
+  "receipt_path": "docs/agent_control/packets/frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1/skill_receipts/task_force_review.json"
+}

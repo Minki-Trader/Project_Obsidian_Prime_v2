@@ -1,4 +1,4 @@
-# Idea Registry
+﻿# Idea Registry
 
 | idea_id | stage_id | hypothesis | tier_scope | status | notes |
 |---|---|---|---|---|---|
@@ -2586,3 +2586,12 @@ Effect: this records scout clue/negative memory only; no selected baseline, runt
 - next_action(다음 행동): `frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1`
 
 Effect(효과): F96(전선96)은 negative memory/reference surface(부정 기억/참고 표면)로만 남기고 F97(전선97) pending-open scaffold(개방 대기 골격)를 기록한다. No selected baseline(선택 기준선 없음), runtime authority(런타임 권위 없음), live readiness(실거래 준비 없음), Goal Achieve(목표 달성 없음).
+
+<!-- frontier97_first_hit_survival_hazard:start -->
+## F97 First-Hit Survival/Hazard(전선97 첫 도달 생존/위험)
+
+- source(원천): `frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1` as negative memory/reference surface(부정 기억/참조 표면)
+- hypothesis(가설): Closed-bar features can rank first favorable versus adverse bracket-hit survival/hazard and abstain when event density or adverse-first risk is poor, creating a new clue surface before side selection.
+- next action(다음 행동): `frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1`
+- boundary(경계): no selected baseline(선택 기준선 없음), no runtime authority(런타임 권위 없음), no Goal Achieve(목표 달성 없음)
+<!-- frontier97_first_hit_survival_hazard:end -->

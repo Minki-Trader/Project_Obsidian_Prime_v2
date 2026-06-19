@@ -1,22 +1,27 @@
-# F97 First-Hit Survival/Hazard Event-Sparse Axis(첫 도달 생존/위험률 이벤트 희소 축)
+﻿# F97 First-Hit Survival/Hazard Event-Sparse Axis(전선97 첫 도달 생존/위험 이벤트 희소 축)
+
+- current run(현재 실행): `frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1`
+- latest completed run(최근 완료 실행): `frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1`
+- source closeout(원천 마감): `frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1`
+- status(상태): design-only formal open recorded(설계 전용 정식 개방 기록)
+- authority(권위): not_claimed(주장 없음)
 
 ## Question(질문)
 
-Can US100 M5 closed-bar features learn first favorable versus adverse bracket-hit survival/hazard(유리/불리 브래킷 첫 도달 생존/위험률) and event-sparse abstention(이벤트 희소 회피) before side selection(방향 선택)?
+Can first-hit survival/hazard(첫 도달 생존/위험) and event-sparse abstention(이벤트 희소 관망) create a new US100 M5 scout surface(탐색 표면) before side selection(방향 선택)?
 
-## Source Boundary(원천 경계)
+## Hypothesis(가설)
 
-F97(전선97)은 F96C(전선96C)의 negative memory/reference surface(부정 기억/참고 표면)를 reference(참조)만 한다. winner(승자), selected baseline(선택 기준선), promotion history(승격 이력), operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), Goal Achieve(목표 달성)는 상속하지 않는다.
+Closed-bar features can rank first favorable versus adverse bracket-hit survival/hazard and abstain when event density or adverse-first risk is poor, creating a new clue surface before side selection.
 
-## Material Novelty Delta(실질 신규성 차이)
+## Novelty Delta(신규성 차이)
 
-- label/target(라벨/목표): direct action-value scalar(직접 행동가치 스칼라)가 아니라 first-hit competing survival/hazard(첫 도달 경쟁 생존/위험률).
-- objective(목적함수): thresholded action value(임계값 행동가치)가 아니라 hit-risk ranking and abstention(도달 위험 순위화와 회피).
-- trade shape/risk logic(거래 형태/위험 로직): bracket lifecycle and hold-risk budget(브래킷 생명주기와 보유 위험 예산).
-- runtime representation(런타임 표현): runnable candidate(실행 가능 후보)가 생길 때 closed-bar bracket/hold-window signal(확정봉 브래킷/보유 창 신호)로 물질화한다.
+- label target(라벨 목표): first favorable/adverse bracket hit(첫 유리/불리 브래킷 도달)
+- objective(목적함수): calibrated hit-risk ranking(보정 도달 위험 순위) and abstention(관망)
+- trade shape(거래 형태): bracket lifecycle(브래킷 생애주기) and hold-risk budgeting(보유 위험 예산)
+- validation philosophy(검증 철학): density/adverse-first/calibration/segment stability(밀도/불리 우선/보정/구간 안정성) before PF-only selection(PF 단독 선정)
+- runtime boundary(런타임 경계): a runnable ONNX/EA/set claim(실행 가능한 온엑스/전문가 자문/설정 주장) triggers same-packet MT5 Strategy Tester probe(같은 묶음 MT5 전략 테스터 탐침)
 
 ## Boundary(경계)
 
-This is pending-open scaffold(개방 대기 골격) only. No formal F97A open completed(정식 F97A 개방 완료), selected baseline(선택 기준선), runtime authority(런타임 권위), live readiness(실거래 준비), or Goal Achieve(목표 달성) is claimed.
-
-Current run(현재 실행): `frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1`
+F97A is design-only formal open(설계 전용 정식 개방) evidence(근거) only. No selected baseline(선택 기준선), promotion candidate(승격 후보), operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), or Goal Achieve(목표 달성) is claimed(주장됨).

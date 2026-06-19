@@ -1,11 +1,15 @@
-# F97 Selection Status(선정 상태)
+﻿# F97 Selection Status(전선97 선택 상태)
 
-- selected_baseline(선택 기준선): not_claimed
-- runtime_authority(런타임 권위): not_claimed
-- live_readiness(실거래 준비): not_claimed
-- Goal Achieve(목표 달성): not_claimed
-- latest_completed_run(최근 완료 실행): `frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1`
-- current_run(현재 실행): `frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1`
-- boundary(경계): pending-open scaffold(개방 대기 골격) only.
-
-Effect(효과): F97A(전선97A)는 다음 packet(묶음)에서 formal open(정식 개방) 근거를 만들어야 한다.
+- current run(현재 실행): `frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1`
+- latest completed run(최근 완료 실행): `frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1`
+- status(상태): F97A design-only formal open recorded(설계 전용 정식 개방 기록); F97B proxy scout planned(F97B 프록시 탐색 계획)
+- selected baseline(선택 기준선): not_claimed(주장 없음)
+- promotion candidate(승격 후보): not_claimed(주장 없음)
+- operating promotion(운영 승격): not_claimed(주장 없음)
+- runtime authority(런타임 권위): not_claimed(주장 없음)
+- live readiness(실거래 준비): not_claimed(주장 없음)
+- Goal Achieve(목표 달성): not_claimed(주장 없음)
+- Task Force actual calls(태스크포스 실제 호출): seven selected agents recorded(선택 요원 7명 기록)
+- runtime probe(런타임 탐침): not run(미실행) because no runnable candidate or runtime claim exists(실행 가능한 후보/런타임 주장 없음)
+- source closeout(원천 마감): `frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1`
+- claim boundary(주장 경계): `f97a_design_only_stage_open_first_hit_survival_hazard_event_sparse_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`

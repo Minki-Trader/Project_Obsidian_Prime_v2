@@ -1,4 +1,4 @@
-<!-- frontier89_task_force_correction_review_v1 -->
+﻿<!-- frontier89_task_force_correction_review_v1 -->
 
 ## 2026-06-19T00:13:15Z - F89 Task Force Correction(F89 태스크포스 정정)
 
@@ -198,3 +198,11 @@ Effect: this records scout clue/negative memory only; no selected baseline, runt
 - next_action(다음 행동): `frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1`
 
 Effect(효과): F96(전선96)은 negative memory/reference surface(부정 기억/참고 표면)로만 남기고 F97(전선97) pending-open scaffold(개방 대기 골격)를 기록한다. No selected baseline(선택 기준선 없음), runtime authority(런타임 권위 없음), live readiness(실거래 준비 없음), Goal Achieve(목표 달성 없음).
+
+<!-- frontier97a_changelog:start -->
+## 2026-06-19 F97A
+
+Action(행동): recorded(기록) F97A design-only formal open(설계 전용 정식 개방) with seven actual Task Force calls(실제 태스크포스 호출 7건).
+
+Effect(효과): current run(현재 실행) is `frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1`; runtime probe(런타임 탐침)는 no runnable candidate/no runtime claim(실행 가능한 후보 없음/런타임 주장 없음) 때문에 not_applicable_with_reason(사유 있는 해당 없음)이다.
+<!-- frontier97a_changelog:end -->

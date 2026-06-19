@@ -1,0 +1,485 @@
+version: work_packet_schema_v2_1
+packet_lifecycle: new_packet
+packet_id: frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1
+created_at_utc: '2026-06-19T10:06:15Z'
+user_request:
+  user_quote: /goal active continuation; user explicitly corrected that required Task Force agents must be actually called, not only promised
+  requested_action: canonical frontier stage open for F97A first-hit survival/hazard event-sparse axis
+  requested_count:
+    value: 1
+    n_a_reason: ''
+  ambiguous_terms:
+  - Goal Achieve is not claimed.
+  - Runtime authority is not claimed.
+  - F97A is design-only.
+current_truth:
+  active_stage: stage_frontier_97__first_hit_survival_hazard_event_sparse_axis
+  current_run: frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1
+  latest_completed_run: frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/04_selected/selection_status.md
+  claim_boundary: f97a_design_only_stage_open_first_hit_survival_hazard_event_sparse_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+work_classification:
+  primary_family: experiment_design
+  detected_families:
+  - experiment_design
+  - artifact_lineage
+  - state_sync
+  touched_surfaces:
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis
+  - docs/agent_control/packets/frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1
+  - docs/workspace/workspace_state.yaml
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    task_force_review_claim_without_actual_calls: high
+    f96_action_value_repair_laundering: high
+    first_hit_label_leakage: high
+    intrabar_first_hit_ambiguity: high
+    runtime_probe_absence_misread_as_cost_skip: medium
+  hard_stop_risks:
+  - Do not claim runtime/economics/materialization without MT5 Strategy Tester output identity.
+  - Do not repeat F96 action-value repair by threshold/filter/session/routing/parameter-only tweak.
+  - Do not fit bracket, scaler, threshold, density, or calibration on OOS.
+  required_gates:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - completion
+  - complete
+  - completed
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - candidate
+  - promotion_candidate
+  - runtime_probe
+  - runtime_verified
+  - strategy_tester_runtime_economics
+  - runtime_economics
+  - runtime_economics_pass
+  - materialization_ready
+  - mt5_handoff_ready
+  - onnx_handoff_ready
+  - ea_handoff_ready
+  - f97_stage_open_completed
+  - task_force_reviewed
+  - task_force_reviewed_pass
+  - internally_reviewed
+  - reviewed
+  - verified
+  - pass
+  - model_quality
+  - model_readiness
+  - calibrated_probability
+  - data_contract_pass
+  - runtime_compatible_proven
+  - baseline
+  - promotion
+decision_lock:
+  mode: assume_safe_default
+  assumptions:
+    task_force_required_now: true
+    verification_profile: design_only
+    strategy_tester_required_now: false
+    reason: F97A protects design-only stage-open claims and has no runnable candidate, ONNX/EA/set behavior, or runtime/materialization/economics/handoff
+      claim.
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+  - experiment_design
+  target_surfaces:
+  - F97 stage open
+  - first-hit survival/hazard design
+  - F97B proxy scout brief
+  - Task Force receipt
+  - state sync
+  scope_units:
+  - stage_open_design
+  - receipt
+  - state_sync
+  - ledger
+  execution_layers:
+  - local_python_execution
+  mutation_policy:
+    allowed: true
+    user_quote: /goal active continuation
+  evidence_layers:
+  - F96C negative memory reference
+  - F97A design artifacts
+  - Task Force actual calls
+  - frontier overlays
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: false
+    rationale: F97A is a formal stage-open packet.
+  claim_boundary:
+    allowed_claims:
+    - f97a_design_open_packet_recorded
+    - f97_first_hit_survival_hazard_axis_opened
+    - f97b_proxy_scout_planned
+    - task_force_actual_calls_recorded_for_f97a
+    - f96c_negative_memory_linked
+    - frontier_extra_due_check_not_due_after_f96
+    - frontier_five_stage_direction_synthesis_recorded_for_f92_to_f96
+    - frontier_topic_rotation_check_recorded_for_f97
+    - runtime_gate_not_applicable_with_reason
+    forbidden_claims:
+    - completion
+    - complete
+    - completed
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - candidate
+    - promotion_candidate
+    - runtime_probe
+    - runtime_verified
+    - strategy_tester_runtime_economics
+    - runtime_economics
+    - runtime_economics_pass
+    - materialization_ready
+    - mt5_handoff_ready
+    - onnx_handoff_ready
+    - ea_handoff_ready
+    - f97_stage_open_completed
+    - task_force_reviewed
+    - task_force_reviewed_pass
+    - internally_reviewed
+    - reviewed
+    - verified
+    - pass
+    - model_quality
+    - model_readiness
+    - calibrated_probability
+    - data_contract_pass
+    - runtime_compatible_proven
+    - baseline
+    - promotion
+    claim_boundary: f97a_design_only_stage_open_first_hit_survival_hazard_event_sparse_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+verification_profile:
+  profile_id: design_only
+  claim_surface:
+    allowed_claims:
+    - f97a_design_open_packet_recorded
+    - f97_first_hit_survival_hazard_axis_opened
+    - f97b_proxy_scout_planned
+    - task_force_actual_calls_recorded_for_f97a
+    - f96c_negative_memory_linked
+    - frontier_extra_due_check_not_due_after_f96
+    - frontier_five_stage_direction_synthesis_recorded_for_f92_to_f96
+    - frontier_topic_rotation_check_recorded_for_f97
+    - runtime_gate_not_applicable_with_reason
+    forbidden_claims:
+    - completion
+    - complete
+    - completed
+    - selected_baseline
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - goal_achieve
+    - candidate
+    - promotion_candidate
+    - runtime_probe
+    - runtime_verified
+    - strategy_tester_runtime_economics
+    - runtime_economics
+    - runtime_economics_pass
+    - materialization_ready
+    - mt5_handoff_ready
+    - onnx_handoff_ready
+    - ea_handoff_ready
+    - f97_stage_open_completed
+    - task_force_reviewed
+    - task_force_reviewed_pass
+    - internally_reviewed
+    - reviewed
+    - verified
+    - pass
+    - model_quality
+    - model_readiness
+    - calibrated_probability
+    - data_contract_pass
+    - runtime_compatible_proven
+    - baseline
+    - promotion
+    claim_boundary: f97a_design_only_stage_open_first_hit_survival_hazard_event_sparse_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+  trigger_sources:
+  - active_goal_frontier_continuation
+  - F96C closeout rotated to F97 pending scaffold
+  - formal F97A stage open claim
+  - explicit user instruction requiring Task Force when triggered
+  protected_claims:
+  - f97a_design_open_packet_recorded
+  - f97_first_hit_survival_hazard_axis_opened
+  - f97b_proxy_scout_planned
+  - task_force_actual_calls_recorded_for_f97a
+  - f96c_negative_memory_linked
+  - frontier_extra_due_check_not_due_after_f96
+  - frontier_five_stage_direction_synthesis_recorded_for_f92_to_f96
+  - frontier_topic_rotation_check_recorded_for_f97
+  - runtime_gate_not_applicable_with_reason
+  required_evidence:
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/experiment_design.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/runtime_contract.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/f97b_proxy_scout_brief.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/data_integrity_plan.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/model_validation_plan.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/first_hit_survival_hazard_contract.json
+  - docs/agent_control/packets/frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1/codex_task_force_review_packet.json
+  - docs/agent_control/packets/frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1/work_packet.yaml
+  - docs/agent_control/packets/frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1/skill_receipts.json
+  - docs/agent_control/packets/frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1/closeout_gate.json
+  gates_not_run_with_reason:
+  - gate: runtime_evidence_gate
+    reason_code: design_only_no_runtime_claim
+    reason: F97A is formal design/open only; it has no runnable ONNX/EA/set bundle, no Strategy Tester output, and no materialization/economics/handoff
+      claim.
+    claim_effect: No runtime_probe, runtime_verified, materialization_ready, handoff_ready, runtime_authority, live_readiness, selected_baseline,
+      or Goal Achieve claim is allowed.
+  - gate: wfo_stress_gate
+    reason_code: outside_claim_surface_no_model_candidate
+    reason: F97A defines the F97B proxy scout contract only; it does not train/select a model.
+    claim_effect: No WFO pass, stress pass, model quality, selected baseline, or candidate claim is allowed.
+  stop_conditions:
+  - Stop after F97A design artifacts, receipts, gates, ledgers, and state sync are materialized.
+  - Do not create candidate/runtime claims in F97A.
+  - If runnable candidate or runtime claim appears, reroute to runtime_probe profile in the same packet.
+acceptance_criteria:
+- id: AC-001
+  text: F97A experiment design exists.
+  expected_artifact: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/experiment_design.json
+  verification_method: scope_completion_gate
+  required: true
+- id: AC-002
+  text: F97A Task Force actual calls are recorded.
+  expected_artifact: docs/agent_control/packets/frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1/codex_task_force_review_packet.json
+  verification_method: codex_task_force_review_packet
+  required: true
+- id: AC-003
+  text: F97B proxy scout brief exists.
+  expected_artifact: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/f97b_proxy_scout_brief.json
+  verification_method: scope_completion_gate
+  required: true
+- id: AC-004
+  text: Runtime evidence gate is explicitly outside claim surface, not skipped for cost or proxy-bad reasons.
+  expected_artifact: stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/runtime_contract.json
+  verification_method: final_claim_guard
+  required: true
+work_plan:
+- Write F97A design/runtime-contract/F97B brief artifacts.
+- Record Task Force actual_subagent_calls and local-verification classifications.
+- Run frontier_extra_due_check, five-stage synthesis, and topic rotation gates.
+- Run schema, receipt, state sync, gate coverage, and final claim guard checks.
+- Commit to main if gates pass.
+skill_routing:
+  primary_family: experiment_design
+  primary_skill: obsidian-experiment-design
+  support_skills:
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  - obsidian-stage-transition
+  - obsidian-claim-discipline
+  skills_considered:
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  - obsidian-stage-transition
+  - obsidian-claim-discipline
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  skills_selected:
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  - obsidian-stage-transition
+  - obsidian-claim-discipline
+  skills_not_used:
+  - skill: obsidian-runtime-parity
+    reason: No ONNX/EA/runtime parity or handoff claim is made.
+  - skill: obsidian-backtest-forensics
+    reason: No new Strategy Tester report or trade list exists in F97A.
+  required_skill_receipts:
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  - obsidian-stage-transition
+  - obsidian-claim-discipline
+  required_gates:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  source_inputs:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/00_spec/stage_brief.md
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/01_inputs/input_refs.md
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/04_selected/selection_status.md
+  - docs/agent_control/work_family_registry.yaml
+  - docs/agent_control/codex_task_force_registry.yaml
+  - docs/registers/frontier_extra_stage_register.yaml
+  - data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json
+  - data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt
+  - data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/action_value_label_summary.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/tier_route_summary.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/data_feature_split_lock.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/d/decision.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96c_stage_closeout_summary.json
+  - docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/work_packet.yaml
+  - docs/agent_control/packets/frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1/closeout_gate.json
+  machine_readable:
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/run_manifest.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/summary.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/kpi_record.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/experiment_design.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/runtime_contract.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/f97b_proxy_scout_brief.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/data_integrity_plan.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/model_validation_plan.json
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/d/first_hit_survival_hazard_contract.json
+  - docs/agent_control/packets/frontier97A_stage_open_first_hit_survival_hazard_event_sparse_axis_v1/skill_receipts.json
+  human_readable:
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97A/r/summary.md
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/frontier97A_stage_open_first_hit_survival_hazard_report.md
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/00_spec/stage_brief.md
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/04_selected/selection_status.md
+  - stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/03_reviews/context_anchor.md
+  raw_evidence:
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/kpi_record.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/candidate_gate.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/03_reviews/f96c_stage_closeout_summary.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96C/d/decision.json
+  missing_evidence:
+  - evidence: MT5 Strategy Tester runtime output
+    reason: outside F97A design-only claim surface
+  - evidence: WFO/stress result
+    reason: outside F97A design-only claim surface
+gates:
+  required:
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - artifact_lineage_audit
+  - result_judgment_audit
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  actual_status_source:
+    work_packet_schema_lint: pass
+    skill_receipt_schema_lint: pass
+    codex_task_force_review_packet: pass_with_boundary
+    frontier_extra_due_check: pass_not_due
+    frontier_five_stage_direction_synthesis: pass
+    frontier_topic_rotation_check: pass
+    scope_completion_gate: pass
+    data_integrity_audit: pass_with_boundary
+    model_validation_audit: pass_with_boundary
+    artifact_lineage_audit: pass
+    result_judgment_audit: pass_with_boundary
+    state_sync_audit: pass
+    required_gate_coverage_audit: pass
+    final_claim_guard: pass
+  not_applicable_with_reason:
+    runtime_evidence_gate: F97A is formal design/open only; it has no runnable ONNX/EA/set bundle, no Strategy Tester output, and no materialization/economics/handoff
+      claim.
+    wfo_stress_gate: F97A defines the F97B proxy scout contract only; it does not train/select a model.
+final_claim_policy:
+  allowed_claims:
+  - f97a_design_open_packet_recorded
+  - f97_first_hit_survival_hazard_axis_opened
+  - f97b_proxy_scout_planned
+  - task_force_actual_calls_recorded_for_f97a
+  - f96c_negative_memory_linked
+  - frontier_extra_due_check_not_due_after_f96
+  - frontier_five_stage_direction_synthesis_recorded_for_f92_to_f96
+  - frontier_topic_rotation_check_recorded_for_f97
+  - runtime_gate_not_applicable_with_reason
+  forbidden_claims:
+  - completion
+  - complete
+  - completed
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - candidate
+  - promotion_candidate
+  - runtime_probe
+  - runtime_verified
+  - strategy_tester_runtime_economics
+  - runtime_economics
+  - runtime_economics_pass
+  - materialization_ready
+  - mt5_handoff_ready
+  - onnx_handoff_ready
+  - ea_handoff_ready
+  - f97_stage_open_completed
+  - task_force_reviewed
+  - task_force_reviewed_pass
+  - internally_reviewed
+  - reviewed
+  - verified
+  - pass
+  - model_quality
+  - model_readiness
+  - calibrated_probability
+  - data_contract_pass
+  - runtime_compatible_proven
+  - baseline
+  - promotion
+  claim_boundary: f97a_design_only_stage_open_first_hit_survival_hazard_event_sparse_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
