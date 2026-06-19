@@ -1590,3 +1590,14 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - judgment: `negative_proxy_scout_side_cost_joint_gate_failed_no_runtime_trigger`
 - effect: side-balance/cost-exposure risk budget surface did not create a runnable candidate if candidate_count is zero.
 - next: `frontier93C_side_balance_cost_exposure_risk_budget_repair_or_rotation_decision_v1`
+
+<!-- frontier93C_side_balance_cost_exposure_risk_budget_repair_or_rotation_decision_v1__closeout_record -->
+
+## F93C side/cost risk budget negative closeout(F93C 방향/비용 위험 예산 부정 마감)
+
+- run_id(실행 ID): `frontier93C_side_balance_cost_exposure_risk_budget_repair_or_rotation_decision_v1`
+- failed_boundary(실패 경계): F93B best combined validation(검증) net/PF/trades-per-day/high-cost share(순손익/수익 팩터/일 거래 수/고비용 비중)는 `0.09221791 / 1.049525 / 7.027027 / 0.55`였고, Tier A/Tier B separate gates(티어 A/티어 B 분리 게이트)는 실패했으며 candidate_count(후보 수)는 `0`이었다.
+- salvage_value(회수 가치): side-balance/cost-exposure budget(방향 균형/비용 노출 예산)은 combined density(합산 밀도)와 side balance(방향 균형) 참고 단서로만 보존한다. `ridge_regime_dense_cost_norm_side25_q85`는 future objective design(향후 목적함수 설계) 참고이지 candidate selection(후보 선정)이 아니다.
+- do_not_repeat(반복 금지): threshold/side-share/cost-cap/cost-weight/filter/session/routing/parameter-only tweak(임계값/방향 비중/비용 상한/비용 가중치/필터/세션/라우팅/파라미터만 조정), OOS rescue(표본외 구조 구제), proxy PF as runtime PF(프록시 수익 팩터를 런타임 수익 팩터로 주장), Tier B negative/thin fallback candidate claim(티어 B 부정/얇은 대체 후보 주장), compile/proxy-only runtime evidence(컴파일/프록시 단독 런타임 근거).
+- reopen_condition(재개 조건): new source/label/runtime representation/model family/objective/trade shape/risk logic/regime split/negative-control cause(새 원천/라벨/런타임 표현/모델 계열/목적함수/거래 형태/위험 로직/장세 분할/부정 대조 원인)가 있을 때만 재개한다.
+- runtime(런타임): no MT5 Strategy Tester probe(MT5 전략 테스터 탐침 없음). 이유는 no runnable candidate/runtime claim(실행 가능한 후보/런타임 주장 없음)이며, cost/proxy-bad skip(비용 또는 프록시 부진을 이유로 한 생략)이 아니다.

@@ -1,0 +1,49 @@
+{
+  "claim_boundary": "f93c_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "data_sources_checked": [
+    "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/proxy_scout/tier_route_summary.json",
+    "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/kpi_record.json",
+    "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/proxy_scout/candidate_gate.json"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "f94_stage_open_completed",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "leakage_checks": [
+    "No threshold tuning",
+    "No OOS rescue",
+    "Tier A/Tier B/routed total retained"
+  ],
+  "missing_data_boundary": "No new data materialized in F93C.",
+  "packet_id": "frontier93C_side_balance_cost_exposure_risk_budget_repair_or_rotation_decision_v1",
+  "skill": "obsidian-data-integrity",
+  "split_boundary": "F93B train/validation/OOS read is consumed as frozen evidence.",
+  "status": "executed",
+  "time_axis_boundary": "F93B routed timestamps were sorted with duplicate timestamps 0; F93C performs no new row fit."
+}

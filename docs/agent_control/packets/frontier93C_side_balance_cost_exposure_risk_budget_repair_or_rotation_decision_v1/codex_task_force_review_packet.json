@@ -1,0 +1,98 @@
+{
+  "actual_subagent_calls": [
+    {
+      "accepted_summary": "Close F93 as negative/no-authority and rotate; capped repair would risk same side/cost budget micro-tuning.",
+      "agent_nickname": "Tesla",
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019ede5e-4c80-79a2-897c-2e353f89efa8",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "accepted_summary": "F93C needs fresh packet, receipts, gate coverage, final claim guard, and F93C-context actual calls; F93B gates are input evidence only.",
+      "agent_nickname": "Boyle",
+      "opinion_classification": "needs_local_verification",
+      "result_status": "completed",
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019ede5e-6098-7172-87df-610958313033",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "accepted_summary": "No data repair is needed for negative proxy closeout; F93B data evidence is sufficient inside proxy-only boundary.",
+      "agent_nickname": "Locke",
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019ede5e-7504-72a1-a954-6f43c02a28ca",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "accepted_summary": "Reject same-axis capped repair; preserve side/cost budget as reference clue and rotate to tier-stable realized-utility labels.",
+      "agent_nickname": "James",
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019ede5e-902b-74b1-a341-84d8b558498d",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "accepted_summary": "OOS final-read PF is a diagnostic clue only; it cannot rescue failed validation/Tier A/Tier B gates or create model readiness.",
+      "agent_nickname": "Aristotle",
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019ede5e-a4d5-71f0-99d7-5b0b6561828e",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "accepted_summary": "Runtime evidence gate is out_of_scope_by_claim because no runnable ONNX/EA/set surface or runtime/economics/materialization claim exists.",
+      "agent_nickname": "Halley",
+      "opinion_classification": "accepted",
+      "result_status": "completed",
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019ede5e-b936-7680-bbbf-a6b2fcf26c96",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    }
+  ],
+  "advice_classification": {
+    "agent_01_system_governor": "accepted",
+    "agent_04_evidence_control_plane": "needs_local_verification",
+    "agent_05_data_feature_contract": "accepted",
+    "agent_06_quant_research": "accepted",
+    "agent_07_model_validation_risk": "accepted",
+    "agent_08_mt5_onnx_runtime": "accepted"
+  },
+  "agents_used": [
+    "agent_01_system_governor",
+    "agent_04_evidence_control_plane",
+    "agent_05_data_feature_contract",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "audit_name": "codex_task_force_review_packet",
+  "bounded_evidence": [
+    "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/proxy_scout/candidate_gate.json",
+    "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/kpi_record.json",
+    "docs/agent_control/packets/frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1/work_packet.yaml"
+  ],
+  "claim_boundary": "f93c_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "decision": "negative_memory_with_next_frontier_proposal",
+  "final_codex_direction": "Close F93 as negative/no-authority and rotate to F94 pending-open scaffold.",
+  "forbidden_claim_check": "No candidate, selected baseline, operating promotion, runtime authority, live readiness, Goal Achieve, runtime verified, or materialization-ready claim.",
+  "local_verification": [
+    "F93B candidate_count=0 and runtime_probe_triggered=false were verified from the candidate gate.",
+    "F93B validation joint gate failed; OOS positive final read is clue only.",
+    "F93C records fresh Task Force calls and does not reuse F93B calls.",
+    "No runtime/materialization/economics claim is made in F93C."
+  ],
+  "model_policy": "inherited_parent_model_highest_available_xhigh_when_available",
+  "packet_id": "frontier93C_side_balance_cost_exposure_risk_budget_repair_or_rotation_decision_v1",
+  "passed": true,
+  "review_requirement": "codex_task_force_review_packet",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "skill": "obsidian-task-force-review",
+  "status": "executed",
+  "trigger_reason": "stage_closeout_rotation_required_and_explicit_user_instruction_required"
+}

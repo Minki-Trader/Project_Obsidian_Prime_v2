@@ -1,9 +1,7 @@
 ﻿# Review Index
 
-- `f93b_task_force_review_receipt`: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_task_force_review_receipt.json`
-- `f93b_data_integrity_audit`: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_data_integrity_audit.json`
-- `f93b_model_validation_audit`: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_model_validation_audit.json`
-- `f93b_kpi_contract_audit`: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_kpi_contract_audit.json`
-- `f93b_artifact_lineage_audit`: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_artifact_lineage_audit.json`
-- `f93b_result_judgment_audit`: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_result_judgment_audit.json`
-- `f93b_required_gate_coverage_audit`: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_required_gate_coverage_audit.json`
+- `f93c_task_force_review_receipt`: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93c_task_force_review_receipt.json`
+- `f93c_frontier_extra_due_check`: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93c_frontier_extra_due_check.json`
+- `f93c_frontier_topic_rotation_check`: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93c_frontier_topic_rotation_check.json`
+- `f93c_required_gate_coverage_audit`: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93c_required_gate_coverage_audit.json`
+- `f93c_final_claim_guard`: `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93c_final_claim_guard.json`

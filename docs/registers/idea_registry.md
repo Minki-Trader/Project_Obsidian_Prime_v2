@@ -2475,3 +2475,12 @@ Register ideas when they become durable work, not for every passing thought.
 - idea: Side-balance and cost-exposure risk-budget proxy scout.
 - outcome: `negative_proxy_scout_side_cost_joint_gate_failed_no_runtime_trigger`
 - boundary: `f93b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`
+<!-- frontier93C_side_balance_cost_exposure_risk_budget_repair_or_rotation_decision_v1__closeout_record -->
+
+## F93C side-balance cost-exposure risk-budget closeout
+
+- run_id: `frontier93C_side_balance_cost_exposure_risk_budget_repair_or_rotation_decision_v1`
+- hypothesis: F93 side/cost risk budget should rotate unless a non-threshold structural repair exists.
+- result: negative_memory, no candidate, no runtime trigger.
+- next_action: `frontier94A_stage_open_tier_stable_realized_utility_label_axis_v1` pending-open scaffold.
+- claim_boundary: `f93c_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
