@@ -1,0 +1,17 @@
+{
+  "packet_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+  "status": "executed",
+  "skill": "obsidian-data-integrity",
+  "data_sources_checked": [
+    "F91A names source identity requirements; F91B must measure source path/hash/rows/feature order."
+  ],
+  "time_axis_boundary": "Closed-bar decision time; broker close key alignment; no future/current-bar contamination.",
+  "split_boundary": "Time-ordered train/validation/OOS; regime/cost/density rules train-only or WFO fold train-only.",
+  "leakage_checks": [
+    "No F90 ordering target reuse.",
+    "No validation/OOS rule selection.",
+    "No future spread/slippage/cost in features."
+  ],
+  "missing_data_boundary": "Tier B must be recorded or marked missing_required; combined blocked if Tier B missing.",
+  "receipt_path": "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/data_integrity.json"
+}

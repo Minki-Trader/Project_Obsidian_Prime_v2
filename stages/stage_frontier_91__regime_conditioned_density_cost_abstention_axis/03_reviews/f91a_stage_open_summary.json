@@ -1,0 +1,252 @@
+{
+  "run_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+  "stage_id": "stage_frontier_91__regime_conditioned_density_cost_abstention_axis",
+  "parent_run_id": "frontier90D_time_to_barrier_repair_or_rotation_decision_v1",
+  "next_run_id": "frontier91B_regime_density_cost_abstention_proxy_scout_v1",
+  "created_at_utc": "2026-06-19T02:27:41Z",
+  "status": "f91a_stage_open_design_prepared_no_candidate_no_authority",
+  "judgment": "design_only_stage_open_regime_conditioned_density_cost_abstention_axis",
+  "claim_boundary": "design_only_stage_open_for_regime_conditioned_density_cost_abstention_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "allowed_claims": [
+    "f91a_stage_open_design_prepared",
+    "f91_regime_conditioned_density_cost_abstention_axis_opened",
+    "f91b_proxy_scout_planned",
+    "task_force_actual_calls_recorded_for_f91a",
+    "frontier_extra_due_check_not_due_after_f90",
+    "frontier_five_stage_direction_synthesis_recorded_for_f86_to_f90",
+    "frontier_topic_rotation_check_passed_for_f91"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents",
+    "model_quality",
+    "model_readiness",
+    "data_contract_pass"
+  ],
+  "verification_profile": "design_only",
+  "experiment_design": {
+    "run_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+    "stage_id": "stage_frontier_91__regime_conditioned_density_cost_abstention_axis",
+    "created_at_utc": "2026-06-19T02:27:41Z",
+    "hypothesis": "Pre-entry regime-conditioned density/cost abstention can learn when not to trade and create a runtime-compatible US100 M5 strategy surface without reusing F90 time-to-barrier ordering.",
+    "decision_use": "Prepare F91B proxy scout only; no candidate, baseline, or runtime authority.",
+    "comparison_baseline": {
+      "reference_only": "frontier90D_time_to_barrier_repair_or_rotation_decision_v1",
+      "negative_memory": "F90C ordering proxy produced no candidate and F90D closed the axis negative/no authority.",
+      "not_inherited": [
+        "winner",
+        "selected_baseline",
+        "promotion_history",
+        "runtime_authority"
+      ]
+    },
+    "control_variables": [
+      "FPMarkets US100 M5 symbol/timeframe",
+      "feature-label boundary at closed-bar decision time",
+      "train/validation/OOS time ordering",
+      "Tier A separate/Tier B separate/Tier A+B combined record requirement",
+      "no validation/OOS leakage into regime/cost/density rule selection"
+    ],
+    "changed_variables": [
+      "primary axis shifts from time-to-barrier ordering to regime split + objective + risk logic",
+      "objective shifts from ordering proxy to density/cost abstention utility",
+      "risk logic explicitly tracks density death, cost stress, side/session concentration, and drawdown exposure"
+    ],
+    "sample_scope": {
+      "symbol": "FPMarkets US100",
+      "timeframe": "M5",
+      "tier_scope": "Tier A separate, Tier B separate, Tier A+B combined or structured missing_required/blocked",
+      "source_identity_status": "to_be_measured_in_f91b",
+      "runtime_scope": "not_materialized_in_f91a"
+    },
+    "success_criteria": [
+      "F91B can produce proxy utility separated from negative controls without using F90 ordering score.",
+      "Positive utility is not validation-only and has density, cost stress, side balance, and regime coverage.",
+      "If a runnable candidate appears, same-packet MT5 Strategy Tester trigger is evaluated and not skipped for cost/proxy-bad reasons."
+    ],
+    "failure_criteria": [
+      "Only threshold/filter/parameter retuning remains.",
+      "F90 ordering target or signed-speed score is reused under a new name.",
+      "Tier B or combined record is omitted instead of marked missing_required/blocked/out_of_scope_by_claim.",
+      "Density death, cost-only filter, or validation-only rescue dominates the result."
+    ],
+    "invalid_conditions": [
+      "Regime or cost features use future values.",
+      "OOS is used for model/rule selection.",
+      "Abstention score is called calibrated probability before calibration evidence.",
+      "Runtime/economics claims are made without Strategy Tester evidence identity."
+    ],
+    "stop_conditions": [
+      "Stop F91A at design/open artifacts only.",
+      "Stop F91B proxy scout if novelty collapses into threshold-only repair.",
+      "Switch to runtime_probe profile if runnable ONNX/EA/set candidate or runtime/materialization/economics claim appears."
+    ],
+    "evidence_plan": [
+      "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/experiment_design.json",
+      "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/runtime_contract.json",
+      "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/f91b_proxy_scout_brief.json",
+      "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/codex_task_force_review_packet.json",
+      "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_extra_due_check.json",
+      "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_five_stage_direction_synthesis.json",
+      "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_topic_rotation_check.json",
+      "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_data_integrity_audit.json",
+      "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_model_validation_audit.json",
+      "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_artifact_lineage_audit.json",
+      "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/work_packet.yaml",
+      "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts.json"
+    ]
+  },
+  "runtime_contract": {
+    "run_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+    "created_at_utc": "2026-06-19T02:27:41Z",
+    "claim_boundary": "design_only_stage_open_for_regime_conditioned_density_cost_abstention_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+    "profile_id": "design_only",
+    "runtime_status": "not_materialized_no_candidate_no_runtime_claim",
+    "runtime_compatible_design_fields": {
+      "dataset_id": "to_be_identified_in_f91b",
+      "feature_set_id": "to_be_identified_in_f91b",
+      "label_or_objective_id": "regime_density_cost_abstention_objective_v1_design_only",
+      "split_id": "time_ordered_train_validation_oos_to_be_materialized_in_f91b",
+      "parser_runtime_contract_version": "fpmarkets_v2_contracts_reference_only",
+      "regime_split": "pre_entry_session_volatility_trend_chop_cost_state_families",
+      "density_cost_abstention_objective": "learn trade/abstain utility, not F90 barrier ordering probability",
+      "risk_logic": "density death, drawdown exposure, tail/session concentration, side balance, and cost stress",
+      "trade_shape": "not_materialized_in_f91a"
+    },
+    "future_handoff_placeholders": {
+      "onnx_hash": "not_materialized",
+      "ea_source_hash": "not_materialized",
+      "ea_binary_hash": "not_materialized",
+      "set_ini_hash": "not_materialized",
+      "feature_order_hash": "not_materialized",
+      "tester_identity": "not_materialized",
+      "report_hash": "not_materialized",
+      "trade_list_hash": "not_materialized",
+      "telemetry_hash": "not_materialized"
+    },
+    "mt5_runtime_probe_trigger_conditions": [
+      "runnable candidate or runnable decision surface is created",
+      "ONNX/EA/set behavior is claimed",
+      "runtime/materialization/handoff/economics claim appears",
+      "Strategy Tester output, operating promotion, runtime authority, or live readiness is claimed",
+      ".mq5/.mqh/.set behavior or model bundle is handed to MT5"
+    ],
+    "forbidden_skip_reasons_later": [
+      "cost",
+      "expensive",
+      "proxy_bad",
+      "bad_proxy_result"
+    ],
+    "required_action_if_triggered": "Attempt the narrow sufficient MT5 Strategy Tester probe in the same packet, or after recovery attempt lower the claim to blocked/inconclusive/out_of_scope_by_claim."
+  },
+  "f91b_brief": {
+    "run_id": "frontier91B_regime_density_cost_abstention_proxy_scout_v1",
+    "parent_run_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+    "created_at_utc": "2026-06-19T02:27:41Z",
+    "status": "planned_after_f91a_formal_open",
+    "hypothesis": "A pre-entry regime-conditioned abstention surface can separate useful trade density from cost/risk drag without reusing time-to-barrier ordering.",
+    "proxy_scout_plan": {
+      "broad_sweep": [
+        "session x volatility x trend/chop x cost-state regime families",
+        "logistic/ridge, shallow tree/GBM, and two-head abstention model families",
+        "utility target combining direction opportunity, density, expected cost drag, and abstention penalty"
+      ],
+      "extreme_sweep": [
+        "all-trade/no-abstain negative control",
+        "cost-blind negative control",
+        "density-only and cost-only controls",
+        "one-regime-only control"
+      ],
+      "micro_search_gate": [
+        "validation and OOS both preserve positive utility without OOS selection",
+        "density band, cost stress, side balance, regime coverage, and negative-control separation all survive",
+        "no validation-only rescue"
+      ]
+    },
+    "tier_record_requirement": [
+      "tier_a_separate",
+      "tier_b_separate_or_missing_required",
+      "tier_ab_combined_or_blocked_by_missing_tier_b"
+    ],
+    "minimum_kpi_plan": [
+      "coverage/density",
+      "positive utility and cost drag",
+      "side balance",
+      "regime coverage",
+      "negative-control separation",
+      "PF/DD/expectancy only when economics evidence exists"
+    ],
+    "do_not_repeat": [
+      "F90C score quantile, C/alpha, threshold, or filter-only retune",
+      "upper_first/lower_first ordering target reuse",
+      "signed-speed score as probability",
+      "Tier A-only whole-alpha read"
+    ],
+    "runtime_trigger": "If F91B creates a meaningful runnable candidate or runtime claim, same-packet MT5 probe must be attempted.",
+    "claim_boundary": "planned_proxy_scout_only_no_candidate_no_runtime_authority"
+  },
+  "frontier_extra_due_check": {
+    "due_status": "not_due",
+    "closed_canonical_frontier_count": 90,
+    "latest_extra_stage_closed": "E01",
+    "next_due_boundary": "F100",
+    "claim_effect": "Allows F91 formal open; does not create authority."
+  },
+  "frontier_five_stage_direction_synthesis": {
+    "covered_frontier_ids": [
+      "F86",
+      "F87",
+      "F88",
+      "F89",
+      "F90"
+    ],
+    "dominant_direction": "runtime-native representation, trade-shape/risk, materialization, adverse selection, and label ordering attempts all ended without authority.",
+    "repeated_mechanism": "proxy or preflight surfaces failed to create durable candidate/runtime economics evidence.",
+    "overused_axis_warning": "Do not continue time-to-barrier ordering, threshold-only filters, or parity-only claims.",
+    "next_axis_options": [
+      "regime split",
+      "objective function",
+      "risk logic",
+      "density/cost abstention"
+    ],
+    "allowed_reexperiment_conditions": "Same broad topic may return only with new source/data representation/label/runtime representation/validation philosophy/model family/objective/trade shape/risk logic/regime split.",
+    "adjacent_same_axis_block": true,
+    "claim_boundary": "design_only_stage_open_for_regime_conditioned_density_cost_abstention_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve"
+  },
+  "frontier_topic_rotation_check": {
+    "status": "pass",
+    "prior_frontier": "F90",
+    "proposed_frontier": "F91",
+    "repair_disposition_closed_in_stage": true,
+    "same_surface_repair_block": true,
+    "near_duplicate_hypothesis": false,
+    "threshold_filter_parameter_only_tweak": false,
+    "novelty_delta": [
+      "objective changes from ordering proxy to abstention utility",
+      "primary axes are regime split, density/cost objective, and risk logic",
+      "runtime-compatible design fields are recorded without runtime evidence claim"
+    ],
+    "claim_effect": "Supports F91A formal stage open discipline only."
+  }
+}

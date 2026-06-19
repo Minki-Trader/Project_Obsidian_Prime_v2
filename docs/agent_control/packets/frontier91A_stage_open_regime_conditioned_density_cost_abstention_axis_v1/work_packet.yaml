@@ -1,0 +1,279 @@
+version: work_packet_schema_v2_1
+packet_lifecycle: new_packet
+packet_id: frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1
+created_at_utc: '2026-06-19T02:27:41Z'
+user_request:
+  user_quote: /goal active continuation; user explicitly required Task Force agents when triggered
+  requested_action: canonical frontier stage open for F91A regime-conditioned density/cost abstention axis
+  requested_count:
+    value: 1
+    n_a_reason: ''
+  ambiguous_terms:
+  - Goal Achieve is not claimed.
+  - Runtime authority is not claimed.
+  - F91A is design-only.
+current_truth:
+  active_stage: stage_frontier_91__regime_conditioned_density_cost_abstention_axis
+  current_run: frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1
+  latest_completed_run: frontier90D_time_to_barrier_repair_or_rotation_decision_v1
+  source_documents:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/04_selected/selection_status.md
+  claim_boundary: design_only_stage_open_for_regime_conditioned_density_cost_abstention_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+work_classification:
+  primary_family: experiment_design
+  detected_families:
+  - experiment_design
+  - artifact_lineage
+  - state_sync
+  touched_surfaces:
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis
+  - docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1
+  - docs/workspace/workspace_state.yaml
+  mutation_intent: true
+  execution_intent: true
+risk_vector_scan:
+  risks:
+    task_force_review_claim_without_actual_calls: high
+    f90_ordering_reused_under_new_name: high
+    validation_oos_selection_leakage: high
+    runtime_probe_absence_misread_as_cost_skip: medium
+  hard_stop_risks:
+  - Do not claim runtime/economics/materialization without MT5 Strategy Tester output identity.
+  - Do not reuse F90 Task Force calls as F91A calls.
+  - Do not call candidate, model readiness, or data contract pass in F91A.
+  required_gates: &id004
+  - work_packet_schema_lint
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - frontier_extra_due_check
+  - frontier_five_stage_direction_synthesis
+  - frontier_topic_rotation_check
+  - scope_completion_gate
+  - data_integrity_audit
+  - model_validation_audit
+  - artifact_lineage_audit
+  - state_sync_audit
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims: &id001
+  - completion
+  - completed
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  - candidate
+  - promotion_candidate
+  - runtime_probe
+  - runtime_verified
+  - strategy_tester_runtime_economics
+  - runtime_economics
+  - runtime_economics_pass
+  - materialization_ready
+  - mt5_handoff_ready
+  - onnx_handoff_ready
+  - ea_handoff_ready
+  - task_force_reviewed
+  - reviewed
+  - verified
+  - pass
+  - reviewed_by_unspawned_agents
+  - model_quality
+  - model_readiness
+  - data_contract_pass
+decision_lock:
+  mode: assume_safe_default
+  assumptions:
+    task_force_required_now: true
+    strategy_tester_required_now: false
+    reason: F91A protects design-only stage-open claims and has no runtime/materialization/economics claim.
+  questions: []
+  required_user_decisions: []
+interpreted_scope:
+  work_families:
+  - experiment_design
+  target_surfaces:
+  - F91 stage open
+  - regime-density-cost abstention design
+  - F91B proxy scout brief
+  - Task Force receipt
+  - state sync
+  scope_units:
+  - stage_open_design
+  - receipt
+  - state_sync
+  execution_layers:
+  - local_python_execution
+  mutation_policy:
+    allowed: true
+    user_quote: /goal active continuation
+  evidence_layers:
+  - F90D closeout reference
+  - F91A design artifacts
+  - Task Force actual calls
+  - frontier overlays
+  reduction_policy:
+    reduction_allowed: false
+    requires_user_quote: false
+    rationale: F91A is a formal stage-open packet.
+  claim_boundary:
+    allowed_claims: &id002
+    - f91a_stage_open_design_prepared
+    - f91_regime_conditioned_density_cost_abstention_axis_opened
+    - f91b_proxy_scout_planned
+    - task_force_actual_calls_recorded_for_f91a
+    - frontier_extra_due_check_not_due_after_f90
+    - frontier_five_stage_direction_synthesis_recorded_for_f86_to_f90
+    - frontier_topic_rotation_check_passed_for_f91
+    forbidden_claims: *id001
+    claim_boundary: design_only_stage_open_for_regime_conditioned_density_cost_abstention_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+verification_profile:
+  profile_id: design_only
+  claim_surface:
+    allowed_claims: *id002
+    forbidden_claims: *id001
+    claim_boundary: design_only_stage_open_for_regime_conditioned_density_cost_abstention_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve
+  trigger_sources:
+  - active_goal_frontier_continuation
+  - F90D closeout rotated to F91 pending scaffold
+  - formal F91A stage open claim
+  - explicit user instruction requiring Task Force when triggered
+  protected_claims: *id002
+  required_evidence:
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/experiment_design.json
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/runtime_contract.json
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/f91b_proxy_scout_brief.json
+  - docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/codex_task_force_review_packet.json
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_extra_due_check.json
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_five_stage_direction_synthesis.json
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_topic_rotation_check.json
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_data_integrity_audit.json
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_model_validation_audit.json
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_artifact_lineage_audit.json
+  - docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/work_packet.yaml
+  - docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts.json
+  - docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/closeout_gate.json
+  gates_not_run_with_reason:
+  - gate: runtime_evidence_gate
+    reason_code: no_candidate_no_runtime_claim
+    reason: F91A creates design artifacts only and no runnable candidate, ONNX/EA/set behavior, or runtime/materialization/economics
+      claim.
+    claim_effect: No runtime probe, runtime verified, materialization ready, or economics claim is allowed.
+  - gate: wfo_stress_gate
+    reason_code: outside_claim_surface_no_model_candidate
+    reason: F91A does not train/select a model and only prepares F91B proxy scout design.
+    claim_effect: No WFO pass, stress pass, model quality, or candidate claim is allowed.
+  stop_conditions:
+  - Stop after F91A design artifacts, receipts, gates, and state sync are materialized.
+  - Do not create candidate/runtime claims in F91A.
+  - If runnable candidate or runtime claim appears, reroute to runtime_probe profile in the same packet.
+acceptance_criteria:
+- id: AC-001
+  text: F91A experiment design exists.
+  expected_artifact: stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/experiment_design.json
+  verification_method: scope_completion_gate
+  required: true
+- id: AC-002
+  text: F91A Task Force actual calls are recorded.
+  expected_artifact: docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/codex_task_force_review_packet.json
+  verification_method: codex_task_force_review_packet
+  required: true
+- id: AC-003
+  text: F91B proxy scout brief exists.
+  expected_artifact: stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/f91b_proxy_scout_brief.json
+  verification_method: scope_completion_gate
+  required: true
+- id: AC-004
+  text: Runtime evidence gate is explicitly not applicable by claim surface, not cost or proxy-bad.
+  expected_artifact: stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/runtime_contract.json
+  verification_method: final_claim_guard
+  required: true
+work_plan:
+- Write F91A design/runtime-contract/F91B brief artifacts.
+- Record Task Force actual_subagent_calls and local-verification responses.
+- Run frontier_extra_due_check, five-stage synthesis, and topic rotation gates.
+- Run schema, receipt, state sync, gate coverage, and final claim guard checks.
+- Commit to main if gates pass.
+skill_routing:
+  primary_family: experiment_design
+  primary_skill: obsidian-experiment-design
+  support_skills:
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-task-force-review
+  - obsidian-stage-transition
+  - obsidian-claim-discipline
+  skills_considered:
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-task-force-review
+  - obsidian-stage-transition
+  - obsidian-claim-discipline
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  skills_selected: &id003
+  - obsidian-experiment-design
+  - obsidian-data-integrity
+  - obsidian-model-validation
+  - obsidian-artifact-lineage
+  - obsidian-task-force-review
+  - obsidian-stage-transition
+  - obsidian-claim-discipline
+  skills_not_used:
+  - skill: obsidian-runtime-parity
+    reason: No ONNX/EA/runtime parity or handoff claim is made.
+  - skill: obsidian-backtest-forensics
+    reason: No new Strategy Tester report or trade list exists in F91A.
+  required_skill_receipts: *id003
+  required_gates: *id004
+evidence_contract:
+  source_inputs:
+  - docs/workspace/workspace_state.yaml
+  - docs/context/current_working_state.md
+  - docs/agent_control/work_family_registry.yaml
+  - docs/agent_control/codex_task_force_registry.yaml
+  - docs/registers/frontier_extra_stage_register.yaml
+  - docs/agent_control/packets/frontier90D_time_to_barrier_repair_or_rotation_decision_v1/closeout_gate.json
+  - docs/agent_control/packets/frontier90D_time_to_barrier_repair_or_rotation_decision_v1/codex_task_force_review_packet.json
+  - stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90d_frontier_topic_rotation_check.json
+  machine_readable:
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/run_manifest.json
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/summary.json
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/kpi_record.json
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/experiment_design.json
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/runtime_contract.json
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/f91b_proxy_scout_brief.json
+  - docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts.json
+  human_readable:
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/r/summary.md
+  - stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/frontier91A_stage_open_regime_density_cost_abstention_report.md
+  - docs/decisions/2026-06-19_frontier91a_stage_open_regime_density_cost_abstention.md
+  runtime_evidence: not_applicable_no_candidate_no_runtime_claim
+gates:
+  required: *id004
+  work_packet_schema_lint: pass
+  skill_receipt_schema_lint: pass
+  codex_task_force_review_packet: pass
+  frontier_extra_due_check: pass_not_due
+  frontier_five_stage_direction_synthesis: pass
+  frontier_topic_rotation_check: pass
+  scope_completion_gate: pass
+  data_integrity_audit: pass_with_boundary
+  model_validation_audit: pass_with_boundary
+  artifact_lineage_audit: pass
+  state_sync_audit: pass
+  required_gate_coverage_audit: pass
+  final_claim_guard: pass
+  not_applicable_with_reason:
+    runtime_evidence_gate: no_candidate_no_runtime_claim
+    wfo_stress_gate: outside_claim_surface_no_model_candidate
+final_claim_policy:
+  allowed_claims: *id002
+  forbidden_claims: *id001
+  claim_boundary: design_only_stage_open_for_regime_conditioned_density_cost_abstention_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve

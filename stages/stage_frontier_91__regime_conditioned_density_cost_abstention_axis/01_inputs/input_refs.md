@@ -1,7 +1,9 @@
-﻿# Input References(입력 참조)
+﻿# F91 Input References(입력 참고)
 
-- `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90D/summary.json` sha256 `81a41b4f4e8175395918fa7e6be8a8cd8312799339b521401153f122d523eeba`
-- `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90D/d/decision.json` sha256 `c11ee23204654f046a1f8f5fff3d199b6c828010732896f562962f267affbcff`
-- `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90C/proxy_scout/proxy_metrics.json` sha256 `7201bc1e0f6861e878a386bb04c50eb2735aa38a27ff9819478242bd7a56e0c8`
-- `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90C/kpi_record.json` sha256 `86d3599547cc76b4ed6acd20c9302131f7aa03f1ca93b863e9189baf5c2f00ea`
-- `stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/02_runs/frontier90B/labels/label_feasibility_stats.json` sha256 `0b80977a0a9680d71ef4caa9f46553760f2334fc4016095e4d17405b500c51e6`
+- parent_closeout(상위 마감): `frontier90D_time_to_barrier_repair_or_rotation_decision_v1`
+- experiment_design(실험 설계): `stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/experiment_design.json`
+- runtime_contract(런타임 계약): `stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/runtime_contract.json`
+- f91b_brief(F91B 개요): `stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/f91b_proxy_scout_brief.json`
+- task_force_receipt(태스크포스 영수증): `docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/codex_task_force_review_packet.json`
+
+Effect(효과): these files are design references(설계 참고) only and do not create runtime evidence(런타임 근거).

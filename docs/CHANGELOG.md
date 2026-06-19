@@ -69,3 +69,9 @@
 - Effect(효과): threshold/filter/parameter-only repair(임계값/필터/파라미터만 수리)를 막고 F91 pending-open scaffold(F91 개방 대기 뼈대)를 `stage_frontier_91__regime_conditioned_density_cost_abstention_axis`로 남겼다.
 - Runtime(런타임): no new Strategy Tester runtime evidence(새 전략 테스터 런타임 근거 없음); no runtime authority(런타임 권위 없음); no Goal Achieve(목표 달성 없음).
 - Boundary(경계): `f90d_stage_closeout_rotation_only_no_candidate_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+<!-- frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1 -->
+## 2026-06-19T02:27:41Z - F91A stage open design
+
+- Action(행동): F91A formal open(정식 개방)을 design-only(설계 전용)로 기록했다.
+- Effect(효과): F91B proxy scout(프록시 탐색)가 regime/density/cost/risk(장세/밀도/비용/위험) 축을 시험하게 한다.
+- Boundary(경계): no candidate(후보 없음), no runtime authority(런타임 권위 없음), no Goal Achieve(목표 달성 없음).

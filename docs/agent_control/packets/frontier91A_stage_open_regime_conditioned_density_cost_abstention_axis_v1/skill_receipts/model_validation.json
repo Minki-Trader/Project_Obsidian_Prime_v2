@@ -1,0 +1,52 @@
+{
+  "packet_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+  "status": "executed",
+  "skill": "obsidian-model-validation",
+  "model_or_threshold_surface": "predeclared regime/cost/density schema only; no trained model or candidate in F91A",
+  "validation_split": "F91B must keep validation selection and OOS final read separated.",
+  "overfit_checks": [
+    "avoid validation-only rescue",
+    "train-only binning and cost/density gates",
+    "score/rank boundary, not probability",
+    "density death and zero/low-density collapse checks"
+  ],
+  "selection_metric_boundary": "F91A defines metrics only; F91B must not use OOS for candidate selection.",
+  "allowed_claims": [
+    "f91a_stage_open_design_prepared",
+    "f91_regime_conditioned_density_cost_abstention_axis_opened",
+    "f91b_proxy_scout_planned",
+    "task_force_actual_calls_recorded_for_f91a",
+    "frontier_extra_due_check_not_due_after_f90",
+    "frontier_five_stage_direction_synthesis_recorded_for_f86_to_f90",
+    "frontier_topic_rotation_check_passed_for_f91"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "reviewed_by_unspawned_agents",
+    "model_quality",
+    "model_readiness",
+    "data_contract_pass"
+  ],
+  "receipt_path": "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/model_validation.json"
+}

@@ -1,0 +1,42 @@
+{
+  "packet_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+  "status": "executed",
+  "skill": "obsidian-experiment-design",
+  "hypothesis": "Pre-entry regime-conditioned density/cost abstention can learn when not to trade and create a runtime-compatible US100 M5 strategy surface without reusing F90 time-to-barrier ordering.",
+  "baseline": {
+    "reference_only": "frontier90D_time_to_barrier_repair_or_rotation_decision_v1",
+    "negative_memory": "F90C ordering proxy produced no candidate and F90D closed the axis negative/no authority.",
+    "not_inherited": [
+      "winner",
+      "selected_baseline",
+      "promotion_history",
+      "runtime_authority"
+    ]
+  },
+  "changed_variables": [
+    "primary axis shifts from time-to-barrier ordering to regime split + objective + risk logic",
+    "objective shifts from ordering proxy to density/cost abstention utility",
+    "risk logic explicitly tracks density death, cost stress, side/session concentration, and drawdown exposure"
+  ],
+  "invalid_conditions": [
+    "Regime or cost features use future values.",
+    "OOS is used for model/rule selection.",
+    "Abstention score is called calibrated probability before calibration evidence.",
+    "Runtime/economics claims are made without Strategy Tester evidence identity."
+  ],
+  "evidence_plan": [
+    "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/experiment_design.json",
+    "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/runtime_contract.json",
+    "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/f91b_proxy_scout_brief.json",
+    "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/codex_task_force_review_packet.json",
+    "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_extra_due_check.json",
+    "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_five_stage_direction_synthesis.json",
+    "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_topic_rotation_check.json",
+    "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_data_integrity_audit.json",
+    "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_model_validation_audit.json",
+    "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_artifact_lineage_audit.json",
+    "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/work_packet.yaml",
+    "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts.json"
+  ],
+  "receipt_path": "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/experiment_design.json"
+}

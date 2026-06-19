@@ -1,0 +1,133 @@
+{
+  "audit_name": "codex_task_force_review_packet",
+  "status": "executed",
+  "passed": true,
+  "packet_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+  "skill": "obsidian-task-force-review",
+  "created_at_utc": "2026-06-19T02:27:41Z",
+  "trigger_reason": "F91A stage_open governance, explicit user instruction to call relevant Task Force agents when triggered, and active goal frontier continuation.",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "agents_used": [
+    "agent_01_system_governor",
+    "agent_04_evidence_control_plane",
+    "agent_05_data_feature_contract",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "actual_subagent_calls": [
+    {
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019edda5-c0cf-7771-9303-77f36f66be1e",
+      "nickname": "Godel",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "advice": "F91A formal open is allowed if design-only boundary is kept and runtime triggers are preserved."
+    },
+    {
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019edda5-d4e1-7913-a06e-c750f05c1472",
+      "nickname": "Meitner",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "advice": "Packet, receipts, gates, actual_subagent_calls, and final claim guard must be materialized locally."
+    },
+    {
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019edda5-e906-7fd2-b5f8-62cb3386441c",
+      "nickname": "Herschel",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "advice": "F91B must record source identity, time axis, feature-label boundary, split boundary, and Tier A/B/combined records."
+    },
+    {
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019edda6-02b8-74c1-90e5-7235a0bf27f7",
+      "nickname": "Fermat",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "advice": "F91 hypothesis quality is acceptable; F91B should test broad and extreme controls, not threshold-only repair."
+    },
+    {
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019edda6-1740-7f81-b7a1-96d38de41d57",
+      "nickname": "Newton",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "advice": "Predeclare regime/cost/density schema, WFO boundaries, no OOS selection, and score-not-probability calibration boundary."
+    },
+    {
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019edda6-2bb6-7692-bb09-f7d9ff9072ea",
+      "nickname": "Mencius",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "advice": "MT5 probe is not triggered yet, but runtime-compatible design fields and future trigger conditions must be recorded."
+    }
+  ],
+  "review_requirement": "codex_task_force_review_packet",
+  "model_policy": {
+    "model": "gpt-5.5",
+    "reasoning_effort": "xhigh",
+    "service_tier": "priority"
+  },
+  "bounded_evidence": [
+    "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/00_spec/stage_brief.md",
+    "docs/workspace/workspace_state.yaml",
+    "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/runtime_contract.json"
+  ],
+  "advice_classification": {
+    "accepted": [
+      "agent_01_system_governor",
+      "agent_05_data_feature_contract",
+      "agent_06_quant_research",
+      "agent_08_mt5_onnx_runtime"
+    ],
+    "needs_local_verification": [
+      "agent_04_evidence_control_plane",
+      "agent_07_model_validation_risk"
+    ],
+    "rejected": []
+  },
+  "local_verification": [
+    "F91A packet and gate artifacts generated locally.",
+    "Work packet, skill receipt, state sync, and required gate coverage lints are run by generator.",
+    "Runtime evidence gate remains N/A only because claim surface is design-only with no candidate/runtime claim."
+  ],
+  "claim_boundary": "design_only_stage_open_for_regime_conditioned_density_cost_abstention_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "final_codex_direction": "Proceed with F91A formal design-only stage open and plan F91B proxy scout.",
+  "forbidden_claim_check": {
+    "completion": "not_claimed",
+    "completed": "not_claimed",
+    "selected_baseline": "not_claimed",
+    "operating_promotion": "not_claimed",
+    "runtime_authority": "not_claimed",
+    "live_readiness": "not_claimed",
+    "goal_achieve": "not_claimed",
+    "candidate": "not_claimed",
+    "promotion_candidate": "not_claimed",
+    "runtime_probe": "not_claimed",
+    "runtime_verified": "not_claimed",
+    "strategy_tester_runtime_economics": "not_claimed",
+    "runtime_economics": "not_claimed",
+    "runtime_economics_pass": "not_claimed",
+    "materialization_ready": "not_claimed",
+    "mt5_handoff_ready": "not_claimed",
+    "onnx_handoff_ready": "not_claimed",
+    "ea_handoff_ready": "not_claimed",
+    "task_force_reviewed": "not_claimed",
+    "reviewed": "not_claimed",
+    "verified": "not_claimed",
+    "pass": "not_claimed",
+    "reviewed_by_unspawned_agents": "not_claimed",
+    "model_quality": "not_claimed",
+    "model_readiness": "not_claimed",
+    "data_contract_pass": "not_claimed"
+  }
+}

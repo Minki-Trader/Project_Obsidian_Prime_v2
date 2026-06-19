@@ -2429,3 +2429,12 @@ Register ideas when they become durable work, not for every passing thought.
 - result(결과): best diagnostic variant(진단상 최선 변형) `ridge_signed_speed_alpha10` failed candidate gate(후보 게이트 실패).
 - next_action(다음 행동): `frontier90D_time_to_barrier_repair_or_rotation_decision_v1`.
 - claim_boundary(주장 경계): `f90c_ordering_proxy_scout_only_no_candidate_no_calibration_no_threshold_selection_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
+<!-- frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1 -->
+## F91A Regime Density/Cost Abstention Axis
+
+- idea_id(아이디어 ID): `f91_regime_density_cost_abstention_axis`
+- hypothesis(가설): pre-entry regime(진입 전 장세), density(밀도), cost drag(비용 부담), and risk logic(위험 로직) can define abstain/trade(회피/거래) utility without repeating F90 ordering(순서화).
+- legacy_relation(레거시 관계): `prior_evidence_only`
+- tier_scope(티어 범위): Tier A separate/Tier B separate/Tier A+B combined required in F91B.
+- evidence_boundary(근거 경계): design_only stage open(설계 전용 단계 개방), no candidate/runtime authority(후보/런타임 권위 없음).
+- next_action(다음 행동): `frontier91B_regime_density_cost_abstention_proxy_scout_v1`.

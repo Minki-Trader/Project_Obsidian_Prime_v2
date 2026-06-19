@@ -1,0 +1,485 @@
+{
+  "packet_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+  "primary_skill": "obsidian-experiment-design",
+  "receipts": [
+    {
+      "packet_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+      "status": "executed",
+      "skill": "obsidian-experiment-design",
+      "hypothesis": "Pre-entry regime-conditioned density/cost abstention can learn when not to trade and create a runtime-compatible US100 M5 strategy surface without reusing F90 time-to-barrier ordering.",
+      "baseline": {
+        "reference_only": "frontier90D_time_to_barrier_repair_or_rotation_decision_v1",
+        "negative_memory": "F90C ordering proxy produced no candidate and F90D closed the axis negative/no authority.",
+        "not_inherited": [
+          "winner",
+          "selected_baseline",
+          "promotion_history",
+          "runtime_authority"
+        ]
+      },
+      "changed_variables": [
+        "primary axis shifts from time-to-barrier ordering to regime split + objective + risk logic",
+        "objective shifts from ordering proxy to density/cost abstention utility",
+        "risk logic explicitly tracks density death, cost stress, side/session concentration, and drawdown exposure"
+      ],
+      "invalid_conditions": [
+        "Regime or cost features use future values.",
+        "OOS is used for model/rule selection.",
+        "Abstention score is called calibrated probability before calibration evidence.",
+        "Runtime/economics claims are made without Strategy Tester evidence identity."
+      ],
+      "evidence_plan": [
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/experiment_design.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/runtime_contract.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/f91b_proxy_scout_brief.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/codex_task_force_review_packet.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_extra_due_check.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_five_stage_direction_synthesis.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_topic_rotation_check.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_data_integrity_audit.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_model_validation_audit.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_artifact_lineage_audit.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/work_packet.yaml",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts.json"
+      ],
+      "receipt_path": "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/experiment_design.json"
+    },
+    {
+      "packet_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+      "status": "executed",
+      "skill": "obsidian-data-integrity",
+      "data_sources_checked": [
+        "F91A names source identity requirements; F91B must measure source path/hash/rows/feature order."
+      ],
+      "time_axis_boundary": "Closed-bar decision time; broker close key alignment; no future/current-bar contamination.",
+      "split_boundary": "Time-ordered train/validation/OOS; regime/cost/density rules train-only or WFO fold train-only.",
+      "leakage_checks": [
+        "No F90 ordering target reuse.",
+        "No validation/OOS rule selection.",
+        "No future spread/slippage/cost in features."
+      ],
+      "missing_data_boundary": "Tier B must be recorded or marked missing_required; combined blocked if Tier B missing.",
+      "receipt_path": "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/data_integrity.json"
+    },
+    {
+      "packet_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+      "status": "executed",
+      "skill": "obsidian-model-validation",
+      "model_or_threshold_surface": "predeclared regime/cost/density schema only; no trained model or candidate in F91A",
+      "validation_split": "F91B must keep validation selection and OOS final read separated.",
+      "overfit_checks": [
+        "avoid validation-only rescue",
+        "train-only binning and cost/density gates",
+        "score/rank boundary, not probability",
+        "density death and zero/low-density collapse checks"
+      ],
+      "selection_metric_boundary": "F91A defines metrics only; F91B must not use OOS for candidate selection.",
+      "allowed_claims": [
+        "f91a_stage_open_design_prepared",
+        "f91_regime_conditioned_density_cost_abstention_axis_opened",
+        "f91b_proxy_scout_planned",
+        "task_force_actual_calls_recorded_for_f91a",
+        "frontier_extra_due_check_not_due_after_f90",
+        "frontier_five_stage_direction_synthesis_recorded_for_f86_to_f90",
+        "frontier_topic_rotation_check_passed_for_f91"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "completed",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "candidate",
+        "promotion_candidate",
+        "runtime_probe",
+        "runtime_verified",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "task_force_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "reviewed_by_unspawned_agents",
+        "model_quality",
+        "model_readiness",
+        "data_contract_pass"
+      ],
+      "receipt_path": "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/model_validation.json"
+    },
+    {
+      "packet_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+      "status": "executed",
+      "skill": "obsidian-artifact-lineage",
+      "source_inputs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "docs/agent_control/work_family_registry.yaml",
+        "docs/agent_control/codex_task_force_registry.yaml",
+        "docs/registers/frontier_extra_stage_register.yaml",
+        "docs/agent_control/packets/frontier90D_time_to_barrier_repair_or_rotation_decision_v1/closeout_gate.json",
+        "docs/agent_control/packets/frontier90D_time_to_barrier_repair_or_rotation_decision_v1/codex_task_force_review_packet.json",
+        "stages/stage_frontier_90__time_to_barrier_competing_risk_label_axis/03_reviews/f90d_frontier_topic_rotation_check.json"
+      ],
+      "produced_artifacts": [
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/run_manifest.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/summary.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/kpi_record.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/experiment_design.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/runtime_contract.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/f91b_proxy_scout_brief.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/r/summary.md",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_stage_open_summary.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_task_force_review_receipt.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/codex_task_force_review_packet.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_extra_due_check.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_five_stage_direction_synthesis.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_topic_rotation_check.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_scope_completion_gate.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_data_integrity_audit.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_model_validation_audit.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_artifact_lineage_audit.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_final_claim_guard.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_state_sync_audit.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_required_gate_coverage_audit.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/frontier91A_stage_open_regime_density_cost_abstention_report.md",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/work_packet.yaml",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/closeout_gate.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/final_claim_guard.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/state_sync_audit.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/required_gate_coverage_audit.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/work_packet_schema_lint.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipt_schema_lint.json",
+        "docs/decisions/2026-06-19_frontier91a_stage_open_regime_density_cost_abstention.md",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/01_inputs/input_refs.md",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/04_selected/selection_status.md",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/context_anchor.md",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/review_index.md",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/stage_run_ledger.csv",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/experiment_design.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/data_integrity.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/model_validation.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/artifact_lineage.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/task_force_review.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/stage_transition.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/claim_discipline.json"
+      ],
+      "raw_evidence": [
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/experiment_design.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/runtime_contract.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/f91b_proxy_scout_brief.json",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/codex_task_force_review_packet.json"
+      ],
+      "machine_readable": [
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/run_manifest.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/summary.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/kpi_record.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/experiment_design.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/runtime_contract.json",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/f91b_proxy_scout_brief.json"
+      ],
+      "human_readable": [
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/r/summary.md",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/frontier91A_stage_open_regime_density_cost_abstention_report.md",
+        "docs/decisions/2026-06-19_frontier91a_stage_open_regime_density_cost_abstention.md"
+      ],
+      "hashes_or_missing_reasons": {
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/run_manifest.json": "571dd7df50322a16533cf34e88de9801216fe8d69ee7337bb0f11e7d36b7adda",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/summary.json": "aa28347bfc3e4582ac19ba9ac2901585a93cd9eab63f460f80baa9b9d1823e85",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/kpi_record.json": "5aa8bc11d3aa9d53711add3f5ee5192aad27a0de399c9a32280c881f5ab04830",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/experiment_design.json": "8b27e1d745d07737c06a3d4e2189eff8d0bf5d1904ef0d6ec80e3b569987adc7",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/runtime_contract.json": "2efdff66b7d3065ba68a31b7a475c18891ee06f82278ce19e1802bf848fb4968",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/f91b_proxy_scout_brief.json": "5ffbccc091ff8c05ff4a86ac9421a804dfabfc01e9f1b1eed74f2c690a36ac84",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/r/summary.md": "ea09879c9264f2dafc2f065489eee416dcbe1790b46923ce9c6476316fb2bbf9",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_stage_open_summary.json": "aa28347bfc3e4582ac19ba9ac2901585a93cd9eab63f460f80baa9b9d1823e85",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_task_force_review_receipt.json": "c069f4524de91353338316e95c6853ec3fc13625047593691bd6d2d5131d2e38",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/codex_task_force_review_packet.json": "e85458de6c93d7d66ba4ce49ee01405639321435bbca4d9ccdfdad67a725e61d",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_extra_due_check.json": "e44d6725ce99bc9298f71332156eece4e10a1b235fb6e999ff58e475961eab79",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_five_stage_direction_synthesis.json": "f97e67b0d9ef0e1bc7e369c06e14bba1034dc8c4c9b274013dc8422b44b185ce",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_frontier_topic_rotation_check.json": "0217ab5cc7930916e31ae23e8716d7490ced416d28874fed4a9d9621b5bf20cd",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_scope_completion_gate.json": "c01d551957ac1da540d8e45da0e7f30a7e292a7bd08992c450a2c2d45eb183ce",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_data_integrity_audit.json": "7c3d0709adeb5c585ac76d9f083fc66ee4bef61c2d6fd5e55ce62bc14224ead2",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_model_validation_audit.json": "ebaabc514bd626a8b7493b54e86beabc9c5b658abeac9efaea8350d5117b1f12",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_artifact_lineage_audit.json": "7d3a98b5d956118dd031824368d507d2c61469e0877b262b3145447063ba48e1",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_final_claim_guard.json": "cd9770bcb92d3eabca654a1cf1bb078a1f3559d0973fc18e7e06f5f6d6cda09c",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_state_sync_audit.json": "eb6249d8342ea63729de4df464dadf760360104f8e806ea2cc96c6bdb195f1f1",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/f91a_required_gate_coverage_audit.json": "373730a4368fa090928453bad48a6c79ceceb87b2c27d05819de4ba2af8c3c12",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/work_packet.yaml": "a8ffe8bc4130da1d363603755f694cc2b8c895fd5d5f293a2b060146255b74eb",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts.json": "0c804b072f60c327d42f120a5d93d0f6047dc45598ca078476b31962200d5b8d",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/closeout_gate.json": "1182056f839cb343ab7c88d3b113cb747550628209dbf3c2cbdb7e8609f30500",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/final_claim_guard.json": "cd9770bcb92d3eabca654a1cf1bb078a1f3559d0973fc18e7e06f5f6d6cda09c",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/state_sync_audit.json": "eb6249d8342ea63729de4df464dadf760360104f8e806ea2cc96c6bdb195f1f1",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/required_gate_coverage_audit.json": "373730a4368fa090928453bad48a6c79ceceb87b2c27d05819de4ba2af8c3c12",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/work_packet_schema_lint.json": "020e90fff527d6c7a35c14a4951307f9a5b7179b6c94bde5df747be0e6b2e8d0",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipt_schema_lint.json": "f60279db20c5ced24a3e7c31fbc33b21a009c790bef49d45aa50822688297366",
+        "docs/decisions/2026-06-19_frontier91a_stage_open_regime_density_cost_abstention.md": "a6041254b3b605436812208b655025d6dd41a64f8191c3ae983e74de7ad7f876",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/00_spec/stage_brief.md": "ad0f8ed92ad545b65ebaf206fc9fe9bc6d708369c18030bc4ca157f52e659d8e",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/01_inputs/input_refs.md": "35db41d709be7f4a9e35d11bd93aa4b1c035dec2012428f634d20785d4fc259c",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/04_selected/selection_status.md": "4108c056393a7b9aa93739031f242b3a1a1ce1dbe27e7870ddbf94fa8b0599aa",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/context_anchor.md": "5c2b79e58d4a7a002064f1bbbe5584ee877f79299b4f8d3f688435ef502be4a1",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/review_index.md": "c4cb0eed6eaa21c1de6db9c162b0c19ae71ecdde9292cf58f98c8ea659ebe954",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/stage_run_ledger.csv": "b8be255df63951cd867cc3366d558b8b8467e8a05c51db34cd08756bbd9f4e40",
+        "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/data_integrity.json": "527a78270fece4f0725d096ea24aaa925d8291acfaef3f9297aa6ee430bc229a"
+      },
+      "lineage_boundary": "connected_with_boundary_design_only_no_runtime_evidence",
+      "receipt_path": "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/artifact_lineage.json"
+    },
+    {
+      "packet_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+      "skill": "obsidian-task-force-review",
+      "status": "executed",
+      "created_at_utc": "2026-06-19T02:27:41Z",
+      "trigger_reason": "F91A stage_open governance, explicit user instruction to call relevant Task Force agents when triggered, and active goal frontier continuation.",
+      "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+      "agents_used": [
+        "agent_01_system_governor",
+        "agent_04_evidence_control_plane",
+        "agent_05_data_feature_contract",
+        "agent_06_quant_research",
+        "agent_07_model_validation_risk",
+        "agent_08_mt5_onnx_runtime"
+      ],
+      "actual_subagent_calls": [
+        {
+          "roster_agent_id": "agent_01_system_governor",
+          "spawned_agent_id": "019edda5-c0cf-7771-9303-77f36f66be1e",
+          "nickname": "Godel",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted",
+          "advice": "F91A formal open is allowed if design-only boundary is kept and runtime triggers are preserved."
+        },
+        {
+          "roster_agent_id": "agent_04_evidence_control_plane",
+          "spawned_agent_id": "019edda5-d4e1-7913-a06e-c750f05c1472",
+          "nickname": "Meitner",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification",
+          "advice": "Packet, receipts, gates, actual_subagent_calls, and final claim guard must be materialized locally."
+        },
+        {
+          "roster_agent_id": "agent_05_data_feature_contract",
+          "spawned_agent_id": "019edda5-e906-7fd2-b5f8-62cb3386441c",
+          "nickname": "Herschel",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted",
+          "advice": "F91B must record source identity, time axis, feature-label boundary, split boundary, and Tier A/B/combined records."
+        },
+        {
+          "roster_agent_id": "agent_06_quant_research",
+          "spawned_agent_id": "019edda6-02b8-74c1-90e5-7235a0bf27f7",
+          "nickname": "Fermat",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted",
+          "advice": "F91 hypothesis quality is acceptable; F91B should test broad and extreme controls, not threshold-only repair."
+        },
+        {
+          "roster_agent_id": "agent_07_model_validation_risk",
+          "spawned_agent_id": "019edda6-1740-7f81-b7a1-96d38de41d57",
+          "nickname": "Newton",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification",
+          "advice": "Predeclare regime/cost/density schema, WFO boundaries, no OOS selection, and score-not-probability calibration boundary."
+        },
+        {
+          "roster_agent_id": "agent_08_mt5_onnx_runtime",
+          "spawned_agent_id": "019edda6-2bb6-7692-bb09-f7d9ff9072ea",
+          "nickname": "Mencius",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted",
+          "advice": "MT5 probe is not triggered yet, but runtime-compatible design fields and future trigger conditions must be recorded."
+        }
+      ],
+      "review_requirement": "codex_task_force_review_packet",
+      "model_policy": {
+        "model": "gpt-5.5",
+        "reasoning_effort": "xhigh",
+        "service_tier": "priority"
+      },
+      "bounded_evidence": [
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/00_spec/stage_brief.md",
+        "docs/workspace/workspace_state.yaml",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91A/d/runtime_contract.json"
+      ],
+      "advice_classification": {
+        "accepted": [
+          "agent_01_system_governor",
+          "agent_05_data_feature_contract",
+          "agent_06_quant_research",
+          "agent_08_mt5_onnx_runtime"
+        ],
+        "needs_local_verification": [
+          "agent_04_evidence_control_plane",
+          "agent_07_model_validation_risk"
+        ],
+        "rejected": []
+      },
+      "local_verification": [
+        "F91A packet and gate artifacts generated locally.",
+        "Work packet, skill receipt, state sync, and required gate coverage lints are run by generator.",
+        "Runtime evidence gate remains N/A only because claim surface is design-only with no candidate/runtime claim."
+      ],
+      "claim_boundary": "design_only_stage_open_for_regime_conditioned_density_cost_abstention_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+      "final_codex_direction": "Proceed with F91A formal design-only stage open and plan F91B proxy scout.",
+      "forbidden_claim_check": {
+        "completion": "not_claimed",
+        "completed": "not_claimed",
+        "selected_baseline": "not_claimed",
+        "operating_promotion": "not_claimed",
+        "runtime_authority": "not_claimed",
+        "live_readiness": "not_claimed",
+        "goal_achieve": "not_claimed",
+        "candidate": "not_claimed",
+        "promotion_candidate": "not_claimed",
+        "runtime_probe": "not_claimed",
+        "runtime_verified": "not_claimed",
+        "strategy_tester_runtime_economics": "not_claimed",
+        "runtime_economics": "not_claimed",
+        "runtime_economics_pass": "not_claimed",
+        "materialization_ready": "not_claimed",
+        "mt5_handoff_ready": "not_claimed",
+        "onnx_handoff_ready": "not_claimed",
+        "ea_handoff_ready": "not_claimed",
+        "task_force_reviewed": "not_claimed",
+        "reviewed": "not_claimed",
+        "verified": "not_claimed",
+        "pass": "not_claimed",
+        "reviewed_by_unspawned_agents": "not_claimed",
+        "model_quality": "not_claimed",
+        "model_readiness": "not_claimed",
+        "data_contract_pass": "not_claimed"
+      },
+      "receipt_path": "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/task_force_review.json"
+    },
+    {
+      "packet_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+      "status": "executed",
+      "skill": "obsidian-stage-transition",
+      "source_current_truth_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/04_selected/selection_status.md"
+      ],
+      "changed_or_checked_docs": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/context/current_working_state.md",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/00_spec/stage_brief.md",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/04_selected/selection_status.md",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/context_anchor.md",
+        "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/03_reviews/review_index.md"
+      ],
+      "detected_conflicts": [
+        "none_detected"
+      ],
+      "canonical_state_after": {
+        "active_stage": "stage_frontier_91__regime_conditioned_density_cost_abstention_axis",
+        "current_run_id": "frontier91B_regime_density_cost_abstention_proxy_scout_v1",
+        "latest_completed_run_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1"
+      },
+      "allowed_claims": [
+        "f91a_stage_open_design_prepared",
+        "f91_regime_conditioned_density_cost_abstention_axis_opened",
+        "f91b_proxy_scout_planned",
+        "task_force_actual_calls_recorded_for_f91a",
+        "frontier_extra_due_check_not_due_after_f90",
+        "frontier_five_stage_direction_synthesis_recorded_for_f86_to_f90",
+        "frontier_topic_rotation_check_passed_for_f91"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "completed",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "candidate",
+        "promotion_candidate",
+        "runtime_probe",
+        "runtime_verified",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "task_force_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "reviewed_by_unspawned_agents",
+        "model_quality",
+        "model_readiness",
+        "data_contract_pass"
+      ],
+      "receipt_path": "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/stage_transition.json"
+    },
+    {
+      "packet_id": "frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1",
+      "status": "executed",
+      "skill": "obsidian-claim-discipline",
+      "requested_claims": [
+        "f91a_stage_open_design_prepared",
+        "f91_regime_conditioned_density_cost_abstention_axis_opened",
+        "f91b_proxy_scout_planned",
+        "task_force_actual_calls_recorded_for_f91a",
+        "frontier_extra_due_check_not_due_after_f90",
+        "frontier_five_stage_direction_synthesis_recorded_for_f86_to_f90",
+        "frontier_topic_rotation_check_passed_for_f91"
+      ],
+      "allowed_claims": [
+        "f91a_stage_open_design_prepared",
+        "f91_regime_conditioned_density_cost_abstention_axis_opened",
+        "f91b_proxy_scout_planned",
+        "task_force_actual_calls_recorded_for_f91a",
+        "frontier_extra_due_check_not_due_after_f90",
+        "frontier_five_stage_direction_synthesis_recorded_for_f86_to_f90",
+        "frontier_topic_rotation_check_passed_for_f91"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "completed",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "candidate",
+        "promotion_candidate",
+        "runtime_probe",
+        "runtime_verified",
+        "strategy_tester_runtime_economics",
+        "runtime_economics",
+        "runtime_economics_pass",
+        "materialization_ready",
+        "mt5_handoff_ready",
+        "onnx_handoff_ready",
+        "ea_handoff_ready",
+        "task_force_reviewed",
+        "reviewed",
+        "verified",
+        "pass",
+        "reviewed_by_unspawned_agents",
+        "model_quality",
+        "model_readiness",
+        "data_contract_pass"
+      ],
+      "final_status": "design_only_stage_open_no_candidate_no_runtime_authority",
+      "receipt_path": "docs/agent_control/packets/frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1/skill_receipts/claim_discipline.json"
+    }
+  ]
+}
