@@ -1,0 +1,112 @@
+{
+  "candidate_gate": {
+    "best_gate": {
+      "best_diagnostic_variant": "k9_pca5_seed9502",
+      "high_cost_trade_share": 0.981229,
+      "long_count": 586,
+      "max_state_class_share": 0.952007,
+      "oos_final_read_notes": [
+        "tier_b_separate_oos_net_nonpositive_final_read",
+        "tier_b_separate_oos_pf_below_1_final_read"
+      ],
+      "selection_failures": [
+        "tier_a_separate_validation_trades_per_day_outside_5_to_10",
+        "tier_a_separate_validation_drawdown_above_predeclared_cap",
+        "tier_a_separate_validation_side_concentration",
+        "tier_a_separate_validation_state_class_share_collapsed",
+        "tier_b_separate_validation_trades_per_day_too_thin",
+        "tier_b_separate_validation_side_concentration",
+        "tier_b_separate_validation_recovery_factor_nonpositive",
+        "tier_b_separate_validation_state_class_share_collapsed",
+        "tier_ab_combined_validation_trades_per_day_outside_5_to_10",
+        "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+        "tier_ab_combined_validation_side_concentration",
+        "tier_ab_combined_validation_state_class_share_collapsed"
+      ],
+      "short_count": 0,
+      "state_class_count": 2,
+      "validation_actual_routed_drawdown": 0.68550792,
+      "validation_actual_routed_net": 0.33572856,
+      "validation_actual_routed_pf": 1.17023,
+      "validation_actual_routed_trade_count": 586,
+      "validation_actual_routed_trades_per_day": 3.167568
+    },
+    "candidate_count": 0
+  },
+  "claim_boundary": "f95c_stage_closeout_rotation_only_negative_memory_reference_surface_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_promotion_candidate_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "closeout_kpi": {
+    "avg_loss": -0.00680069,
+    "avg_win": 0.00779706,
+    "expectancy": 0.00057292,
+    "gross_loss": 1.97220007,
+    "gross_profit": 2.30792864,
+    "long_short_breakdown": {
+      "long_count": 586,
+      "short_count": 0
+    },
+    "max_consecutive_loss": 26,
+    "payoff_ratio": 1.14651,
+    "recovery_factor": 0.489752,
+    "time_under_water": 537,
+    "win_rate": 0.505119
+  },
+  "drawdown": 0.68550792,
+  "gap_cause": "proxy/runtime gap not measured because no runtime materialization or handoff claim is made",
+  "hypothesis": "F95 state-transition embedding should close as negative memory unless a non-parameter structural repair exists.",
+  "net_profit": 0.33572856,
+  "next_action": "frontier96A_stage_open_counterfactual_action_value_policy_axis_v1",
+  "packet_id": "frontier95C_closed_bar_state_transition_repair_or_rotation_decision_v1",
+  "parity": "not_applicable_no_onnx_or_ea",
+  "profit_factor": 1.17023,
+  "proxy_kpi": {
+    "avg_cost_penalty": 0.00049017,
+    "avg_loss": -0.00680069,
+    "avg_win": 0.00779706,
+    "cost_high_trade_share": 0.981229,
+    "days": 185,
+    "embedding_dim": 5,
+    "expectancy": 0.00057292,
+    "gross_loss": 1.97220007,
+    "gross_profit": 2.30792864,
+    "high_cost_trade_share": 0.981229,
+    "long_count": 586,
+    "max_consecutive_loss": 26,
+    "max_drawdown": 0.68550792,
+    "max_state_class_share": 0.952007,
+    "model_family": "pca_kmeans_transition_state",
+    "n_clusters": 9,
+    "net_proxy": 0.33572856,
+    "payoff_ratio": 1.14651,
+    "proxy_pf": 1.17023,
+    "random_max_drawdown_mean": 0.15087254,
+    "random_net_proxy_mean": -0.1293786,
+    "random_proxy_pf_mean": 0.470948,
+    "recovery_factor": 0.489752,
+    "regime_coverage_count": 15,
+    "rows": 12210,
+    "short_count": 0,
+    "side_min_share": 0.0,
+    "split": "validation",
+    "state_class_count": 2,
+    "time_under_water_bars": 537,
+    "trade_count": 586,
+    "trades_per_day": 3.167568,
+    "variant_id": "k9_pca5_seed9502",
+    "view": "tier_ab_combined",
+    "win_rate": 0.505119
+  },
+  "runtime_kpi": "not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip",
+  "runtime_probe_trigger_rule": "If candidate_count > 0 or a runnable ONNX/EA/set/materialization/economics/handoff claim appears, same-packet MT5 Strategy Tester probe is required.",
+  "runtime_skip_reason_rejected": [
+    "cost_or_expense",
+    "proxy_result_bad"
+  ],
+  "test_period": "train_2022-09-01_to_2024-12-31_validation_2025-01-02_to_2025-09-30_oos_2025-10-01_to_2026-04-13",
+  "tier_records_required": [
+    "Tier A separate",
+    "Tier B separate",
+    "Tier A+B combined"
+  ],
+  "trade_count": 586,
+  "trades_per_day": 3.167568
+}

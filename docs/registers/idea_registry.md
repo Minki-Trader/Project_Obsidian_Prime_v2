@@ -2539,3 +2539,16 @@ Register ideas when they become durable work, not for every passing thought.
 - next_action(다음 행동): `frontier95C_closed_bar_state_transition_repair_or_rotation_decision_v1`
 
 Effect(효과): this records clue/negative memory(단서/부정 기억) only; no selected baseline(선택 기준선), runtime authority(런타임 권위), live readiness(실거래 준비), or Goal Achieve(목표 달성) is claimed.
+
+<!-- frontier95C_closed_bar_state_transition_repair_or_rotation_decision_v1 -->
+## F95C Closeout(마감) Rotate(회전) F96
+
+- run_id(실행 ID): `frontier95C_closed_bar_state_transition_repair_or_rotation_decision_v1`
+- status(상태): `f95c_closed_negative_state_transition_embedding_axis_rotate_to_f96_no_authority`
+- judgment(판정): `negative_valid_then_rotation_state_transition_embedding_no_candidate_no_runtime_trigger`
+- decision(결정): `close_f95_negative_rotate_to_counterfactual_action_value_policy_axis`
+- Task Force actual calls(태스크포스 실제 호출): `6`
+- runtime_probe_status(런타임 탐침 상태): `not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip`
+- next_action(다음 행동): `frontier96A_stage_open_counterfactual_action_value_policy_axis_v1`
+
+Effect(효과): F95(전선95)는 negative memory/reference surface(부정 기억/참고 표면)로 닫고 F96(전선96)은 pending-open scaffold(개방 대기 골격)만 가진다. No selected baseline(선택 기준선 없음), runtime authority(런타임 권위 없음), live readiness(실거래 준비 없음), or Goal Achieve(목표 달성 없음).

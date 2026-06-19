@@ -1621,3 +1621,11 @@ Decision use: proxy scout clue/negative memory only. No selected baseline, opera
 - salvage_value: density-preserving diagnostic, worst-tier utility checks, Tier B thin positive warning, and state-transition next-axis proposal.
 - do_not_repeat: utility weight/threshold/density/side/cost/session/routing/parameter-only repair, Tier B rescue, score probability claim, compile/proxy-only runtime evidence.
 - reopen_condition: new source/data representation/label/runtime representation/model family/objective/trade shape/risk logic/regime split.
+
+<!-- frontier95C_closed_bar_state_transition_repair_or_rotation_decision_v1 -->
+## F95C State Transition Negative Memory(부정 기억)
+
+- parent_run_id(부모 실행): `frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1`
+- failed_boundary(실패 경계): candidate_count=0, long-only(롱 전용), state collapse(상태 붕괴), high-cost exposure(고비용 노출), DD cap fail(손실폭 상한 실패), Tier B weakness(티어B 약점).
+- do_not_repeat(반복 금지): KMeans/PCA/threshold/filter/session/routing/parameter-only repair(K평균/PCA/임계값/필터/세션/라우팅/파라미터만 수리).
+- reopen_condition(재개 조건): new representation/objective/trade-shape/risk-logic novelty(새 표현/목적함수/거래형태/위험로직 신규성).

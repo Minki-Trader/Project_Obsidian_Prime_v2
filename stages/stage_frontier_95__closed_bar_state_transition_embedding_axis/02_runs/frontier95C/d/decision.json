@@ -1,0 +1,77 @@
+{
+  "candidate_count": 0,
+  "capped_repair_rejected_reason": "F95B failed with candidate_count=0 across state class collapse, long-only side concentration, high-cost exposure, DD above cap, trade density below 5-10/day, and Tier B weakness. Changing only KMeans k, PCA dimension, seed, threshold, session, routing, side filter, or cost filter would be parameter/filter-only repetition.",
+  "capped_repair_scope": "rejected_no_predeclared_structural_repair",
+  "data_integrity_followup": {
+    "claim_effect": "No invalid/data pass/runtime claim is made from the parent data audit.",
+    "f91_route_integrity_routed_sorted": true,
+    "local_verification_result": "retained_as_boundary_for_negative_closeout; the combined-view timestamp_sorted=false flag is not promoted to data_contract_pass, and F95C uses F95B as negative evidence only.",
+    "parent_data_integrity_status": "blocked",
+    "tier_ab_combined_timestamp_sorted": false
+  },
+  "decision_branch": "rotate",
+  "failed_boundary": {
+    "best_diagnostic_variant": "k9_pca5_seed9502",
+    "high_cost_trade_share": 0.981229,
+    "long_count": 586,
+    "max_state_class_share": 0.952007,
+    "oos_final_read_notes": [
+      "tier_b_separate_oos_net_nonpositive_final_read",
+      "tier_b_separate_oos_pf_below_1_final_read"
+    ],
+    "selection_failures": [
+      "tier_a_separate_validation_trades_per_day_outside_5_to_10",
+      "tier_a_separate_validation_drawdown_above_predeclared_cap",
+      "tier_a_separate_validation_side_concentration",
+      "tier_a_separate_validation_state_class_share_collapsed",
+      "tier_b_separate_validation_trades_per_day_too_thin",
+      "tier_b_separate_validation_side_concentration",
+      "tier_b_separate_validation_recovery_factor_nonpositive",
+      "tier_b_separate_validation_state_class_share_collapsed",
+      "tier_ab_combined_validation_trades_per_day_outside_5_to_10",
+      "tier_ab_combined_validation_drawdown_above_predeclared_cap",
+      "tier_ab_combined_validation_side_concentration",
+      "tier_ab_combined_validation_state_class_share_collapsed"
+    ],
+    "short_count": 0,
+    "state_class_count": 2,
+    "validation_actual_routed_drawdown": 0.68550792,
+    "validation_actual_routed_net": 0.33572856,
+    "validation_actual_routed_pf": 1.17023,
+    "validation_actual_routed_trade_count": 586,
+    "validation_actual_routed_trades_per_day": 3.167568
+  },
+  "final_disposition": "negative_memory_reference_surface_with_next_frontier_proposal",
+  "materialization_candidate_count": 0,
+  "negative_memory": [
+    "Do not repeat KMeans/PCA cluster count or dimension repair without a new representation.",
+    "Do not rescue long-only validation PF as a candidate.",
+    "Do not accept state max share collapse above 95% as tradable surface evidence.",
+    "Do not accept high-cost concentrated routes as runtime candidates.",
+    "Do not turn proxy-only or compile-only evidence into runtime/economics evidence."
+  ],
+  "next_frontier_proposal": {
+    "axis": "counterfactual_action_value_policy_axis",
+    "hypothesis": "Learn cost-adjusted path utility, adverse excursion, recovery/DD, and trade-density-aware action values directly for long, short, and abstain, rather than clustering states first and mapping actions later.",
+    "material_novelty_delta": {
+      "label": "counterfactual long/short/abstain path utility with adverse excursion penalties",
+      "objective": "action-value/regret-first instead of unsupervised state-first",
+      "runtime_boundary": "runtime probe required in same packet if a runnable ONNX/EA/set claim appears",
+      "trade_shape": "side-symmetric risk-first action eligibility",
+      "validation_philosophy": "risk/density/side-balance before PF-only selection"
+    },
+    "question": "Can closed-bar features learn long/short/abstain counterfactual action value with adverse-excursion risk before direction mapping, producing side-balanced 5-10 trades/day candidates with lower DD?",
+    "run_id": "frontier96A_stage_open_counterfactual_action_value_policy_axis_v1",
+    "stage_id": "stage_frontier_96__counterfactual_action_value_policy_axis"
+  },
+  "reopen_condition": "Revisit state-transition only if a new representation changes source/data representation, label, runtime representation, objective, trade shape, risk logic, or regime split; parameter-only repair is capped closed.",
+  "repair_disposition": "close_negative_rotate_not_capped_repair",
+  "rotation_selected": true,
+  "runtime_attempt_rows": 0,
+  "salvage_value": [
+    "Closed-bar transition features and train-only fit remain useful as leakage-safe negative evidence.",
+    "The positive net/PF diagnostic shows a possible long-momentum state, but it collapses side balance and DD.",
+    "State-class collapse above 95% warns that unsupervised state-first clustering lacks risk geometry.",
+    "High-cost exposure near 98% warns future surfaces need explicit cost/adverse-excursion rejection."
+  ]
+}
