@@ -1583,3 +1583,10 @@ Effect(효과): h24 fixed-hold(24봉 고정 보유)는 high-density claim(고밀
 - salvage_value: path-label feature boundary, best diagnostic failure shape, and F92B OOS positive final read as clue only.
 - do_not_repeat: q90/full58/path-first-touch threshold or filter tweak, OOS rescue, proxy PF as runtime PF, Tier A-only overclaim, compile/proxy-only runtime evidence.
 - reopen_condition: new source, label geometry, runtime representation, validation philosophy, objective, trade shape, risk logic, or regime split.
+
+## frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1
+
+- status: `f93b_side_balance_cost_exposure_risk_budget_proxy_scout_negative_no_candidate_no_authority`
+- judgment: `negative_proxy_scout_side_cost_joint_gate_failed_no_runtime_trigger`
+- effect: side-balance/cost-exposure risk budget surface did not create a runnable candidate if candidate_count is zero.
+- next: `frontier93C_side_balance_cost_exposure_risk_budget_repair_or_rotation_decision_v1`

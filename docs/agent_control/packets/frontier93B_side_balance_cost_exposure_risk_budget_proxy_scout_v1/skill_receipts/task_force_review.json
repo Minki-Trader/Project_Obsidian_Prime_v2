@@ -1,0 +1,146 @@
+{
+  "packet_id": "frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1",
+  "skill": "obsidian-task-force-review",
+  "status": "executed",
+  "trigger_reason": "F93B active goal continuation and explicit user instruction requiring relevant Task Force agents when triggered.",
+  "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+  "agents_used": [
+    "agent_01_system_governor",
+    "agent_04_evidence_control_plane",
+    "agent_05_data_feature_contract",
+    "agent_06_quant_research",
+    "agent_07_model_validation_risk",
+    "agent_08_mt5_onnx_runtime"
+  ],
+  "actual_subagent_calls": [
+    {
+      "roster_agent_id": "agent_01_system_governor",
+      "spawned_agent_id": "019ede41-e61d-7de0-ad7f-4a68554f0fa8",
+      "nickname": "Gauss",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "bounded_evidence": [
+        "docs/workspace/workspace_state.yaml",
+        "docs/agent_control/work_family_registry.yaml"
+      ],
+      "local_verification": "F93B routing may proceed as experiment_execution/proxy_scout with no authority, promotion, live, or goal claim."
+    },
+    {
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "spawned_agent_id": "019ede41-fa34-7151-b2ec-9ac1a3e05032",
+      "nickname": "Hegel",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "bounded_evidence": [
+        "docs/agent_control/packets/frontier93A_stage_open_side_balance_cost_exposure_risk_budget_axis_v1/work_packet.yaml"
+      ],
+      "local_verification": "F93B needs fresh packet, receipts, gates, actual_subagent_calls, hashes, state sync, and final claim guard."
+    },
+    {
+      "roster_agent_id": "agent_05_data_feature_contract",
+      "spawned_agent_id": "019ede42-0ea3-7722-8362-b10ab6218d3d",
+      "nickname": "Pauli",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "bounded_evidence": [
+        "stage_pipelines/stage_frontier_91/frontier91b_regime_density_cost_abstention_proxy_scout.py",
+        "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93A/d/data_integrity_plan.json"
+      ],
+      "local_verification": "F93B must re-lock source hashes, Tier A/B/routed rows, time-axis boundary, and feature-label boundary."
+    },
+    {
+      "roster_agent_id": "agent_06_quant_research",
+      "spawned_agent_id": "019ede42-2381-76d0-a745-a0f8f9c28f3b",
+      "nickname": "Poincare",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "bounded_evidence": [
+        "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92b_execution_summary.json"
+      ],
+      "local_verification": "F93B should use budgeted utility, two-queue side budget, cost exposure ledger, Tier B stability, and controls."
+    },
+    {
+      "roster_agent_id": "agent_07_model_validation_risk",
+      "spawned_agent_id": "019ede42-37bb-7b02-8719-c5cd4f5cf35c",
+      "nickname": "Lovelace",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "needs_local_verification",
+      "bounded_evidence": [
+        "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93A/d/f93b_proxy_scout_brief.json"
+      ],
+      "local_verification": "Train-only threshold/budget, validation candidate gate, OOS final-read-only, and no calibrated probability claim are required."
+    },
+    {
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019ede42-4c1a-71e3-8fc4-191fb7c68aaf",
+      "nickname": "Noether",
+      "tool_name": "multi_agent_v1.spawn_agent",
+      "result_status": "completed",
+      "opinion_classification": "accepted",
+      "bounded_evidence": [
+        "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93A/d/runtime_contract.json"
+      ],
+      "local_verification": "No MT5 probe is forced when candidate_count is zero; candidate_count > 0 requires same-packet narrow Strategy Tester probe or lowered claim."
+    }
+  ],
+  "review_requirement": "codex_task_force_review_packet",
+  "model_policy": "gpt-5.5 xhigh project floor requested by local AGENTS.md; model strength does not relax gates",
+  "bounded_evidence": [
+    "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93A/d/f93b_proxy_scout_brief.json",
+    "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93A/d/data_integrity_plan.json",
+    "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/proxy_scout/budget_config.json",
+    "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/proxy_scout/candidate_gate.json",
+    "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/kpi_record.json"
+  ],
+  "advice_classification": {
+    "agent_01_system_governor": "accepted",
+    "agent_04_evidence_control_plane": "needs_local_verification",
+    "agent_05_data_feature_contract": "needs_local_verification",
+    "agent_06_quant_research": "accepted",
+    "agent_07_model_validation_risk": "needs_local_verification",
+    "agent_08_mt5_onnx_runtime": "accepted"
+  },
+  "local_verification": [
+    "Fresh F93B Task Force actual calls are recorded; F93A calls are not reused.",
+    "Source hashes, feature order, Tier A/B/routed row counts, and split boundary are locked in F93B artifacts.",
+    "Budget/threshold surfaces are train-only; validation is the candidate gate; OOS is final-read-only.",
+    "Runtime probe is not run only when no runnable candidate and no runtime claim exist."
+  ],
+  "claim_boundary": "f93b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "final_codex_direction": "f93b_side_balance_cost_exposure_risk_budget_proxy_scout_negative_no_candidate_no_authority",
+  "forbidden_claim_check": {
+    "completion": "not_claimed",
+    "completed": "not_claimed",
+    "selected_baseline": "not_claimed",
+    "operating_promotion": "not_claimed",
+    "runtime_authority": "not_claimed",
+    "live_readiness": "not_claimed",
+    "goal_achieve": "not_claimed",
+    "candidate": "not_claimed",
+    "promotion_candidate": "not_claimed",
+    "runtime_probe": "not_claimed",
+    "runtime_verified": "not_claimed",
+    "strategy_tester_runtime_economics": "not_claimed",
+    "runtime_economics": "not_claimed",
+    "runtime_economics_pass": "not_claimed",
+    "materialization_ready": "not_claimed",
+    "mt5_handoff_ready": "not_claimed",
+    "onnx_handoff_ready": "not_claimed",
+    "ea_handoff_ready": "not_claimed",
+    "task_force_reviewed": "not_claimed",
+    "task_force_reviewed_pass": "not_claimed",
+    "internally_reviewed": "not_claimed",
+    "reviewed": "not_claimed",
+    "verified": "not_claimed",
+    "pass": "not_claimed",
+    "model_quality": "not_claimed",
+    "model_readiness": "not_claimed",
+    "calibrated_probability": "not_claimed",
+    "data_contract_pass": "not_claimed"
+  }
+}

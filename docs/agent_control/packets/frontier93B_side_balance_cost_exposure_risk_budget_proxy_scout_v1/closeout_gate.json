@@ -1,0 +1,125 @@
+{
+  "audit_name": "closeout_gate",
+  "packet_id": "frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1",
+  "status": "pass",
+  "allowed_claims": [
+    "f93b_side_balance_cost_budget_proxy_scout_executed",
+    "f93b_proxy_metrics_recorded",
+    "f93b_task_force_actual_calls_recorded",
+    "f93b_candidate_gate_failed_no_runtime_trigger",
+    "f93c_repair_or_rotation_planned"
+  ],
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "claim_boundary": "f93b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "audits": [
+    {
+      "audit_name": "work_packet_schema_lint",
+      "path": "docs/agent_control/packets/frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1/work_packet_schema_lint.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "path": "docs/agent_control/packets/frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1/skill_receipt_schema_lint.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "codex_task_force_review_packet",
+      "path": "docs/agent_control/packets/frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1/codex_task_force_review_packet.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "frontier_extra_due_check",
+      "path": "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_frontier_extra_due_check.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "frontier_five_stage_direction_synthesis",
+      "path": "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_frontier_five_stage_direction_synthesis.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "frontier_topic_rotation_check",
+      "path": "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_frontier_topic_rotation_check.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "scope_completion_gate",
+      "path": "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_scope_completion_gate.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "data_integrity_audit",
+      "path": "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_data_integrity_audit.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "model_validation_audit",
+      "path": "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_model_validation_audit.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "kpi_contract_audit",
+      "path": "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_kpi_contract_audit.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "artifact_lineage_audit",
+      "path": "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_artifact_lineage_audit.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "result_judgment_audit",
+      "path": "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/03_reviews/f93b_result_judgment_audit.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "state_sync_audit",
+      "path": "docs/agent_control/packets/frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1/state_sync_audit.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "path": "docs/agent_control/packets/frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1/required_gate_coverage_audit.json",
+      "status": "pass"
+    },
+    {
+      "audit_name": "final_claim_guard",
+      "path": "docs/agent_control/packets/frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1/final_claim_guard.json",
+      "status": "pass"
+    }
+  ],
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "path": "docs/agent_control/packets/frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1/final_claim_guard.json",
+    "status": "pass"
+  }
+}

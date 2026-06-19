@@ -1,0 +1,49 @@
+{
+  "packet_id": "frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1",
+  "status": "executed",
+  "claim_boundary": "f93b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "skill": "obsidian-data-integrity",
+  "data_sources_checked": [
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet",
+    "data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt",
+    "data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json"
+  ],
+  "time_axis_boundary": "Closed M5 feature timestamp from model input; runtime export is not produced in F93B.",
+  "split_boundary": "Train fit/threshold/budget only; validation gate; OOS final read only.",
+  "leakage_checks": [
+    "future_log_return_12 excluded from features",
+    "OOS not used for threshold or budget",
+    "Tier B separate is recorded"
+  ],
+  "missing_data_boundary": "Tier B fallback uses partial-context core42 and full58 missing fields are imputed by train-only model pipelines."
+}

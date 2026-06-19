@@ -1,12 +1,7 @@
 ﻿# Selection Status
 
-F93 is pending-open scaffold only.
+Current run: `frontier93C_side_balance_cost_exposure_risk_budget_repair_or_rotation_decision_v1`
 
-- current run: `frontier93A_stage_open_side_balance_cost_exposure_risk_budget_axis_v1`
-- status: pending formal stage open
-- candidate: not claimed
-- selected baseline: not claimed
-- operating promotion: not claimed
-- runtime authority: not claimed
-- live readiness: not claimed
-- Goal Achieve: not claimed
+No candidate, no selected baseline, no operating promotion, no runtime authority, no live readiness, no Goal Achieve.
+
+F93B is proxy-scout evidence only. Runtime probe status: `not_run_no_meaningful_runnable_candidate_no_runtime_materialization_economics_claim_not_cost_or_proxy_bad_skip`.

@@ -1,0 +1,53 @@
+{
+  "packet_id": "frontier93B_side_balance_cost_exposure_risk_budget_proxy_scout_v1",
+  "status": "executed",
+  "claim_boundary": "f93b_proxy_scout_only_no_runnable_candidate_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve",
+  "forbidden_claims": [
+    "completion",
+    "completed",
+    "selected_baseline",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "goal_achieve",
+    "candidate",
+    "promotion_candidate",
+    "runtime_probe",
+    "runtime_verified",
+    "strategy_tester_runtime_economics",
+    "runtime_economics",
+    "runtime_economics_pass",
+    "materialization_ready",
+    "mt5_handoff_ready",
+    "onnx_handoff_ready",
+    "ea_handoff_ready",
+    "task_force_reviewed",
+    "task_force_reviewed_pass",
+    "internally_reviewed",
+    "reviewed",
+    "verified",
+    "pass",
+    "model_quality",
+    "model_readiness",
+    "calibrated_probability",
+    "data_contract_pass"
+  ],
+  "skill": "obsidian-model-validation",
+  "model_or_threshold_surface": "Budgeted utility rank scores with train-only strength quantiles and predeclared side/cost budgets.",
+  "validation_split": "Validation is candidate gate; OOS is final read only and does not tune budgets.",
+  "overfit_checks": [
+    "deterministic controls",
+    "side concentration",
+    "high-cost concentration",
+    "Tier A/B/routed joint gate",
+    "unbudgeted strength replay control"
+  ],
+  "selection_metric_boundary": "diagnostic proxy only; no candidate, calibration, runtime, economics, or model superiority claim.",
+  "allowed_claims": [
+    "f93b_side_balance_cost_budget_proxy_scout_executed",
+    "f93b_proxy_metrics_recorded",
+    "f93b_task_force_actual_calls_recorded",
+    "f93b_candidate_gate_failed_no_runtime_trigger",
+    "f93c_repair_or_rotation_planned"
+  ]
+}

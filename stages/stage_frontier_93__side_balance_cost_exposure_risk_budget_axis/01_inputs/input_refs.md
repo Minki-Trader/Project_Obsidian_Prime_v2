@@ -1,20 +1,12 @@
-﻿# F93 Input References
+﻿# Input References
 
-- `docs/workspace/workspace_state.yaml`
-- `docs/context/current_working_state.md`
-- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/00_spec/stage_brief.md`
-- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/01_inputs/input_refs.md`
-- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/04_selected/selection_status.md`
-- `docs/agent_control/work_family_registry.yaml`
-- `docs/agent_control/codex_task_force_registry.yaml`
-- `docs/registers/frontier_extra_stage_register.yaml`
-- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json`
-- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt`
-- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet`
-- `data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json`
-- `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92b_execution_summary.json`
-- `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92B/proxy_scout/candidate_gate.json`
-- `docs/agent_control/packets/frontier92C_path_trade_shape_repair_or_rotation_decision_v1/closeout_gate.json`
-- `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92C/d/decision.json`
-
-Boundary: F92B/F92C are reference and negative memory only, not inherited authority.
+- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93A/d/f93b_proxy_scout_brief.json` sha256 `5f6cdc3754538686f73283cdc80ec2074ae20d9c63e9473ba6d307ce4df6f510`
+- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93A/d/data_integrity_plan.json` sha256 `f06ba499a9c13000b26c01a4cd5ffd5a13eb7300f06bec10a85c769eb2a1c84d`
+- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93A/d/runtime_contract.json` sha256 `7b957c1e5270c1712462ca65a23a2cff822c50ae67aa7b072e4ee37432621e57`
+- `stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93A/d/risk_budget_design.json` sha256 `4a92e5344c2f63d2fc40bb9bf070a36b7e9247a75c7f0a416a54d92aca528038`
+- `docs/agent_control/packets/frontier93A_stage_open_side_balance_cost_exposure_risk_budget_axis_v1/work_packet.yaml` sha256 `563801fe97b8711f5c91db4e6aba0a0873f1cf62bd1b05ab5374e2ba04ee4cea`
+- `stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/03_reviews/f92b_execution_summary.json` sha256 `9bbcdbb5a8d402b859f383d2c0e6fdfde7d05f9143a16c7cadd706b7ac79b545`
+- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_summary.json` sha256 `71f625614b3d2c5eba511549ce00c9ed0bc99acf857a91214d3fc35d771a8eef`
+- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_dataset.parquet` sha256 `5bb44b3c041fccb5ccdbc247899c08aaaba6974cef74a65ee7acbc493930ef43`
+- `data/processed/model_inputs/label_v1_fwd12_split_v1_feature_set_v2_mt5_price_proxy_58/model_input_feature_order.txt` sha256 `fa06973c24462298ea38d84528b07ca0adf357e506f3bfeea02eb0d5691ab8e2`
+- `data/raw/mt5_bars/m5/US100/bars_us100_m5_mt5api_raw.manifest.json` sha256 `107eba70ec1f3d96e2d30cb3f0f39d48c4ef7e46eb089fb14b576934cc0c6e8f`
