@@ -1,4 +1,4 @@
-Grok 협업 규칙과 제한 근거 문서를 먼저 확인한 뒤, Frontier05 개방 제안을 검토하겠습니다.
+﻿Grok 협업 규칙과 제한 근거 문서를 먼저 확인한 뒤, Frontier05 개방 제안을 검토하겠습니다.
 ## 1. Recommendation(권고)
 
 **`open_frontier05(전선05 개방)`** — 단, **좁힌 Frontier05B scout(전선05B 탐색)** 조건을 붙여서 개방합니다.

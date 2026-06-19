@@ -1,4 +1,4 @@
-You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Frontier04 stage closeout(전선04 단계 마감) proposal.
+﻿You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Frontier04 stage closeout(전선04 단계 마감) proposal.
 
 Current truth(현재 진실):
 - Stage(단계): `stage_frontier_04__path_aware_cost_dd_event_labeling`

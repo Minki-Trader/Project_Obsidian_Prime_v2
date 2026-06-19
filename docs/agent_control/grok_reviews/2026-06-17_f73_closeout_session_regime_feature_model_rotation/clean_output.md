@@ -1,4 +1,4 @@
-## Grok Review — F73 Closeout
+﻿## Grok Review — F73 Closeout
 
 **Advice classification(조언 분류):** `accepted(수용)`
 

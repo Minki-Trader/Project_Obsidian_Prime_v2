@@ -66,19 +66,23 @@ Runtime/materialization/handoff/economics claim(런타임/물질화/인계/경�
 
 Project Obsidian Prime v2는 Grok role succession(그록 역할 승계)이 아니라 project-native Codex Task Force operating system(프로젝트 전용 코덱스 태스크포스 운영체계)을 쓴다.
 
-영구 roster(명단)의 진실 원천(source of truth, 진실 원천)은 `docs/agent_control/codex_task_force_registry.yaml`이다. 새 대화창이나 cold start(냉시작)에서도 같은 8명 agent(요원)를 같은 역할로 불러야 한다.
+영구 roster(명단)의 진실 원천(source of truth, 진실 원천)은 `docs/agent_control/codex_task_force_registry.yaml`이다. 실제 Codex custom agent(코덱스 사용자 정의 요원) 파일은 `.codex/agents/<roster_id>.toml`에 두며, roster id(명단 ID), TOML file stem(TOML 파일명), TOML `name`(TOML 이름)은 서로 같아야 한다. 새 대화창이나 cold start(냉시작)에서도 같은 8명 agent(요원)를 같은 역할로 불러야 한다.
 
 model policy(모델 정책)는 현재 `gpt-5.5 xhigh(5.5 매우 높음)`를 floor(하한)로 둔다. 더 높은 Codex model(코덱스 모델)이 허용되면 사용자가 명시적으로 고정하지 않는 한 `highest available xhigh(사용 가능 최상위 매우 높음)`로 자동 교체한다. 효과(effect, 효과)는 최신 상위 모델을 쓰되, model strength(모델 강도)가 gate(게이트), threshold(임계값), evidence requirement(근거 요구), claim boundary(주장 경계)를 완화하지 못하게 하는 것이다.
 
 `obsidian-task-force-review(태스크포스 검토)`는 internal adversarial review(내부 비판 검토)와 agent routing(요원 라우팅)을 맡는다. 각 agent opinion(요원 의견)은 `accepted/rejected/needs_local_verification(수용/거절/로컬 검증 필요)`로 분류하고, Codex(코덱스)가 local verification(로컬 검증)과 final direction(최종 방향)을 계속 소유한다.
 
-Task Force review(태스크포스 검토)가 trigger(트리거)되면 Codex(코덱스)는 먼저 work packet claim surface(작업 묶음 주장 표면), required gate(필수 게이트), roster remit(명단 임무)에 맞는 최소 관련 agent(요원)만 registry(등록부) 기준으로 고르고, `reviewed/verified/pass(검토됨/검증됨/통과)`나 Task Force reviewed(태스크포스 검토됨)를 주장하기 전에 선택한 요원을 즉시 실제 `spawn_agent(서브에이전트 생성 호출)`로 호출한다. 8명 전원 호출은 기본값이 아니며, architecture/policy/runtime/stage-close/cross-system(구조/정책/런타임/단계 마감/교차 시스템)처럼 실제로 전원이 필요한 경우에만 `full_roster_call_reason(전원 호출 사유)`를 남긴다. 효과(effect, 효과)는 self-review(자기검토)를 Task Force review(태스크포스 검토)처럼 포장하지 않고, 필요한 요원 호출 증거를 먼저 만들게 하는 것이다.
+Task Force(태스크포스)의 기본 호출 방식(default call mode, 기본 호출 방식)은 `micro_consult(소형 상담)`다. 보통은 1명 agent(요원)만 부르고, 두 remit(임무)가 겹칠 때만 2명 agent(요원)를 부른다. `micro_consult(소형 상담)`는 advisory(자문)로만 기록하고 `reviewed/verified/pass(검토됨/검증됨/통과)`나 Task Force reviewed(태스크포스 검토됨)의 근거가 아니다. 효과(effect, 효과)는 관련 작업마다 필요한 요원만 적재적소에 부르게 하는 것이다.
 
-Task Force review(태스크포스 검토)가 active goal(`/goal`, 활성 목표), work packet(작업 묶음), required gate(필수 게이트), family rule(작업군 규칙), router-selected required Task Force overlay(라우터가 선택한 필수 태스크포스 오버레이), explicit user instruction requiring review(검토를 요구하는 명시 사용자 지시), 또는 closeout claim(마감 주장)에 필요하면 `spawn_agent(서브에이전트 생성 호출)` 도구 없음이나 미호출은 `blocked_for_task_force_review(태스크포스 검토 차단)`다. `not_applicable_with_reason(사유 있는 해당 없음)`나 claim boundary lowering(주장 경계 낮춤)으로 통과시킬 수 없고, `reviewed/verified/pass/stage closeout pass/internally_reviewed/rehearsed_control_plane(검토됨/검증됨/통과/단계 마감 통과/내부 검토됨/제어면 리허설됨)`을 주장하지 않는다. optional checkpoint(선택 점검)이면 작업은 계속할 수 있지만 Task Force review(태스크포스 검토) 주장은 하지 않는다. dormant/stale agent(대기 중이거나 낡은 맥락의 요원) 의견은 최신 context update(맥락 갱신) 없이 검토 근거로 쓰지 않는다.
+3명 이상 agent(요원)를 호출하려면 `escalation_reason(확대 사유)`를 남긴다. 5명 이상 agent(요원)를 호출하려면 `why_not_smaller(왜 더 작게 못 했는지)`를 남긴다. 8명 전원 호출은 `escalation_reason(확대 사유)`, `why_not_smaller(왜 더 작게 못 했는지)`, `full_roster_call_reason(전원 호출 사유)`를 모두 남긴다. 효과(effect, 효과)는 한 번에 여섯 명씩 부르는 습관을 막고, 큰 검토가 필요한 경우에만 큰 검토로 키우는 것이다.
+
+formal Task Force review(공식 태스크포스 검토)는 stage closeout(단계 마감), policy change(정책 변경), runtime authority(런타임 권위), operating promotion(운영 승격), cross-system handoff(교차 시스템 인계), 또는 protected reviewed/verified/pass claim(보호된 검토/검증/통과 주장)에만 쓴다. formal review(공식 검토)가 trigger(트리거)되면 Codex(코덱스)는 먼저 work packet claim surface(작업 묶음 주장 표면), required gate(필수 게이트), roster remit(명단 임무)에 맞는 최소 관련 custom agent(사용자 정의 요원)만 registry(등록부) 기준으로 고르고, `reviewed/verified/pass(검토됨/검증됨/통과)`나 Task Force reviewed(태스크포스 검토됨)를 주장하기 전에 선택한 요원을 즉시 실제 `spawn_agent(서브에이전트 생성 호출)`로 호출한다. 효과(effect, 효과)는 self-review(자기검토)나 `micro_consult(소형 상담)`를 Task Force review(태스크포스 검토)처럼 포장하지 않고, 필요한 요원 호출 증거를 먼저 만들게 하는 것이다.
+
+formal Task Force review(공식 태스크포스 검토)가 active goal(`/goal`, 활성 목표), work packet(작업 묶음), required gate(필수 게이트), family rule(작업군 규칙), router-selected required Task Force overlay(라우터가 선택한 필수 태스크포스 오버레이), explicit user instruction requiring review(검토를 요구하는 명시 사용자 지시), 또는 closeout claim(마감 주장)에 필요하면 `spawn_agent(서브에이전트 생성 호출)` 도구 없음이나 미호출은 `blocked_for_task_force_review(태스크포스 검토 차단)`다. `not_applicable_with_reason(사유 있는 해당 없음)`나 claim boundary lowering(주장 경계 낮춤)으로 통과시킬 수 없고, `reviewed/verified/pass/stage closeout pass/internally_reviewed/rehearsed_control_plane(검토됨/검증됨/통과/단계 마감 통과/내부 검토됨/제어면 리허설됨)`을 주장하지 않는다. optional micro_consult(선택 소형 상담)에서 current tool metadata(현재 도구 메타데이터)가 custom agent(사용자 정의 요원)를 아직 노출하지 않으면 compatibility fallback(호환 대체)을 쓸 수 있지만, claim effect(주장 효과)는 `advisory_only_no_reviewed_pass(자문 전용, 검토/통과 아님)`로 낮춘다. dormant/stale agent(대기 중이거나 낡은 맥락의 요원) 의견은 최신 context update(맥락 갱신) 없이 검토 근거로 쓰지 않는다.
 
 internal adversarial review(내부 비판 검토)는 기본 2회차(pass, 회차)로 제한한다. 1차는 critique(비판), 2차는 owner response plus local verification(소유자 응답 + 로컬 검증)이다. 3차는 new evidence(새 근거)가 있을 때만 허용한다. 효과(effect, 효과)는 검토가 과한 loop(반복)가 되지 않으면서도 rubber stamp(형식 승인)가 되지 않게 하는 것이다.
 
-active five-stage Grok retrospective(활성 5단계 그록 회고)는 Codex Task Force migration(코덱스 태스크포스 전환)과 Frontier80 open -> closeout(F80 개방 -> 마감) 경로에서 비활성화한다. 기존 Grok review(그록 검토), register(등록부), report(보고서)는 historical evidence(역사 근거)로 보존한다.
+active five-stage Grok retrospective(활성 5단계 그록 회고)는 retired/archive-only(퇴역/보관 전용)로 비활성화한다. 기존 Grok review(그록 검토), register(등록부), report(보고서)는 historical evidence(역사 근거)로 보존한다.
 
 효과(effect, 효과)는 Grok(그록)을 의식해 역할을 승계하지 않고, 프로젝트 철학과 근거 규율에 맞는 자체 운영 체계를 유지하는 것이다.
 
@@ -86,7 +90,7 @@ active five-stage Grok retrospective(활성 5단계 그록 회고)는 Codex Task
 
 Grok(Grok, 그록)은 더 이상 active review path(활성 검토 경로), external review path(외부 검토 경로), second opinion path(2차 의견 경로), stage closeout gate(단계 마감 게이트), agent/skill consulting path(요원/스킬 상담 경로)로 쓰지 않는다.
 
-사용자가 Grok 호출(call, 호출), Grok 검토(review, 검토), 외부 리뷰(external review, 외부 리뷰), 2차 의견(second opinion, 2차 의견), Codex 단독 판단 금지(no solo Codex judgment, 코덱스 단독 판단 금지), 또는 stage close 비판 검토(stage-close adversarial review, 단계 마감 비판 검토)를 말해도 새 Grok 호출을 만들지 않는다. 해당 요구는 `obsidian-task-force-review(태스크포스 검토)`의 internal adversarial review(내부 비판 검토)와 8명 agent roster(요원 명단)로 라우팅한다.
+사용자가 Grok 호출(call, 호출)이나 Grok 검토(review, 검토)를 말해도 새 Grok 호출을 만들지 않고, 그 문구만으로 Task Force review(태스크포스 검토)도 켜지 않는다. 외부 리뷰(external review, 외부 리뷰), 2차 의견(second opinion, 2차 의견), Codex 단독 판단 금지(no solo Codex judgment, 코덱스 단독 판단 금지), 또는 stage close 비판 검토(stage-close adversarial review, 단계 마감 비판 검토)가 active review request(활성 검토 요청)이면 `obsidian-task-force-review(태스크포스 검토)`의 internal adversarial review(내부 비판 검토)와 agent roster(요원 명단)로 라우팅한다.
 
 `obsidian-grok-collaboration(그록 협업)`은 retired/archive-only skill(퇴역/보관 전용 스킬)이다. 새 prompt(프롬프트), wrapper call(래퍼 호출), Grok output(그록 출력), Grok receipt(그록 영수증), Grok gate(그록 게이트)를 만들지 않는다. 기존 `docs/agent_control/grok_reviews/`와 과거 stage artifact(단계 산출물)는 historical evidence(역사 근거)로만 읽는다.
 
@@ -232,6 +236,8 @@ Stage 10(10단계)부터 알파 탐색(alpha exploration, 알파 탐색)이 닫�
 
 ## 윈도우 긴 경로 규칙(Windows Long Path Rule, 윈도우 긴 경로 규칙)
 
+깊은 stage(단계) 산출물, MT5(`MetaTrader 5`, 메타트레이더5) 산출물, `docs/agent_control/packets` 같은 long/deep artifact tree(긴/깊은 산출물 트리)를 다룰 가능성이 있으면 첫 filesystem command(파일시스템 명령)는 `rg --files <repo-relative scope>` 또는 targeted `rg`여야 한다. 넓은 `Get-ChildItem -Recurse`, `Test-Path`, `Resolve-Path`, `Import-Csv`, `Measure-Object`를 첫 명령으로 쓰지 않는다. 효과(effect, 효과)는 실패 후 재시도(retry, 재시도)가 아니라 처음부터 Windows MAX_PATH(윈도우 최대 경로 길이) 함정을 피하는 것이다.
+
 깊은 stage(단계) 산출물이나 MT5(`MetaTrader 5`, 메타트레이더5) 실행 산출물을 다룰 때 PowerShell(파워셸) `Get-Content`, `Get-ChildItem`, 또는 일반 `Path.exists`가 실패하면 곧바로 missing(누락)이나 blocked(차단)로 판정하지 않는다.
 
 필수 재시도(required retry, 필수 재시도)는 repo-relative path(저장소 상대 경로) 기준으로 `rg --files` 또는 `rg`를 먼저 쓰고, 파일 내용이나 CSV/JSON(표/제이슨) 기계 수정이 필요하면 `foundation.control_plane.ledger.io_path`를 거쳐 Python(파이썬)에서 연다.
@@ -310,6 +316,12 @@ Repo-scoped skill(저장소 전용 스킬)은 기본적으로 `.agents/skills/<s
 
 한국어 `.md`와 `.txt` 문서는 UTF-8 with BOM(UTF-8 BOM 포함)을 유지한다.
 
+한국어 `.md/.txt`, repo-scoped skill(저장소 전용 스킬), policy/control-plane markdown(정책/제어면 마크다운)을 만들거나 고칠 가능성이 있으면 첫 write action(쓰기 행동) 전에 encoding surface(인코딩 표면)를 먼저 정한다. 대상 파일 목록, 기존 BOM 상태, 기존 mojibake(문자 깨짐) 또는 repeated BOM(반복 BOM) 여부를 scoped validation(범위 검증)이나 동등한 바이트 검사로 확인한 뒤 작업한다. 효과(effect, 효과)는 인코딩 문제를 “작업 끝 검증”이 아니라 “쓰기 전 차단”으로 옮기는 것이다.
+
+새 한국어 `.md/.txt`는 처음 생성할 때부터 UTF-8 with BOM(UTF-8 BOM 포함)으로 만든다. 기존 대상 파일에 인코딩 부채(encoding debt, 인코딩 부채)가 있으면 조용히 덮어쓰지 않는다. 같은 작업의 touched surface(수정 표면)라면 BOM/mojibake/repeated BOM(바이트 순서 표시/문자 깨짐/반복 BOM) 수리 여부를 명시하고, 범위 밖이면 historical debt(역사 부채)로 분리한다. 효과(effect, 효과)는 새 부채와 기존 부채를 섞지 않는 것이다.
+
 PowerShell(파워셸)에서 BOM 없는 UTF-8(유티에프8) 문서를 BOM 포함으로 바꿀 때는 반드시 읽기에도 `Get-Content -Encoding UTF8 -Raw`를 명시한 뒤 `Set-Content -Encoding UTF8`로 쓴다. 기본 `Get-Content` 읽기는 금지한다. 효과(effect, 효과)는 한국어 문서가 mojibake(문자 깨짐)로 다시 저장되는 일을 막는 것이다.
+
+Git(깃)의 LF/CRLF line-ending warning(줄 끝 경고)은 encoding failure(인코딩 실패)로 판정하지 않는다. 넓은 기계적 문서 수정(broad mechanical rewrite, 넓은 기계적 재작성) 전에는 대상 파일의 줄 끝 표면(line-ending surface, 줄 끝 표면)을 확인하고, 명시 수리 작업이 아니면 기존 줄 끝 관례를 유지한다. 한 파일 안에 LF/CRLF/CR(줄 끝 형식)이 섞인 경우만 mixed line endings(혼합 줄 끝) 경고 또는 범위 수리 대상으로 남긴다. 효과(effect, 효과)는 줄 끝 변동(line-ending churn, 줄 끝 변동)이 인코딩 수리(encoding repair, 인코딩 수리)나 근거 diff(evidence diff, 근거 차이)를 숨기지 못하게 하는 것이다.
 
 `stages/*/02_runs/`처럼 path length(경로 길이)가 긴 산출물은 일반 PowerShell(파워셸) 경로 확인이 실패할 수 있다. 이 경우 `foundation.control_plane.ledger.io_path(입출력 경로)` 또는 `\\?\` long-path prefix(긴 경로 접두사)를 사용한다. 효과(effect, 효과)는 실제 산출물이 존재하는데 missing(누락)으로 오판하는 일을 막는 것이다.

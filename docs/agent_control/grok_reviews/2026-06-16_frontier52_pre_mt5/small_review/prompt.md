@@ -1,4 +1,4 @@
-Project Obsidian Prime v2 bounded Grok review.
+﻿Project Obsidian Prime v2 bounded Grok review.
 
 Review type: pre-MT5 small review(사전 MT5 소규모 검토).
 

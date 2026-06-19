@@ -18,6 +18,9 @@ Use this skill whenever work starts or resumes inside `Project_Obsidian_Prime_v2
    - `docs/workspace/workspace_state.yaml` names one active stage
    - the active stage `selection_status.md` agrees with that stage
    - the latest durable stage-handoff decision matches the same transition
+   - before the first filesystem command that may touch a deep stage, MT5, or packet artifact tree, classify the path scope; if it is deep or broad, the first command must be repo-relative `rg --files`/`rg`, not broad recursive PowerShell, `Test-Path`, `Resolve-Path`, `Import-Csv`, or `Measure-Object`
+   - before the first write that may create or edit Korean `.md/.txt`, repo-scoped skills, or policy/control-plane markdown, classify the encoding surface; run scoped encoding validation or an equivalent byte-level BOM/UTF-8/mojibake check for existing targets, and plan a UTF-8 with BOM write path for new Korean docs
+   - before broad mechanical text rewrites, classify LF/CRLF line endings and do not treat Git line-ending warnings as encoding failure; mixed line endings are a warning or scoped repair target
    - on Windows deep stage/MT5 paths, do not declare active-stage docs or frontier evidence `missing`, `invalid`, or `blocked` until repo-relative `rg --files`/`rg` has been attempted, and use `foundation.control_plane.ledger.io_path` when file content is needed
    - if any of those disagree, stop and surface state fragmentation before continuing
 7. Restate:

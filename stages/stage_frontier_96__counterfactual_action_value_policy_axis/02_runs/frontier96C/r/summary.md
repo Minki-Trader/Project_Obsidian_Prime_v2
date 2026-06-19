@@ -1,4 +1,4 @@
-# F96C Repair/Rotation Decision(수리/회전 결정)
+﻿# F96C Repair/Rotation Decision(수리/회전 결정)
 
 - run_id(실행 ID): `frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1`
 - judgment(판정): `negative_valid_then_rotation_action_value_policy_no_candidate_no_runtime_trigger`

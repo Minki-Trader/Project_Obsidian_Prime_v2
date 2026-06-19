@@ -71,19 +71,25 @@ Runtime/materialization/handoff/economics claim(런타임/물질화/인계/경�
 
 ## Codex Task Force 트리거(Codex Task Force Trigger, 코덱스 태스크포스 트리거)
 
-`obsidian-task-force-review(태스크포스 검토)`는 Grok role succession(그록 역할 승계)이 아니라 project-native Codex Task Force(프로젝트 전용 코덱스 태스크포스)를 호출하는 active trigger overlay(활성 트리거 오버레이, 추가 조건)다. 사용자 요청이나 `/goal(목표)`가 Grok deactivation(그록 비활성화), Grok replacement(그록 대체), agent/skill governance(요원/스킬 거버넌스), cold start roster(냉시작 명단), 또는 Frontier80 rehearsal(F80 리허설)를 다루면 현재 primary_family(주 작업군)에 Codex Task Force receipt(코덱스 태스크포스 영수증)와 `codex_task_force_review_packet(코덱스 태스크포스 검토 묶음)` gate(게이트)를 덧붙인다.
+`obsidian-task-force-review(태스크포스 검토)`는 project-native Codex Task Force(프로젝트 전용 코덱스 태스크포스)를 호출하는 active trigger overlay(활성 트리거 오버레이, 추가 조건)다. 요원 명단(roster, 명단)의 진실 원천은 `docs/agent_control/codex_task_force_registry.yaml`이고, 실제 custom agent(사용자 정의 요원) 파일은 `.codex/agents/<roster_id>.toml`에 둔다. 효과(effect, 효과)는 새 대화창이나 cold start(냉시작)에서도 같은 8명 요원(agent, 요원)을 같은 이름과 임무로 불러오는 것이다.
 
-Task Force review(태스크포스 검토)가 트리거되면 Codex(코덱스)는 registry(등록부) 기준으로 필요한 agent(요원)만 고르고, Task Force reviewed/reviewed/verified/pass(태스크포스 검토됨/검토됨/검증됨/통과)를 주장하기 전에 선택한 요원을 즉시 실제 `spawn_agent(서브에이전트 생성 호출)`로 호출한다. 모든 8명 agent(요원)를 기본 호출하지 않으며, 전원 호출은 architecture/policy/runtime/stage-close(구조/정책/런타임/단계 마감)처럼 전원 remit(임무)가 실제로 필요한 경우에만 사유를 남긴다.
+기본 호출 방식(default call mode, 기본 호출 방식)은 `micro_consult(소형 상담)`다. agent/skill consulting(요원/스킬 상담), 라우팅 의문, 좁은 정책 해석, 증거 연결 질문은 먼저 1명만 부르고, 두 영역이 겹칠 때만 2명을 부른다. 이 receipt(영수증)는 `micro_consult_receipt(소형 상담 영수증)`와 필요 시 `micro_consult_index(소형 상담 색인)`에 남기며, claim effect(주장 효과)는 `advisory_only_no_reviewed_pass(자문 전용, 검토/통과 아님)`다.
 
-Task Force review(태스크포스 검토)가 active goal(`/goal`, 활성 목표), work packet(작업 묶음), required gate(필수 게이트), family rule(작업군 규칙), router-selected required Task Force overlay(라우터가 선택한 필수 태스크포스 오버레이), explicit user instruction requiring review(검토를 요구하는 명시 사용자 지시), 또는 closeout claim(마감 주장)에 필요하면 `spawn_agent(서브에이전트 생성 호출)` 도구 없음이나 미호출은 `blocked_for_task_force_review(태스크포스 검토 차단)`다. `not_applicable_with_reason(사유 있는 해당 없음)`나 claim boundary lowering(주장 경계 낮춤)으로 통과시킬 수 없고, `reviewed/verified/pass/stage closeout pass/internally_reviewed/rehearsed_control_plane(검토됨/검증됨/통과/단계 마감 통과/내부 검토됨/제어면 리허설됨)`을 주장하지 않는다. optional checkpoint(선택 점검)이면 작업은 계속할 수 있지만 Task Force review(태스크포스 검토) 주장은 하지 않는다. dormant/stale agent(대기 중이거나 낡은 맥락의 요원)는 최신 context update(맥락 갱신) 없이 검토 근거로 쓰지 않는다.
+3명 이상 호출은 `escalation_reason(확대 사유)`가 있어야 한다. 5명 이상 호출은 `why_not_smaller(왜 더 작게 못 했는지)`가 있어야 한다. 8명 전원 호출은 `escalation_reason(확대 사유)`, `why_not_smaller(왜 더 작게 못 했는지)`, `full_roster_call_reason(전원 호출 사유)`를 모두 남긴다. 효과(effect, 효과)는 과거처럼 중간중간 큰 묶음 호출로 흐르지 않고, 적재적소에 작은 상담부터 쓰게 하는 것이다.
 
-효과(effect, 효과)는 internal adversarial review(내부 비판 검토)를 하되, Grok(그록) 외부 권위를 흉내내지 않고 self-review(자기검토)를 Task Force review(태스크포스 검토)로 포장하지 않는 것이다.
+formal Task Force review(공식 태스크포스 검토)는 stage closeout(단계 마감), policy change(정책 변경), runtime authority(런타임 권위), operating promotion(운영 승격), cross-system handoff(교차 시스템 인계), 또는 protected reviewed/verified/pass claim(보호된 검토/검증/통과 주장)에만 쓴다. 이때만 현재 primary_family(주 작업군)에 Codex Task Force receipt(코덱스 태스크포스 영수증)와 `codex_task_force_review_packet(코덱스 태스크포스 검토 묶음)` gate(게이트)를 덧붙인다.
+
+Task Force review(태스크포스 검토)가 필요하면 Codex(코덱스)는 registry(등록부) 기준으로 필요한 agent(요원)만 고르고, Task Force reviewed/reviewed/verified/pass(태스크포스 검토됨/검토됨/검증됨/통과)를 주장하기 전에 선택한 custom agent(사용자 정의 요원)를 즉시 실제 `spawn_agent(서브에이전트 생성 호출)`로 호출한다. optional `micro_consult(선택 소형 상담)`에서 현 세션 도구 metadata(메타데이터)가 아직 갱신되지 않아 이름 지정 custom agent(사용자 정의 요원)를 부를 수 없으면 compatibility fallback(호환 대체)로 명단 ID를 prompt(프롬프트)에 넣을 수 있지만, claim effect(주장 효과)는 자문 전용으로 낮춘다.
+
+formal Task Force review(공식 태스크포스 검토)가 active goal(`/goal`, 활성 목표), work packet(작업 묶음), required gate(필수 게이트), family rule(작업군 규칙), router-selected required Task Force overlay(라우터가 선택한 필수 태스크포스 오버레이), explicit user instruction requiring review(검토를 요구하는 명시 사용자 지시), 또는 closeout claim(마감 주장)에 필요하면 `spawn_agent(서브에이전트 생성 호출)` 도구 없음이나 미호출은 `blocked_for_task_force_review(태스크포스 검토 차단)`다. `not_applicable_with_reason(사유 있는 해당 없음)`나 claim boundary lowering(주장 경계 낮춤)으로 통과시킬 수 없고, `reviewed/verified/pass/stage closeout pass/internally_reviewed/rehearsed_control_plane(검토됨/검증됨/통과/단계 마감 통과/내부 검토됨/제어면 리허설됨)`을 주장하지 않는다. dormant/stale agent(대기 중이거나 낡은 맥락의 요원)는 최신 context update(맥락 갱신) 없이 검토 근거로 쓰지 않는다.
+
+효과(effect, 효과)는 internal adversarial review(내부 비판 검토)를 하되, Grok(그록) 외부 권위를 흉내내지 않고 self-review(자기검토)나 `micro_consult(소형 상담)`를 Task Force review(태스크포스 검토)로 포장하지 않는 것이다.
 
 ## Grok 보관 규칙(Grok Archive Rule, 그록 보관 규칙)
 
 `obsidian-grok-collaboration(그록 협업)`은 retired/archive-only skill(퇴역/보관 전용 스킬)이다. 새 work family(작업군), trigger overlay(트리거 오버레이), required skill(필수 스킬), required gate(필수 게이트), external review packet(외부 검토 묶음)을 만들지 않는다.
 
-사용자가 Grok call/review(그록 호출/검토), external review(외부 리뷰), second opinion(2차 의견), no solo Codex judgment(코덱스 단독 판단 금지), stage-close adversarial review(단계 마감 비판 검토), agent/skill consulting(요원/스킬 상담)을 말해도 Grok(그록)을 호출하지 않는다. 해당 요구는 `obsidian-task-force-review(태스크포스 검토)`의 internal adversarial review(내부 비판 검토)로 라우팅한다.
+사용자가 Grok call/review(그록 호출/검토)를 말해도 Grok(그록)을 호출하지 않고, 그 문구만으로 Task Force review(태스크포스 검토)도 켜지 않는다. external review(외부 리뷰), second opinion(2차 의견), no solo Codex judgment(코덱스 단독 판단 금지), stage-close adversarial review(단계 마감 비판 검토), agent/skill consulting(요원/스킬 상담)은 그 자체가 active review request(활성 검토 요청)이면 `obsidian-task-force-review(태스크포스 검토)`로 라우팅한다.
 
 기존 `docs/agent_control/grok_reviews/`는 historical evidence(역사 근거)다. 읽을 수는 있지만, 새 prompt(프롬프트), wrapper call(래퍼 호출), Grok output(그록 출력), Grok receipt(그록 영수증), Grok gate(그록 게이트)를 만들지 않는다.
 
@@ -225,7 +231,7 @@ Support skill은 작업을 보조한다. 작업을 다시 분류하지 않는다
 - `obsidian-runtime-parity`: Python/MT5/runtime handoff(파이썬/MT5/런타임 인계) 동등성과 외부 검증을 다룬다.
 - `obsidian-session-intake`: 작업 시작 때 current truth(현재 진실), branch/worktree fit(브랜치/작업트리 적합성), work family candidate(작업군 후보)를 좁힌다.
 - `obsidian-stage-transition`: active stage(활성 단계), handoff(인계), closeout(마감), current run(현재 실행)을 같은 회차에 동기화한다.
-- `obsidian-task-force-review`: Codex Task Force(코덱스 태스크포스) roster(명단), model policy(모델 정책), internal adversarial review(내부 비판 검토), Grok deactivation(그록 비활성화), Frontier80 rehearsal(F80 리허설)를 관리한다.
+- `obsidian-task-force-review`: Codex Task Force(코덱스 태스크포스) roster(명단), model policy(모델 정책), internal adversarial review(내부 비판 검토), explicit active review request(명시적 활성 검토 요청), Frontier80 rehearsal(F80 리허설)를 관리한다.
 - `obsidian-work-packet-router`: work family(작업군), primary skill(주 스킬), support skills(보조 스킬), required gates(필수 제한문)를 고른다.
 - `obsidian-workflow-drift-guard`: blocker(차단 지점), missing material(빠진 재료), recovery action(복구 행동)을 정리한다.
 - `obsidian-grok-collaboration`: retired/archive-only(퇴역/보관 전용) 스킬이다. 기존 Grok record(그록 기록)를 읽을 때만 쓰고, 새 호출/검토/게이트는 만들지 않는다.

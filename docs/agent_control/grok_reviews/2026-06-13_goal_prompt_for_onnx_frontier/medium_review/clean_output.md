@@ -1,4 +1,4 @@
-Grok 검토 요청이므로 협업 스킬과 ONNX·프론티어 관련 맥락을 먼저 확인한 뒤, 직관적인 목표 프롬프트 초안을 제안하겠습니다.
+﻿Grok 검토 요청이므로 협업 스킬과 ONNX·프론티어 관련 맥락을 먼저 확인한 뒤, 직관적인 목표 프롬프트 초안을 제안하겠습니다.
 # Grok Review — Intuitive ONNX Frontier Goal Prompt
 
 **Review size:** small review (소규모 검토)

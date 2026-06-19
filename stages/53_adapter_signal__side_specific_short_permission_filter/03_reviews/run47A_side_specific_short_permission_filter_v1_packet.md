@@ -1,4 +1,4 @@
-﻿﻿# Stage53 Run Packet(53단계 실행 패킷)
+﻿# Stage53 Run Packet(53단계 실행 패킷)
 
 - judgment(판정): `reviewed_completed_adapter_candidate_runtime_probe_only`
 - best_validation_candidate(최상 검증 후보): `spf03_block_early_or_trend_buy` net(순손익)=`80.26` pf(수익 팩터)=`1.24225` trades(거래수)=`119`

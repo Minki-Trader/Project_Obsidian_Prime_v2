@@ -1,4 +1,4 @@
-# F98 Input References(입력 참조)
+﻿# F98 Input References(입력 참조)
 
 - F97C decision(전선97C 결정): `stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97C/d/decision.json`
 - F97B KPI(전선97B 핵심 성과 지표): `stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/kpi_record.json`

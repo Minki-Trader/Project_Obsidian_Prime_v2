@@ -1,4 +1,4 @@
-# Frontier25 closeout review request(전선25 마감 검토 요청)
+﻿# Frontier25 closeout review request(전선25 마감 검토 요청)
 
 Role(역할): external second opinion(외부 2차 의견). Do not create runtime authority(런타임 권위), baseline(기준선), promotion(승격), live readiness(실거래 준비), or Goal Achieve(목표 달성).
 

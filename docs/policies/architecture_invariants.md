@@ -57,3 +57,9 @@ EA(`Expert Advisor`, 전문가 자문), Strategy Tester(전략 테스터), `.set
 ## 인코딩(Encoding, 인코딩)
 
 한국어 `.md`와 `.txt` 문서는 UTF-8 with BOM(UTF-8 BOM 포함)을 쓴다.
+
+한국어 문서, repo-scoped skill(저장소 전용 스킬), policy/control-plane markdown(정책/제어면 마크다운)을 만들거나 고치기 전에는 encoding surface(인코딩 표면)를 먼저 정한다. 기존 파일이면 BOM 상태, valid UTF-8(유효한 UTF-8), repeated BOM(반복 BOM), mojibake(문자 깨짐) 여부를 scoped validation(범위 검증)이나 동등한 바이트 검사로 확인한다.
+
+새 한국어 `.md/.txt`는 첫 생성부터 UTF-8 with BOM(UTF-8 BOM 포함)으로 만든다. 기존 파일의 인코딩 부채(encoding debt, 인코딩 부채)를 발견하면 touched surface(수정 표면) 안에서는 명시적으로 수리하고, 범위 밖이면 historical debt(역사 부채)로 분리한다.
+
+효과(effect, 효과): 인코딩 품질이 final validation(최종 검증)에만 걸리지 않고 first write gate(첫 쓰기 게이트)에서 보호된다.

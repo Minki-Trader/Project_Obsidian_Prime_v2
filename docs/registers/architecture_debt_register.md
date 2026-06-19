@@ -7,7 +7,7 @@
 | `AD-001` | feature ownership(피처 소유권) | 재사용 피처 로직(reusable feature logic, 재사용 피처 로직)이 파이프라인(pipeline, 파이프라인)으로 밀릴 수 있음 | 피처 진실(feature truth, 피처 진실)을 감사하기 어려워짐 | open |
 | `AD-002` | model artifacts(모델 산출물) | 보고서(report, 보고서)가 모델 산출물(model artifact, 모델 산출물)로 오해될 수 있음 | 재현성(reproducibility, 재현성)을 과장할 수 있음 | open |
 | `AD-003` | alpha framing(알파 틀짓기) | 소스 정리(source cleanup, 소스 정리)가 알파 탐색(alpha search, 알파 탐색)처럼 보일 수 있음 | 탐색(exploration, 탐색)이 지연됨 | open |
-| `AD-004` | Korean encoding(한국어 인코딩) | 한국어 문서가 UTF-8 BOM(UTF-8 BOM 포함)을 잃을 수 있음 | Windows 표시가 깨질 수 있음 | open |
+| `AD-004` | Korean encoding(한국어 인코딩) | 한국어 문서가 UTF-8 BOM(UTF-8 BOM 포함)을 잃을 수 있음 | Windows 표시가 깨질 수 있음 | closed_by_2026-06-19_encoding_sweep |
 | `AD-005` | exploration discipline(탐색 규율) | 운영 게이트(operating gate, 운영 게이트)가 탐색을 누를 수 있음 | 좋은 아이디어가 너무 일찍 막힘 | open |
 | `AD-006` | code surface(코드 표면) | 큰 파이프라인이나 EA(all-in-one file, 일체형 파일)가 자랄 수 있음 | 소유권(ownership, 소유권)과 테스트(test, 테스트)가 흐려짐 | open_mitigated_by_code_surface_audit |
 | `AD-007` | skill routing(스킬 배치) | 강한 트리거(trigger, 작동 조건)를 가진 스킬만 쓰이고 답변 명확성(answer clarity, 답변 명확성), 레퍼런스 탐색(reference scout, 레퍼런스 탐색), 재현성(reproducibility, 재현성), 데이터 무결성(data integrity, 데이터 무결성) 스킬이 방치될 수 있음 | Codex 작업이 코드 생성에서 끊기고 실험, 근거, 판정, 쉬운 보고로 이어지지 않을 수 있음 | open_mitigated_by_work_packet_router |

@@ -1,10 +1,10 @@
 ﻿# Stage293 Review Index(293단계 검토 색인)
 
-- run293A_report(293A 蹂닿퀬): `stages/293_onnx_candidate_campaign__profit_scale_density_calibration_rebuild/03_reviews/run293A_profit_scale_density_calibration_materialization_report.md`
-- run293A_mt5_queue(293A MT5 ?湲곗뿴): `stages/293_onnx_candidate_campaign__profit_scale_density_calibration_rebuild/02_runs/run293A/mt5_probe_queue.csv`
+- run293A_report(293A 보고): `stages/293_onnx_candidate_campaign__profit_scale_density_calibration_rebuild/03_reviews/run293A_profit_scale_density_calibration_materialization_report.md`
+- run293A_mt5_queue(293A MT5 대기열): `stages/293_onnx_candidate_campaign__profit_scale_density_calibration_rebuild/02_runs/run293A/mt5_probe_queue.csv`
 
-- run293B_report(293B 蹂닿퀬): `stages/293_onnx_candidate_campaign__profit_scale_density_calibration_rebuild/03_reviews/run293B_profit_scale_density_calibration_mt5_probe_report.md`
-- run293B_execution_result(293B ?ㅽ뻾 寃곌낵): `stages/293_onnx_candidate_campaign__profit_scale_density_calibration_rebuild/02_runs/run293B/execution_result.json`
+- run293B_report(293B 보고): `stages/293_onnx_candidate_campaign__profit_scale_density_calibration_rebuild/03_reviews/run293B_profit_scale_density_calibration_mt5_probe_report.md`
+- run293B_execution_result(293B 실행 결과): `stages/293_onnx_candidate_campaign__profit_scale_density_calibration_rebuild/02_runs/run293B/execution_result.json`
 - run293B_mt5_kpi_summary(293B MT5 KPI ?붿빟): `stages/293_onnx_candidate_campaign__profit_scale_density_calibration_rebuild/02_runs/run293B/mt5_kpi_summary.csv`
 
 - run293C_report(293C 보고): `stages/293_onnx_candidate_campaign__profit_scale_density_calibration_rebuild/03_reviews/run293C_profit_scale_density_calibration_review_stage294_open_report.md`

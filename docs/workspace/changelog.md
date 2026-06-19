@@ -1,4 +1,4 @@
-<!-- frontier89_task_force_correction_review_v1 -->
+﻿<!-- frontier89_task_force_correction_review_v1 -->
 
 ## 2026-06-19T00:13:15Z - F89 Task Force Correction(F89 태스크포스 정정)
 
@@ -3642,7 +3642,7 @@
 - effect(효과): candidate payload(후보 페이로드) `6`개와 MT5 queue(MT5 대기열)를 만들었다.
 - boundary(경계): selected candidate(선택 후보), Adapter package(어댑터 패키지), ONNX readiness(온엑스 준비), Goal Achieve(목표 달성)는 `none/not_claimed`다.
 
-## 2026-05-24 run305B Curve-pocket-aware profit source MT5 probe(305B 怨≪꽑 ?ъ폆 ?몄떇 ?섏씡 ?먯쿇 MT5 ?먯묠)
+## 2026-05-24 run305B Curve-pocket-aware profit source MT5 probe(305B 곡선 포켓 인식 수익 원천 MT5 탐침)
 
 - status(상태): `completed_runtime_realized_curve_attribution_mt5_probe_no_selection`
 - judgment(판정): `runtime_probe_completed_requires_profit_scale_curve_review_no_selection`

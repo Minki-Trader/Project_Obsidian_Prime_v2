@@ -1,4 +1,4 @@
-1. **verdict:** `accepted`
+﻿1. **verdict:** `accepted`
 
 2. **train_split_only_construction_lock:** `yes`
 

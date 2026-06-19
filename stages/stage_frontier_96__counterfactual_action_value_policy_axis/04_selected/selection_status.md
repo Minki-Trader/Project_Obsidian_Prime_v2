@@ -1,4 +1,4 @@
-# F96 Selection Status(선정 상태)
+﻿# F96 Selection Status(선정 상태)
 
 - selected_baseline(선택 기준선): not_claimed
 - runtime_authority(런타임 권위): not_claimed

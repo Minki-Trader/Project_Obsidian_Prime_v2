@@ -1,4 +1,4 @@
-﻿﻿# Stage230 Decision(230단계 판정)
+﻿# Stage230 Decision(230단계 판정)
 
 - decision(판정): `open_stage231_bounded_midpf_oos_repair_after_guard_blend_failure_candidate_not_final`
 - stage(단계): `230_adapter_research__stage229_guard_blend_followup_review`

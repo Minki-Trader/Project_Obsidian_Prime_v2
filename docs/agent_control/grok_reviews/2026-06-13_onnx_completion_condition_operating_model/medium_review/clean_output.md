@@ -1,4 +1,4 @@
-Grok 중간 검토 요청이므로, 먼저 협업 스킬과 현재 프로젝트 진실(frontier governance, workspace state)을 읽고 그 위에서 비판 컨설팅 답을 쓰겠습니다.
+﻿Grok 중간 검토 요청이므로, 먼저 협업 스킬과 현재 프로젝트 진실(frontier governance, workspace state)을 읽고 그 위에서 비판 컨설팅 답을 쓰겠습니다.
 # Grok Medium Review — ONNX 최종 완성 조건과 Frontier 운영 방식
 
 **Review size:** medium review (중간 검토)

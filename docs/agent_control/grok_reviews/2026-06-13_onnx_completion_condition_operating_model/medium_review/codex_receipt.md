@@ -1,75 +1,73 @@
-﻿# Codex Receipt(Codex ?곸닔利?: ONNX Completion Condition(ONNX ?꾩꽦 議곌굔) Consulting(?곷떞)
+﻿# Codex Receipt(Codex 영수증): ONNX Completion Condition(ONNX 완성 조건) Consulting(상담)
 
-## Trigger Reason(?몃━嫄??댁쑀)
+## Trigger Reason(트리거 이유)
 
-User clarified(?ъ슜??紐낇솗?? that the ONNX(?⑥뿊?? target is the final completion condition(理쒖쥌 ?꾩꽦 議곌굔), not an early soft goal(珥덇린 ?먯뒯??紐⑺몴).
+User clarified(사용자 명확화) that the ONNX(온엑스) target is the final completion condition(최종 완성 조건), not an early soft goal(초기 부드러운 목표).
 
-## Review Size(寃???ш린)
+## Review Size(검토 크기)
 
-medium review(以묎컙 寃??
+medium review(중간 검토)
 
-## Direction Before Grok(洹몃줉 ??諛⑺뼢)
+## Codex Position Before Grok(Grok 전 Codex 입장)
 
-- Keep final completion condition(理쒖쥌 ?꾩꽦 議곌굔) hard(?꾧꺽) at the final completion review(理쒖쥌 ?꾨즺 寃??.
-- Do not use it as scout hard gate(?먯깋 媛뺤젣 寃뚯씠??.
-- First run `frontier01B_build_stage12_364_campaign_map_v1` as design/archive packet(?ㅺ퀎/蹂닿????묒뾽 臾띠쓬).
-- Use prior evidence library(?댁쟾 洹쇨굅 ?쇱씠釉뚮윭由? as reference-only(李몄“ ?꾩슜), not inheritance(?곸냽).
+- Keep final completion condition(최종 완성 조건) hard(엄격) at the final completion review(최종 완성 검토).
+- Do not use it as scout hard gate(탐색 강제 게이트).
+- First run `frontier01B_build_stage12_364_campaign_map_v1` as design/archive packet(설계/보관 작업 묶음).
+- Use prior evidence library(이전 근거 라이브러리) as reference-only(참조 전용), not inheritance(상속 아님).
 
-## Bounded Evidence(?쒗븳 洹쇨굅)
+## Bounded Evidence(제한 근거)
 
-- Active stage(?쒖꽦 ?④퀎): `stage_frontier_01__archive_synthesis_and_new_axis_lock`
-- Next run(?ㅼ쓬 ?ㅽ뻾): `frontier01B_build_stage12_364_campaign_map_v1`
-- Stage364(364?④퀎) closeout(留덇컧): negative memory(遺??湲곗뼲), no authority(沅뚯쐞 ?놁쓬)
-- Preserved clue(蹂댁〈 ?⑥꽌): `hold4_margin_0.01` net/PF/density(?쒖닔???섏씡 ?⑺꽣/諛?? `462.0071630903 / 1.2257899553 / 2.1178343949`
-- Strict joint pass count(?꾧꺽 ?숈떆 ?듦낵 ??: `0`
+- Active stage(활성 단계): `stage_frontier_01__archive_synthesis_and_new_axis_lock`
+- Next run(다음 실행): `frontier01B_build_stage12_364_campaign_map_v1`
+- Stage364(364단계) closeout(마감): negative memory(부정 기억), no authority(권위 없음).
+- Preserved clue(보존 단서): `hold4_margin_0.01` net/PF/density(순수익/수익 팩터/밀도) `462.0071630903 / 1.2257899553 / 2.1178343949`
+- Strict joint pass count(엄격 동시 통과 수): `0`
 
-## Prompt Identity(?꾨＼?꾪듃 ?뺤껜??
+## Prompt Identity(프롬프트 정체성)
 
-- Path(寃쎈줈): `docs/agent_control/grok_reviews/2026-06-13_onnx_completion_condition_operating_model/medium_review/prompt.md`
-- Hash(?댁떆): `f9eab25aa3e3a45308578c24edefd2acabe8a98415e569c9c555d48c0006c9fc`
+- Path(경로): `docs/agent_control/grok_reviews/2026-06-13_onnx_completion_condition_operating_model/medium_review/prompt.md`
+- Hash(해시): `f9eab25aa3e3a45308578c24edefd2acabe8a98415e569c9c555d48c0006c9fc`
 
-## Grok Output Identity(洹몃줉 異쒕젰 ?뺤껜??
+## Grok Output Identity(Grok 출력 정체성)
 
-- Path(寃쎈줈): `docs/agent_control/grok_reviews/2026-06-13_onnx_completion_condition_operating_model/medium_review/clean_output.md`
-- Metadata(硫뷀??곗씠??: `docs/agent_control/grok_reviews/2026-06-13_onnx_completion_condition_operating_model/medium_review/metadata.json`
-- Transport result(?꾩넚 寃곌낵): success(?깃났), returncode(諛섑솚 肄붾뱶) `0`, timed_out(?쒓컙 珥덇낵) `false`
+- Path(경로): `docs/agent_control/grok_reviews/2026-06-13_onnx_completion_condition_operating_model/medium_review/clean_output.md`
+- Metadata(메타데이터): `docs/agent_control/grok_reviews/2026-06-13_onnx_completion_condition_operating_model/medium_review/metadata.json`
+- Transport result(전송 결과): success(성공), returncode(반환 코드) `0`, timed_out(시간 초과) `false`
+- Hash(해시): `unavailable_after_encoding_repair`
 
-## Advice Classification(議곗뼵 遺꾨쪟)
+## Advice Classification(조언 분류)
 
-accepted(?섏슜):
+accepted(수용):
 
-- Final target(理쒖쥌 紐⑺몴)??final completion condition(理쒖쥌 ?꾩꽦 議곌굔)?쇰줈 ?좎??쒕떎.
-- Scout(?먯깋)?먯꽌??aspiration distance(紐⑺몴 嫄곕━)濡쒕쭔 ?곌퀬, final completion review(理쒖쥌 ?꾨즺 寃???먯꽌留?hard gate(媛뺤젣 寃뚯씠??濡??대떎.
-- Proof ladder(利앸챸 ?щ떎由?瑜?`scout clue -> axis survivor -> seed surface -> WFO serious survivor -> MT5 runtime probe -> runtime parity -> interval expansion stress -> final completion review`濡??뺤옣?쒕떎.
-- Curve quality(怨≪꽑 ?덉쭏)??WFO serious survivor(WFO 吏꾩? ?앹〈 ?꾨낫)遺??湲곕줉?쒕떎.
-- Interval expansion stress(援ш컙 ?뺤옣 ?ㅽ듃?덉뒪)瑜?蹂꾨룄 rung(?④퀎)濡??붾떎.
-- Frontier02(?꾨줎?곗뼱 02)??scout/WFO shortlist(?먯깋/WFO ?꾨낫 ?뺤텞)源뚯?留?留↔린怨? MT5/parity/stress(MT5/?숇벑???ㅽ듃?덉뒪)??Frontier03(?꾨줎?곗뼱 03)?쇰줈 遺꾨━?쒕떎.
+- Final target(최종 목표)은 final completion condition(최종 완성 조건)으로 유지한다.
+- Scout(탐색)에서는 aspiration distance(목표 거리)로만 보고, final completion review(최종 완성 검토)에서만 hard gate(강한 게이트)로 둔다.
+- Proof ladder(증명 사다리)는 `scout clue -> axis survivor -> seed surface -> WFO serious survivor -> MT5 runtime probe -> runtime parity -> interval expansion stress -> final completion review`로 확장한다.
+- Curve quality(곡선 품질)는 WFO serious survivor(WFO 진지 생존 후보)부터 기록한다.
+- Frontier02(전선02)는 scout/WFO shortlist(탐색/WFO 후보 압축)까지만 맡기고, MT5/parity/stress(MT5/동등성/스트레스)는 Frontier03(전선03)으로 분리한다.
 
-rejected(嫄곗젅):
+rejected(거절):
 
-- `hold4_margin_0.01`??starting baseline(?쒖옉 湲곗????쇰줈 ?곸냽?쒕떎.
-- PF 2-3x(PF 2-3諛?瑜?scout default expectation(?먯깋 湲곕낯 湲곕?移?濡??붾떎.
-- Intermediate label(以묎컙 ?쇰꺼)?먯꽌 user target achieved(?ъ슜??紐⑺몴 ?ъ꽦)泥섎읆 留먰븳??
-- Frontier02(?꾨줎?곗뼱 02)??scout/WFO/MT5/parity/completion(?먯깋/WFO/MT5/?숇벑???꾩꽦)??紐⑤몢 ?ｋ뒗??
+- `hold4_margin_0.01`을 starting baseline(시작 기준선)으로 상속하는 방식.
+- PF 2-3x(PF 2-3배)를 scout default expectation(탐색 기본 기대치)으로 두는 방식.
+- Intermediate label(중간 라벨)에서 user target achieved(사용자 목표 달성)처럼 말하는 방식.
+- Frontier02(전선02)에 scout/WFO/MT5/parity/completion(탐색/WFO/MT5/동등성/완성)을 모두 넣는 방식.
 
-needs_local_verification(濡쒖뺄 寃利??꾩슂):
+needs_local_verification(로컬 검증 필요):
 
-- US100 M5?먯꽌 5-10 trades/day(??5-10??嫄곕옒)媛 cost/slippage/session(鍮꾩슜/?щ━?쇱?/?몄뀡) ?댄썑 ?ㅼ젣 媛?ν븳吏.
-- PF 2-3x(PF 2-3諛?, DD <10%(?먯떎??10% 誘몃쭔), 5-10 trades/day(??5-10??嫄곕옒), smooth curve(留ㅻ걚?ъ슫 怨≪꽑)???숈떆 ?ъ꽦 媛?μ꽦.
-- `stage_pipelines` ONNX orchestration(ONNX ?ㅽ뻾 吏?? naming/path(?대쫫/寃쎈줈).
-- Final DD condition(理쒖쥌 ?먯떎??議곌굔)??exact metric(?뺥솗??吏??: rolling month/quarter/worst segment(??遺꾧린/理쒖븙 援ш컙) ?뺤쓽.
+- US100 M5에서 5-10 trades/day(하루 5-10회 거래)가 cost/slippage/session(비용/슬리피지/세션) 이후 실제 가능한지 확인해야 한다.
+- PF 2-3x(PF 2-3배), DD <10%(손실폭 10% 미만), 5-10 trades/day(하루 5-10회 거래), smooth curve(매끄러운 곡선)의 동시 가능성은 별도 검증이 필요하다.
+- `stage_pipelines` ONNX orchestration(ONNX 실행 지휘) naming/path(이름/경로)를 확인해야 한다.
+- Final DD condition(최종 손실폭 조건)은 rolling month/quarter/worst segment(월/분기/최악 구간) 기준으로 정의해야 한다.
 
-## Local Verification(濡쒖뺄 寃利?
+## Local Verification(로컬 검증)
 
-- `docs/workspace/workspace_state.yaml` confirms(?뺤씤) active frontier01(?꾨줎?곗뼱01) and no authority claims(沅뚯쐞 二쇱옣 ?놁쓬).
-- Wrapper(?섑띁) metadata(硫뷀??곗씠?? confirms(?뺤씤) Grok call success(洹몃줉 ?몄텧 ?깃났).
-- No training(?숈뒿), MT5 execution(MT5 ?ㅽ뻾), baseline selection(湲곗????좏깮), promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, or Goal Achieve(紐⑺몴 ?ъ꽦) was produced.
-- `clean_output.md` includes useful Grok review(洹몃줉 寃?? plus CLI warning tail(CLI 寃쎄퀬 瑗щ━). Codex classification(肄붾뜳??遺꾨쪟) uses the review section(寃??蹂몃Ц) only; raw diagnostics(?먮낯 吏꾨떒)??preserved(蹂댁〈)?먮떎.
+- `docs/workspace/workspace_state.yaml` confirms(확인) active frontier01(전선01) and no authority claims(권위 주장 없음).
+- `clean_output.md` includes useful Grok review(Grok 검토) plus CLI warning tail(CLI 경고 꼬리). Codex classification(Codex 분류) uses the review section(검토 본문) only; raw diagnostics(원본 진단)는 preserved(보존)한다.
 
-## Forbidden Claim Check(湲덉? 二쇱옣 ?뺤씤)
+## Claim Boundary(주장 경계)
 
-No operating promotion(?댁쁺 ?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, selected baseline(?좏깮 湲곗???, or Goal Achieve(紐⑺몴 ?ъ꽦) is claimed.
+No operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성) is claimed.
 
-## Final Codex Direction(理쒖쥌 Codex 諛⑺뼢)
+## Final Codex Direction(최종 Codex 방향)
 
-Proceed(吏꾪뻾) with `frontier01B_build_stage12_364_campaign_map_v1`. This action(?됰룞)??effect(?④낵)??Stage12-364(12-364?④퀎)瑜?prior evidence library(?댁쟾 洹쇨굅 ?쇱씠釉뚮윭由?, do-not-repeat list(諛섎났 湲덉? 紐⑸줉), proof ladder(利앸챸 ?щ떎由?, claim labels(二쇱옣 ?쇰꺼), and scoreboard spec(?먯닔??紐낆꽭)濡?怨좎젙???ㅼ뿉留?new ONNX training(??ONNX ?숈뒿)?쇰줈 ?섏뼱媛寃??섎뒗 寃껋씠??
+Proceed(진행) with `frontier01B_build_stage12_364_campaign_map_v1`. This action(행동)의 effect(효과)는 Stage12-364(12-364단계)를 prior evidence library(이전 근거 라이브러리), proof ladder(증명 사다리), and scoreboard spec(점수판 명세)로 고정한 뒤에만 new ONNX training(새 ONNX 학습)으로 넘어가게 하는 것이다.

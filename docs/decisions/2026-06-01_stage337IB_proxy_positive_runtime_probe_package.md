@@ -1,4 +1,4 @@
-﻿﻿# Decision: Stage 337IB Runtime Probe Package
+﻿# Decision: Stage 337IB Runtime Probe Package
 
 - date: `2026-06-01`
 - run_id: `run337IB_materialize_proxy_positive_offensive_pivot_runtime_probe_package_without_db_v1`

@@ -1,4 +1,4 @@
-﻿﻿# Stage 337ID Proxy-Positive MT5 Runtime Review
+﻿# Stage 337ID Proxy-Positive MT5 Runtime Review
 
 ## Summary
 

@@ -1,4 +1,4 @@
-Frontier51 마감 검토를 위해 Grok 협업 스킬과 단계 근거를 먼저 확인합니다.
+﻿Frontier51 마감 검토를 위해 Grok 협업 스킬과 단계 근거를 먼저 확인합니다.
 ## Frontier51 Closeout — External Second Opinion(외부 2차 의견)
 
 **Local verification(로컬 검증):** bounded evidence(제한 근거) matches stage artifacts — `selection_status.md`, `proxy_runtime_gap.csv`, `final_decision.json`, `runtime_probe_report.md`, `negative_memory.md`.

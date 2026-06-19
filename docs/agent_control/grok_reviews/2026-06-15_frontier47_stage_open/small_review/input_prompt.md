@@ -1,4 +1,4 @@
-# Frontier47 stage-open Grok review(단계 개방 그록 검토)
+﻿# Frontier47 stage-open Grok review(단계 개방 그록 검토)
 
 Role(역할): external second opinion(외부 2차 의견) only.
 

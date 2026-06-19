@@ -1,4 +1,4 @@
-**1. verdict:** `accepted` (수용)
+﻿**1. verdict:** `accepted` (수용)
 
 **2. train_split_only_construction_lock:** `yes` (예)
 

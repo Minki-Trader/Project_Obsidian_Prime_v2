@@ -1,4 +1,4 @@
-## accepted (수용)
+﻿## accepted (수용)
 
 1. **F72와의 축 전환은 실질적이다.** F72 negative memory(부정 기억)가 “거래 형태 우선(trade-shape-first)” 표면 수리였고, F73은 그 축을 lead axis(주도 축)에서 내리고 **session/regime × feature set × model family(세션/장세 × 피처 묶음 × 모델 계열)** 를 가설 중심으로 둔다. “parity/lifecycle fixes(동등성/생명주기 수리)와 별개의 runtime economics source(런타임 경제성 원천)”라는 문장도 F72 preserved clue(보존 단서)를 **통제 변수(control)** 로 고정하는 방향과 맞다.
 

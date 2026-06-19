@@ -1,4 +1,4 @@
-Grok 역할로 Frontier06 개방 제안을 검토합니다. 먼저 관련 스킬·마감 보고서·Stage364 유사 작업을 확인합니다.
+﻿Grok 역할로 Frontier06 개방 제안을 검토합니다. 먼저 관련 스킬·마감 보고서·Stage364 유사 작업을 확인합니다.
 ## 1. Recommendation(권고)
 
 **`open_frontier06`(전선06 개방)** — 단, **Stage364(364단계) negative memory(부정 기억)를 명시적으로 반입 금지 목록에 넣은 채** 개방합니다.

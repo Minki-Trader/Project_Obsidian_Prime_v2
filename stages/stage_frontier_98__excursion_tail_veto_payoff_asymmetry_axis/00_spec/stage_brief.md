@@ -1,4 +1,4 @@
-# F98 Excursion Tail Veto/Payoff Asymmetry Axis(익스커션 꼬리 회피/손익 비대칭 축)
+﻿# F98 Excursion Tail Veto/Payoff Asymmetry Axis(익스커션 꼬리 회피/손익 비대칭 축)
 
 ## Question(질문)
 

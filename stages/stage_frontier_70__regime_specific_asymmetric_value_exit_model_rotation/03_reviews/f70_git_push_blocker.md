@@ -1,4 +1,4 @@
-# F70 Git Push Blocker(F70 깃 원격 반영 차단)
+﻿# F70 Git Push Blocker(F70 깃 원격 반영 차단)
 
 Updated(갱신): 2026-06-17
 

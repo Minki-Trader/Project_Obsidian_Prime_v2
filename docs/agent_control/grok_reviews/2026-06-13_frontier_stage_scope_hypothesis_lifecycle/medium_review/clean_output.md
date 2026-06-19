@@ -1,4 +1,4 @@
-프론티어 단계 범위를 가설 생명주기 하나로 묶는 모델을 검토하기 위해, 관련 거버넌스 문서와 현재 작업 상태를 먼저 확인합니다.
+﻿프론티어 단계 범위를 가설 생명주기 하나로 묶는 모델을 검토하기 위해, 관련 거버넌스 문서와 현재 작업 상태를 먼저 확인합니다.
 # Grok Medium Review — Frontier Stage as One Hypothesis Lifecycle
 
 **Review size:** medium review (중간 검토)

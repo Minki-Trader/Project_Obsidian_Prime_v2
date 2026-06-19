@@ -1,4 +1,4 @@
-# Negative Result Register
+﻿# Negative Result Register
 
 | result_id | idea_id | hypothesis | why_failed | salvage_value | reopen_condition |
 |---|---|---|---|---|---|

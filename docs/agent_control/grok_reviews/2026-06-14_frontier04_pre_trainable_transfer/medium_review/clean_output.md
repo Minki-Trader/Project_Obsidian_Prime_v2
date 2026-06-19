@@ -1,4 +1,4 @@
-Reviewing the Grok collaboration skill and bounded Frontier04B evidence to form a structured recommendation.
+﻿Reviewing the Grok collaboration skill and bounded Frontier04B evidence to form a structured recommendation.
 ## Grok External Review — Frontier04C Pre-Trainable Transfer Gate
 
 **Review size:** medium review (제한 스냅샷 + 집중 질문)  

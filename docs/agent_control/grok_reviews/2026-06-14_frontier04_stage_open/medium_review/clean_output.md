@@ -1,4 +1,4 @@
-Bounded evidence와 Grok 협업 규칙을 먼저 확인한 뒤, Frontier04 개방 제안을 검토하겠습니다.
+﻿Bounded evidence와 Grok 협업 규칙을 먼저 확인한 뒤, Frontier04 개방 제안을 검토하겠습니다.
 ## 1. Recommendation(권고)
 
 **`open_frontier04(전선04 개방)`**

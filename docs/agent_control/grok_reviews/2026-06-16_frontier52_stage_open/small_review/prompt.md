@@ -1,4 +1,4 @@
-Project Obsidian Prime v2 bounded Grok review.
+﻿Project Obsidian Prime v2 bounded Grok review.
 
 Review type: stage-open small review(단계 개방 소규모 검토).
 

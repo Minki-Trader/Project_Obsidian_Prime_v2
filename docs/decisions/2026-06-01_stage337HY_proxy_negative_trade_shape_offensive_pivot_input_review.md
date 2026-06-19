@@ -1,4 +1,4 @@
-﻿﻿# Decision: Stage 337HY Input Review
+﻿# Decision: Stage 337HY Input Review
 
 - date: `2026-06-01`
 - run_id: `run337HY_review_proxy_negative_trade_shape_offensive_pivot_inputs_without_db_v1`

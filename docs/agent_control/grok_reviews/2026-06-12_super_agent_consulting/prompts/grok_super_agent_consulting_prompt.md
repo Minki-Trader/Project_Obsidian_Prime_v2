@@ -3,11 +3,11 @@
 You are Grok Build acting as an external consultant for this local Codex workspace.
 당신은 이 로컬 Codex 작업공간의 external consultant(외부 컨설턴트)입니다.
 
-Hard boundary(강한 경계):
+Hard boundary(주장 경계):
 - Use only the snapshot(스냅샷) below. Do not use tools(도구 사용 금지), web search(웹 검색 금지), or local filesystem reads(로컬 파일 읽기 금지).
 - Do not propose making the system more complex just to look rigorous.
 - Do not suggest extra rituals unless they clearly reduce errors, reduce user burden, or improve agent behavior.
-- Do not claim runtime authority(런타임 권위), operating promotion(운영 승격), or live readiness(실거래 준비).
+- Do not claim runtime authority(런타임 권위), operating promotion(승격), or live readiness(실거래 준비).
 - Korean(한국어)을 주 언어로 쓰고, English term(영어 용어)을 쓰면 같은 문맥에 Korean parallel(한국어 병기)을 붙이세요.
 
 User intent(사용자 의도):
@@ -38,13 +38,13 @@ Required output(필수 출력):
 
 Snapshot(스냅샷):
 
-# Codex Agent and Skill Snapshot for Grok Consulting(그록 컨설팅용 코덱스 에이전트/스킬 스냅샷)
+# Codex Agent and Skill Snapshot for Grok Consulting(상담)
 
 ## Generation Metadata(생성 메타데이터)
 
 generated_at_local(로컬 생성 시각): 2026-06-12T01:48:13+09:00
 repo_root(저장소 루트): C:\Users\awdse\AppData\Roaming\MetaQuotes\Terminal\D0E8209F77C8CF37AD8BF550E51FF075\MQL5\Experts\Project_Obsidian_Prime_v2
-git_status(깃 상태): ## main...origin/main [ahead 1]
+git_status(상태): ## main...origin/main [ahead 1]
 latest_commit(최근 커밋): 879a1711 docs: add research artifact spine status (연구 산출물 척추 상태 추가)
 purpose(목적): Ask Grok Build for consulting on making this Codex workspace a smarter, user-tailored super-agent without adding unnecessary complexity.
 
@@ -85,9 +85,9 @@ Obsidian Prime의 개념(concept, 개념)과 브로커 심볼 계약(broker symb
 
 작업 시작 시 `obsidian-session-intake(세션 인입)`는 현재 진실(current truth, 현재 진실), 브랜치/작업트리 적합성, 작업 성격(work family, 작업군) 후보만 좁게 잡는다. 그 다음 `obsidian-work-packet-router(작업 묶음 라우터)`는 `docs/agent_control/work_family_registry.yaml`에서 `primary_family(주 작업군)` 하나, `primary_skill(주 스킬)` 하나, 제한된 `support_skills(보조 스킬)`, `required_gates(필수 게이트)`를 선택한다.
 
-효과(effect, 효과)는 스킬을 많이 붙인 것처럼 보이게 하지 않고, 실제로 선택한 스킬과 closeout(종료 기록)에 연결된 gate(게이트)만 완료 주장(completion claim, 완료 주장)의 근거로 쓰게 하는 것이다.
+효과(effect, 효과)는 스킬을 많이 붙인 것처럼 보이게 하지 않고, 실제로 선택한 스킬과 closeout(마감)에 연결된 gate(게이트)만 완료 주장(completion claim, 완료 주장)의 근거로 쓰게 하는 것이다.
 
-운영 라우팅(operating routing, 운영 라우팅)의 진실 원천(source of truth, 진실 원천)은 `docs/agent_control/work_family_registry.yaml`이다. 모든 non-trivial work packet(비사소 작업 묶음)은 `primary_family(주 작업군)` 하나와 `primary_skill(주 스킬)` 하나를 먼저 고른다. `support_skills(보조 스킬)`는 필요한 만큼만 붙이고, 완료 전에는 `required_gate_coverage_audit(필수 게이트 커버리지 감사)`로 work packet(작업 묶음)의 `required_gates(필수 게이트)`가 closeout(종료 기록)에 실제로 연결됐는지 확인한다.
+운영 라우팅(operating routing, 운영 라우팅)의 진실 원천(source of truth, 진실 원천)은 `docs/agent_control/work_family_registry.yaml`이다. 모든 non-trivial work packet(비사소 작업 묶음)은 `primary_family(주 작업군)` 하나와 `primary_skill(주 스킬)` 하나를 먼저 고른다. `support_skills(보조 스킬)`는 필요한 만큼만 붙이고, 완료 전에는 `required_gate_coverage_audit(필수 게이트 커버리지 감사)`로 work packet(작업 묶음)의 `required_gates(필수 게이트)`가 closeout(마감)에 실제로 연결됐는지 확인한다.
 
 효과(effect, 효과)는 Stage 5부터 미래 Stage 50+까지 작업 내용은 달라져도, 스킬 선택(skill selection, 스킬 선택), receipt(영수증), gate(게이트), claim boundary(주장 경계)가 같은 방식으로 작동하게 하는 것이다.
 
@@ -124,7 +124,7 @@ MT5(`MetaTrader 5`, 메타트레이더5) routed run(라우팅 실행)에서 사�
 - 초기 탐색(early exploration, 초기 탐색)은 빠진 근거를 이름 붙이면 시작할 수 있다.
 - `promotion_candidate(승격 후보)`는 비교할 가치가 있다는 뜻이지, 운영선을 교체한다는 뜻이 아니다.
 - `runtime_probe(런타임 탐침)`는 런타임을 관찰한다는 뜻이지, 런타임 권위가 닫혔다는 뜻이 아니다.
-- `operating_promotion(운영 승격)`과 `runtime_authority(런타임 권위)`는 강한 근거가 필요하다.
+- `operating_promotion(승격)`과 `runtime_authority(런타임 권위)`는 강한 근거가 필요하다.
 - `promotion-ineligible(승격 부적격)`은 아이디어 사망(idea-dead, 아이디어 사망)이 아니다.
 
 ## 단계 규칙(Stage Rule, 단계 규칙)
@@ -197,7 +197,7 @@ Stage 10(10단계)부터 알파 탐색(alpha exploration, 알파 탐색)이 닫�
 - 도구(tool, 도구), 스크립트(script, 스크립트), 설정(configuration, 설정), 실행 인계 파일(handoff file, 인계 파일)이 낡았거나 없으면 blocked(차단)로 닫기 전에 현재 프로젝트 기준으로 만들거나 고쳐서 실행을 먼저 시도한다.
 - MT5 검증(MT5 verification, MT5 검증)에서 MetaEditor compile(메타에디터 컴파일)은 좁은 외부 검증(narrow external check, 좁은 외부 검증)의 일부일 수 있지만, MT5 snapshot(MT5 스냅샷), strategy tester output(전략 테스터 출력), terminal file output(터미널 파일 출력)을 대체하지 않는다.
 - 외부 검증이 없으면 그 주장은 검토 완료(reviewed, 검토됨)나 긍정 판정(positive judgment, 긍정 판정)으로 닫지 않는다. 대신 범위를 낮춰 말하거나, 불충분(inconclusive, 불충분), 무효(invalid, 무효), 또는 차단(blocked, 차단)으로 적는다.
-- 같은 빠진 외부 검증(missing external verification, 빠진 외부 검증)을 두 번 연속 next work(다음 작업)로만 남기지 않는다. 실행하거나, 현재 도구를 생성/수정해서 실행을 시도하거나, 사용자 행동(user action, 사용자 행동)이 필요한 정확한 terminal action(터미널 행동)을 요청하거나, 주장을 낮추거나, 차단 사유(blocker, 차단 사유)를 기록한다.
+- 같은 빠진 외부 검증(missing external verification, 빠진 외부 검증)을 두 번 연속 next work(다음 작업)로만 남기지 않는다. 실행하거나, 현재 도구를 생성/수정해서 실행을 시도하거나, 사용자 행동(user action, 사용자 행동)이 필요한 정확한 terminal action(행동)을 요청하거나, 주장을 낮추거나, 차단 사유(blocker, 차단 사유)를 기록한다.
 - blocked(차단) 판정은 복구 시도(recovery attempt, 복구 시도), 실행 명령(execution command, 실행 명령), 실패 로그(failure log, 실패 로그), 또는 필요한 사용자 행동(user action, 사용자 행동)을 남긴 뒤에만 쓴다.
 
 ## 현재 진실(Current Truth, 현재 진실)
@@ -256,9 +256,9 @@ Current truth(현재 진실): `run364HR` completed(완료) a trade-quality densi
 
 Best clue(최선 단서): `hold4_margin_0.01` net/PF/density(순수익/수익 팩터/밀도)는 `462.0071630903` / `1.2257899553` / `2.1178343949`입니다. 효과는 품질을 고치면 밀도가 떨어지고, 밀도를 고치면 PF(수익 팩터)가 약한 실패 경계를 분리한 것입니다.
 
-Next action(다음 행동): `run364HS_review_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1`에서 selected clues(선택 단서), strict failure boundary(엄격 실패 경계), and package eligibility(패키지 가능성)를 review(검토)합니다.
+Next action(행동): `run364HS_review_h17_oos108_pf125_single_source_probability_bin_veto_trade_quality_density_repair_without_db_v1`에서 selected clues(선택 단서), strict failure boundary(주장 경계), and package eligibility(패키지 가능성)를 review(검토)합니다.
 
-Operating boundary(운영 경계): runtime authority(런타임 권위), operating promotion(운영 승격), live readiness(실거래 준비), Goal Achieve(목표 달성)는 모두 not claimed(주장 안 함)입니다.
+Operating boundary(주장 경계): runtime authority(런타임 권위), operating promotion(승격), live readiness(실거래 준비), Goal Achieve(목표 달성)는 모두 not claimed(주장 안 함)입니다.
 ```
 
 ### docs\policies\reentry_order.md
@@ -339,7 +339,7 @@ Operating boundary(운영 경계): runtime authority(런타임 권위), operatin
 - `docs/policies/run_result_management.md`
 - `docs/policies/result_judgment_policy.md`
 
-효과(effect, 효과)는 skill routing(스킬 배치)이 architecture(구조), exploration(탐색), KPI(핵심 성과 지표), run management(실행 관리), result judgment(결과 판정) 규칙과 끊기지 않게 하는 것이다.
+효과(effect, 효과)는 skill routing(스킬 배치)이 architecture(구조), exploration(탐색), KPI(핵심 성과 지표), run management(실행 관리), result judgment(판정) 규칙과 끊기지 않게 하는 것이다.
 
 ## 운영 커널
 
@@ -399,7 +399,7 @@ Support skill은 작업을 보조한다. 작업을 다시 분류하지 않는다
 
 ## 스킬
 
-- `obsidian-answer-clarity`: user-facing status(사용자 보고 상태), result report(결과 보고), completion report(완료 보고)를 쉽게 설명한다.
+- `obsidian-answer-clarity`: user-facing status(상태), result report(결과 보고), completion report(완료 보고)를 쉽게 설명한다.
 - `obsidian-architecture-guard`: architecture debt(구조 부채), code placement(코드 배치), Korean encoding(한국어 인코딩)을 지킨다.
 - `obsidian-artifact-lineage`: artifact(산출물), manifest(목록), report(보고서), hash(해시), registry(등록부) 연결을 확인한다.
 - `obsidian-backtest-forensics`: MT5 Strategy Tester(전략 테스터) report/settings/trade list(보고서/설정/거래 목록)를 검사한다.
@@ -409,7 +409,7 @@ Support skill은 작업을 보조한다. 작업을 다시 분류하지 않는다
 - `obsidian-data-integrity`: data source(데이터 원천), time axis(시간축), split(분할), leakage(누수)를 점검한다.
 - `obsidian-environment-reproducibility`: dependency/runtime(의존성/런타임), clean checkout(깨끗한 체크아웃), local machine assumption(로컬 가정)을 확인한다.
 - `obsidian-experiment-design`: hypothesis(가설), baseline(기준선), variables(변수), invalid conditions(무효 조건)을 설계한다.
-- `obsidian-exploration-mandate`: exploration lane(탐색 레인), idea boundary(아이디어 경계), failure memory(실패 기억)를 지킨다.
+- `obsidian-exploration-mandate`: exploration lane(탐색 레인), idea boundary(주장 경계), failure memory(실패 기억)를 지킨다.
 - `obsidian-lane-classifier`: exploration/runtime/promotion lane(탐색/런타임/승격 레인)을 구분한다.
 - `obsidian-model-validation`: model/threshold surface(모델/임계값 표면), split(분할), overfit(과적합), selection metric(선택 지표)을 점검한다.
 - `obsidian-performance-attribution`: KPI change(KPI 변화)를 time/sample/tier/model/trade shape(시간/표본/티어/모델/거래 형태)로 분해한다.
@@ -421,7 +421,7 @@ Support skill은 작업을 보조한다. 작업을 다시 분류하지 않는다
 - `obsidian-session-intake`: 작업 시작 때 current truth(현재 진실), branch/worktree fit(브랜치/작업트리 적합성), work family candidate(작업군 후보)를 좁힌다.
 - `obsidian-stage-transition`: active stage(활성 단계), handoff(인계), closeout(마감), current run(현재 실행)을 같은 회차에 동기화한다.
 - `obsidian-work-packet-router`: work family(작업군), primary skill(주 스킬), support skills(보조 스킬), required gates(필수 제한문)를 고른다.
-- `obsidian-workflow-drift-guard`: blocker(차단 지점), missing material(빠진 재료), recovery action(복구 행동)을 정리한다.
+- `obsidian-workflow-drift-guard`: blocker(차단 지점), missing material(빠진 재료), recovery action(행동)을 정리한다.
 
 ## Receipt 규칙
 
@@ -528,7 +528,7 @@ MT5 EA(`Expert Advisor`, 전문가 자문)는 얇은 진입점(thin entrypoint, 
 
 ## EA 실행 변형 트리거(EA Run Variant Trigger, EA 실행 변형 트리거)
 
-EA(`Expert Advisor`, 전문가 자문), Strategy Tester(전략 테스터), `.set` 설정(set file, 설정 파일), optimization pass(최적화 회차), runtime package(런타임 패키지), model bundle(모델 번들)을 건드리는 작업은 시작 전에 run variant boundary(실행 변형 경계)를 정한다.
+EA(`Expert Advisor`, 전문가 자문), Strategy Tester(전략 테스터), `.set` 설정(set file, 설정 파일), optimization pass(최적화 회차), runtime package(런타임 패키지), model bundle(모델 번들)을 건드리는 작업은 시작 전에 run variant boundary(주장 경계)를 정한다.
 
 필수 판정(required decision, 필수 판정):
 
@@ -574,7 +574,7 @@ EA(`Expert Advisor`, 전문가 자문), Strategy Tester(전략 테스터), `.set
 - 초기 탐색(early exploration, 초기 탐색)은 빠진 근거를 이름 붙이면 시작할 수 있다.
 - `promotion_candidate(승격 후보)`는 승격 전에도 연구할 수 있다.
 - `runtime_probe(런타임 탐침)`는 런타임 권위(runtime authority, 런타임 권위) 없이도 관찰할 수 있다.
-- `operating_promotion(운영 승격)`과 `runtime_authority(런타임 권위)`는 강한 증거가 필요하다.
+- `operating_promotion(승격)`과 `runtime_authority(런타임 권위)`는 강한 증거가 필요하다.
 - `promotion-ineligible(승격 부적격)`은 아이디어 사망(idea-dead, 아이디어 사망)이 아니다.
 
 ## 알파 탐색 중 기준선 종료 금지(No Baseline Closure During Alpha Exploration, 알파 탐색 중 기준선 종료 금지)
@@ -594,7 +594,7 @@ EA(`Expert Advisor`, 전문가 자문), Strategy Tester(전략 테스터), `.set
 
 금지되는 마감 표현(forbidden closeout words, 금지 마감 표현)은 별도 promotion/operating packet(승격/운영 작업 묶음) 없이 쓰지 않는다.
 
-- selected baseline(선택 기준선)
+- selected baseline(기준선)
 - operating reference(운영 기준)
 - promotion candidate(승격 후보)
 - runtime authority(런타임 권위)
@@ -674,7 +674,7 @@ Tier B(티어 B)를 만들 수 없으면 생략하지 않는다. `missing_requir
 - `docs/registers/alpha_run_ledger.csv`: run/subrun/view(실행/하위 실행/보기) 한 줄씩
 - `stages/<stage_id>/03_reviews/stage_run_ledger.csv`: 해당 stage(단계) 내부의 run/subrun/view(실행/하위 실행/보기) 한 줄씩
 
-`alpha_run_ledger.csv(알파 실행 장부)`와 stage-local ledger(단계 내부 장부)는 최소한 `run_id(실행 ID)`, `subrun_id(하위 실행 ID)`, `tier_scope(티어 범위)`, `record_view(기록 보기)`, `kpi_scope(KPI 범위)`, `status(상태)`, `judgment(판정)`, `path(경로)`를 가진다.
+`alpha_run_ledger.csv(알파 실행 장부)`와 stage-local ledger(단계 내부 장부)는 최소한 `run_id(실행 ID)`, `subrun_id(실행 ID)`, `tier_scope(티어 범위)`, `record_view(기록 보기)`, `kpi_scope(KPI 범위)`, `status(상태)`, `judgment(판정)`, `path(경로)`를 가진다.
 
 효과(effect, 효과)는 한 실행(run, 실행) 안의 Tier A separate(Tier A 분리), Tier B separate(Tier B 분리), Tier A+B combined(Tier A+B 합산), MT5 runtime probe(MT5 런타임 탐침) 같은 세부 판독을 한 줄씩 누적하는 것이다.
 
@@ -729,7 +729,7 @@ Tier B fallback(Tier B 대체) 행은 subtype breakdown(하위유형 분해)과 
 결과 판정(result judgment, 결과 판정)은 탐색 경계(exploration boundary, 탐색 경계)를 같이 적어야 한다.
 
 - `promotion_candidate(승격 후보)`: 비교할 수 있지만 운영 승격은 아닌 결과
-- `operating_promotion(운영 승격)`: 운영선을 교체하거나 확인하는 결과
+- `operating_promotion(승격)`: 운영선을 교체하거나 확인하는 결과
 - `runtime_probe(런타임 탐침)`: 런타임을 관찰했지만 권위는 없는 결과
 - `runtime_authority(런타임 권위)`: 런타임 권위를 주장하는 결과
 ```
@@ -744,7 +744,7 @@ Tier B fallback(Tier B 대체) 행은 subtype breakdown(하위유형 분해)과 
 ## 어휘(Vocabulary, 어휘)
 
 - `promotion_candidate(승격 후보)`: 운영선 교체(incumbent replacement, 현행선 교체) 없이 연구할 후보
-- `operating_promotion(운영 승격)`: 운영선을 교체하거나 확인한다는 주장
+- `operating_promotion(승격)`: 운영선을 교체하거나 확인한다는 주장
 - `runtime_probe(런타임 탐침)`: 권위(authority, 권위) 없는 런타임 관찰
 - `runtime_authority(런타임 권위)`: 런타임 동등성 폐쇄(runtime parity closure, 런타임 동등성 폐쇄), 번들 인계 권위(bundle handoff authority, 번들 인계 권위), 또는 실거래 유사 준비(live-like readiness, 실거래 유사 준비)
 
@@ -778,7 +778,7 @@ routing_contract:
     rule: "Failed gates are classified into a repair plan before any completion claim is repeated; automatic mutation may not relax gates, thresholds, tests, or claim boundaries."
 families:
   information_only:
-    description: "Read/explain only(?쎄린/?ㅻ챸 ?꾩슜 ?묒뾽)"
+    description: "Read/explain only(읽기/설명 전용 작업)"
     mutation_default: false
     execution_default: false
     primary_skill: obsidian-answer-clarity
@@ -790,7 +790,7 @@ families:
     required_gates:
       - final_claim_guard
   state_sync:
-    description: "Current truth/state document sync(?꾩옱 吏꾩떎/?곹깭 臾몄꽌 ?숆린??"
+    description: "Current truth/state document sync(현재 진실/상태 문서 동기화)"
     mutation_default: requires_decision_lock
     execution_default: false
     primary_skill: obsidian-stage-transition
@@ -807,7 +807,7 @@ families:
       - state_sync_audit
       - final_claim_guard
   policy_skill_governance:
-    description: "AGENTS/policy/skill/control contract governance(?먯씠?꾪듃/?뺤콉/?ㅽ궗/?쒖뼱 怨꾩빟 愿由?"
+    description: "AGENTS/policy/skill/control contract governance(에이전트/정책/스킬/제어 계약 관리"
     mutation_default: requires_decision_lock
     execution_default: false
     primary_skill: obsidian-work-packet-router
@@ -824,7 +824,7 @@ families:
       - work_packet_schema_lint
       - skill_receipt_schema_lint
   code_edit:
-    description: "Code edit(肄붾뱶 ?섏젙)"
+    description: "Code edit(코드 수정)"
     mutation_default: true
     execution_default: false
     primary_skill: obsidian-code-surface-guard
@@ -839,7 +839,7 @@ families:
       - code_surface_audit
       - test_gate
   code_refactor:
-    description: "Code refactor/module split(肄붾뱶 由ы뙥??紐⑤뱢 遺꾨━)"
+    description: "Code refactor/module split(코드 리팩터/모듈 분리)"
     mutation_default: requires_decision_lock
     execution_default: false
     primary_skill: obsidian-code-surface-guard
@@ -857,7 +857,7 @@ families:
       - semantic_code_surface_audit
       - regression_test_gate
   experiment_design:
-    description: "Experiment design(?ㅽ뿕 ?ㅺ퀎)"
+    description: "Experiment design(실험 설계)"
     mutation_default: maybe
     execution_default: false
     primary_skill: obsidian-experiment-design
@@ -871,7 +871,7 @@ families:
     required_gates:
       - work_packet_schema_lint
   experiment_execution:
-    description: "Python/model/variant experiment execution(?뚯씠??紐⑤뜽/蹂???ㅽ뿕 ?ㅽ뻾)"
+    description: "Python/model/variant experiment execution(데이터/모델/변형 실험 실행)"
     mutation_default: true
     execution_default: true
     support_skill_limit: 4
@@ -893,7 +893,7 @@ families:
       - skill_receipt_lint
       - required_gate_coverage_audit
   runtime_backtest:
-    description: "MT5/runtime/backtest execution(MT5/?고???諛깊뀒?ㅽ듃 ?ㅽ뻾)"
+    description: "MT5/runtime/backtest execution(MT5/런타임/백테스트 실행)"
     mutation_default: true
     execution_default: true
     support_skill_limit: 4
@@ -916,7 +916,7 @@ families:
       - required_gate_coverage_audit
       - final_claim_guard
   kpi_evidence:
-    description: "KPI/ledger/source authority evidence(KPI/?λ?/?먯쿇 沅뚯쐞 洹쇨굅)"
+    description: "KPI/ledger/source authority evidence(KPI/?λ?/원천 권위 근거)"
     mutation_default: requires_decision_lock
     execution_default: false
     primary_skill: obsidian-run-evidence-system
@@ -935,7 +935,7 @@ families:
       - source_authority_audit
       - required_gate_coverage_audit
   artifact_lineage:
-    description: "Artifact lineage/hash/report linking(?곗텧臾?怨꾨낫/?댁떆/蹂닿퀬 ?곌껐)"
+    description: "Artifact lineage/hash/report linking(산출물 계보/해시/보고 연결)"
     mutation_default: maybe
     execution_default: false
     primary_skill: obsidian-artifact-lineage
@@ -947,7 +947,7 @@ families:
     required_gates:
       - artifact_lineage_audit
   cleanup_archive:
-    description: "Cleanup/archive/delete/move work(?뺣━/蹂닿?/??젣/?대룞 ?묒뾽)"
+    description: "Cleanup/archive/delete/move work(정리/보관/삭제/이동 작업)"
     mutation_default: requires_decision_lock
     execution_default: false
     primary_skill: obsidian-artifact-lineage
@@ -962,7 +962,7 @@ families:
       - destructive_change_guard
       - archive_manifest_gate
   publish_handoff:
-    description: "Publish/handoff/git sync work(寃뚯떆/?멸퀎/源??숆린???묒뾽)"
+    description: "Publish/handoff/git sync work(게시/인계/git 동기화 작업)"
     mutation_default: requires_decision_lock
     execution_default: true
     primary_skill: obsidian-stage-transition
@@ -1747,41 +1747,41 @@ forbidden_freeform_examples:
 version: risk_flag_registry_v1
 risks:
   scope_ambiguous:
-    meaning: "Scope/count/target is ambiguous(踰붿쐞/?섎웾/??곸씠 ?좊ℓ??"
+    meaning: "Scope/count/target is ambiguous(범위/수량/대상이 모호함)"
     safe_default:
       - report_only_when_user_asked_for_explanation
   mutation_ambiguous:
-    meaning: "File edit versus report-only is ambiguous(?뚯씪 ?섏젙?몄? 蹂닿퀬 ?꾩슜?몄? ?좊ℓ??"
+    meaning: "File edit versus report-only is ambiguous(파일 수정인지 보고 전용인지 모호함)"
     safe_default:
       - no_file_edit
   state_sync_risk:
-    meaning: "Current truth documents can disagree(?꾩옱 吏꾩떎 臾몄꽌?쇰━ ?ㅻ? ???덉쓬)"
+    meaning: "Current truth documents can disagree(현재 진실 문서끼리 불일치할 수 있음)"
     required_gates:
       - state_sync_audit
     forbidden_claims_if_missing:
       - current_truth_synced
       - stage_transition_completed
   claim_boundary_risk:
-    meaning: "Completion/verification/promotion wording can overstate evidence(?꾨즺/寃利??밴꺽 ?쒗쁽??洹쇨굅瑜?怨쇱옣?????덉쓬)"
+    meaning: "Completion/verification/promotion wording can overstate evidence(완료/검증/승격 표현이 근거를 과장할 수 있음)"
     required_gates:
       - final_claim_guard
   skill_abandonment_risk:
-    meaning: "Required skill can be skipped without receipt(?꾩닔 ?ㅽ궗???곸닔利??놁씠 鍮좎쭏 ???덉쓬)"
+    meaning: "Required skill can be skipped without receipt(필수 스킬이 영수증 없이 빠질 수 있음)"
     required_gates:
       - skill_receipt_lint
       - skill_receipt_schema_lint
   ops_instruction_risk:
-    meaning: "Routing policy can grow without one primary skill and checkable gates(?쇱슦???뺤콉??二??ㅽ궗怨?寃利?媛?ν븳 寃뚯씠???놁씠 而ㅼ쭏 ???덉쓬)"
+    meaning: "Routing policy can grow without one primary skill and checkable gates(라우팅 정책이 주 스킬과 검증 가능한 게이트 없이 커질 수 있음)"
     required_gates:
       - ops_instruction_audit
     forbidden_claims_if_missing:
       - ops_instructions_stable
   evidence_gap_risk:
-    meaning: "Raw evidence, machine record, or human report can be missing(?먮낯 洹쇨굅/湲곌퀎 湲곕줉/?щ엺 蹂닿퀬媛 鍮좎쭏 ???덉쓬)"
+    meaning: "Raw evidence, machine record, or human report can be missing(원본 근거/기계 기록/사람 보고가 빠질 수 있음)"
     required_gates:
       - artifact_lineage_audit
   runtime_parity_risk:
-    meaning: "Python and MT5/runtime meaning can diverge(?뚯씠?ш낵 MT5/?고????섎?媛 ?닿툔?????덉쓬)"
+    meaning: "Python and MT5/runtime meaning can diverge(데이터와 MT5/런타임 의미가 어긋날 수 있음)"
     required_skills:
       - obsidian-runtime-parity
       - obsidian-backtest-forensics
@@ -1790,29 +1790,29 @@ risks:
       - mt5_verification_complete
       - runtime_authority
   kpi_source_risk:
-    meaning: "KPI source authority or row grain can drift(KPI ?먯쿇 沅뚯쐞?????⑥쐞媛 ?붾뱾由????덉쓬)"
+    meaning: "KPI source authority or row grain can drift(KPI 원천 권위나 행 단위가 흔들릴 수 있음)"
     required_gates:
       - kpi_contract_audit
       - row_grain_audit
       - source_authority_audit
   code_surface_risk:
-    meaning: "Code can land in the wrong owner module(肄붾뱶媛 ?섎せ???뚯쑀 紐⑤뱢???ㅼ뼱媛????덉쓬)"
+    meaning: "Code can land in the wrong owner module(코드가 잘못된 소유 모듈에 들어갈 수 있음)"
     required_gates:
       - code_surface_audit
       - semantic_code_surface_audit
   destructive_change_risk:
-    meaning: "Delete/overwrite/archive/reset can lose evidence(??젣/??뼱?곌린/蹂닿?/珥덇린?붽? 洹쇨굅瑜??껉쾶 ?????덉쓬)"
+    meaning: "Delete/overwrite/archive/reset can lose evidence(삭제/덮어쓰기/보관/초기화가 근거를 잃게 할 수 있음)"
     required_user_quote: true
     required_gates:
       - destructive_change_guard
   unattended_autonomy_risk:
-    meaning: "Unattended work can silently reduce scope(臾댁씤 ?묒뾽??紐곕옒 踰붿쐞瑜?以꾩씪 ???덉쓬)"
+    meaning: "Unattended work can silently reduce scope(무인 작업이 몰래 범위를 줄일 수 있음)"
     required:
       - explicit_completion_conditions
       - explicit_blocked_conditions
       - scope_completion_gate
   answer_clarity_risk:
-    meaning: "Technical wording can hide the plain meaning(?꾨Ц ?⑹뼱媛 ?ъ슫 ?섎?瑜??④만 ???덉쓬)"
+    meaning: "Technical wording can hide the plain meaning(전문 용어가 쉬운 의미를 가릴 수 있음)"
     required_skills:
       - obsidian-answer-clarity
       - obsidian-claim-discipline
@@ -2002,7 +2002,7 @@ Default assumption: the user should not need to ask a second time for a plain ex
 
 For user-facing status summary(상태 요약), result report(결과 보고), completion report(완료 보고), plan(계획), or review explanation(검토 설명), apply this skill after the technical skill and pair it with `obsidian-claim-discipline`.
 
-Effect(효과): current meaning(현재 의미), not-yet-true boundary(아직 사실 아님 경계), and next action(다음 행동)을 쉽게 말하면서도 claim(주장)이 강해지지 않는다.
+Effect(효과): current meaning(현재 의미), not-yet-true boundary(주장 경계), and next action(행동)을 쉽게 말하면서도 claim(주장)이 강해지지 않는다.
 
 ## Strong Triggers
 
@@ -2010,7 +2010,7 @@ This skill is mandatory, not optional, for:
 
 - planning replies(plan, 계획), including proposed plan(제안 계획) and next-task plan(다음 작업 계획)
 - result reports(결과 보고), completion reports(완료 보고), and status summaries(상태 요약)
-- stage closeout(단계 종료), handoff(인계), run result(실행 결과), review finding(검토 발견사항), or failure report(실패 보고)
+- stage closeout(마감), handoff(인계), run result(실행 결과), review finding(검토 발견사항), or failure report(실패 보고)
 - answers after implementation(구현 후 답변), verification(검증), or file edits(파일 수정)
 - run packaging, individual experiment closeout, KPI interpretation, artifact handoff, PR summary, or policy/skill review
 
@@ -2231,7 +2231,7 @@ Use this skill when writing, editing, or summarizing project state.
 
 Run this skill as the companion check for user-facing report(사용자 보고), run evidence(실행 근거), stage transition(단계 전환), promotion(승격), runtime(런타임), and blocker(차단 사유) work.
 
-Effect(효과): claim boundary(주장 경계)를 낮출 곳은 낮추고, closure(종료), positive judgment(긍정 판정), operating promotion(운영 승격), runtime authority(런타임 권위)를 근거 없이 쓰지 않는다.
+Effect(효과): claim boundary(주장 경계)를 낮출 곳은 낮추고, closure(종료), positive judgment(판정), operating promotion(승격), runtime authority(런타임 권위)를 근거 없이 쓰지 않는다.
 
 ## Trigger Tokens
 
@@ -2391,7 +2391,7 @@ Use this skill for code changes before choosing files or writing implementation.
 
 For every code-writing packet(code-writing packet, 코드 작성 묶음), including Python(파이썬), MQL5, tests(테스트), stage scripts(단계 스크립트), pipelines(파이프라인), model builders(모델 빌더), runtime helpers(런타임 도구), and report materializers(보고서 물질화 도구), run this guard before editing files.
 
-Pair it with `obsidian-reference-scout(레퍼런스 탐색)` in the same precheck. The effect(effect, 효과) is that placement(배치) and external correctness(외부 정확성)을 분리해서 확인한다.
+Pair it with `obsidian-reference-scout(레퍼런스 탐색)` in the same precheck. The effect(효과) is that placement(배치) and external correctness(외부 정확성)을 분리해서 확인한다.
 
 If no file is edited, mark `code_surface_guard: not_required(코드 표면 가드 불필요)` with a short reason(reason, 이유).
 
@@ -2613,7 +2613,7 @@ Use this skill before a task packet or implementation when lane confusion could 
 
 ## Automatic Bundle
 
-Trigger automatically when a task mixes lane(레인), exploration(탐색), evidence(근거), promotion(승격), runtime(런타임), Tier A/B/C(티어 A/B/C), hard gate(강한 게이트), operating_promotion(운영 승격), or runtime_authority(런타임 권위) language.
+Trigger automatically when a task mixes lane(레인), exploration(탐색), evidence(근거), promotion(승격), runtime(런타임), Tier A/B/C(티어 A/B/C), hard gate(강한 게이트), operating_promotion(승격), or runtime_authority(런타임 권위) language.
 
 Effect(효과): hard gate(강한 게이트)를 exploration permission(탐색 허가)으로 잘못 쓰지 않고, operating discipline(운영 규율)이 필요한 주장만 강하게 막는다.
 
@@ -2785,7 +2785,7 @@ Use external lookup(외부 확인) when the code touches MQL5/MT5(MetaTrader 5, 
 
 If the code is pure internal logic(순수 내부 로직) with no uncertain API(API 사용법), syntax(구문), version-sensitive behavior(버전 민감 동작), or external pattern(외부 패턴), record `reference_scout: not_required(레퍼런스 탐색 불필요)` with the reason(reason, 이유). This record belongs in the implementation precheck or completion report; do not leave it implicit.
 
-Effect(effect, 효과): implementation(구현)을 프로젝트 기억(project memory, 프로젝트 기억)만으로 단정하지 않고, 필요한 곳에서는 official docs(공식 문서)나 maintained source(유지보수되는 원천)로 접지한다.
+Effect(효과): implementation(구현)을 프로젝트 기억(project memory, 프로젝트 기억)만으로 단정하지 않고, 필요한 곳에서는 official docs(공식 문서)나 maintained source(유지보수되는 원천)로 접지한다.
 
 ## When To Use
 
@@ -2897,9 +2897,9 @@ Use this skill when a task creates, reviews, closes, summarizes, or registers ru
 
 ## Automatic Bundle
 
-When this skill triggers for run creation(실행 생성), run closeout(실행 종료), KPI report(KPI 보고), result summary(결과 요약), or run registry update(실행 등록부 갱신), pair it with `obsidian-claim-discipline`.
+When this skill triggers for run creation(실행 생성), run closeout(마감), KPI report(KPI 보고), result summary(결과 요약), or run registry update(실행 등록부 갱신), pair it with `obsidian-claim-discipline`.
 
-Effect(효과): measurement(측정), identity(정체성), judgment(판정), and registry boundary(등록부 경계) stay explicit before any run is called reviewed(검토됨), selected(선택됨), positive(긍정), negative(부정), inconclusive(불충분), invalid(무효), operating_promotion(운영 승격), or runtime_authority(런타임 권위).
+Effect(효과): measurement(측정), identity(정체성), judgment(판정), and registry boundary(주장 경계) stay explicit before any run is called reviewed(검토됨), selected(선택됨), positive(긍정), negative(부정), inconclusive(불충분), invalid(무효), operating_promotion(승격), or runtime_authority(런타임 권위).
 
 ## Must Read
 
@@ -3119,7 +3119,7 @@ Use this skill whenever a stage opens, closes, or hands work to another stage.
 
 ## Automatic Bundle
 
-When this skill triggers for stage transition(단계 전환), active_stage(활성 단계) change, closeout(종료), handoff(인계), workspace_state(작업공간 상태), selection status(선택 상태), or registry(등록부) sync, pair it with `obsidian-claim-discipline`.
+When this skill triggers for stage transition(단계 전환), active_stage(활성 단계) change, closeout(마감), handoff(인계), workspace_state(작업공간 상태), selection status(상태), or registry(등록부) sync, pair it with `obsidian-claim-discipline`.
 
 Effect(효과): same-pass sync(같은 회차 동기화)와 claim boundary(주장 경계)를 함께 지켜서 단계 상태가 조각나지 않는다.
 
@@ -3268,7 +3268,7 @@ Required behavior:
 1. If the checked-in MQL5 tool is stale, create or patch a narrow current-project script/EA before blocked reporting.
 2. Try to run it through the available terminal path, command-line path, or explicit user terminal action.
 3. If Codex cannot drive the MT5 terminal, ask for the exact terminal action and name the output file that should appear.
-4. Report `blocked` only with recovery attempt(복구 시도), execution attempt(실행 시도), failure log(실패 로그), or required user action(필요 사용자 행동).
+4. Report `blocked` only with recovery attempt(복구 시도), execution attempt(실행 시도), failure log(실패 로그), or required user action(행동).
 
 ## Guardrails
 
@@ -3318,7 +3318,7 @@ Most Obsidian requests are not one mode. A normal request may start with an idea
 
 ## Required Output
 
-- Always emit(항상 남김) `routing_receipt(라우팅 기록)`: lifecycle(생명주기), `primary_family(주 작업군)`, `primary_skill(주 스킬)`, selected `support_skills(보조 스킬)`, `required_gates(필수 게이트)`, and structured not-selected reasons(구조화된 미선택 사유)를 담은 compact record(압축 기록).
+- Always emit(항상 남김) `routing_receipt(라우팅 기록)`: lifecycle(생명주기), `primary_family(주 작업군)`, `primary_skill(주 스킬)`, selected `support_skills(보조 스킬)`, `required_gates(필수 게이트)`, and structured not-selected reasons(이유)를 담은 compact record(압축 기록).
 - `work_packet_lifecycle`: one of `information_only`, `design_only`, `code_to_verify_to_report`, `experiment_to_evidence_to_report`, `code_to_experiment_to_evidence_to_report`, `policy_skill_governance`, `publish_or_handoff`, or a short custom lifecycle(짧은 사용자 정의 생명주기)
 - `phase_plan`: ordered phases(순서 있는 단계) for the current packet(현재 작업 묶음); low-risk `information_only`(낮은 위험 정보 작업)는 compact(압축), code/experiment/MT5/policy/publish/ambiguous work(코드/실험/MT5/정책/발행/애매한 작업)는 expanded(확장)
 - `primary_family`: exactly one family(작업군) from `docs/agent_control/work_family_registry.yaml`

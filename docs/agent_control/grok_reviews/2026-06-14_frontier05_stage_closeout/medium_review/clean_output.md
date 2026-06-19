@@ -1,4 +1,4 @@
-Grok 역할로 Frontier05 마감안을 검토합니다. 협업 스킬과 제한 근거 파일을 먼저 확인합니다.
+﻿Grok 역할로 Frontier05 마감안을 검토합니다. 협업 스킬과 제한 근거 파일을 먼저 확인합니다.
 ## 1. Recommendation(권고)
 
 **`close_negative_memory`(부정 기억 마감)**

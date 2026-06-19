@@ -1,4 +1,4 @@
-﻿﻿# Stage53 Selection Status(53단계 선택 상태)
+﻿# Stage53 Selection Status(53단계 선택 상태)
 
 - final_judgment(최종 판정): `reviewed_completed_adapter_candidate_runtime_probe_only`
 - selected_adapter_candidate(선택 어댑터 후보): `spf03_block_early_or_trend_buy`

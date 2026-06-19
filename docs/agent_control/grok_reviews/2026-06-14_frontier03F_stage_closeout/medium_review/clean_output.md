@@ -1,4 +1,4 @@
-Grok 역할로 단계 마감 판정을 검토합니다. 협업 스킬과 제공된 제한 근거를 먼저 확인합니다.
+﻿Grok 역할로 단계 마감 판정을 검토합니다. 협업 스킬과 제공된 제한 근거를 먼저 확인합니다.
 ## 1. Recommendation(권고)
 
 **`closeout_preserved_clue_negative_memory`(보존 단서 + 부정 기억 마감)**

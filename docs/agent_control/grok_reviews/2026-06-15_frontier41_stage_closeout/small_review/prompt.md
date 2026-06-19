@@ -1,4 +1,4 @@
-# Frontier41 closeout Grok review(그록 마감 검토)
+﻿# Frontier41 closeout Grok review(그록 마감 검토)
 
 Role(역할): external second opinion(외부 2차 의견) only.
 

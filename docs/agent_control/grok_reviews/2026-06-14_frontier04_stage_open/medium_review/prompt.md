@@ -1,4 +1,4 @@
-You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Project Obsidian Prime v2 Frontier04 stage-open(전선04 단계 개방) proposal.
+﻿You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Project Obsidian Prime v2 Frontier04 stage-open(전선04 단계 개방) proposal.
 
 Current truth(현재 진실):
 - Parent stage(부모 단계): `stage_frontier_03__regime_conditioned_asymmetric_onnx_labeling`

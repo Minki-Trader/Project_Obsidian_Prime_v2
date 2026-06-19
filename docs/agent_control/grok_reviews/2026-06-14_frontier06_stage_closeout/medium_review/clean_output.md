@@ -1,4 +1,4 @@
-Grok 외부 2차 의견으로 Frontier06 마감안을 검토합니다. 협업 스킬과 제한 근거 파일을 먼저 확인합니다.
+﻿Grok 외부 2차 의견으로 Frontier06 마감안을 검토합니다. 협업 스킬과 제한 근거 파일을 먼저 확인합니다.
 ## 1. Recommendation(권고)
 
 **`close_negative_memory_preserved_clue`(부정 기억+보존 단서 마감)**

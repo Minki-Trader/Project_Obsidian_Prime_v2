@@ -1,4 +1,4 @@
-# Stage257 Decision(257단계 판정)
+﻿# Stage257 Decision(257단계 판정)
 
 - stage(단계): `257_adapter_research__stage256_source_feature_followup_review`
 - run(실행): `run257A_stage257_stage256_source_feature_followup_review_v1`

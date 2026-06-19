@@ -1,4 +1,4 @@
-You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Project Obsidian Prime v2 Frontier06 stage-open(전선06 단계 개방) proposal.
+﻿You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Project Obsidian Prime v2 Frontier06 stage-open(전선06 단계 개방) proposal.
 
 Current truth(현재 진실):
 - Frontier04(전선04) preserved clue(보존 단서): path-aware event labels can create a clean oracle seed surface(경로 이벤트 라벨은 깨끗한 오라클 씨앗 표면을 만들 수 있음).

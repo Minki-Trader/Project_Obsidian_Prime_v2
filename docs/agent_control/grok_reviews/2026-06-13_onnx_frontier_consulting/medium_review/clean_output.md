@@ -1,4 +1,4 @@
-Grok 협업 스킬과 현재 프로젝트 상태를 먼저 확인한 뒤, ONNX frontier 구조에 대한 bounded consulting 답을 정리하겠습니다.
+﻿Grok 협업 스킬과 현재 프로젝트 상태를 먼저 확인한 뒤, ONNX frontier 구조에 대한 bounded consulting 답을 정리하겠습니다.
 # Grok Medium Review — ONNX Frontier 구조 제안
 
 **Review size:** medium review (중간 검토)

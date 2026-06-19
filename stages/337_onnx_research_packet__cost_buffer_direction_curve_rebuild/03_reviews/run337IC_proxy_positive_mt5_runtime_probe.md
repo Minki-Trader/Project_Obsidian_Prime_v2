@@ -1,4 +1,4 @@
-﻿﻿# Stage 337IC Proxy-Positive MT5 Runtime Probe
+﻿# Stage 337IC Proxy-Positive MT5 Runtime Probe
 
 ## Summary
 

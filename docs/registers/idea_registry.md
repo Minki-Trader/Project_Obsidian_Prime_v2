@@ -1,4 +1,4 @@
-# Idea Registry
+﻿# Idea Registry
 
 | idea_id | stage_id | hypothesis | tier_scope | status | notes |
 |---|---|---|---|---|---|
@@ -188,232 +188,232 @@ Register ideas when they become durable work, not for every passing thought.
 
 ## run297C_review_bilevel_curve_monotonic_profit_mt5_probe_v1 profit-scale edge amplification handoff(수익 규모 거래우위 증폭 인계)
 
-- idea_id(아이디어 ID): `stage298_profit_scale_edge_amplification_primary`
-- hypothesis(가설): Stage297(297단계)의 낮은 순수익은 진입 수가 아니라 payoff magnitude(보상 크기)와 exit asymmetry(청산 비대칭)의 병목일 수 있다.
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## run298C_review_profit_scale_edge_amplification_mt5_probe_v1 runtime-realized trade shape handoff(런타임 실제 거래 형태 인계)
 
-- idea_id(아이디어 ID): `stage299_runtime_realized_trade_shape_primary`
-- hypothesis(가설): validation damage(검증 손상)는 entry score(진입 점수)가 아니라 실제 hold/exit/trade-shape(보유/청산/거래 형태) 병목일 수 있다.
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## run299C_review_runtime_realized_trade_shape_mt5_probe_v1 split-forward trade shape handoff(분할 전진 거래 형태 인계)
 
-- idea_id(아이디어 ID): `stage300_split_forward_shape_generalization_primary`
-- hypothesis(가설): Stage299(299단계)의 validation(검증) 회복은 일반화되지 않았으므로 시간 순서 subfold(하위 분할)에서 살아남는 형태만 후보가 될 수 있다.
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## run300C_review_split_forward_trade_shape_generalization_mt5_probe_v1 split-forward trade shape handoff(분할 전진 거래 형태 인계)
 
-- idea_id(아이디어 ID): `stage301_orthogonal_profit_source_primary`
-- hypothesis(가설): Stage300(300단계)의 validation(검증) 회복은 일반화되지 않았으므로 시간 순서 subfold(하위 분할)에서 살아남는 형태만 후보가 될 수 있다.
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## run301C_review_orthogonal_profit_source_mt5_probe_v1 payoff convexity handoff(보상 볼록성 인계)
 
-- idea_id(아이디어 ID): `stage302_payoff_convexity_profit_scale_primary`
-- hypothesis(가설): Stage301(301단계)의 작은 양수 MT5(메타트레이더5) edge(우위)는 방향 모델보다 보상/청산/위험 표면을 바꿔야 수익 규모로 커질 수 있다.
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## run302C_review_payoff_convexity_profit_scale_mt5_probe_v1 regime-balanced router handoff(레짐 균형 라우터 인계)
 
-- idea_id(아이디어 ID): `stage303_regime_balanced_profit_scale_router_primary`
-- hypothesis(가설): Stage302(302단계)의 OOS scale(표본외 규모)은 레짐/세션 조건을 분리해야 validation damage(검증 손상) 없이 살아남을 수 있다.
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## run303C_review_regime_balanced_profit_scale_router_mt5_probe_v1 regime-balanced router handoff(레짐 균형 라우터 인계)
 
-- idea_id(아이디어 ID): `stage304_curve_pocket_aware_profit_source_primary`
-- hypothesis(가설): Stage303(302단계)의 OOS scale(표본외 규모)은 레짐/세션 조건을 분리해야 validation damage(검증 손상) 없이 살아남을 수 있다.
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), no Adapter/ONNX(어댑터/온엑스 없음).
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## run304C_review_curve_pocket_aware_profit_source_mt5_probe_v1 curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)
 
-- idea_id(아이디어 ID): `stage304_curve_pocket_aware_profit_source`
-- hypothesis(가설): 곡선 포켓을 WFO(워크포워드 최적화) 목적에 넣으면 순수익 규모와 매끄러운 곡선을 함께 만들 수 있다.
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
-## run305C_review_runtime_realized_curve_attribution_mt5_probe_v1 curve-pocket-aware profit source(怨≪꽑 ?ъ폆 ?몄떇 ?섏씡 ?먯쿇)
+## run305C_review_runtime_realized_curve_attribution_mt5_probe_v1 curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)
 
-- idea_id(?꾩씠?붿뼱 ID): `stage306_runtime_realized_curve_attribution`
-- hypothesis(媛??: 怨≪꽑 ?ъ폆??WFO(?뚰겕?ъ썙??理쒖쟻?? 紐⑹쟻???ｌ쑝硫??쒖닔??洹쒕え? 留ㅻ걚?ъ슫 怨≪꽑???④퍡 留뚮뱾 ???덈떎.
-- evidence_boundary(洹쇨굅 寃쎄퀎): research_development_only(?곌뎄媛쒕컻 ?꾩슜), selected_candidate=none.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## stage306_anti_surface_trade_shape
 
-- hypothesis(가설): actual MT5(메타트레이더5) trade-shape attribution(거래 형태 기여도) can create a larger smoother candidate than direction-flip repair.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): exploratory(탐색), no selected candidate(선택 후보 없음), no Adapter(어댑터 없음), no ONNX(온엑스 없음).
 
 ## run306C_review_anti_surface_trade_shape_mt5_probe_v1 anti-surface trade-shape source(반표면 거래 형태 원천)
 
-- idea_id(아이디어 ID): `stage306_anti_surface_trade_shape`
-- hypothesis(가설): actual MT5(메타트레이더5) trade-shape attribution(거래 형태 기여도)이 direction flip(방향 반전)보다 큰 수익 원천을 만들 수 있다.
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## stage307_post_trade_shape_scale_ml
 
-- hypothesis(가설): fresh ML return-rank(새 머신러닝 수익 순위) surface(표면)가 Stage306(306단계) rule repair(규칙 수리)보다 큰 profit scale(수익 규모)을 만들 수 있다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): exploratory(탐색), no selected candidate(선택 후보 없음), no Adapter(어댑터 없음), no ONNX(온엑스 없음).
 
 ## run307C_review_post_trade_shape_scale_mt5_probe_v1 anti-surface trade-shape source(반표면 거래 형태 원천)
 
-- idea_id(아이디어 ID): `stage307_post_trade_shape_scale_ml`
-- hypothesis(가설): actual MT5(메타트레이더5) trade-shape attribution(거래 형태 기여도)이 direction flip(방향 반전)보다 큰 수익 원천을 만들 수 있다.
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## stage308_non_return_rank_profit_source
 
-- hypothesis(가설): non-return-rank(비수익순위) state/rule source(상태/규칙 원천)가 Stage307(307단계) return-rank(수익 순위) 실패 이후 수익 규모와 곡선을 동시에 회복할 수 있다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): exploratory(탐색), no selected candidate(선택 후보 없음), no Adapter(어댑터 없음), no ONNX(온엑스 없음).
 
 ## run308C_review_non_return_rank_profit_source_mt5_probe_v1 non-return-rank profit source(비수익순위 수익 원천)
 
-- idea_id(아이디어 ID): `stage308_non_return_rank_profit_source`
-- hypothesis(가설): return-rank(수익 순위)를 직접 쓰지 않는 session/breadth/volatility/trend(세션/브레드스/변동성/추세) 원천이 더 좋은 수익 곡선을 만들 수 있다.
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## stage309_split_coherent_profit_curve_source
 
-- hypothesis(가설): split-coherent profit curve source(분할 일관 수익 곡선 원천)가 OOS upside(표본외 상방)와 validation curve stability(검증 곡선 안정성)를 동시에 만들 수 있다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): exploratory(탐색), no selected candidate(선택 후보 없음), no Adapter(어댑터 없음), no ONNX(온엑스 없음).
 
 ## run309C_review_split_coherent_profit_curve_source_mt5_probe_v1 split-coherent profit curve source(분할 일관 수익 곡선 원천)
 
-- idea_id(아이디어 ID): `stage309_split_coherent_profit_curve_source`
-- hypothesis(가설): split coherence(분할 일관성)를 강제하면 validation/OOS(검증/표본외) 양수 조각을 동시에 만들 수 있다.
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## stage310_runtime_positive_fragment_allocation
 
-- hypothesis(가설): Stage309(309단계)의 runtime positive fragments(런타임 양수 조각)를 allocation layer(배분 계층)로 묶으면 거래수와 곡선 품질이 같이 개선될 수 있다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): exploratory(탐색), no selected candidate(선택 후보 없음), no Adapter(어댑터 없음), no ONNX(온엑스 없음).
 
 ## run310C_review_runtime_positive_fragment_allocation_mt5_probe_v1 runtime_positive_fragment_allocation(런타임 양수 조각 배분)
 
-- idea_id(아이디어 ID): `stage310_runtime_positive_fragment_allocation`
-- hypothesis(가설): 양수 조각을 배분하면 거래수와 곡선 품질이 함께 개선될 수 있다.
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## stage311_post_allocation_fresh_edge
 
-- hypothesis(가설): Stage310(310단계)의 validation loss(검증 손실) 시간 구조를 adverse-hour mirror(불리 시간대 방향 반전)로 바꾸면 새 edge(엣지)가 될 수 있다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): exploratory(탐색), no selected candidate(선택 후보 없음), no Adapter(어댑터 없음), no ONNX(온엑스 없음).
 
 ## run311C_review_post_allocation_fresh_edge_mt5_probe_v1 post_allocation_fresh_edge(배분 이후 새 엣지)
 
-- idea_id(아이디어 ID): `stage311_post_allocation_fresh_edge`
-- hypothesis(가설): 불리 시간대 방향 반전과 피처 지원이 검증 손실을 줄일 수 있다.
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## run312A_design_fresh_model_asymmetry_rebuild_packet_v1 fresh_model_asymmetry(새 모델 비대칭)
 
-- idea_id(아이디어 ID): `stage312_fresh_model_asymmetry`
-- hypothesis(가설): actual hour-direction memory(실제 시간-방향 기억)를 새 decision surface(판단 표면)로 쓰면 수익 규모와 밀도를 동시에 압박할 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
 
 ## run312C_review_fresh_model_asymmetry_mt5_probe_v1 fresh_model_asymmetry_review(새 모델 비대칭 검토)
 
-- idea_id(아이디어 ID): `stage312_fresh_model_asymmetry_review`
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## run313A_design_runtime_outcome_source_pivot_rebuild_packet_v1 runtime_outcome_source_pivot(런타임 결과 원천 전환)
 
-- idea_id(아이디어 ID): `stage313_runtime_outcome_source_pivot`
-- hypothesis(가설): actual hour-direction memory(실제 시간-방향 기억)를 새 decision surface(판단 표면)로 쓰면 수익 규모와 밀도를 동시에 압박할 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
 
 ## run313C_review_runtime_outcome_source_pivot_mt5_probe_v1 runtime_outcome_source_pivot_review(런타임 결과 원천 전환 검토)
 
-- idea_id(아이디어 ID): `stage313_runtime_outcome_source_pivot_review`
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## run314A_design_runtime_outcome_feature_source_rebuild_packet_v1 runtime_outcome_feature_source(런타임 결과 피처 원천)
 
-- idea_id(아이디어 ID): `stage314_runtime_outcome_feature_source`
-- hypothesis(가설): actual hour-direction memory(실제 시간-방향 기억)를 새 decision surface(판단 표면)로 쓰면 수익 규모와 밀도를 동시에 압박할 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
 
 ## run314C_review_runtime_outcome_feature_source_mt5_probe_v1 runtime_outcome_feature_source_review(런타임 결과 피처 원천 검토)
 
-- idea_id(아이디어 ID): `stage314_runtime_outcome_feature_source_review`
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## run315A_design_runtime_outcome_feature_interaction_rebuild_packet_v1 runtime_outcome_feature_interaction(런타임 결과 피처 상호작용)
 
-- idea_id(아이디어 ID): `stage315_runtime_outcome_feature_interaction`
-- hypothesis(가설): actual hour outcome(실제 시간별 결과)과 feature interaction(피처 상호작용)을 결합하면 trade density(거래 밀도)와 profit scale(수익 규모)을 같이 회복할 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
 
 ## run315C_review_runtime_outcome_feature_interaction_mt5_probe_v1 runtime_outcome_feature_interaction_review(런타임 결과 피처 상호작용 검토)
 
-- idea_id(아이디어 ID): `stage315_runtime_outcome_feature_interaction_review`
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## run316A_design_post_interaction_profit_scale_curve_rebuild_packet_v1 post_interaction_profit_scale_curve(상호작용 이후 수익 규모/곡선)
 
-- idea_id(아이디어 ID): `stage316_post_interaction_profit_scale_curve`
-- hypothesis(가설): 20/22시 sell-only(매도 전용) 시간 내부 샘플링이 거래수와 곡선을 같이 맞출 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
 
 ## run316C_review_post_interaction_profit_scale_curve_mt5_probe_v1 post_interaction_profit_scale_curve_review(상호작용 이후 수익 규모/곡선 검토)
 
-- idea_id(아이디어 ID): `stage316_post_interaction_profit_scale_curve_review`
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## run317A_design_fresh_non_time_profit_source_rebuild_packet_v1 fresh_non_time_profit_source(새 비시간 수익 원천)
 
-- idea_id(아이디어 ID): `stage317_fresh_non_time_profit_source`
-- hypothesis(가설): 시간 조건 없이 USDX/ADX/momentum/Bollinger(달러지수/ADX/모멘텀/볼린저) 상태 조합이 거래수와 수익 규모를 같이 만들 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
 
 ## run317C_review_fresh_non_time_profit_source_mt5_probe_v1 fresh_non_time_profit_source_review(새 비시간 수익 원천 검토)
 
-- idea_id(아이디어 ID): `stage317_fresh_non_time_profit_source_review`
-- evidence_boundary(근거 경계): research_development_only(연구개발 전용), selected_candidate=none.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## run318A_design_post_non_time_curve_stability_rebuild_packet_v1 post_non_time_curve_stability(비시간 이후 곡선 안정성)
 
-- idea_id(아이디어 ID): `stage318_post_non_time_curve_stability`
-- hypothesis(가설): Stage317(317단계) 실제 MT5(메타트레이더5) outcome(결과)을 비시간 feature surface(피처 표면)로 증류하면 trade count(거래 수), profit scale(수익 규모), curve stability(곡선 안정성)를 함께 회복할 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
 
 ## run318C_review_post_non_time_curve_stability_mt5_probe_v1 post_non_time_curve_stability(비시간 이후 곡선 안정성)
 
-- idea_id(아이디어 ID): `stage318_post_non_time_curve_stability_actual_review`
-- hypothesis(가설): Stage317(317단계) actual outcome(실제 결과)을 증류하면 수익 규모와 거래 밀도를 회복할 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - result(결과): 수익 규모는 만들었으나 smooth curve(매끈한 곡선) 조건은 실패했다.
 - survivor_seed_count(생존 씨앗 수): `2`
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
 
 ## run319A_design_curve_pocket_risk_asymmetry_rebuild_packet_v1 curve_pocket_risk_asymmetry(곡선 포켓 위험 비대칭)
 
-- idea_id(아이디어 ID): `stage319_curve_pocket_risk_asymmetry`
-- hypothesis(가설): Stage318(318단계) 수익 표면에서 변동성/추세 과열 구간을 줄이면 수익 규모와 4-10 trades/day(일 4-10거래)를 유지하면서 곡선 포켓을 줄일 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
 
 ## run319C_review_curve_pocket_risk_asymmetry_mt5_probe_v1 curve_pocket_risk_asymmetry_review(곡선 포켓 위험 비대칭 검토)
 
-- idea_id(아이디어 ID): `stage319_curve_pocket_risk_asymmetry_actual_review`
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
 - result(결과): profit scale(수익 규모)과 density(밀도)는 개선됐지만 validation pocket(검증 포켓)이 남았다.
 - survivor_seed_count(생존 씨앗 수): `4`
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
 
 ## run320A_design_validation_pocket_drawdown_controller_packet_v1 validation_pocket_drawdown_controller(검증 포켓 드로다운 제어기)
 
-- idea_id(아이디어 ID): `stage320_validation_pocket_drawdown_controller`
-- hypothesis(가설): cp319D(319D 후보)의 validation pocket(검증 포켓)은 VIX/quality state(VIX/품질 상태)로 줄일 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
 
 ## run321A_design_post_controller_profit_curve_rebuild_packet_v1 post_controller_profit_curve_source(제어기 이후 수익 곡선 원천)
 
-- idea_id(아이디어 ID): `stage321_consensus_profit_curve_source`
-- hypothesis(가설): Stage319(319단계)의 D/B/F/A/C/E 표면 합의와 합집합이 Stage320(320단계) 제어기보다 수익 규모와 곡선 균형을 더 잘 보존할 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
 ## run322A_design_cp321b_curve_stability_pressure_packet_v1 cp321B curve stability pressure(cp321B 곡선 안정성 압박)
 
-- idea_id(아이디어 ID): `stage322_cp321b_curve_stability_pressure`
-- hypothesis(가설): cp321B(321B 씨앗)는 exact replay(정확 재생)와 threshold/source/risk perturbation(임계값/원천/위험 교란)을 견뎌야 Adapter(어댑터)로 넘길 가치가 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - boundary(경계): research_development_only(연구개발 전용), selected_candidate=none.
 | `IDEA-ST337-PROXY-NEGATIVE-OFFENSIVE-PIVOT` | `337_onnx_research_packet__cost_buffer_direction_curve_rebuild` | repeated HQ/HV proxy-negative ONNX(반복 HQ/HV 프록시 음수 ONNX) evidence suggests label horizon, side-specific, model-family, active-flat, and regime/context offensive pivot(라벨 기간/방향별/모델 계열/활성-관망/국면 문맥 공격 전환)이 필요하다 | `Tier A now + Tier B required next(Tier A 현재 + 다음 Tier B 필수)` | `opened_design_no_selection` | `run337HW_design_proxy_negative_trade_shape_offensive_pivot_without_db_v1` opens `run337HX_materialize_proxy_negative_trade_shape_offensive_pivot_inputs_without_db_v1`; selected candidate(선택 후보), runtime authority(런타임 권위), Goal Achieve(목표 달성) 없음 |
 
@@ -426,8 +426,8 @@ Register ideas when they become durable work, not for every passing thought.
 
 ## 2026-06-01 Stage339 Lifecycle Exit Probe Review Seed(339단계 생명주기 청산 탐침 검토 씨앗)
 
-- idea_id(아이디어 ID): `stage339_lifecycle_exit_probe_review_seed`
-- hypothesis(가설): run338M(338M 실행)의 shorter hold(짧은 보유)와 side-balance(방향 균형) 변형은 MT5(메타트레이더5)에서 개선 단서를 줄 수 있지만, run338N(338N 실행) closeout(종료 기록)이 실패했으므로 먼저 근거 정체성을 검토해야 한다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - legacy_relation(레거시 관계): `none(없음)`
 - tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B same_as_tier_a_until_tier_b_available(Tier A+B는 Tier B 가능 전까지 Tier A와 같음)`
 - broad_sweep(넓은 탐색): run338M(338M 실행) 6개 lifecycle/exit(생명주기/청산) 변형.
@@ -435,12 +435,12 @@ Register ideas when they become durable work, not for every passing thought.
 - micro_search_gate(미세 탐색 게이트): run339B(339B 실행)가 exact parity(정확 동등성), report identity(보고서 정체성), KPI floors(KPI 하한)를 검토해야 한다.
 - wfo_plan(워크포워드 계획): runtime review(런타임 검토) 후 필요 시 별도 WFO(워크포워드 최적화) 단계로 분리한다.
 - failure_memory(실패 기억): closeout helper recursion(종료 기록 도우미 재귀)은 코드/상태 문제로 기록하고, 원시 MT5(메타트레이더5) 숫자는 검토 전 단서로만 둔다.
-- evidence_boundary(근거 경계): `runtime_probe_unreviewed_handoff(런타임 탐침 미검토 인계)`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## 2026-06-01 Stage339 Lifecycle Exit Probe Review Seed(339단계 생명주기 청산 탐침 검토 씨앗)
 
-- idea_id(아이디어 ID): `stage339_lifecycle_exit_probe_review_seed`
-- hypothesis(가설): run338M(338M 실행)의 shorter hold(짧은 보유)와 side-balance(방향 균형) 변형은 MT5(메타트레이더5)에서 개선 단서를 줄 수 있지만, run338N(338N 실행) closeout(종료 기록)이 실패했으므로 먼저 근거 정체성을 검토해야 한다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - legacy_relation(레거시 관계): `none(없음)`
 - tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B same_as_tier_a_until_tier_b_available(Tier A+B는 Tier B 가능 전까지 Tier A와 같음)`
 - broad_sweep(넓은 탐색): run338M(338M 실행) 6개 lifecycle/exit(생명주기/청산) 변형.
@@ -448,75 +448,75 @@ Register ideas when they become durable work, not for every passing thought.
 - micro_search_gate(미세 탐색 게이트): run339B(339B 실행)가 exact parity(정확 동등성), report identity(보고서 정체성), KPI floors(KPI 하한)를 검토해야 한다.
 - wfo_plan(워크포워드 계획): runtime review(런타임 검토) 후 필요 시 별도 WFO(워크포워드 최적화) 단계로 분리한다.
 - failure_memory(실패 기억): closeout helper recursion(종료 기록 도우미 재귀)은 코드/상태 문제로 기록하고, 원시 MT5(메타트레이더5) 숫자는 검토 전 단서로만 둔다.
-- evidence_boundary(근거 경계): `runtime_probe_unreviewed_handoff(런타임 탐침 미검토 인계)`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## 2026-06-01 Stage339B Shorter Hold Side-Balance Seed(짧은 보유 방향 균형 씨앗)
 
-- idea_id(아이디어 ID): `stage339_shorter_hold_side_balance_expansion`
-- hypothesis(가설): m02(엠02)의 hold=12(보유 12) 수익 구조를 유지하면서 short_threshold(숏 임계값)를 높이고 long_threshold(롱 임계값)를 약하게 낮추면 trade_count(거래수)와 side_balance(방향 균형)를 같이 개선할 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - legacy_relation(레거시 관계): `none(없음)`
 - tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B same_as_tier_a_until_tier_b_available(Tier A+B는 Tier B 가능 전까지 Tier A와 같음)`
 - broad_sweep(넓은 탐색): `stages/339_runtime_lifecycle_exit__side_balance_probe_review/02_runs/run339B/run339C_queue.csv`
 - extreme_sweep(극단 탐색): short_threshold(숏 임계값) 0.60, long_threshold(롱 임계값) 0.48 without close_on_flat(평탄 청산 없음)
 - micro_search_gate(미세 탐색 게이트): MT5(메타트레이더5) exact parity(정확 동등성) and trade_count>=30(거래수 30 이상) with positive expectancy(기대값 양수)
-- evidence_boundary(근거 경계): `reviewed_runtime_probe_no_selection(검토된 런타임 탐침, 선정 없음)`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## 2026-06-01 Stage339B Shorter Hold Side-Balance Seed(짧은 보유 방향 균형 씨앗)
 
-- idea_id(아이디어 ID): `stage339_shorter_hold_side_balance_expansion`
-- hypothesis(가설): m02(엠02)의 hold=12(보유 12) 수익 구조를 유지하면서 short_threshold(숏 임계값)를 높이고 long_threshold(롱 임계값)를 약하게 낮추면 trade_count(거래수)와 side_balance(방향 균형)를 같이 개선할 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - legacy_relation(레거시 관계): `none(없음)`
 - tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B same_as_tier_a_until_tier_b_available(Tier A+B는 Tier B 가능 전까지 Tier A와 같음)`
 - broad_sweep(넓은 탐색): `stages/339_runtime_lifecycle_exit__side_balance_probe_review/02_runs/run339B/run339C_queue.csv`
 - extreme_sweep(극단 탐색): short_threshold(숏 임계값) 0.60, long_threshold(롱 임계값) 0.48 without close_on_flat(평탄 청산 없음)
 - micro_search_gate(미세 탐색 게이트): MT5(메타트레이더5) exact parity(정확 동등성) and trade_count>=30(거래수 30 이상) with positive expectancy(기대값 양수)
-- evidence_boundary(근거 경계): `reviewed_runtime_probe_no_selection(검토된 런타임 탐침, 선정 없음)`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## 2026-06-01 Stage339E Quality Balance Blend Seed(품질-균형 혼합 씨앗)
 
-- idea_id(아이디어 ID): `stage339_quality_balance_blend_after_split`
-- hypothesis(가설): c01(씨01)의 profit quality(수익 품질)와 c07(씨07)의 side balance(방향 균형)는 min_margin(최소 마진)과 shorter hold(짧은 보유)를 섞으면 동시에 개선될 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - legacy_relation(레거시 관계): `none(없음)`
 - tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B same_as_tier_a_until_tier_b_available(Tier A+B는 Tier B 가능 전까지 Tier A와 같음)`
 - broad_sweep(넓은 탐색): `stages/339_runtime_lifecycle_exit__side_balance_probe_review/02_runs/run339E/run339F_queue.csv`
 - extreme_sweep(극단 탐색): long_threshold(롱 임계값) 0.46 with min_margin(최소 마진) 0.02, hold(보유) 10.
 - micro_search_gate(미세 탐색 게이트): MT5(메타트레이더5) exact parity(정확 동등성), trade_count(거래수) >= 30, recovery_factor(회복 계수) >= 1.0.
-- evidence_boundary(근거 경계): `reviewed_runtime_probe_no_selection(검토된 런타임 탐침, 선정 없음)`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## 2026-06-01 Stage340 Quality Balance Pressure Review Seed(340단계 품질-균형 압박 검토 씨앗)
 
-- idea_id(아이디어 ID): `stage340_quality_balance_pressure_review_seed`
-- hypothesis(가설): run339G(339G 실행)의 f01(에프01) local MT5 clue(로컬 MT5 단서)가 pressure test(압박 시험)를 받을 가치가 있을 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - source(원천): `run339G_execute_quality_balance_blend_mt5_probe_without_db_v1`
 - next_run(다음 실행): `run340B_review_quality_balance_blend_mt5_probe_without_db_v1`
 - tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B same_as_tier_a_until_tier_b_available(Tier A+B는 Tier B 가능 전까지 Tier A와 같음)`
-- evidence_boundary(근거 경계): `runtime_probe_review_required_no_selection(런타임 탐침 검토 필요, 선정 없음)`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 - effect(효과): 긍정 단서를 보존하되 Stage340(340단계)에서 새롭게 작게 판단한다.
 
 ## 2026-06-01 Stage340 Quality Balance Pressure Review Seed(340단계 품질-균형 압박 검토 씨앗)
 
-- idea_id(아이디어 ID): `stage340_quality_balance_pressure_review_seed`
-- hypothesis(가설): run339G(339G 실행)의 f01(에프01) local MT5 clue(로컬 MT5 단서)가 pressure test(압박 시험)를 받을 가치가 있을 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - source(원천): `run339G_execute_quality_balance_blend_mt5_probe_without_db_v1`
 - next_run(다음 실행): `run340B_review_quality_balance_blend_mt5_probe_without_db_v1`
 - tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B same_as_tier_a_until_tier_b_available(Tier A+B는 Tier B 가능 전까지 Tier A와 같음)`
-- evidence_boundary(근거 경계): `runtime_probe_review_required_no_selection(런타임 탐침 검토 필요, 선정 없음)`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 - effect(효과): 긍정 단서를 보존하되 Stage340(340단계)에서 새롭게 작게 판단한다.
 
 ## 2026-06-01 Stage340B F01 Pressure Seed(340B F01 압박 씨앗)
 
-- idea_id(아이디어 ID): `stage340_f01_local_floor_pressure`
-- hypothesis(가설): f01(에프01)의 local floor pass(로컬 하한 통과)는 threshold/min_margin/hold(임계값/최소 마진/보유) 압박에서도 일부 유지될 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - source(원천): `run339G_execute_quality_balance_blend_mt5_probe_without_db_v1`
 - next_run(다음 실행): `run340C_materialize_f01_local_floor_pressure_mt5_probe_package_without_db_v1`
 - broad_sweep(넓은 탐색): `stages/340_runtime_lifecycle_exit__quality_balance_pressure_review/02_runs/run340B/run340C_queue.csv`
-- evidence_boundary(근거 경계): `reviewed_runtime_probe_no_selection(검토된 런타임 탐침, 선정 없음)`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 - effect(효과): 긍정 단서를 다음 MT5(메타트레이더5) runtime probe(런타임 탐침)로 검증한다.
 
 ## 2026-06-01 Stage340E Corrected F01 Pressure Branch(340E 수정 F01 압박 분기)
 
-- idea_id(아이디어 ID): `stage340_f01_close_on_flat_false_pressure_repair`
-- hypothesis(가설): source f01(원본 f01)의 close_on_flat=False(평탄 청산 꺼짐) 의미를 복구하면 local floor(로컬 하한) 단서가 다시 보일 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - source(원천): `run339G_execute_quality_balance_blend_mt5_probe_without_db_v1` and `run340C_materialize_f01_local_floor_pressure_mt5_probe_package_without_db_v1`
 - next_run(다음 실행): `run340F_materialize_f01_close_on_flat_false_pressure_mt5_probe_package_without_db_v1`
 - queue(대기열): `stages/340_runtime_lifecycle_exit__quality_balance_pressure_review/02_runs/run340E/run340F_queue.csv`
@@ -524,8 +524,8 @@ Register ideas when they become durable work, not for every passing thought.
 
 ## 2026-06-01 Stage340E Corrected F01 Pressure Branch(340E 수정 F01 압박 분기)
 
-- idea_id(아이디어 ID): `stage340_f01_close_on_flat_false_pressure_repair`
-- hypothesis(가설): source f01(원본 f01)의 close_on_flat=False(평탄 청산 꺼짐) 의미를 복구하면 local floor(로컬 하한) 단서가 다시 보일 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - source(원천): `run339G_execute_quality_balance_blend_mt5_probe_without_db_v1` and `run340C_materialize_f01_local_floor_pressure_mt5_probe_package_without_db_v1`
 - next_run(다음 실행): `run340F_materialize_f01_close_on_flat_false_pressure_mt5_probe_package_without_db_v1`
 - queue(대기열): `stages/340_runtime_lifecycle_exit__quality_balance_pressure_review/02_runs/run340E/run340F_queue.csv`
@@ -533,8 +533,8 @@ Register ideas when they become durable work, not for every passing thought.
 
 ## 2026-06-01 Stage340H F01 Stability Cost Seed(340H F01 안정성 비용 씨앗)
 
-- idea_id(아이디어 ID): `stage341_f01_stability_cost_regime_validation`
-- hypothesis(가설): q01 exact control(정확 대조)과 q09 net-high clue(순수익 높은 단서)가 cost/session/regime(비용/세션/국면) 압박에서도 버티면 promotion_candidate(승격 후보) 비교 가치가 생긴다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - source(원천): `run340H_review_f01_close_on_flat_false_pressure_mt5_probe_without_db_v1`
 - next_run(다음 실행): `run341A_branch_stage340_to_f01_stability_cost_regime_validation_without_db_v1`
 - seed_queue(씨앗 대기열): `stages/340_runtime_lifecycle_exit__quality_balance_pressure_review/02_runs/run340H/run341A_seed_queue.csv`
@@ -549,8 +549,8 @@ Register ideas when they become durable work, not for every passing thought.
 
 ## 2026-06-01 Stage342D Soft Session-Long Firewall Seed(342D 부드러운 세션 롱 방화벽 씨앗)
 
-- idea_id(아이디어 ID): `stage342_soft_session_long_firewall`
-- hypothesis(가설): hard 0~110 early-long block(강한 0~110 초반 롱 차단)을 0~45 또는 0~75로 줄이면 PF(수익 팩터) 단서를 보존하면서 trade_count/side_balance(거래수/방향 균형)를 회복할 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - source(원천): `run342C_execute_f01_session_long_firewall_mt5_probe_without_db_v1`
 - next_run(다음 실행): `run342E_materialize_soft_session_long_firewall_mt5_probe_package_without_db_v1`
 - queue(대기열): `stages/342_session_long_firewall__early_long_filter_mt5_probe/02_runs/run342D/run342E_soft_session_long_firewall_probe_queue.csv`
@@ -558,8 +558,8 @@ Register ideas when they become durable work, not for every passing thought.
 
 ## 2026-06-01 Stage342G Early Long Quality Margin Mix Seed(342G 초반 롱 품질/마진 혼합 씨앗)
 
-- idea_id(아이디어 ID): `stage342_early_long_quality_margin_mix`
-- hypothesis(가설): time-window pruning(시간 구간 절단)만으로 부족한 early-long filter(초반 롱 필터)는 long_threshold/min_margin(롱 임계값/최소 마진)과 결합하면 trade_count/side_balance(거래수/방향 균형)를 회복할 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - source(원천): `run342F_execute_soft_session_long_firewall_mt5_probe_without_db_v1`
 - next_run(다음 실행): `run342H_materialize_early_long_quality_margin_mix_mt5_probe_package_without_db_v1`
 - queue(대기열): `stages/342_session_long_firewall__early_long_filter_mt5_probe/02_runs/run342G/run342H_early_long_quality_margin_mix_queue.csv`
@@ -567,8 +567,8 @@ Register ideas when they become durable work, not for every passing thought.
 
 ## 2026-06-01 run344A_branch_stage343_to_directional_long_supply_quality_surface_without_db_v1 Directional Long Quality Surface Branch(방향성 롱 품질 표면 분기)
 
-- idea_id(아이디어 ID): `stage344_directional_long_quality_surface`
-- hypothesis(가설): profit anchor(수익 앵커)의 short supply(숏 공급)는 보존하고, long entries(롱 진입)는 separate quality/regime surface(별도 품질/국면 표면)로 다시 분리하면 trade shape(거래 형태)를 회복할 수 있다.
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - source(원천): `run343F_review_trade_shape_rescue_quality_margin_blend_mt5_probe_without_db_v1`
 - next_run(다음 실행): `run344B_design_directional_long_supply_quality_surface_without_db_v1`
 - queue(대기열): `stages/344_directional_long_quality__supply_surface_probe/02_runs/run344A/run344B_directional_long_supply_quality_surface_queue.csv`
@@ -577,7 +577,7 @@ Register ideas when they become durable work, not for every passing thought.
 
 ## 2026-06-01 run344C_materialize_directional_long_supply_quality_surface_package_without_db_v1 Directional Long Quality Runtime Mapping(방향성 롱 품질 런타임 매핑)
 
-- idea_id(아이디어 ID): `stage344_directional_long_quality_surface`
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
 - action(행동): rank/regime/exit ideas(순위/국면/청산 아이디어)를 EA-supported runtime mapping(EA 지원 런타임 매핑)으로 만들었다.
 - effect(효과): MT5 runtime probe(MT5 런타임 탐침)에서 실행 가능한 candidate surface(후보 표면)가 생겼다.
 - next_run(다음 실행): `run344D_execute_directional_long_supply_quality_surface_mt5_probe_without_db_v1`
@@ -664,8 +664,8 @@ Register ideas when they become durable work, not for every passing thought.
 
 ## stage351_no_scaler_or_1d_scaler_softmax_trade_surface
 
-- hypothesis(가설): Stage350E(350E 실행)에서 통과한 단순 ONNX(온엑스) 계약이면 거래 표면을 다시 만들 수 있다.
-- evidence_boundary(근거 경계): scout_and_handoff_only(스카우트 및 인계 전용)
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 | `IDEA-ST355-DENSITY-RECOVERY-LABEL-MODEL-SOURCE` | `355_density_recovery_model_family__new_label_source_probe` | existing surface(기존 표면)의 threshold/horizon/filter(임계값/보유기간/필터) 회수가 실패했으므로, 새 label/source/model family(라벨/원천/모델 계열)로 trade/day(일별 거래수) 3+와 net/PF/stress(순수익/수익 팩터/압박)를 동시에 회복한다 | `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)` | `opened_research_development_only` | next_action(다음 행동) `run355A_design_density_recovery_label_model_source_without_db_v1`; selected candidate(선택 후보), ONNX readiness(온엑스 준비), runtime authority(런타임 권위)는 없음 |
 
@@ -684,30 +684,30 @@ Register ideas when they become durable work, not for every passing thought.
 ## IDEA-ST360B-REPORT-DERIVED-FILTER-SCORECARDS
 
 - idea(아이디어): Stage359B MT5 report(보고서)를 closed-trade diagnostic scorecard(종료 거래 진단 점수표)로 분해해 long/cash, late veto, side firewall clue(롱/현금장, 후반 제외, 방향 방화벽 단서)를 검토한다.
-- hypothesis(가설): OOS positive clue(표본외 긍정 단서)는 session/side/cost(세션/방향/비용) 분해 뒤에야 proxy(프록시) 또는 MT5 replay(MT5 재생) 대상으로 판단할 수 있다.
-- evidence_boundary(근거 경계): report_derived_materialization_only(보고서 파생 구체화 전용).
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 - next_action(다음 행동): `run360C_review_regime_stability_pivot_materialized_inputs_without_db_v1`.
 
 ## IDEA-ST361-LONG-ONLY-COST-BUFFER
 
 - idea(아이디어): q05 long-only(롱 단독) edge(우위)에 margin/regime/label(마진/국면/라벨) 필터를 더해 +0.30 cost buffer(+0.30 비용 버퍼)를 회복한다.
-- hypothesis(가설): short removal(숏 제거)은 validation/OOS(검증/표본외)를 양수로 만들지만 cost stress(비용 압박)가 부족하므로, long-only quality margin(롱 단독 품질 마진)이 필요하다.
-- evidence_boundary(근거 경계): report-derived review seed(보고서 파생 검토 씨앗).
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 - next_action(다음 행동): `run361A_design_long_only_cost_buffer_probe_without_db_v1`.
 
 ## IDEA-ST361A-Q05-LONG-ONLY-MARGIN-REGIME-LABEL
 
 - idea(아이디어): q05 long-only(롱 단독) margin/regime/label(마진/국면/라벨) 설계로 +0.30 cost buffer(+0.30 비용 버퍼)를 회복한다.
-- hypothesis(가설): Stage360C(360C 실행)의 비용 전 검증/표본외 양수 단서는 margin gap(마진 gap), regime router(국면 라우터), cost-aware label(비용 인식 라벨)을 통해 비용 후에도 보존될 수 있다.
-- evidence_boundary(근거 경계): design_only(설계 전용).
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 - next_action(다음 행동): `run361B_materialize_long_only_cost_buffer_inputs_without_db_v1`.
 
 ## IDEA-ST362-Q05-LONG-ONLY-MARGIN-GRID
 
 - idea(아이디어): q05 long-only(롱 단독) margin grid(마진 격자)를 먼저 구체화해 +0.30 cost buffer(+0.30 비용 버퍼) 가능 표면을 찾는다.
-- hypothesis(가설): broad margin surface(넓은 마진 표면)가 validation/OOS(검증/표본외) 모두에서 비용 후 양수를 만들면 regime/label(국면/라벨) 복잡도를 붙일 가치가 생긴다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - tier_scope(티어 범위): `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)`
-- evidence_boundary(근거 경계): `stage_branch_only(단계 분기 전용)`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 - next_action(다음 행동): `run362B_materialize_q05_long_only_margin_grid_without_db_v1`
 
 ## IDEA-ST362B-Q05-LONG-ONLY-MARGIN-GRID-MATERIALIZATION
@@ -721,17 +721,17 @@ Register ideas when they become durable work, not for every passing thought.
 ## IDEA-ST362C-Q05-MARGIN-GRID-REVIEW
 
 - idea(아이디어): q05 margin grid(q05 마진 격자)를 no-selection negative memory(선택 없음 부정 기억)로 검토한다.
-- hypothesis(가설): Stage362B(362B 실행)의 sparse cost-positive pockets(희소 비용 양수 구간)는 candidate selection(후보 선택)이 아니라 lower-floor/rank seed(낮은 하한/순위 씨앗)이다.
-- evidence_boundary(근거 경계): `review_only_no_new_mt5(검토 전용, 새 MT5 없음)`.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 - next_action(다음 행동): `run363A_branch_stage362_to_lower_floor_rank_surface_without_db_v1`.
 - claim_boundary(주장 경계): `research_development_review_only_q05_margin_grid_negative_memory_and_stage363_handoff_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`
 
 ## IDEA-ST363-Q05-LOWER-FLOOR-RANK-SURFACE
 
 - idea(아이디어): lower p_long floor and validation-derived rank/quantile surface(낮은 p_long 하한 및 검증 파생 순위/분위수 표면).
-- hypothesis(가설): density(밀도)를 보존하면서 validation cost drag(검증 비용 끌림)를 줄이는 표면이 absolute margin tightening(절대 마진 조임)보다 낫다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - tier_scope(티어 범위): `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)`.
-- evidence_boundary(근거 경계): `stage_branch_only(단계 분기 전용)`.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 - next_action(다음 행동): `run363B_materialize_q05_lower_floor_rank_surface_without_db_v1`.
 
 ## IDEA-ST363B-Q05-LOWER-FLOOR-RANK-MATERIALIZATION
@@ -748,7 +748,7 @@ Register ideas when they become durable work, not for every passing thought.
 - source_failure_memory(원천 실패 기억): `stages/363_lower_floor_rank_surface__q05_long_density_recovery/02_runs/run363C/failure_memory.csv`.
 - design_queue(설계 대기열): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364A/run364B_design_queue.csv`.
 - tier_scope(티어 범위): `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)`.
-- evidence_boundary(근거 경계): `stage_branch_only(단계 분기 전용)`.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 - claim_boundary(주장 경계): `state_sync_stage_branch_source_regime_label_pivot_handoff_only_no_new_model_training_no_new_proxy_execution_no_mt5_execution_no_candidate_selection_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.
 
 ## IDEA-ST364B-TIMESTAMP-CONTEXT-COST-SURFACE
@@ -795,7 +795,7 @@ Register ideas when they become durable work, not for every passing thought.
 ## IDEA-ST364H-DENSE-M5-SOURCE-RUNTIME-REPAIR
 
 - idea(아이디어): sparse event tape(희소 이벤트 테이프)를 dense M5 source(고밀도 M5 원천)와 calendar exit semantics(캘린더 청산 의미)로 수리한다.
-- hypothesis(가설): ONNX handoff(ONNX 인계)는 맞으므로 signal source density(신호 원천 밀도)와 runtime exit(런타임 청산)를 바꾸면 trade/day(일별 거래수) 3+와 MT5 net positive(MT5 순수익 양수)를 다시 시험할 수 있다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - evidence(근거): `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364H/review_findings.csv`, `stages/364_source_regime_label_pivot__dense_cost_recovery/02_runs/run364H/failure_memory.csv`.
 - next_action(다음 행동): `run364I_design_runtime_failure_repair_offensive_queue_without_db_v1`.
 - claim_boundary(주장 경계): `research_development_runtime_probe_review_only_no_new_model_training_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.
@@ -803,7 +803,7 @@ Register ideas when they become durable work, not for every passing thought.
 ## IDEA-ST364I-DIRECT-DENSE-M5-RETURN-ONNX-SCOUT
 
 - idea(아이디어): q05 probability bridge(q05 확률 연결)와 sparse long cost filter(희소 롱 비용 필터)를 벗어나 processed dense M5 features(처리 고밀도 M5 피처)로 직접 ONNX(온엑스) 모델을 학습한다.
-- hypothesis(가설): dense direct return label(고밀도 직접 수익 라벨)이 OOS edge(표본외 우위)를 더 넓게 만든다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - legacy_relation(레거시 관계): `none(없음)`
 - tier_scope(티어 범위): `Tier A separate + Tier B missing_required(Tier A 분리 + Tier B 필수 누락)`
 - broad_sweep(넓은 탐색): logreg/rf/extra-trees shallow ONNX(로지스틱/랜덤포레스트/엑스트라트리 얕은 ONNX), long-only/two-sided(롱 전용/양방향), trade/day 3/5/7/10.
@@ -811,7 +811,7 @@ Register ideas when they become durable work, not for every passing thought.
 - micro_search_gate(미세 탐색 게이트): validation+OOS proxy(검증+표본외 프록시) net>0, PF>=1.05, trade/day>=3.
 - wfo_plan(WFO 계획): positive scout(긍정 탐색) 이후 WFO(walk-forward optimization, 워크포워드 최적화) 강화.
 - failure_memory(실패 기억): run364I found cost-filter overlay OOS PF weak(run364I 비용 필터 덧씌우기 표본외 수익 팩터 약함).
-- evidence_boundary(근거 경계): `scout_only(탐색 전용)`
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 - next_action(다음 행동): `run364J_train_direct_dense_m5_return_onnx_scout_without_db_v1`
 
 ## IDEA-ST364J-DIRECT-DENSE-M5-RETURN-ONNX-SCOUT
@@ -824,14 +824,14 @@ Register ideas when they become durable work, not for every passing thought.
 
 ## IDEA-ST364L-DENSITY-LIFT-TRADE-SHAPE-ONNX-SCOUT
 
-- hypothesis(가설): h24 quality clue(24봉 품질 단서)와 h6 density clue(6봉 밀도 단서)를 shorter hold and exit policy(짧은 보유와 청산 정책)로 결합하면 3/day+(일 3회 이상) density(밀도)를 회복할 수 있다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - legacy_relation(레거시 관계): `none(없음)`.
 - tier_scope(티어 범위): `Tier A separate(Tier A 분리); Tier B missing_required(Tier B 필수 누락); Tier A+B out_of_scope_by_claim(Tier A+B 주장 범위 밖)`.
 - broad_sweep(넓은 탐색): `horizon_m5=[3,4,6,8,12]`, `target_density=[3,5,8,12]`, `policy=[long_only,two_sided,side_asym]`.
 - extreme_sweep(극단 탐색): `target_density=[16,20]`, `hold_m5=[2,3]`, `cost_stress=[0.30,0.45,0.60]`.
 - micro_search_gate(미세 탐색 게이트): validation/OOS density >= 3/day(검증/표본외 밀도 3/일 이상), net > 0(순수익 양수), PF >= 1.05(수익 팩터 1.05 이상).
 - wfo_plan(WFO 계획): scout(탐색) 통과 후 WFO(워크포워드 최적화).
-- evidence_boundary(근거 경계): `research_development_kpi_evidence_review_only_no_new_model_training_no_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 
 ## run364M_prepare_density_lift_trade_shape_onnx_runtime_probe_without_db_v1
 
@@ -999,7 +999,7 @@ Register ideas when they become durable work, not for every passing thought.
 ## run364AS_train_threshold_edge_pf_gap_repair_scout_without_db_v1
 
 - idea(아이디어): threshold-edge(임계값 경계) PF gap(PF 간극)을 보유 압축과 후반 롱 혼합으로 줄인다.
-- hypothesis(가설): PF(수익 팩터) 1.30 접근이 density(밀도) 3/day 붕괴 없이 가능할 수 있다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - effect(효과): proxy scout(프록시 정찰) 표면으로 다음 review(검토)가 package(패키지) 가능성과 실패 기억을 나눌 수 있게 한다.
 
 ## run364AT_review_threshold_edge_pf_gap_repair_scout_without_db_v1
@@ -1171,16 +1171,16 @@ Register ideas when they become durable work, not for every passing thought.
 
 ### run364CF_materialize_cost_stable_h17_source_guard_offensive_inputs_without_db_v1 cost-stable h17 source guard offensive queue(비용 안정 17시 원천 가드 공격 대기열)
 
-- idea_id(아이디어 ID): `IDEA-ST364-SOURCE-REGIME-LABEL-PIVOT-DENSE-COST-RECOVERY`
-- hypothesis(가설): current-session cost-stable h17 source guard(현재 세션 비용 안정 17시 원천 가드)가 no-split scout(무분할 정찰)에서 PF/DD/source quality(PF/DD/원천 품질)를 개선할 수 있다.
-- evidence_boundary(근거 경계): materialization_only(구체화 전용), no runtime authority(런타임 권위 없음).
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 - next(다음): `run364CG_train_cost_stable_h17_source_guard_offensive_scout_without_db_v1`.
 
 ## run364CH_review_cost_stable_h17_source_guard_offensive_scout_without_db_v1
 
 - idea(아이디어): h17 overlay focus(17시 오버레이 집중)는 small net/PF lift(작은 순수익/PF 우위)를 만들지만 month/cost stress(월/비용 압박)를 해결해야 한다.
 - positive clue(긍정 단서): net/PF/density/shorts `1001.5` / `1.3999745705` / `3.2070063694` / `104`.
-- evidence_boundary(근거 경계): review only(검토 전용), no new MT5 execution(새 MT5 실행 없음).
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 - next action(다음 행동): `run364CI_materialize_h17_focus_month_cost_stress_repair_inputs_without_db_v1`.
 
 <!-- run364CJ__run364CJ_train_h17_focus_month_cost_stress_repair_scout_without_db_v1 -->
@@ -1325,7 +1325,7 @@ Register ideas when they become durable work, not for every passing thought.
 - `run364EP_review_h17_oos108_validation_floor_bridge_mt5_runtime_probe_without_db_v1`: OOS108 validation floor bridge(OOS108 검증 바닥 연결)는 MT5에서 net/PF/density(순수익/수익 팩터/밀도) 단서를 보였지만, OOS-only diff(OOS 전용 차이)는 scope mismatch(범위 불일치)로 보정해야 합니다. Effect(효과): EQ는 범위 정렬과 비용/방향 수리를 함께 탐색합니다.
 ## stage364EQ_oos108_cost_side_scope_aligned_repair_scout
 
-- hypothesis(가설): scope-aligned surface(범위 정렬 표면)에 cost/PF/density/side/net(비용/PF/밀도/방향/순수익)을 동시에 만족하는 repair seed(수리 씨앗)가 있을 수 있다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - result(결과): strict pass(엄격 통과) `0`.
 - salvage value(회수 가치): relaxed density seed(완화 밀도 씨앗) `14`개와 ER reseed queue(ER 재시드 대기열).
 - claim boundary(주장 경계): `research_development_scope_aligned_cost_side_proxy_scout_only_no_new_mt5_execution_no_forward_pass_no_live_readiness_no_operating_promotion_no_runtime_authority_no_goal_claim`.
@@ -2404,7 +2404,7 @@ Register ideas when they become durable work, not for every passing thought.
 - idea_id: f89_runtime_trade_list_adverse_selection_teacher_v1
 - stage_id: `stage_frontier_89__runtime_trade_list_adverse_selection_teacher`
 - run_id: `frontier89A_stage_open_runtime_trade_list_adverse_selection_teacher_v1`
-- hypothesis(가설): F88C runtime deal rows(F88C 런타임 딜 행)을 adverse-selection teacher label(역선택 교사 라벨)로 바꿔 다음 후보(candidate, 후보)의 취약한 진입을 먼저 걸러본다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - novelty_delta(신규성 차이): label/target(라벨/대상), data representation(데이터 표현), risk logic(위험 로직).
 - negative_memory(부정 기억): F88C runtime economics(런타임 경제성) net -36.2, PF 0.67, DD 17.16%, trades 23; no authority(권위 없음).
 - next_action(다음 행동): `frontier89B_deal_path_adverse_selection_proxy_scout_v1`.
@@ -2418,25 +2418,25 @@ Register ideas when they become durable work, not for every passing thought.
 
 - run_id: `frontier90A_stage_open_time_to_barrier_competing_risk_label_axis_v1`
 - source(원천): `frontier89C_deal_path_teacher_repair_or_rotation_decision_v1` reference-only(참조 전용)
-- hypothesis(가설): event type plus bars-to-event(사건 유형 + 도달 봉 수)가 binary adverse-selection label(이진 불리선택 라벨)보다 rank/survival clue(순위/생존 단서)를 줄 수 있는지 본다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - novelty_delta(신규성 차이): label representation(라벨 표현), data representation(데이터 표현), validation philosophy(검증 철학).
 - next_action(다음 행동): `frontier90B_time_to_barrier_label_feasibility_scout_v1`.
 - claim_boundary(주장 경계): `design_only_stage_open_for_time_to_barrier_competing_risk_label_axis_no_model_candidate_no_wfo_pass_no_stress_pass_no_mt5_runtime_evidence_no_selected_baseline_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
 ## F90C ordering proxy negative memory(F90C 순서 프록시 부정 기억)
 
 - run_id: `frontier90C_time_to_barrier_ordering_proxy_scout_v1`
-- hypothesis(가설): F90B time-to-barrier labels(F90B 장벽 도달 시간 라벨)이 upper/lower ordering(상방/하방 순서) 프록시를 만들 수 있는지 본다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - result(결과): best diagnostic variant(진단상 최선 변형) `ridge_signed_speed_alpha10` failed candidate gate(후보 게이트 실패).
 - next_action(다음 행동): `frontier90D_time_to_barrier_repair_or_rotation_decision_v1`.
 - claim_boundary(주장 경계): `f90c_ordering_proxy_scout_only_no_candidate_no_calibration_no_threshold_selection_no_selected_baseline_no_mt5_runtime_evidence_no_operating_promotion_no_runtime_authority_no_live_readiness_no_goal_achieve`.
 <!-- frontier91A_stage_open_regime_conditioned_density_cost_abstention_axis_v1 -->
 ## F91A Regime Density/Cost Abstention Axis
 
-- idea_id(아이디어 ID): `f91_regime_density_cost_abstention_axis`
-- hypothesis(가설): pre-entry regime(진입 전 장세), density(밀도), cost drag(비용 부담), and risk logic(위험 로직) can define abstain/trade(회피/거래) utility without repeating F90 ordering(순서화).
+- idea_id(아이디어 ID): `stage306_runtime_realized_curve_attribution`
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - legacy_relation(레거시 관계): `prior_evidence_only`
 - tier_scope(티어 범위): Tier A separate/Tier B separate/Tier A+B combined required in F91B.
-- evidence_boundary(근거 경계): design_only stage open(설계 전용 단계 개방), no candidate/runtime authority(후보/런타임 권위 없음).
+- evidence_boundary(근거 경계): research_development_only(연구 개발 전용), selected_candidate=none.
 - next_action(다음 행동): `frontier91B_regime_density_cost_abstention_proxy_scout_v1`.
 ## F91C regime-density-cost abstention closeout
 
@@ -2489,7 +2489,7 @@ Register ideas when they become durable work, not for every passing thought.
 ## F94A tier-stable realized-utility label open(F94A 티어 안정 실현 효용 라벨 개방)
 
 - run_id(실행 ID): `frontier94A_stage_open_tier_stable_realized_utility_label_axis_v1`
-- hypothesis(가설): Predeclared tier-stable realized-utility labels(사전 선언 티어 안정 실현 효용 라벨)이 F93 short-heavy/high-cost failure shape(F93 숏 과다/고비용 실패 형태)를 F93 side/cost budget repair axis(F93 방향/비용 예산 수리 축) 반복 없이 runtime-compatible proxy surface(런타임 호환 프록시 표면)로 바꿀 수 있는지 시험한다.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - decision_use(판정 용도): design-only stage open(설계 전용 단계 개방) and F94B proxy scout plan(F94B 프록시 탐색 계획).
 - task_force_actual_calls(태스크포스 실제 호출): 6 selected agents recorded(선택 요원 6명 기록).
 - runtime(런타임): no Strategy Tester evidence(전략 테스터 근거 없음); no runtime authority(런타임 권위 없음).
@@ -2521,7 +2521,7 @@ Register ideas when they become durable work, not for every passing thought.
 ## F95A closed-bar state-transition embedding open(F95A 확정봉 상태 전이 임베딩 개방)
 
 - run_id(실행 ID): `frontier95A_stage_open_closed_bar_state_transition_embedding_axis_v1`
-- hypothesis(가설): US100 M5 closed-bar sequences contain state-transition structure that can separate continuation, reversal-trap, and chop-cost-drag states before long/short/abstain mapping.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - decision_use(판정 용도): design-only stage open(설계 전용 단계 개방) and F95B proxy scout plan(F95B 프록시 정찰 계획).
 - task_force_actual_calls(태스크포스 실제 호출): 6 selected agents recorded(선택 요원 6명 기록).
 - runtime(런타임): no Strategy Tester evidence(전략 테스터 근거 없음); no runtime authority(런타임 권위 없음).
@@ -2557,7 +2557,7 @@ Effect(효과): F95(전선95)는 negative memory/reference surface(부정 기억
 ## F96 Counterfactual Action Value Policy(반사실 행동가치 정책)
 
 - source(원천): `frontier95C_closed_bar_state_transition_repair_or_rotation_decision_v1` as negative memory/reference surface(부정 기억/참고 표면)
-- hypothesis(가설): Closed-bar features can learn long/short/abstain counterfactual action value with adverse-excursion and cost penalties, producing a risk-first trade surface that avoids the F95 state-cluster long-only collapse.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - next action(다음 행동): `frontier96B_counterfactual_action_value_policy_proxy_scout_v1`
 - boundary(경계): no selected baseline(선택 기준선 없음), no runtime authority(런타임 권위 없음), no Goal Achieve(목표 달성 없음)
 <!-- frontier96_action_value_policy:end -->
@@ -2591,7 +2591,7 @@ Effect(효과): F96(전선96)은 negative memory/reference surface(부정 기억
 ## F97 First-Hit Survival/Hazard(전선97 첫 도달 생존/위험)
 
 - source(원천): `frontier96C_counterfactual_action_value_policy_repair_or_rotation_decision_v1` as negative memory/reference surface(부정 기억/참조 표면)
-- hypothesis(가설): Closed-bar features can rank first favorable versus adverse bracket-hit survival/hazard and abstain when event density or adverse-first risk is poor, creating a new clue surface before side selection.
+- hypothesis(가설): curve-pocket-aware profit source(곡선 포켓 인식 수익 원천)가 WFO와 MT5 runtime curve attribution(MT5 런타임 곡선 귀속)을 통해 다음 후보성을 점검한다.
 - next action(다음 행동): `frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1`
 - boundary(경계): no selected baseline(선택 기준선 없음), no runtime authority(런타임 권위 없음), no Goal Achieve(목표 달성 없음)
 <!-- frontier97_first_hit_survival_hazard:end -->

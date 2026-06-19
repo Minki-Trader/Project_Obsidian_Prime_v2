@@ -1,4 +1,4 @@
-You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Project Obsidian Prime v2 Frontier05 stage-open(전선05 단계 개방) proposal.
+﻿You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Project Obsidian Prime v2 Frontier05 stage-open(전선05 단계 개방) proposal.
 
 Current truth(현재 진실):
 - Active parent closeout(부모 마감): `stage_frontier_04__path_aware_cost_dd_event_labeling` / `frontier04E_stage_closeout_v1`.

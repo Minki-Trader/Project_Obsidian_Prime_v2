@@ -1,4 +1,4 @@
-Project Obsidian Prime v2 frontier runtime probe backfill closeout review(전선 런타임 탐침 소급 마감 검토).
+﻿Project Obsidian Prime v2 frontier runtime probe backfill closeout review(전선 런타임 탐침 소급 마감 검토).
 
 Current truth(현재 진실):
 - User asked Codex(코덱스) to retroactively run MT5 runtime probe(MT5 런타임 탐침) for frontier stages(전선 단계) where it was omitted, reflect each stage(단계 반영), then safely commit/push(커밋/푸시).

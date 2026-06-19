@@ -1,4 +1,4 @@
-<!-- frontier89_task_force_correction_review_v1 -->
+﻿<!-- frontier89_task_force_correction_review_v1 -->
 
 ## 2026-06-19T00:13:15Z - F89 Task Force Correction(F89 태스크포스 정정)
 

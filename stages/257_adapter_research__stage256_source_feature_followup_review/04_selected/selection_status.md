@@ -1,4 +1,4 @@
-# Stage257 Selection Status(257단계 선택 상태)
+﻿# Stage257 Selection Status(257단계 선택 상태)
 
 - stage_status(단계 상태): `closed_open_stage258_short_tight_margin_pf_repair_candidate_not_final`
 - current_packet(현재 작업 묶음): `stage257_stage256_source_feature_followup_review_v1`

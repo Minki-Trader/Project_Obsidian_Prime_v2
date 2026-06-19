@@ -1,4 +1,4 @@
-# Current Working State(현재 작업 상태)
+﻿# Current Working State(현재 작업 상태)
 
 - active_stage(활성 단계): `stage_frontier_98__excursion_tail_veto_payoff_asymmetry_axis`
 - current_run(현재 실행): `frontier98A_stage_open_excursion_tail_veto_payoff_asymmetry_axis_v1`

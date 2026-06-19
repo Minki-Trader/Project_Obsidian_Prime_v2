@@ -1,4 +1,4 @@
----
+﻿---
 name: obsidian-grok-collaboration
 description: Retired/archive-only Project Obsidian Prime v2 skill for reading historical Grok review records. Use only when Codex needs to inspect old docs/agent_control/grok_reviews artifacts, old Grok receipts, or migration evidence. Do not call Grok, create prompts, create outputs, create receipts, add gates, or route external review through Grok; route critique, second opinion, no-solo-Codex, stage-close adversarial review, and agent/skill consulting to obsidian-task-force-review.
 ---

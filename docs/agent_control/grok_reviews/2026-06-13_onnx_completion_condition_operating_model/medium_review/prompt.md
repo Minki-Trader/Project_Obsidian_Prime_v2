@@ -1,4 +1,4 @@
-# Grok medium review request(중간 검토 요청): ONNX final completion condition(최종 완성 조건) and frontier operating model(프론티어 운영 방식)
+﻿# Grok medium review request(중간 검토 요청): ONNX final completion condition(최종 완성 조건) and frontier operating model(프론티어 운영 방식)
 
 You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Codex(Codex, 코덱스) keeps final direction(최종 방향), local verification(로컬 검증), and claim boundary(주장 경계).
 

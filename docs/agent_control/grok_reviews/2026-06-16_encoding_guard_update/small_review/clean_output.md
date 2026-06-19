@@ -1,4 +1,4 @@
-Proposed encoding guard rules need a quick pass against existing project policy and the Grok wrapper — I'll read those sources first.
+﻿Proposed encoding guard rules need a quick pass against existing project policy and the Grok wrapper — I'll read those sources first.
 **Verdict: accepted** (with two small wording additions)
 
 The rule is acceptable. It targets **environment/reproducibility discipline(환경·재현성 규율)**, not gate thresholds or evidence standards — so it does not weaken gates.

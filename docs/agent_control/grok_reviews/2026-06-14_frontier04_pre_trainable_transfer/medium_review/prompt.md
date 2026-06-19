@@ -1,4 +1,4 @@
-You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Frontier04C pre-trainable-transfer gate(전선04C 학습 가능 전달 전 게이트).
+﻿You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Frontier04C pre-trainable-transfer gate(전선04C 학습 가능 전달 전 게이트).
 
 Current truth(현재 진실):
 - Stage(단계): `stage_frontier_04__path_aware_cost_dd_event_labeling`

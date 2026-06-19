@@ -1,4 +1,4 @@
-You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Project Obsidian Prime v2 Frontier06 stage closeout(전선06 단계 마감) proposal.
+﻿You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Project Obsidian Prime v2 Frontier06 stage closeout(전선06 단계 마감) proposal.
 
 Current truth(현재 진실):
 - Frontier06(전선06) hypothesis(가설): selective probability abstention signal contract(선택적 확률 기권 신호 계약).

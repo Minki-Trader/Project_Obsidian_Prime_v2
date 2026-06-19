@@ -2,7 +2,8 @@
 source_of_truth: docs/agent_control/codex_task_force_registry.yaml
 purpose: "Define the permanent Project Obsidian Prime v2 Codex Task Force roster and model policy."
 scope_boundary:
-  replaces: "All Grok-dependent active review routes, including explicit Grok call/review wording"
+  active_review_scope: "Project-native Codex Task Force review for active non-Grok review requirements."
+  grok_call_scope: "No active Grok call path remains; explicit Grok wording is archive-only unless the user asks to inspect historical records."
   does_not_replace:
     - "MT5 evidence(MT5 근거)"
     - "runtime probes(런타임 탐침)"
@@ -15,7 +16,30 @@ model_policy:
   default_alias: highest_available_xhigh
   upgrade_rule: "Use the highest Codex-available model with xhigh reasoning when it is allowed, unless the user explicitly pins another model."
   non_authority_rule: "Model strength is an execution setting, not evidence and not permission to relax gates, thresholds, or claim boundaries."
+custom_agent_config:
+  project_config_path: .codex/config.toml
+  project_agent_dir: .codex/agents
+  name_match_rule: "Each roster id must match the custom agent TOML file name and the TOML name field."
+  spawn_rule: "Use the custom agent name matching roster id when current Codex tool metadata exposes it."
+  compatibility_fallback_rule: "If current session metadata has not refreshed, optional micro_consult may use an explicit roster-id prompt as advisory_only; required formal review is blocked until the selected custom agents can be called."
 review_policy:
+  default_mode: micro_consult
+  micro_consult_default_agent_count: 1
+  micro_consult_default_max_agents: 2
+  micro_consult_claim_effect: advisory_only_no_reviewed_pass
+  three_or_more_requires: escalation_reason
+  five_or_more_requires: why_not_smaller
+  full_roster_requires:
+    - escalation_reason
+    - why_not_smaller
+    - full_roster_call_reason
+  formal_review_only_for:
+    - stage_closeout
+    - policy_change
+    - runtime_authority
+    - operating_promotion
+    - cross_system_handoff
+    - protected_reviewed_verified_pass_claim
   review_pass_limit_default: 2
   third_pass_rule: "Only when new evidence appears."
   advice_classification:
@@ -31,6 +55,41 @@ review_policy:
     - live_readiness
     - goal_achieve
     - parity_only_economics
+micro_consult_receipt_schema:
+  purpose: "Record small advisory Task Force consultations without turning them into formal review evidence."
+  required_fields:
+    - consult_id
+    - parent_packet_id
+    - trigger_source
+    - selected_agents
+    - selection_reason
+    - claim_surface
+    - question_or_context_digest
+    - opinion_classification
+    - owner_response
+    - local_verification_required
+    - allowed_claim_effect
+    - forbidden_claims
+  allowed_claim_effect: advisory_only_no_reviewed_pass
+  forbidden_claims:
+    - reviewed
+    - verified
+    - pass
+    - internally_reviewed
+    - stage_closeout_pass
+    - runtime_authority
+    - operating_promotion
+micro_consult_index_schema:
+  purpose: "Make advisory consultations findable without promoting them to gate evidence."
+  required_fields:
+    - consult_id
+    - packet_id
+    - timestamp_utc
+    - selected_agent_ids
+    - consult_topic
+    - result_summary
+    - claim_effect
+  claim_effect: advisory_index_only
 frontier80_policy:
   target: "Frontier80 open -> closeout(F80 개방 -> 마감)"
   not_target: "F79/F79A reopen(F79/F79A 재개방)"
@@ -44,6 +103,8 @@ frontier_lessons:
 roster:
   - id: agent_01_system_governor
     display_name: "System Governor(시스템 총괄)"
+    custom_agent_name: agent_01_system_governor
+    custom_agent_path: .codex/agents/agent_01_system_governor.toml
     remit: "Keep objective, scope, risk posture, and final claim boundary aligned."
     required_for:
       - policy_skill_governance
@@ -51,6 +112,8 @@ roster:
       - stage_closeout
   - id: agent_02_platform_routing_architect
     display_name: "Platform/Routing Architect(플랫폼/라우팅 설계자)"
+    custom_agent_name: agent_02_platform_routing_architect
+    custom_agent_path: .codex/agents/agent_02_platform_routing_architect.toml
     remit: "Own cold-start routing, registry wiring, model policy, and work-family integration."
     required_for:
       - agent_routing
@@ -58,6 +121,8 @@ roster:
       - cold_start
   - id: agent_03_philosophy_policy_skill_governance
     display_name: "Philosophy/Policy/Skill Governance Lead(철학/정책/스킬 거버넌스 책임자)"
+    custom_agent_name: agent_03_philosophy_policy_skill_governance
+    custom_agent_path: .codex/agents/agent_03_philosophy_policy_skill_governance.toml
     remit: "Preserve reference-not-inheritance, exploration freedom, and active skill-role reduction."
     required_for:
       - AGENTS.md
@@ -65,6 +130,8 @@ roster:
       - skills
   - id: agent_04_evidence_control_plane
     display_name: "Evidence/Control-Plane Lead(근거/제어면 책임자)"
+    custom_agent_name: agent_04_evidence_control_plane
+    custom_agent_path: .codex/agents/agent_04_evidence_control_plane.toml
     remit: "Own receipts, gate coverage, artifact lineage, and index-first/receipt-first evidence discipline."
     required_for:
       - receipts
@@ -72,24 +139,32 @@ roster:
       - closeout_audit
   - id: agent_05_data_feature_contract
     display_name: "Data Integrity/Feature Contract Lead(데이터 무결성/피처 계약 책임자)"
+    custom_agent_name: agent_05_data_feature_contract
+    custom_agent_path: .codex/agents/agent_05_data_feature_contract.toml
     remit: "Own data identity, time axis, feature order, label boundary, split boundary, and leakage risks."
     required_for:
       - experiment_design
       - data_integrity
   - id: agent_06_quant_research
     display_name: "Quant Research Lead(정량 연구 책임자)"
+    custom_agent_name: agent_06_quant_research
+    custom_agent_path: .codex/agents/agent_06_quant_research.toml
     remit: "Push aggressive broad/extreme sweeps and multi-axis surface rotation without baseline claims."
     required_for:
       - experiment_design
       - experiment_execution
   - id: agent_07_model_validation_risk
     display_name: "Model Validation/Risk Lead(모델 검증/위험 책임자)"
+    custom_agent_name: agent_07_model_validation_risk
+    custom_agent_path: .codex/agents/agent_07_model_validation_risk.toml
     remit: "Own overfit, selection, calibration, risk-stop, and anti-authority-laundering checks."
     required_for:
       - model_validation
       - risk_stop
   - id: agent_08_mt5_onnx_runtime
     display_name: "MT5/ONNX Runtime Lead(MT5/ONNX 런타임 책임자)"
+    custom_agent_name: agent_08_mt5_onnx_runtime
+    custom_agent_path: .codex/agents/agent_08_mt5_onnx_runtime.toml
     remit: "Own ONNX/EA parity as preflight and MT5 probe evidence as separate runtime observation."
     required_for:
       - runtime_backtest

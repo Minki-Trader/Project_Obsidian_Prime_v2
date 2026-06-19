@@ -1,4 +1,4 @@
-Bounded evidence를 먼저 확인한 뒤, 마감 제안에 대한 외부 2차 의견을 정리하겠습니다.
+﻿Bounded evidence를 먼저 확인한 뒤, 마감 제안에 대한 외부 2차 의견을 정리하겠습니다.
 ## Grok External Review — Frontier04 Stage Closeout
 
 **Review size:** medium review (제한 스냅샷 + 집중 질문)  

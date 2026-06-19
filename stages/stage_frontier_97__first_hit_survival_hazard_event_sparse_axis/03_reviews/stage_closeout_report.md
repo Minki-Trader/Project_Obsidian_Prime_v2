@@ -1,4 +1,4 @@
-# F97C Repair/Rotation Decision(수리/회전 결정)
+﻿# F97C Repair/Rotation Decision(수리/회전 결정)
 
 ## Conclusion(결론)
 

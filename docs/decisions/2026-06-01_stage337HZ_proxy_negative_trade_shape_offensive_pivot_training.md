@@ -1,4 +1,4 @@
-﻿﻿# Decision: Stage 337HZ Candidate Training
+﻿# Decision: Stage 337HZ Candidate Training
 
 - date: `2026-06-01`
 - run_id: `run337HZ_train_proxy_negative_trade_shape_offensive_pivot_candidates_without_db_v1`

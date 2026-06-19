@@ -1,4 +1,4 @@
-## Grok Review — F77G Post-Repair Gap Analysis
+﻿## Grok Review — F77G Post-Repair Gap Analysis
 
 **Advice classification(조언 분류):** `accepted_with_conditions` (조건부 수용)
 

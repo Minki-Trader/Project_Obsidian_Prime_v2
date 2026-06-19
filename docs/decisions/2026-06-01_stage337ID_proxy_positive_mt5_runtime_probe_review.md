@@ -1,4 +1,4 @@
-﻿﻿# Decision: Stage 337ID Runtime Review
+﻿# Decision: Stage 337ID Runtime Review
 
 - date: `2026-06-01`
 - run_id: `run337ID_review_proxy_positive_offensive_pivot_mt5_runtime_probe_or_repair_without_db_v1`

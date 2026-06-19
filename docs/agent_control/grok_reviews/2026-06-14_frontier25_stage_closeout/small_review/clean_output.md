@@ -1,4 +1,4 @@
-Frontier25 마감 검토 요청이므로 Grok 협업 규칙과 단계 근거를 먼저 확인한 뒤, 제한된 근거만으로 5개 검토 질문에 답하겠습니다.
+﻿Frontier25 마감 검토 요청이므로 Grok 협업 규칙과 단계 근거를 먼저 확인한 뒤, 제한된 근거만으로 5개 검토 질문에 답하겠습니다.
 # Frontier25 Closeout Review — External Second Opinion(전선25 마감 검토 — 외부 2차 의견)
 
 **Review size(검토 크기):** medium review(중간 검토) — bounded snapshot(제한 스냅샷) + closeout verdict(마감 판정)

@@ -1,4 +1,4 @@
-﻿﻿# Stage230 Selection Status(230단계 선택 상태)
+﻿# Stage230 Selection Status(230단계 선택 상태)
 
 - stage_status(단계 상태): `reviewed_closed_open_stage231_bounded_midpf_oos_repair_after_guard_blend_failure_candidate_not_final`
 - current_packet(현재 작업 묶음): `stage230_stage229_guard_blend_followup_review_v1`

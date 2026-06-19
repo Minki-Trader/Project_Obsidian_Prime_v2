@@ -1,4 +1,4 @@
-# Frontier41 Stage Open — Grok External Review(외부 2차 의견)
+﻿# Frontier41 Stage Open — Grok External Review(외부 2차 의견)
 
 **Role boundary(역할 경계):** This is advisory only. No operating promotion(운영 승격), runtime authority(런타임 권위), live readiness(실거래 준비), selected baseline(선택 기준선), or Goal Achieve(목표 달성).
 

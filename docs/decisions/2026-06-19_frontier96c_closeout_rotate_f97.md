@@ -1,4 +1,4 @@
-# F96C Repair/Rotation Decision(수리/회전 결정)
+﻿# F96C Repair/Rotation Decision(수리/회전 결정)
 
 ## Conclusion(결론)
 

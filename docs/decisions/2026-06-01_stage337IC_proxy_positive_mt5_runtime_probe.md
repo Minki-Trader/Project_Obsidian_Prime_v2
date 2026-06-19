@@ -1,4 +1,4 @@
-﻿﻿# Decision: Stage 337IC MT5 Runtime Probe Attempt
+﻿# Decision: Stage 337IC MT5 Runtime Probe Attempt
 
 - date: `2026-06-01`
 - run_id: `run337IC_execute_proxy_positive_offensive_pivot_mt5_runtime_probe_without_db_v1`

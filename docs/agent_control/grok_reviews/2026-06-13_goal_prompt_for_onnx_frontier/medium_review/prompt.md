@@ -1,4 +1,4 @@
-# Grok review request(그록 검토 요청): intuitive goal prompt(직관적 목표 프롬프트) for ONNX frontier(ONNX 프론티어)
+﻿# Grok review request(그록 검토 요청): intuitive goal prompt(직관적 목표 프롬프트) for ONNX frontier(ONNX 프론티어)
 
 You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Codex(Codex, 코덱스) owns final direction(최종 방향), local verification(로컬 검증), and claim boundary(주장 경계).
 

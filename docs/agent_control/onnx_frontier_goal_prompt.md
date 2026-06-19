@@ -1,64 +1,54 @@
-﻿# ONNX Frontier Goal Prompt(ONNX ?꾨줎?곗뼱 紐⑺몴 ?꾨＼?꾪듃)
+﻿# ONNX Frontier Goal Prompt(ONNX 전선 목표 프롬프트)
 
-紐⑺몴??US100 M5?먯꽌 吏꾩쭨 姨뚮뒗 ONNX(?⑥뿊?? ?섎굹瑜?留뚮뱶??寃껋씠??
+목표는 US100 M5에서 진짜 강한 ONNX(온엑스)를 하나 만드는 것이다.
 
-?꾩꽦 湲곗?? ??媛吏??
+완성 기준은 세 가지다.
 
-- ??5~10??嫄곕옒
-- PF(`profit factor`, ?섏씡 ?⑺꽣) 2~3諛?- ?대뼡 援ш컙???뺣??댁꽌 遊먮룄 DD(`drawdown`, ?먯떎?? 10% 誘몃쭔
-- 留ㅻ걚?쎄쾶 ?곗긽?ν븯??balance/equity curve(?붽퀬/?먯궛 怨≪꽑)
+- 하루 5~10회 거래
+- PF(`profit factor`, 수익 팩터) 2~3배, 어떤 구간을 봐도 DD(`drawdown`, 손실폭) 10% 미만
+- 매끄럽게 상승하는 balance/equity curve(잔고/자산 곡선)
 
-????媛吏??final completion review(理쒖쥌 ?꾩꽦 寃???먯꽌留?hard gate(媛뺤젣 寃뚯씠???? ?먯깋 珥덈컲?먮뒗 ?꾨낫媛 紐⑺몴???쇰쭏??媛源뚯썙吏?붿?留?蹂몃떎.
+이 세 가지는 final completion review(최종 완성 검토)의 hard gate(강한 게이트)다. 탐색 초기에 보이는 후보는 목표와 얼마나 가까워지는지만 본다.
 
-## Operating Loop(?댁쁺 猷⑦봽)
+## Operating Loop(운영 루프)
 
-?섎굹??frontier stage(?꾨줎?곗뼱 ?④퀎)???섎굹??hypothesis lifecycle(媛???앸챸二쇨린)??
+하나의 frontier stage(전선 단계)는 하나의 hypothesis lifecycle(가설 생명주기)다.
 
-`媛??-> proxy(?꾨줉?? -> WFO/stress/runtime validation(WFO/?ㅽ듃?덉뒪/?고???寃利? -> repair(?섎━) -> closeout(留덇컧)`
+`hypothesis(가설) -> proxy(프록시) -> WFO/stress/runtime validation(WFO/스트레스/런타임 검증) -> repair(수리) -> closeout(마감)`
 
-??媛?ㅼ씠 ?ロ엳湲??꾧퉴吏 Codex(肄붾뜳?????ㅽ뿕??硫덉텛吏 ?딅뒗?? ?ロ옄 ?뚮뒗 completion(?꾩꽦), preserved clue(蹂댁〈 ?⑥꽌), negative memory(遺??湲곗뼲), invalid setup(臾댄슚 ?ㅼ젙), ?먮뒗 blocked retry condition(李⑤떒 ?ъ떆??議곌굔) 以??섎굹濡??뺤쭅?섍쾶 ?ル뒗??
+가설이 닫힐 때까지 Codex(코덱스)는 실험을 멈추지 않는다. 결론은 completion(완성), preserved clue(보존 단서), negative memory(부정 기억), invalid setup(무효 설정), blocked retry condition(차단 재시도 조건) 중 하나로 정직하게 닫는다.
 
-?ㅼ쓬 frontier stage(?꾨줎?곗뼱 ?④퀎)????媛?ㅻ줈 ?쒖옉?쒕떎.
+다음 frontier stage(전선 단계)는 같은 가설을 물려받지 않는다.
 
-## Archive Rule(蹂닿???洹쒖튃)
+## Archive Rule(보관 규칙)
 
-Stage12~364??reference only(李몄“ ?꾩슜)??
+Stage12~364는 reference only(참조 전용)다.
 
-`reference, not inheritance(李몄“?댁? ?곸냽 ?꾨떂)`
+`reference, not inheritance(참조이지 상속 아님)`
 
-winner(?뱀옄), baseline(湲곗???, promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮???媛?몄삤吏 ?딅뒗??
+winner(승자), baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비)는 가져오지 않는다.
 
-## Grok Collaboration(洹몃줉 ?묒뾽)
+## Grok Collaboration(Grok 협업)
 
-Codex(肄붾뜳??媛 ?ㅽ뻾?쒕떎. Grok(洹몃줉)??second opinion(2李??섍껄)?대떎.
+Codex(코덱스)가 실행한다. Grok(Grok)은 second opinion(2차 의견)이다.
 
-Grok review(洹몃줉 寃?? ?쒖젏? stage open(?④퀎 媛쒕갑), 鍮꾩떬 WFO/MT5 ?? stage closeout(?④퀎 留덇컧)?대떎.
+Grok review(Grok 검토)는 자동 실행하지 않는다. Codex(코덱스)가 local verification(로컬 검증) 뒤에만 반영한다.
 
-Grok(洹몃줉) 議곗뼵? ?먮룞 ?ㅽ뻾?섏? ?딅뒗?? Codex(肄붾뜳??媛 local verification(濡쒖뺄 寃利? ??諛섏쁺?쒕떎.
+completion(완성), baseline(기준선), promotion(승격), runtime authority(런타임 권위), live readiness(실거래 준비), Goal Achieve(목표 달성)는 full evidence stack(전체 근거 묶음), interval expansion stress(구간 확장 스트레스), MT5/parity(MT5/동등성), adversarial closeout(비판 마감)이 끝난 뒤에만 말한다.
 
-## Claim Boundary(二쇱옣 寃쎄퀎)
+모든 action(행동)의 effect(효과)는 stage result(단계 결과), evidence(근거), policy/update(정책/갱신), run artifact(실행 산출물)가 로컬 작업트리에만 남지 않고 다음 세션과 원격 저장소에서 같은 current truth(현재 진실)로 이어지게 하는 것이다.
 
-以묎컙?먮뒗 scout clue(?먯깋 ?⑥꽌), seed surface(?⑥븮 ?쒕㈃), runtime probe observation(?고????먯묠 愿李?, completion candidate(?꾩꽦 ?꾨낫)源뚯?留?留먰븳??
+Git sync(Git 동기화)는 검증을 대체하지 않는다.
 
-completion(?꾩꽦), baseline(湲곗???, promotion(?밴꺽), runtime authority(?고???沅뚯쐞), live readiness(?ㅺ굅??以鍮?, Goal Achieve(紐⑺몴 ?ъ꽦)??full evidence stack(?꾩껜 洹쇨굅 痢?, interval expansion stress(援ш컙 ?뺤옣 ?ㅽ듃?덉뒪), MT5/parity(MT5/?숇벑??, adversarial closeout(鍮꾪뙋 留덇컧)???앸궃 ?ㅼ뿉留?留먰븳??
+- stage closeout gate(단계 마감 게이트)가 pass(통과)하거나 negative/blocked closeout(부정/차단 마감)이 명확히 기록된 뒤에만 한다.
+- stage(단계)는 관련된 변경만 stage(스테이지)한다.
+- user changes(사용자 변경), unrelated dirty worktree(무관한 더러운 작업트리)는 건드리지 않는다.
+- conflict(충돌), test failure(테스트 실패), gate failure(게이트 실패), remote rejection(원격 거절)이 있으면 push(원격 반영)하지 않고 차단 사유와 next action(다음 행동)을 남긴다.
 
-## Git Closeout Rule(Git 留덇컧 洹쒖튃)
+## Keep Pushing(계속 밀기)
 
-媛?stage closeout(?④퀎 留덇컧)留덈떎 愿??蹂寃쎌쓣 commit(而ㅻ컠)?섍퀬 main branch(硫붿씤 釉뚮옖移???諛섏쁺????push(?먭꺽 諛섏쁺)源뚯? ?쒕떎.
+결과가 좋지 않아도 멈추지 않는다. 실패와 차단은 다음 후보를 더 똑똑하게 고르게 하는 근거다.
 
-???됰룞(action, ?됰룞)???④낵(effect, ?④낵)??stage result(?④퀎 寃곌낵), evidence(洹쇨굅), policy/update(?뺤콉/媛깆떊), run artifact(?ㅽ뻾 ?곗텧臾?媛 濡쒖뺄 ?묒뾽?몃━?먮쭔 ?⑥? ?딄퀬 ?ㅼ쓬 ?몄뀡怨??먭꺽 ??μ냼?먯꽌 媛숈? current truth(?꾩옱 吏꾩떎)濡??댁뼱吏寃??섎뒗 寃껋씠??
+같은 수리를 반복하면 capped repair(상한 있는 수리) 안에서 닫고, 새로움이 없으면 blocked(차단) 또는 negative memory(부정 기억)로 끝낸 뒤 다음 가설로 간다.
 
-Git sync(源??숆린?????꾨옒 寃쎄퀎瑜?吏?⑤떎.
-
-- stage closeout gate(?④퀎 留덇컧 寃뚯씠??媛 pass(?듦낵)?섍굅?? negative/blocked closeout(遺??李⑤떒 留덇컧)??紐낇솗??湲곕줉???ㅼ뿉留??쒕떎.
-- stage? 愿?⑤맂 蹂寃쎈쭔 stage(?ㅽ뀒?댁?)?쒕떎.
-- ?ъ슜??蹂寃?user changes, ?ъ슜??蹂寃??대굹 unrelated dirty worktree(臾닿????붾윭???묒뾽?몃━)??嫄대뱶由ъ? ?딅뒗??
-- conflict(異⑸룎), test failure(?뚯뒪???ㅽ뙣), gate failure(寃뚯씠???ㅽ뙣), remote rejection(?먭꺽 嫄곗젅)???덉쑝硫?push(?먭꺽 諛섏쁺)?섏? ?딄퀬 李⑤떒 ?ъ쑀? next action(?ㅼ쓬 ?됰룞)???④릿??
-
-## Keep Pushing(怨꾩냽 諛湲?
-
-??異뺣쭔 醫뗭쑝硫??앹씠 ?꾨땲?? ??異뺤쓣 ?숈떆??留욎텛???꾨낫留??욎쑝濡?蹂대궦??
-
-媛숈? ?섎━瑜?諛섎났?섎㈃ capped repair(?곹븳 ?덈뒗 ?섎━) ?덉뿉???リ퀬, ?좉퇋?깆씠 ?놁쑝硫?blocked(李⑤떒) ?먮뒗 negative memory(遺??湲곗뼲)濡??④릿 ???ㅼ쓬 媛?ㅻ줈 ?섍릿??
-
-媛吏??꾨즺 ?놁씠, 姨뚮뒗 ONNX(?⑥뿊??媛 ?섏삱 ?뚭퉴吏 怨꾩냽 誘쇰떎.
+가짜 완료 없이, 뛰어난 ONNX(온엑스)가 나올 때까지 계속 민다.

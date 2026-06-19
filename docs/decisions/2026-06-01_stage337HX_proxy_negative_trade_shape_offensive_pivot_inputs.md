@@ -1,4 +1,4 @@
-﻿﻿# Decision: Stage 337HX Offensive Pivot Inputs
+﻿# Decision: Stage 337HX Offensive Pivot Inputs
 
 - date: `2026-06-01`
 - run_id: `run337HX_materialize_proxy_negative_trade_shape_offensive_pivot_inputs_without_db_v1`

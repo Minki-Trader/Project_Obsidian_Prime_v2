@@ -1,4 +1,4 @@
-You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Project Obsidian Prime v2 Frontier05 stage closeout(전선05 단계 마감) proposal.
+﻿You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Review this bounded Project Obsidian Prime v2 Frontier05 stage closeout(전선05 단계 마감) proposal.
 
 Current truth(현재 진실):
 - Frontier05(전선05) opened as `closed-bar path precursor feature surface(확정봉 경로 선행 피처 표면)`.

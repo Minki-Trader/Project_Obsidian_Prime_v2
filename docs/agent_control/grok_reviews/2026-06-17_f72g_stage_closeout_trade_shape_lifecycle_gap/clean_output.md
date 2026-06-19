@@ -1,4 +1,4 @@
-# F72G Stage Closeout Review — Grok Second Opinion
+﻿# F72G Stage Closeout Review — Grok Second Opinion
 
 **Advice classification (조언 분류):** **accepted** — close F72 now as **preserved clue + negative memory (보존 단서 + 부정 기억)**. No mandatory pre-closeout repair is named in this snapshot.
 

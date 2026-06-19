@@ -3,6 +3,7 @@
 import argparse
 import re
 import sys
+import tomllib
 from pathlib import Path
 
 REPO_ROOT_FOR_IMPORTS = Path(__file__).resolve().parents[4]
@@ -16,8 +17,9 @@ UTF8_BOM = b"\xef\xbb\xbf"
 HANGUL_RE = re.compile(r"[\uac00-\ud7a3]")
 SUSPICIOUS_CJK_RE = re.compile(r"[\u4e00-\u9fff\uf900-\ufaff]")
 MOJIBAKE_RE = re.compile(
-    r"(?:\?ㅽ|\?묒|\?섎|\?댁|\?⑦|"
-    r"\u91ce|\u4e80|\uc3ed|\u904a|\ub179|\ubb7c|\u907a|\ub2f8|\ub2e9)"
+    r"(?:[\uf900-\ufaff]|[\u0080-\u009f]|"
+    r"\?(?:ㅽ|묒|섎|댁|⑦|꾩|먯|ㅼ|ㅺ|ㅻ|꾨|곗|뚯|몃|쒖|좏|섏|뺤|대|고|먮|붽|쇱|곹)|"
+    r"\u91ce|\u4e80|\u904a|\u907a)"
 )
 REQUIRED_PATHS = [
     "AGENTS.md",
@@ -37,7 +39,10 @@ REQUIRED_PATHS = [
     "docs/templates/result_summary_template.md",
     "docs/policies/agent_trigger_policy.md",
     "docs/policies/reentry_order.md",
+    "docs/agent_control/codex_task_force_registry.yaml",
     ".agents/skills",
+    ".codex/config.toml",
+    ".codex/agents",
 ]
 REQUIRED_AGENT_INTERFACE_KEYS = ("display_name", "short_description", "default_prompt")
 OPENAI_YAML_TOP_LEVEL_SECTIONS = {"interface", "policy"}
@@ -54,6 +59,18 @@ def leading_utf8_bom_count(data: bytes) -> int:
         count += 1
         offset += len(UTF8_BOM)
     return count
+
+
+def has_mixed_line_endings(data: bytes) -> bool:
+    crlf_count = data.count(b"\r\n")
+    without_crlf = data.replace(b"\r\n", b"")
+    lf_count = without_crlf.count(b"\n")
+    cr_count = without_crlf.count(b"\r")
+    return sum(1 for count in (crlf_count, lf_count, cr_count) if count) > 1
+
+
+def safe_read_text(path: Path, encoding: str) -> str:
+    return io_path(path).read_text(encoding=encoding)
 
 
 def iter_text_docs(repo_root: Path) -> list[Path]:
@@ -76,7 +93,7 @@ def iter_text_docs(repo_root: Path) -> list[Path]:
 def check_required_paths(repo_root: Path) -> list[str]:
     errors: list[str] = []
     for rel in REQUIRED_PATHS:
-        if not (repo_root / rel).exists():
+        if not path_exists(repo_root / rel):
             errors.append(f"missing required path: {rel}")
     return errors
 
@@ -105,6 +122,8 @@ def check_doc_file(repo_root: Path, path: Path) -> tuple[list[str], list[str]]:
     bom_count = leading_utf8_bom_count(data)
     if bom_count > 1:
         errors.append(f"{rel}: contains repeated UTF-8 BOM markers")
+    if has_mixed_line_endings(data):
+        warnings.append(f"{rel}: contains mixed line endings")
     has_hangul = bool(HANGUL_RE.search(text))
     if has_hangul and not has_utf8_bom(data):
         errors.append(f"{rel}: Korean text requires UTF-8 with BOM")
@@ -146,15 +165,15 @@ def check_encoding_scope(repo_root: Path, scope_paths: list[str]) -> tuple[list[
 
 def check_policy_links(repo_root: Path) -> list[str]:
     errors: list[str] = []
-    trigger_policy = (repo_root / "docs/policies/agent_trigger_policy.md").read_text(encoding="utf-8-sig")
-    reentry = (repo_root / "docs/policies/reentry_order.md").read_text(encoding="utf-8-sig")
-    agents = (repo_root / "AGENTS.md").read_text(encoding="utf-8-sig")
-    debt = (repo_root / "docs/registers/architecture_debt_register.md").read_text(encoding="utf-8-sig")
-    exploration = (repo_root / "docs/policies/exploration_mandate.md").read_text(encoding="utf-8-sig")
-    kpi = (repo_root / "docs/policies/kpi_measurement_standard.md").read_text(encoding="utf-8-sig")
-    run_management = (repo_root / "docs/policies/run_result_management.md").read_text(encoding="utf-8-sig")
-    judgment = (repo_root / "docs/policies/result_judgment_policy.md").read_text(encoding="utf-8-sig")
-    promotion = (repo_root / "docs/policies/promotion_policy.md").read_text(encoding="utf-8-sig")
+    trigger_policy = safe_read_text(repo_root / "docs/policies/agent_trigger_policy.md", encoding="utf-8-sig")
+    reentry = safe_read_text(repo_root / "docs/policies/reentry_order.md", encoding="utf-8-sig")
+    agents = safe_read_text(repo_root / "AGENTS.md", encoding="utf-8-sig")
+    debt = safe_read_text(repo_root / "docs/registers/architecture_debt_register.md", encoding="utf-8-sig")
+    exploration = safe_read_text(repo_root / "docs/policies/exploration_mandate.md", encoding="utf-8-sig")
+    kpi = safe_read_text(repo_root / "docs/policies/kpi_measurement_standard.md", encoding="utf-8-sig")
+    run_management = safe_read_text(repo_root / "docs/policies/run_result_management.md", encoding="utf-8-sig")
+    judgment = safe_read_text(repo_root / "docs/policies/result_judgment_policy.md", encoding="utf-8-sig")
+    promotion = safe_read_text(repo_root / "docs/policies/promotion_policy.md", encoding="utf-8-sig")
 
     required_pairs = [
         ("agent_trigger_policy.md", trigger_policy, "architecture_invariants.md"),
@@ -214,7 +233,7 @@ def check_progressive_hardening_warnings(repo_root: Path) -> list[str]:
     ]
     required_terms = ("promotion_candidate", "operating_promotion", "runtime_probe", "runtime_authority")
     for label, path in checks:
-        text = path.read_text(encoding="utf-8-sig")
+        text = safe_read_text(path, encoding="utf-8-sig")
         for term in required_terms:
             if term not in text:
                 warnings.append(f"{label}: progressive hardening warning: missing `{term}`")
@@ -240,7 +259,7 @@ def parse_simple_openai_yaml(path: Path) -> tuple[dict[str, dict[str, str]], lis
     current_section: str | None = None
     rel = path.as_posix()
 
-    for line_number, raw_line in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+    for line_number, raw_line in enumerate(safe_read_text(path, encoding="utf-8").splitlines(), start=1):
         if not raw_line.strip() or raw_line.lstrip().startswith("#"):
             continue
         if raw_line.startswith("\t"):
@@ -306,6 +325,134 @@ def check_agent_settings(repo_root: Path) -> list[str]:
     return errors
 
 
+def read_utf8_text_for_control_file(path: Path, rel: str, errors: list[str]) -> str | None:
+    data = io_path(path).read_bytes()
+    try:
+        text = data.decode("utf-8-sig")
+    except UnicodeDecodeError as exc:
+        errors.append(f"{rel}: not valid UTF-8: {exc}")
+        return None
+    if leading_utf8_bom_count(data) > 1:
+        errors.append(f"{rel}: contains repeated UTF-8 BOM markers")
+    if "\ufffd" in text:
+        errors.append(f"{rel}: contains Unicode replacement character")
+    if MOJIBAKE_RE.search(text):
+        errors.append(f"{rel}: contains likely mojibake")
+    return text
+
+
+def parse_toml_control_file(path: Path, rel: str, errors: list[str]) -> dict[str, object]:
+    if not path_exists(path):
+        errors.append(f"{rel}: file does not exist")
+        return {}
+    text = read_utf8_text_for_control_file(path, rel, errors)
+    if text is None:
+        return {}
+    try:
+        return tomllib.loads(text)
+    except tomllib.TOMLDecodeError as exc:
+        errors.append(f"{rel}: TOML parse failed: {exc}")
+        return {}
+
+
+def extract_task_force_roster_ids(registry_text: str) -> list[str]:
+    return re.findall(r"(?m)^  - id:\s*(agent_\d{2}_[A-Za-z0-9_]+)\s*$", registry_text)
+
+
+def check_codex_task_force_custom_agents(repo_root: Path) -> list[str]:
+    errors: list[str] = []
+    registry_path = repo_root / "docs/agent_control/codex_task_force_registry.yaml"
+    registry_text = read_utf8_text_for_control_file(
+        registry_path,
+        "docs/agent_control/codex_task_force_registry.yaml",
+        errors,
+    )
+    if registry_text is None:
+        return errors
+
+    roster_ids = extract_task_force_roster_ids(registry_text)
+    if len(roster_ids) != 8:
+        errors.append(
+            "docs/agent_control/codex_task_force_registry.yaml: expected exactly 8 Task Force roster agents"
+        )
+    if len(set(roster_ids)) != len(roster_ids):
+        errors.append("docs/agent_control/codex_task_force_registry.yaml: duplicate Task Force roster ids")
+
+    required_registry_terms = (
+        ".codex/agents",
+        "micro_consult",
+        "escalation_reason",
+        "why_not_smaller",
+        "advisory_only_no_reviewed_pass",
+        "formal_review_only_for",
+    )
+    for term in required_registry_terms:
+        if term not in registry_text:
+            errors.append(f"docs/agent_control/codex_task_force_registry.yaml: missing `{term}`")
+
+    config_path = repo_root / ".codex/config.toml"
+    config = parse_toml_control_file(config_path, ".codex/config.toml", errors)
+    agents_config = config.get("agents", {}) if isinstance(config.get("agents", {}), dict) else {}
+    if config.get("service_tier") != "priority":
+        errors.append(".codex/config.toml: service_tier must be priority for Task Force policy")
+    if agents_config.get("max_depth") != 1:
+        errors.append(".codex/config.toml: agents.max_depth must be 1")
+    max_threads = agents_config.get("max_threads")
+    if not isinstance(max_threads, int) or max_threads < max(8, len(roster_ids)):
+        errors.append(".codex/config.toml: agents.max_threads must cover the 8-agent roster")
+
+    agents_dir = repo_root / ".codex" / "agents"
+    if not path_exists(agents_dir):
+        errors.append("missing Codex custom agents dir: .codex/agents")
+        return errors
+
+    for agent_id in roster_ids:
+        rel = f".codex/agents/{agent_id}.toml"
+        agent_path = agents_dir / f"{agent_id}.toml"
+        if not path_exists(agent_path):
+            errors.append(f"missing Codex custom agent file: {rel}")
+            continue
+        agent = parse_toml_control_file(agent_path, rel, errors)
+        if agent.get("name") != agent_id:
+            errors.append(f"{rel}: name must match roster id `{agent_id}`")
+        if not isinstance(agent.get("description"), str) or not agent.get("description", "").strip():
+            errors.append(f"{rel}: missing or empty description")
+        developer_instructions = agent.get("developer_instructions")
+        if not isinstance(developer_instructions, str) or not developer_instructions.strip():
+            errors.append(f"{rel}: missing or empty developer_instructions")
+        elif agent_id not in developer_instructions:
+            errors.append(f"{rel}: developer_instructions must mention `{agent_id}`")
+        if agent.get("sandbox_mode") != "read-only":
+            errors.append(f"{rel}: sandbox_mode must be read-only")
+        if rel not in registry_text:
+            errors.append(f"docs/agent_control/codex_task_force_registry.yaml: missing custom_agent_path `{rel}`")
+
+    expected_files = {f"{agent_id}.toml" for agent_id in roster_ids}
+    for agent_file in sorted(io_path(agents_dir).glob("*.toml")):
+        durable_agent_file = Path(str(agent_file).removeprefix("\\\\?\\"))
+        if durable_agent_file.name not in expected_files:
+            errors.append(f"{durable_agent_file.relative_to(repo_root).as_posix()}: custom agent is not listed in registry")
+
+    policy_targets = [
+        ("AGENTS.md", repo_root / "AGENTS.md"),
+        ("docs/policies/agent_trigger_policy.md", repo_root / "docs/policies/agent_trigger_policy.md"),
+        ("docs/agent_control/work_family_registry.yaml", repo_root / "docs/agent_control/work_family_registry.yaml"),
+        (
+            ".agents/skills/obsidian-task-force-review/SKILL.md",
+            repo_root / ".agents/skills/obsidian-task-force-review/SKILL.md",
+        ),
+    ]
+    required_policy_terms = ("micro_consult", "escalation_reason", "why_not_smaller", "advisory_only_no_reviewed_pass")
+    for label, path in policy_targets:
+        text = read_utf8_text_for_control_file(path, label, errors)
+        if text is None:
+            continue
+        for term in required_policy_terms:
+            if term not in text:
+                errors.append(f"{label}: missing Task Force policy term `{term}`")
+    return errors
+
+
 def check_skill_frontmatter(repo_root: Path) -> list[str]:
     errors: list[str] = []
     skills_root = repo_root / ".agents" / "skills"
@@ -315,7 +462,7 @@ def check_skill_frontmatter(repo_root: Path) -> list[str]:
 
     for skill_file in iter_skill_files(repo_root):
         rel = skill_file.relative_to(repo_root).as_posix()
-        text = skill_file.read_text(encoding="utf-8-sig")
+        text = safe_read_text(skill_file, encoding="utf-8-sig")
         lines = text.splitlines()
         if not lines or lines[0].strip().lstrip("\ufeff") != "---":
             errors.append(f"{rel}: missing YAML frontmatter opener")
@@ -336,7 +483,7 @@ def check_skill_frontmatter(repo_root: Path) -> list[str]:
 
 
 def frontmatter_name(skill_file: Path) -> str | None:
-    text = skill_file.read_text(encoding="utf-8-sig")
+    text = safe_read_text(skill_file, encoding="utf-8-sig")
     lines = text.splitlines()
     if not lines or lines[0].strip().lstrip("\ufeff") != "---":
         return None
@@ -373,7 +520,7 @@ def check_skill_routing_completeness(repo_root: Path) -> list[str]:
     if not skills_root.exists() or not trigger_policy_path.exists():
         return errors
 
-    trigger_policy = trigger_policy_path.read_text(encoding="utf-8-sig")
+    trigger_policy = safe_read_text(trigger_policy_path, encoding="utf-8-sig")
     routed_skills = extract_skill_routes(trigger_policy)
     if not routed_skills:
         errors.append("agent_trigger_policy.md: missing structured `## 스킬` routing list")
@@ -432,6 +579,7 @@ def main() -> int:
         errors.extend(check_policy_links(repo_root))
         warnings.extend(check_progressive_hardening_warnings(repo_root))
     errors.extend(check_agent_settings(repo_root))
+    errors.extend(check_codex_task_force_custom_agents(repo_root))
     errors.extend(check_skill_frontmatter(repo_root))
     errors.extend(check_skill_routing_completeness(repo_root))
 

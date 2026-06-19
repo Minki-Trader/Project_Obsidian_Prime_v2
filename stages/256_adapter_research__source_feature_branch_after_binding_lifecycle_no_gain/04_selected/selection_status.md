@@ -1,4 +1,4 @@
-# Stage256 Selection Status(256단계 선택 상태)
+﻿# Stage256 Selection Status(256단계 선택 상태)
 
 - stage_status(단계 상태): `closed_open_stage257_followup_candidate_not_final`
 - current_packet(현재 작업 묶음): `stage256_source_feature_branch_after_binding_lifecycle_no_gain_v1`

@@ -1,4 +1,4 @@
-# Stage256 Decision(256단계 판정)
+﻿# Stage256 Decision(256단계 판정)
 
 - stage(단계): `256_adapter_research__source_feature_branch_after_binding_lifecycle_no_gain`
 - run(실행): `run256A_stage256_source_feature_branch_after_binding_lifecycle_no_gain_v1`

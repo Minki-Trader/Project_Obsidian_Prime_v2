@@ -1,4 +1,4 @@
-# Encoding Guard Update Review(인코딩 방지 규칙 업데이트 검토)
+﻿# Encoding Guard Update Review(인코딩 방지 규칙 업데이트 검토)
 
 Role(역할): external second opinion(외부 2차 의견) only.
 

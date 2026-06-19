@@ -1,4 +1,4 @@
-# Grok Closeout Classification(그록 마감 분류)
+﻿# Grok Closeout Classification(그록 마감 분류)
 
 Updated(갱신): 2026-06-15T14:39:00Z
 

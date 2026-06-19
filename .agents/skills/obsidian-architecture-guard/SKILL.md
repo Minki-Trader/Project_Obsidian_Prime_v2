@@ -41,6 +41,7 @@ Every architecture-sensitive packet or summary must include:
 - `debt_interaction`: whether it touches registered architecture debt
 - `allowed_debt_change`: `reduce`, `leave_unchanged`, or `blocked_without_decision`
 - `encoding_check`: whether Korean docs or repo-scoped skills need UTF-8 with BOM validation
+- `line_ending_check`: whether touched text files preserve a stable LF/CRLF line-ending surface and avoid mixed line endings
 - `path_safety_check`: whether repo-relative paths are used for durable identity, whether absolute paths are local-only, and whether Windows long path risk is controlled
 - `code_surface_check`: whether owner module, caller, input/output, and artifact/report effect must be named
 - `skill_routing_check`: whether `obsidian-work-packet-router` considered the full skill inventory and attached answer clarity plus claim discipline for the final user-facing report
@@ -54,9 +55,12 @@ Every architecture-sensitive packet or summary must include:
 - Do not leave repo-scoped skills present but unrouted; every skill needs routing policy and agent metadata unless a durable exception explains why.
 - Do not let alpha search become source cleanup only unless a durable decision says so.
 - Do not store absolute terminal install paths as artifact identity; use repo-relative paths plus hash, run id, bundle id, or registry fields.
+- For deep stage, MT5, or packet artifact trees, make the first discovery command repo-relative `rg --files`/`rg`; do not start with broad recursive PowerShell, `Test-Path`, `Resolve-Path`, `Import-Csv`, or `Measure-Object`. Effect(효과): long-path safety(긴 경로 안전성)가 final judgment(최종 판정)이 아니라 first tool choice(첫 도구 선택)에 걸린다.
 - Do not call(판정) a file missing(누락) when one tool(도구)이 enumerates it(나열) but another path API(경로 API)가 fails(실패)한다; rule out Windows long-path handling(윈도우 긴 경로 처리)을 먼저 확인한다.
 - Prefer(선호) ZIP plus manifest(ZIP+목록) for deep archive snapshots(깊은 보관 스냅샷), and keep `\\?\` long-path prefixes(긴 경로 접두사)는 local tooling(로컬 도구)에만 두고 committed docs(커밋 문서)에는 남기지 않는다. For stage/MT5 artifact reads(단계/MT5 산출물 읽기), use repo-relative `rg --files`/`rg` and `foundation.control_plane.ledger.io_path` before changing durable path identity(지속 경로 정체성).
-- Do not edit Korean `.md` or `.txt` docs without preserving UTF-8 with BOM.
+- Before creating or editing Korean `.md/.txt`, repo-scoped skills, or policy/control-plane markdown, classify the encoding surface and run scoped encoding validation or an equivalent byte-level BOM/UTF-8/mojibake check for existing targets. New Korean docs must be created as UTF-8 with BOM from the first write. Effect(효과): encoding safety(인코딩 안전성)가 final validation(최종 검증)이 아니라 first write choice(첫 쓰기 선택)에 걸린다.
+- Do not treat Git LF/CRLF warnings as encoding failure. Before broad mechanical rewrites, classify the line-ending surface and preserve the existing convention unless the packet explicitly repairs it. Mixed line endings should be surfaced as a warning or scoped repair target. Effect(효과): line-ending churn(줄 끝 변동)이 encoding repair(인코딩 수리)나 evidence diff(근거 차이)를 숨기지 못하게 한다.
+- Do not edit Korean `.md` or `.txt` docs without preserving UTF-8 with BOM. If a touched file already has encoding debt(인코딩 부채), explicitly repair that touched surface or lower the claim to blocked/plan-only(차단/계획 전용); do not silently add new content on top of mojibake(문자 깨짐), repeated BOM(반복 BOM), or invalid UTF-8(유효하지 않은 UTF-8).
 
 ## Validator
 
@@ -67,3 +71,5 @@ The validator intentionally treats `agents/openai.yaml` as a small repo-local fo
 If the full validator fails because of already recorded historical encoding debt(기록된 과거 인코딩 부채), also run `scripts/validate_agent_settings.py --repo-root . --encoding-scope <repo-relative-path>` for each changed Korean `.md` or `.txt` surface and record both results. Effect(효과): the full backlog(전체 백로그)은 숨기지 않으면서 the current patch(현재 패치)가 new mojibake/BOM debt(새 문자 깨짐/BOM 부채)를 만들었는지 분리한다.
 
 For deep stage paths(깊은 단계 경로), scoped encoding validation(범위 인코딩 검증)은 repo-relative path(저장소 상대 경로)를 받되, internally(내부적으로) `foundation.control_plane.ledger.io_path(입출력 경로 보조)`로 existence/read(존재/읽기)를 확인해야 한다. Effect(효과): Windows MAX_PATH(윈도우 경로 길이 한계) 때문에 존재하는 Korean report(한국어 보고서)를 missing(누락)으로 오판하지 않는다.
+
+The validator reports mixed line endings as warnings, not encoding errors. Effect(효과): LF/CRLF(줄 끝 형식) noise(소음)는 실패로 과장하지 않고, real mixed-line files(실제 혼합 줄 끝 파일)만 후속 수리 대상으로 보이게 한다.

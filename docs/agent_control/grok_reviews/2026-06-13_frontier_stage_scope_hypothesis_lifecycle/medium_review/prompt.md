@@ -1,4 +1,4 @@
-# Grok medium review request(중간 검토 요청): frontier stage scope(프론티어 단계 범위) as one hypothesis lifecycle(하나의 가설 생명주기)
+﻿# Grok medium review request(중간 검토 요청): frontier stage scope(프론티어 단계 범위) as one hypothesis lifecycle(하나의 가설 생명주기)
 
 You are Grok(Grok, 그록), external second opinion(외부 2차 의견) only. Codex(Codex, 코덱스) owns final direction(최종 방향), local verification(로컬 검증), and claim boundary(주장 경계).
 

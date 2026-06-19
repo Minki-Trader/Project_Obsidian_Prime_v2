@@ -1,4 +1,4 @@
-﻿﻿# Decision: Stage 337IA Training Review
+﻿# Decision: Stage 337IA Training Review
 
 - date: `2026-06-01`
 - run_id: `run337IA_review_proxy_negative_trade_shape_offensive_pivot_training_without_db_v1`
