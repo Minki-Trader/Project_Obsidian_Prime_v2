@@ -100,6 +100,7 @@ VERIFICATION_PROFILE_IDS = frozenset(
         "targeted_local_execution",
         "proxy_scout",
         "experiment_run",
+        "runtime_learning_probe",
         "runtime_probe",
         "stage_closeout",
         "authority_candidate",
@@ -111,7 +112,16 @@ PROFILE_EXTRA_REQUIRED_GATES = {
     "targeted_local_execution": frozenset({"test_gate"}),
     "proxy_scout": frozenset({"kpi_contract_audit"}),
     "experiment_run": frozenset({"kpi_contract_audit", "required_gate_coverage_audit"}),
-    "runtime_probe": frozenset({"runtime_evidence_gate", "kpi_contract_audit", "required_gate_coverage_audit", "final_claim_guard"}),
+    "runtime_learning_probe": frozenset({"runtime_learning_probe_decision_gate", "required_gate_coverage_audit", "final_claim_guard"}),
+    "runtime_probe": frozenset(
+        {
+            "runtime_evidence_gate",
+            "mt5_runtime_probe_contract_audit",
+            "kpi_contract_audit",
+            "required_gate_coverage_audit",
+            "final_claim_guard",
+        }
+    ),
     "stage_closeout": frozenset({"required_gate_coverage_audit", "final_claim_guard"}),
     "authority_candidate": frozenset({"runtime_evidence_gate", "kpi_contract_audit", "required_gate_coverage_audit", "final_claim_guard"}),
 }
@@ -120,6 +130,15 @@ RUN_ONLY_FIELDS = ("variants_requested", "verification_layers", "mt5_required", 
 RUN_FAMILIES = ("experiment_execution", "runtime_backtest")
 AUTHORITY_CLAIMS = frozenset({"runtime_authority", "operating_promotion", "live_readiness", "goal_achieve"})
 RUNTIME_CLAIMS = frozenset({"runtime_probe", "runtime_probe_completed", "mt5_verification_complete", "runtime_verified"})
+RUNTIME_LEARNING_PROBE_CLAIMS = frozenset(
+    {
+        "runtime_learning_probe",
+        "runtime_learning_probe_candidate",
+        "runtime_learning_probe_decision",
+        "runtime_learning_probe_decision_recorded",
+        "runtime_learning_probe_guard",
+    }
+)
 RUNTIME_ADJACENT_CLAIMS = frozenset(
     {
         "runtime_economics",
@@ -187,6 +206,20 @@ DISALLOWED_RUNTIME_DEFERRAL_REASON_CODES = frozenset(
         "next_work",
         "later",
         "budget_only",
+        "agent_recommended_skip",
+        "candidate_0",
+        "candidate_gate_0",
+        "candidate_gate_failed",
+        "candidate_gate_zero",
+        "cost_expensive",
+        "long_short_imbalanced",
+        "low_pf_dd",
+        "low_trade_count_expected",
+        "not_promotion_candidate",
+        "not_strong_candidate",
+        "pf_dd_poor",
+        "proxy_bad",
+        "proxy_result_bad",
     }
 )
 STRONG_REVIEW_CLAIMS = frozenset({"completed", "reviewed", "verified", "verification_complete", "full_verification_complete"})
@@ -438,6 +471,14 @@ def _check_profile_claim_compatibility(packet: Mapping[str, Any], profile: Mappi
                 details={"profile_id": profile_id, "claims": sorted(RUNTIME_CLAIMS.intersection(claims))},
             )
         )
+    if RUNTIME_LEARNING_PROBE_CLAIMS.intersection(claims) and profile_id not in {"runtime_learning_probe", "runtime_probe", "authority_candidate"}:
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::runtime_learning_claim_requires_learning_profile",
+                message="Runtime learning probe claims require a runtime_learning_probe, runtime_probe, or authority_candidate profile.",
+                details={"profile_id": profile_id, "claims": sorted(RUNTIME_LEARNING_PROBE_CLAIMS.intersection(claims))},
+            )
+        )
     if RUNTIME_ADJACENT_CLAIMS.intersection(claims) and profile_id not in RUNTIME_PROBE_PROFILES:
         findings.append(
             AuditFinding(
@@ -446,14 +487,16 @@ def _check_profile_claim_compatibility(packet: Mapping[str, Any], profile: Mappi
                 details={"profile_id": profile_id, "claims": sorted(RUNTIME_ADJACENT_CLAIMS.intersection(claims))},
             )
         )
-    if "mt5_execution" in execution_layers and profile_id not in {"runtime_probe", "authority_candidate"}:
+    if "mt5_execution" in execution_layers and profile_id not in {"runtime_learning_probe", "runtime_probe", "authority_candidate"}:
         findings.append(
             AuditFinding(
                 check_id="work_packet_schema::verification_profile::mt5_execution_requires_runtime_profile",
-                message="MT5 execution requires a runtime_probe or authority_candidate verification profile.",
+                message="MT5 execution requires a runtime_learning_probe, runtime_probe, or authority_candidate verification profile.",
                 details={"profile_id": profile_id, "execution_layers": sorted(execution_layers)},
             )
         )
+    if profile_id == "runtime_learning_probe":
+        _check_runtime_learning_probe_profile(profile=profile, required_gates=required_gates, findings=findings)
     if (runtime_claims or "mt5_execution" in execution_layers) and profile_id in RUNTIME_PROBE_PROFILES:
         _check_runtime_probe_evidence(
             profile=profile,
@@ -480,6 +523,27 @@ def _check_profile_claim_compatibility(packet: Mapping[str, Any], profile: Mappi
                 details={"profile_id": profile_id, "claims": sorted(claims), "required_gates": sorted(required_gates)},
             )
         )
+
+
+def _check_runtime_learning_probe_profile(*, profile: Mapping[str, Any], required_gates: set[str], findings: list[AuditFinding]) -> None:
+    required_evidence = _string_list(profile.get("required_evidence"))
+    if "runtime_learning_probe_decision_gate" not in required_gates:
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::runtime_learning_missing_decision_gate",
+                message="runtime_learning_probe profile requires runtime_learning_probe_decision_gate.",
+                details={"required_gates": sorted(required_gates)},
+            )
+        )
+    if not _strings_contain_any(required_evidence, ("runtime_learning_probe_decision", "mt5_action", "repair_attempts")):
+        findings.append(
+            AuditFinding(
+                check_id="work_packet_schema::verification_profile::runtime_learning_missing_decision_evidence",
+                message="runtime_learning_probe profile must require runtime_learning_probe_decision evidence.",
+                details={"required_evidence": required_evidence},
+            )
+        )
+    _check_runtime_learning_probe_deferral_reasons(profile.get("gates_not_run_with_reason"), findings)
 
 
 def _check_frontier_extra_overlay_requirements(packet: Mapping[str, Any], findings: list[AuditFinding]) -> None:
@@ -576,6 +640,26 @@ def _check_runtime_probe_deferral_reasons(value: Any, runtime_claims: set[str], 
                     check_id="work_packet_schema::verification_profile::runtime_probe_cost_deferral_forbidden",
                     message="Runtime probe evidence cannot be skipped as too expensive when runtime-related claims are protected.",
                     details={"index": index, "reason_code": reason_code, "claims": sorted(runtime_claims)},
+                )
+            )
+
+
+def _check_runtime_learning_probe_deferral_reasons(value: Any, findings: list[AuditFinding]) -> None:
+    if _is_missing(value) or not isinstance(value, Sequence) or isinstance(value, (str, bytes)):
+        return
+    for index, raw_item in enumerate(value):
+        item = _mapping(raw_item)
+        if not item:
+            continue
+        if str(item.get("gate", "")).strip() != "runtime_learning_probe_decision_gate":
+            continue
+        reason_code = str(item.get("reason_code", "")).strip().lower()
+        if reason_code in DISALLOWED_RUNTIME_DEFERRAL_REASON_CODES:
+            findings.append(
+                AuditFinding(
+                    check_id="work_packet_schema::verification_profile::runtime_learning_probe_skip_forbidden",
+                    message="runtime_learning_probe_decision_gate cannot be skipped because a proxy or candidate gate looked weak.",
+                    details={"index": index, "reason_code": reason_code},
                 )
             )
 

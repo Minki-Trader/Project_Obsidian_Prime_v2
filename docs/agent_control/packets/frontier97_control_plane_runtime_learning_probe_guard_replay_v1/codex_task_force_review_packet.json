@@ -1,0 +1,28 @@
+{
+  "audit_name": "codex_task_force_review_packet",
+  "status": "pass",
+  "findings": [],
+  "counts": {
+    "agents_used_count": 3,
+    "escalation_reason": "policy/control-plane/runtime surfaces require agent_03, agent_04, and agent_08",
+    "why_not_smaller": "2 agents would omit either policy/skill governance, evidence gate ownership, or MT5 runtime ownership",
+    "actual_subagent_calls": [
+      "019ee0f0-3973-71a0-a0ca-39a991082041",
+      "019ee0f0-5669-7172-b946-13f0472ebbe8",
+      "019ee0f0-e244-7543-82f6-5068e93e2f34"
+    ],
+    "forbidden_claim_boundary_recorded": [
+      "runtime_authority",
+      "operating_promotion",
+      "live_readiness",
+      "goal_achieve",
+      "economics_pass",
+      "materialization_ready",
+      "handoff_complete"
+    ]
+  },
+  "allowed_claims": [
+    "task_force_formal_review_recorded"
+  ],
+  "forbidden_claims": []
+}

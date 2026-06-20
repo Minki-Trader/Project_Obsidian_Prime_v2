@@ -1,0 +1,162 @@
+{
+  "allowed_claims": [
+    "runtime_learning_probe_decision_recorded",
+    "f88_repair_attempt_recorded",
+    "runtime_probe_observation",
+    "runtime_learning_record",
+    "completion_claim_guard_recorded",
+    "runtime_probe_completed"
+  ],
+  "backfill_reason": "active_goal_requires_repair_first_mt5_runtime_learning_probe_for_omitted_frontier_runtime_probes",
+  "candidate_surface_status": "learning_candidate_repaired_stage_native_validation_oos_probe",
+  "claim_boundary": "runtime_learning_probe_observation_or_runtime_probe_completed_if_completion_guard_passes_only_no_f88_success_rewrite_no_selected_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_economics_pass",
+  "created_at_utc": "2026-06-20T06:36:50Z",
+  "forbidden_claims": [
+    "goal_achieve",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "economics_pass",
+    "selected_baseline",
+    "promotion_candidate",
+    "materialization_ready",
+    "handoff_complete",
+    "mt5_verification_complete",
+    "runtime_verified"
+  ],
+  "historical_judgment": "runtime_substrate_observation_only_short_validation_probe_no_authority",
+  "historical_runtime_probe_status": "short_validation_only_no_standard_oos",
+  "judgment": "stage_native_runtime_probe_completed_no_authority_no_economics_pass",
+  "metrics": {
+    "oos": {
+      "deal_count": 1046,
+      "expectancy": -0.04,
+      "gross_loss": -2002.05,
+      "gross_profit": 1983.12,
+      "long_trade_count": 250,
+      "max_drawdown_percent": 41.32,
+      "net_profit": -18.93,
+      "profit_factor": 0.99,
+      "recovery_factor": -0.07,
+      "short_trade_count": 273,
+      "status": "completed",
+      "trade_count": 523,
+      "win_rate_percent": 49.14
+    },
+    "validation_is": {
+      "deal_count": 1376,
+      "expectancy": -0.5,
+      "gross_loss": -2914.41,
+      "gross_profit": 2567.99,
+      "long_trade_count": 327,
+      "max_drawdown_percent": 82.25,
+      "net_profit": -346.42,
+      "profit_factor": 0.88,
+      "recovery_factor": -0.7,
+      "short_trade_count": 361,
+      "status": "completed",
+      "trade_count": 688,
+      "win_rate_percent": 47.24
+    }
+  },
+  "mt5_probe": {
+    "attempts": 2,
+    "completion_guard_status": "pass",
+    "contract": "foundation/config/mt5_runtime_probe_contract.yaml",
+    "contract_status": "pass",
+    "execution_results": 2,
+    "reports": 2
+  },
+  "next_repair_option": "If a stage-native split is still incomplete, repair within the 2025.10.01..2026.04.13 OOS horizon; do not extend to 2026.06.18.",
+  "packet_id": "frontier88_runtime_learning_probe_backfill_v1",
+  "stage_id": "stage_frontier_88__runtime_substrate_first_materialization_probe",
+  "surface": {
+    "blocked_standard_splits": {},
+    "coverage_by_split": {
+      "oos": {
+        "flat_count": 4089,
+        "long_count": 1816,
+        "short_count": 1679,
+        "signal_count": 3495,
+        "source_covers_end_date": true,
+        "source_covers_start_date": true,
+        "source_max_timestamp_utc": "2026-04-13T22:00:00+00:00",
+        "source_min_timestamp_utc": "2025-10-01T16:35:00+00:00",
+        "source_rows": 7584,
+        "source_split": "oos",
+        "split": "oos",
+        "standard_from_date": "2025.10.01",
+        "standard_period_covered": true,
+        "standard_to_date": "2026.04.13"
+      },
+      "validation_is": {
+        "flat_count": 5242,
+        "long_count": 2521,
+        "short_count": 2081,
+        "signal_count": 4602,
+        "source_covers_end_date": true,
+        "source_covers_start_date": true,
+        "source_max_timestamp_utc": "2025-09-30T22:00:00+00:00",
+        "source_min_timestamp_utc": "2025-01-02T16:35:00+00:00",
+        "source_rows": 9844,
+        "source_split": "validation",
+        "split": "validation_is",
+        "standard_from_date": "2025.01.02",
+        "standard_period_covered": true,
+        "standard_to_date": "2025.10.01"
+      }
+    },
+    "flat_signal_count": 9331,
+    "long_signal_count": 4337,
+    "pre_gate_signal_count": 8097,
+    "repair": {
+      "claim_effect": "Runtime probe completion may be claimed only if both stage-native standard Strategy Tester reports complete; runtime authority and economics pass remain not claimed.",
+      "repair_action": "Materialize F04D reference ONNX with current source rows and run full-surface stage-native standard splits.",
+      "repair_id": "repair01_short_validation_probe_to_standard_contract_pair",
+      "source_problem": "F88C had a short validation-only probe 2025.01.02..2025.01.09, not the stage-native standard validation_is+oos contract.",
+      "stage_native_oos_status": "oos_horizon_ends_at_2026_04_13_and_must_not_be_extended_to_2026_06_18"
+    },
+    "runtime_surface_contract": {
+      "blocked_standard_splits": {},
+      "by_split": {
+        "oos": {
+          "claim_effect": "This split can support the surface side of runtime_probe_completed.",
+          "completion_claim_allowed": true,
+          "reason_code": "standard_period_surface_available",
+          "source_artifact_path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88_runtime_learning_probe_backfill_v1/mt5/f88_runtime_learning_oos_feature_matrix.csv",
+          "source_artifact_role": "full_period_model_decision_surface",
+          "source_max_timestamp_utc": "2026-04-13T22:00:00+00:00",
+          "source_min_timestamp_utc": "2025-10-01T16:35:00+00:00",
+          "source_split": "oos",
+          "split": "oos",
+          "standard_from_date": "2025.10.01",
+          "standard_period_covered": true,
+          "standard_to_date": "2026.04.13",
+          "surface_scope": "full_period_deterministic"
+        },
+        "validation_is": {
+          "claim_effect": "This split can support the surface side of runtime_probe_completed.",
+          "completion_claim_allowed": true,
+          "reason_code": "standard_period_surface_available",
+          "source_artifact_path": "stages/stage_frontier_88__runtime_substrate_first_materialization_probe/02_runs/frontier88_runtime_learning_probe_backfill_v1/mt5/f88_runtime_learning_validation_is_feature_matrix.csv",
+          "source_artifact_role": "full_period_model_decision_surface",
+          "source_max_timestamp_utc": "2025-09-30T22:00:00+00:00",
+          "source_min_timestamp_utc": "2025-01-02T16:35:00+00:00",
+          "source_split": "validation",
+          "split": "validation_is",
+          "standard_from_date": "2025.01.02",
+          "standard_period_covered": true,
+          "standard_to_date": "2025.10.01",
+          "surface_scope": "full_period_deterministic"
+        }
+      },
+      "completion_claim_allowed": true,
+      "source_reference_run_id": "frontier04D_trainable_path_label_onnx_probe_v1",
+      "source_run_id": "frontier88C_runtime_substrate_timestamp_coverage_and_trade_list_repair_v1",
+      "source_stage": "stage_frontier_88__runtime_substrate_first_materialization_probe",
+      "surface_scope": "stage_native_standard_pair",
+      "version": "runtime_surface_contract_v1"
+    },
+    "short_signal_count": 3760
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "claim_boundary": "queue_only_no_runtime_authority_no_economics_pass_no_stage_closeout_pass",
+  "created_at_utc": "2026-06-20T02:38:42Z",
+  "default_probe_contract": "foundation/config/mt5_runtime_probe_contract.yaml",
+  "default_probe_rule": "runtime/materialization/handoff/economics claims require validation_is 2025.01.02..2025.10.01 plus oos 2025.10.01..2026.04.13, portable terminal execution, completed reports, and mt5_runtime_probe_contract_audit; do not extend to June 2026 when the stage-native April OOS horizon exists.",
+  "scope": "latest_frontier_runtime_probe_backfill_queue_f98_to_f87",
+  "source": "task_force_micro_consult_plus_local_f97_f96_f95_f94_f93_f92_f91_f90_f89_f88_f87_verification",
+  "targets": [
+    {
+      "next_action": "do_not_backfill_until a runnable surface exists or stage closeout creates a runtime learning target",
+      "stage": "F98",
+      "status": "pending_open_no_backfill_target_yet"
+    },
+    {
+      "next_action": "preserve negative memory; do not claim economics pass or runtime authority",
+      "receipt": "docs/agent_control/packets/frontier97_control_plane_runtime_learning_probe_guard_replay_v1/runtime_probe_backfill_receipt.json",
+      "stage": "F97",
+      "status": "completed_negative_runtime_learning_observation"
+    },
+    {
+      "claim_boundary": "no runtime authority no economics pass",
+      "next_action": "optional full signal surface regeneration repair; otherwise continue reverse-order to F94/F92 candidates",
+      "receipt": "docs/agent_control/packets/frontier96_runtime_learning_probe_backfill_v1/runtime_probe_backfill_receipt.json",
+      "stage": "F96",
+      "status": "completed_inconclusive_runtime_learning_observation_sparse_repair"
+    },
+    {
+      "claim_boundary": "no runtime authority no economics pass",
+      "next_action": "optional full signal surface regeneration repair; otherwise continue reverse-order to F92 candidate",
+      "reason": "some validation signal trace but density/drawdown mismatch; not a success candidate",
+      "receipt": "docs/agent_control/packets/frontier95_runtime_learning_probe_backfill_v1/runtime_probe_backfill_receipt.json",
+      "stage": "F95",
+      "status": "completed_inconclusive_runtime_learning_observation_sparse_long_only_repair"
+    },
+    {
+      "claim_boundary": "runtime_probe_observation_only_no_runtime_probe_completed_no_runtime_authority_no_economics_pass",
+      "completion_guard": "docs/agent_control/packets/frontier94_runtime_learning_probe_backfill_v1/mt5_runtime_probe_completion_claim_guard.json",
+      "next_action": "only revisit F94 after full-period deterministic or full-period sparse decision surface regeneration; otherwise continue reverse-order audit below F92",
+      "reason": "F94 proxy_scores_sample repair produced MT5 observation but sample surface blocks runtime_probe_completed.",
+      "receipt": "docs/agent_control/packets/frontier94_runtime_learning_probe_backfill_v1/runtime_probe_backfill_receipt.json",
+      "stage": "F94",
+      "status": "completed_negative_runtime_learning_observation_sample_surface_completion_blocked"
+    },
+    {
+      "claim_boundary": "runtime_probe_observation_only_no_runtime_probe_completed_no_runtime_authority_no_economics_pass",
+      "completion_guard": "docs/agent_control/packets/frontier93_runtime_learning_probe_backfill_v1/mt5_runtime_probe_completion_claim_guard.json",
+      "next_action": "only revisit F93 after full-period deterministic or full-period sparse decision surface regeneration; otherwise continue reverse-order audit below F90 if requested",
+      "reason": "F93 proxy_scores_sample duplicate-timestamp repair produced MT5 observation with validation_is plus oos standard periods, but sample surface blocks runtime_probe_completed and runtime authority.",
+      "receipt": "docs/agent_control/packets/frontier93_runtime_learning_probe_backfill_v1/runtime_probe_backfill_receipt.json",
+      "stage": "F93",
+      "status": "completed_inconclusive_runtime_learning_observation_sample_surface_completion_blocked"
+    },
+    {
+      "claim_boundary": "runtime_probe_observation_only_no_runtime_probe_completed_no_runtime_authority_no_economics_pass",
+      "completion_guard": "docs/agent_control/packets/frontier92_runtime_learning_probe_backfill_v1/mt5_runtime_probe_completion_claim_guard.json",
+      "next_action": "only revisit F92 after full-period deterministic or full-period sparse decision surface regeneration; otherwise continue reverse-order audit to F91/F90 candidates",
+      "reason": "F92 proxy_scores_sample repair produced MT5 observation, but sample surface blocks runtime_probe_completed and runtime authority.",
+      "receipt": "docs/agent_control/packets/frontier92_runtime_learning_probe_backfill_v1/runtime_probe_backfill_receipt.json",
+      "stage": "F92",
+      "status": "completed_negative_runtime_learning_observation_sample_surface_completion_blocked"
+    },
+    {
+      "claim_boundary": "runtime_probe_observation_only_no_runtime_probe_completed_no_runtime_authority_no_economics_pass",
+      "completion_guard": "docs/agent_control/packets/frontier91_runtime_learning_probe_backfill_v1/mt5_runtime_probe_completion_claim_guard.json",
+      "next_action": "only revisit F91 after full-period deterministic or full-period sparse decision surface regeneration; otherwise continue reverse-order audit to F90 candidate",
+      "reason": "F91 proxy_scores_sample repair produced MT5 observation with validation_is plus oos standard periods, but sample surface blocks runtime_probe_completed and runtime authority.",
+      "receipt": "docs/agent_control/packets/frontier91_runtime_learning_probe_backfill_v1/runtime_probe_backfill_receipt.json",
+      "stage": "F91",
+      "status": "completed_inconclusive_runtime_learning_observation_sample_surface_completion_blocked"
+    },
+    {
+      "claim_boundary": "runtime_probe_observation_only_no_runtime_probe_completed_no_runtime_authority_no_economics_pass",
+      "completion_guard": "docs/agent_control/packets/frontier90_runtime_learning_probe_backfill_v1/mt5_runtime_probe_completion_claim_guard.json",
+      "next_action": "only revisit F90 after full-period deterministic or full-period sparse decision surface regeneration; otherwise continue reverse-order audit below F90 if requested",
+      "reason": "F90 signal_samples repair produced MT5 observation with validation_is plus oos standard periods, but diagnostic sample surface blocks runtime_probe_completed and runtime authority.",
+      "receipt": "docs/agent_control/packets/frontier90_runtime_learning_probe_backfill_v1/runtime_probe_backfill_receipt.json",
+      "stage": "F90",
+      "status": "completed_inconclusive_runtime_learning_observation_sample_surface_completion_blocked"
+    },
+    {
+      "claim_boundary": "runtime_probe_observation_only_no_runtime_probe_completed_no_runtime_authority_no_economics_pass",
+      "completion_guard": "docs/agent_control/packets/frontier89_runtime_learning_probe_backfill_v1/mt5_runtime_probe_completion_claim_guard.json",
+      "next_action": "only revisit F89 after full-period validation_is and oos deal-path teacher surfaces exist; otherwise continue reverse-order audit below F89 if requested",
+      "reason": "F89 selected deal-path teacher candidate was repaired into a validation-only sparse veto surface and MT5 observed validation_is plus oos standard periods, but diagnostic sample plus missing OOS source blocks runtime_probe_completed and runtime authority.",
+      "receipt": "docs/agent_control/packets/frontier89_runtime_learning_probe_backfill_v1/runtime_probe_backfill_receipt.json",
+      "stage": "F89",
+      "status": "completed_inconclusive_runtime_learning_observation_validation_only_oos_missing_completion_blocked"
+    },
+    {
+      "claim_boundary": "runtime_probe_completed_allowed_by_stage_native_guard_no_runtime_authority_no_economics_pass_no_f88_success_rewrite",
+      "completion_guard": "docs/agent_control/packets/frontier88_runtime_learning_probe_backfill_v1/mt5_runtime_probe_completion_claim_guard.json",
+      "next_action": "preserve completed F88 stage-native probe record; do not extend F88 OOS to 2026-06-18.",
+      "reason": "F88C was short validation-only historical evidence. F88 repair now uses the stage-native OOS horizon 2025.10.01..2026.04.13, produced completed validation_is and OOS Strategy Tester reports, and mt5_runtime_probe_completion_claim_guard passes. Runtime authority, economics pass, selected baseline, promotion, and live readiness remain not claimed.",
+      "receipt": "docs/agent_control/packets/frontier88_runtime_learning_probe_backfill_v1/runtime_probe_backfill_receipt.json",
+      "stage": "F88",
+      "status": "completed_stage_native_runtime_probe_completed_no_authority_no_economics_pass"
+    },
+    {
+      "claim_boundary": "runtime_learning_observation_only_no_runtime_probe_completed_no_runtime_authority_no_economics_pass_no_materialization_ready_no_handoff_complete",
+      "completion_guard": "docs/agent_control/packets/frontier87_runtime_learning_probe_backfill_v1/mt5_runtime_probe_completion_claim_guard.json",
+      "next_action": "preserve as negative/inconclusive runtime learning observation; if revisited, regenerate a learned full-period deterministic runtime surface within the existing 2026-04-13 OOS horizon and do not extend to 2026-06.",
+      "reason": "F87 proxy-score/diagnostic surface was repaired with inner_validation-only threshold 0.6552855227236055 into sparse long-only source_replay rows. MT5 observed validation_is and OOS through the stage-native April 2026 horizon, but source_replay profile plus proxy_score_sample origin blocks runtime_probe_completed and runtime authority.",
+      "receipt": "docs/agent_control/packets/frontier87_runtime_learning_probe_backfill_v1/runtime_probe_backfill_receipt.json",
+      "stage": "F87",
+      "status": "completed_runtime_learning_observation_source_replay_completion_blocked"
+    }
+  ],
+  "updated_at_utc": "2026-06-20T07:08:41Z"
+}

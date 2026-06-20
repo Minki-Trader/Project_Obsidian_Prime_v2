@@ -1,0 +1,49 @@
+{
+  "packet_id": "long_path_first_read_guard_hardening_v1",
+  "status": "pass",
+  "audits": [
+    {
+      "audit_name": "agent_control_contracts",
+      "status": "pass",
+      "path": "docs/agent_control/packets/long_path_first_read_guard_hardening_v1/agent_control_contracts.json"
+    },
+    {
+      "audit_name": "codex_task_force_review_packet",
+      "status": "accepted",
+      "path": "docs/agent_control/packets/long_path_first_read_guard_hardening_v1/codex_task_force_review_packet.json"
+    },
+    {
+      "audit_name": "ops_instruction_audit",
+      "status": "pass",
+      "path": "docs/agent_control/packets/long_path_first_read_guard_hardening_v1/ops_instruction_audit.json"
+    },
+    {
+      "audit_name": "work_packet_schema_lint",
+      "status": "pass",
+      "path": "docs/agent_control/packets/long_path_first_read_guard_hardening_v1/work_packet_schema_lint.json"
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "status": "pass",
+      "path": "docs/agent_control/packets/long_path_first_read_guard_hardening_v1/skill_receipt_schema_lint.json"
+    }
+  ],
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "status": "pass",
+    "allowed_claims": [
+      "static_contract_updated",
+      "local_validation_passed"
+    ],
+    "forbidden_claims": [
+      "completion",
+      "selected_baseline",
+      "operating_promotion",
+      "runtime_authority",
+      "live_readiness",
+      "goal_achieve",
+      "runtime_verified"
+    ],
+    "claim_boundary": "Long-path first-read guardrail updated for policy/skill surfaces only; no trading, MT5 runtime, promotion, authority, live-readiness, or Goal Achieve claim."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "agents_called": [
+    {
+      "accepted_points": [
+        "F97 is the first repair/backfill target because it had a partial validation-only runtime artifact.",
+        "F97 must be rerun as standard validation_is plus oos using portable execution before any runtime_probe_completed claim.",
+        "F96 is the next candidate after F97, with repair-first runtime learning framing."
+      ],
+      "advice_classification": "accepted_with_local_verification",
+      "claim_effect": "advisory_only_no_reviewed_pass",
+      "nickname": "Feynman",
+      "remit": "MT5/ONNX runtime surface audit and backfill target selection",
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "subagent_id": "019ee2d6-9148-7561-aed5-895ab6d0ea49"
+    },
+    {
+      "accepted_points": [
+        "Record runtime_probe_backfill_receipt, actual_subagent_calls, mt5_runtime_probe_contract_audit, and claim boundary.",
+        "Use 1-2 agent micro_consult for this backfill instead of full roster review.",
+        "Treat F97 validation-only replay as partial learning sample, not a completed standard runtime probe."
+      ],
+      "advice_classification": "accepted_with_local_verification",
+      "claim_effect": "advisory_only_no_reviewed_pass",
+      "nickname": "Jason",
+      "remit": "evidence receipt, gate, and packet structure for runtime probe backfill",
+      "roster_agent_id": "agent_04_evidence_control_plane",
+      "subagent_id": "019ee2d6-e357-7bf1-b21e-497e13b6da2b"
+    }
+  ],
+  "agents_requested_count": 2,
+  "call_mode": "micro_consult",
+  "claim_effect": "advisory_only_no_reviewed_pass",
+  "created_at_utc": "2026-06-20T02:38:42Z",
+  "forbidden_claims": [
+    "task_force_reviewed_pass",
+    "runtime_authority",
+    "economics_pass",
+    "operating_promotion",
+    "goal_achieve"
+  ],
+  "full_roster_call_reason": null,
+  "local_verification_performed": [
+    "F97 script patched to standard validation_is and oos attempts from mt5_runtime_probe_contract.yaml.",
+    "MT5 Strategy Tester executed through portable terminal command with /portable.",
+    "mt5_runtime_probe_contract_audit passed with two execution rows and two completed reports.",
+    "KPI read remained negative; economics_pass and runtime_authority remain forbidden."
+  ],
+  "required_by": "user_requested_task_force_collaboration_for_mt5_runtime_probe_backfill"
+}

@@ -1,0 +1,117 @@
+{
+  "allowed_claims": [
+    "runtime_learning_probe_decision_recorded",
+    "f91_repair_attempt_recorded",
+    "runtime_probe_observation",
+    "runtime_learning_record",
+    "completion_claim_guard_recorded"
+  ],
+  "backfill_reason": "active_goal_requires_repair_first_mt5_runtime_learning_probe_for_omitted_frontier_runtime_probes",
+  "candidate_surface_status": "learning_candidate_repaired_and_runtime_observed_sample_surface_completion_blocked",
+  "claim_boundary": "runtime_learning_probe_observation_only_no_f91_success_rewrite_no_baseline_no_promotion_no_runtime_probe_completed_no_runtime_authority_no_live_readiness_no_economics_pass",
+  "created_at_utc": "2026-06-20T03:58:53Z",
+  "forbidden_claims": [
+    "goal_achieve",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "economics_pass",
+    "selected_baseline",
+    "promotion_candidate",
+    "materialization_ready",
+    "handoff_complete",
+    "runtime_probe_completed",
+    "mt5_verification_complete",
+    "runtime_verified"
+  ],
+  "historical_judgment": "negative_regime_density_cost_abstention_proxy_no_candidate_no_runtime_trigger",
+  "historical_runtime_probe_status": "not_run_no_candidate_no_runnable_decision_surface",
+  "judgment": "inconclusive_runtime_learning_probe_observation_completed_no_economics_pass",
+  "metrics": {
+    "oos": {
+      "expectancy": -14.68,
+      "gross_loss": -673.92,
+      "gross_profit": 307.03,
+      "long_trade_count": 10,
+      "max_drawdown_percent": 95.06,
+      "net_profit": -366.89,
+      "profit_factor": 0.46,
+      "recovery_factor": -0.46,
+      "short_trade_count": 15,
+      "trade_count": 25,
+      "win_rate_percent": 56.0
+    },
+    "validation_is": {
+      "expectancy": 13.04,
+      "gross_loss": -453.23,
+      "gross_profit": 831.32,
+      "long_trade_count": 15,
+      "max_drawdown_percent": 27.46,
+      "net_profit": 378.09,
+      "profit_factor": 1.83,
+      "recovery_factor": 1.17,
+      "short_trade_count": 14,
+      "trade_count": 29,
+      "win_rate_percent": 44.83
+    }
+  },
+  "mt5_probe": {
+    "attempts": 2,
+    "completion_guard_status": "blocked",
+    "contract": "foundation/config/mt5_runtime_probe_contract.yaml",
+    "contract_status": "pass",
+    "execution_results": 2,
+    "reports": 2
+  },
+  "next_repair_option": "Regenerate F91 best diagnostic regime-density-cost decision surface as full-period deterministic or sparse surface before runtime_probe_completed.",
+  "packet_id": "frontier91_runtime_learning_probe_backfill_v1",
+  "stage_id": "stage_frontier_91__regime_conditioned_density_cost_abstention_axis",
+  "surface": {
+    "best_variant": "ridge_regime_dense_q85",
+    "flat_signal_count": 0,
+    "long_signal_count": 217,
+    "pre_gate_signal_count": 480,
+    "runtime_surface_contract": {
+      "by_split": {
+        "oos": {
+          "claim_effect": "MT5 tester observation is allowed, but runtime_probe_completed is blocked until a full-period deterministic or sparse decision surface is materialized.",
+          "completion_claim_allowed": false,
+          "reason_code": "proxy_score_sample_is_not_full_runtime_surface",
+          "source_artifact_path": "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91B/proxy_scout/proxy_scores_sample.csv",
+          "source_artifact_role": "proxy_score_sample",
+          "source_max_timestamp_utc": "2026-03-18T15:45:00+00:00",
+          "source_min_timestamp_utc": "2025-10-02T16:35:00+00:00",
+          "source_split": "oos",
+          "split": "oos",
+          "standard_from_date": "2025.10.01",
+          "standard_period_covered": false,
+          "standard_to_date": "2026.06.18",
+          "surface_scope": "sparse_diagnostic_sample"
+        },
+        "validation_is": {
+          "claim_effect": "MT5 tester observation is allowed, but runtime_probe_completed is blocked until a full-period deterministic or sparse decision surface is materialized.",
+          "completion_claim_allowed": false,
+          "reason_code": "proxy_score_sample_is_not_full_runtime_surface",
+          "source_artifact_path": "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91B/proxy_scout/proxy_scores_sample.csv",
+          "source_artifact_role": "proxy_score_sample",
+          "source_max_timestamp_utc": "2025-08-11T21:00:00+00:00",
+          "source_min_timestamp_utc": "2025-01-02T16:35:00+00:00",
+          "source_split": "validation",
+          "split": "validation_is",
+          "standard_from_date": "2025.01.02",
+          "standard_period_covered": false,
+          "standard_to_date": "2025.10.01",
+          "surface_scope": "sparse_diagnostic_sample"
+        }
+      },
+      "claim_effect": "runtime_learning_observation_only_no_runtime_probe_completed_claim",
+      "completion_claim_allowed": false,
+      "reason_code": "proxy_score_sample_is_not_full_runtime_surface",
+      "source_artifact_path": "stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91B/proxy_scout/proxy_scores_sample.csv",
+      "source_artifact_role": "proxy_score_sample",
+      "standard_period_covered": false,
+      "surface_scope": "sparse_diagnostic_sample"
+    },
+    "short_signal_count": 263
+  }
+}

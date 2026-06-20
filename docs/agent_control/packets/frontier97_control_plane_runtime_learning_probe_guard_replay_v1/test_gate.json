@@ -1,0 +1,35 @@
+{
+  "allowed_claims": [
+    "tests_passed"
+  ],
+  "audit_name": "test_gate",
+  "completed_forbidden": false,
+  "counts": {
+    "commands": [
+      {
+        "command": "python -m pytest tests/test_mt5_runtime_probe_contract.py tests/test_runtime_learning_probe_decision_gate.py -q",
+        "exit_code": 0,
+        "passed_tests": 14
+      },
+      {
+        "command": "python -m pytest tests/test_alpha_scout_runner_context.py tests/test_work_packet_schema_lint.py tests/test_stage10_logreg_mt5_scout.py -q",
+        "exit_code": 0,
+        "passed_tests": 50
+      },
+      {
+        "command": "python -m py_compile foundation/control_plane/mt5_runtime_probe_contract.py foundation/mt5/terminal_runner.py foundation/alpha/scout_runner.py stage_pipelines/stage_frontier_97/frontier97_runtime_learning_probe_guard_replay.py",
+        "exit_code": 0
+      },
+      {
+        "command": "git diff --check -- targeted surfaces",
+        "exit_code": 0,
+        "note": "CRLF warnings only"
+      }
+    ],
+    "total_pytest_passed": 64
+  },
+  "findings": [],
+  "forbidden_claims": [],
+  "passed": true,
+  "status": "pass"
+}

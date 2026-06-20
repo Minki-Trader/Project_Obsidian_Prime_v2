@@ -226,6 +226,7 @@ schemas:
       - runtime_artifact
       - compared_surface
       - parity_level
+      - runtime_learning_probe_decision
       - tester_identity
       - missing_evidence
       - allowed_claims
@@ -239,6 +240,7 @@ schemas:
       - tester_settings
       - spread_commission_slippage
       - trade_list_identity
+      - runtime_learning_probe_decision
       - forensic_gaps
   obsidian-run-evidence-system:
     required_fields:
@@ -281,6 +283,7 @@ schemas:
       - allowed_claims
       - forbidden_claims
       - evidence_used
+      - runtime_learning_probe_decision
   obsidian-performance-attribution:
     required_fields:
       - packet_id

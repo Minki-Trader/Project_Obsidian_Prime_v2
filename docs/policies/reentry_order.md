@@ -35,6 +35,14 @@ Warm thread(따뜻한 스레드)에서 active stage(활성 단계), current run(
 21. `docs/contracts/model_input_feature_set_contract_fpmarkets_v2.md`
 22. `docs/contracts/mt5_ea_input_order_contract_fpmarkets_v2.md`
 
+## 파일 접근 사전확인(File Access Preflight, 파일 접근 사전확인)
+
+Deep artifact tree(깊은 산출물 트리), 예를 들어 `stages/*`, `docs/agent_control/packets/*`, MT5 report/export/telemetry path(MT5 보고서/내보내기/텔레메트리 경로)를 읽기 전에는 path scope(경로 범위)를 먼저 분류한다.
+
+첫 discovery(발견)는 repo-relative `rg --files` 또는 targeted `rg`로 한다. 파일 내용, CSV/JSON(표/제이슨), byte hash(바이트 해시), existence check(존재 확인)가 필요하면 일반 `Path.read_text/read_bytes/open/exists`, PowerShell(파워셸) `Get-Content`, `Import-Csv`, pandas direct path(판다스 직접 경로)로 시작하지 않고 `foundation.control_plane.ledger.io_path` 또는 `path_exists`를 처음부터 쓴다.
+
+효과(effect, 효과)는 long path retry(긴 경로 재시도)를 사후 복구가 아니라 first-read gate(첫 읽기 게이트)로 옮겨, 존재하는 산출물을 missing(누락)으로 오판하지 않게 하는 것이다.
+
 ## 진실 우선순위(Truth Precedence, 진실 우선순위)
 
 문서가 서로 다르면 다음 순서를 따른다.

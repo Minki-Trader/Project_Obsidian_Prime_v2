@@ -1,0 +1,106 @@
+{
+  "mt5_attempt_blocker": "",
+  "mt5_attempt_result_status": "completed",
+  "runtime_learning_probe_decision": {
+    "claim_effect": "runtime_learning_probe_decision_only_no_runtime_authority_no_economics_pass",
+    "forbidden_skip_basis_seen": [],
+    "mt5_action": "run_after_repair",
+    "not_run_reason_code": "",
+    "pre_gate_signal_count": 247,
+    "repair_attempt_required": true,
+    "repair_attempts": [
+      {
+        "action": "deduplicated F93 best diagnostic proxy_scores_sample into a one-feature EA-readable closed-bar sparse runtime learning surface",
+        "attempt_id": "repair01_f93_proxy_scores_sample_to_standard_validation_oos_runtime_surface",
+        "duplicate_repair": {
+          "claim_effect": "sample repaired into a single closed-bar sparse decision surface for runtime learning observation only",
+          "conflict_records": [],
+          "deduplicated_rows": 247,
+          "duplicate_rows_removed": 113,
+          "duplicate_timestamp_groups": 113,
+          "raw_rows": 360,
+          "repair_id": "repair01_duplicate_timestamp_sparse_decision_surface",
+          "rule": "key=split+timestamp+variant_id; prefer primary route over fallback, Tier A over Tier B; collapse only if side/strength/budgeted_utility match within tolerance; label and future returns are not selection keys",
+          "tolerance": 1e-09
+        },
+        "feature_artifacts": [
+          {
+            "feature_count": 1,
+            "feature_order_hash": "43f5380425dafccf7b87bd46b42a529b900051b2d41c038f8540531d3d326643",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "variant_id",
+              "source_tier",
+              "route_role",
+              "label",
+              "future_log_return_12",
+              "regime_key",
+              "cost_bucket",
+              "budgeted_utility",
+              "entry_decision"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93_runtime_learning_probe_backfill_v1/mt5/f93_runtime_learning_validation_is_signal_matrix.csv",
+            "rows": 124,
+            "sha256": "9616c887b9ad075066fdcc09c91e1e8f40068373b80b462f5325214115b45030"
+          },
+          {
+            "feature_count": 1,
+            "feature_order_hash": "43f5380425dafccf7b87bd46b42a529b900051b2d41c038f8540531d3d326643",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "variant_id",
+              "source_tier",
+              "route_role",
+              "label",
+              "future_log_return_12",
+              "regime_key",
+              "cost_bucket",
+              "budgeted_utility",
+              "entry_decision"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93_runtime_learning_probe_backfill_v1/mt5/f93_runtime_learning_oos_signal_matrix.csv",
+            "rows": 123,
+            "sha256": "a8bc45f9d082245332b5531fc9431ca0175fba9b5d23adc8a25825cd070c2368"
+          }
+        ],
+        "model_artifact": {
+          "feature_order": [
+            "f93_runtime_learning_signal"
+          ],
+          "feature_order_hash": "43f5380425dafccf7b87bd46b42a529b900051b2d41c038f8540531d3d326643",
+          "format": "single_discrete_signal_ebm_score_table_csv_v1",
+          "parity_sample_probabilities": [
+            [
+              0.9993295245830858,
+              0.0003352377084572098,
+              0.0003352377084572098
+            ],
+            [
+              0.0003352377084572098,
+              0.9993295245830858,
+              0.0003352377084572098
+            ],
+            [
+              0.00033523770845720973,
+              0.00033523770845720973,
+              0.9993295245830855
+            ]
+          ],
+          "parity_sample_values": [
+            -1.0,
+            0.0,
+            1.0
+          ],
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93_runtime_learning_probe_backfill_v1/models/f93_runtime_learning_signal_score_table.csv",
+          "runtime_policy": "-1 short, 0 flat, +1 long through EBM-table softmax and EA probability thresholds",
+          "sha256": "4e322f3a3601295d8f2029bf4dc0ce88a5b6b2bf1b19415d9b5a6831ca61ed71"
+        },
+        "result": "materialized",
+        "surface_caveat": "proxy_score_sample diagnostic sample; no runtime_probe_completed claim"
+      }
+    ],
+    "runtime_learning_probe_candidate_count": 1,
+    "runtime_surface_status": "repair_required",
+    "strong_candidate_count": 0
+  }
+}

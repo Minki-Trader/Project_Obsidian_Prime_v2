@@ -1,0 +1,76 @@
+{
+  "allowed_claims": [
+    "blocked"
+  ],
+  "audit_name": "mt5_runtime_probe_contract_audit",
+  "completed_forbidden": true,
+  "counts": {
+    "attempts": 2,
+    "exception_attempts": 2,
+    "execution_results": 2,
+    "reports": 2,
+    "requested_claims": [
+      "runtime_probe_completed"
+    ],
+    "required_splits": [
+      "validation_is",
+      "oos"
+    ],
+    "standard_attempts": 0,
+    "standard_periods": {
+      "oos": [
+        "oos",
+        "2025.10.01",
+        "2026.04.13"
+      ],
+      "validation_is": [
+        "validation",
+        "2025.01.02",
+        "2025.10.01"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "check_id": "mt5_runtime_probe_contract::exception_profile_for_completion_claim",
+      "details": {
+        "attempt_name": "f87_runtime_learning_validation_is",
+        "claim_effect": "exception_profile_forbids_runtime_probe_completed",
+        "profile": "source_replay",
+        "split": "validation_is"
+      },
+      "message": "Exception-profile MT5 probe cannot support runtime_probe_completed.",
+      "severity": "blocking"
+    },
+    {
+      "check_id": "mt5_runtime_probe_contract::exception_profile_for_completion_claim",
+      "details": {
+        "attempt_name": "f87_runtime_learning_oos",
+        "claim_effect": "exception_profile_forbids_runtime_probe_completed",
+        "profile": "source_replay",
+        "split": "oos"
+      },
+      "message": "Exception-profile MT5 probe cannot support runtime_probe_completed.",
+      "severity": "blocking"
+    },
+    {
+      "check_id": "mt5_runtime_probe_contract::missing_required_split",
+      "details": {
+        "missing_splits": [
+          "validation_is",
+          "oos"
+        ],
+        "seen_splits": []
+      },
+      "message": "runtime_probe_completed requires both canonical validation_is and oos attempts.",
+      "severity": "blocking"
+    }
+  ],
+  "forbidden_claims": [
+    "runtime_probe_completed",
+    "mt5_verification_complete",
+    "runtime_verified"
+  ],
+  "passed": false,
+  "status": "blocked"
+}

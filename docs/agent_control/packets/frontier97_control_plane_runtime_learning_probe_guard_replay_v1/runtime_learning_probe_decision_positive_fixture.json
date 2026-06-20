@@ -1,0 +1,20 @@
+{
+  "runtime_learning_probe_decision": {
+    "pre_gate_signal_count": 480,
+    "strong_candidate_count": 0,
+    "runtime_learning_probe_candidate_count": 1,
+    "runtime_surface_status": "probe_candidate_available",
+    "mt5_action": "run_probe",
+    "not_run_reason_code": "",
+    "repair_attempt_required": true,
+    "repair_attempts": [
+      {
+        "attempt_id": "repair01_f97_score_sample_to_single_signal_ebm_table",
+        "action": "materialize F97 score_sample side column into one-feature EBM table runtime surface",
+        "result": "materialized"
+      }
+    ],
+    "forbidden_skip_basis_seen": [],
+    "claim_effect": "runtime_learning_probe_decision_only_no_runtime_authority"
+  }
+}

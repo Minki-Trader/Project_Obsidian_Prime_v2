@@ -11,7 +11,9 @@ from typing import Any
 from foundation.control_plane.audit_result import AuditFinding, AuditResult
 from foundation.control_plane.kpi_contract_audit import KpiContract
 from foundation.control_plane.ledger import io_path, path_exists
+from foundation.control_plane.mt5_runtime_probe_contract import audit_mt5_runtime_probe_contract_path
 from foundation.control_plane.required_gate_coverage_audit import audit_required_gate_coverage
+from foundation.control_plane.runtime_learning_probe_decision_gate import audit_runtime_learning_probe_decision_path
 from foundation.control_plane.scope_completion_gate import ScopeCountCheck
 from foundation.control_plane.skill_receipt_lint import SkillReceipt
 from foundation.control_plane.skill_receipt_schema_lint import audit_skill_receipt_schemas, load_receipts
@@ -214,6 +216,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--skill-receipt-schema")
     parser.add_argument("--code-surface-audit-json")
     parser.add_argument("--agent-control-contracts-json")
+    parser.add_argument("--runtime-learning-probe-decision")
+    parser.add_argument("--mt5-runtime-probe-contract-json")
     parser.add_argument("--extra-audit-json", action="append", default=[])
     parser.add_argument("--required-gate-coverage", action="store_true")
     parser.add_argument("--closeout-report")
@@ -267,6 +271,15 @@ def main(argv: list[str] | None = None) -> int:
         extra_audits.append(_audit_result_from_json(Path(args.code_surface_audit_json)))
     if args.agent_control_contracts_json:
         extra_audits.append(_audit_result_from_json(Path(args.agent_control_contracts_json)))
+    if args.runtime_learning_probe_decision:
+        extra_audits.append(audit_runtime_learning_probe_decision_path(Path(args.runtime_learning_probe_decision)))
+    if args.mt5_runtime_probe_contract_json:
+        extra_audits.append(
+            audit_mt5_runtime_probe_contract_path(
+                Path(args.mt5_runtime_probe_contract_json),
+                requested_claims=claims,
+            )
+        )
     for extra_audit_json in args.extra_audit_json:
         extra_audits.append(_audit_result_from_json(Path(extra_audit_json)))
     if args.closeout_report:

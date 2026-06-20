@@ -1,0 +1,130 @@
+{
+  "allowed_claims": [
+    "blocked"
+  ],
+  "audit_name": "mt5_runtime_probe_contract_audit",
+  "completed_forbidden": true,
+  "counts": {
+    "attempts": 2,
+    "exception_attempts": 0,
+    "execution_results": 2,
+    "reports": 2,
+    "requested_claims": [
+      "runtime_probe_completed"
+    ],
+    "required_splits": [
+      "validation_is",
+      "oos"
+    ],
+    "standard_attempts": 2,
+    "standard_periods": {
+      "oos": [
+        "oos",
+        "2025.10.01",
+        "2026.06.18"
+      ],
+      "validation_is": [
+        "validation",
+        "2025.01.02",
+        "2025.10.01"
+      ]
+    }
+  },
+  "findings": [
+    {
+      "check_id": "mt5_runtime_probe_contract::surface_contract_forbids_completion",
+      "details": {
+        "attempt_name": "f90_runtime_learning_validation_is",
+        "completion_claim_allowed": false,
+        "source_artifact_role": "diagnostic_sample",
+        "split": "validation_is",
+        "standard_period_covered": false,
+        "surface_scope": "sparse_diagnostic_sample"
+      },
+      "message": "runtime_probe_completed is blocked by the runtime surface contract.",
+      "severity": "blocking"
+    },
+    {
+      "check_id": "mt5_runtime_probe_contract::surface_scope_not_completion_eligible",
+      "details": {
+        "allowed_surface_scopes": [
+          "full_period_deterministic",
+          "full_period_sparse_decision_surface"
+        ],
+        "attempt_name": "f90_runtime_learning_validation_is",
+        "split": "validation_is",
+        "surface_scope": "sparse_diagnostic_sample"
+      },
+      "message": "runtime_probe_completed requires a full-period runtime surface scope.",
+      "severity": "blocking"
+    },
+    {
+      "check_id": "mt5_runtime_probe_contract::sample_source_forbids_completion",
+      "details": {
+        "attempt_name": "f90_runtime_learning_validation_is",
+        "forbidden_source_artifact_roles": [
+          "diagnostic_sample",
+          "preview_rows",
+          "proxy_score_sample",
+          "sampled_rows",
+          "score_sample"
+        ],
+        "source_artifact_role": "diagnostic_sample",
+        "split": "validation_is"
+      },
+      "message": "runtime_probe_completed cannot be supported by a sample or preview source artifact.",
+      "severity": "blocking"
+    },
+    {
+      "check_id": "mt5_runtime_probe_contract::surface_contract_forbids_completion",
+      "details": {
+        "attempt_name": "f90_runtime_learning_oos",
+        "completion_claim_allowed": false,
+        "source_artifact_role": "diagnostic_sample",
+        "split": "oos",
+        "standard_period_covered": false,
+        "surface_scope": "sparse_diagnostic_sample"
+      },
+      "message": "runtime_probe_completed is blocked by the runtime surface contract.",
+      "severity": "blocking"
+    },
+    {
+      "check_id": "mt5_runtime_probe_contract::surface_scope_not_completion_eligible",
+      "details": {
+        "allowed_surface_scopes": [
+          "full_period_deterministic",
+          "full_period_sparse_decision_surface"
+        ],
+        "attempt_name": "f90_runtime_learning_oos",
+        "split": "oos",
+        "surface_scope": "sparse_diagnostic_sample"
+      },
+      "message": "runtime_probe_completed requires a full-period runtime surface scope.",
+      "severity": "blocking"
+    },
+    {
+      "check_id": "mt5_runtime_probe_contract::sample_source_forbids_completion",
+      "details": {
+        "attempt_name": "f90_runtime_learning_oos",
+        "forbidden_source_artifact_roles": [
+          "diagnostic_sample",
+          "preview_rows",
+          "proxy_score_sample",
+          "sampled_rows",
+          "score_sample"
+        ],
+        "source_artifact_role": "diagnostic_sample",
+        "split": "oos"
+      },
+      "message": "runtime_probe_completed cannot be supported by a sample or preview source artifact.",
+      "severity": "blocking"
+    }
+  ],
+  "forbidden_claims": [
+    "runtime_probe_completed",
+    "mt5_verification_complete",
+    "runtime_verified"
+  ],
+  "passed": false,
+  "status": "blocked"
+}

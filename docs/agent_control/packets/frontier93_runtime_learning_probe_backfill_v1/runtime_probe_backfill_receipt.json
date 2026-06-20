@@ -1,0 +1,128 @@
+{
+  "allowed_claims": [
+    "runtime_learning_probe_decision_recorded",
+    "f93_repair_attempt_recorded",
+    "runtime_probe_observation",
+    "runtime_learning_record",
+    "completion_claim_guard_recorded"
+  ],
+  "backfill_reason": "active_goal_requires_repair_first_mt5_runtime_learning_probe_for_omitted_frontier_runtime_probes",
+  "candidate_surface_status": "learning_candidate_repaired_and_runtime_observed_sample_surface_completion_blocked",
+  "claim_boundary": "runtime_learning_probe_observation_only_no_f93_success_rewrite_no_baseline_no_promotion_no_runtime_probe_completed_no_runtime_authority_no_live_readiness_no_economics_pass",
+  "created_at_utc": "2026-06-20T04:21:47Z",
+  "forbidden_claims": [
+    "goal_achieve",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "economics_pass",
+    "selected_baseline",
+    "promotion_candidate",
+    "materialization_ready",
+    "handoff_complete",
+    "runtime_probe_completed",
+    "mt5_verification_complete",
+    "runtime_verified"
+  ],
+  "historical_judgment": "negative_side_balance_cost_exposure_risk_budget_proxy_no_candidate_no_runtime_trigger",
+  "historical_runtime_probe_status": "not_run_no_candidate_no_runnable_decision_surface",
+  "judgment": "inconclusive_runtime_learning_probe_observation_completed_no_economics_pass",
+  "metrics": {
+    "oos": {
+      "expectancy": 32.17,
+      "gross_loss": -55.07,
+      "gross_profit": 666.38,
+      "long_trade_count": 7,
+      "max_drawdown_percent": 46.47,
+      "net_profit": 611.31,
+      "profit_factor": 12.1,
+      "recovery_factor": 1.62,
+      "short_trade_count": 12,
+      "trade_count": 19,
+      "win_rate_percent": 73.68
+    },
+    "validation_is": {
+      "expectancy": 45.47,
+      "gross_loss": -146.34,
+      "gross_profit": 964.83,
+      "long_trade_count": 9,
+      "max_drawdown_percent": 27.8,
+      "net_profit": 818.49,
+      "profit_factor": 6.59,
+      "recovery_factor": 2.53,
+      "short_trade_count": 9,
+      "trade_count": 18,
+      "win_rate_percent": 66.67
+    }
+  },
+  "mt5_probe": {
+    "attempts": 2,
+    "completion_guard_status": "blocked",
+    "contract": "foundation/config/mt5_runtime_probe_contract.yaml",
+    "contract_status": "pass",
+    "execution_results": 2,
+    "reports": 2
+  },
+  "next_repair_option": "Regenerate F93 best diagnostic side-balance/cost-exposure decision surface as full-period deterministic or sparse surface before runtime_probe_completed.",
+  "packet_id": "frontier93_runtime_learning_probe_backfill_v1",
+  "stage_id": "stage_frontier_93__side_balance_cost_exposure_risk_budget_axis",
+  "surface": {
+    "best_variant": "ridge_regime_dense_cost_norm_side25_q85",
+    "duplicate_repair": {
+      "claim_effect": "sample repaired into a single closed-bar sparse decision surface for runtime learning observation only",
+      "conflict_records": [],
+      "deduplicated_rows": 247,
+      "duplicate_rows_removed": 113,
+      "duplicate_timestamp_groups": 113,
+      "raw_rows": 360,
+      "repair_id": "repair01_duplicate_timestamp_sparse_decision_surface",
+      "rule": "key=split+timestamp+variant_id; prefer primary route over fallback, Tier A over Tier B; collapse only if side/strength/budgeted_utility match within tolerance; label and future returns are not selection keys",
+      "tolerance": 1e-09
+    },
+    "flat_signal_count": 0,
+    "long_signal_count": 94,
+    "pre_gate_signal_count": 247,
+    "runtime_surface_contract": {
+      "by_split": {
+        "oos": {
+          "claim_effect": "MT5 tester observation is allowed, but runtime_probe_completed is blocked until a full-period deterministic or sparse decision surface is materialized.",
+          "completion_claim_allowed": false,
+          "reason_code": "proxy_score_sample_is_not_full_runtime_surface",
+          "source_artifact_path": "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/proxy_scout/proxy_scores_sample.csv",
+          "source_artifact_role": "proxy_score_sample",
+          "source_max_timestamp_utc": "2026-02-17T21:05:00+00:00",
+          "source_min_timestamp_utc": "2025-10-02T16:35:00+00:00",
+          "source_split": "oos",
+          "split": "oos",
+          "standard_from_date": "2025.10.01",
+          "standard_period_covered": false,
+          "standard_to_date": "2026.06.18",
+          "surface_scope": "sparse_diagnostic_sample"
+        },
+        "validation_is": {
+          "claim_effect": "MT5 tester observation is allowed, but runtime_probe_completed is blocked until a full-period deterministic or sparse decision surface is materialized.",
+          "completion_claim_allowed": false,
+          "reason_code": "proxy_score_sample_is_not_full_runtime_surface",
+          "source_artifact_path": "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/proxy_scout/proxy_scores_sample.csv",
+          "source_artifact_role": "proxy_score_sample",
+          "source_max_timestamp_utc": "2025-05-23T17:45:00+00:00",
+          "source_min_timestamp_utc": "2025-01-02T16:45:00+00:00",
+          "source_split": "validation",
+          "split": "validation_is",
+          "standard_from_date": "2025.01.02",
+          "standard_period_covered": false,
+          "standard_to_date": "2025.10.01",
+          "surface_scope": "sparse_diagnostic_sample"
+        }
+      },
+      "claim_effect": "runtime_learning_observation_only_no_runtime_probe_completed_claim",
+      "completion_claim_allowed": false,
+      "reason_code": "proxy_score_sample_is_not_full_runtime_surface",
+      "source_artifact_path": "stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93B/proxy_scout/proxy_scores_sample.csv",
+      "source_artifact_role": "proxy_score_sample",
+      "standard_period_covered": false,
+      "surface_scope": "sparse_diagnostic_sample"
+    },
+    "short_signal_count": 153
+  }
+}

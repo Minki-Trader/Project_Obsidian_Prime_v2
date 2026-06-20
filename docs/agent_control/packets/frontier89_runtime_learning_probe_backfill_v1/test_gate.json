@@ -1,0 +1,57 @@
+{
+  "allowed_claims": [
+    "tests_passed"
+  ],
+  "audit_name": "test_gate",
+  "completed_forbidden": false,
+  "counts": {
+    "commands": [
+      {
+        "command": "python -m py_compile stage_pipelines/stage_frontier_89/frontier89_runtime_learning_probe_backfill.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python stage_pipelines/stage_frontier_89/frontier89_runtime_learning_probe_backfill.py --materialize-only --output-json docs/agent_control/packets/frontier89_runtime_learning_probe_backfill_v1/runtime_probe_payload_materialize_only.json",
+        "exit_code": 1,
+        "expected_exit_code": 1,
+        "reason": "materialize_only does not claim runtime execution"
+      },
+      {
+        "command": "python stage_pipelines/stage_frontier_89/frontier89_runtime_learning_probe_backfill.py --timeout-seconds 300 --output-json docs/agent_control/packets/frontier89_runtime_learning_probe_backfill_v1/runtime_probe_payload.json --subagent-id 019ee34a-ec97-7531-a972-43124677eace --subagent-nickname Dewey --subagent-result-status completed",
+        "exit_code": 0
+      },
+      {
+        "command": "python -m foundation.control_plane.runtime_learning_probe_decision_gate stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89_runtime_learning_probe_backfill_v1/runtime_learning_probe_decision_actual.json --output-json docs/agent_control/packets/frontier89_runtime_learning_probe_backfill_v1/runtime_learning_probe_decision_gate_actual.json",
+        "exit_code": 0
+      },
+      {
+        "command": "python -m foundation.control_plane.work_packet_schema_lint docs/agent_control/packets/frontier89_runtime_learning_probe_backfill_v1/work_packet.yaml --output-json docs/agent_control/packets/frontier89_runtime_learning_probe_backfill_v1/work_packet_schema_lint.json",
+        "exit_code": 0
+      },
+      {
+        "command": "python -m foundation.control_plane.skill_receipt_schema_lint docs/agent_control/packets/frontier89_runtime_learning_probe_backfill_v1/skill_receipts.json --requested-claim runtime_learning_probe_decision_recorded --requested-claim f89_repair_attempt_recorded --requested-claim runtime_probe_observation --requested-claim runtime_learning_record --requested-claim completion_claim_guard_recorded --output-json docs/agent_control/packets/frontier89_runtime_learning_probe_backfill_v1/skill_receipt_schema_lint.json",
+        "exit_code": 0
+      },
+      {
+        "command": "python -m py_compile foundation/control_plane/mt5_runtime_probe_contract.py foundation/control_plane/runtime_learning_probe_decision_gate.py stage_pipelines/stage_frontier_89/frontier89_runtime_learning_probe_backfill.py stage_pipelines/stage_frontier_90/frontier90_runtime_learning_probe_backfill.py stage_pipelines/stage_frontier_91/frontier91_runtime_learning_probe_backfill.py stage_pipelines/stage_frontier_92/frontier92_runtime_learning_probe_backfill.py stage_pipelines/stage_frontier_93/frontier93_runtime_learning_probe_backfill.py stage_pipelines/stage_frontier_94/frontier94_runtime_learning_probe_backfill.py stage_pipelines/stage_frontier_95/frontier95_runtime_learning_probe_backfill.py stage_pipelines/stage_frontier_96/frontier96_runtime_learning_probe_backfill.py stage_pipelines/stage_frontier_97/frontier97_runtime_learning_probe_guard_replay.py",
+        "exit_code": 0
+      },
+      {
+        "command": "python -m pytest tests/test_mt5_runtime_probe_contract.py tests/test_runtime_learning_probe_decision_gate.py -q",
+        "exit_code": 0
+      },
+      {
+        "command": "python -m foundation.control_plane.mt5_runtime_probe_contract stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89_runtime_learning_probe_backfill_v1/mt5_runtime_learning_probe_result.json --requested-claim runtime_probe_observation --output-json docs/agent_control/packets/frontier89_runtime_learning_probe_backfill_v1/mt5_runtime_probe_contract_audit.json",
+        "exit_code": 0
+      },
+      {
+        "command": "python -m foundation.control_plane.mt5_runtime_probe_contract stages/stage_frontier_89__runtime_trade_list_adverse_selection_teacher/02_runs/frontier89_runtime_learning_probe_backfill_v1/mt5_runtime_learning_probe_result.json --requested-claim runtime_probe_completed --output-json docs/agent_control/packets/frontier89_runtime_learning_probe_backfill_v1/mt5_runtime_probe_completion_claim_guard.json --allow-blocked-exit-zero",
+        "exit_code": 0
+      }
+    ]
+  },
+  "findings": [],
+  "forbidden_claims": [],
+  "passed": true,
+  "status": "pass"
+}

@@ -14,6 +14,7 @@ routing_contract:
   new_packet_schema_version_rule: "Every new work packet(새 작업 묶음)은 work_packet_schema_v2_1(작업 묶음 스키마 버전 2.1) and packet_lifecycle=new_packet(작업 묶음 생명주기=새 묶음)을 사용한다. Older v1/v2 packets(이전 버전1/2 작업 묶음)은 archive_only(보관 전용)로만 읽고 새 reviewed/verified/pass(검토됨/검증됨/통과) 근거로 승격하지 않는다."
   skills_to_read_rule: "Read the primary skill first. Add support skill files only when they materially change execution, verification, or closeout evidence; record one-line justification for each support skill."
   task_force_custom_agent_rule: "Codex Task Force roster ids(코덱스 태스크포스 명단 ID)는 .codex/agents/<roster_id>.toml custom agent(사용자 정의 요원) 파일과 TOML name(톰엘 이름) 필드에 1:1로 대응해야 한다."
+  task_force_minimum_agent_selection_rule: "Select the smallest relevant Task Force agent set(가장 작은 관련 태스크포스 요원 묶음)을 먼저 쓴다. Default micro_consult(기본 소형 상담)는 1명, cross-remit work(교차 임무 작업)는 보통 2명이며, 3명 이상은 escalation_reason(확대 사유), 5명 이상은 why_not_smaller(왜 더 작게 못 했는지), 8명 전원은 full_roster_call_reason(전원 호출 사유)까지 필요하다."
   task_force_micro_consult_rule: "Default agent/skill consulting(기본 요원/스킬 상담)은 micro_consult(소형 상담) 1명, 필요한 경우 2명이다. It records advisory_only_no_reviewed_pass(자문 전용, 검토/통과 아님) and does not append codex_task_force_review_packet(코덱스 태스크포스 검토 묶음) by itself."
   task_force_formal_review_rule: "Formal Task Force review(공식 태스크포스 검토)는 stage_closeout/policy_change/runtime_authority/operating_promotion/cross_system_handoff/protected_reviewed_verified_pass_claim(단계 마감/정책 변경/런타임 권위/운영 승격/교차 시스템 인계/보호된 검토·검증·통과 주장)에만 codex_task_force_review_packet(코덱스 태스크포스 검토 묶음) gate(게이트)를 붙인다."
   task_force_actual_call_rule: "When formal Codex Task Force review(공식 코덱스 태스크포스 검토) is triggered, Codex must select only relevant roster custom agents(관련 명단 사용자 정의 요원) and immediately call them with real spawn_agent(서브에이전트 생성 호출) before any Task Force reviewed/reviewed/verified/pass(태스크포스 검토됨/검토됨/검증됨/통과) claim. If required formal review is unavailable or not called(필수 공식 검토 도구 없음/미호출), status is blocked_for_task_force_review(태스크포스 검토 차단). Optional micro_consult(선택 소형 상담) may continue as advisory_only_no_reviewed_pass(자문 전용, 검토/통과 아님)."
@@ -24,6 +25,7 @@ routing_contract:
   governance_evidence_balance_rule: "Use the lightest routing that preserves the claim(주장을 지키는 가장 가벼운 라우팅) and the strongest evidence required by that claim(그 주장에 필요한 가장 강한 근거). This rule creates no new gate, overlay, family, skill, agent call, or review pass(새 게이트/오버레이/작업군/스킬/요원 호출/검토 회차를 만들지 않는다)."
   active_verification_over_procedure_rule: "When a protected claim(보호 주장) can be tested by a narrow sufficient run(좁고 충분한 실행), prefer active verification(능동 검증) over procedural expansion/advisory loops/deferred checkpoints(절차 확장/자문 반복/지연 점검)."
   runtime_probe_reluctance_rule: "Runtime/materialization/handoff/economics claims(런타임/물질화/인계/경제성 주장) cannot defer runtime_probe(런타임 탐침) because it is costly or expensive. Try the narrow sufficient probe in the same packet(같은 묶음) or lower the claim boundary(주장 경계) to blocked/inconclusive/out_of_scope_by_claim(차단/불충분/주장 범위 밖) after a recovery attempt."
+  runtime_learning_probe_guard_rule: "Proxy-bad or candidate-gate-failed(프록시 부진/후보 게이트 실패) is not a valid reason to skip runtime_learning_probe_decision_gate(런타임 학습 탐침 결정 게이트). If pre-gate signal rows(사전 게이트 신호 행) can define a runtime_learning_probe_candidate(런타임 학습 탐침 후보), choose run_probe/run_after_repair(탐침 실행/수리 후 탐침 실행). If no actionable runtime surface(실행 가능한 런타임 표면 없음) exists, record at least one repair_attempt(수리 시도) before blocked/inconclusive(차단/불충분)."
   grok_small_review_rule: "Grok review(그록 검토) is retired/archive-only(퇴역/보관 전용) and never creates a new call, receipt, gate, or external review path."
   five_stage_retrospective_due_rule: "Five-stage Grok retrospective(5단계 그록 회고) is retired/archive-only; preserve records and do not block future frontier stages."
   frontier_extra_stage_due_rule: "Before opening the next frontier stage or continuing a broad ONNX goal(넓은 ONNX 목표), run frontier_extra_stage_due_check(전선 추가 단계 도래 점검). If due, open and close E01/E02/E03 before the resume frontier."
@@ -43,6 +45,7 @@ verification_profiles:
   purpose: "Make /goal(목표) verification claim-driven(주장 기반) and scope-bound(범위 제한) instead of arbitrary or full-stack by default; keep governance lightweight(운영은 가볍게) while preserving heavyweight evidence(무거운 근거)."
   governance_weight_rule: "Do not create a new gate, overlay, family, skill, agent call, or review pass(새 게이트/오버레이/작업군/스킬/요원 호출/검토 회차) solely because this balance rule exists."
   runtime_probe_reluctance_rule: "If runtime/materialization/handoff/economics claim(런타임/물질화/인계/경제성 주장) is protected, runtime_probe(런타임 탐침) is a required active verification path(능동 검증 경로) unless the packet lowers the claim boundary(주장 경계) after a recovery attempt."
+  runtime_learning_probe_guard_rule: "runtime_learning_probe(런타임 학습 탐침) separates strong_candidate(강한 후보) from learning_candidate(학습 후보). Candidate gate failure(후보 게이트 실패), weak proxy KPI(약한 프록시 KPI), low expected density(낮은 예상 밀도), long/short imbalance(롱숏 비대칭), or cost(비용)는 not-run reason(미실행 사유)이 아니다."
   required_packet_fields:
     - profile_id
     - claim_surface
@@ -88,15 +91,53 @@ verification_profiles:
         - kpi_contract_audit
         - required_gate_coverage_audit
       allowed_claim_boundary: "Experiment result(실험 결과) only; no MT5 runtime authority."
+    runtime_learning_probe:
+      intent: "Runtime learning probe decision(런타임 학습 탐침 결정) for proxy scouts or weak candidates where MT5 learning evidence may still be valuable."
+      extra_required_gates:
+        - runtime_learning_probe_decision_gate
+        - required_gate_coverage_audit
+        - final_claim_guard
+      allowed_claim_boundary: "Runtime learning decision recorded(런타임 학습 결정 기록됨) only; not runtime verified, economics pass, materialization ready, operating promotion, or runtime authority(런타임 검증/경제성 통과/물질화 준비/운영 승격/런타임 권위 아님)."
+      required_decision_fields:
+        - pre_gate_signal_count
+        - strong_candidate_count
+        - runtime_learning_probe_candidate_count
+        - runtime_surface_status
+        - mt5_action
+        - not_run_reason_code
+        - repair_attempt_required
+        - repair_attempts
+        - forbidden_skip_basis_seen
+        - claim_effect
+      forbidden_not_run_reason_codes:
+        - proxy_bad
+        - candidate_gate_failed
+        - not_strong_candidate
+        - pf_dd_poor
+        - low_trade_count_expected
+        - long_short_imbalanced
+        - cost_expensive
+        - agent_recommended_skip
+        - candidate_0
+      allowed_not_run_reason_codes_after_repair:
+        - no_signal_rows_after_repair
+        - no_deterministic_decision_rule_after_repair
+        - no_entry_exit_translation_after_repair
+        - no_runtime_substrate_after_repair
+        - data_invalid_pre_runtime
+        - mt5_environment_blocked_after_attempt
+        - explicit_user_scope_excludes_mt5
     runtime_probe:
       intent: "MT5/ONNX/EA runtime observation or Strategy Tester materialization(MT5/ONNX/EA 런타임 관찰 또는 전략 테스터 물질화), chosen when runtime/materialization/handoff/economics claims(런타임/물질화/인계/경제성 주장) need active verification(능동 검증)."
       extra_required_gates:
         - runtime_evidence_gate
+        - mt5_runtime_probe_contract_audit
         - kpi_contract_audit
         - required_gate_coverage_audit
         - final_claim_guard
       allowed_claim_boundary: "Runtime probe observation(런타임 탐침 관찰) only; not operating promotion or runtime authority."
       reluctance_guard: "Do not mark runtime_evidence_gate(런타임 근거 게이트) not_applicable_with_reason(사유 있는 해당 없음) because the probe is costly/expensive(비용이 듦). Attempt the narrow sufficient probe(좁고 충분한 탐침) or lower the claim boundary(주장 경계)."
+      mt5_contract_guard: "MT5 runtime probe contract(MT5 런타임 탐침 계약)는 foundation/config/mt5_runtime_probe_contract.yaml을 사용한다. Standard runtime_probe(표준 런타임 탐침)는 validation_is(검증 내부) 2025.01.02->2025.10.01, oos(표본외) 2025.10.01->2026.04.13, /portable(포터블 모드)를 요구한다. validation_is(검증 내부)가 정상 존재하고 oos(표본외)가 2026년 4월 stage-native horizon(단계 고유 종료선)까지 있으면 2026년 6월까지 확장하지 않는다. 수리/개발 여지가 남아도 같은 2026년 4월 종료선 안에서 다시 수리/개발하고 닫는다. runtime_probe_completed(런타임 탐침 완료)는 두 split(분할)과 completed Strategy Tester report(완료 전략 테스터 보고서)가 모두 있어야 한다."
     stage_closeout:
       intent: "Stage transition or closeout(단계 전환 또는 마감)."
       extra_required_gates:

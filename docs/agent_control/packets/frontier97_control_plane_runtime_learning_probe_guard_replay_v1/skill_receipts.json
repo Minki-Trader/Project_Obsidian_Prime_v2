@@ -1,0 +1,139 @@
+{
+  "receipts": [
+    {
+      "packet_id": "frontier97_control_plane_runtime_learning_probe_guard_replay_v1",
+      "skill": "obsidian-runtime-parity",
+      "status": "executed",
+      "python_artifact": "stage_pipelines/stage_frontier_97/frontier97_runtime_learning_probe_guard_replay.py",
+      "runtime_artifact": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "compared_surface": "F97 score_sample side signal -> one-feature EBM table -> MT5 RuntimeProbeEA telemetry",
+      "parity_level": "runtime_learning_probe_attempt_only",
+      "runtime_learning_probe_decision": "runtime_learning_probe_candidate_count=1; mt5_action=run_probe; repair_attempts=1; forbidden_skip_basis_seen=[]",
+      "tester_identity": "US100 M5, Model=4, Deposit=500, Leverage=1:100, 2025.01.03..2025.02.07",
+      "missing_evidence": [
+        "Strategy Tester report artifact missing",
+        "trade-list/economics report missing"
+      ],
+      "allowed_claims": [
+        "runtime_learning_probe_decision_recorded",
+        "f97_replay_attempt_recorded"
+      ],
+      "forbidden_claims": [
+        "runtime_authority",
+        "operating_promotion",
+        "live_readiness",
+        "goal_achieve",
+        "economics_pass",
+        "materialization_ready",
+        "handoff_complete"
+      ]
+    },
+    {
+      "packet_id": "frontier97_control_plane_runtime_learning_probe_guard_replay_v1",
+      "skill": "obsidian-backtest-forensics",
+      "status": "executed",
+      "tester_report": "missing Strategy Tester HTML/report artifact; telemetry and summary exist",
+      "tester_settings": "US100 M5, Model=4, Deposit=500, Leverage=1:100, FromDate=2025.01.03, ToDate=2025.02.07",
+      "spread_commission_slippage": "not trusted for economics because Strategy Tester report is missing",
+      "trade_list_identity": "not available; telemetry summary records 45 order_attempt_count and 45 order_fill_count only",
+      "runtime_learning_probe_decision": "run_probe selected after repair01 materialized single-signal EBM table and feature matrix",
+      "forensic_gaps": [
+        "Strategy Tester report missing",
+        "trade list missing",
+        "PF/DD/net profit unavailable"
+      ]
+    },
+    {
+      "packet_id": "frontier97_control_plane_runtime_learning_probe_guard_replay_v1",
+      "skill": "obsidian-result-judgment",
+      "status": "executed",
+      "judgment_boundary": "runtime_learning_probe_replay_only",
+      "allowed_claims": [
+        "runtime_learning_probe_decision_recorded",
+        "runtime_learning_guard_hardened",
+        "f97_replay_attempt_recorded"
+      ],
+      "forbidden_claims": [
+        "runtime_authority",
+        "operating_promotion",
+        "live_readiness",
+        "goal_achieve",
+        "economics_pass",
+        "materialization_ready",
+        "handoff_complete"
+      ],
+      "evidence_used": [
+        "runtime_learning_probe_decision_gate_actual.json",
+        "mt5_attempt_result.json",
+        "mt5_runtime_learning_probe_summary.json",
+        "targeted pytest test_gate.json"
+      ],
+      "runtime_learning_probe_decision": "strong_candidate_count=0 but runtime_learning_probe_candidate_count=1, mt5_action=run_probe"
+    },
+    {
+      "packet_id": "frontier97_control_plane_runtime_learning_probe_guard_replay_v1",
+      "skill": "obsidian-task-force-review",
+      "status": "executed",
+      "trigger_reason": "formal review required for policy/control-plane/runtime guard change",
+      "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+      "agents_used": [
+        "agent_03_philosophy_policy_skill_governance",
+        "agent_04_evidence_control_plane",
+        "agent_08_mt5_onnx_runtime"
+      ],
+      "actual_subagent_calls": [
+        {
+          "roster_agent_id": "agent_03_philosophy_policy_skill_governance",
+          "spawned_agent_id": "019ee0f0-3973-71a0-a0ca-39a991082041",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification"
+        },
+        {
+          "roster_agent_id": "agent_04_evidence_control_plane",
+          "spawned_agent_id": "019ee0f0-5669-7172-b946-13f0472ebbe8",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "needs_local_verification"
+        },
+        {
+          "roster_agent_id": "agent_08_mt5_onnx_runtime",
+          "spawned_agent_id": "019ee0f0-e244-7543-82f6-5068e93e2f34",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted"
+        }
+      ],
+      "review_requirement": "required",
+      "model_policy": "inherited parent Codex model; registry floor gpt-5.5 xhigh remains policy text only",
+      "bounded_evidence": [
+        "work_packet.yaml",
+        "runtime_learning_probe_decision_gate_actual.json",
+        "mt5_runtime_learning_probe_summary.json",
+        "test_gate.json"
+      ],
+      "advice_classification": {
+        "agent_03": "accepted after local verification adds missing closeout artifacts",
+        "agent_04": "accepted for narrow guard after local verification adds missing closeout artifacts",
+        "agent_08": "accepted"
+      },
+      "local_verification": [
+        "skill_receipt_schema_lint executed",
+        "codex_task_force_review_packet recorded",
+        "closeout_report_check executed",
+        "required_gate_coverage_audit executed",
+        "final_claim_guard executed through closeout_gate"
+      ],
+      "final_codex_direction": "accept narrow runtime learning probe guard hardening; forbid runtime/economics/materialization authority",
+      "forbidden_claim_check": [
+        "runtime_authority forbidden",
+        "operating_promotion forbidden",
+        "live_readiness forbidden",
+        "goal_achieve forbidden",
+        "economics_pass forbidden",
+        "materialization_ready forbidden",
+        "handoff_complete forbidden"
+      ]
+    }
+  ]
+}

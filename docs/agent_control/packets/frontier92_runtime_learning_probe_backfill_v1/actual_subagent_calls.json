@@ -1,0 +1,32 @@
+{
+  "agents_called": [
+    {
+      "accepted_points": [
+        "F92 is not a strong candidate because candidate_count=0.",
+        "F92 proxy_scores_sample contains timestamp, split, side, and strength, so it can be repaired into a runtime learning surface.",
+        "The correct mt5_action is run_after_repair, not blocked before repair.",
+        "proxy_score_sample is a diagnostic sample and cannot support runtime_probe_completed."
+      ],
+      "advice_classification": "accepted_with_local_verification",
+      "claim_effect": "advisory_only_no_reviewed_pass",
+      "local_verification_update": [
+        "Repair01 materialized the F92 best diagnostic side column into a one-feature runtime learning surface.",
+        "MT5 Strategy Tester is run on validation_is and oos standard periods through the shared MT5 runtime probe contract.",
+        "Completion claim guard blocks runtime_probe_completed because the runtime_surface_contract marks the source as proxy_score_sample."
+      ],
+      "nickname": "Maxwell",
+      "opinion_classification": "needs_local_verification",
+      "remit": "F92 repair-first runtime learning probe materialization advice",
+      "result_status": "completed",
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "scope_caveat": "This packet records runtime learning observation only; full-period deterministic/sparse surface regeneration is required for completion claims.",
+      "spawned_agent_id": "019ee31e-8cd9-7a22-be3b-62c95a7392a6",
+      "subagent_id": "019ee31e-8cd9-7a22-be3b-62c95a7392a6",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    }
+  ],
+  "agents_completed_count": 1,
+  "agents_requested_count": 1,
+  "call_mode": "micro_consult",
+  "claim_effect": "advisory_only_no_reviewed_pass"
+}

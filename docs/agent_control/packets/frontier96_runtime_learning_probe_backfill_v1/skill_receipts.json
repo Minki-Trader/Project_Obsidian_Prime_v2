@@ -1,0 +1,126 @@
+{
+  "receipts": [
+    {
+      "allowed_claims": [
+        "runtime_probe_observation",
+        "inconclusive_runtime_learning_record"
+      ],
+      "compared_surface": "F96 sparse score_sample side signal -> one-feature EBM table -> MT5 RuntimeProbeEA telemetry",
+      "forbidden_claims": [
+        "runtime_authority",
+        "operating_promotion",
+        "live_readiness",
+        "goal_achieve",
+        "economics_pass",
+        "materialization_ready",
+        "handoff_complete"
+      ],
+      "missing_evidence": [
+        "full signal surface regeneration not performed in this packet"
+      ],
+      "packet_id": "frontier96_runtime_learning_probe_backfill_v1",
+      "parity_level": "runtime_learning_probe_observation_only",
+      "python_artifact": "stage_pipelines/stage_frontier_96/frontier96_runtime_learning_probe_backfill.py",
+      "runtime_artifact": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "runtime_learning_probe_decision": "runtime_learning_probe_candidate_count=1; mt5_action=run_probe; repair_attempts=1; forbidden_skip_basis_seen=[]",
+      "skill": "obsidian-runtime-parity",
+      "status": "executed",
+      "tester_identity": "US100 M5, Model=4, Deposit=500, Leverage=1:100, validation_is 2025.01.02..2025.10.01, oos 2025.10.01..2026.06.18"
+    },
+    {
+      "forensic_gaps": [
+        "score_sample is sparse, not full prediction surface"
+      ],
+      "packet_id": "frontier96_runtime_learning_probe_backfill_v1",
+      "skill": "obsidian-backtest-forensics",
+      "spread_commission_slippage": "broker-native tester behavior; no added modeled commission",
+      "status": "executed",
+      "tester_report": "validation_is and oos Strategy Tester reports completed",
+      "tester_settings": "US100 M5, Model=4, Deposit=500, Leverage=1:100, /portable, ReplaceReport=1, ShutdownTerminal=1",
+      "trade_list_identity": "Strategy Tester report metrics and EA telemetry hashes recorded",
+      "runtime_learning_probe_decision": "F96 candidate gate count was zero, but score_sample repair produced runtime_learning_probe_candidate_count=1 and mt5_action=run_probe; completed tester reports remain observation-only because OOS economics collapsed."
+    },
+    {
+      "allowed_claims": [
+        "runtime_probe_observation",
+        "inconclusive_runtime_learning_record"
+      ],
+      "evidence_used": [
+        "runtime_probe_backfill_receipt.json",
+        "mt5_runtime_probe_contract_audit.json",
+        "runtime_learning_probe_decision_gate_actual.json",
+        "test_gate.json"
+      ],
+      "forbidden_claims": [
+        "runtime_authority",
+        "operating_promotion",
+        "live_readiness",
+        "goal_achieve",
+        "economics_pass",
+        "materialization_ready",
+        "handoff_complete"
+      ],
+      "judgment_boundary": "runtime_learning_probe_observation_only",
+      "packet_id": "frontier96_runtime_learning_probe_backfill_v1",
+      "runtime_learning_probe_decision": "validation_is weak positive but high DD; oos negative collapse; no economics pass",
+      "skill": "obsidian-result-judgment",
+      "status": "executed"
+    },
+    {
+      "actual_subagent_calls": [
+        {
+          "accepted_points": [
+            "F96 best diagnostic material is ridge_signed_utility_edge_full58_q88.",
+            "F96 score_sample side/confidence can support a runtime learning observation after repair.",
+            "F96 score_sample is sparse and not a full signal surface; therefore no runtime authority or economics pass claim is allowed."
+          ],
+          "advice_classification": "accepted_with_local_verification_and_scope_caveat",
+          "claim_effect": "advisory_only_no_reviewed_pass",
+          "nickname": "Franklin",
+          "opinion_classification": "needs_local_verification",
+          "remit": "F96 runnable surface and repair-first runtime probe materialization advice",
+          "roster_agent_id": "agent_08_mt5_onnx_runtime",
+          "scope_caveat": "This packet uses sparse score_sample repair for immediate MT5 observation; full signal surface regeneration remains a next repair option.",
+          "result_status": "completed",
+          "spawned_agent_id": "019ee2ec-2582-78a1-9d83-28f7e68e5644",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "subagent_id": "019ee2ec-2582-78a1-9d83-28f7e68e5644"
+        }
+      ],
+      "advice_classification": "accepted_with_local_verification_and_scope_caveat",
+      "agents_used": [
+        "agent_08_mt5_onnx_runtime"
+      ],
+      "bounded_evidence": [
+        "actual_subagent_calls.json",
+        "runtime_probe_backfill_receipt.json",
+        "mt5_runtime_probe_contract_audit.json"
+      ],
+      "claim_boundary": "advisory_only_no_reviewed_pass_no_runtime_authority_no_economics_pass",
+      "final_codex_direction": "accept sparse repair as runtime learning observation only; keep full surface regeneration as next repair option",
+      "forbidden_claim_check": [
+        "runtime_authority forbidden",
+        "operating_promotion forbidden",
+        "live_readiness forbidden",
+        "goal_achieve forbidden",
+        "economics_pass forbidden",
+        "materialization_ready forbidden",
+        "handoff_complete forbidden"
+      ],
+      "packet_id": "frontier96_runtime_learning_probe_backfill_v1",
+      "review_requirement": "micro_consult",
+      "model_policy": "inherited_parent_model_no_model_strength_relaxes_gate_threshold_evidence_or_claim_boundary",
+      "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+      "skill": "obsidian-task-force-review",
+      "status": "executed",
+      "local_verification": [
+        "F96 score_sample was inspected and narrowed to ridge_signed_utility_edge_full58_q88.",
+        "The sparse score_sample surface was materialized into one-feature runtime artifacts.",
+        "MT5 Strategy Tester ran validation_is and oos through /portable.",
+        "mt5_runtime_probe_contract_audit passed with completed Strategy Tester reports for both standard splits.",
+        "OOS metrics were negative, so economics_pass and runtime_authority remain forbidden."
+      ],
+      "trigger_reason": "active goal requires Task Force collaboration for runtime probe backfill"
+    }
+  ]
+}

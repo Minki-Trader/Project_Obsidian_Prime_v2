@@ -54,6 +54,10 @@ EA(`Expert Advisor`, 전문가 자문), Strategy Tester(전략 테스터), `.set
 
 절대경로(absolute path, 절대경로)는 로컬 진단(local diagnostic, 로컬 진단), 사용자용 클릭 링크(clickable link, 클릭 링크), 외부 도구(external tool, 외부 도구), MT5 인계(MT5 handoff, MT5 인계)에만 쓴다.
 
+깊은 산출물 경로(deep artifact path, 깊은 산출물 경로)는 `stages/*`, `docs/agent_control/packets/*`, MT5 report/export/telemetry tree(MT5 보고서/내보내기/텔레메트리 트리)를 포함한다. 이 표면에서는 discovery(발견)를 repo-relative `rg --files`/`rg`로 먼저 하고, 첫 content read(내용 읽기), CSV/JSON read(표/제이슨 읽기), existence check(존재 확인)는 일반 `Path.read_text/read_bytes/open/exists`나 PowerShell(파워셸) direct read(직접 읽기)가 아니라 `foundation.control_plane.ledger.io_path` 또는 `path_exists`로 시작한다.
+
+효과(effect, 효과)는 Windows long path(윈도우 긴 경로) 실패를 missing artifact(누락 산출물), invalid setup(무효 설정), blocked result(차단 결과)로 오판하기 전에 막고, durable identity(지속 정체성)는 계속 repo-relative path(저장소 상대 경로)와 hash(해시)로 남기는 것이다.
+
 ## 인코딩(Encoding, 인코딩)
 
 한국어 `.md`와 `.txt` 문서는 UTF-8 with BOM(UTF-8 BOM 포함)을 쓴다.

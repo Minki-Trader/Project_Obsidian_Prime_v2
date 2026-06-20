@@ -9,6 +9,10 @@ from typing import Any, Mapping, Sequence
 import pandas as pd
 
 from foundation.control_plane.ledger import io_path, json_ready, path_exists
+from foundation.control_plane.mt5_runtime_probe_contract import (
+    ensure_required_terminal_args,
+    required_terminal_args,
+)
 from foundation.mt5.runtime_artifacts import REPO_ROOT, sha256_file
 
 
@@ -21,6 +25,7 @@ def run_mt5_tester(
     tester_profile_ini_path: Path | None = None,
     timeout_seconds: int = 300,
     terminal_extra_args: Sequence[str] | None = None,
+    enforce_runtime_probe_contract: bool = True,
 ) -> dict[str, Any]:
     execution_ini_path = ini_path
     ini_copy_payload = None
@@ -36,13 +41,25 @@ def run_mt5_tester(
             "encoding_policy": "utf-8-no-bom",
         }
 
-    command = [str(terminal_path), *(terminal_extra_args or []), f"/config:{execution_ini_path.resolve()}"]
+    effective_extra_args = (
+        ensure_required_terminal_args(terminal_extra_args)
+        if enforce_runtime_probe_contract
+        else tuple(str(arg) for arg in (terminal_extra_args or ()))
+    )
+    command = [str(terminal_path), *effective_extra_args, f"/config:{execution_ini_path.resolve()}"]
+    terminal_contract = {
+        "enforced": bool(enforce_runtime_probe_contract),
+        "required_terminal_args": list(required_terminal_args()),
+        "terminal_extra_args_effective": list(effective_extra_args),
+        "portable_arg_present": any(str(arg).lower() == "/portable" for arg in effective_extra_args),
+    }
     if not path_exists(terminal_path):
         return {
             "status": "blocked",
             "command": command,
             "returncode": None,
             "blocker": "terminal_missing",
+            "mt5_runtime_probe_contract": terminal_contract,
         }
     set_copy_payload = None
     if set_path is not None and tester_profile_set_path is not None:
@@ -62,6 +79,7 @@ def run_mt5_tester(
         "stderr": proc.stderr[-2000:],
         "tester_profile_set_copy": set_copy_payload,
         "tester_profile_ini_copy": ini_copy_payload,
+        "mt5_runtime_probe_contract": terminal_contract,
     }
 
 

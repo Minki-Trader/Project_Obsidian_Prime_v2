@@ -1,0 +1,150 @@
+{
+  "allowed_claims": [
+    "runtime_probe_observation",
+    "negative_runtime_learning_record"
+  ],
+  "candidate_surface_status": "learning_candidate_repaired_and_runtime_observed_negative",
+  "claim_boundary": "runtime_learning_probe_observation_only_no_f97_success_rewrite_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_economics_pass",
+  "created_at_utc": "2026-06-20T02:38:42Z",
+  "execution": [
+    {
+      "attempt_name": "f97_runtime_learning_validation_is",
+      "command": [
+        "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\terminal64.exe",
+        "/portable",
+        "/config:C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\MQL5\\Profiles\\Tester\\opv2_frontier97_control_plane_runtime_learning_probe__f97_runtime_learning_validation_is.ini"
+      ],
+      "portable_arg_present": true,
+      "returncode": 0,
+      "split": "validation_is",
+      "status": "completed",
+      "summary_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f97_runtime_learning/frontier97_control_plane_runtime_learning_probe_guard_replay_v1/telemetry/f97_runtime_learning_validation_is_summary.csv",
+      "summary_sha256": "9be10cd251c9adad1bd19f777a34f54f8f544c0b4bce56de6f31ec6007e79ca7",
+      "telemetry_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f97_runtime_learning/frontier97_control_plane_runtime_learning_probe_guard_replay_v1/telemetry/f97_runtime_learning_validation_is_telemetry.csv",
+      "telemetry_sha256": "679d55023481279a44382745a9ed5209b390b8549e72f3d11acc9e0a33ea5be3"
+    },
+    {
+      "attempt_name": "f97_runtime_learning_oos",
+      "command": [
+        "C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\terminal64.exe",
+        "/portable",
+        "/config:C:\\Users\\awdse\\AppData\\Local\\ObsidianPrime\\mt5_portable_run329E\\MQL5\\Profiles\\Tester\\opv2_frontier97_control_plane_runtime_learning_probe__f97_runtime_learning_oos.ini"
+      ],
+      "portable_arg_present": true,
+      "returncode": 0,
+      "split": "oos",
+      "status": "completed",
+      "summary_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f97_runtime_learning/frontier97_control_plane_runtime_learning_probe_guard_replay_v1/telemetry/f97_runtime_learning_oos_summary.csv",
+      "summary_sha256": "684ceec0fb1f65f19e88b5893f41cc728966c243fa75bd5cf3f07d36da4a27ea",
+      "telemetry_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f97_runtime_learning/frontier97_control_plane_runtime_learning_probe_guard_replay_v1/telemetry/f97_runtime_learning_oos_telemetry.csv",
+      "telemetry_sha256": "f47e36ce87d28c24e57df31c1fc1b7d00dd2305a72925f3e31c876d2c0725ed1"
+    }
+  ],
+  "forbidden_claims": [
+    "economics_pass",
+    "runtime_authority",
+    "operating_promotion",
+    "live_readiness",
+    "goal_achieve",
+    "selected_baseline",
+    "materialization_ready",
+    "handoff_complete"
+  ],
+  "mt5_action": "run_after_repair",
+  "mt5_kpis": [
+    {
+      "expectancy": -7.07,
+      "feature_ready_count": 160,
+      "fill_count": 45,
+      "gross_loss": -447.61,
+      "gross_profit": 136.37,
+      "long_trade_count": 22,
+      "max_drawdown_percent": 82.8,
+      "model_fail_count": 52648,
+      "model_ok_count": 160,
+      "net_profit": -311.24,
+      "order_attempt_count": 45,
+      "profit_factor": 0.3,
+      "recovery_factor": -0.38,
+      "short_trade_count": 22,
+      "skip_count": 52648,
+      "split": "validation_is",
+      "status": "completed",
+      "trade_count": 44,
+      "win_rate_percent": 27.27
+    },
+    {
+      "expectancy": -13.35,
+      "feature_ready_count": 160,
+      "fill_count": 40,
+      "gross_loss": -676.74,
+      "gross_profit": 182.7,
+      "long_trade_count": 20,
+      "max_drawdown_percent": 99.11,
+      "model_fail_count": 43262,
+      "model_ok_count": 160,
+      "net_profit": -494.04,
+      "order_attempt_count": 40,
+      "profit_factor": 0.27,
+      "recovery_factor": -0.74,
+      "short_trade_count": 17,
+      "skip_count": 43262,
+      "split": "oos",
+      "status": "completed",
+      "trade_count": 37,
+      "win_rate_percent": 32.43
+    }
+  ],
+  "packet_id": "frontier97_control_plane_runtime_learning_probe_guard_replay_v1",
+  "repair_attempts": [
+    {
+      "attempt_id": "repair01_f97_score_sample_to_standard_validation_oos_runtime_surface",
+      "effect": "Converted the previous validation-only replay into standard validation_is plus oos MT5 runtime learning attempts.",
+      "result": "materialized_and_executed"
+    }
+  ],
+  "runtime_learning_judgment": "negative_runtime_learning_probe_observation_completed_no_economics_pass",
+  "selected_surface_path": "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97B/proxy_scout/score_sample.csv",
+  "source_run_id": "frontier97B_first_hit_survival_hazard_event_sparse_proxy_scout_v1",
+  "stage_id": "stage_frontier_97__first_hit_survival_hazard_event_sparse_axis",
+  "standard_contract": {
+    "audit_path": "stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97_control_plane_runtime_learning_probe_guard_replay_v1/mt5_runtime_probe_contract_audit.json",
+    "audit_status": "pass",
+    "contract_path": "foundation/config/mt5_runtime_probe_contract.yaml",
+    "required_execution": "terminal64.exe /portable with Strategy Tester ini",
+    "required_splits": [
+      "validation_is",
+      "oos"
+    ],
+    "standard_periods": {
+      "oos": [
+        "oos",
+        "2025.10.01",
+        "2026.06.18"
+      ],
+      "validation_is": [
+        "validation",
+        "2025.01.02",
+        "2025.10.01"
+      ]
+    }
+  },
+  "strategy_tester_reports": [
+    {
+      "attempt_name": "f97_runtime_learning_validation_is",
+      "html_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97_control_plane_runtime_learning_probe_guard_replay_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier97_control_plane_runtime_learning_probe_guard_replay_v1_f97_runtime_learning_validation_is.htm",
+      "html_sha256": "f5ba34347937a97782c3a83d79426dc9e9b139929dccf292609b8e92b8cf6cf8",
+      "report_name": "Project_Obsidian_Prime_v2_frontier97_control_plane_runtime_learning_probe_guard_replay_v1_f97_runtime_learning_validation_is",
+      "split": "validation_is",
+      "status": "completed"
+    },
+    {
+      "attempt_name": "f97_runtime_learning_oos",
+      "html_path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_97__first_hit_survival_hazard_event_sparse_axis/02_runs/frontier97_control_plane_runtime_learning_probe_guard_replay_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier97_control_plane_runtime_learning_probe_guard_replay_v1_f97_runtime_learning_oos.htm",
+      "html_sha256": "2cb8c1b3293f3af32d66312104dafe421e889c87deb4e72ac42013e78daff1fe",
+      "report_name": "Project_Obsidian_Prime_v2_frontier97_control_plane_runtime_learning_probe_guard_replay_v1_f97_runtime_learning_oos",
+      "split": "oos",
+      "status": "completed"
+    }
+  ]
+}

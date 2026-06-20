@@ -1,0 +1,91 @@
+{
+  "mt5_attempt_blocker": "",
+  "mt5_attempt_result_status": "completed",
+  "runtime_learning_probe_decision": {
+    "claim_effect": "runtime_learning_probe_decision_only_no_runtime_authority_no_economics_pass",
+    "forbidden_skip_basis_seen": [],
+    "mt5_action": "run_after_repair",
+    "not_run_reason_code": "",
+    "pre_gate_signal_count": 480,
+    "repair_attempt_required": true,
+    "repair_attempts": [
+      {
+        "action": "materialized F91 best diagnostic proxy_scores_sample side column into a one-feature EA-readable runtime learning surface",
+        "attempt_id": "repair01_f91_proxy_scores_sample_to_standard_validation_oos_runtime_surface",
+        "feature_artifacts": [
+          {
+            "feature_count": 1,
+            "feature_order_hash": "d1399d1286603c97ffb547a12013e73ba5d4ce2457db02bcd5126007cffc097a",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "variant_id",
+              "source_tier",
+              "route_role",
+              "label",
+              "future_log_return_12",
+              "regime_key",
+              "entry_decision"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91_runtime_learning_probe_backfill_v1/mt5/f91_runtime_learning_validation_is_signal_matrix.csv",
+            "rows": 240,
+            "sha256": "fa9fd395802b4cd9b8866bb2798ece5a821eda30ed818b71f7fc9d004815ad26"
+          },
+          {
+            "feature_count": 1,
+            "feature_order_hash": "d1399d1286603c97ffb547a12013e73ba5d4ce2457db02bcd5126007cffc097a",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "variant_id",
+              "source_tier",
+              "route_role",
+              "label",
+              "future_log_return_12",
+              "regime_key",
+              "entry_decision"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91_runtime_learning_probe_backfill_v1/mt5/f91_runtime_learning_oos_signal_matrix.csv",
+            "rows": 240,
+            "sha256": "d8a0ac3fa1c43d476417522cc2e3711eaae957ec9ec6fbed81da699c129a72f3"
+          }
+        ],
+        "model_artifact": {
+          "feature_order": [
+            "f91_runtime_learning_signal"
+          ],
+          "feature_order_hash": "d1399d1286603c97ffb547a12013e73ba5d4ce2457db02bcd5126007cffc097a",
+          "format": "single_discrete_signal_ebm_score_table_csv_v1",
+          "parity_sample_probabilities": [
+            [
+              0.9993295245830858,
+              0.0003352377084572098,
+              0.0003352377084572098
+            ],
+            [
+              0.0003352377084572098,
+              0.9993295245830858,
+              0.0003352377084572098
+            ],
+            [
+              0.00033523770845720973,
+              0.00033523770845720973,
+              0.9993295245830855
+            ]
+          ],
+          "parity_sample_values": [
+            -1.0,
+            0.0,
+            1.0
+          ],
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_91__regime_conditioned_density_cost_abstention_axis/02_runs/frontier91_runtime_learning_probe_backfill_v1/models/f91_runtime_learning_signal_score_table.csv",
+          "runtime_policy": "-1 short, 0 flat, +1 long through EBM-table softmax and EA probability thresholds",
+          "sha256": "4e322f3a3601295d8f2029bf4dc0ce88a5b6b2bf1b19415d9b5a6831ca61ed71"
+        },
+        "result": "materialized",
+        "surface_caveat": "proxy_score_sample diagnostic sample; no runtime_probe_completed claim"
+      }
+    ],
+    "runtime_learning_probe_candidate_count": 1,
+    "runtime_surface_status": "repair_required",
+    "strong_candidate_count": 0
+  }
+}

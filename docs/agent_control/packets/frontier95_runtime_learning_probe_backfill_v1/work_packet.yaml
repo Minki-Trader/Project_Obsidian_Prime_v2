@@ -1,0 +1,245 @@
+version: work_packet_schema_v2_1
+packet_lifecycle: new_packet
+packet_id: frontier95_runtime_learning_probe_backfill_v1
+created_at_utc: '2026-06-20T03:11:21Z'
+user_request:
+  user_quote: frontier stage 최신 스테이지를 소급하여 MT5 runtime probe가 생략된 stage들을 보강하며 repair도
+    수행
+  requested_action: runtime_probe_backfill_repair
+  requested_count: 1
+  ambiguous_terms: []
+current_truth:
+  active_stage: stage_frontier_98__excursion_tail_veto_payoff_asymmetry_axis
+  latest_backfilled_stage: F96
+  target_stage: F95
+  f95_historical_judgment: negative_valid_then_rotation_state_transition_embedding_no_candidate_no_runtime_trigger
+  boundary: f95_closeout_not_rewritten
+preflight:
+  needs_clarification: false
+  selected_option_id: reverse_order_f95_after_f96
+  selected_option_user_quote: 'active goal continuation: backfill omitted runtime
+    probes with repair and Task Force collaboration'
+  blocked_until_answer: false
+interpreted_scope:
+  work_families:
+  - runtime_backtest
+  - policy_control_plane_hardening
+  target_surfaces:
+  - stage_pipelines/stage_frontier_95/frontier95_runtime_learning_probe_backfill.py
+  - stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95B/proxy_scout/score_sample.csv
+  - foundation/config/mt5_runtime_probe_contract.yaml
+  scope_units:
+  - f95_sparse_long_only_sample_repair
+  - mt5_runtime_learning_attempt
+  - contract_audit
+  execution_layers:
+  - python_local_execution
+  - mt5_execution
+  - gate_execution
+  mutation_policy:
+    allowed: true
+    scope: targeted_f95_backfill_artifacts
+  evidence_layers:
+  - runtime_learning_probe_decision
+  - f95_score_sample_materialization
+  - mt5_compile_terminal_telemetry
+  - mt5_runtime_probe_contract_audit
+  - tests
+  - task_force_micro_consult
+  reduction_policy:
+    reduction_allowed: false
+  claim_boundary:
+    allowed_claims: &id001
+    - runtime_learning_probe_decision_recorded
+    - f95_repair_attempt_recorded
+    - runtime_probe_observation
+    - inconclusive_runtime_learning_record
+    forbidden_claims: &id002
+    - goal_achieve
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - economics_pass
+    - selected_baseline
+    - materialization_ready
+    - handoff_complete
+work_classification:
+  primary_family: runtime_backtest
+  detected_families:
+  - runtime_backtest
+  - policy_control_plane_hardening
+  touched_surfaces:
+  - f95_stage_artifacts
+  - mt5_runtime_probe_contract
+  - task_force_receipt
+  mutation_intent: targeted_update
+  execution_intent: run_standard_mt5_probe_after_repair
+risk_vector_scan:
+  risks:
+    sparse_sample_overclaim: high
+    long_only_overclaim: high
+    f95_success_rewrite: high
+    thin_oos_overlooked: high
+  hard_stop_risks:
+  - do_not_claim_runtime_authority
+  - do_not_rewrite_f95_closeout_success
+  - do_not_treat_sparse_long_only_sample_as_full_surface
+  required_decision_locks:
+  - f95_is_backfill_observation_only
+  - runtime_learning_probe_is_not_economics_pass
+  - full_surface_regeneration_remains_future_repair_option
+  required_gates:
+  - work_packet_schema_lint
+  - runtime_learning_probe_decision_gate
+  - mt5_runtime_probe_contract_audit
+  - test_gate
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - closeout_report_check
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - goal_achieve
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - economics_pass
+  - materialization_ready
+  - handoff_complete
+verification_profile:
+  profile_id: runtime_learning_probe
+  claim_surface:
+    allowed_claims: *id001
+    forbidden_claims: *id002
+    claim_boundary: f95_runtime_learning_probe_backfill_only
+  trigger_sources:
+  - active_goal_continuation
+  - F95_candidate_gate_count_zero_but_repairable_score_sample
+  - MT5_runtime_probe_anti_deferral_goal
+  protected_claims:
+  - runtime_learning_probe_decision
+  - runtime_probe_observation
+  required_evidence: &id003
+  - runtime_learning_probe_decision
+  - mt5_action
+  - repair_attempts
+  - F95 score_sample materialization
+  - MT5 compile command
+  - MT5 terminal command
+  - validation_is and oos completed Strategy Tester reports
+  - mt5_runtime_probe_contract_audit
+  - telemetry_hash
+  - summary_hash
+  - test_gate
+  - actual_subagent_calls
+  gates_not_run_with_reason:
+  - gate: runtime_evidence_gate
+    reason_code: no_runtime_authority_or_economics_pass_claim
+    reason: Standard validation_is and oos Strategy Tester reports exist, but the
+      surface is sparse long-only and validation failed while OOS is too thin; this
+      packet does not request runtime authority, economics pass, materialization-ready,
+      or handoff-complete claims.
+    claim_effect: runtime_probe_observation and inconclusive_runtime_learning_record
+      only.
+  stop_conditions:
+  - F95 runtime learning probe attempt recorded
+  - no runtime authority claim
+decision_lock:
+  locked_direction: f95_runtime_learning_probe_backfill_only
+  not_locked:
+  - selected_baseline
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  claim_boundary: runtime_learning_probe_observation_only_no_f95_success_rewrite_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_economics_pass
+work_plan:
+- step: Inspect F95 score sample and candidate gate
+  status: completed
+- step: Task Force micro consult
+  status: completed
+- step: Materialize sparse long-only runtime surface
+  status: completed
+- step: Run standard validation_is and oos MT5 probes
+  status: completed
+- step: Record receipt and closeout gates
+  status: in_progress
+evidence_contract:
+  raw_evidence:
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96B/proxy_scout/score_sample.csv
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96_runtime_learning_probe_backfill_v1/mt5_runtime_learning_probe_result.json
+  - stages/stage_frontier_96__counterfactual_action_value_policy_axis/02_runs/frontier96_runtime_learning_probe_backfill_v1/mt5_runtime_probe_contract_audit.json
+  machine_readable:
+  - docs/agent_control/packets/frontier96_runtime_learning_probe_backfill_v1/runtime_learning_probe_decision_gate_actual.json
+  - docs/agent_control/packets/frontier96_runtime_learning_probe_backfill_v1/runtime_probe_payload.json
+  - docs/agent_control/packets/frontier96_runtime_learning_probe_backfill_v1/runtime_probe_backfill_receipt.json
+  - docs/agent_control/packets/frontier96_runtime_learning_probe_backfill_v1/actual_subagent_calls.json
+  - docs/agent_control/packets/frontier96_runtime_learning_probe_backfill_v1/mt5_runtime_probe_contract_audit.json
+  human_readable:
+  - docs/agent_control/packets/frontier96_runtime_learning_probe_backfill_v1/closeout_report.md
+  required_evidence: *id003
+  produced_artifacts:
+  - runtime_probe_backfill_receipt.json
+  - mt5_runtime_learning_probe_result.json
+  - mt5_runtime_probe_contract_audit.json
+  - runtime_learning_probe_decision_actual.json
+  - actual_subagent_calls.json
+acceptance_criteria:
+  required:
+  - runtime_learning_probe_decision_gate passes
+  - mt5_runtime_probe_contract_audit counts two standard attempts, two execution results,
+    and two reports
+  - Task Force micro consult actual subagent call is recorded
+  - closeout report forbids economics/runtime authority claims
+  forbidden: *id002
+skill_routing:
+  primary_family: runtime_backtest
+  primary_skill: obsidian-runtime-parity
+  support_skills:
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  skills_considered:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  skills_selected:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  skills_not_used: []
+  required_skill_receipts:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  required_gates:
+  - work_packet_schema_lint
+  - runtime_learning_probe_decision_gate
+  - mt5_runtime_probe_contract_audit
+  - test_gate
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - closeout_report_check
+  - required_gate_coverage_audit
+  - final_claim_guard
+gates:
+  required:
+  - work_packet_schema_lint
+  - runtime_learning_probe_decision_gate
+  - mt5_runtime_probe_contract_audit
+  - test_gate
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - closeout_report_check
+  - required_gate_coverage_audit
+  - final_claim_guard
+  not_applicable_with_reason:
+    runtime_evidence_gate: Standard validation_is and oos Strategy Tester reports
+      exist, but sparse long-only surface, validation failure, and too-thin OOS
+      evidence forbid runtime/economics/materialization-ready claims.
+final_claim_policy:
+  allowed_claims: *id001
+  forbidden_claims: *id002

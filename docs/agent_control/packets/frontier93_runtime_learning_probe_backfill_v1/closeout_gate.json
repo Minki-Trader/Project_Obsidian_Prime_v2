@@ -1,0 +1,282 @@
+{
+  "packet_id": "frontier93_runtime_learning_probe_backfill_v1",
+  "status": "pass",
+  "completed_forbidden": false,
+  "audits": [
+    {
+      "audit_name": "skill_receipt_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_skills": [
+          "obsidian-runtime-parity",
+          "obsidian-backtest-forensics",
+          "obsidian-result-judgment",
+          "obsidian-task-force-review"
+        ],
+        "receipt_count": 4
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "work_packet_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "version": "work_packet_schema_v2_1",
+        "has_v2_fields": true,
+        "packet_lifecycle": "new_packet"
+      },
+      "allowed_claims": [
+        "work_packet_schema_valid"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "skill_receipt_schema_lint",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "receipt_count": 4,
+        "schema_path": "docs/agent_control/skill_receipt_schema.yaml"
+      },
+      "allowed_claims": [
+        "completed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "runtime_learning_probe_decision_gate",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "pre_gate_signal_count": 247,
+        "strong_candidate_count": 0,
+        "runtime_learning_probe_candidate_count": 1,
+        "repair_attempt_count": 1,
+        "runtime_surface_status": "repair_required",
+        "mt5_action": "run_after_repair"
+      },
+      "allowed_claims": [
+        "runtime_learning_probe_decision_recorded"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "mt5_runtime_probe_contract_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "attempts": 2,
+        "standard_attempts": 2,
+        "exception_attempts": 0,
+        "execution_results": 2,
+        "reports": 2,
+        "required_splits": [
+          "validation_is",
+          "oos"
+        ],
+        "standard_periods": {
+          "validation_is": [
+            "validation",
+            "2025.01.02",
+            "2025.10.01"
+          ],
+          "oos": [
+            "oos",
+            "2025.10.01",
+            "2026.06.18"
+          ]
+        },
+        "requested_claims": [
+          "runtime_learning_probe_decision_recorded",
+          "f93_repair_attempt_recorded",
+          "runtime_probe_observation",
+          "runtime_learning_record",
+          "completion_claim_guard_recorded"
+        ]
+      },
+      "allowed_claims": [
+        "runtime_probe_observation"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "test_gate",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "commands": [
+          {
+            "command": "python -m py_compile stage_pipelines/stage_frontier_93/frontier93_runtime_learning_probe_backfill.py",
+            "exit_code": 0
+          },
+          {
+            "command": "python stage_pipelines/stage_frontier_93/frontier93_runtime_learning_probe_backfill.py --timeout-seconds 300 --output-json docs/agent_control/packets/frontier93_runtime_learning_probe_backfill_v1/runtime_probe_payload.json",
+            "exit_code": 0
+          },
+          {
+            "command": "python -m foundation.control_plane.runtime_learning_probe_decision_gate stages/stage_frontier_93__side_balance_cost_exposure_risk_budget_axis/02_runs/frontier93_runtime_learning_probe_backfill_v1/runtime_learning_probe_decision_actual.json --output-json docs/agent_control/packets/frontier93_runtime_learning_probe_backfill_v1/runtime_learning_probe_decision_gate_actual.json",
+            "exit_code": 0
+          },
+          {
+            "command": "python -m foundation.control_plane.work_packet_schema_lint docs/agent_control/packets/frontier93_runtime_learning_probe_backfill_v1/work_packet.yaml --output-json docs/agent_control/packets/frontier93_runtime_learning_probe_backfill_v1/work_packet_schema_lint.json",
+            "exit_code": 0
+          },
+          {
+            "command": "python -m foundation.control_plane.skill_receipt_schema_lint docs/agent_control/packets/frontier93_runtime_learning_probe_backfill_v1/skill_receipts.json --requested-claim runtime_learning_probe_decision_recorded --requested-claim f93_repair_attempt_recorded --requested-claim runtime_probe_observation --requested-claim runtime_learning_record --requested-claim completion_claim_guard_recorded --output-json docs/agent_control/packets/frontier93_runtime_learning_probe_backfill_v1/skill_receipt_schema_lint.json",
+            "exit_code": 0
+          },
+          {
+            "command": "python -m py_compile foundation/control_plane/mt5_runtime_probe_contract.py foundation/control_plane/runtime_learning_probe_decision_gate.py stage_pipelines/stage_frontier_90/frontier90_runtime_learning_probe_backfill.py stage_pipelines/stage_frontier_91/frontier91_runtime_learning_probe_backfill.py stage_pipelines/stage_frontier_92/frontier92_runtime_learning_probe_backfill.py stage_pipelines/stage_frontier_93/frontier93_runtime_learning_probe_backfill.py stage_pipelines/stage_frontier_94/frontier94_runtime_learning_probe_backfill.py stage_pipelines/stage_frontier_95/frontier95_runtime_learning_probe_backfill.py stage_pipelines/stage_frontier_96/frontier96_runtime_learning_probe_backfill.py stage_pipelines/stage_frontier_97/frontier97_runtime_learning_probe_guard_replay.py",
+            "exit_code": 0
+          },
+          {
+            "command": "python -m pytest tests/test_mt5_runtime_probe_contract.py tests/test_runtime_learning_probe_decision_gate.py -q",
+            "exit_code": 0
+          }
+        ]
+      },
+      "allowed_claims": [
+        "tests_passed"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "codex_task_force_review_packet",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "actual_subagent_calls": [
+          "019ee33d-a9a8-78c0-88a9-68cb865d2f63"
+        ],
+        "agents_used_count": 1,
+        "call_mode": "micro_consult",
+        "claim_effect": "advisory_only_no_reviewed_pass",
+        "full_roster_call_reason": null
+      },
+      "allowed_claims": [
+        "task_force_micro_consult_recorded"
+      ],
+      "forbidden_claims": [
+        "task_force_reviewed_pass"
+      ]
+    },
+    {
+      "audit_name": "closeout_report_check",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "path": "docs/agent_control/packets/frontier93_runtime_learning_probe_backfill_v1/closeout_report.md",
+        "required_headings": [
+          "Conclusion",
+          "What changed",
+          "What gates passed",
+          "What gates were not applicable",
+          "What is still not enforced",
+          "Allowed claims",
+          "Forbidden claims",
+          "Next hardening step"
+        ]
+      },
+      "allowed_claims": [
+        "human_closeout_available"
+      ],
+      "forbidden_claims": []
+    },
+    {
+      "audit_name": "required_gate_coverage_audit",
+      "status": "pass",
+      "passed": true,
+      "completed_forbidden": false,
+      "findings": [],
+      "counts": {
+        "required_gates": [
+          "closeout_report_check",
+          "codex_task_force_review_packet",
+          "final_claim_guard",
+          "mt5_runtime_probe_contract_audit",
+          "required_gate_coverage_audit",
+          "runtime_learning_probe_decision_gate",
+          "skill_receipt_schema_lint",
+          "test_gate",
+          "work_packet_schema_lint"
+        ],
+        "executed_audits": [
+          "closeout_report_check",
+          "codex_task_force_review_packet",
+          "final_claim_guard",
+          "mt5_runtime_probe_contract_audit",
+          "required_gate_coverage_audit",
+          "runtime_learning_probe_decision_gate",
+          "skill_receipt_lint",
+          "skill_receipt_schema_lint",
+          "test_gate",
+          "work_packet_schema_lint"
+        ],
+        "not_applicable_with_reason": {
+          "runtime_evidence_gate": "F93 packet records runtime_probe_observation only; no runtime authority/economics/materialization claim is requested."
+        },
+        "declared_not_implemented": {}
+      },
+      "allowed_claims": [
+        "gate_coverage_complete"
+      ],
+      "forbidden_claims": []
+    }
+  ],
+  "final_claim_guard": {
+    "audit_name": "final_claim_guard",
+    "status": "pass",
+    "passed": true,
+    "completed_forbidden": false,
+    "findings": [],
+    "counts": {
+      "requested_claims": [
+        "runtime_learning_probe_decision_recorded",
+        "f93_repair_attempt_recorded",
+        "runtime_probe_observation",
+        "runtime_learning_record",
+        "completion_claim_guard_recorded"
+      ],
+      "source_audits": [
+        "skill_receipt_lint",
+        "work_packet_schema_lint",
+        "skill_receipt_schema_lint",
+        "runtime_learning_probe_decision_gate",
+        "mt5_runtime_probe_contract_audit",
+        "test_gate",
+        "codex_task_force_review_packet",
+        "closeout_report_check",
+        "required_gate_coverage_audit"
+      ]
+    },
+    "allowed_claims": [
+      "runtime_learning_probe_decision_recorded",
+      "f93_repair_attempt_recorded",
+      "runtime_probe_observation",
+      "runtime_learning_record",
+      "completion_claim_guard_recorded"
+    ],
+    "forbidden_claims": []
+  }
+}

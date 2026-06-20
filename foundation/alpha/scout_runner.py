@@ -39,6 +39,12 @@ from foundation.control_plane.ledger import (
     ledger_status as _ledger_status,
     path_exists as _path_exists,
 )
+from foundation.control_plane.mt5_runtime_probe_contract import (
+    STANDARD_RUNTIME_PROBE_PROFILE,
+    assert_standard_attempt_period,
+    metadata_for_attempt,
+    standard_split_specs,
+)
 from foundation.control_plane.mt5_kpi_records import (
     ROUTING_MODE_A_B_FALLBACK,
     ROUTING_MODE_A_ONLY,
@@ -362,6 +368,7 @@ def materialize_mt5_attempt_files(
     block_long_feature_min: float = 0.0,
     block_long_feature_max: float = 0.0,
     context: ScoutRunContext | RunIdentity | None = None,
+    probe_profile: str = STANDARD_RUNTIME_PROBE_PROFILE,
 ) -> dict[str, Any]:
     identity = _identity_from_context(context)
     tier_slug = tier_name.lower().replace(" ", "_").replace("+", "ab")
@@ -432,9 +439,18 @@ def materialize_mt5_attempt_files(
         ini_path,
         set_file_path=Path(EA_TESTER_SET_NAME),
     )
+    contract_metadata = metadata_for_attempt(
+        split=split_name,
+        from_date=from_date,
+        to_date=to_date,
+        tester=ini_payload["tester"],
+        probe_profile=probe_profile,
+    )
     return {
         "tier": tier_name,
         "split": split_name,
+        "probe_profile": probe_profile,
+        "mt5_runtime_probe_contract": contract_metadata,
         "attempt_role": attempt_role,
         "record_view_prefix": record_view_prefix or f"mt5_{stem_prefix or tier_slug}",
         "set": set_payload,
@@ -501,6 +517,7 @@ def materialize_mt5_routed_attempt_files(
     block_long_feature_min: float = 0.0,
     block_long_feature_max: float = 0.0,
     context: ScoutRunContext | RunIdentity | None = None,
+    probe_profile: str = STANDARD_RUNTIME_PROBE_PROFILE,
 ) -> dict[str, Any]:
     identity = _identity_from_context(context)
     fallback_rule = fallback_rule or rule
@@ -588,9 +605,18 @@ def materialize_mt5_routed_attempt_files(
         ini_path,
         set_file_path=Path(EA_TESTER_SET_NAME),
     )
+    contract_metadata = metadata_for_attempt(
+        split=split_name,
+        from_date=from_date,
+        to_date=to_date,
+        tester=ini_payload["tester"],
+        probe_profile=probe_profile,
+    )
     return {
         "tier": TIER_AB,
         "split": split_name,
+        "probe_profile": probe_profile,
+        "mt5_runtime_probe_contract": contract_metadata,
         "routing_mode": routing_mode,
         "routing_detail": routing_detail,
         "fallback_enabled": bool(fallback_enabled),
@@ -687,10 +713,7 @@ def materialize_mt5_probe_bundle(
     tier_b_fallback_only_prefix: str = MT5_RECORD_TIER_B_FALLBACK_ONLY_PREFIX,
 ) -> dict[str, Any]:
     identity = _identity_from_context(context)
-    split_specs = {
-        "validation_is": ("validation", "2025.01.01", "2025.10.01"),
-        "oos": ("oos", "2025.10.01", "2026.04.14"),
-    }
+    split_specs = standard_split_specs()
     mt5_attempts: list[dict[str, Any]] = []
     common_copies: list[dict[str, Any]] = []
     _io_path(mt5_root).mkdir(parents=True, exist_ok=True)
@@ -698,6 +721,7 @@ def materialize_mt5_probe_bundle(
     common_copies.append(copy_to_common_files(common_files_root, tier_b_onnx_path, common_ref("models", tier_b_onnx_path.name, context=identity)))
 
     for split_label, (source_split, from_date, to_date) in split_specs.items():
+        assert_standard_attempt_period(split=split_label, from_date=from_date, to_date=to_date)
         tier_a_split = tier_a_eval_frame.loc[tier_a_eval_frame["split"].astype(str).eq(source_split)].copy()
         tier_b_split = tier_b_eval_frame.loc[tier_b_eval_frame["split"].astype(str).eq(source_split)].copy()
         tier_a_feature_matrix_path = mt5_root / f"tier_a_{split_label}_feature_matrix.csv"

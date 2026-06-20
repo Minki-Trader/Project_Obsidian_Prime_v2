@@ -1,0 +1,40 @@
+{
+  "mt5_attempt_blocker": "",
+  "mt5_attempt_result_status": "completed",
+  "runtime_learning_probe_decision": {
+    "claim_boundary": "runtime_learning_probe_observation_only_no_f89_success_rewrite_no_baseline_no_promotion_no_runtime_probe_completed_no_runtime_authority_no_live_readiness_no_economics_pass",
+    "claim_effect": "F89 has a repairable validation-only runtime learning surface; MT5 is run after repair while completion remains blocked by diagnostic/missing-OOS surface contract.",
+    "forbidden_no_run_reasons": [
+      "candidate_gate_failed",
+      "weak_proxy",
+      "low_trade_count_expected",
+      "no_meaningful_materialization_candidate"
+    ],
+    "forbidden_skip_basis_seen": [],
+    "historical_runtime_probe_status": "not_run_no_meaningful_materialization_candidate_no_runtime_claim",
+    "mt5_action": "run_after_repair",
+    "not_run_reason_code": "",
+    "pre_gate_signal_count": 21,
+    "repair_attempt_count": 1,
+    "repair_attempt_required": true,
+    "repair_attempts": [
+      {
+        "claim_effect": "sample repaired into a sparse validation-only decision surface for runtime learning observation only",
+        "oos_surface_status": "missing_required_not_invented",
+        "repair_id": "repair01_deal_path_teacher_veto_sparse_surface",
+        "result": "materialized"
+      }
+    ],
+    "required_evidence": [
+      "standard validation_is and oos tester attempts",
+      "Strategy Tester reports",
+      "runtime surface contract with missing OOS boundary",
+      "completion claim guard"
+    ],
+    "run_id": "frontier89_runtime_learning_probe_backfill_v1",
+    "runtime_learning_probe_candidate_count": 1,
+    "runtime_surface_status": "repair_required_validation_only_oos_missing",
+    "stage_id": "stage_frontier_89__runtime_trade_list_adverse_selection_teacher",
+    "strong_candidate_count": 0
+  }
+}

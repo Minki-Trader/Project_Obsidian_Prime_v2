@@ -109,6 +109,7 @@ class WorkPacketSchemaLintTests(unittest.TestCase):
         ]
         packet["skill_routing"]["required_gates"] = [
             "runtime_evidence_gate",
+            "mt5_runtime_probe_contract_audit",
             "kpi_contract_audit",
             "required_gate_coverage_audit",
             "final_claim_guard",
@@ -136,6 +137,7 @@ class WorkPacketSchemaLintTests(unittest.TestCase):
         packet["verification_profile"]["gates_not_run_with_reason"] = []
         packet["skill_routing"]["required_gates"] = [
             "runtime_evidence_gate",
+            "mt5_runtime_probe_contract_audit",
             "kpi_contract_audit",
             "required_gate_coverage_audit",
             "final_claim_guard",
@@ -154,6 +156,7 @@ class WorkPacketSchemaLintTests(unittest.TestCase):
         packet["verification_profile"]["gates_not_run_with_reason"] = []
         packet["skill_routing"]["required_gates"] = [
             "runtime_evidence_gate",
+            "mt5_runtime_probe_contract_audit",
             "kpi_contract_audit",
             "required_gate_coverage_audit",
             "final_claim_guard",
@@ -179,6 +182,7 @@ class WorkPacketSchemaLintTests(unittest.TestCase):
         packet["verification_profile"]["gates_not_run_with_reason"] = []
         packet["skill_routing"]["required_gates"] = [
             "runtime_evidence_gate",
+            "mt5_runtime_probe_contract_audit",
             "kpi_contract_audit",
             "required_gate_coverage_audit",
             "final_claim_guard",
@@ -223,6 +227,7 @@ class WorkPacketSchemaLintTests(unittest.TestCase):
         ]
         packet["skill_routing"]["required_gates"] = [
             "runtime_evidence_gate",
+            "mt5_runtime_probe_contract_audit",
             "kpi_contract_audit",
             "required_gate_coverage_audit",
             "final_claim_guard",
@@ -247,6 +252,7 @@ class WorkPacketSchemaLintTests(unittest.TestCase):
         packet["verification_profile"]["gates_not_run_with_reason"] = []
         packet["skill_routing"]["required_gates"] = [
             "runtime_evidence_gate",
+            "mt5_runtime_probe_contract_audit",
             "kpi_contract_audit",
             "required_gate_coverage_audit",
             "final_claim_guard",
@@ -318,6 +324,86 @@ class WorkPacketSchemaLintTests(unittest.TestCase):
             "work_packet_schema::frontier_extra::closeout_missing_required_gates",
             {finding.check_id for finding in result.findings},
         )
+
+    def test_v2_1_runtime_learning_probe_profile_requires_decision_gate(self) -> None:
+        packet = _v2_1_packet()
+        packet["verification_profile"]["profile_id"] = "runtime_learning_probe"
+        packet["verification_profile"]["protected_claims"] = ["runtime_learning_probe_decision"]
+        packet["verification_profile"]["claim_surface"]["allowed_claims"] = ["runtime_learning_probe_decision_recorded"]
+        packet["verification_profile"]["required_evidence"] = ["runtime_learning_probe_decision"]
+        packet["skill_routing"]["required_gates"] = ["required_gate_coverage_audit", "final_claim_guard"]
+        packet["final_claim_policy"] = {
+            "allowed_claims": ["runtime_learning_probe_decision_recorded"],
+            "forbidden_claims": ["runtime_authority", "operating_promotion", "live_readiness", "goal_achieve"],
+        }
+
+        result = audit_work_packet_schema(packet)
+
+        self.assertEqual(result.status, "blocked")
+        self.assertIn(
+            "work_packet_schema::verification_profile::missing_profile_required_gates",
+            {finding.check_id for finding in result.findings},
+        )
+
+    def test_v2_1_runtime_learning_probe_profile_blocks_candidate_gate_skip_reason(self) -> None:
+        packet = _v2_1_packet()
+        packet["verification_profile"]["profile_id"] = "runtime_learning_probe"
+        packet["verification_profile"]["protected_claims"] = ["runtime_learning_probe_decision"]
+        packet["verification_profile"]["claim_surface"]["allowed_claims"] = ["runtime_learning_probe_decision_recorded"]
+        packet["verification_profile"]["required_evidence"] = ["runtime_learning_probe_decision", "mt5_action", "repair_attempts"]
+        packet["verification_profile"]["gates_not_run_with_reason"] = [
+            {
+                "gate": "runtime_learning_probe_decision_gate",
+                "reason_code": "candidate_gate_failed",
+                "reason": "Candidate gate failed before runtime learning probe.",
+                "claim_effect": "runtime learning probe skipped",
+            }
+        ]
+        packet["skill_routing"]["required_gates"] = [
+            "runtime_learning_probe_decision_gate",
+            "required_gate_coverage_audit",
+            "final_claim_guard",
+        ]
+        packet["final_claim_policy"] = {
+            "allowed_claims": ["runtime_learning_probe_decision_recorded"],
+            "forbidden_claims": ["runtime_authority", "operating_promotion", "live_readiness", "goal_achieve"],
+        }
+
+        result = audit_work_packet_schema(packet)
+
+        self.assertEqual(result.status, "blocked")
+        self.assertIn(
+            "work_packet_schema::verification_profile::runtime_learning_probe_skip_forbidden",
+            {finding.check_id for finding in result.findings},
+        )
+
+    def test_v2_1_runtime_learning_probe_profile_passes_with_decision_evidence(self) -> None:
+        packet = _v2_1_packet()
+        packet["verification_profile"]["profile_id"] = "runtime_learning_probe"
+        packet["verification_profile"]["protected_claims"] = ["runtime_learning_probe_decision"]
+        packet["verification_profile"]["claim_surface"]["allowed_claims"] = ["runtime_learning_probe_decision_recorded"]
+        packet["verification_profile"]["required_evidence"] = ["runtime_learning_probe_decision", "mt5_action", "repair_attempts"]
+        packet["verification_profile"]["gates_not_run_with_reason"] = [
+            {
+                "gate": "runtime_evidence_gate",
+                "reason_code": "runtime_learning_decision_only",
+                "reason": "This packet records the runtime learning probe decision gate only.",
+                "claim_effect": "runtime verified claims forbidden",
+            }
+        ]
+        packet["skill_routing"]["required_gates"] = [
+            "runtime_learning_probe_decision_gate",
+            "required_gate_coverage_audit",
+            "final_claim_guard",
+        ]
+        packet["final_claim_policy"] = {
+            "allowed_claims": ["runtime_learning_probe_decision_recorded"],
+            "forbidden_claims": ["runtime_authority", "operating_promotion", "live_readiness", "goal_achieve"],
+        }
+
+        result = audit_work_packet_schema(packet)
+
+        self.assertEqual(result.status, "pass", [finding.to_dict() for finding in result.findings])
 
 
 def _v1_packet() -> dict[str, object]:

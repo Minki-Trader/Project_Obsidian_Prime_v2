@@ -27,6 +27,10 @@ from foundation.control_plane.ledger import (
     upsert_csv_rows,
     write_csv_rows,
 )
+from foundation.control_plane.mt5_runtime_probe_contract import (
+    STANDARD_RUNTIME_PROBE_PROFILE,
+    metadata_for_attempt,
+)
 from foundation.models.baseline_training import load_feature_order, validate_model_input_frame
 from foundation.mt5 import runtime_support as mt5
 
@@ -290,6 +294,7 @@ def attempt_payload(
     reverse_on_opposite_signal: bool = True,
     close_only_on_opposite_signal: bool = False,
     extra_set_values: Mapping[str, Any] | None = None,
+    probe_profile: str = STANDARD_RUNTIME_PROBE_PROFILE,
 ) -> dict[str, Any]:
     set_path = run_root / "mt5" / f"{attempt_name}.set"
     ini_path = run_root / "mt5" / f"{attempt_name}.ini"
@@ -370,10 +375,19 @@ def attempt_payload(
             "ExpertParameters": EA_TESTER_SET_NAME,
         },
     )
+    contract_metadata = metadata_for_attempt(
+        split=split,
+        from_date=from_date,
+        to_date=to_date,
+        tester=ini_payload["tester"],
+        probe_profile=probe_profile,
+    )
     payload = {
         "attempt_name": attempt_name,
         "tier": tier,
         "split": split,
+        "probe_profile": probe_profile,
+        "mt5_runtime_probe_contract": contract_metadata,
         "attempt_role": attempt_role,
         "record_view_prefix": record_view_prefix,
         "set": set_payload,

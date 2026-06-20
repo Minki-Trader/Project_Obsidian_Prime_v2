@@ -1,0 +1,84 @@
+{
+  "audit_name": "runtime_learning_probe_decision_gate",
+  "status": "blocked",
+  "passed": false,
+  "completed_forbidden": true,
+  "findings": [
+    {
+      "check_id": "runtime_learning_probe_decision_gate::forbidden_skip_reason",
+      "message": "MT5 runtime learning probe cannot be skipped because the proxy or strong-candidate gate is poor.",
+      "severity": "blocking",
+      "details": {
+        "forbidden_reason_codes": [
+          "candidate_gate_failed"
+        ]
+      }
+    },
+    {
+      "check_id": "runtime_learning_probe_decision_gate::learning_candidate_requires_mt5_action",
+      "message": "A runtime_learning_probe_candidate requires run_probe or run_after_repair.",
+      "severity": "blocking",
+      "details": {
+        "runtime_learning_probe_candidate_count": 1,
+        "strong_candidate_count": 0,
+        "mt5_action": "not_run_blocked"
+      }
+    },
+    {
+      "check_id": "runtime_learning_probe_decision_gate::not_run_reason_not_allowed",
+      "message": "A no-run decision needs an allowed post-repair or environment-blocked reason.",
+      "severity": "blocking",
+      "details": {
+        "not_run_reason_code": "candidate_gate_failed",
+        "allowed_after_repair": [
+          "data_invalid_pre_runtime",
+          "explicit_user_scope_excludes_mt5",
+          "mt5_environment_blocked_after_attempt",
+          "no_deterministic_decision_rule_after_repair",
+          "no_entry_exit_translation_after_repair",
+          "no_runtime_substrate_after_repair",
+          "no_signal_rows_after_repair"
+        ]
+      }
+    },
+    {
+      "check_id": "runtime_learning_probe_decision_gate::not_run_without_repair_attempt",
+      "message": "A no-run runtime learning decision needs repair or environment-attempt evidence.",
+      "severity": "blocking",
+      "details": {
+        "mt5_action": "not_run_blocked",
+        "not_run_reason_code": "candidate_gate_failed"
+      }
+    }
+  ],
+  "counts": {
+    "pre_gate_signal_count": 480,
+    "strong_candidate_count": 0,
+    "runtime_learning_probe_candidate_count": 1,
+    "repair_attempt_count": 0,
+    "runtime_surface_status": "probe_candidate_available",
+    "mt5_action": "not_run_blocked"
+  },
+  "allowed_claims": [
+    "blocked"
+  ],
+  "forbidden_claims": [
+    "complete",
+    "completed",
+    "economics_pass",
+    "full_verification_complete",
+    "goal_achieve",
+    "handoff_complete",
+    "live_readiness",
+    "materialization_ready",
+    "mt5_verification_complete",
+    "operating_promotion",
+    "reviewed",
+    "runtime_authority",
+    "runtime_probe_completed",
+    "runtime_verified",
+    "selected_baseline",
+    "verification_complete",
+    "verified"
+  ]
+}

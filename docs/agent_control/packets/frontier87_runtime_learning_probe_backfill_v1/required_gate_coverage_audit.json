@@ -1,0 +1,39 @@
+{
+  "allowed_claims": [
+    "gate_coverage_complete"
+  ],
+  "audit_name": "required_gate_coverage_audit",
+  "completed_forbidden": false,
+  "counts": {
+    "declared_not_implemented": {},
+    "executed_audits": [
+      "work_packet_schema_lint",
+      "skill_receipt_schema_lint",
+      "runtime_learning_probe_decision_gate",
+      "mt5_runtime_probe_contract_audit",
+      "test_gate",
+      "codex_task_force_review_packet",
+      "closeout_report_check",
+      "required_gate_coverage_audit",
+      "final_claim_guard"
+    ],
+    "not_applicable_with_reason": {
+      "runtime_evidence_gate": "F87 packet records source_replay runtime learning observation only; authority/economics/materialization claims are forbidden."
+    },
+    "required_gates": [
+      "closeout_report_check",
+      "codex_task_force_review_packet",
+      "final_claim_guard",
+      "mt5_runtime_probe_contract_audit",
+      "required_gate_coverage_audit",
+      "runtime_learning_probe_decision_gate",
+      "skill_receipt_schema_lint",
+      "test_gate",
+      "work_packet_schema_lint"
+    ]
+  },
+  "findings": [],
+  "forbidden_claims": [],
+  "passed": true,
+  "status": "pass"
+}

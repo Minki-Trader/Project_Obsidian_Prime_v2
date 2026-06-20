@@ -1,0 +1,896 @@
+{
+  "claim_boundary": "runtime_learning_probe_backfill_only_no_f94_success_rewrite_no_runtime_authority",
+  "created_at_utc": "2026-06-20T03:20:48Z",
+  "forbidden_claims": [
+    "goal_achieve",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "economics_pass",
+    "selected_baseline",
+    "materialization_ready",
+    "handoff_complete"
+  ],
+  "mt5_attempt_blocker": "compile_blocked",
+  "mt5_attempt_result_status": "materialized_only",
+  "mt5_result": {
+    "attempts": [
+      {
+        "attempt_name": "f94_runtime_learning_validation_is",
+        "attempt_role": "tier_only_total",
+        "common_summary_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/telemetry/f94_runtime_learning_validation_is_summary.csv",
+        "common_telemetry_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/telemetry/f94_runtime_learning_validation_is_telemetry.csv",
+        "execution_policy": {
+          "close_on_flat_signal": false,
+          "close_only_on_opposite_signal": false,
+          "reverse_on_opposite_signal": true
+        },
+        "extra_set_values": {},
+        "ini": {
+          "format": "mt5_tester_ini",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_validation_is.ini",
+          "sha256": "f19ade1e20d4c2113e8b80ef7df51a263b0b9f0a2de9286a891fd3476f806c73",
+          "tester": {
+            "Deposit": 500,
+            "ExecutionMode": 0,
+            "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+            "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+            "ForwardMode": 0,
+            "FromDate": "2025.01.02",
+            "Leverage": "1:100",
+            "Model": 4,
+            "Optimization": 0,
+            "Period": "M5",
+            "ReplaceReport": 1,
+            "Report": "Project_Obsidian_Prime_v2_frontier94_runtime_learning_probe_backfill_v1_f94_runtime_learning_validation_is",
+            "ShutdownTerminal": 1,
+            "Symbol": "US100",
+            "ToDate": "2025.10.01",
+            "UseCloud": 0,
+            "UseLocal": 1,
+            "UseRemote": 0
+          }
+        },
+        "max_hold_bars": 12,
+        "mt5_runtime_probe_contract": {
+          "claim_effect": "standard_runtime_probe_contract_satisfied",
+          "expected_from_date": "2025.01.02",
+          "expected_to_date": "2025.10.01",
+          "from_date": "2025.01.02",
+          "profile": "standard_runtime_probe",
+          "runtime_probe_completed_claim_allowed": true,
+          "split": "validation_is",
+          "status": "pass",
+          "to_date": "2025.10.01",
+          "version": "mt5_runtime_probe_contract_v1"
+        },
+        "probe_profile": "standard_runtime_probe",
+        "record_view_prefix": "mt5_f94_runtime_learning",
+        "set": {
+          "format": "mt5_set",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_validation_is.set",
+          "sha256": "f16ea97f6625910e28798069e9fc01e0c6f9a003955ba4da147c98610adfb145"
+        },
+        "split": "validation_is",
+        "tier": "Tier A"
+      },
+      {
+        "attempt_name": "f94_runtime_learning_oos",
+        "attempt_role": "tier_only_total",
+        "common_summary_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/telemetry/f94_runtime_learning_oos_summary.csv",
+        "common_telemetry_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/telemetry/f94_runtime_learning_oos_telemetry.csv",
+        "execution_policy": {
+          "close_on_flat_signal": false,
+          "close_only_on_opposite_signal": false,
+          "reverse_on_opposite_signal": true
+        },
+        "extra_set_values": {},
+        "ini": {
+          "format": "mt5_tester_ini",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_oos.ini",
+          "sha256": "b4fe9c83a3d383ebeb87bc941406cf498251751974b66922a3fc38639c3f7418",
+          "tester": {
+            "Deposit": 500,
+            "ExecutionMode": 0,
+            "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+            "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+            "ForwardMode": 0,
+            "FromDate": "2025.10.01",
+            "Leverage": "1:100",
+            "Model": 4,
+            "Optimization": 0,
+            "Period": "M5",
+            "ReplaceReport": 1,
+            "Report": "Project_Obsidian_Prime_v2_frontier94_runtime_learning_probe_backfill_v1_f94_runtime_learning_oos",
+            "ShutdownTerminal": 1,
+            "Symbol": "US100",
+            "ToDate": "2026.06.18",
+            "UseCloud": 0,
+            "UseLocal": 1,
+            "UseRemote": 0
+          }
+        },
+        "max_hold_bars": 12,
+        "mt5_runtime_probe_contract": {
+          "claim_effect": "standard_runtime_probe_contract_satisfied",
+          "expected_from_date": "2025.10.01",
+          "expected_to_date": "2026.06.18",
+          "from_date": "2025.10.01",
+          "profile": "standard_runtime_probe",
+          "runtime_probe_completed_claim_allowed": true,
+          "split": "oos",
+          "status": "pass",
+          "to_date": "2026.06.18",
+          "version": "mt5_runtime_probe_contract_v1"
+        },
+        "probe_profile": "standard_runtime_probe",
+        "record_view_prefix": "mt5_f94_runtime_learning",
+        "set": {
+          "format": "mt5_set",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_oos.set",
+          "sha256": "b1e4328f594a27bdff6cf2658948e20e98affd9a0344a858654cc43e9c6524c0"
+        },
+        "split": "oos",
+        "tier": "Tier A"
+      }
+    ],
+    "claim_boundary": "runtime_learning_probe_observation_only_no_f94_success_rewrite_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_economics_pass",
+    "common_copies": [
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/models/f94_runtime_learning_signal_score_table.csv",
+        "common_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/models/f94_runtime_learning_signal_score_table.csv",
+        "sha256": "4e322f3a3601295d8f2029bf4dc0ce88a5b6b2bf1b19415d9b5a6831ca61ed71",
+        "source": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/models/f94_runtime_learning_signal_score_table.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/features/f94_runtime_learning_validation_is_signal_matrix.csv",
+        "common_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/features/f94_runtime_learning_validation_is_signal_matrix.csv",
+        "sha256": "382b002ae710002426a578f9ab0452754bb84b3feefee23fadfaa4ae08afcb70",
+        "source": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_validation_is_signal_matrix.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/features/f94_runtime_learning_oos_signal_matrix.csv",
+        "common_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/features/f94_runtime_learning_oos_signal_matrix.csv",
+        "sha256": "ef4e756e30785bd912b47a856127b1afac56bc2694242f433af570633b734a97",
+        "source": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_oos_signal_matrix.csv"
+      }
+    ],
+    "compile": {
+      "status": "not_attempted_materialize_only"
+    },
+    "execution_results": [],
+    "external_verification_status": "materialized_only",
+    "feature_set_id": "f94_proxy_scores_sample_side_signal_runtime_learning_surface",
+    "judgment": "blocked_runtime_learning_probe_observation_no_runtime_completion",
+    "label_id": "f94_tier_stable_realized_utility_proxy_side",
+    "model_family": "single_discrete_signal_score_table",
+    "mt5_kpi_records": [],
+    "python_metrics": {
+      "flat_signal_count": 0,
+      "long_signal_count": 87,
+      "pre_gate_signal_count": 360,
+      "sample_coverage_by_split": {
+        "oos": {
+          "claim_effect": "standard_tester_period_with_sparse_proxy_score_sample_no_completion_without_report",
+          "flat_rows": 0,
+          "long_rows": 34,
+          "sample_max_timestamp_utc": "2026-03-18T15:35:00+00:00",
+          "sample_min_timestamp_utc": "2025-10-01T16:35:00+00:00",
+          "sample_rows": 180,
+          "short_rows": 146,
+          "source_split": "oos",
+          "standard_from_date": "2025.10.01",
+          "standard_to_date": "2026.06.18",
+          "unique_timestamp_rows": 120
+        },
+        "validation_is": {
+          "claim_effect": "standard_tester_period_with_sparse_proxy_score_sample_no_completion_without_report",
+          "flat_rows": 0,
+          "long_rows": 53,
+          "sample_max_timestamp_utc": "2025-03-28T16:15:00+00:00",
+          "sample_min_timestamp_utc": "2025-01-02T16:35:00+00:00",
+          "sample_rows": 180,
+          "short_rows": 127,
+          "source_split": "validation",
+          "standard_from_date": "2025.01.02",
+          "standard_to_date": "2025.10.01",
+          "unique_timestamp_rows": 120
+        }
+      },
+      "short_signal_count": 273
+    },
+    "route_coverage": {
+      "by_split": {
+        "oos": {
+          "routed_labelable_rows": 180,
+          "tier_a_primary_rows": 113,
+          "tier_b_fallback_rows": 67
+        },
+        "validation": {
+          "routed_labelable_rows": 180,
+          "tier_a_primary_rows": 120,
+          "tier_b_fallback_rows": 60
+        }
+      },
+      "no_tier_by_split": {
+        "oos": 0,
+        "validation": 0
+      },
+      "tier_b_fallback_by_split_subtype": {}
+    },
+    "run_id": "frontier94_runtime_learning_probe_backfill_v1",
+    "run_root": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1",
+    "source_run_id": "frontier94B_tier_stable_realized_utility_label_proxy_scout_v1",
+    "split_contract": "mt5_runtime_probe_contract_v1_standard_validation_is_oos",
+    "stage_id": "stage_frontier_94__tier_stable_realized_utility_label_axis",
+    "stage_inheritance": "f94_historical_negative_memory_only_no_success_rewrite",
+    "strategy_tester_reports": []
+  },
+  "mt5_runtime_probe_contract_audit": {
+    "allowed_claims": [
+      "blocked"
+    ],
+    "audit_name": "mt5_runtime_probe_contract_audit",
+    "completed_forbidden": true,
+    "counts": {
+      "attempts": 2,
+      "exception_attempts": 0,
+      "execution_results": 0,
+      "reports": 0,
+      "requested_claims": [
+        "runtime_probe_completed"
+      ],
+      "required_splits": [
+        "validation_is",
+        "oos"
+      ],
+      "standard_attempts": 2,
+      "standard_periods": {
+        "oos": [
+          "oos",
+          "2025.10.01",
+          "2026.06.18"
+        ],
+        "validation_is": [
+          "validation",
+          "2025.01.02",
+          "2025.10.01"
+        ]
+      }
+    },
+    "findings": [
+      {
+        "check_id": "mt5_runtime_probe_contract::missing_execution_result",
+        "details": {
+          "attempt_name": "f94_runtime_learning_validation_is",
+          "split": "validation_is",
+          "tier": "Tier A"
+        },
+        "message": "Standard MT5 runtime probe attempt is missing an execution result with terminal command evidence.",
+        "severity": "blocking"
+      },
+      {
+        "check_id": "mt5_runtime_probe_contract::missing_completed_report",
+        "details": {
+          "attempt_name": "f94_runtime_learning_validation_is",
+          "report_name": "Project_Obsidian_Prime_v2_frontier94_runtime_learning_probe_backfill_v1_f94_runtime_learning_validation_is",
+          "split": "validation_is"
+        },
+        "message": "Standard MT5 runtime probe attempt is missing a completed Strategy Tester report.",
+        "severity": "blocking"
+      },
+      {
+        "check_id": "mt5_runtime_probe_contract::missing_execution_result",
+        "details": {
+          "attempt_name": "f94_runtime_learning_oos",
+          "split": "oos",
+          "tier": "Tier A"
+        },
+        "message": "Standard MT5 runtime probe attempt is missing an execution result with terminal command evidence.",
+        "severity": "blocking"
+      },
+      {
+        "check_id": "mt5_runtime_probe_contract::missing_completed_report",
+        "details": {
+          "attempt_name": "f94_runtime_learning_oos",
+          "report_name": "Project_Obsidian_Prime_v2_frontier94_runtime_learning_probe_backfill_v1_f94_runtime_learning_oos",
+          "split": "oos"
+        },
+        "message": "Standard MT5 runtime probe attempt is missing a completed Strategy Tester report.",
+        "severity": "blocking"
+      },
+      {
+        "check_id": "mt5_runtime_probe_contract::missing_split_report",
+        "details": {
+          "split": "validation_is"
+        },
+        "message": "runtime_probe_completed requires at least one completed Strategy Tester report for each required split.",
+        "severity": "blocking"
+      },
+      {
+        "check_id": "mt5_runtime_probe_contract::missing_split_report",
+        "details": {
+          "split": "oos"
+        },
+        "message": "runtime_probe_completed requires at least one completed Strategy Tester report for each required split.",
+        "severity": "blocking"
+      }
+    ],
+    "forbidden_claims": [
+      "runtime_probe_completed",
+      "mt5_verification_complete",
+      "runtime_verified"
+    ],
+    "passed": false,
+    "status": "blocked"
+  },
+  "prepared": {
+    "attempts": [
+      {
+        "attempt_name": "f94_runtime_learning_validation_is",
+        "attempt_role": "tier_only_total",
+        "common_summary_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/telemetry/f94_runtime_learning_validation_is_summary.csv",
+        "common_telemetry_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/telemetry/f94_runtime_learning_validation_is_telemetry.csv",
+        "execution_policy": {
+          "close_on_flat_signal": false,
+          "close_only_on_opposite_signal": false,
+          "reverse_on_opposite_signal": true
+        },
+        "extra_set_values": {},
+        "ini": {
+          "format": "mt5_tester_ini",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_validation_is.ini",
+          "sha256": "f19ade1e20d4c2113e8b80ef7df51a263b0b9f0a2de9286a891fd3476f806c73",
+          "tester": {
+            "Deposit": 500,
+            "ExecutionMode": 0,
+            "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+            "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+            "ForwardMode": 0,
+            "FromDate": "2025.01.02",
+            "Leverage": "1:100",
+            "Model": 4,
+            "Optimization": 0,
+            "Period": "M5",
+            "ReplaceReport": 1,
+            "Report": "Project_Obsidian_Prime_v2_frontier94_runtime_learning_probe_backfill_v1_f94_runtime_learning_validation_is",
+            "ShutdownTerminal": 1,
+            "Symbol": "US100",
+            "ToDate": "2025.10.01",
+            "UseCloud": 0,
+            "UseLocal": 1,
+            "UseRemote": 0
+          }
+        },
+        "max_hold_bars": 12,
+        "mt5_runtime_probe_contract": {
+          "claim_effect": "standard_runtime_probe_contract_satisfied",
+          "expected_from_date": "2025.01.02",
+          "expected_to_date": "2025.10.01",
+          "from_date": "2025.01.02",
+          "profile": "standard_runtime_probe",
+          "runtime_probe_completed_claim_allowed": true,
+          "split": "validation_is",
+          "status": "pass",
+          "to_date": "2025.10.01",
+          "version": "mt5_runtime_probe_contract_v1"
+        },
+        "probe_profile": "standard_runtime_probe",
+        "record_view_prefix": "mt5_f94_runtime_learning",
+        "set": {
+          "format": "mt5_set",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_validation_is.set",
+          "sha256": "f16ea97f6625910e28798069e9fc01e0c6f9a003955ba4da147c98610adfb145"
+        },
+        "split": "validation_is",
+        "tier": "Tier A"
+      },
+      {
+        "attempt_name": "f94_runtime_learning_oos",
+        "attempt_role": "tier_only_total",
+        "common_summary_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/telemetry/f94_runtime_learning_oos_summary.csv",
+        "common_telemetry_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/telemetry/f94_runtime_learning_oos_telemetry.csv",
+        "execution_policy": {
+          "close_on_flat_signal": false,
+          "close_only_on_opposite_signal": false,
+          "reverse_on_opposite_signal": true
+        },
+        "extra_set_values": {},
+        "ini": {
+          "format": "mt5_tester_ini",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_oos.ini",
+          "sha256": "b4fe9c83a3d383ebeb87bc941406cf498251751974b66922a3fc38639c3f7418",
+          "tester": {
+            "Deposit": 500,
+            "ExecutionMode": 0,
+            "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+            "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+            "ForwardMode": 0,
+            "FromDate": "2025.10.01",
+            "Leverage": "1:100",
+            "Model": 4,
+            "Optimization": 0,
+            "Period": "M5",
+            "ReplaceReport": 1,
+            "Report": "Project_Obsidian_Prime_v2_frontier94_runtime_learning_probe_backfill_v1_f94_runtime_learning_oos",
+            "ShutdownTerminal": 1,
+            "Symbol": "US100",
+            "ToDate": "2026.06.18",
+            "UseCloud": 0,
+            "UseLocal": 1,
+            "UseRemote": 0
+          }
+        },
+        "max_hold_bars": 12,
+        "mt5_runtime_probe_contract": {
+          "claim_effect": "standard_runtime_probe_contract_satisfied",
+          "expected_from_date": "2025.10.01",
+          "expected_to_date": "2026.06.18",
+          "from_date": "2025.10.01",
+          "profile": "standard_runtime_probe",
+          "runtime_probe_completed_claim_allowed": true,
+          "split": "oos",
+          "status": "pass",
+          "to_date": "2026.06.18",
+          "version": "mt5_runtime_probe_contract_v1"
+        },
+        "probe_profile": "standard_runtime_probe",
+        "record_view_prefix": "mt5_f94_runtime_learning",
+        "set": {
+          "format": "mt5_set",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_oos.set",
+          "sha256": "b1e4328f594a27bdff6cf2658948e20e98affd9a0344a858654cc43e9c6524c0"
+        },
+        "split": "oos",
+        "tier": "Tier A"
+      }
+    ],
+    "common_copies": [
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/models/f94_runtime_learning_signal_score_table.csv",
+        "common_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/models/f94_runtime_learning_signal_score_table.csv",
+        "sha256": "4e322f3a3601295d8f2029bf4dc0ce88a5b6b2bf1b19415d9b5a6831ca61ed71",
+        "source": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/models/f94_runtime_learning_signal_score_table.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/features/f94_runtime_learning_validation_is_signal_matrix.csv",
+        "common_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/features/f94_runtime_learning_validation_is_signal_matrix.csv",
+        "sha256": "382b002ae710002426a578f9ab0452754bb84b3feefee23fadfaa4ae08afcb70",
+        "source": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_validation_is_signal_matrix.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/features/f94_runtime_learning_oos_signal_matrix.csv",
+        "common_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/features/f94_runtime_learning_oos_signal_matrix.csv",
+        "sha256": "ef4e756e30785bd912b47a856127b1afac56bc2694242f433af570633b734a97",
+        "source": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_oos_signal_matrix.csv"
+      }
+    ],
+    "feature_set_id": "f94_proxy_scores_sample_side_signal_runtime_learning_surface",
+    "label_id": "f94_tier_stable_realized_utility_proxy_side",
+    "model_family": "single_discrete_signal_score_table",
+    "python_metrics": {
+      "flat_signal_count": 0,
+      "long_signal_count": 87,
+      "pre_gate_signal_count": 360,
+      "sample_coverage_by_split": {
+        "oos": {
+          "claim_effect": "standard_tester_period_with_sparse_proxy_score_sample_no_completion_without_report",
+          "flat_rows": 0,
+          "long_rows": 34,
+          "sample_max_timestamp_utc": "2026-03-18T15:35:00+00:00",
+          "sample_min_timestamp_utc": "2025-10-01T16:35:00+00:00",
+          "sample_rows": 180,
+          "short_rows": 146,
+          "source_split": "oos",
+          "standard_from_date": "2025.10.01",
+          "standard_to_date": "2026.06.18",
+          "unique_timestamp_rows": 120
+        },
+        "validation_is": {
+          "claim_effect": "standard_tester_period_with_sparse_proxy_score_sample_no_completion_without_report",
+          "flat_rows": 0,
+          "long_rows": 53,
+          "sample_max_timestamp_utc": "2025-03-28T16:15:00+00:00",
+          "sample_min_timestamp_utc": "2025-01-02T16:35:00+00:00",
+          "sample_rows": 180,
+          "short_rows": 127,
+          "source_split": "validation",
+          "standard_from_date": "2025.01.02",
+          "standard_to_date": "2025.10.01",
+          "unique_timestamp_rows": 120
+        }
+      },
+      "short_signal_count": 273
+    },
+    "route_coverage": {
+      "by_split": {
+        "oos": {
+          "routed_labelable_rows": 180,
+          "tier_a_primary_rows": 113,
+          "tier_b_fallback_rows": 67
+        },
+        "validation": {
+          "routed_labelable_rows": 180,
+          "tier_a_primary_rows": 120,
+          "tier_b_fallback_rows": 60
+        }
+      },
+      "no_tier_by_split": {
+        "oos": 0,
+        "validation": 0
+      },
+      "tier_b_fallback_by_split_subtype": {}
+    },
+    "run_id": "frontier94_runtime_learning_probe_backfill_v1",
+    "run_root": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1",
+    "source_run_id": "frontier94B_tier_stable_realized_utility_label_proxy_scout_v1",
+    "split_contract": "mt5_runtime_probe_contract_v1_standard_validation_is_oos",
+    "stage_id": "stage_frontier_94__tier_stable_realized_utility_label_axis",
+    "stage_inheritance": "f94_historical_negative_memory_only_no_success_rewrite"
+  },
+  "run_id": "frontier94_runtime_learning_probe_backfill_v1",
+  "runtime_learning_probe_decision": {
+    "claim_effect": "runtime_learning_probe_decision_only_no_runtime_authority_no_economics_pass",
+    "forbidden_skip_basis_seen": [],
+    "mt5_action": "run_probe",
+    "not_run_reason_code": "",
+    "pre_gate_signal_count": 360,
+    "repair_attempt_required": true,
+    "repair_attempts": [
+      {
+        "action": "repackaged F94 best diagnostic proxy_scores_sample side column into standard validation_is plus oos MT5 runtime learning attempts",
+        "attempt_id": "repair01_f94_proxy_scores_sample_to_standard_validation_oos_runtime_surface",
+        "feature_artifacts": [
+          {
+            "feature_count": 1,
+            "feature_order_hash": "51bbd4ea6efbfdcd272860b26b3f2a80bc66fba9a22005e4ab8d02ba3187c5cc",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "variant_id",
+              "source_tier",
+              "route_role",
+              "regime_key",
+              "cost_bucket",
+              "entry_decision"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_validation_is_signal_matrix.csv",
+            "rows": 180,
+            "sha256": "2f884a2cbb32ae78753d37009a6765f88b928f6ac299ab24799e62815364cb9c"
+          },
+          {
+            "feature_count": 1,
+            "feature_order_hash": "51bbd4ea6efbfdcd272860b26b3f2a80bc66fba9a22005e4ab8d02ba3187c5cc",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "variant_id",
+              "source_tier",
+              "route_role",
+              "regime_key",
+              "cost_bucket",
+              "entry_decision"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_oos_signal_matrix.csv",
+            "rows": 180,
+            "sha256": "505511f7006240f10827cb9ed0bc64c4b8b0cbfcfc5fd12f58e42e81268a1a00"
+          }
+        ],
+        "model_artifact": {
+          "feature_order": [
+            "f94_runtime_learning_signal"
+          ],
+          "feature_order_hash": "51bbd4ea6efbfdcd272860b26b3f2a80bc66fba9a22005e4ab8d02ba3187c5cc",
+          "format": "single_discrete_signal_ebm_score_table_csv_v1",
+          "parity_sample_probabilities": [
+            [
+              0.9993295245830858,
+              0.0003352377084572098,
+              0.0003352377084572098
+            ],
+            [
+              0.0003352377084572098,
+              0.9993295245830858,
+              0.0003352377084572098
+            ],
+            [
+              0.00033523770845720973,
+              0.00033523770845720973,
+              0.9993295245830855
+            ]
+          ],
+          "parity_sample_values": [
+            -1.0,
+            0.0,
+            1.0
+          ],
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/models/f94_runtime_learning_signal_score_table.csv",
+          "runtime_policy": "-1 short, 0 flat, +1 long through EBM-table softmax and EA probability thresholds",
+          "sha256": "4e322f3a3601295d8f2029bf4dc0ce88a5b6b2bf1b19415d9b5a6831ca61ed71"
+        },
+        "result": "materialized"
+      }
+    ],
+    "runtime_learning_probe_candidate_count": 1,
+    "runtime_surface_status": "probe_candidate_available",
+    "strong_candidate_count": 0
+  },
+  "stage_id": "stage_frontier_94__tier_stable_realized_utility_label_axis",
+  "surface": {
+    "attempts": [
+      {
+        "attempt_name": "f94_runtime_learning_validation_is",
+        "attempt_role": "tier_only_total",
+        "common_summary_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/telemetry/f94_runtime_learning_validation_is_summary.csv",
+        "common_telemetry_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/telemetry/f94_runtime_learning_validation_is_telemetry.csv",
+        "execution_policy": {
+          "close_on_flat_signal": false,
+          "close_only_on_opposite_signal": false,
+          "reverse_on_opposite_signal": true
+        },
+        "extra_set_values": {},
+        "ini": {
+          "format": "mt5_tester_ini",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_validation_is.ini",
+          "sha256": "f19ade1e20d4c2113e8b80ef7df51a263b0b9f0a2de9286a891fd3476f806c73",
+          "tester": {
+            "Deposit": 500,
+            "ExecutionMode": 0,
+            "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+            "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+            "ForwardMode": 0,
+            "FromDate": "2025.01.02",
+            "Leverage": "1:100",
+            "Model": 4,
+            "Optimization": 0,
+            "Period": "M5",
+            "ReplaceReport": 1,
+            "Report": "Project_Obsidian_Prime_v2_frontier94_runtime_learning_probe_backfill_v1_f94_runtime_learning_validation_is",
+            "ShutdownTerminal": 1,
+            "Symbol": "US100",
+            "ToDate": "2025.10.01",
+            "UseCloud": 0,
+            "UseLocal": 1,
+            "UseRemote": 0
+          }
+        },
+        "max_hold_bars": 12,
+        "mt5_runtime_probe_contract": {
+          "claim_effect": "standard_runtime_probe_contract_satisfied",
+          "expected_from_date": "2025.01.02",
+          "expected_to_date": "2025.10.01",
+          "from_date": "2025.01.02",
+          "profile": "standard_runtime_probe",
+          "runtime_probe_completed_claim_allowed": true,
+          "split": "validation_is",
+          "status": "pass",
+          "to_date": "2025.10.01",
+          "version": "mt5_runtime_probe_contract_v1"
+        },
+        "probe_profile": "standard_runtime_probe",
+        "record_view_prefix": "mt5_f94_runtime_learning",
+        "set": {
+          "format": "mt5_set",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_validation_is.set",
+          "sha256": "f16ea97f6625910e28798069e9fc01e0c6f9a003955ba4da147c98610adfb145"
+        },
+        "split": "validation_is",
+        "tier": "Tier A"
+      },
+      {
+        "attempt_name": "f94_runtime_learning_oos",
+        "attempt_role": "tier_only_total",
+        "common_summary_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/telemetry/f94_runtime_learning_oos_summary.csv",
+        "common_telemetry_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/telemetry/f94_runtime_learning_oos_telemetry.csv",
+        "execution_policy": {
+          "close_on_flat_signal": false,
+          "close_only_on_opposite_signal": false,
+          "reverse_on_opposite_signal": true
+        },
+        "extra_set_values": {},
+        "ini": {
+          "format": "mt5_tester_ini",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_oos.ini",
+          "sha256": "b4fe9c83a3d383ebeb87bc941406cf498251751974b66922a3fc38639c3f7418",
+          "tester": {
+            "Deposit": 500,
+            "ExecutionMode": 0,
+            "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+            "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+            "ForwardMode": 0,
+            "FromDate": "2025.10.01",
+            "Leverage": "1:100",
+            "Model": 4,
+            "Optimization": 0,
+            "Period": "M5",
+            "ReplaceReport": 1,
+            "Report": "Project_Obsidian_Prime_v2_frontier94_runtime_learning_probe_backfill_v1_f94_runtime_learning_oos",
+            "ShutdownTerminal": 1,
+            "Symbol": "US100",
+            "ToDate": "2026.06.18",
+            "UseCloud": 0,
+            "UseLocal": 1,
+            "UseRemote": 0
+          }
+        },
+        "max_hold_bars": 12,
+        "mt5_runtime_probe_contract": {
+          "claim_effect": "standard_runtime_probe_contract_satisfied",
+          "expected_from_date": "2025.10.01",
+          "expected_to_date": "2026.06.18",
+          "from_date": "2025.10.01",
+          "profile": "standard_runtime_probe",
+          "runtime_probe_completed_claim_allowed": true,
+          "split": "oos",
+          "status": "pass",
+          "to_date": "2026.06.18",
+          "version": "mt5_runtime_probe_contract_v1"
+        },
+        "probe_profile": "standard_runtime_probe",
+        "record_view_prefix": "mt5_f94_runtime_learning",
+        "set": {
+          "format": "mt5_set",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_oos.set",
+          "sha256": "b1e4328f594a27bdff6cf2658948e20e98affd9a0344a858654cc43e9c6524c0"
+        },
+        "split": "oos",
+        "tier": "Tier A"
+      }
+    ],
+    "best_variant": "v05_density_preserving_utility",
+    "claim_effect": "runtime_learning_probe_surface_only_standard_attempts_required_before_completion_claim",
+    "common_copies": [
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/models/f94_runtime_learning_signal_score_table.csv",
+        "common_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/models/f94_runtime_learning_signal_score_table.csv",
+        "sha256": "4e322f3a3601295d8f2029bf4dc0ce88a5b6b2bf1b19415d9b5a6831ca61ed71",
+        "source": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/models/f94_runtime_learning_signal_score_table.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/features/f94_runtime_learning_validation_is_signal_matrix.csv",
+        "common_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/features/f94_runtime_learning_validation_is_signal_matrix.csv",
+        "sha256": "382b002ae710002426a578f9ab0452754bb84b3feefee23fadfaa4ae08afcb70",
+        "source": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_validation_is_signal_matrix.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/features/f94_runtime_learning_oos_signal_matrix.csv",
+        "common_path": "Project_Obsidian_Prime_v2/f94_runtime_learning/frontier94_runtime_learning_probe_backfill_v1/features/f94_runtime_learning_oos_signal_matrix.csv",
+        "sha256": "ef4e756e30785bd912b47a856127b1afac56bc2694242f433af570633b734a97",
+        "source": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_oos_signal_matrix.csv"
+      }
+    ],
+    "feature_artifacts": [
+      {
+        "feature_count": 1,
+        "feature_order_hash": "51bbd4ea6efbfdcd272860b26b3f2a80bc66fba9a22005e4ab8d02ba3187c5cc",
+        "format": "csv_float32_ordered_features",
+        "metadata_columns": [
+          "variant_id",
+          "source_tier",
+          "route_role",
+          "regime_key",
+          "cost_bucket",
+          "entry_decision"
+        ],
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_validation_is_signal_matrix.csv",
+        "rows": 180,
+        "sha256": "2f884a2cbb32ae78753d37009a6765f88b928f6ac299ab24799e62815364cb9c"
+      },
+      {
+        "feature_count": 1,
+        "feature_order_hash": "51bbd4ea6efbfdcd272860b26b3f2a80bc66fba9a22005e4ab8d02ba3187c5cc",
+        "format": "csv_float32_ordered_features",
+        "metadata_columns": [
+          "variant_id",
+          "source_tier",
+          "route_role",
+          "regime_key",
+          "cost_bucket",
+          "entry_decision"
+        ],
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5/f94_runtime_learning_oos_signal_matrix.csv",
+        "rows": 180,
+        "sha256": "505511f7006240f10827cb9ed0bc64c4b8b0cbfcfc5fd12f58e42e81268a1a00"
+      }
+    ],
+    "feature_order_hash": "51bbd4ea6efbfdcd272860b26b3f2a80bc66fba9a22005e4ab8d02ba3187c5cc",
+    "flat_signal_count": 0,
+    "long_signal_count": 87,
+    "model_artifact": {
+      "feature_order": [
+        "f94_runtime_learning_signal"
+      ],
+      "feature_order_hash": "51bbd4ea6efbfdcd272860b26b3f2a80bc66fba9a22005e4ab8d02ba3187c5cc",
+      "format": "single_discrete_signal_ebm_score_table_csv_v1",
+      "parity_sample_probabilities": [
+        [
+          0.9993295245830858,
+          0.0003352377084572098,
+          0.0003352377084572098
+        ],
+        [
+          0.0003352377084572098,
+          0.9993295245830858,
+          0.0003352377084572098
+        ],
+        [
+          0.00033523770845720973,
+          0.00033523770845720973,
+          0.9993295245830855
+        ]
+      ],
+      "parity_sample_values": [
+        -1.0,
+        0.0,
+        1.0
+      ],
+      "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/models/f94_runtime_learning_signal_score_table.csv",
+      "runtime_policy": "-1 short, 0 flat, +1 long through EBM-table softmax and EA probability thresholds",
+      "sha256": "4e322f3a3601295d8f2029bf4dc0ce88a5b6b2bf1b19415d9b5a6831ca61ed71"
+    },
+    "pre_gate_signal_count": 360,
+    "route_coverage": {
+      "by_split": {
+        "oos": {
+          "routed_labelable_rows": 180,
+          "tier_a_primary_rows": 113,
+          "tier_b_fallback_rows": 67
+        },
+        "validation": {
+          "routed_labelable_rows": 180,
+          "tier_a_primary_rows": 120,
+          "tier_b_fallback_rows": 60
+        }
+      },
+      "no_tier_by_split": {
+        "oos": 0,
+        "validation": 0
+      },
+      "tier_b_fallback_by_split_subtype": {}
+    },
+    "sample_coverage_by_split": {
+      "oos": {
+        "claim_effect": "standard_tester_period_with_sparse_proxy_score_sample_no_completion_without_report",
+        "flat_rows": 0,
+        "long_rows": 34,
+        "sample_max_timestamp_utc": "2026-03-18T15:35:00+00:00",
+        "sample_min_timestamp_utc": "2025-10-01T16:35:00+00:00",
+        "sample_rows": 180,
+        "short_rows": 146,
+        "source_split": "oos",
+        "standard_from_date": "2025.10.01",
+        "standard_to_date": "2026.06.18",
+        "unique_timestamp_rows": 120
+      },
+      "validation_is": {
+        "claim_effect": "standard_tester_period_with_sparse_proxy_score_sample_no_completion_without_report",
+        "flat_rows": 0,
+        "long_rows": 53,
+        "sample_max_timestamp_utc": "2025-03-28T16:15:00+00:00",
+        "sample_min_timestamp_utc": "2025-01-02T16:35:00+00:00",
+        "sample_rows": 180,
+        "short_rows": 127,
+        "source_split": "validation",
+        "standard_from_date": "2025.01.02",
+        "standard_to_date": "2025.10.01",
+        "unique_timestamp_rows": 120
+      }
+    },
+    "short_signal_count": 273,
+    "signal_column": "f94_runtime_learning_signal",
+    "source_candidate_gate": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/candidate_gate.json",
+    "source_closeout_decision": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94C/d/decision.json",
+    "source_score_sample": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/proxy_scores_sample.csv",
+    "source_summary": "stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/summary.json",
+    "standard_split_specs": {
+      "oos": [
+        "oos",
+        "2025.10.01",
+        "2026.06.18"
+      ],
+      "validation_is": [
+        "validation",
+        "2025.01.02",
+        "2025.10.01"
+      ]
+    }
+  }
+}

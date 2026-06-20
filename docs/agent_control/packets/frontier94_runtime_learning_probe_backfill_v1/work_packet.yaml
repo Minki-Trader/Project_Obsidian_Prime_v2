@@ -1,0 +1,215 @@
+version: work_packet_schema_v2_1
+packet_lifecycle: new_packet
+packet_id: frontier94_runtime_learning_probe_backfill_v1
+created_at_utc: '2026-06-20T03:34:03Z'
+user_request:
+  requested_action: runtime_probe_backfill_repair_with_future_guard
+  requested_count: 1
+  ambiguous_terms: []
+current_truth:
+  target_stage: F94
+  historical_status: closed_negative_no_runtime_probe
+  boundary: f94_closeout_not_rewritten
+work_classification:
+  primary_family: runtime_backtest
+  detected_families:
+  - runtime_backtest
+  - policy_control_plane_hardening
+  mutation_intent: targeted_update
+  execution_intent: run_standard_mt5_probe_after_repair
+risk_vector_scan:
+  risks:
+    sample_surface_overclaim: high
+    completion_overclaim: high
+  required_decision_locks:
+  - f94_is_backfill_observation_only
+  - runtime_probe_completed_blocked_for_sample_surface
+  required_gates:
+  - work_packet_schema_lint
+  - runtime_learning_probe_decision_gate
+  - mt5_runtime_probe_contract_audit
+  - test_gate
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - closeout_report_check
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims: &id001
+  - goal_achieve
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - economics_pass
+  - selected_baseline
+  - promotion_candidate
+  - materialization_ready
+  - handoff_complete
+  - runtime_probe_completed
+  - mt5_verification_complete
+  - runtime_verified
+decision_lock:
+  locked_direction: f94_runtime_learning_probe_backfill_observation_only
+  not_locked:
+  - selected_baseline
+  - promotion_candidate
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  claim_boundary: runtime_learning_probe_observation_only_no_f94_success_rewrite_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_economics_pass
+interpreted_scope:
+  work_families:
+  - runtime_backtest
+  - policy_control_plane_hardening
+  target_surfaces:
+  - stage_pipelines/stage_frontier_94/frontier94_runtime_learning_probe_backfill.py
+  - foundation/control_plane/mt5_runtime_probe_contract.py
+  - foundation/config/mt5_runtime_probe_contract.yaml
+  scope_units:
+  - f94_proxy_score_sample_repair
+  - mt5_runtime_learning_observation
+  - sample_surface_completion_guard
+  execution_layers:
+  - python_local_execution
+  - mt5_execution
+  - gate_execution
+  mutation_policy:
+    allowed: true
+    scope: targeted_f94_backfill_and_shared_guard
+  evidence_layers:
+  - runtime_learning_probe_decision
+  - mt5_runtime_probe_contract_audit
+  - completion_claim_guard
+  - task_force_micro_consult
+  - tests
+  reduction_policy:
+    reduction_allowed: false
+  claim_boundary:
+    allowed_claims: &id002
+    - runtime_learning_probe_decision_recorded
+    - f94_repair_attempt_recorded
+    - runtime_probe_observation
+    - negative_runtime_learning_record
+    - completion_claim_guard_recorded
+    forbidden_claims: *id001
+verification_profile:
+  profile_id: runtime_learning_probe
+  claim_surface:
+    allowed_claims: *id002
+    forbidden_claims: *id001
+    claim_boundary: runtime_learning_probe_observation_only_no_f94_success_rewrite_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_economics_pass
+  trigger_sources:
+  - active_goal_continuation
+  - F94_candidate_gate_count_zero_but_repairable_proxy_scores_sample
+  - MT5_runtime_probe_anti_deferral_goal
+  protected_claims:
+  - runtime_learning_probe_decision
+  - runtime_probe_observation
+  - completion_claim_guard_recorded
+  required_evidence:
+  - runtime_learning_probe_decision
+  - mt5_action
+  - repair_attempts
+  - MT5 terminal command
+  - validation_is and oos Strategy Tester reports
+  - mt5_runtime_probe_contract_audit
+  - mt5_runtime_probe_completion_claim_guard
+  - actual_subagent_calls
+  gates_not_run_with_reason:
+  - gate: runtime_evidence_gate
+    reason_code: no_runtime_authority_or_economics_pass_claim
+    reason: F94 packet records runtime_probe_observation only; completion guard blocks sample surface completion, so runtime
+      authority/economics/materialization claims are out of scope.
+    claim_effect: No runtime authority, economics pass, materialization-ready, or handoff-complete claim.
+  stop_conditions:
+  - F94 runtime learning observation recorded
+  - completion claim guard blocks runtime_probe_completed
+  - no runtime authority claim
+acceptance_criteria:
+  required:
+  - runtime_learning_probe_decision_gate passes
+  - MT5 observation audit passes with two reports
+  - completion claim guard blocks sample surface completion
+  - Task Force micro consult actual subagent call is recorded
+  forbidden: *id001
+work_plan:
+- step: Inspect F94 proxy score sample and candidate gate
+  status: completed
+- step: Task Force micro consult
+  status: completed
+- step: Materialize sparse diagnostic sample runtime surface
+  status: completed
+- step: Run standard validation_is and oos MT5 probes
+  status: completed
+- step: Record receipt and closeout gates
+  status: completed
+skill_routing:
+  primary_family: runtime_backtest
+  primary_skill: obsidian-runtime-parity
+  support_skills:
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  skills_considered:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  skills_selected:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  skills_not_used: []
+  required_skill_receipts:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  required_gates:
+  - work_packet_schema_lint
+  - runtime_learning_probe_decision_gate
+  - mt5_runtime_probe_contract_audit
+  - test_gate
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - closeout_report_check
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  raw_evidence:
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94B/proxy_scout/proxy_scores_sample.csv
+  - stages/stage_frontier_94__tier_stable_realized_utility_label_axis/02_runs/frontier94_runtime_learning_probe_backfill_v1/mt5_runtime_learning_probe_result.json
+  machine_readable:
+  - runtime_probe_payload.json
+  - runtime_probe_backfill_receipt.json
+  - actual_subagent_calls.json
+  - mt5_runtime_probe_contract_audit.json
+  - mt5_runtime_probe_completion_claim_guard.json
+  - runtime_learning_probe_decision_gate_actual.json
+  human_readable:
+  - closeout_report.md
+  produced_artifacts:
+  - runtime_probe_backfill_receipt.json
+  - mt5_runtime_learning_probe_result.json
+  - mt5_runtime_probe_contract_audit.json
+  - mt5_runtime_probe_completion_claim_guard.json
+  - runtime_learning_probe_decision_actual.json
+  - actual_subagent_calls.json
+gates:
+  required:
+  - work_packet_schema_lint
+  - runtime_learning_probe_decision_gate
+  - mt5_runtime_probe_contract_audit
+  - test_gate
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - closeout_report_check
+  - required_gate_coverage_audit
+  - final_claim_guard
+  not_applicable_with_reason:
+    runtime_evidence_gate: F94 packet records runtime_probe_observation only; completion guard blocks sample surface completion,
+      so runtime authority/economics/materialization claims are out of scope.
+final_claim_policy:
+  requested_claims: *id002
+  forbidden_claims: *id001
+  claim_boundary: runtime_learning_probe_observation_only_no_f94_success_rewrite_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_economics_pass

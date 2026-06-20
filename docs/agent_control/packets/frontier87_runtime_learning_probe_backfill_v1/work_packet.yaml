@@ -1,0 +1,274 @@
+version: work_packet_schema_v2_1
+packet_lifecycle: new_packet
+packet_id: frontier87_runtime_learning_probe_backfill_v1
+created_at_utc: '2026-06-20T07:03:36Z'
+user_request:
+  requested_action: runtime_probe_backfill_repair_with_task_force
+  requested_count: 1
+  ambiguous_terms: []
+current_truth:
+  target_stage: F87
+  historical_status: closed_negative_proxy_bad_no_runtime_probe
+  boundary: f87_closeout_not_rewritten
+work_classification:
+  primary_family: runtime_backtest
+  detected_families:
+  - runtime_backtest
+  - artifact_lineage
+  mutation_intent: targeted_update
+  execution_intent: run_source_replay_mt5_probe_after_repair
+risk_vector_scan:
+  risks:
+    proxy_surface_overclaim: high
+    completion_overclaim: high
+    wrapper_model_overclaim: high
+  required_decision_locks:
+  - f87_is_backfill_observation_only
+  - onnx_wrapper_is_repair_artifact_not_learned_model
+  - runtime_probe_completed_forbidden_by_source_replay_profile
+  required_gates:
+  - work_packet_schema_lint
+  - runtime_learning_probe_decision_gate
+  - mt5_runtime_probe_contract_audit
+  - test_gate
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - closeout_report_check
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - goal_achieve
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - economics_pass
+  - selected_baseline
+  - promotion_candidate
+  - materialization_ready
+  - handoff_complete
+  - runtime_probe_completed
+  - mt5_verification_complete
+  - runtime_verified
+decision_lock:
+  locked_direction: f87_runtime_learning_probe_backfill_source_replay_observation_only
+  not_locked:
+  - selected_baseline
+  - promotion_candidate
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  claim_boundary: runtime_learning_observation_only_no_f87_success_rewrite_no_runtime_probe_completed_no_runtime_authority_no_economics_pass_no_materialization_ready_no_handoff_complete
+interpreted_scope:
+  work_families:
+  - runtime_backtest
+  - artifact_lineage
+  target_surfaces:
+  - F87 repaired sparse source replay surface
+  - MT5 source_replay validation_is+OOS observation
+  scope_units:
+  - frontier87_runtime_learning_probe_backfill_v1
+  - stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation
+  execution_layers:
+  - python_local_execution
+  - onnx_export
+  - mt5_execution
+  - gate_execution
+  mutation_policy:
+    allowed: true
+    scope: targeted_f87_backfill_only
+  evidence_layers:
+  - inner_validation_threshold_repair
+  - onnx_wrapper_parity
+  - mt5_terminal_command
+  - strategy_tester_report_hash
+  - runtime_surface_contract
+  - actual_subagent_calls
+  reduction_policy:
+    reduction_allowed: false
+  claim_boundary:
+    allowed_claims:
+    - runtime_learning_probe_decision_recorded
+    - f87_repair_attempt_recorded
+    - runtime_probe_observation
+    - runtime_learning_record
+    - completion_claim_guard_recorded
+    forbidden_claims:
+    - goal_achieve
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - economics_pass
+    - selected_baseline
+    - promotion_candidate
+    - materialization_ready
+    - handoff_complete
+    - runtime_probe_completed
+    - mt5_verification_complete
+    - runtime_verified
+    claim_boundary: runtime_learning_observation_only_no_f87_success_rewrite_no_runtime_probe_completed_no_runtime_authority_no_economics_pass_no_materialization_ready_no_handoff_complete
+verification_profile:
+  profile_id: runtime_learning_probe
+  claim_surface:
+    allowed_claims:
+    - runtime_learning_probe_decision_recorded
+    - f87_repair_attempt_recorded
+    - runtime_probe_observation
+    - runtime_learning_record
+    - completion_claim_guard_recorded
+    forbidden_claims:
+    - goal_achieve
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - economics_pass
+    - selected_baseline
+    - promotion_candidate
+    - materialization_ready
+    - handoff_complete
+    - runtime_probe_completed
+    - mt5_verification_complete
+    - runtime_verified
+    claim_boundary: runtime_learning_observation_only_no_f87_success_rewrite_no_runtime_probe_completed_no_runtime_authority_no_economics_pass_no_materialization_ready_no_handoff_complete
+  trigger_sources:
+  - active_goal_continuation
+  - F87_proxy_bad_but_repairable_sparse_decision_surface
+  - MT5_runtime_probe_anti_deferral_goal
+  protected_claims:
+  - runtime_learning_probe_decision
+  - runtime_probe_observation
+  - completion_claim_guard_recorded
+  required_evidence:
+  - runtime_learning_probe_decision
+  - proxy_scores.csv and trade_shape_risk_surface.csv hashes
+  - inner_validation threshold recipe and value
+  - OOS not used for threshold
+  - label/outcome columns removed from runtime surface
+  - ONNX wrapper schema/hash and parity
+  - MT5 tester identity and report hashes
+  - completion claim guard blocking runtime_probe_completed
+  - actual_subagent_calls
+  gates_not_run_with_reason:
+  - gate: runtime_evidence_gate
+    reason_code: no_runtime_authority_or_economics_pass_claim
+    reason: F87 source_replay packet records runtime learning observation only and forbids completion/authority/economics claims.
+    claim_effect: No runtime authority, economics pass, materialization-ready, or handoff-complete claim.
+  stop_conditions:
+  - F87 runtime learning observation recorded or blocked with report-missing cause
+  - completion claim guard blocks runtime_probe_completed
+  - no runtime authority claim
+acceptance_criteria:
+  required:
+  - runtime_learning_probe_decision_gate passes
+  - MT5 source_replay attempts use stage-native validation_is and OOS through 2026-04-13
+  - completion claim guard blocks runtime_probe_completed
+  - Task Force micro consult actual subagent calls are recorded
+  forbidden:
+  - goal_achieve
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - economics_pass
+  - selected_baseline
+  - promotion_candidate
+  - materialization_ready
+  - handoff_complete
+  - runtime_probe_completed
+  - mt5_verification_complete
+  - runtime_verified
+work_plan:
+- step: Inspect F87 proxy and diagnostic surface
+  status: completed
+- step: Task Force micro consult
+  status: completed
+- step: Repair sparse decision surface and export ONNX wrapper
+  status: completed
+- step: Run source_replay validation_is and OOS MT5 probes
+  status: completed
+- step: Record packet gates and receipts
+  status: completed
+skill_routing:
+  primary_family: runtime_backtest
+  primary_skill: obsidian-runtime-parity
+  support_skills:
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  skills_considered:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  skills_selected:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  skills_not_used: []
+  required_skill_receipts:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  required_gates:
+  - work_packet_schema_lint
+  - runtime_learning_probe_decision_gate
+  - mt5_runtime_probe_contract_audit
+  - test_gate
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - closeout_report_check
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  raw_evidence:
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/trade_shape_risk_surface.csv
+  - stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/models/proxy_model_card.json
+  machine_readable:
+  - runtime_probe_payload.json
+  - runtime_probe_backfill_receipt.json
+  - actual_subagent_calls.json
+  - mt5_runtime_probe_contract_audit.json
+  - mt5_runtime_probe_completion_claim_guard.json
+  - runtime_learning_probe_decision_gate_actual.json
+  human_readable:
+  - closeout_report.md
+  produced_artifacts:
+  - f87_runtime_learning_probe_backfill_result.json
+  - mt5_runtime_learning_probe_result.json
+  - f87_repaired_sparse_decision_surface.csv
+gates:
+  required:
+  - work_packet_schema_lint
+  - runtime_learning_probe_decision_gate
+  - mt5_runtime_probe_contract_audit
+  - test_gate
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - closeout_report_check
+  - required_gate_coverage_audit
+  - final_claim_guard
+  not_applicable_with_reason:
+    runtime_evidence_gate: F87 packet records source_replay runtime learning observation only; authority/economics/materialization claims are
+      forbidden.
+final_claim_policy:
+  requested_claims:
+  - runtime_learning_probe_decision_recorded
+  - f87_repair_attempt_recorded
+  - runtime_probe_observation
+  - runtime_learning_record
+  - completion_claim_guard_recorded
+  forbidden_claims:
+  - goal_achieve
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - economics_pass
+  - selected_baseline
+  - promotion_candidate
+  - materialization_ready
+  - handoff_complete
+  - runtime_probe_completed
+  - mt5_verification_complete
+  - runtime_verified
+  claim_boundary: runtime_learning_observation_only_no_f87_success_rewrite_no_runtime_probe_completed_no_runtime_authority_no_economics_pass_no_materialization_ready_no_handoff_complete

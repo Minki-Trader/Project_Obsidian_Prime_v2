@@ -1,0 +1,35 @@
+{
+  "audit_name": "final_claim_guard",
+  "status": "pass",
+  "passed": true,
+  "completed_forbidden": false,
+  "findings": [],
+  "counts": {
+    "requested_claims": [
+      "runtime_learning_probe_decision_recorded",
+      "f89_repair_attempt_recorded",
+      "runtime_probe_observation",
+      "runtime_learning_record",
+      "completion_claim_guard_recorded"
+    ],
+    "source_audits": [
+      "skill_receipt_lint",
+      "work_packet_schema_lint",
+      "skill_receipt_schema_lint",
+      "runtime_learning_probe_decision_gate",
+      "mt5_runtime_probe_contract_audit",
+      "test_gate",
+      "codex_task_force_review_packet",
+      "closeout_report_check",
+      "required_gate_coverage_audit"
+    ]
+  },
+  "allowed_claims": [
+    "runtime_learning_probe_decision_recorded",
+    "f89_repair_attempt_recorded",
+    "runtime_probe_observation",
+    "runtime_learning_record",
+    "completion_claim_guard_recorded"
+  ],
+  "forbidden_claims": []
+}

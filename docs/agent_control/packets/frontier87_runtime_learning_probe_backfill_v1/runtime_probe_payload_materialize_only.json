@@ -1,0 +1,1401 @@
+{
+  "allowed_claims": [
+    "runtime_learning_probe_decision_recorded",
+    "f87_repair_attempt_recorded",
+    "runtime_probe_observation",
+    "runtime_learning_record",
+    "completion_claim_guard_recorded"
+  ],
+  "claim_boundary": "runtime_learning_observation_only_no_f87_success_rewrite_no_runtime_probe_completed_no_runtime_authority_no_economics_pass_no_materialization_ready_no_handoff_complete",
+  "created_at_utc": "2026-06-20T06:55:53Z",
+  "forbidden_claims": [
+    "goal_achieve",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "economics_pass",
+    "selected_baseline",
+    "promotion_candidate",
+    "materialization_ready",
+    "handoff_complete",
+    "runtime_probe_completed",
+    "mt5_verification_complete",
+    "runtime_verified"
+  ],
+  "mt5_attempt_blocker": "compile_blocked",
+  "mt5_attempt_result_status": "blocked_or_incomplete",
+  "mt5_result": {
+    "attempts": [
+      {
+        "attempt_name": "f87_runtime_learning_validation_is",
+        "attempt_role": "source_replay_sparse_learning_observation",
+        "common_summary_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/telemetry/f87_runtime_learning_validation_is_summary.csv",
+        "common_telemetry_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/telemetry/f87_runtime_learning_validation_is_telemetry.csv",
+        "execution_policy": {
+          "close_on_flat_signal": false,
+          "close_only_on_opposite_signal": false,
+          "reverse_on_opposite_signal": true
+        },
+        "extra_set_values": {
+          "InpDecisionMode": "argmax",
+          "InpFallbackDecisionMode": "argmax"
+        },
+        "ini": {
+          "format": "mt5_tester_ini",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is.ini",
+          "sha256": "054e3133b9e03468a23aed3783a9932a2b933c0455fcd94c061151de4721d226",
+          "tester": {
+            "Deposit": 500,
+            "ExecutionMode": 0,
+            "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+            "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+            "ForwardMode": 0,
+            "FromDate": "2025.01.02",
+            "Leverage": "1:100",
+            "Model": 4,
+            "Optimization": 0,
+            "Period": "M5",
+            "ReplaceReport": 1,
+            "Report": "Project_Obsidian_Prime_v2_frontier87_runtime_learning_probe_backfill_v1_f87_runtime_learning_validation_is",
+            "ShutdownTerminal": 1,
+            "Symbol": "US100",
+            "ToDate": "2025.10.01",
+            "UseCloud": 0,
+            "UseLocal": 1,
+            "UseRemote": 0
+          }
+        },
+        "max_hold_bars": 12,
+        "mt5_runtime_probe_contract": {
+          "claim_effect": "exception_profile_forbids_runtime_probe_completed",
+          "from_date": "2025.01.02",
+          "profile": "source_replay",
+          "runtime_probe_completed_claim_allowed": false,
+          "split": "validation_is",
+          "status": "reduced_scope",
+          "to_date": "2025.10.01",
+          "version": "mt5_runtime_probe_contract_v1"
+        },
+        "probe_profile": "source_replay",
+        "record_view_prefix": "mt5_f87_runtime_learning",
+        "runtime_surface_contract": {
+          "claim_effect": "This split can support runtime learning observation only; source_replay profile and proxy_score_sample origin block runtime_probe_completed.",
+          "completion_claim_allowed": false,
+          "reason_code": "source_replay_repair_artifact_from_proxy_score_sample",
+          "repaired_feature_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is_sparse_signal_matrix.csv",
+          "source_artifact_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv",
+          "source_artifact_role": "proxy_score_sample",
+          "source_max_timestamp_utc": "2025-09-26T18:10:00+00:00",
+          "source_min_timestamp_utc": "2025-01-02T16:40:00+00:00",
+          "source_split": "validation",
+          "split": "validation_is",
+          "standard_from_date": "2025.01.02",
+          "standard_period_covered": false,
+          "standard_to_date": "2025.10.01",
+          "surface_scope": "repaired_sparse_decision_surface_for_source_replay_learning"
+        },
+        "set": {
+          "format": "mt5_set",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is.set",
+          "sha256": "18798b28941cbd9b737018b96ba093d8d724cd0bbbac153daedc214437c682ed"
+        },
+        "split": "validation_is",
+        "tier": "Tier A"
+      },
+      {
+        "attempt_name": "f87_runtime_learning_oos",
+        "attempt_role": "source_replay_sparse_learning_observation",
+        "common_summary_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/telemetry/f87_runtime_learning_oos_summary.csv",
+        "common_telemetry_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/telemetry/f87_runtime_learning_oos_telemetry.csv",
+        "execution_policy": {
+          "close_on_flat_signal": false,
+          "close_only_on_opposite_signal": false,
+          "reverse_on_opposite_signal": true
+        },
+        "extra_set_values": {
+          "InpDecisionMode": "argmax",
+          "InpFallbackDecisionMode": "argmax"
+        },
+        "ini": {
+          "format": "mt5_tester_ini",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos.ini",
+          "sha256": "44e09ba0d9f112d766666c01333c5bd17d6161a45f6b254aec410eb53f8ea3dd",
+          "tester": {
+            "Deposit": 500,
+            "ExecutionMode": 0,
+            "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+            "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+            "ForwardMode": 0,
+            "FromDate": "2025.10.01",
+            "Leverage": "1:100",
+            "Model": 4,
+            "Optimization": 0,
+            "Period": "M5",
+            "ReplaceReport": 1,
+            "Report": "Project_Obsidian_Prime_v2_frontier87_runtime_learning_probe_backfill_v1_f87_runtime_learning_oos",
+            "ShutdownTerminal": 1,
+            "Symbol": "US100",
+            "ToDate": "2026.04.13",
+            "UseCloud": 0,
+            "UseLocal": 1,
+            "UseRemote": 0
+          }
+        },
+        "max_hold_bars": 12,
+        "mt5_runtime_probe_contract": {
+          "claim_effect": "exception_profile_forbids_runtime_probe_completed",
+          "from_date": "2025.10.01",
+          "profile": "source_replay",
+          "runtime_probe_completed_claim_allowed": false,
+          "split": "oos",
+          "status": "reduced_scope",
+          "to_date": "2026.04.13",
+          "version": "mt5_runtime_probe_contract_v1"
+        },
+        "probe_profile": "source_replay",
+        "record_view_prefix": "mt5_f87_runtime_learning",
+        "runtime_surface_contract": {
+          "claim_effect": "This split can support runtime learning observation only; source_replay profile and proxy_score_sample origin block runtime_probe_completed.",
+          "completion_claim_allowed": false,
+          "reason_code": "source_replay_repair_artifact_from_proxy_score_sample",
+          "repaired_feature_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos_sparse_signal_matrix.csv",
+          "source_artifact_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv",
+          "source_artifact_role": "proxy_score_sample",
+          "source_max_timestamp_utc": "2026-04-13T19:55:00+00:00",
+          "source_min_timestamp_utc": "2025-10-03T16:35:00+00:00",
+          "source_split": "oos",
+          "split": "oos",
+          "standard_from_date": "2025.10.01",
+          "standard_period_covered": false,
+          "standard_to_date": "2026.04.13",
+          "surface_scope": "repaired_sparse_decision_surface_for_source_replay_learning"
+        },
+        "set": {
+          "format": "mt5_set",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos.set",
+          "sha256": "1615ff2d000c70211092d04f2b17c758b0e1dfc49060684f8e2a3c1bf8986871"
+        },
+        "split": "oos",
+        "tier": "Tier A"
+      }
+    ],
+    "claim_boundary": "runtime_learning_observation_only_no_f87_success_rewrite_no_runtime_probe_completed_no_runtime_authority_no_economics_pass_no_materialization_ready_no_handoff_complete",
+    "common_copies": [
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/models/f87_sparse_decision_wrapper_tree_v1.onnx",
+        "common_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/models/f87_sparse_decision_wrapper_tree_v1.onnx",
+        "sha256": "8d460011a6402387cf38b75288ca863a894ca121d0376acadebf31d08550f0ae",
+        "source": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/models/f87_sparse_decision_wrapper_tree_v1.onnx"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/features/f87_runtime_learning_validation_is_sparse_signal_matrix.csv",
+        "common_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/features/f87_runtime_learning_validation_is_sparse_signal_matrix.csv",
+        "sha256": "73f1a719267e85917ec2059fce35c2623c72fd6a80336559be9ebb5a797646d1",
+        "source": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is_sparse_signal_matrix.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/features/f87_runtime_learning_oos_sparse_signal_matrix.csv",
+        "common_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/features/f87_runtime_learning_oos_sparse_signal_matrix.csv",
+        "sha256": "8550ff6a89ac319ef73374b52316f1538f6e3bb4077fd4dd95a0dd4c0b8c00f3",
+        "source": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos_sparse_signal_matrix.csv"
+      }
+    ],
+    "compile": {
+      "status": "not_attempted_materialize_only"
+    },
+    "execution_results": [],
+    "external_verification_status": "blocked_or_incomplete",
+    "feature_set_id": "f87_repaired_sparse_signal_code_source_replay",
+    "judgment": "runtime_learning_observation_blocked_or_incomplete_reports_missing",
+    "label_id": "f87_no_label_runtime_learning_observation_only",
+    "model_family": "repair_artifact_single_feature_decision_tree_wrapper",
+    "mt5_kpi_records": [],
+    "python_metrics": {
+      "coverage_by_split": {
+        "oos": {
+          "flat_rows_in_full_surface": 1399,
+          "long_rows": 402,
+          "selected_rows": 402,
+          "short_rows": 0,
+          "source_covers_end_date": true,
+          "source_covers_start_date": false,
+          "source_max_timestamp_utc": "2026-04-13T19:55:00+00:00",
+          "source_min_timestamp_utc": "2025-10-03T16:35:00+00:00",
+          "source_rows": 1801,
+          "source_split": "oos",
+          "sparse_no_row_semantics": "non-selected source rows are omitted from MT5 feature CSV and become feature_csv_timestamp_not_found skips",
+          "split": "oos",
+          "standard_from_date": "2025.10.01",
+          "standard_period_covered": false,
+          "standard_to_date": "2026.04.13"
+        },
+        "validation_is": {
+          "flat_rows_in_full_surface": 2042,
+          "long_rows": 284,
+          "selected_rows": 284,
+          "short_rows": 0,
+          "source_covers_end_date": false,
+          "source_covers_start_date": true,
+          "source_max_timestamp_utc": "2025-09-26T18:10:00+00:00",
+          "source_min_timestamp_utc": "2025-01-02T16:40:00+00:00",
+          "source_rows": 2326,
+          "source_split": "validation",
+          "sparse_no_row_semantics": "non-selected source rows are omitted from MT5 feature CSV and become feature_csv_timestamp_not_found skips",
+          "split": "validation_is",
+          "standard_from_date": "2025.01.02",
+          "standard_period_covered": false,
+          "standard_to_date": "2025.10.01"
+        }
+      },
+      "flat_or_no_row_count": 3441,
+      "long_signal_count": 686,
+      "pre_gate_signal_count": 686,
+      "repair": {
+        "claim_effect": "Runtime learning observation only; no runtime_probe_completed, authority, economics pass, materialization-ready, or handoff claim.",
+        "repair_action": "Derive a fixed inner_validation threshold, remove outcome columns, create sparse long-only decision rows, export a one-feature ONNX wrapper, and run MT5 source_replay attempts.",
+        "repair_id": "repair01_inner_validation_threshold_sparse_source_replay",
+        "source_problem": "F87B was proxy-score/diagnostic only and had model_artifact_written=false.",
+        "stage_native_oos_status": "OOS reaches 2026-04-13 and is normal scope; do not extend to 2026-06-18."
+      },
+      "short_signal_count": 0,
+      "threshold_repair": {
+        "label_outcome_columns_removed_from_runtime_surface": [
+          "mfe_points",
+          "mae_points",
+          "target_good_shape",
+          "target_bad_risk",
+          "target_tp_first_binary_f87b",
+          "first_touch_label_final"
+        ],
+        "oos_used_for_threshold": false,
+        "recipe": "top_20_percent_of_validation_inner_validation_best_score_only",
+        "threshold": 0.6552855227236055,
+        "threshold_rows": 139
+      }
+    },
+    "route_coverage": {
+      "by_split": {
+        "oos": {
+          "routed_labelable_rows": 402,
+          "tier_a_primary_rows": 402,
+          "tier_b_fallback_rows": 0
+        },
+        "validation": {
+          "routed_labelable_rows": 284,
+          "tier_a_primary_rows": 284,
+          "tier_b_fallback_rows": 0
+        }
+      },
+      "no_tier_by_split": {
+        "oos": 1399,
+        "validation": 2042
+      },
+      "tier_b_fallback_by_split_subtype": {}
+    },
+    "run_id": "frontier87_runtime_learning_probe_backfill_v1",
+    "run_root": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1",
+    "runtime_surface_contract": {
+      "by_split": {
+        "oos": {
+          "claim_effect": "This split can support runtime learning observation only; source_replay profile and proxy_score_sample origin block runtime_probe_completed.",
+          "completion_claim_allowed": false,
+          "reason_code": "source_replay_repair_artifact_from_proxy_score_sample",
+          "repaired_feature_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos_sparse_signal_matrix.csv",
+          "source_artifact_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv",
+          "source_artifact_role": "proxy_score_sample",
+          "source_max_timestamp_utc": "2026-04-13T19:55:00+00:00",
+          "source_min_timestamp_utc": "2025-10-03T16:35:00+00:00",
+          "source_split": "oos",
+          "split": "oos",
+          "standard_from_date": "2025.10.01",
+          "standard_period_covered": false,
+          "standard_to_date": "2026.04.13",
+          "surface_scope": "repaired_sparse_decision_surface_for_source_replay_learning"
+        },
+        "validation_is": {
+          "claim_effect": "This split can support runtime learning observation only; source_replay profile and proxy_score_sample origin block runtime_probe_completed.",
+          "completion_claim_allowed": false,
+          "reason_code": "source_replay_repair_artifact_from_proxy_score_sample",
+          "repaired_feature_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is_sparse_signal_matrix.csv",
+          "source_artifact_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv",
+          "source_artifact_role": "proxy_score_sample",
+          "source_max_timestamp_utc": "2025-09-26T18:10:00+00:00",
+          "source_min_timestamp_utc": "2025-01-02T16:40:00+00:00",
+          "source_split": "validation",
+          "split": "validation_is",
+          "standard_from_date": "2025.01.02",
+          "standard_period_covered": false,
+          "standard_to_date": "2025.10.01",
+          "surface_scope": "repaired_sparse_decision_surface_for_source_replay_learning"
+        }
+      },
+      "claim_effect": "Runtime learning observation only; source_replay profile and proxy-score origin forbid runtime_probe_completed.",
+      "completion_claim_allowed": false,
+      "repaired_surface_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/runtime_surface/f87_repaired_sparse_decision_surface.csv",
+      "source_artifact_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv",
+      "source_artifact_role": "proxy_score_sample",
+      "source_run_id": "frontier87B_trade_shape_risk_proxy_scout_v1",
+      "source_stage": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation",
+      "standard_period_covered": false,
+      "surface_scope": "repaired_sparse_decision_surface_for_source_replay_learning",
+      "version": "runtime_surface_contract_v1"
+    },
+    "source_run_id": "frontier87B_trade_shape_risk_proxy_scout_v1",
+    "split_contract": "mt5_runtime_probe_contract_v1_stage_native_validation_is_oos_source_replay",
+    "stage_id": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation",
+    "stage_inheritance": "f87_historical_negative_memory_only_no_success_rewrite",
+    "strategy_tester_reports": []
+  },
+  "mt5_runtime_probe_completion_claim_guard": {
+    "allowed_claims": [
+      "blocked"
+    ],
+    "audit_name": "mt5_runtime_probe_contract_audit",
+    "completed_forbidden": true,
+    "counts": {
+      "attempts": 2,
+      "exception_attempts": 2,
+      "execution_results": 0,
+      "reports": 0,
+      "requested_claims": [
+        "runtime_probe_completed"
+      ],
+      "required_splits": [
+        "validation_is",
+        "oos"
+      ],
+      "standard_attempts": 0,
+      "standard_periods": {
+        "oos": [
+          "oos",
+          "2025.10.01",
+          "2026.04.13"
+        ],
+        "validation_is": [
+          "validation",
+          "2025.01.02",
+          "2025.10.01"
+        ]
+      }
+    },
+    "findings": [
+      {
+        "check_id": "mt5_runtime_probe_contract::exception_profile_for_completion_claim",
+        "details": {
+          "attempt_name": "f87_runtime_learning_validation_is",
+          "claim_effect": "exception_profile_forbids_runtime_probe_completed",
+          "profile": "source_replay",
+          "split": "validation_is"
+        },
+        "message": "Exception-profile MT5 probe cannot support runtime_probe_completed.",
+        "severity": "blocking"
+      },
+      {
+        "check_id": "mt5_runtime_probe_contract::exception_profile_for_completion_claim",
+        "details": {
+          "attempt_name": "f87_runtime_learning_oos",
+          "claim_effect": "exception_profile_forbids_runtime_probe_completed",
+          "profile": "source_replay",
+          "split": "oos"
+        },
+        "message": "Exception-profile MT5 probe cannot support runtime_probe_completed.",
+        "severity": "blocking"
+      },
+      {
+        "check_id": "mt5_runtime_probe_contract::missing_required_split",
+        "details": {
+          "missing_splits": [
+            "validation_is",
+            "oos"
+          ],
+          "seen_splits": []
+        },
+        "message": "runtime_probe_completed requires both canonical validation_is and oos attempts.",
+        "severity": "blocking"
+      },
+      {
+        "check_id": "mt5_runtime_probe_contract::missing_split_report",
+        "details": {
+          "split": "validation_is"
+        },
+        "message": "runtime_probe_completed requires at least one completed Strategy Tester report for each required split.",
+        "severity": "blocking"
+      },
+      {
+        "check_id": "mt5_runtime_probe_contract::missing_split_report",
+        "details": {
+          "split": "oos"
+        },
+        "message": "runtime_probe_completed requires at least one completed Strategy Tester report for each required split.",
+        "severity": "blocking"
+      }
+    ],
+    "forbidden_claims": [
+      "runtime_probe_completed",
+      "mt5_verification_complete",
+      "runtime_verified"
+    ],
+    "passed": false,
+    "status": "blocked"
+  },
+  "mt5_runtime_probe_contract_audit": {
+    "allowed_claims": [
+      "runtime_probe_observation"
+    ],
+    "audit_name": "mt5_runtime_probe_contract_audit",
+    "completed_forbidden": false,
+    "counts": {
+      "attempts": 2,
+      "exception_attempts": 2,
+      "execution_results": 0,
+      "reports": 0,
+      "requested_claims": [
+        "runtime_probe_observation"
+      ],
+      "required_splits": [
+        "validation_is",
+        "oos"
+      ],
+      "standard_attempts": 0,
+      "standard_periods": {
+        "oos": [
+          "oos",
+          "2025.10.01",
+          "2026.04.13"
+        ],
+        "validation_is": [
+          "validation",
+          "2025.01.02",
+          "2025.10.01"
+        ]
+      }
+    },
+    "findings": [],
+    "forbidden_claims": [],
+    "passed": true,
+    "status": "pass"
+  },
+  "prepared": {
+    "attempts": [
+      {
+        "attempt_name": "f87_runtime_learning_validation_is",
+        "attempt_role": "source_replay_sparse_learning_observation",
+        "common_summary_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/telemetry/f87_runtime_learning_validation_is_summary.csv",
+        "common_telemetry_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/telemetry/f87_runtime_learning_validation_is_telemetry.csv",
+        "execution_policy": {
+          "close_on_flat_signal": false,
+          "close_only_on_opposite_signal": false,
+          "reverse_on_opposite_signal": true
+        },
+        "extra_set_values": {
+          "InpDecisionMode": "argmax",
+          "InpFallbackDecisionMode": "argmax"
+        },
+        "ini": {
+          "format": "mt5_tester_ini",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is.ini",
+          "sha256": "054e3133b9e03468a23aed3783a9932a2b933c0455fcd94c061151de4721d226",
+          "tester": {
+            "Deposit": 500,
+            "ExecutionMode": 0,
+            "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+            "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+            "ForwardMode": 0,
+            "FromDate": "2025.01.02",
+            "Leverage": "1:100",
+            "Model": 4,
+            "Optimization": 0,
+            "Period": "M5",
+            "ReplaceReport": 1,
+            "Report": "Project_Obsidian_Prime_v2_frontier87_runtime_learning_probe_backfill_v1_f87_runtime_learning_validation_is",
+            "ShutdownTerminal": 1,
+            "Symbol": "US100",
+            "ToDate": "2025.10.01",
+            "UseCloud": 0,
+            "UseLocal": 1,
+            "UseRemote": 0
+          }
+        },
+        "max_hold_bars": 12,
+        "mt5_runtime_probe_contract": {
+          "claim_effect": "exception_profile_forbids_runtime_probe_completed",
+          "from_date": "2025.01.02",
+          "profile": "source_replay",
+          "runtime_probe_completed_claim_allowed": false,
+          "split": "validation_is",
+          "status": "reduced_scope",
+          "to_date": "2025.10.01",
+          "version": "mt5_runtime_probe_contract_v1"
+        },
+        "probe_profile": "source_replay",
+        "record_view_prefix": "mt5_f87_runtime_learning",
+        "runtime_surface_contract": {
+          "claim_effect": "This split can support runtime learning observation only; source_replay profile and proxy_score_sample origin block runtime_probe_completed.",
+          "completion_claim_allowed": false,
+          "reason_code": "source_replay_repair_artifact_from_proxy_score_sample",
+          "repaired_feature_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is_sparse_signal_matrix.csv",
+          "source_artifact_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv",
+          "source_artifact_role": "proxy_score_sample",
+          "source_max_timestamp_utc": "2025-09-26T18:10:00+00:00",
+          "source_min_timestamp_utc": "2025-01-02T16:40:00+00:00",
+          "source_split": "validation",
+          "split": "validation_is",
+          "standard_from_date": "2025.01.02",
+          "standard_period_covered": false,
+          "standard_to_date": "2025.10.01",
+          "surface_scope": "repaired_sparse_decision_surface_for_source_replay_learning"
+        },
+        "set": {
+          "format": "mt5_set",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is.set",
+          "sha256": "18798b28941cbd9b737018b96ba093d8d724cd0bbbac153daedc214437c682ed"
+        },
+        "split": "validation_is",
+        "tier": "Tier A"
+      },
+      {
+        "attempt_name": "f87_runtime_learning_oos",
+        "attempt_role": "source_replay_sparse_learning_observation",
+        "common_summary_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/telemetry/f87_runtime_learning_oos_summary.csv",
+        "common_telemetry_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/telemetry/f87_runtime_learning_oos_telemetry.csv",
+        "execution_policy": {
+          "close_on_flat_signal": false,
+          "close_only_on_opposite_signal": false,
+          "reverse_on_opposite_signal": true
+        },
+        "extra_set_values": {
+          "InpDecisionMode": "argmax",
+          "InpFallbackDecisionMode": "argmax"
+        },
+        "ini": {
+          "format": "mt5_tester_ini",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos.ini",
+          "sha256": "44e09ba0d9f112d766666c01333c5bd17d6161a45f6b254aec410eb53f8ea3dd",
+          "tester": {
+            "Deposit": 500,
+            "ExecutionMode": 0,
+            "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+            "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+            "ForwardMode": 0,
+            "FromDate": "2025.10.01",
+            "Leverage": "1:100",
+            "Model": 4,
+            "Optimization": 0,
+            "Period": "M5",
+            "ReplaceReport": 1,
+            "Report": "Project_Obsidian_Prime_v2_frontier87_runtime_learning_probe_backfill_v1_f87_runtime_learning_oos",
+            "ShutdownTerminal": 1,
+            "Symbol": "US100",
+            "ToDate": "2026.04.13",
+            "UseCloud": 0,
+            "UseLocal": 1,
+            "UseRemote": 0
+          }
+        },
+        "max_hold_bars": 12,
+        "mt5_runtime_probe_contract": {
+          "claim_effect": "exception_profile_forbids_runtime_probe_completed",
+          "from_date": "2025.10.01",
+          "profile": "source_replay",
+          "runtime_probe_completed_claim_allowed": false,
+          "split": "oos",
+          "status": "reduced_scope",
+          "to_date": "2026.04.13",
+          "version": "mt5_runtime_probe_contract_v1"
+        },
+        "probe_profile": "source_replay",
+        "record_view_prefix": "mt5_f87_runtime_learning",
+        "runtime_surface_contract": {
+          "claim_effect": "This split can support runtime learning observation only; source_replay profile and proxy_score_sample origin block runtime_probe_completed.",
+          "completion_claim_allowed": false,
+          "reason_code": "source_replay_repair_artifact_from_proxy_score_sample",
+          "repaired_feature_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos_sparse_signal_matrix.csv",
+          "source_artifact_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv",
+          "source_artifact_role": "proxy_score_sample",
+          "source_max_timestamp_utc": "2026-04-13T19:55:00+00:00",
+          "source_min_timestamp_utc": "2025-10-03T16:35:00+00:00",
+          "source_split": "oos",
+          "split": "oos",
+          "standard_from_date": "2025.10.01",
+          "standard_period_covered": false,
+          "standard_to_date": "2026.04.13",
+          "surface_scope": "repaired_sparse_decision_surface_for_source_replay_learning"
+        },
+        "set": {
+          "format": "mt5_set",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos.set",
+          "sha256": "1615ff2d000c70211092d04f2b17c758b0e1dfc49060684f8e2a3c1bf8986871"
+        },
+        "split": "oos",
+        "tier": "Tier A"
+      }
+    ],
+    "common_copies": [
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/models/f87_sparse_decision_wrapper_tree_v1.onnx",
+        "common_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/models/f87_sparse_decision_wrapper_tree_v1.onnx",
+        "sha256": "8d460011a6402387cf38b75288ca863a894ca121d0376acadebf31d08550f0ae",
+        "source": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/models/f87_sparse_decision_wrapper_tree_v1.onnx"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/features/f87_runtime_learning_validation_is_sparse_signal_matrix.csv",
+        "common_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/features/f87_runtime_learning_validation_is_sparse_signal_matrix.csv",
+        "sha256": "73f1a719267e85917ec2059fce35c2623c72fd6a80336559be9ebb5a797646d1",
+        "source": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is_sparse_signal_matrix.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/features/f87_runtime_learning_oos_sparse_signal_matrix.csv",
+        "common_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/features/f87_runtime_learning_oos_sparse_signal_matrix.csv",
+        "sha256": "8550ff6a89ac319ef73374b52316f1538f6e3bb4077fd4dd95a0dd4c0b8c00f3",
+        "source": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos_sparse_signal_matrix.csv"
+      }
+    ],
+    "feature_set_id": "f87_repaired_sparse_signal_code_source_replay",
+    "label_id": "f87_no_label_runtime_learning_observation_only",
+    "model_family": "repair_artifact_single_feature_decision_tree_wrapper",
+    "python_metrics": {
+      "coverage_by_split": {
+        "oos": {
+          "flat_rows_in_full_surface": 1399,
+          "long_rows": 402,
+          "selected_rows": 402,
+          "short_rows": 0,
+          "source_covers_end_date": true,
+          "source_covers_start_date": false,
+          "source_max_timestamp_utc": "2026-04-13T19:55:00+00:00",
+          "source_min_timestamp_utc": "2025-10-03T16:35:00+00:00",
+          "source_rows": 1801,
+          "source_split": "oos",
+          "sparse_no_row_semantics": "non-selected source rows are omitted from MT5 feature CSV and become feature_csv_timestamp_not_found skips",
+          "split": "oos",
+          "standard_from_date": "2025.10.01",
+          "standard_period_covered": false,
+          "standard_to_date": "2026.04.13"
+        },
+        "validation_is": {
+          "flat_rows_in_full_surface": 2042,
+          "long_rows": 284,
+          "selected_rows": 284,
+          "short_rows": 0,
+          "source_covers_end_date": false,
+          "source_covers_start_date": true,
+          "source_max_timestamp_utc": "2025-09-26T18:10:00+00:00",
+          "source_min_timestamp_utc": "2025-01-02T16:40:00+00:00",
+          "source_rows": 2326,
+          "source_split": "validation",
+          "sparse_no_row_semantics": "non-selected source rows are omitted from MT5 feature CSV and become feature_csv_timestamp_not_found skips",
+          "split": "validation_is",
+          "standard_from_date": "2025.01.02",
+          "standard_period_covered": false,
+          "standard_to_date": "2025.10.01"
+        }
+      },
+      "flat_or_no_row_count": 3441,
+      "long_signal_count": 686,
+      "pre_gate_signal_count": 686,
+      "repair": {
+        "claim_effect": "Runtime learning observation only; no runtime_probe_completed, authority, economics pass, materialization-ready, or handoff claim.",
+        "repair_action": "Derive a fixed inner_validation threshold, remove outcome columns, create sparse long-only decision rows, export a one-feature ONNX wrapper, and run MT5 source_replay attempts.",
+        "repair_id": "repair01_inner_validation_threshold_sparse_source_replay",
+        "source_problem": "F87B was proxy-score/diagnostic only and had model_artifact_written=false.",
+        "stage_native_oos_status": "OOS reaches 2026-04-13 and is normal scope; do not extend to 2026-06-18."
+      },
+      "short_signal_count": 0,
+      "threshold_repair": {
+        "label_outcome_columns_removed_from_runtime_surface": [
+          "mfe_points",
+          "mae_points",
+          "target_good_shape",
+          "target_bad_risk",
+          "target_tp_first_binary_f87b",
+          "first_touch_label_final"
+        ],
+        "oos_used_for_threshold": false,
+        "recipe": "top_20_percent_of_validation_inner_validation_best_score_only",
+        "threshold": 0.6552855227236055,
+        "threshold_rows": 139
+      }
+    },
+    "route_coverage": {
+      "by_split": {
+        "oos": {
+          "routed_labelable_rows": 402,
+          "tier_a_primary_rows": 402,
+          "tier_b_fallback_rows": 0
+        },
+        "validation": {
+          "routed_labelable_rows": 284,
+          "tier_a_primary_rows": 284,
+          "tier_b_fallback_rows": 0
+        }
+      },
+      "no_tier_by_split": {
+        "oos": 1399,
+        "validation": 2042
+      },
+      "tier_b_fallback_by_split_subtype": {}
+    },
+    "run_id": "frontier87_runtime_learning_probe_backfill_v1",
+    "run_root": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1",
+    "source_run_id": "frontier87B_trade_shape_risk_proxy_scout_v1",
+    "split_contract": "mt5_runtime_probe_contract_v1_stage_native_validation_is_oos_source_replay",
+    "stage_id": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation",
+    "stage_inheritance": "f87_historical_negative_memory_only_no_success_rewrite"
+  },
+  "run_id": "frontier87_runtime_learning_probe_backfill_v1",
+  "runtime_learning_probe_decision": {
+    "claim_effect": "F87 is run after repair for runtime learning only. Strategy Tester reports do not create runtime_probe_completed because the profile is source_replay and the source is proxy_score_sample.",
+    "forbidden_no_run_reasons": [
+      "proxy_bad",
+      "candidate_0",
+      "low_trade_count_expected",
+      "long_short_imbalanced",
+      "cost_expensive",
+      "agent_recommended_skip"
+    ],
+    "forbidden_skip_basis_seen": [],
+    "historical_runtime_probe_status": "not_run_proxy_bad_no_runtime_materialization_trigger",
+    "mt5_action": "run_after_repair",
+    "not_run_reason_code": "",
+    "pre_gate_signal_count": 686,
+    "repair_attempt_required": true,
+    "repair_attempts": [
+      {
+        "action": "inner_validation fixed threshold, outcome-column removal, sparse long-only decision rows, ONNX wrapper export, MT5 source_replay execution",
+        "attempt_id": "repair01_inner_validation_threshold_sparse_source_replay",
+        "feature_artifacts": [
+          {
+            "feature_count": 1,
+            "feature_order_hash": "7c1255c34d73d7e8e8636ef9efa1a98c33eed443f20a5001981f43a088136279",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "row_index",
+              "source_split",
+              "selection_split_role",
+              "side",
+              "best_model_id",
+              "best_score",
+              "sl_points",
+              "tp_points",
+              "entry_timing"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is_sparse_signal_matrix.csv",
+            "rows": 284,
+            "sha256": "768621f1ea77920d0084143e18c4a733c9190d3af09a6739b1e1c03d59dc3e2a"
+          },
+          {
+            "feature_count": 1,
+            "feature_order_hash": "7c1255c34d73d7e8e8636ef9efa1a98c33eed443f20a5001981f43a088136279",
+            "format": "csv_float32_ordered_features",
+            "metadata_columns": [
+              "row_index",
+              "source_split",
+              "selection_split_role",
+              "side",
+              "best_model_id",
+              "best_score",
+              "sl_points",
+              "tp_points",
+              "entry_timing"
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos_sparse_signal_matrix.csv",
+            "rows": 402,
+            "sha256": "5376eb02006f0b02201480fafc669a16b5191b7a34ecf8cdb6aeffc67a3bd3de"
+          }
+        ],
+        "result": "materialized_and_runtime_attempted",
+        "source_replay_profile": true,
+        "stage_native_oos_status": "OOS through 2026-04-13 is normal; 2026-06 extension is not required.",
+        "wrapper": {
+          "claim_effect": "The wrapper only maps repaired decision codes to ONNX probabilities for MT5 source replay.",
+          "class_order": [
+            0,
+            1,
+            2
+          ],
+          "decision_mapping": {
+            "-1": "short",
+            "0": "flat",
+            "1": "long"
+          },
+          "feature_order": [
+            "f87_repaired_signal_code"
+          ],
+          "feature_order_hash": "7c1255c34d73d7e8e8636ef9efa1a98c33eed443f20a5001981f43a088136279",
+          "model_id": "f87_sparse_decision_wrapper_tree_v1",
+          "model_kind": "repair_artifact_not_learned_alpha_model",
+          "onnx": {
+            "input_name": "float_input",
+            "label_output_dropped": true,
+            "outputs": [
+              {
+                "name": "probabilities",
+                "shape": [
+                  null,
+                  3
+                ],
+                "value_type": "tensor_type"
+              }
+            ],
+            "outputs_before_drop": [
+              {
+                "name": "label",
+                "shape": [
+                  null
+                ],
+                "value_type": "tensor_type"
+              },
+              {
+                "name": "probabilities",
+                "shape": [
+                  null,
+                  3
+                ],
+                "value_type": "tensor_type"
+              }
+            ],
+            "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/models/f87_sparse_decision_wrapper_tree_v1.onnx",
+            "probability_output_name": "probabilities",
+            "sha256": "8d460011a6402387cf38b75288ca863a894ca121d0376acadebf31d08550f0ae",
+            "target_opset": 12,
+            "zipmap_disabled": true
+          },
+          "parity": {
+            "class_order": [
+              0,
+              1,
+              2
+            ],
+            "input_name": "float_input",
+            "max_abs_diff": 0.0,
+            "mean_abs_diff": 0.0,
+            "onnx_row_sum_max_abs_error": 0.0,
+            "output_names": [
+              "probabilities"
+            ],
+            "passed": true,
+            "rows": 3,
+            "tolerance": 1e-05
+          },
+          "sklearn_joblib": {
+            "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/models/f87_sparse_decision_wrapper_tree_v1.joblib",
+            "sha256": "f5ff04e96ef613d62a334c9a738bc69c52a0c227cc6e9864611496b849bcdd71"
+          }
+        }
+      }
+    ],
+    "run_id": "frontier87_runtime_learning_probe_backfill_v1",
+    "runtime_learning_probe_candidate_count": 1,
+    "runtime_surface_status": "repaired_sparse_decision_surface_for_source_replay_learning",
+    "stage_id": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation",
+    "strong_candidate_count": 0
+  },
+  "runtime_learning_probe_decision_gate": {
+    "allowed_claims": [
+      "runtime_learning_probe_decision_recorded"
+    ],
+    "audit_name": "runtime_learning_probe_decision_gate",
+    "completed_forbidden": false,
+    "counts": {
+      "mt5_action": "run_after_repair",
+      "pre_gate_signal_count": 686,
+      "repair_attempt_count": 1,
+      "runtime_learning_probe_candidate_count": 1,
+      "runtime_surface_status": "repaired_sparse_decision_surface_for_source_replay_learning",
+      "strong_candidate_count": 0
+    },
+    "findings": [],
+    "forbidden_claims": [],
+    "passed": true,
+    "status": "pass"
+  },
+  "stage_id": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation",
+  "surface": {
+    "attempts": [
+      {
+        "attempt_name": "f87_runtime_learning_validation_is",
+        "attempt_role": "source_replay_sparse_learning_observation",
+        "common_summary_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/telemetry/f87_runtime_learning_validation_is_summary.csv",
+        "common_telemetry_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/telemetry/f87_runtime_learning_validation_is_telemetry.csv",
+        "execution_policy": {
+          "close_on_flat_signal": false,
+          "close_only_on_opposite_signal": false,
+          "reverse_on_opposite_signal": true
+        },
+        "extra_set_values": {
+          "InpDecisionMode": "argmax",
+          "InpFallbackDecisionMode": "argmax"
+        },
+        "ini": {
+          "format": "mt5_tester_ini",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is.ini",
+          "sha256": "054e3133b9e03468a23aed3783a9932a2b933c0455fcd94c061151de4721d226",
+          "tester": {
+            "Deposit": 500,
+            "ExecutionMode": 0,
+            "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+            "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+            "ForwardMode": 0,
+            "FromDate": "2025.01.02",
+            "Leverage": "1:100",
+            "Model": 4,
+            "Optimization": 0,
+            "Period": "M5",
+            "ReplaceReport": 1,
+            "Report": "Project_Obsidian_Prime_v2_frontier87_runtime_learning_probe_backfill_v1_f87_runtime_learning_validation_is",
+            "ShutdownTerminal": 1,
+            "Symbol": "US100",
+            "ToDate": "2025.10.01",
+            "UseCloud": 0,
+            "UseLocal": 1,
+            "UseRemote": 0
+          }
+        },
+        "max_hold_bars": 12,
+        "mt5_runtime_probe_contract": {
+          "claim_effect": "exception_profile_forbids_runtime_probe_completed",
+          "from_date": "2025.01.02",
+          "profile": "source_replay",
+          "runtime_probe_completed_claim_allowed": false,
+          "split": "validation_is",
+          "status": "reduced_scope",
+          "to_date": "2025.10.01",
+          "version": "mt5_runtime_probe_contract_v1"
+        },
+        "probe_profile": "source_replay",
+        "record_view_prefix": "mt5_f87_runtime_learning",
+        "runtime_surface_contract": {
+          "claim_effect": "This split can support runtime learning observation only; source_replay profile and proxy_score_sample origin block runtime_probe_completed.",
+          "completion_claim_allowed": false,
+          "reason_code": "source_replay_repair_artifact_from_proxy_score_sample",
+          "repaired_feature_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is_sparse_signal_matrix.csv",
+          "source_artifact_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv",
+          "source_artifact_role": "proxy_score_sample",
+          "source_max_timestamp_utc": "2025-09-26T18:10:00+00:00",
+          "source_min_timestamp_utc": "2025-01-02T16:40:00+00:00",
+          "source_split": "validation",
+          "split": "validation_is",
+          "standard_from_date": "2025.01.02",
+          "standard_period_covered": false,
+          "standard_to_date": "2025.10.01",
+          "surface_scope": "repaired_sparse_decision_surface_for_source_replay_learning"
+        },
+        "set": {
+          "format": "mt5_set",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is.set",
+          "sha256": "18798b28941cbd9b737018b96ba093d8d724cd0bbbac153daedc214437c682ed"
+        },
+        "split": "validation_is",
+        "tier": "Tier A"
+      },
+      {
+        "attempt_name": "f87_runtime_learning_oos",
+        "attempt_role": "source_replay_sparse_learning_observation",
+        "common_summary_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/telemetry/f87_runtime_learning_oos_summary.csv",
+        "common_telemetry_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/telemetry/f87_runtime_learning_oos_telemetry.csv",
+        "execution_policy": {
+          "close_on_flat_signal": false,
+          "close_only_on_opposite_signal": false,
+          "reverse_on_opposite_signal": true
+        },
+        "extra_set_values": {
+          "InpDecisionMode": "argmax",
+          "InpFallbackDecisionMode": "argmax"
+        },
+        "ini": {
+          "format": "mt5_tester_ini",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos.ini",
+          "sha256": "44e09ba0d9f112d766666c01333c5bd17d6161a45f6b254aec410eb53f8ea3dd",
+          "tester": {
+            "Deposit": 500,
+            "ExecutionMode": 0,
+            "Expert": "Project_Obsidian_Prime_v2\\foundation\\mt5\\ObsidianPrimeV2_RuntimeProbeEA.ex5",
+            "ExpertParameters": "ObsidianPrimeV2_RuntimeProbeEA.set",
+            "ForwardMode": 0,
+            "FromDate": "2025.10.01",
+            "Leverage": "1:100",
+            "Model": 4,
+            "Optimization": 0,
+            "Period": "M5",
+            "ReplaceReport": 1,
+            "Report": "Project_Obsidian_Prime_v2_frontier87_runtime_learning_probe_backfill_v1_f87_runtime_learning_oos",
+            "ShutdownTerminal": 1,
+            "Symbol": "US100",
+            "ToDate": "2026.04.13",
+            "UseCloud": 0,
+            "UseLocal": 1,
+            "UseRemote": 0
+          }
+        },
+        "max_hold_bars": 12,
+        "mt5_runtime_probe_contract": {
+          "claim_effect": "exception_profile_forbids_runtime_probe_completed",
+          "from_date": "2025.10.01",
+          "profile": "source_replay",
+          "runtime_probe_completed_claim_allowed": false,
+          "split": "oos",
+          "status": "reduced_scope",
+          "to_date": "2026.04.13",
+          "version": "mt5_runtime_probe_contract_v1"
+        },
+        "probe_profile": "source_replay",
+        "record_view_prefix": "mt5_f87_runtime_learning",
+        "runtime_surface_contract": {
+          "claim_effect": "This split can support runtime learning observation only; source_replay profile and proxy_score_sample origin block runtime_probe_completed.",
+          "completion_claim_allowed": false,
+          "reason_code": "source_replay_repair_artifact_from_proxy_score_sample",
+          "repaired_feature_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos_sparse_signal_matrix.csv",
+          "source_artifact_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv",
+          "source_artifact_role": "proxy_score_sample",
+          "source_max_timestamp_utc": "2026-04-13T19:55:00+00:00",
+          "source_min_timestamp_utc": "2025-10-03T16:35:00+00:00",
+          "source_split": "oos",
+          "split": "oos",
+          "standard_from_date": "2025.10.01",
+          "standard_period_covered": false,
+          "standard_to_date": "2026.04.13",
+          "surface_scope": "repaired_sparse_decision_surface_for_source_replay_learning"
+        },
+        "set": {
+          "format": "mt5_set",
+          "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos.set",
+          "sha256": "1615ff2d000c70211092d04f2b17c758b0e1dfc49060684f8e2a3c1bf8986871"
+        },
+        "split": "oos",
+        "tier": "Tier A"
+      }
+    ],
+    "claim_boundary": "runtime_learning_observation_only_no_f87_success_rewrite_no_runtime_probe_completed_no_runtime_authority_no_economics_pass_no_materialization_ready_no_handoff_complete",
+    "common_copies": [
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/models/f87_sparse_decision_wrapper_tree_v1.onnx",
+        "common_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/models/f87_sparse_decision_wrapper_tree_v1.onnx",
+        "sha256": "8d460011a6402387cf38b75288ca863a894ca121d0376acadebf31d08550f0ae",
+        "source": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/models/f87_sparse_decision_wrapper_tree_v1.onnx"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/features/f87_runtime_learning_validation_is_sparse_signal_matrix.csv",
+        "common_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/features/f87_runtime_learning_validation_is_sparse_signal_matrix.csv",
+        "sha256": "73f1a719267e85917ec2059fce35c2623c72fd6a80336559be9ebb5a797646d1",
+        "source": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is_sparse_signal_matrix.csv"
+      },
+      {
+        "absolute_path": "C:/Users/awdse/AppData/Local/ObsidianPrime/mt5_portable_run329E/Common/Files/Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/features/f87_runtime_learning_oos_sparse_signal_matrix.csv",
+        "common_path": "Project_Obsidian_Prime_v2/f87_runtime_learning/frontier87_runtime_learning_probe_backfill_v1/features/f87_runtime_learning_oos_sparse_signal_matrix.csv",
+        "sha256": "8550ff6a89ac319ef73374b52316f1538f6e3bb4077fd4dd95a0dd4c0b8c00f3",
+        "source": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos_sparse_signal_matrix.csv"
+      }
+    ],
+    "coverage_by_split": {
+      "oos": {
+        "flat_rows_in_full_surface": 1399,
+        "long_rows": 402,
+        "selected_rows": 402,
+        "short_rows": 0,
+        "source_covers_end_date": true,
+        "source_covers_start_date": false,
+        "source_max_timestamp_utc": "2026-04-13T19:55:00+00:00",
+        "source_min_timestamp_utc": "2025-10-03T16:35:00+00:00",
+        "source_rows": 1801,
+        "source_split": "oos",
+        "sparse_no_row_semantics": "non-selected source rows are omitted from MT5 feature CSV and become feature_csv_timestamp_not_found skips",
+        "split": "oos",
+        "standard_from_date": "2025.10.01",
+        "standard_period_covered": false,
+        "standard_to_date": "2026.04.13"
+      },
+      "validation_is": {
+        "flat_rows_in_full_surface": 2042,
+        "long_rows": 284,
+        "selected_rows": 284,
+        "short_rows": 0,
+        "source_covers_end_date": false,
+        "source_covers_start_date": true,
+        "source_max_timestamp_utc": "2025-09-26T18:10:00+00:00",
+        "source_min_timestamp_utc": "2025-01-02T16:40:00+00:00",
+        "source_rows": 2326,
+        "source_split": "validation",
+        "sparse_no_row_semantics": "non-selected source rows are omitted from MT5 feature CSV and become feature_csv_timestamp_not_found skips",
+        "split": "validation_is",
+        "standard_from_date": "2025.01.02",
+        "standard_period_covered": false,
+        "standard_to_date": "2025.10.01"
+      }
+    },
+    "feature_artifacts": [
+      {
+        "feature_count": 1,
+        "feature_order_hash": "7c1255c34d73d7e8e8636ef9efa1a98c33eed443f20a5001981f43a088136279",
+        "format": "csv_float32_ordered_features",
+        "metadata_columns": [
+          "row_index",
+          "source_split",
+          "selection_split_role",
+          "side",
+          "best_model_id",
+          "best_score",
+          "sl_points",
+          "tp_points",
+          "entry_timing"
+        ],
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is_sparse_signal_matrix.csv",
+        "rows": 284,
+        "sha256": "768621f1ea77920d0084143e18c4a733c9190d3af09a6739b1e1c03d59dc3e2a"
+      },
+      {
+        "feature_count": 1,
+        "feature_order_hash": "7c1255c34d73d7e8e8636ef9efa1a98c33eed443f20a5001981f43a088136279",
+        "format": "csv_float32_ordered_features",
+        "metadata_columns": [
+          "row_index",
+          "source_split",
+          "selection_split_role",
+          "side",
+          "best_model_id",
+          "best_score",
+          "sl_points",
+          "tp_points",
+          "entry_timing"
+        ],
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos_sparse_signal_matrix.csv",
+        "rows": 402,
+        "sha256": "5376eb02006f0b02201480fafc669a16b5191b7a34ecf8cdb6aeffc67a3bd3de"
+      }
+    ],
+    "flat_or_no_row_count": 3441,
+    "forbidden_claims": [
+      "goal_achieve",
+      "operating_promotion",
+      "runtime_authority",
+      "live_readiness",
+      "economics_pass",
+      "selected_baseline",
+      "promotion_candidate",
+      "materialization_ready",
+      "handoff_complete",
+      "runtime_probe_completed",
+      "mt5_verification_complete",
+      "runtime_verified"
+    ],
+    "long_signal_count": 686,
+    "pre_gate_signal_count": 686,
+    "repair": {
+      "claim_effect": "Runtime learning observation only; no runtime_probe_completed, authority, economics pass, materialization-ready, or handoff claim.",
+      "repair_action": "Derive a fixed inner_validation threshold, remove outcome columns, create sparse long-only decision rows, export a one-feature ONNX wrapper, and run MT5 source_replay attempts.",
+      "repair_id": "repair01_inner_validation_threshold_sparse_source_replay",
+      "source_problem": "F87B was proxy-score/diagnostic only and had model_artifact_written=false.",
+      "stage_native_oos_status": "OOS reaches 2026-04-13 and is normal scope; do not extend to 2026-06-18."
+    },
+    "repaired_surface": {
+      "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/runtime_surface/f87_repaired_sparse_decision_surface.csv",
+      "sha256": "fdb546b75c35f71ab4d33f4a8bf5a4a01f789863be358f1fc7d8b9fa51bb6a4d"
+    },
+    "route_coverage": {
+      "by_split": {
+        "oos": {
+          "routed_labelable_rows": 402,
+          "tier_a_primary_rows": 402,
+          "tier_b_fallback_rows": 0
+        },
+        "validation": {
+          "routed_labelable_rows": 284,
+          "tier_a_primary_rows": 284,
+          "tier_b_fallback_rows": 0
+        }
+      },
+      "no_tier_by_split": {
+        "oos": 1399,
+        "validation": 2042
+      },
+      "tier_b_fallback_by_split_subtype": {}
+    },
+    "run_id": "frontier87_runtime_learning_probe_backfill_v1",
+    "runtime_surface_contract": {
+      "by_split": {
+        "oos": {
+          "claim_effect": "This split can support runtime learning observation only; source_replay profile and proxy_score_sample origin block runtime_probe_completed.",
+          "completion_claim_allowed": false,
+          "reason_code": "source_replay_repair_artifact_from_proxy_score_sample",
+          "repaired_feature_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_oos_sparse_signal_matrix.csv",
+          "source_artifact_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv",
+          "source_artifact_role": "proxy_score_sample",
+          "source_max_timestamp_utc": "2026-04-13T19:55:00+00:00",
+          "source_min_timestamp_utc": "2025-10-03T16:35:00+00:00",
+          "source_split": "oos",
+          "split": "oos",
+          "standard_from_date": "2025.10.01",
+          "standard_period_covered": false,
+          "standard_to_date": "2026.04.13",
+          "surface_scope": "repaired_sparse_decision_surface_for_source_replay_learning"
+        },
+        "validation_is": {
+          "claim_effect": "This split can support runtime learning observation only; source_replay profile and proxy_score_sample origin block runtime_probe_completed.",
+          "completion_claim_allowed": false,
+          "reason_code": "source_replay_repair_artifact_from_proxy_score_sample",
+          "repaired_feature_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/mt5/f87_runtime_learning_validation_is_sparse_signal_matrix.csv",
+          "source_artifact_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv",
+          "source_artifact_role": "proxy_score_sample",
+          "source_max_timestamp_utc": "2025-09-26T18:10:00+00:00",
+          "source_min_timestamp_utc": "2025-01-02T16:40:00+00:00",
+          "source_split": "validation",
+          "split": "validation_is",
+          "standard_from_date": "2025.01.02",
+          "standard_period_covered": false,
+          "standard_to_date": "2025.10.01",
+          "surface_scope": "repaired_sparse_decision_surface_for_source_replay_learning"
+        }
+      },
+      "claim_effect": "Runtime learning observation only; source_replay profile and proxy-score origin forbid runtime_probe_completed.",
+      "completion_claim_allowed": false,
+      "repaired_surface_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/runtime_surface/f87_repaired_sparse_decision_surface.csv",
+      "source_artifact_path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv",
+      "source_artifact_role": "proxy_score_sample",
+      "source_run_id": "frontier87B_trade_shape_risk_proxy_scout_v1",
+      "source_stage": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation",
+      "standard_period_covered": false,
+      "surface_scope": "repaired_sparse_decision_surface_for_source_replay_learning",
+      "version": "runtime_surface_contract_v1"
+    },
+    "selected_rows_by_split_role": {
+      "oos::locked_oos_readout": 402,
+      "validation::inner_fit": 145,
+      "validation::inner_validation": 139
+    },
+    "short_signal_count": 0,
+    "source_artifacts": {
+      "candidate_queue": {
+        "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/candidate_queue.csv",
+        "sha256": "5ed56d452f7080128b8deb43bdb676d69cdfb54a508918ee348f1674d7a8522c"
+      },
+      "proxy_model_card": {
+        "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/models/proxy_model_card.json",
+        "sha256": "01c5b1096b240d10764ae700fdce9c38aaededf542a6f94e435d8d8e1217c6d2"
+      },
+      "proxy_scores": {
+        "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/proxy_scout/proxy_scores.csv",
+        "sha256": "7d01cff283bb9e2aaf67ee52afea9c7ce3a18d2da7959537889c0374662b71a8"
+      },
+      "summary": {
+        "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/summary.json",
+        "sha256": "1ff84f980fd0260db9e450a8fbf4f07f376b3ee227f121d70e5b472ebf71b0c4"
+      },
+      "trade_shape_risk_surface": {
+        "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87B_trade_shape_risk_proxy_scout_v1/trade_shape_surface/trade_shape_risk_surface.csv",
+        "sha256": "18cc6fc903d8b4a27b09eacd60425a57daa44594311303c9925f5984bc1eeb2f"
+      }
+    },
+    "source_model_card": {
+      "best_model_id": "sequence_context__good_shape_logreg_l2_balanced",
+      "claim_effect": "model_artifact_written=false, so the ONNX wrapper is a repair artifact, not the F87 learned model.",
+      "model_artifact_written": false
+    },
+    "source_period": {
+      "max_timestamp_utc": "2026-04-13T19:55:00+00:00",
+      "min_timestamp_utc": "2025-01-02T16:40:00+00:00",
+      "normal_scope": "stage-native IS plus OOS through 2026-04-13; no 2026-06 extension required"
+    },
+    "source_row_counts": {
+      "inner_validation": 698,
+      "oos": 1801,
+      "proxy_scores": 4127,
+      "trade_shape_risk_surface": 4127,
+      "validation": 2326
+    },
+    "source_run_id": "frontier87B_trade_shape_risk_proxy_scout_v1",
+    "source_summary": {
+      "claim_boundary": "f87b_trade_shape_risk_proxy_scout_only_no_strategy_tester_runtime_economics_no_runtime_authority_no_goal_achieve",
+      "judgment": "weak_or_negative_trade_shape_risk_proxy_no_runtime_evidence"
+    },
+    "stage_id": "stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation",
+    "threshold_repair": {
+      "label_outcome_columns_removed_from_runtime_surface": [
+        "mfe_points",
+        "mae_points",
+        "target_good_shape",
+        "target_bad_risk",
+        "target_tp_first_binary_f87b",
+        "first_touch_label_final"
+      ],
+      "oos_used_for_threshold": false,
+      "recipe": "top_20_percent_of_validation_inner_validation_best_score_only",
+      "threshold": 0.6552855227236055,
+      "threshold_rows": 139
+    },
+    "wrapper": {
+      "claim_effect": "The wrapper only maps repaired decision codes to ONNX probabilities for MT5 source replay.",
+      "class_order": [
+        0,
+        1,
+        2
+      ],
+      "decision_mapping": {
+        "-1": "short",
+        "0": "flat",
+        "1": "long"
+      },
+      "feature_order": [
+        "f87_repaired_signal_code"
+      ],
+      "feature_order_hash": "7c1255c34d73d7e8e8636ef9efa1a98c33eed443f20a5001981f43a088136279",
+      "model_id": "f87_sparse_decision_wrapper_tree_v1",
+      "model_kind": "repair_artifact_not_learned_alpha_model",
+      "onnx": {
+        "input_name": "float_input",
+        "label_output_dropped": true,
+        "outputs": [
+          {
+            "name": "probabilities",
+            "shape": [
+              null,
+              3
+            ],
+            "value_type": "tensor_type"
+          }
+        ],
+        "outputs_before_drop": [
+          {
+            "name": "label",
+            "shape": [
+              null
+            ],
+            "value_type": "tensor_type"
+          },
+          {
+            "name": "probabilities",
+            "shape": [
+              null,
+              3
+            ],
+            "value_type": "tensor_type"
+          }
+        ],
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/models/f87_sparse_decision_wrapper_tree_v1.onnx",
+        "probability_output_name": "probabilities",
+        "sha256": "8d460011a6402387cf38b75288ca863a894ca121d0376acadebf31d08550f0ae",
+        "target_opset": 12,
+        "zipmap_disabled": true
+      },
+      "parity": {
+        "class_order": [
+          0,
+          1,
+          2
+        ],
+        "input_name": "float_input",
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "onnx_row_sum_max_abs_error": 0.0,
+        "output_names": [
+          "probabilities"
+        ],
+        "passed": true,
+        "rows": 3,
+        "tolerance": 1e-05
+      },
+      "sklearn_joblib": {
+        "path": "stages/stage_frontier_87__runtime_native_trade_shape_risk_logic_rotation/02_runs/frontier87_runtime_learning_probe_backfill_v1/models/f87_sparse_decision_wrapper_tree_v1.joblib",
+        "sha256": "f5ff04e96ef613d62a334c9a738bc69c52a0c227cc6e9864611496b849bcdd71"
+      }
+    }
+  }
+}

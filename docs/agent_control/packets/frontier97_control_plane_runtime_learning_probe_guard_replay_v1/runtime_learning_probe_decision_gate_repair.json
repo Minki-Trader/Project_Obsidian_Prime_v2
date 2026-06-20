@@ -1,0 +1,57 @@
+{
+  "audit_name": "runtime_learning_probe_decision_gate",
+  "status": "blocked",
+  "passed": false,
+  "completed_forbidden": true,
+  "findings": [
+    {
+      "check_id": "runtime_learning_probe_decision_gate::repair_required_without_attempt",
+      "message": "A missing actionable runtime surface must get at least one repair attempt before no-run closeout.",
+      "severity": "blocking",
+      "details": {
+        "runtime_surface_status": "no_actionable_runtime_surface",
+        "repair_attempt_required": true,
+        "repair_attempt_count": 0
+      }
+    },
+    {
+      "check_id": "runtime_learning_probe_decision_gate::not_run_without_repair_attempt",
+      "message": "A no-run runtime learning decision needs repair or environment-attempt evidence.",
+      "severity": "blocking",
+      "details": {
+        "mt5_action": "not_run_after_repair_impossible",
+        "not_run_reason_code": "no_runtime_substrate_after_repair"
+      }
+    }
+  ],
+  "counts": {
+    "pre_gate_signal_count": 480,
+    "strong_candidate_count": 0,
+    "runtime_learning_probe_candidate_count": 0,
+    "repair_attempt_count": 0,
+    "runtime_surface_status": "no_actionable_runtime_surface",
+    "mt5_action": "not_run_after_repair_impossible"
+  },
+  "allowed_claims": [
+    "blocked"
+  ],
+  "forbidden_claims": [
+    "complete",
+    "completed",
+    "economics_pass",
+    "full_verification_complete",
+    "goal_achieve",
+    "handoff_complete",
+    "live_readiness",
+    "materialization_ready",
+    "mt5_verification_complete",
+    "operating_promotion",
+    "reviewed",
+    "runtime_authority",
+    "runtime_probe_completed",
+    "runtime_verified",
+    "selected_baseline",
+    "verification_complete",
+    "verified"
+  ]
+}

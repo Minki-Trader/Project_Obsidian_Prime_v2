@@ -90,6 +90,7 @@ verification_profile_ids_allowed:
   - targeted_local_execution
   - proxy_scout
   - experiment_run
+  - runtime_learning_probe
   - runtime_probe
   - stage_closeout
   - authority_candidate
@@ -176,6 +177,36 @@ fields:
       - report_hash
       - trade_list_hash
       - telemetry_hash
+    runtime_learning_probe_decision_required_fields:
+      - pre_gate_signal_count
+      - strong_candidate_count
+      - runtime_learning_probe_candidate_count
+      - runtime_surface_status
+      - mt5_action
+      - not_run_reason_code
+      - repair_attempt_required
+      - repair_attempts
+      - forbidden_skip_basis_seen
+      - claim_effect
+    runtime_learning_probe_forbidden_not_run_reason_codes:
+      - proxy_bad
+      - candidate_gate_failed
+      - not_strong_candidate
+      - pf_dd_poor
+      - low_trade_count_expected
+      - long_short_imbalanced
+      - cost_expensive
+      - agent_recommended_skip
+      - candidate_0
+    runtime_learning_probe_allowed_not_run_reason_codes_after_repair:
+      - no_signal_rows_after_repair
+      - no_deterministic_decision_rule_after_repair
+      - no_entry_exit_translation_after_repair
+      - no_runtime_substrate_after_repair
+      - data_invalid_pre_runtime
+      - mt5_environment_blocked_after_attempt
+      - explicit_user_scope_excludes_mt5
+    runtime_learning_probe_rule: "runtime_learning_probe(런타임 학습 탐침)는 strong_candidate(강한 후보)와 learning_candidate(학습 후보)를 분리한다. proxy_bad/candidate_gate_failed/not_strong_candidate/cost_expensive(프록시 부진/후보 게이트 실패/강한 후보 아님/비용)는 MT5 not-run reason(미실행 사유)이 아니며, no_actionable_runtime_surface(실행 가능한 런타임 표면 없음)는 repair_attempt(수리 시도) 뒤에만 blocked/inconclusive(차단/불충분)로 닫을 수 있다."
     rule: "For work_packet_schema_v2_1 packets, verification_profile(검증 프로필) is selected before gate execution. Each verification action must have a trigger source(트리거 원천), protected claim(보호 주장), required evidence(필수 근거), and stop condition(중단 조건). Runtime/materialization/handoff/economics claims(런타임/물질화/인계/경제성 주장) require runtime_probe or authority_candidate(런타임 탐침 또는 권위 후보) profile evidence and active verification(능동 검증), and runtime_evidence_gate(런타임 근거 게이트) cannot be skipped for cost/expense(비용) while the runtime claim is protected."
     frontier_direction_rule: "Canonical frontier open/continuation(정식 전선 개방/계속 진행) packets must include frontier_five_stage_direction_synthesis(전선 5단계 방향 종합) as a light direction record(가벼운 방향 기록). It is not topic abandonment or a permanent topic ban(주제 폐기나 영구 금지 아님)."
     frontier_extra_rule: "Broad ONNX/frontier continuation(넓은 온엑스/전선 계속 진행) packets must include frontier_extra_due_check(전선 추가 도래 점검). Frontier Extra closeout(전선 추가 마감) packets must include frontier_extra_mix_depth_lint/runtime_evidence_gate/required_gate_coverage_audit/final_claim_guard(전선 추가 혼합 깊이 점검/런타임 근거 게이트/필수 게이트 커버리지 감사/최종 주장 보호)."

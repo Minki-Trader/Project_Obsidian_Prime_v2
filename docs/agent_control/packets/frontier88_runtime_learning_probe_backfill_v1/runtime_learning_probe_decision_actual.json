@@ -1,0 +1,44 @@
+{
+  "mt5_attempt_blocker": "",
+  "mt5_attempt_result_status": "completed",
+  "runtime_learning_probe_decision": {
+    "claim_boundary": "runtime_learning_probe_observation_or_runtime_probe_completed_if_completion_guard_passes_only_no_f88_success_rewrite_no_selected_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_economics_pass",
+    "claim_effect": "F88 has a repairable deterministic runtime surface for stage-native validation_is and OOS; MT5 is run after repair for both when each surface covers the stage-native contract.",
+    "forbidden_no_run_reasons": [
+      "proxy_bad",
+      "candidate_0",
+      "low_trade_count_expected",
+      "long_short_imbalanced",
+      "cost_expensive",
+      "agent_recommended_skip"
+    ],
+    "forbidden_skip_basis_seen": [],
+    "historical_runtime_probe_status": "short_validation_only_probe_no_standard_oos_contract",
+    "mt5_action": "run_after_repair",
+    "not_run_reason_code": "",
+    "pre_gate_signal_count": 8097,
+    "repair_attempt_count": 1,
+    "repair_attempt_required": true,
+    "repair_attempts": [
+      {
+        "claim_effect": "Runtime probe completion may be claimed only if both stage-native standard Strategy Tester reports complete; runtime authority and economics pass remain not claimed.",
+        "repair_id": "repair01_short_validation_probe_to_standard_contract_pair",
+        "result": "materialized_and_run",
+        "stage_native_oos_status": "oos_horizon_ends_at_2026_04_13_and_must_not_be_extended_to_2026_06_18"
+      }
+    ],
+    "required_evidence": [
+      "stage-native standard validation_is tester attempt when the full validation surface is available",
+      "stage-native standard OOS tester attempt when the full OOS surface is available",
+      "blocked_standard_splits record only when a stage-native split surface is missing",
+      "Strategy Tester report for any executed standard attempt",
+      "runtime surface contract with stage-native OOS horizon",
+      "completion claim guard"
+    ],
+    "run_id": "frontier88_runtime_learning_probe_backfill_v1",
+    "runtime_learning_probe_candidate_count": 1,
+    "runtime_surface_status": "repair_required_short_validation_probe_to_stage_native_standard_pair",
+    "stage_id": "stage_frontier_88__runtime_substrate_first_materialization_probe",
+    "strong_candidate_count": 0
+  }
+}

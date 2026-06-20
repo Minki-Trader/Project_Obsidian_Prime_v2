@@ -1,0 +1,55 @@
+{
+  "agents_called": [
+    {
+      "accepted_points": [
+        "F87 proxy/diagnostic rows are not runtime completion evidence as-is.",
+        "A fixed inner_validation threshold can repair the proxy score table into deterministic sparse signal rows.",
+        "Outcome and label columns must be removed before runtime materialization."
+      ],
+      "advice_classification": "accepted_with_local_verification_and_claim_boundary",
+      "call_mode": "micro_consult",
+      "claim_effect": "advisory_only_no_reviewed_pass",
+      "local_verification_update": [
+        "Repair01 derives the threshold from inner_validation only.",
+        "Runtime feature CSV contains only the repaired signal code and metadata, not outcome labels.",
+        "The ONNX wrapper parity check passes before MT5 source_replay execution."
+      ],
+      "nickname": "Parity",
+      "opinion_classification": "needs_local_verification",
+      "remit": "F87 repairability and sparse decision surface translation",
+      "result_status": "completed",
+      "roster_agent_id": "agent_05_runtime_parity_reconstruction",
+      "spawned_agent_id": "019ee3b4-7349-7fb1-9534-0fb246232c95",
+      "subagent_id": "019ee3b4-7349-7fb1-9534-0fb246232c95",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    },
+    {
+      "accepted_points": [
+        "run_after_repair is appropriate.",
+        "The ONNX wrapper is a repair artifact, not a learned F87 model artifact.",
+        "runtime_probe_completed, runtime authority, economics pass, materialization-ready, and handoff complete must remain forbidden."
+      ],
+      "advice_classification": "accepted_with_local_verification_and_scope_caveat",
+      "call_mode": "micro_consult",
+      "claim_effect": "advisory_only_no_reviewed_pass",
+      "local_verification_update": [
+        "MT5 attempts use probe_profile=source_replay.",
+        "Completion claim guard is expected to block runtime_probe_completed.",
+        "Tester identity and report hashes are recorded when reports complete."
+      ],
+      "nickname": "Runtime the 2nd",
+      "opinion_classification": "needs_local_verification",
+      "remit": "F87 MT5 source_replay probe claim boundary",
+      "result_status": "completed",
+      "roster_agent_id": "agent_08_mt5_onnx_runtime",
+      "spawned_agent_id": "019ee3c6-9f00-7561-ba76-54dea788501b",
+      "subagent_id": "019ee3c6-9f00-7561-ba76-54dea788501b",
+      "tool_name": "multi_agent_v1.spawn_agent"
+    }
+  ],
+  "agents_completed_count": 2,
+  "agents_requested_count": 2,
+  "call_mode": "micro_consult",
+  "claim_effect": "advisory_only_no_reviewed_pass",
+  "two_agent_reason": "F87 needed both parity/translation and MT5 runtime claim-boundary remits."
+}

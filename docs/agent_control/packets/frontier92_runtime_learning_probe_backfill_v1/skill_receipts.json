@@ -1,0 +1,146 @@
+{
+  "receipts": [
+    {
+      "allowed_claims": [
+        "runtime_probe_observation",
+        "runtime_learning_record"
+      ],
+      "compared_surface": "F92 proxy_scores_sample side signal -> one-feature EBM table -> MT5 RuntimeProbeEA telemetry",
+      "forbidden_claims": [
+        "goal_achieve",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "economics_pass",
+        "selected_baseline",
+        "promotion_candidate",
+        "materialization_ready",
+        "handoff_complete",
+        "runtime_probe_completed",
+        "mt5_verification_complete",
+        "runtime_verified"
+      ],
+      "missing_evidence": [
+        "full-period deterministic F92 decision surface",
+        "full-period sparse decision surface"
+      ],
+      "packet_id": "frontier92_runtime_learning_probe_backfill_v1",
+      "parity_level": "runtime_learning_probe_observation_only",
+      "python_artifact": "stage_pipelines/stage_frontier_92/frontier92_runtime_learning_probe_backfill.py",
+      "runtime_artifact": "foundation/mt5/ObsidianPrimeV2_RuntimeProbeEA.mq5",
+      "runtime_learning_probe_decision": "runtime_learning_probe_candidate_count=1; mt5_action=run_after_repair; repair_attempts=1; forbidden_skip_basis_seen=[]",
+      "skill": "obsidian-runtime-parity",
+      "status": "executed",
+      "tester_identity": "US100 M5, Model=4, Deposit=500, Leverage=1:100, validation_is 2025.01.02..2025.10.01, oos 2025.10.01..2026.06.18"
+    },
+    {
+      "forensic_gaps": [
+        "proxy_scores_sample is sparse diagnostic sample, not full runtime surface"
+      ],
+      "packet_id": "frontier92_runtime_learning_probe_backfill_v1",
+      "runtime_learning_probe_decision": "F92 sample surface is valid only as runtime learning observation; runtime_probe_completed is blocked.",
+      "skill": "obsidian-backtest-forensics",
+      "spread_commission_slippage": "broker-native tester behavior; no added modeled commission",
+      "status": "executed",
+      "tester_report": "validation_is and oos Strategy Tester reports completed",
+      "tester_settings": "US100 M5, Model=4, Deposit=500, Leverage=1:100, validation_is 2025.01.02..2025.10.01, oos 2025.10.01..2026.06.18, /portable, ReplaceReport=1, ShutdownTerminal=1",
+      "trade_list_identity": "Strategy Tester report metrics and EA telemetry hashes recorded in mt5_runtime_learning_probe_result.json"
+    },
+    {
+      "allowed_claims": [
+        "runtime_probe_observation",
+        "runtime_learning_record",
+        "completion_claim_guard_recorded"
+      ],
+      "evidence_used": [
+        "runtime_probe_backfill_receipt.json",
+        "mt5_runtime_probe_contract_audit.json",
+        "mt5_runtime_probe_completion_claim_guard.json",
+        "runtime_learning_probe_decision_gate_actual.json"
+      ],
+      "forbidden_claims": [
+        "goal_achieve",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "economics_pass",
+        "selected_baseline",
+        "promotion_candidate",
+        "materialization_ready",
+        "handoff_complete",
+        "runtime_probe_completed",
+        "mt5_verification_complete",
+        "runtime_verified"
+      ],
+      "judgment_boundary": "runtime_learning_probe_observation_only",
+      "packet_id": "frontier92_runtime_learning_probe_backfill_v1",
+      "runtime_learning_probe_decision": "negative_runtime_learning_probe_observation_completed_no_economics_pass",
+      "skill": "obsidian-result-judgment",
+      "status": "executed"
+    },
+    {
+      "actual_subagent_calls": [
+        {
+          "accepted_points": [
+            "F92 is not a strong candidate because candidate_count=0.",
+            "F92 proxy_scores_sample contains timestamp, split, side, and strength, so it can be repaired into a runtime learning surface.",
+            "The correct mt5_action is run_after_repair, not blocked before repair.",
+            "proxy_score_sample is a diagnostic sample and cannot support runtime_probe_completed."
+          ],
+          "advice_classification": "accepted_with_local_verification",
+          "claim_effect": "advisory_only_no_reviewed_pass",
+          "local_verification_update": [
+            "Repair01 materialized the F92 best diagnostic side column into a one-feature runtime learning surface.",
+            "MT5 Strategy Tester is run on validation_is and oos standard periods through the shared MT5 runtime probe contract.",
+            "Completion claim guard blocks runtime_probe_completed because the runtime_surface_contract marks the source as proxy_score_sample."
+          ],
+          "nickname": "Maxwell",
+          "opinion_classification": "needs_local_verification",
+          "remit": "F92 repair-first runtime learning probe materialization advice",
+          "result_status": "completed",
+          "roster_agent_id": "agent_08_mt5_onnx_runtime",
+          "scope_caveat": "This packet records runtime learning observation only; full-period deterministic/sparse surface regeneration is required for completion claims.",
+          "spawned_agent_id": "019ee31e-8cd9-7a22-be3b-62c95a7392a6",
+          "subagent_id": "019ee31e-8cd9-7a22-be3b-62c95a7392a6",
+          "tool_name": "multi_agent_v1.spawn_agent"
+        }
+      ],
+      "advice_classification": "accepted_with_local_verification",
+      "agents_used": [
+        "agent_08_mt5_onnx_runtime"
+      ],
+      "bounded_evidence": [
+        "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92B/proxy_scout/candidate_gate.json",
+        "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92B/proxy_scout/proxy_scores_sample.csv",
+        "stages/stage_frontier_92__path_conditioned_trade_shape_labeling_axis/02_runs/frontier92C/d/decision.json"
+      ],
+      "claim_boundary": "runtime_learning_probe_observation_only_no_f92_success_rewrite_no_baseline_no_promotion_no_runtime_probe_completed_no_runtime_authority_no_live_readiness_no_economics_pass",
+      "final_codex_direction": "run_after_repair_observation_only_no_reviewed_pass_claim",
+      "forbidden_claim_check": {
+        "completed_forbidden": false,
+        "forbidden_claims": [
+          "goal_achieve",
+          "operating_promotion",
+          "runtime_authority",
+          "live_readiness",
+          "economics_pass",
+          "selected_baseline",
+          "promotion_candidate",
+          "materialization_ready",
+          "handoff_complete",
+          "runtime_probe_completed",
+          "mt5_verification_complete",
+          "runtime_verified"
+        ]
+      },
+      "local_verification": "F92 repair01 materialized sample side signal and ran standard MT5 observation attempts.",
+      "model_policy": "inherit_parent_model_highest_available_xhigh_if_available",
+      "packet_id": "frontier92_runtime_learning_probe_backfill_v1",
+      "review_requirement": "active_goal_required",
+      "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+      "skill": "obsidian-task-force-review",
+      "status": "executed",
+      "trigger_reason": "active_goal_required_task_force_micro_consult_for_runtime_probe_backfill"
+    }
+  ]
+}

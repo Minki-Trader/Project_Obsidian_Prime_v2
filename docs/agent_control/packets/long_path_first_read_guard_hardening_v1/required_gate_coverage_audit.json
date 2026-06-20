@@ -1,0 +1,34 @@
+{
+  "audit_name": "required_gate_coverage_audit",
+  "status": "pass",
+  "passed": true,
+  "completed_forbidden": false,
+  "findings": [],
+  "counts": {
+    "required_gates": [
+      "agent_control_contracts",
+      "codex_task_force_review_packet",
+      "ops_instruction_audit",
+      "required_gate_coverage_audit",
+      "skill_receipt_schema_lint",
+      "work_packet_schema_lint"
+    ],
+    "executed_audits": [
+      "agent_control_contracts",
+      "codex_task_force_review_packet",
+      "final_claim_guard",
+      "ops_instruction_audit",
+      "required_gate_coverage_audit",
+      "skill_receipt_schema_lint",
+      "work_packet_schema_lint"
+    ],
+    "not_applicable_with_reason": {
+      "runtime_evidence_gate": "Out of scope: no runtime/materialization/handoff/economics claim."
+    },
+    "declared_not_implemented": {}
+  },
+  "allowed_claims": [
+    "gate_coverage_complete"
+  ],
+  "forbidden_claims": []
+}

@@ -1,0 +1,268 @@
+version: work_packet_schema_v2_1
+packet_lifecycle: new_packet
+packet_id: frontier92_runtime_learning_probe_backfill_v1
+created_at_utc: '2026-06-20T03:49:20Z'
+user_request:
+  requested_action: runtime_probe_backfill_repair_with_task_force
+  requested_count: 1
+  ambiguous_terms: []
+current_truth:
+  target_stage: F92
+  historical_status: closed_negative_no_runtime_probe
+  boundary: f92_closeout_not_rewritten
+work_classification:
+  primary_family: runtime_backtest
+  detected_families:
+  - runtime_backtest
+  mutation_intent: targeted_update
+  execution_intent: run_standard_mt5_probe_after_repair
+risk_vector_scan:
+  risks:
+    sample_surface_overclaim: high
+    completion_overclaim: high
+    side_imbalance: known_extreme
+  required_decision_locks:
+  - f92_is_backfill_observation_only
+  - runtime_probe_completed_blocked_for_sample_surface
+  required_gates:
+  - work_packet_schema_lint
+  - runtime_learning_probe_decision_gate
+  - mt5_runtime_probe_contract_audit
+  - test_gate
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - closeout_report_check
+  - required_gate_coverage_audit
+  - final_claim_guard
+  forbidden_claims:
+  - goal_achieve
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - economics_pass
+  - selected_baseline
+  - promotion_candidate
+  - materialization_ready
+  - handoff_complete
+  - runtime_probe_completed
+  - mt5_verification_complete
+  - runtime_verified
+decision_lock:
+  locked_direction: f92_runtime_learning_probe_backfill_observation_only
+  not_locked:
+  - selected_baseline
+  - promotion_candidate
+  - runtime_authority
+  - live_readiness
+  - goal_achieve
+  claim_boundary: runtime_learning_probe_observation_only_no_f92_success_rewrite_no_baseline_no_promotion_no_runtime_probe_completed_no_runtime_authority_no_live_readiness_no_economics_pass
+interpreted_scope:
+  work_families:
+  - runtime_backtest
+  target_surfaces:
+  - stage_pipelines/stage_frontier_92/frontier92_runtime_learning_probe_backfill.py
+  scope_units:
+  - f92_proxy_score_sample_repair
+  - mt5_runtime_learning_observation
+  - sample_surface_completion_guard
+  execution_layers:
+  - python_local_execution
+  - mt5_execution
+  - gate_execution
+  mutation_policy:
+    allowed: true
+    scope: targeted_f92_backfill_only
+  evidence_layers:
+  - runtime_learning_probe_decision
+  - mt5_runtime_probe_contract_audit
+  - completion_claim_guard
+  - task_force_micro_consult
+  - tests
+  reduction_policy:
+    reduction_allowed: false
+  claim_boundary:
+    allowed_claims:
+    - runtime_learning_probe_decision_recorded
+    - f92_repair_attempt_recorded
+    - runtime_probe_observation
+    - runtime_learning_record
+    - completion_claim_guard_recorded
+    forbidden_claims:
+    - goal_achieve
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - economics_pass
+    - selected_baseline
+    - promotion_candidate
+    - materialization_ready
+    - handoff_complete
+    - runtime_probe_completed
+    - mt5_verification_complete
+    - runtime_verified
+    claim_boundary: runtime_learning_probe_observation_only_no_f92_success_rewrite_no_baseline_no_promotion_no_runtime_probe_completed_no_runtime_authority_no_live_readiness_no_economics_pass
+verification_profile:
+  profile_id: runtime_learning_probe
+  claim_surface:
+    allowed_claims:
+    - runtime_learning_probe_decision_recorded
+    - f92_repair_attempt_recorded
+    - runtime_probe_observation
+    - runtime_learning_record
+    - completion_claim_guard_recorded
+    forbidden_claims:
+    - goal_achieve
+    - operating_promotion
+    - runtime_authority
+    - live_readiness
+    - economics_pass
+    - selected_baseline
+    - promotion_candidate
+    - materialization_ready
+    - handoff_complete
+    - runtime_probe_completed
+    - mt5_verification_complete
+    - runtime_verified
+    claim_boundary: runtime_learning_probe_observation_only_no_f92_success_rewrite_no_baseline_no_promotion_no_runtime_probe_completed_no_runtime_authority_no_live_readiness_no_economics_pass
+  trigger_sources:
+  - active_goal_continuation
+  - F92_candidate_gate_count_zero_but_repairable_proxy_scores_sample
+  - MT5_runtime_probe_anti_deferral_goal
+  protected_claims:
+  - runtime_learning_probe_decision
+  - runtime_probe_observation
+  - completion_claim_guard_recorded
+  required_evidence:
+  - runtime_learning_probe_decision
+  - mt5_action run_after_repair
+  - repair_attempts
+  - MT5 terminal command
+  - validation_is and oos Strategy Tester reports
+  - mt5_runtime_probe_contract_audit
+  - mt5_runtime_probe_completion_claim_guard
+  - actual_subagent_calls
+  gates_not_run_with_reason:
+  - gate: runtime_evidence_gate
+    reason_code: no_runtime_authority_or_economics_pass_claim
+    reason: F92 packet records runtime_probe_observation only; sample surface blocks completion and authority claims.
+    claim_effect: No runtime authority, economics pass, materialization-ready, or handoff-complete claim.
+  stop_conditions:
+  - F92 runtime learning observation recorded
+  - completion claim guard blocks runtime_probe_completed
+  - no runtime authority claim
+acceptance_criteria:
+  required:
+  - runtime_learning_probe_decision_gate passes
+  - MT5 observation audit passes with validation_is and oos reports
+  - completion claim guard blocks sample surface completion
+  - Task Force micro consult actual subagent call is recorded
+  forbidden:
+  - goal_achieve
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - economics_pass
+  - selected_baseline
+  - promotion_candidate
+  - materialization_ready
+  - handoff_complete
+  - runtime_probe_completed
+  - mt5_verification_complete
+  - runtime_verified
+work_plan:
+- step: Inspect F92 proxy score sample and candidate gate
+  status: completed
+- step: Task Force micro consult
+  status: completed
+- step: Materialize sparse diagnostic sample runtime surface
+  status: completed
+- step: Run standard validation_is and oos MT5 probes
+  status: completed
+- step: Record receipt and closeout gates
+  status: in_progress
+skill_routing:
+  primary_family: runtime_backtest
+  primary_skill: obsidian-prime-ml
+  support_skills:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  skills_considered:
+  - obsidian-prime-ml
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  - obsidian-artifact-lineage
+  skills_selected:
+  - obsidian-prime-ml
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  skills_not_used:
+  - skill: obsidian-artifact-lineage
+    reason: lineage captured in receipt and MT5 result; no separate lineage claim
+  required_skill_receipts:
+  - obsidian-runtime-parity
+  - obsidian-backtest-forensics
+  - obsidian-result-judgment
+  - obsidian-task-force-review
+  required_gates:
+  - work_packet_schema_lint
+  - runtime_learning_probe_decision_gate
+  - mt5_runtime_probe_contract_audit
+  - test_gate
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - closeout_report_check
+  - required_gate_coverage_audit
+  - final_claim_guard
+evidence_contract:
+  required_evidence:
+  - runtime_probe_backfill_receipt.json
+  - mt5_runtime_probe_contract_audit.json
+  - mt5_runtime_probe_completion_claim_guard.json
+  - runtime_learning_probe_decision_gate_actual.json
+  - actual_subagent_calls.json
+  runtime_surface_contract: sample_surface_blocks_runtime_probe_completed
+  forbidden_evidence_substitutes:
+  - proxy_only
+  - compile_only
+  - git_push
+gates:
+  required:
+  - work_packet_schema_lint
+  - runtime_learning_probe_decision_gate
+  - mt5_runtime_probe_contract_audit
+  - test_gate
+  - skill_receipt_schema_lint
+  - codex_task_force_review_packet
+  - closeout_report_check
+  - required_gate_coverage_audit
+  - final_claim_guard
+  not_applicable_with_reason:
+    runtime_evidence_gate: F92 packet records runtime_probe_observation only; no runtime authority/economics/materialization claim is requested.
+final_claim_policy:
+  allowed_claims:
+  - runtime_learning_probe_decision_recorded
+  - f92_repair_attempt_recorded
+  - runtime_probe_observation
+  - runtime_learning_record
+  - completion_claim_guard_recorded
+  forbidden_claims:
+  - goal_achieve
+  - operating_promotion
+  - runtime_authority
+  - live_readiness
+  - economics_pass
+  - selected_baseline
+  - promotion_candidate
+  - materialization_ready
+  - handoff_complete
+  - runtime_probe_completed
+  - mt5_verification_complete
+  - runtime_verified
+  completion_claim: forbidden
+  claim_boundary: runtime_learning_probe_observation_only_no_f92_success_rewrite_no_baseline_no_promotion_no_runtime_probe_completed_no_runtime_authority_no_live_readiness_no_economics_pass

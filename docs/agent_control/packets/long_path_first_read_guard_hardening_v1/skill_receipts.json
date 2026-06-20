@@ -1,0 +1,149 @@
+{
+  "receipts": [
+    {
+      "packet_id": "long_path_first_read_guard_hardening_v1",
+      "skill": "obsidian-work-packet-router",
+      "status": "executed",
+      "primary_family": "policy_skill_governance",
+      "primary_skill": "obsidian-work-packet-router",
+      "support_skills": [
+        "obsidian-task-force-review",
+        "obsidian-architecture-guard",
+        "obsidian-claim-discipline"
+      ],
+      "required_gates": [
+        "agent_control_contracts",
+        "codex_task_force_review_packet",
+        "ops_instruction_audit",
+        "work_packet_schema_lint",
+        "skill_receipt_schema_lint",
+        "required_gate_coverage_audit"
+      ],
+      "skills_not_used": [
+        {
+          "skill": "obsidian-runtime-parity",
+          "reason": "Touched guardrail wording only; no runtime execution or runtime parity claim."
+        },
+        {
+          "skill": "obsidian-result-judgment",
+          "reason": "Touched guardrail wording only; no trading result judgment."
+        }
+      ],
+      "routing_reason": "The user requested policy/skill guardrail hardening for Windows long-path first reads, which mutates AGENTS, policy docs, and repo-scoped skills."
+    },
+    {
+      "packet_id": "long_path_first_read_guard_hardening_v1",
+      "skill": "obsidian-task-force-review",
+      "status": "executed",
+      "trigger_reason": "Policy/skill change requires a formal minimal Task Force review gate for the long-path first-read guardrail.",
+      "roster_registry": "docs/agent_control/codex_task_force_registry.yaml",
+      "agents_used": [
+        "agent_03_philosophy_policy_skill_governance"
+      ],
+      "actual_subagent_calls": [
+        {
+          "roster_agent_id": "agent_03_philosophy_policy_skill_governance",
+          "spawned_agent_id": "019ee0aa-77f6-7f11-a031-6337cae4fe58",
+          "tool_name": "multi_agent_v1.spawn_agent",
+          "result_status": "completed",
+          "opinion_classification": "accepted"
+        }
+      ],
+      "review_requirement": "policy_change_required",
+      "model_policy": "inherited_parent_model_with_project_floor_gpt-5.5_xhigh_or_highest_available_xhigh",
+      "bounded_evidence": [
+        "AGENTS.md",
+        "docs/policies/architecture_invariants.md",
+        "docs/policies/reentry_order.md",
+        ".agents/skills/obsidian-reentry-read/SKILL.md",
+        ".agents/skills/obsidian-architecture-guard/SKILL.md",
+        ".agents/skills/obsidian-result-judgment/SKILL.md",
+        ".agents/skills/obsidian-runtime-parity/SKILL.md",
+        ".agents/skills/obsidian-environment-reproducibility/SKILL.md",
+        "docs/agent_control/work_family_registry.yaml",
+        "git diff --check",
+        "validate_agent_settings.py --repo-root ."
+      ],
+      "advice_classification": {
+        "accepted": [
+          "The diff consistently moves long-path protection from late retry to first content/existence read for deep artifacts.",
+          "No gate, threshold, MT5 evidence, runtime authority, or completion claim is relaxed."
+        ],
+        "needs_local_verification": [
+          "Continue running scoped encoding validation and full validator locally."
+        ],
+        "rejected": []
+      },
+      "local_verification": {
+        "owner_response": "Accepted. The non-blocking note about some skills not repeating docs/agent_control/packets is covered by AGENTS, reentry, and architecture policy surfaces.",
+        "commands": [
+          "git diff --check",
+          "python .agents/skills/obsidian-architecture-guard/scripts/validate_agent_settings.py --repo-root .",
+          "python .agents/skills/obsidian-architecture-guard/scripts/validate_agent_settings.py --repo-root . --encoding-scope <touched files>"
+        ]
+      },
+      "claim_boundary": "Formal minimal policy-change review only; no runtime, promotion, authority, live-readiness, or Goal Achieve claim.",
+      "final_codex_direction": "Keep the patch: deep artifact discovery stays repo-relative rg-first, and first content/existence read uses io_path/path_exists.",
+      "forbidden_claim_check": "No selected baseline, operating promotion, runtime authority, live readiness, Goal Achieve, runtime verified, or trading completion claim is made."
+    },
+    {
+      "packet_id": "long_path_first_read_guard_hardening_v1",
+      "skill": "obsidian-architecture-guard",
+      "status": "executed",
+      "touched_surfaces": [
+        "AGENTS.md",
+        "docs/policies/architecture_invariants.md",
+        "docs/policies/reentry_order.md",
+        ".agents/skills/obsidian-reentry-read/SKILL.md",
+        ".agents/skills/obsidian-architecture-guard/SKILL.md",
+        ".agents/skills/obsidian-result-judgment/SKILL.md",
+        ".agents/skills/obsidian-runtime-parity/SKILL.md",
+        ".agents/skills/obsidian-environment-reproducibility/SKILL.md",
+        "docs/agent_control/work_family_registry.yaml"
+      ],
+      "invariant_checks": [
+        "Deep stage, MT5, and packet artifact discovery remains repo-relative rg-first.",
+        "First content/existence read now requires io_path/path_exists for deep artifact paths.",
+        "Touched Korean markdown is UTF-8 with BOM and CRLF after normalization.",
+        "The guardrail does not change artifact identity from repo-relative path plus hash."
+      ],
+      "placement_boundary": "Policy/skill markdown only; no reusable runtime or feature logic changed.",
+      "architecture_debt_effect": "Reduces long-path false-missing debt; does not relax evidence gates or runtime proof requirements.",
+      "allowed_claims": [
+        "static_contract_updated",
+        "local_validation_passed"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve"
+      ]
+    },
+    {
+      "packet_id": "long_path_first_read_guard_hardening_v1",
+      "skill": "obsidian-claim-discipline",
+      "status": "executed",
+      "requested_claims": [
+        "static_contract_updated",
+        "local_validation_passed"
+      ],
+      "allowed_claims": [
+        "static_contract_updated",
+        "local_validation_passed"
+      ],
+      "forbidden_claims": [
+        "completion",
+        "selected_baseline",
+        "operating_promotion",
+        "runtime_authority",
+        "live_readiness",
+        "goal_achieve",
+        "runtime_verified"
+      ],
+      "final_status": "Policy and repo-scoped skill guardrails updated; runtime/trading claims remain out of scope."
+    }
+  ]
+}

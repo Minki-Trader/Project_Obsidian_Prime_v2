@@ -62,6 +62,22 @@ When a protected claim(보호 주장)을 narrow sufficient run(좁고 충분한 
 
 Runtime/materialization/handoff/economics claim(런타임/물질화/인계/경제성 주장)이 걸린 work packet(작업 묶음)은 runtime probe(런타임 탐침)를 cost/expense(비용)를 이유로 다음 작업(next work, 다음 작업)으로 미루지 않는다. 같은 packet(묶음)에서 가장 좁은 충분한 runtime probe(런타임 탐침)를 시도하거나, 복구 시도(recovery attempt, 복구 시도) 뒤 `blocked/inconclusive/out_of_scope_by_claim(차단/불충분/주장 범위 밖)`으로 낮춘다. Probe(탐침)가 없으면 `runtime verified/economics pass/materialization-ready/handoff complete(런타임 검증됨/경제성 통과/물질화 준비/인계 완료)`를 주장하지 않는다.
 
+Runtime learning probe(런타임 학습 탐침)는 strong candidate(강한 후보)와 learning candidate(학습 후보)를 분리한다. Proxy bad(프록시 부진), candidate gate failed(후보 게이트 실패), not strong candidate(강한 후보 아님), low trade count expected(거래 수 부족 예상), long/short imbalanced(롱숏 비대칭), cost expensive(비용/무거움), agent recommended skip(요원 권고 생략)는 MT5 not-run reason(MT5 미실행 사유)이 아니다. Pre-gate signal row(사전 게이트 신호 행)나 deterministic decision surface(결정 가능한 판단 표면)가 있어 runtime_learning_probe_candidate(런타임 학습 탐침 후보)를 만들 수 있으면 같은 packet(묶음)에서 `runtime_learning_probe_decision_gate(런타임 학습 탐침 결정 게이트)`를 실행하고 `mt5_action(MT5 행동)`을 `run_probe(탐침 실행)` 또는 `run_after_repair(수리 후 탐침 실행)`로 둔다. No actionable runtime surface(실행 가능한 런타임 표면 없음)는 즉시 생략 사유가 아니며, 최소 한 번의 repair_attempt(수리 시도) 뒤에만 `blocked/inconclusive/out_of_scope_by_claim(차단/불충분/주장 범위 밖)`으로 낮출 수 있다. 효과(effect, 효과)는 “성공 후보는 아님”과 “런타임 학습도 시도하지 않음”을 분리하고, F97 같은 candidate=0(후보 0건) 상황에서도 조용한 MT5 생략을 막는 것이다.
+
+### MT5 Runtime Probe Contract(MT5 런타임 탐침 계약)
+
+MT5 runtime probe(런타임 탐침)의 기간(period, 기간), 실행 방식(execution mode, 실행 방식), 완료 주장(completion claim, 완료 주장)의 진실 원천(source of truth, 진실 원천)은 `foundation/config/mt5_runtime_probe_contract.yaml`이다. Standard runtime probe(표준 런타임 탐침)는 `validation_is(검증 내부) 2025.01.02 -> 2025.10.01`과 `oos(표본외) 2025.10.01 -> 2026.04.13` 쌍을 사용한다. `validation_is(검증 내부)`가 정상 존재하고 `oos(표본외)`가 2026년 4월 stage-native horizon(단계 고유 종료선)까지 있으면 정상 범주로 보고 2026년 6월까지 억지 확장하지 않는다. 수리/개발 여지가 남아있을 때도 같은 기간(2026년 4월 종료선) 안에서 다시 수리/개발하고 마무리한다.
+
+실행은 `run_mt5_tester(MT5 테스터 실행)` 경로를 우선하며 `terminal64.exe /portable(터미널 포터블 모드)`를 요구한다. Tester setting(테스터 설정)은 `US100`, `M5`, `Model=4(모델 4)`, `Deposit=500(예치금 500)`, `Leverage=1:100(레버리지 1:100)`, local agent only(로컬 에이전트만), remote/cloud off(원격/클라우드 끔), `ReplaceReport=1(보고서 교체)`, `ShutdownTerminal=1(터미널 종료)`를 기본으로 둔다.
+
+`runtime_probe_completed(런타임 탐침 완료)`는 standard probe profile(표준 탐침 프로필)에서 validation_is(검증 내부)와 oos(표본외)가 모두 있고, 각 standard attempt(표준 시도)에 completed Strategy Tester report(완료된 전략 테스터 보고서)가 있을 때만 주장한다. Strategy Tester report(전략 테스터 보고서) missing(누락)은 완료 사유가 아니라 점검/차단 사유다.
+
+`runtime_surface_contract(런타임 표면 계약)`도 완료 조건이다. `full_period_deterministic(전체 기간 결정 표면)` 또는 `full_period_sparse_decision_surface(전체 기간 희소 결정 표면)`만 `runtime_probe_completed(런타임 탐침 완료)`에 쓸 수 있다. `score_sample(점수 샘플)`, `proxy_score_sample(프록시 점수 샘플)`, `diagnostic_sample(진단 샘플)`, `preview_rows(미리보기 행)`로 만든 MT5 실행은 runtime learning observation(런타임 학습 관찰)만 만들고 완료, runtime authority(런타임 권위), economics pass(경제성 통과), materialization_ready(물질화 준비)를 만들 수 없다. 효과(effect, 효과)는 표준 기간으로 테스터를 돌렸더라도 입력 표면이 샘플이면 자동으로 claim boundary(주장 경계)를 낮추게 하는 것이다.
+
+`materialization_smoke(물질화 스모크)`, `debug_reproduction(디버그 재현)`, `specific_period_probe(특정 기간 탐침)`, `regime_slice_probe(장세 조각 탐침)`, `source_replay(원천 재현)`는 명시 예외 profile(프로필)이다. 이 예외는 runtime learning(런타임 학습)이나 blocked reason(차단 사유)을 만들 수 있지만 `runtime_probe_completed(런타임 탐침 완료)`, runtime authority(런타임 권위), economics pass(경제성 통과)를 만들 수 없다.
+
+기간이 이상하면 자동 수정(auto-fix, 자동 수정)으로 통과시키지 않는다. 애초에 계약에서 생성하고, 어긋나면 `mt5_runtime_probe_contract(엠티5 런타임 탐침 계약)` audit(감사)에서 blocked(차단)로 닫는다. 효과(effect, 효과)는 이상한 기간/이상한 실행 위치로 돌린 뒤 완료처럼 말하는 흐름을 막는 것이다.
+
 ## Codex Task Force 운영 규칙(Codex Task Force Operating Rule, 코덱스 태스크포스 운영 규칙)
 
 Project Obsidian Prime v2는 Grok role succession(그록 역할 승계)이 아니라 project-native Codex Task Force operating system(프로젝트 전용 코덱스 태스크포스 운영체계)을 쓴다.
@@ -238,9 +254,11 @@ Stage 10(10단계)부터 알파 탐색(alpha exploration, 알파 탐색)이 닫�
 
 깊은 stage(단계) 산출물, MT5(`MetaTrader 5`, 메타트레이더5) 산출물, `docs/agent_control/packets` 같은 long/deep artifact tree(긴/깊은 산출물 트리)를 다룰 가능성이 있으면 첫 filesystem command(파일시스템 명령)는 `rg --files <repo-relative scope>` 또는 targeted `rg`여야 한다. 넓은 `Get-ChildItem -Recurse`, `Test-Path`, `Resolve-Path`, `Import-Csv`, `Measure-Object`를 첫 명령으로 쓰지 않는다. 효과(effect, 효과)는 실패 후 재시도(retry, 재시도)가 아니라 처음부터 Windows MAX_PATH(윈도우 최대 경로 길이) 함정을 피하는 것이다.
 
+repo-relative discovery(저장소 상대 발견)로 파일 identity(정체성)를 확인한 뒤에도 deep artifact tree(깊은 산출물 트리)의 첫 content read(내용 읽기)나 existence check(존재 확인)는 일반 `Path.read_text`, `Path.read_bytes`, `Path.open`, `Path.exists`, PowerShell(파워셸) `Get-Content`, `Import-Csv`, 또는 pandas direct path(판다스 직접 경로)로 시작하지 않는다. 처음부터 `foundation.control_plane.ledger.io_path`, `path_exists`, 또는 그 helper(보조 함수)를 쓰고, 보고서에는 repo-relative path(저장소 상대 경로)를 남긴다. 효과(effect, 효과)는 `rg`로 발견한 파일을 직접 path API(경로 API)로 다시 못 읽어 missing(누락)처럼 보이는 실패를 시작 단계에서 막는 것이다.
+
 깊은 stage(단계) 산출물이나 MT5(`MetaTrader 5`, 메타트레이더5) 실행 산출물을 다룰 때 PowerShell(파워셸) `Get-Content`, `Get-ChildItem`, 또는 일반 `Path.exists`가 실패하면 곧바로 missing(누락)이나 blocked(차단)로 판정하지 않는다.
 
-필수 재시도(required retry, 필수 재시도)는 repo-relative path(저장소 상대 경로) 기준으로 `rg --files` 또는 `rg`를 먼저 쓰고, 파일 내용이나 CSV/JSON(표/제이슨) 기계 수정이 필요하면 `foundation.control_plane.ledger.io_path`를 거쳐 Python(파이썬)에서 연다.
+필수 첫 읽기/재시도(required first-read/retry, 필수 첫 읽기/재시도)는 repo-relative path(저장소 상대 경로) 기준으로 `rg --files` 또는 `rg`를 먼저 쓰고, 파일 내용이나 CSV/JSON(표/제이슨) 기계 수정이 필요하면 처음부터 `foundation.control_plane.ledger.io_path`를 거쳐 Python(파이썬)에서 연다.
 
 PowerShell(파워셸) `Import-Csv`, `Measure-Object`, 재귀 `Get-ChildItem`이 깊은 frontier stage(전선 단계) 경로에서 `Could not find a part of the path(경로 일부를 찾을 수 없음)`를 내면 같은 cmdlet(명령 도구)을 반복하지 않는다. `cmd /c dir /x`로 확인한 8.3 short path(짧은 경로)나 `io_path` 기반 Python(파이썬) 읽기로 한 번에 전환한다.
 

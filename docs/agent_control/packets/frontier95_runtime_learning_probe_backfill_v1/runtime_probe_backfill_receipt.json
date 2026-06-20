@@ -1,0 +1,121 @@
+{
+  "allowed_claims": [
+    "runtime_learning_probe_decision_recorded",
+    "f95_repair_attempt_recorded",
+    "runtime_probe_observation",
+    "inconclusive_runtime_learning_record"
+  ],
+  "backfill_reason": "active_goal_requires_repair_first_mt5_runtime_learning_probe_for_omitted_frontier_runtime_probes",
+  "claim_boundary": "runtime_learning_probe_observation_only_no_f95_success_rewrite_no_baseline_no_promotion_no_runtime_authority_no_live_readiness_no_economics_pass",
+  "created_at_utc": "2026-06-20T03:11:21Z",
+  "forbidden_claims": [
+    "goal_achieve",
+    "operating_promotion",
+    "runtime_authority",
+    "live_readiness",
+    "economics_pass",
+    "selected_baseline",
+    "materialization_ready",
+    "handoff_complete"
+  ],
+  "historical_judgment": "negative_valid_then_rotation_state_transition_embedding_no_candidate_no_runtime_trigger",
+  "historical_runtime_probe_status": "not_applicable_no_runnable_candidate_no_runtime_claim_not_cost_or_proxy_bad_skip",
+  "judgment": "inconclusive_runtime_learning_probe_observation_completed_no_economics_pass",
+  "mt5_probe": {
+    "attempts": 2,
+    "contract": "foundation/config/mt5_runtime_probe_contract.yaml",
+    "contract_status": "pass",
+    "execution_results": 2,
+    "metrics_by_split": {
+      "oos": {
+        "expectancy": 86.58,
+        "feature_ready_count": 60,
+        "fill_count": 9,
+        "gross_loss": -100.33,
+        "gross_profit": 533.21,
+        "long_trade_count": 5,
+        "max_drawdown_percent": 60.39,
+        "net_profit": 432.88,
+        "profit_factor": 5.31,
+        "recovery_factor": 1.11,
+        "short_trade_count": 0,
+        "skip_count": 50201,
+        "trade_count": 5,
+        "win_rate_percent": 40.0
+      },
+      "validation_is": {
+        "expectancy": -102.48,
+        "feature_ready_count": 62,
+        "fill_count": 9,
+        "gross_loss": -549.77,
+        "gross_profit": 37.39,
+        "long_trade_count": 5,
+        "max_drawdown_percent": 102.25,
+        "net_profit": -512.38,
+        "profit_factor": 0.07,
+        "recovery_factor": -0.91,
+        "short_trade_count": 0,
+        "skip_count": 18219,
+        "trade_count": 5,
+        "win_rate_percent": 40.0
+      }
+    },
+    "report_refs": [
+      {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95_runtime_learning_probe_backfill_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier95_runtime_learning_probe_backfill_v1_f95_runtime_learning_validation_is.htm",
+        "report_name": "Project_Obsidian_Prime_v2_frontier95_runtime_learning_probe_backfill_v1_f95_runtime_learning_validation_is",
+        "sha256": "91051a6e83a6007cdc31688f5465d86ba326100743d656469430092c347600a0",
+        "split": "validation_is"
+      },
+      {
+        "path": "C:/Users/awdse/AppData/Roaming/MetaQuotes/Terminal/D0E8209F77C8CF37AD8BF550E51FF075/MQL5/Experts/Project_Obsidian_Prime_v2/stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95_runtime_learning_probe_backfill_v1/mt5/reports/Project_Obsidian_Prime_v2_frontier95_runtime_learning_probe_backfill_v1_f95_runtime_learning_oos.htm",
+        "report_name": "Project_Obsidian_Prime_v2_frontier95_runtime_learning_probe_backfill_v1_f95_runtime_learning_oos",
+        "sha256": "3c8074e267416336d81013d8073b319605f7cd8a77dfea73d4bb9fefcddc414a",
+        "split": "oos"
+      }
+    ],
+    "reports": 2,
+    "terminal_mode": "portable_required"
+  },
+  "next_action": "continue reverse-order runtime probe backfill to F94/F92 candidates unless user chooses F95 full signal surface regeneration repair.",
+  "packet_id": "frontier95_runtime_learning_probe_backfill_v1",
+  "repair_attempt": {
+    "attempt_id": "repair01_f95_score_sample_to_standard_validation_oos_runtime_surface",
+    "best_variant": "k9_pca5_seed9502",
+    "claim_effect": "repair materializes sparse long-only learning surface; does not rewrite F95 candidate gate or closeout.",
+    "flat_signal_count": 0,
+    "long_signal_count": 244,
+    "pre_gate_signal_count": 244,
+    "sample_coverage_by_split": {
+      "oos": {
+        "claim_effect": "standard_tester_period_with_sparse_long_only_source_sample_no_completion_without_report",
+        "flat_rows": 0,
+        "long_rows": 120,
+        "sample_max_timestamp_utc": "2025-11-19T19:50:00+00:00",
+        "sample_min_timestamp_utc": "2025-10-10T18:50:00+00:00",
+        "sample_rows": 120,
+        "short_rows": 0,
+        "source_split": "oos",
+        "standard_from_date": "2025.10.01",
+        "standard_to_date": "2026.06.18"
+      },
+      "validation_is": {
+        "claim_effect": "standard_tester_period_with_sparse_long_only_source_sample_no_completion_without_report",
+        "flat_rows": 0,
+        "long_rows": 124,
+        "sample_max_timestamp_utc": "2025-05-23T17:30:00+00:00",
+        "sample_min_timestamp_utc": "2025-01-02T17:00:00+00:00",
+        "sample_rows": 124,
+        "short_rows": 0,
+        "source_split": "validation",
+        "standard_from_date": "2025.01.02",
+        "standard_to_date": "2025.10.01"
+      }
+    },
+    "short_signal_count": 0,
+    "source_score_sample": "stages/stage_frontier_95__closed_bar_state_transition_embedding_axis/02_runs/frontier95B/proxy_scout/score_sample.csv"
+  },
+  "source_run_id": "frontier95B_closed_bar_state_transition_embedding_proxy_scout_v1",
+  "source_stage_id": "stage_frontier_95__closed_bar_state_transition_embedding_axis",
+  "stage": "F95"
+}

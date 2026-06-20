@@ -1,4 +1,4 @@
----
+﻿---
 name: obsidian-reentry-read
 description: Re-enter Project Obsidian Prime v2 safely by reading the current truth in order, restating the active stage and foundation status, and avoiding stale assumptions. Use when starting or resuming work in this repository.
 ---
@@ -19,9 +19,10 @@ Use this skill whenever work starts or resumes inside `Project_Obsidian_Prime_v2
    - the active stage `selection_status.md` agrees with that stage
    - the latest durable stage-handoff decision matches the same transition
    - before the first filesystem command that may touch a deep stage, MT5, or packet artifact tree, classify the path scope; if it is deep or broad, the first command must be repo-relative `rg --files`/`rg`, not broad recursive PowerShell, `Test-Path`, `Resolve-Path`, `Import-Csv`, or `Measure-Object`
+   - after repo-relative discovery, use `foundation.control_plane.ledger.io_path`, `path_exists`, or a helper built on them for the first content read/existence check of deep stage, MT5, or packet artifacts; do not start with `Path.read_text`, `Path.read_bytes`, `Path.open`, `Path.exists`, PowerShell `Get-Content`, `Import-Csv`, or pandas direct paths
    - before the first write that may create or edit Korean `.md/.txt`, repo-scoped skills, or policy/control-plane markdown, classify the encoding surface; run scoped encoding validation or an equivalent byte-level BOM/UTF-8/mojibake check for existing targets, and plan a UTF-8 with BOM write path for new Korean docs
    - before broad mechanical text rewrites, classify LF/CRLF line endings and do not treat Git line-ending warnings as encoding failure; mixed line endings are a warning or scoped repair target
-   - on Windows deep stage/MT5 paths, do not declare active-stage docs or frontier evidence `missing`, `invalid`, or `blocked` until repo-relative `rg --files`/`rg` has been attempted, and use `foundation.control_plane.ledger.io_path` when file content is needed
+   - on Windows deep stage/MT5 paths, do not declare active-stage docs or frontier evidence `missing`, `invalid`, or `blocked` until repo-relative `rg --files`/`rg` has been attempted, and file content reads have used `foundation.control_plane.ledger.io_path`
    - if any of those disagree, stop and surface state fragmentation before continuing
 7. Restate:
    - active stage
